@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6A4jaRwMEe6O0NdiBuX__w")]
 [DisplayName("Subscription Execution14")]
-public record SubscriptionExecution14
+public partial record SubscriptionExecution14
 {
     /// <summary>
     /// Order Reference.

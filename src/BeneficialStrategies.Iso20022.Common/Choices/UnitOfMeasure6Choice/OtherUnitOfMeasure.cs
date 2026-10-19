@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure6Choice
     /// </summary>
     [IsoId("_QWXDk_FSEee_LsXdoqzkWg")]
     [DisplayName("Other Unit Of Measure")]
-    public record OtherUnitOfMeasure : UnitOfMeasure6Choice_
+    public partial record OtherUnitOfMeasure : UnitOfMeasure6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

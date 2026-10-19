@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qn9899p-Ed-ak6NoX_4Aeg_-250058534")]
 [DisplayName("References")]
-public record References4
+public partial record References4
 {
     /// <summary>
     /// Identifies a message by a unique identifier and the date and time when the message was created by the sender.

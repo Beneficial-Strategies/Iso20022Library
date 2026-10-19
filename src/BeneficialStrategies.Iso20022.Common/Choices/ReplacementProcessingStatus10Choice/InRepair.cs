@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
     [IsoId("_Rhhu9weDEe2fOITqoTnSLQ")]
     [DisplayName("In Repair")]
     [IsoXmlTag("InRpr")]
-    public record InRepair : ReplacementProcessingStatus10Choice_
+    public partial record InRepair : ReplacementProcessingStatus10Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_9YoTgX26Ee6YlIMyoxWMJA")]
 [DisplayName("Reversal Response V04")]
-public record ReversalResponseV04 : IOuterRecord
+public partial record ReversalResponseV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SCuDutp-Ed-ak6NoX_4Aeg_-2008577847")]
 [DisplayName("Redemption Order")]
-public record RedemptionOrder7
+public partial record RedemptionOrder7
 {
     /// <summary>
     /// Unique and unambiguous identifier for an order, as assigned by the instructing party.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_kbvPUROIEfC1ZfCQz0xB3g")]
 [DisplayName("Retrieval Initiation V04")]
-public record RetrievalInitiationV04 : IOuterRecord
+public partial record RetrievalInitiationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FATCAStatus1Choice
     /// </summary>
     [IsoId("_5yPV8AjREeS5F6qHcKOrew")]
     [DisplayName("Code")]
-    public record Code : FATCAStatus1Choice_
+    public partial record Code : FATCAStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

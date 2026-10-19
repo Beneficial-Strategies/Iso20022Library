@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Cp6p8UYlEfCJpvfyM9roFQ")]
 [DisplayName("Additional Entered Fleet Data1")]
-public record AdditionalEnteredFleetData1
+public partial record AdditionalEnteredFleetData1
 {
     /// <summary>
     /// Key-entered numeric data.

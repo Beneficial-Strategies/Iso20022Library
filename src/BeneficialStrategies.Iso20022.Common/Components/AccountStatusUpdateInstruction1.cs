@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_et6_QHi5EeaRm5xIK6nGuQ")]
 [DisplayName("Account Status Update Instruction")]
-public record AccountStatusUpdateInstruction1
+public partial record AccountStatusUpdateInstruction1
 {
     /// <summary>
     /// Type of status change instructed for the account status.

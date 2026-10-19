@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V64L4JUVEe6YroSumzeMDQ")]
 [DisplayName("Acceptor To Acquirer File Body1")]
-public record AcceptorToAcquirerFileBody1
+public partial record AcceptorToAcquirerFileBody1
 {
     /// <summary>
     /// Completion Advice.

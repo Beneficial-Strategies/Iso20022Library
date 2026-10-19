@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6GsLuTbsEead9bDRE_1DAQ")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction72
+public partial record PaymentTransaction72
 {
     /// <summary>
     /// Choice between types of payment instrument, for example, cheque, credit transfer or investment account.

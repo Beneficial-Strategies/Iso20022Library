@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L6ZPMEYXEeegp_DADCe7HQ")]
 [DisplayName("Reconciliation")]
-public record Reconciliation3
+public partial record Reconciliation3
 {
     /// <summary>
     /// Identification of the reconciliation.

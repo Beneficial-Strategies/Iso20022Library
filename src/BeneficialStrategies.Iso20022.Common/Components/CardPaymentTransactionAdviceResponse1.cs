@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwFm1QEcEeCQm6a_G2yO_w_-1200741519")]
 [DisplayName("Card Payment Transaction Advice Response")]
-public record CardPaymentTransactionAdviceResponse1
+public partial record CardPaymentTransactionAdviceResponse1
 {
     /// <summary>
     /// Unique identification of the transaction by the POI.

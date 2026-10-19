@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TDwwxwEcEeCQm6a_G2yO_w_-51855289")]
 [DisplayName("Card Payment Environment")]
-public record CardPaymentEnvironment8
+public partial record CardPaymentEnvironment8
 {
     /// <summary>
     /// Version of the payment application configuration parameters of the POI.

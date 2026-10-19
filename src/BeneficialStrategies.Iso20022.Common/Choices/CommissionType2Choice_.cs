@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ac_TctokEeC60axPepSq7g_1955335824")]
     [DisplayName("Commission Type 2 Choice")]
-    public abstract record CommissionType2Choice_ { }
+    public abstract partial record CommissionType2Choice_ { }
 }

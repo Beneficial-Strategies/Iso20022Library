@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus9Choice
     /// </summary>
     [IsoId("_A4aEJdokEeC60axPepSq7g_-548171408")]
     [DisplayName("Matching Alleged")]
-    public record MatchingAlleged : MatchingStatus9Choice_
+    public partial record MatchingAlleged : MatchingStatus9Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("MtchgAllgd")]

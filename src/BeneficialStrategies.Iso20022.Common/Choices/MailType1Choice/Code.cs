@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MailType1Choice
     /// </summary>
     [IsoId("_zx9lgCCXEeWJd9HF2tO7BA")]
     [DisplayName("Code")]
-    public record Code : MailType1Choice_
+    public partial record Code : MailType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

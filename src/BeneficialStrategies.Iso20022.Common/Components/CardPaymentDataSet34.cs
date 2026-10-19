@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sB2BoXJPEe299ZbWCkdR_w")]
 [DisplayName("Card Payment Data Set")]
-public record CardPaymentDataSet34
+public partial record CardPaymentDataSet34
 {
     /// <summary>
     /// Identification of the data set.

@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_zvolqNE7Ed-BzquC8wXy7w_-2097123010")]
 [DisplayName("Subscription Bulk Order V")]
-public record SubscriptionBulkOrderV02 : IOuterRecord
+public partial record SubscriptionBulkOrderV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

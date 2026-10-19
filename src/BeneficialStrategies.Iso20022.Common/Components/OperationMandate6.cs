@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yWYToTEyEe6g-ffJsqGiSA")]
 [DisplayName("Operation Mandate6")]
-public record OperationMandate6
+public partial record OperationMandate6
 {
     /// <summary>
     /// Modification Code.

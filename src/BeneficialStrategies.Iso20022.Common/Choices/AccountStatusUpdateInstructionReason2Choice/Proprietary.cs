@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstructionRe
     [IsoId("_08pj43i8EeaRm5xIK6nGuQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AccountStatusUpdateInstructionReason2Choice_
+    public partial record Proprietary : AccountStatusUpdateInstructionReason2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

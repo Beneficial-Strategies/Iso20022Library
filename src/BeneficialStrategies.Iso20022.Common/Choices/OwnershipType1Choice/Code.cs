@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnershipType1Choice
     /// </summary>
     [IsoId("_3QQL0Bc9EeK5g-3oYI0_9Q")]
     [DisplayName("Code")]
-    public record Code : OwnershipType1Choice_
+    public partial record Code : OwnershipType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jxZG4DlEEealR6-8aQ15BA")]
     [DisplayName("Source Of Cash 1 Choice")]
-    public abstract record SourceOfCash1Choice_ { }
+    public abstract partial record SourceOfCash1Choice_ { }
 }

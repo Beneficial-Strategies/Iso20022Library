@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_QVCe8Z_yEfC4Q_xhaK1hdQ")]
 [DisplayName("Acquirer To Acceptor Batch File Exchange V03")]
-public record AcquirerToAcceptorBatchFileExchangeV03 : IOuterRecord
+public partial record AcquirerToAcceptorBatchFileExchangeV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

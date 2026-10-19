@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__2vvIfFUEee_LsXdoqzkWg")]
 [DisplayName("Line Item Allowance Charge")]
-public record LineItemAllowanceCharge3
+public partial record LineItemAllowanceCharge3
 {
     /// <summary>
     /// Indication of whether or not this allowance charge is a charge.

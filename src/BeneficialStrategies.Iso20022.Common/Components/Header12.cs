@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-uGCQWmEEeS7iYydEtv3Ug")]
 [DisplayName("Header")]
-public record Header12
+public partial record Header12
 {
     /// <summary>
     /// Indicates if the file transfer is a download or an upload.

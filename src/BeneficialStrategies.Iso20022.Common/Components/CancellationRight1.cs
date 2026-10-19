@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VMLvDtp-Ed-ak6NoX_4Aeg_396360179")]
 [DisplayName("Cancellation Right")]
-public record CancellationRight1
+public partial record CancellationRight1
 {
     /// <summary>
     /// Structured format.

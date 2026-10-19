@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O6b2QeE6EeeV6-yubHrZaQ")]
 [DisplayName("Context")]
-public record Context6
+public partial record Context6
 {
     /// <summary>
     /// Context of the transaction.

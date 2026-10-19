@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4TwEBPfdEei89sMSHxl1ew")]
 [DisplayName("Temporary Services Labor")]
-public record TemporaryServicesLabor1
+public partial record TemporaryServicesLabor1
 {
     /// <summary>
     /// Contains the time sheet identification number.

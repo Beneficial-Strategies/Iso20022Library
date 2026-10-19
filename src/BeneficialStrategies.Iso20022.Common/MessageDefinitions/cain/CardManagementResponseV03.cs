@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_z2DgwII-Ee6dZ_jHhjXHQg")]
 [DisplayName("Card Management Response V03")]
-public record CardManagementResponseV03 : IOuterRecord
+public partial record CardManagementResponseV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

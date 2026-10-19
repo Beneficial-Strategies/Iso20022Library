@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JP9iYD6UEeq_lLaSkIVjTQ")]
 [DisplayName("Encrypted Data")]
-public record EncryptedData1
+public partial record EncryptedData1
 {
     /// <summary>
     /// Identifies the key management scheme and associated control field format.

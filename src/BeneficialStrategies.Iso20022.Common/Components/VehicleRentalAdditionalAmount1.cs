@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SELowVN8EfC0lMwgjvMClw")]
 [DisplayName("Vehicle Rental Additional Amount1")]
-public record VehicleRentalAdditionalAmount1
+public partial record VehicleRentalAdditionalAmount1
 {
     /// <summary>
     /// Code that describes the type of amount or fee. P000-P999 reserved for private use, N000-N999 reserved for national use.

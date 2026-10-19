@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party31Choice
     [IsoId("_Hr4NsyCBEeWhHbfCMWc1cw")]
     [DisplayName("Individual Person")]
     [IsoXmlTag("IndvPrsn")]
-    public record IndividualPerson : Party31Choice_
+    public partial record IndividualPerson : Party31Choice_
     {
         /// <summary>
         /// Term used to address the person.

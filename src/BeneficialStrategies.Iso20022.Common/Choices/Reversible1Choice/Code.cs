@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversible1Choice
     /// </summary>
     [IsoId("_AYXSINokEeC60axPepSq7g_-1292928069")]
     [DisplayName("Code")]
-    public record Code : Reversible1Choice_
+    public partial record Code : Reversible1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

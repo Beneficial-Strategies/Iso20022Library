@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument27Choice
     /// Direct Debit Details.
     /// </summary>
     [DisplayName("Direct Debit Details")]
-    public record DirectDebitDetails : PaymentInstrument27Choice_
+    public partial record DirectDebitDetails : PaymentInstrument27Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5pdeAEzaEea8fovz_9xSTQ")]
 [DisplayName("Ownership Beneficiary Rate")]
-public record OwnershipBeneficiaryRate1
+public partial record OwnershipBeneficiaryRate1
 {
     /// <summary>
     /// Ownership or beneficial ownership expressed as a percentage.

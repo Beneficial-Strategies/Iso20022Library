@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CashInOrOut8Choice.CashOutPaymentInstrument), nameof(CashInOrOut8Choice.CashOutPaymentInstrument))]
     [IsoId("ef3ddde2-6cf5-4c52-ad50-c9d85638d499")]
     [DisplayName("CashInOrOut8Choice")]
-    public abstract record CashInOrOut8Choice_ { }
+    public abstract partial record CashInOrOut8Choice_ { }
 }

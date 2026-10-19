@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice
     /// </summary>
     [IsoId("_P8YAm0HREeasdbKMiqizqA")]
     [DisplayName("Suspended")]
-    public record Suspended : OrderStatus5Choice_
+    public partial record Suspended : OrderStatus5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Sspd")]

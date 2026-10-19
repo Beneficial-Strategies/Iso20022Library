@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TEzSkAEcEeCQm6a_G2yO_w_1379249384")]
 [DisplayName("Action Message")]
-public record ActionMessage1
+public partial record ActionMessage1
 {
     /// <summary>
     /// Destination of the message to be displayed or printed.

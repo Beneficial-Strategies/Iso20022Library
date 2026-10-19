@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice
     [IsoId("_vIDnbUH7EeaV3ab_pHzFIQ")]
     [DisplayName("Partially Settled")]
     [IsoXmlTag("PrtlySttld")]
-    public record PartiallySettled : OrderStatus3Choice_
+    public partial record PartiallySettled : OrderStatus3Choice_
     {
         /// <summary>
         /// Reason for the partially settled status.

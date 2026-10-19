@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice
     /// </summary>
     [IsoId("_Ad4rUdokEeC60axPepSq7g_2123239220")]
     [DisplayName("Cancellation Request Identification")]
-    public record CancellationRequestIdentification : IdentificationReference11Choice_
+    public partial record CancellationRequestIdentification : IdentificationReference11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

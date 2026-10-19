@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_QNckJtp-Ed-ak6NoX_4Aeg_-1898805277")]
 [DisplayName("Organisation")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record Organisation2
+public partial record Organisation2
 {
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.

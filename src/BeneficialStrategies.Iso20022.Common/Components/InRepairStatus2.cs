@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RMeYNtp-Ed-ak6NoX_4Aeg_-329740653")]
 [DisplayName("In Repair Status")]
-public record InRepairStatus2
+public partial record InRepairStatus2
 {
     /// <summary>
     /// Reason for the in-repair status.

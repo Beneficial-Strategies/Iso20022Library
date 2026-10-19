@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0yLWUYSlEe6odei_lsRKtw")]
 [DisplayName("Transaction Identification55")]
-public record TransactionIdentification55
+public partial record TransactionIdentification55
 {
     /// <summary>
     /// Local Date.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DjougW9oEe6DxcrvCrq6hQ")]
 [DisplayName("Local Data12")]
-public record LocalData12
+public partial record LocalData12
 {
     /// <summary>
     /// Language.

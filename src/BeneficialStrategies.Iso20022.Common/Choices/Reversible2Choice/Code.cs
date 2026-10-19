@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversible2Choice
     /// </summary>
     [IsoId("_PUFSA5EkEeakHoV5BVecAQ")]
     [DisplayName("Code")]
-    public record Code : Reversible2Choice_
+    public partial record Code : Reversible2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

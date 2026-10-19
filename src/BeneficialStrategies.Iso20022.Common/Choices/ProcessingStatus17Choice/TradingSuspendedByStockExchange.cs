@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     [IsoId("_A5JrBNokEeC60axPepSq7g_-1727127313")]
     [DisplayName("Trading Suspended By Stock Exchange")]
     [IsoXmlTag("TradgSspdByStockXchg")]
-    public record TradingSuspendedByStockExchange : ProcessingStatus17Choice_
+    public partial record TradingSuspendedByStockExchange : ProcessingStatus17Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

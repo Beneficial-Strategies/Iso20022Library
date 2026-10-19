@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_REQg1fQbEeihCvvpsmGI2w")]
 [DisplayName("Destination")]
-public record Destination2
+public partial record Destination2
 {
     /// <summary>
     /// Name and location of the destination.

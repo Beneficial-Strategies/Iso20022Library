@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_U5QL9dp-Ed-ak6NoX_4Aeg_1827324489")]
 [DisplayName("Total Taxes")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record TotalTaxes2
+public partial record TotalTaxes2
 {
     /// <summary>
     /// Total value of the taxes for a specific order.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QbdK-dp-Ed-ak6NoX_4Aeg_2112357361")]
 [DisplayName("Cheque")]
-public record Cheque4
+public partial record Cheque4
 {
     /// <summary>
     /// Party to which a cheque is made payable.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0Y8Z4Xi8EeaRm5xIK6nGuQ")]
     [DisplayName("Account Status Update Instruction Reason 2 Choice")]
-    public abstract record AccountStatusUpdateInstructionReason2Choice_ { }
+    public abstract partial record AccountStatusUpdateInstructionReason2Choice_ { }
 }

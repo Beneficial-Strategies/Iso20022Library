@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction14C
     /// <summary>Response to a token computation.</summary>
     [IsoId("_tKIfc7YJEfCUZfsQO4rYeA")]
     [DisplayName("Token Response")]
-    public record TokenResponse : CardPaymentDataSetTransaction14Choice_
+    public partial record TokenResponse : CardPaymentDataSetTransaction14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TknRspn")]

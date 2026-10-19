@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDlQarEe2phaVG0lYKTw")]
     [DisplayName("Open Order")]
     [IsoXmlTag("OpnOrdr")]
-    public record OpenOrder : ProcessingStatus98Choice_
+    public partial record OpenOrder : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

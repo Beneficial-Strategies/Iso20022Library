@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason5Choice
     /// </summary>
     [IsoId("_o0mHQUHlEea8I67lh6qdSQ")]
     [DisplayName("Code")]
-    public record Code : SuspendedStatusReason5Choice_
+    public partial record Code : SuspendedStatusReason5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

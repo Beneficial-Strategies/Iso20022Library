@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(BankersDraftDetails))]
     [JsonDerivedType(typeof(CashAccountDetails))]
     [JsonDerivedType(typeof(BlockChainCashWallet))]
-    public abstract record PaymentInstrument30Choice_;
+    public abstract partial record PaymentInstrument30Choice_;
 }

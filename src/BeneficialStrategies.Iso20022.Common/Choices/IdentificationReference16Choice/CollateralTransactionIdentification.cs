@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice
     /// Collateral Transaction Identification.
     /// </summary>
     [DisplayName("Collateral Transaction Identification")]
-    public record CollateralTransactionIdentification : IdentificationReference16Choice_
+    public partial record CollateralTransactionIdentification : IdentificationReference16Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

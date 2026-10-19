@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9qTQ8F5wEfCoP_h9uwd39Q")]
 [DisplayName("Recurring Payment Data1")]
-public record RecurringPaymentData1
+public partial record RecurringPaymentData1
 {
     /// <summary>
     /// Code to indicate the recurring payment type.

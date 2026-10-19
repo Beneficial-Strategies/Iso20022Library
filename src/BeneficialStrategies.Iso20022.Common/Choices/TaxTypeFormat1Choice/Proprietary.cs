@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxTypeFormat1Choice
     [IsoId("_SumZFAEcEeCQm6a_G2yO_w_47980371")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TaxTypeFormat1Choice_
+    public partial record Proprietary : TaxTypeFormat1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

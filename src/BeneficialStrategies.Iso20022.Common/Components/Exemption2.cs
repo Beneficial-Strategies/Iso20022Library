@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PMDhAZqHEe6bZt44gtg6XQ")]
 [DisplayName("Exemption2")]
-public record Exemption2
+public partial record Exemption2
 {
     /// <summary>
     /// Type.

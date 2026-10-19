@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lx7V0T1vEfCQAqQ9lolFUg")]
 [DisplayName("Verification8")]
-public record Verification8
+public partial record Verification8
 {
     /// <summary>
     /// Type of authentication or verification. P000-P999 reserved for private use, N000-N999 reserved for national use.

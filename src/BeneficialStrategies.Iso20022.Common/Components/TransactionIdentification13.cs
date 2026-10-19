@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h0sALdCEEei_pMueJh_zOA")]
 [DisplayName("Transaction Identification")]
-public record TransactionIdentification13
+public partial record TransactionIdentification13
 {
     /// <summary>
     /// Local date and time the transaction takes place at the card acceptor location.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zRsDMFKPEeeFcfYfFkVztg")]
 [DisplayName("Fee Amount")]
-public record FeeAmount2
+public partial record FeeAmount2
 {
     /// <summary>
     /// Amount exclusive of currency.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dgAwMWxjEe6wzr2RagRERg")]
 [DisplayName("Traceability10")]
-public record Traceability10
+public partial record Traceability10
 {
     /// <summary>
     /// Identification.

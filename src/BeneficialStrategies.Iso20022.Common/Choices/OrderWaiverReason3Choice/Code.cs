@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderWaiverReason3Choice
     /// </summary>
     [IsoId("_PibkEToREeabspMEjqY5TQ")]
     [DisplayName("Code")]
-    public record Code : OrderWaiverReason3Choice_
+    public partial record Code : OrderWaiverReason3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

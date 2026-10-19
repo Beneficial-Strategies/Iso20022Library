@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CardPaymentDataSetTransaction14Choice.TokenResponse), nameof(CardPaymentDataSetTransaction14Choice.TokenResponse))]
     [IsoId("_tJK2AbYJEfCUZfsQO4rYeA")]
     [DisplayName("CardPaymentDataSetTransaction14Choice")]
-    public abstract record CardPaymentDataSetTransaction14Choice_ { }
+    public abstract partial record CardPaymentDataSetTransaction14Choice_ { }
 }

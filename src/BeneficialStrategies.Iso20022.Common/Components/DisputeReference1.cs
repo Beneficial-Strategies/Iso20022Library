@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sXZCwOCmEee9RadpHmUgYw")]
 [DisplayName("Dispute Reference")]
-public record DisputeReference1
+public partial record DisputeReference1
 {
     /// <summary>
     /// Name of the entity assigning the dispute reference.

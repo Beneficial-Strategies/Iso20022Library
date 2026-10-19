@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lwWqgXc_Ee6YlIMyoxWMJA")]
 [DisplayName("Temporary Services3")]
-public record TemporaryServices3
+public partial record TemporaryServices3
 {
     /// <summary>
     /// Company Name.

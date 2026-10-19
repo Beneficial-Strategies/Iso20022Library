@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("14a3b54d-45b4-4a35-a568-d44c3cdd0a53")]
 [DisplayName("Delivering Parties And Account24")]
-public record DeliveringPartiesAndAccount24
+public partial record DeliveringPartiesAndAccount24
 {
     /// <summary>
     /// Party that acts on behalf of the seller of securities when the seller does not have a direct relationship with the delivering agent.

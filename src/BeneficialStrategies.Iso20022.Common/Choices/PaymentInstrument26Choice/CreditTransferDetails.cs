@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument26Choice
     /// Credit Transfer Details.
     /// </summary>
     [DisplayName("Credit Transfer Details")]
-    public record CreditTransferDetails : PaymentInstrument26Choice_
+    public partial record CreditTransferDetails : PaymentInstrument26Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

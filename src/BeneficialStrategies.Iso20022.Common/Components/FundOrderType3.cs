@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TSu6Etp-Ed-ak6NoX_4Aeg_1141291305")]
 [DisplayName("Fund Order Type")]
-public record FundOrderType3
+public partial record FundOrderType3
 {
     /// <summary>
     /// Specifies the category of the investment fund order.

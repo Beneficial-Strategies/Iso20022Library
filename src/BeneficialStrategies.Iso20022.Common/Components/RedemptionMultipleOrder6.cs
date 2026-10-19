@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_7RE7JTbsEead9bDRE_1DAQ")]
 [DisplayName("Redemption Multiple Order")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record RedemptionMultipleOrder6
+public partial record RedemptionMultipleOrder6
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 )]
 [IsoId("_L8IqIU6vEeyGi9JAv6wq7Q")]
 [DisplayName("Acceptor Transaction Log Report Request V")]
-public record AcceptorTransactionLogReportRequestV02 : IOuterRecord
+public partial record AcceptorTransactionLogReportRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

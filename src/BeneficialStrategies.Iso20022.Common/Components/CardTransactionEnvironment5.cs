@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Gj-mcXu6EeSLmfFG0DG7zQ")]
 [DisplayName("Card Transaction Environment")]
-public record CardTransactionEnvironment5
+public partial record CardTransactionEnvironment5
 {
     /// <summary>
     /// Institution initiator of the reconciliation.

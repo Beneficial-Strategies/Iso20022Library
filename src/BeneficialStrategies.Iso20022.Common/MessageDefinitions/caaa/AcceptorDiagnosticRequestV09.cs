@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 )]
 [IsoId("_8OPcQS5IEeunNvJlR_vCbg")]
 [DisplayName("Acceptor Diagnostic Request V")]
-public record AcceptorDiagnosticRequestV09 : IOuterRecord
+public partial record AcceptorDiagnosticRequestV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

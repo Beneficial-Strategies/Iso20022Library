@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vF-mAaEtEe-MRKYsaX6JDg")]
 [DisplayName("Token Request Component5")]
-public record TokenRequestComponent5
+public partial record TokenRequestComponent5
 {
     /// <summary>
     /// Transaction Sequence Counter.

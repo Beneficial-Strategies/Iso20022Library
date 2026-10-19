@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1YrJUXzIEe6YlIMyoxWMJA")]
 [DisplayName("Context21")]
-public record Context21
+public partial record Context21
 {
     /// <summary>
     /// Card Data Entry Mode.

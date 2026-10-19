@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U2ucZNp-Ed-ak6NoX_4Aeg_67130856")]
 [DisplayName("Redemption Multiple Order Instruction")]
-public record RedemptionMultipleOrderInstruction1
+public partial record RedemptionMultipleOrderInstruction1
 {
     /// <summary>
     /// General information related to the order.

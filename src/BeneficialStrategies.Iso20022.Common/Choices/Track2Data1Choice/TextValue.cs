@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Track2Data1Choice
     /// </summary>
     [IsoId("_cnIL8ZaOEemfCcEf5rVTyg")]
     [DisplayName("Text Value")]
-    public record TextValue : Track2Data1Choice_
+    public partial record TextValue : Track2Data1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

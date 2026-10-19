@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V4weYTEuEeyjbpgZW6G1Fg")]
 [DisplayName("Card Reading Capabilities")]
-public record CardReadingCapabilities1
+public partial record CardReadingCapabilities1
 {
     /// <summary>
     /// Card reading capability of the terminal performing the transaction.

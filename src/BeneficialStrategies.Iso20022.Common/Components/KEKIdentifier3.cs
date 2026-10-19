@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MXlzwXvOEeSCJdwgzb6SFw")]
 [DisplayName("KEK Identifier")]
-public record KEKIdentifier3
+public partial record KEKIdentifier3
 {
     /// <summary>
     /// Name or label of the key.

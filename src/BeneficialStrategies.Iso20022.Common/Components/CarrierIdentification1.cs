@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P8RACPQFEeihCvvpsmGI2w")]
 [DisplayName("Carrier Identification")]
-public record CarrierIdentification1
+public partial record CarrierIdentification1
 {
     /// <summary>
     /// Name of the transportation carrier.

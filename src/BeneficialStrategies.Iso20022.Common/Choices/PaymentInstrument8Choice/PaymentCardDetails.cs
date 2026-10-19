@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument8Choice
     [IsoId("_VKshQtp-Ed-ak6NoX_4Aeg_-855530118")]
     [DisplayName("Payment Card Details")]
     [IsoXmlTag("PmtCardDtls")]
-    public record PaymentCardDetails : PaymentInstrument8Choice_
+    public partial record PaymentCardDetails : PaymentInstrument8Choice_
     {
         /// <summary>
         /// Type of card, eg, credit card.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
     [IsoId("_w5-30FxYEeWvPv3PXpS3fw")]
     [DisplayName("Individual Person")]
     [IsoXmlTag("IndvPrsn")]
-    public record IndividualPerson : RegisteredShareholderName1Choice_
+    public partial record IndividualPerson : RegisteredShareholderName1Choice_
     {
         /// <summary>
         /// Term used to address the person.

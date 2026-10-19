@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T2ITcEbXEeeIjf8aP9KbJA")]
 [DisplayName("Verification Result")]
-public record VerificationResult1
+public partial record VerificationResult1
 {
     /// <summary>
     /// Type of the verification or authentication.

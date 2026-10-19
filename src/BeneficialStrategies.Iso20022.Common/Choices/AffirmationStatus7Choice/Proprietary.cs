@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus7Choice
     [IsoId("_A6DC4tokEeC60axPepSq7g_-399658680")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AffirmationStatus7Choice_
+    public partial record Proprietary : AffirmationStatus7Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P39iAXu0EeS2Z_kGi7H1VQ")]
 [DisplayName("Card Transaction")]
-public record CardTransaction7
+public partial record CardTransaction7
 {
     /// <summary>
     /// TTransaction type of the transaction to be reversed.

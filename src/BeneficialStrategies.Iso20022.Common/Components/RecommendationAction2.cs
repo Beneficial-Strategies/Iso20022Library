@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RLBigRNaEfC1ZfCQz0xB3g")]
 [DisplayName("Recommendation Action2")]
-public record RecommendationAction2
+public partial record RecommendationAction2
 {
     /// <summary>
     /// Recommended action based on risk assessment.

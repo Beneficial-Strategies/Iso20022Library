@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D1xVkW49EeiU9cctagi5ow")]
 [DisplayName("Group")]
-public record Group3
+public partial record Group3
 {
     /// <summary>
     /// Specifies the type of change.

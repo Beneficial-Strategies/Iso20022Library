@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u6DycRRgEeOKWo1NF21OVw")]
 [DisplayName("Investment Fund Cash Settlement Information")]
-public record InvestmentFundCashSettlementInformation8
+public partial record InvestmentFundCashSettlementInformation8
 {
     /// <summary>
     /// Specifies the type of modification to be applied on a set of information.

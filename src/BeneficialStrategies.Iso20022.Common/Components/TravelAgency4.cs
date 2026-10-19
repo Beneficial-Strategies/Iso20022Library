@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R_K-QXQ6Ee6Y1uOeeiF_Eg")]
 [DisplayName("Travel Agency4")]
-public record TravelAgency4
+public partial record TravelAgency4
 {
     /// <summary>
     /// Code.

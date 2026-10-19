@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RSI7WNp-Ed-ak6NoX_4Aeg_88957855")]
 [DisplayName("De Minimus Not Applicable")]
-public record DeMinimusNotApplicable1
+public partial record DeMinimusNotApplicable1
 {
     /// <summary>
     /// Reason for the restricted person.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice
     [IsoId("_RbrR19p-Ed-ak6NoX_4Aeg_1854520026")]
     [DisplayName("Structured Product Category")]
     [IsoXmlTag("StrdPdctCtgy")]
-    public record StructuredProductCategory : ProductCategory1Choice_
+    public partial record StructuredProductCategory : ProductCategory1Choice_
     {
         /// <summary>
         /// Specifies the type of product category by means of a code.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dSAfYW3iEe6dwbOqHXrHWg")]
 [DisplayName("Date Time2")]
-public record DateTime2
+public partial record DateTime2
 {
     /// <summary>
     /// Date.

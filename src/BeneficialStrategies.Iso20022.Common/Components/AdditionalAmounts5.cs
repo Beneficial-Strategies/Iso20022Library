@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LnpvoSH3EfCkq6-p7S3J1Q")]
 [DisplayName("Additional Amounts5")]
-public record AdditionalAmounts5
+public partial record AdditionalAmounts5
 {
     /// <summary>
     /// Code used to describe the accounts affected.

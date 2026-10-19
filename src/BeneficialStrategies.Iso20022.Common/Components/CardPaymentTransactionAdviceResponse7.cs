@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0IgV8QuaEeqYM5yH99IYQw")]
 [DisplayName("Card Payment Transaction Advice Response")]
-public record CardPaymentTransactionAdviceResponse7
+public partial record CardPaymentTransactionAdviceResponse7
 {
     /// <summary>
     /// Global reference of the sale transaction for the sale system.

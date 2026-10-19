@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundOrderType1Choice
     /// </summary>
     [IsoId("_RY2UhRHcEeKVqeHljBM1MQ")]
     [DisplayName("Type")]
-    public record Type : FundOrderType1Choice_
+    public partial record Type : FundOrderType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

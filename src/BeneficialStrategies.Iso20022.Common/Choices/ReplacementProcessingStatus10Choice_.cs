@@ -66,5 +66,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RPMBxQeDEe2fOITqoTnSLQ")]
     [DisplayName("Replacement Processing Status 10 Choice")]
-    public abstract record ReplacementProcessingStatus10Choice_ { }
+    public abstract partial record ReplacementProcessingStatus10Choice_ { }
 }

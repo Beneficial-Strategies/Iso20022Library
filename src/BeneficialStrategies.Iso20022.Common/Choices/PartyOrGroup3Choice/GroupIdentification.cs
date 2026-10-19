@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup3Choice
     /// Group Identification.
     /// </summary>
     [DisplayName("Group Identification")]
-    public record GroupIdentification : PartyOrGroup3Choice_
+    public partial record GroupIdentification : PartyOrGroup3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

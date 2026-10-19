@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BQxRQTEvEeyjbpgZW6G1Fg")]
 [DisplayName("Card Writing Capabilities")]
-public record CardWritingCapabilities1
+public partial record CardWritingCapabilities1
 {
     /// <summary>
     /// Card writing capability of the terminal performing the transaction.

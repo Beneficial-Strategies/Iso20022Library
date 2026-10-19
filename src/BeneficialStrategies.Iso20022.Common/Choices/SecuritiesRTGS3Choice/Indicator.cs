@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesRTGS3Choice
     /// </summary>
     [IsoId("_AZabAtokEeC60axPepSq7g_-1286368661")]
     [DisplayName("Indicator")]
-    public record Indicator : SecuritiesRTGS3Choice_
+    public partial record Indicator : SecuritiesRTGS3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

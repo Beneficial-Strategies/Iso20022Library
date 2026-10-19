@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RiskLevel2Choice
     [IsoId("_BtuioyGREeWO8_xZKx-MFg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RiskLevel2Choice_
+    public partial record Proprietary : RiskLevel2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

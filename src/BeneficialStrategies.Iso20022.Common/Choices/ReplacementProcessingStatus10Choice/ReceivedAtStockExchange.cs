@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
     [IsoId("_Rhhu_weDEe2fOITqoTnSLQ")]
     [DisplayName("Received At Stock Exchange")]
     [IsoXmlTag("RcvdAtStockXchg")]
-    public record ReceivedAtStockExchange : ReplacementProcessingStatus10Choice_
+    public partial record ReceivedAtStockExchange : ReplacementProcessingStatus10Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

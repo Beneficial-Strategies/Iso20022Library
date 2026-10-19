@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UzSt59p-Ed-ak6NoX_4Aeg_-1626734948")]
 [DisplayName("Suspended Status")]
-public record SuspendedStatus1
+public partial record SuspendedStatus1
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

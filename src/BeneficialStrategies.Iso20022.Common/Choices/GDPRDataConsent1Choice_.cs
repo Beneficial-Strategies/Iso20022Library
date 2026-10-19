@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_His4MJTTEemC09f0MxYkRg")]
     [DisplayName("GDPR Data Consent 1 Choice")]
-    public abstract record GDPRDataConsent1Choice_ { }
+    public abstract partial record GDPRDataConsent1Choice_ { }
 }

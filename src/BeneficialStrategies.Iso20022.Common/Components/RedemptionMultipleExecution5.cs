@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_GKGTHzbtEead9bDRE_1DAQ")]
 [DisplayName("Redemption Multiple Execution")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record RedemptionMultipleExecution5
+public partial record RedemptionMultipleExecution5
 {
     /// <summary>
     /// Indicates whether the confirmation is an amendment of a previous confirmation.

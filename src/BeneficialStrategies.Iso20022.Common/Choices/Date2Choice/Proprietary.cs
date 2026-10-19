@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Date2Choice
     [IsoId("_UdgCIdopEeCWg-hsBVGrDA_546853146")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Date2Choice_
+    public partial record Proprietary : Date2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

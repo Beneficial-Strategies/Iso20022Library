@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sJJtsXdBEe6YlIMyoxWMJA")]
 [DisplayName("Encrypted Data Element2")]
-public record EncryptedDataElement2
+public partial record EncryptedDataElement2
 {
     /// <summary>
     /// Identification.

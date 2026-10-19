@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S1iAuNp-Ed-ak6NoX_4Aeg_-610008315")]
 [DisplayName("Rating")]
-public record Rating1
+public partial record Rating1
 {
     /// <summary>
     /// Information regarding the entity that assigns the rating.

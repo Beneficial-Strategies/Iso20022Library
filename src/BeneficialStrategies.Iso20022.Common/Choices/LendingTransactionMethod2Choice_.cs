@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_2NBuAZEjEeakHoV5BVecAQ")]
     [DisplayName("Lending Transaction Method 2 Choice")]
-    public abstract record LendingTransactionMethod2Choice_ { }
+    public abstract partial record LendingTransactionMethod2Choice_ { }
 }

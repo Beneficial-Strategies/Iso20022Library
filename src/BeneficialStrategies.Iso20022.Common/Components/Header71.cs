@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6rd9wWxjEe6wzr2RagRERg")]
 [DisplayName("Header71")]
-public record Header71
+public partial record Header71
 {
     /// <summary>
     /// Message Function.

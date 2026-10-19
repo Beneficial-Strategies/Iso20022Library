@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HX5psXrpEeSz_of_1TY14A")]
 [DisplayName("Organisation")]
-public record Organisation18
+public partial record Organisation18
 {
     /// <summary>
     /// Identification of the card acceptor.

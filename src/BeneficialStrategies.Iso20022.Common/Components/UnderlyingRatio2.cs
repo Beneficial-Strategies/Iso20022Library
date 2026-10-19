@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XOn1CY-eEeaEa8S_GI1QNA")]
 [DisplayName("Underlying Ratio")]
-public record UnderlyingRatio2
+public partial record UnderlyingRatio2
 {
     /// <summary>
     /// Number of held securities for the exercise.

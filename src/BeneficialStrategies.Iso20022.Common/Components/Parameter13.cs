@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pOdcgaRZEeeWXKXf3KjtmQ")]
 [DisplayName("Parameter")]
-public record Parameter13
+public partial record Parameter13
 {
     /// <summary>
     /// Identification of the digest algorithm.

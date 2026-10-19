@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EujNMGZ8EfCX7uJiAWHfoQ")]
 [DisplayName("Card Authentication Data1")]
-public record CardAuthenticationData1
+public partial record CardAuthenticationData1
 {
     /// <summary>
     /// Specifies that card authentication is performed using credentials linked to the cardholder's account rather than the physical card.

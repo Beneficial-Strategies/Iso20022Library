@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CRSForm1Choice
     /// </summary>
     [IsoId("_gFvEIUNuEeaS-NnwLNvMPg")]
     [DisplayName("Code")]
-    public record Code : CRSForm1Choice_
+    public partial record Code : CRSForm1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eFO8kQeCEe2fOITqoTnSLQ")]
 [DisplayName("Yield Calculation")]
-public record YieldCalculation7
+public partial record YieldCalculation7
 {
     /// <summary>
     /// Result of the yield calculation.

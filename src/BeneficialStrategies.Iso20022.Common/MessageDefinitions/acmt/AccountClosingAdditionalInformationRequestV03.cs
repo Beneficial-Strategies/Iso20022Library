@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_bf9RX22PEei3KuUgpx7Xcw")]
 [DisplayName("Account Closing Additional Information Request V")]
-public record AccountClosingAdditionalInformationRequestV03 : IOuterRecord
+public partial record AccountClosingAdditionalInformationRequestV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification39Choice
     /// </summary>
     [IsoId("_mpl8bdmpEeeN3v2fup_Shw")]
     [DisplayName("Domestic")]
-    public record Domestic : AccountIdentification39Choice_
+    public partial record Domestic : AccountIdentification39Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zvnyIeE2EeeV6-yubHrZaQ")]
 [DisplayName("Retrieval Fulfilment Instructions")]
-public record RetrievalFulfilmentInstructions1
+public partial record RetrievalFulfilmentInstructions1
 {
     /// <summary>
     /// Contains information describing the fulfilment information delivery methods.

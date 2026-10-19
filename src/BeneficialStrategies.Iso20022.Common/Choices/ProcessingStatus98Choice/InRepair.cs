@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDkQarEe2phaVG0lYKTw")]
     [DisplayName("In Repair")]
-    public record InRepair : ProcessingStatus98Choice_
+    public partial record InRepair : ProcessingStatus98Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("InRpr")]

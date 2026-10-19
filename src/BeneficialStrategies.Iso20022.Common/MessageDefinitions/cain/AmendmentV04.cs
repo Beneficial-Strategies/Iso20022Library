@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_jlSk8ROHEfC1ZfCQz0xB3g")]
 [DisplayName("Amendment V04")]
-public record AmendmentV04 : IOuterRecord
+public partial record AmendmentV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

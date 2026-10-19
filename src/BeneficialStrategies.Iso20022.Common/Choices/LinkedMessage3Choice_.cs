@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_dqR1QCFeEeW9XJWqfgXIIA")]
     [DisplayName("Linked Message 3 Choice")]
-    public abstract record LinkedMessage3Choice_ { }
+    public abstract partial record LinkedMessage3Choice_ { }
 }

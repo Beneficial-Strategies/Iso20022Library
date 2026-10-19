@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WJDmUXroEeSz_of_1TY14A")]
 [DisplayName("Acquirer")]
-public record Acquirer6
+public partial record Acquirer6
 {
     /// <summary>
     /// Identification of the acquirer.

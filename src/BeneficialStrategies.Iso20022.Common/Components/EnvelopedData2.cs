@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eO2UIQioEeKn9O5oyej_zw")]
 [DisplayName("Enveloped Data")]
-public record EnvelopedData2
+public partial record EnvelopedData2
 {
     /// <summary>
     /// Version of the data structure.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E2tJY_QcEeihCvvpsmGI2w")]
 [DisplayName("Passenger Transport")]
-public record PassengerTransport1
+public partial record PassengerTransport1
 {
     /// <summary>
     /// Component supports ticketing transactions for airline, railway, and travel agency transactions to provide passenger ticket information for the cardholder. Acquirers can submit one occurrence of this component for each airline, railway, or travel agency transaction to provide general ticket information.

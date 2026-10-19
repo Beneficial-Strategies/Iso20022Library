@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Aac80dokEeC60axPepSq7g_-763075890")]
     [DisplayName("Netting Eligibility 3 Choice")]
-    public abstract record NettingEligibility3Choice_ { }
+    public abstract partial record NettingEligibility3Choice_ { }
 }

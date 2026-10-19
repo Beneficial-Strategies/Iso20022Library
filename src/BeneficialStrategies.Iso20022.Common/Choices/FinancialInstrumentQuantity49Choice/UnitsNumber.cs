@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity49Cho
     /// <summary>Quantity expressed as a number of units.</summary>
     [IsoId("57b20e7d-8efa-4d43-9506-8caf5dedb077")]
     [DisplayName("Units Number")]
-    public record UnitsNumber : FinancialInstrumentQuantity49Choice_
+    public partial record UnitsNumber : FinancialInstrumentQuantity49Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("UnitsNb")]

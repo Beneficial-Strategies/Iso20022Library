@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Channel2Choice
     /// </summary>
     [IsoId("_D4edcBg3EeKnW4lR85q-0A")]
     [DisplayName("Proprietary")]
-    public record Proprietary : Channel2Choice_
+    public partial record Proprietary : Channel2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

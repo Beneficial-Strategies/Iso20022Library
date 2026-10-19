@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification1Choic
     /// </summary>
     [IsoId("_TCfeotp-Ed-ak6NoX_4Aeg_-508773714")]
     [DisplayName("Party")]
-    public record Party : PlaceOfTradeIdentification1Choice_
+    public partial record Party : PlaceOfTradeIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

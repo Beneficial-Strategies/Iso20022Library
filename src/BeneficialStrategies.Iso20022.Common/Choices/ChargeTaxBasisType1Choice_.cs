@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AdIdYtokEeC60axPepSq7g_397232246")]
     [DisplayName("Charge Tax Basis Type 1 Choice")]
-    public abstract record ChargeTaxBasisType1Choice_ { }
+    public abstract partial record ChargeTaxBasisType1Choice_ { }
 }

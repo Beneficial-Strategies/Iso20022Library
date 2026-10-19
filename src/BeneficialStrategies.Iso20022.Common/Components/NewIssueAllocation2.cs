@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0BdZcQgpEeSUG-8hqXsVMQ")]
 [DisplayName("New Issue Allocation")]
-public record NewIssueAllocation2
+public partial record NewIssueAllocation2
 {
     /// <summary>
     /// Indicates whether the investor is eligible to participate in the profits and losses from a new issue.

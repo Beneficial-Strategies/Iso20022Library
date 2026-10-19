@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status20Choice
     /// </summary>
     [IsoId("_qrDFoSGaEeWKAaDJcYGKLw")]
     [DisplayName("Status")]
-    public record Status : Status20Choice_
+    public partial record Status : Status20Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

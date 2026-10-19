@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N8K_0Zm-Ee6Qpd-x8YgzaA")]
 [DisplayName("Special Programme Details2")]
-public record SpecialProgrammeDetails2
+public partial record SpecialProgrammeDetails2
 {
     /// <summary>
     /// Name.

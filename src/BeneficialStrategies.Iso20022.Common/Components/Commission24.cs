@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pLNREY-wEeaEa8S_GI1QNA")]
 [DisplayName("Commission")]
-public record Commission24
+public partial record Commission24
 {
     /// <summary>
     /// Specification of the commission type.

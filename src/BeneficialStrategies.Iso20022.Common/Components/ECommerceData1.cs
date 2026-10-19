@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NJD5E2zZEemD24gVaMSpeA")]
 [DisplayName("E Commerce Data")]
-public record ECommerceData1
+public partial record ECommerceData1
 {
     /// <summary>
     /// Type of the ecommerce data (for example ,ECI level, downgrade reason, etc).

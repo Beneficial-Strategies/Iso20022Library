@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     [IsoId("_A5JrBdokEeC60axPepSq7g_1442316662")]
     [DisplayName("Treated")]
     [IsoXmlTag("Trtd")]
-    public record Treated : ProcessingStatus17Choice_
+    public partial record Treated : ProcessingStatus17Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

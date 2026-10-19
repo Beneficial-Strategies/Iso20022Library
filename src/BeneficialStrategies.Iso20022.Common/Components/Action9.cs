@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B1YNAEXVEeegp_DADCe7HQ")]
 [DisplayName("Action")]
-public record Action9
+public partial record Action9
 {
     /// <summary>
     /// Destination of the action.

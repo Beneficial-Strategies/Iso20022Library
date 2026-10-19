@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KXZxEXQ5Ee6Y1uOeeiF_Eg")]
 [DisplayName("Invoice Line Item3")]
-public record InvoiceLineItem3
+public partial record InvoiceLineItem3
 {
     /// <summary>
     /// Date.

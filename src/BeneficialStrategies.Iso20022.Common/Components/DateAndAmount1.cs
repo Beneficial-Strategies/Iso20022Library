@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_woCxwCCYEeWJd9HF2tO7BA")]
 [DisplayName("Date And Amount")]
-public record DateAndAmount1
+public partial record DateAndAmount1
 {
     /// <summary>
     /// Date on which the amount is declared or registered.

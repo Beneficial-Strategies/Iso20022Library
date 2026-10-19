@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
     [IsoId("_lPQMIy9eEeOlZIh7PImd0A")]
     [DisplayName("KEK")]
     [IsoXmlTag("KEK")]
-    public record KEK : Recipient3Choice_
+    public partial record KEK : Recipient3Choice_
     {
         /// <summary>
         /// Version of the cryptographic key.

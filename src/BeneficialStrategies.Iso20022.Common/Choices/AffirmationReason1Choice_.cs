@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Azo44NokEeC60axPepSq7g_-579916981")]
     [DisplayName("Affirmation Reason 1 Choice")]
-    public abstract record AffirmationReason1Choice_ { }
+    public abstract partial record AffirmationReason1Choice_ { }
 }

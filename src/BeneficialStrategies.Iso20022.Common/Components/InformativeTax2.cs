@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1qys2RwMEe6O0NdiBuX__w")]
 [DisplayName("Informative Tax2")]
-public record InformativeTax2
+public partial record InformativeTax2
 {
     /// <summary>
     /// Taxable Income Per Dividend.

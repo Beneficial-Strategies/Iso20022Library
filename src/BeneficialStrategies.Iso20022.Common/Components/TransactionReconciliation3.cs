@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5HszwWl_EeSxgrJ0GX4SQQ")]
 [DisplayName("Transaction Reconciliation")]
-public record TransactionReconciliation3
+public partial record TransactionReconciliation3
 {
     /// <summary>
     /// Indicates if the transaction requires a closure of the reconciliation period.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EncryptedData1Choice
     /// </summary>
     [IsoId("_-on81OkLEemeDPHh-U9b6w")]
     [DisplayName("Binary Data")]
-    public record BinaryData : EncryptedData1Choice_
+    public partial record BinaryData : EncryptedData1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

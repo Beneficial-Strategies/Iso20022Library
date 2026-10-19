@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason20Choice
     [IsoId("_aciuiUHjEea8I67lh6qdSQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RejectedReason20Choice_
+    public partial record Proprietary : RejectedReason20Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

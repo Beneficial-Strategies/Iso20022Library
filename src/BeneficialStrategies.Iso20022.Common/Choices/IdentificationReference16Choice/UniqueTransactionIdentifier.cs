@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice
     /// Unique Transaction Identifier.
     /// </summary>
     [DisplayName("Unique Transaction Identifier")]
-    public record UniqueTransactionIdentifier : IdentificationReference16Choice_
+    public partial record UniqueTransactionIdentifier : IdentificationReference16Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

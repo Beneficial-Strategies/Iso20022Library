@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8m2xcQ2ZEeSNWNtJlXOAhg")]
 [DisplayName("Account Switch Details")]
-public record AccountSwitchDetails1
+public partial record AccountSwitchDetails1
 {
     /// <summary>
     /// Unique number that provides unique and unambiguous identification of the account switch.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fH5lkDh7EeaH-93K5JKmzw")]
 [DisplayName("Informative Tax")]
-public record InformativeTax1
+public partial record InformativeTax1
 {
     /// <summary>
     /// Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.

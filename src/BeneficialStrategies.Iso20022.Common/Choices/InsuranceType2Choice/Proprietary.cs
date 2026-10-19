@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InsuranceType2Choice
     [IsoId("_7-ZWYyGSEeWKAaDJcYGKLw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InsuranceType2Choice_
+    public partial record Proprietary : InsuranceType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

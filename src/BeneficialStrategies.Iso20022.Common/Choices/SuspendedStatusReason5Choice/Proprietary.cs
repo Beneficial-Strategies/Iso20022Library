@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason5Choice
     [IsoId("_o0mHQ0HlEea8I67lh6qdSQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SuspendedStatusReason5Choice_
+    public partial record Proprietary : SuspendedStatusReason5Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

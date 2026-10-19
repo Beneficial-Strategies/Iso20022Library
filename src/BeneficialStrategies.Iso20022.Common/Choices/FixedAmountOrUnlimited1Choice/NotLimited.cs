@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedAmountOrUnlimited1Choice
     /// </summary>
     [IsoId("_MA1JsEqBEeKw5sECfP82rg")]
     [DisplayName("Not Limited")]
-    public record NotLimited : FixedAmountOrUnlimited1Choice_
+    public partial record NotLimited : FixedAmountOrUnlimited1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

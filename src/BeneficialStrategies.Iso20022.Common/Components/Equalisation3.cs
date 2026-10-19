@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_paOzkRvfEe6BvtAMnhq3zw")]
 [DisplayName("Equalisation3")]
-public record Equalisation3
+public partial record Equalisation3
 {
     /// <summary>
     /// Amount.

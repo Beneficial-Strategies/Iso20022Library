@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityNumeric3Choice
     [IsoId("_AbWUsdokEeC60axPepSq7g_1822949260")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PriorityNumeric3Choice_
+    public partial record Proprietary : PriorityNumeric3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E-YG1zbtEead9bDRE_1DAQ")]
 [DisplayName("Redemption Execution")]
-public record RedemptionExecution16
+public partial record RedemptionExecution16
 {
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.

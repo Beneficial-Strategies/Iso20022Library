@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VFt7wcStEeuBjv5G5kw00g")]
 [DisplayName("Risk Context")]
-public record RiskContext2
+public partial record RiskContext2
 {
     /// <summary>
     /// Input data to be considered in a risk assessment.

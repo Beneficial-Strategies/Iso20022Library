@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwiSywEcEeCQm6a_G2yO_w_1932848830")]
 [DisplayName("Encapsulated Content")]
-public record EncapsulatedContent1
+public partial record EncapsulatedContent1
 {
     /// <summary>
     /// Type of data which have been authenticated.

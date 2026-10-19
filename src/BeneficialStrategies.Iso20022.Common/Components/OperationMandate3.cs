@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_QCGs4Q4fEeK3IMoVvcTkkg")]
 [DisplayName("Operation Mandate")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record OperationMandate3
+public partial record OperationMandate3
 {
     /// <summary>
     /// Specifies the type of change.

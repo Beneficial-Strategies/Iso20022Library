@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_xNqYKNE7Ed-BzquC8wXy7w_1852659752")]
 [DisplayName("Subscription Bulk Order Cancellation Instruction V")]
-public record SubscriptionBulkOrderCancellationInstructionV02 : IOuterRecord
+public partial record SubscriptionBulkOrderCancellationInstructionV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

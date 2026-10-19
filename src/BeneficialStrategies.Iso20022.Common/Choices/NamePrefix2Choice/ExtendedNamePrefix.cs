@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NamePrefix2Choice
     /// </summary>
     [IsoId("_PxoK8A2fEeSNWNtJlXOAhg")]
     [DisplayName("Extended Name Prefix")]
-    public record ExtendedNamePrefix : NamePrefix2Choice_
+    public partial record ExtendedNamePrefix : NamePrefix2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZEtY8QhGEeSUPbC7DbLJpQ")]
 [DisplayName("Tax Identification")]
-public record TaxIdentification2
+public partial record TaxIdentification2
 {
     /// <summary>
     /// Tax identification number or identifier.

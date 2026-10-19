@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction13C
     /// Token Request.
     /// </summary>
     [DisplayName("Token Request")]
-    public record TokenRequest : CardPaymentDataSetTransaction13Choice_
+    public partial record TokenRequest : CardPaymentDataSetTransaction13Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_miRygBQ8EeOKWo1NF21OVw")]
 [DisplayName("Reinvestment")]
-public record Reinvestment1
+public partial record Reinvestment1
 {
     /// <summary>
     /// Investment fund for the reinvestment.

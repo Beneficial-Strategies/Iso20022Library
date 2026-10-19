@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessing2Choice
     [IsoId("_mYKdGwd3Ee2fOITqoTnSLQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : PendingProcessing2Choice_
+    public partial record Reason : PendingProcessing2Choice_
     {
         /// <summary>
         /// Specifies the reason why the trade is wainting the affirmation.

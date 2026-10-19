@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticallyExposedPersonStatus1C
     /// </summary>
     [IsoId("_ds6esJUiEemC09f0MxYkRg")]
     [DisplayName("Code")]
-    public record Code : PoliticallyExposedPersonStatus1Choice_
+    public partial record Code : PoliticallyExposedPersonStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

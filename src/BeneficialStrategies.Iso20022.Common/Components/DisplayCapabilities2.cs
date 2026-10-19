@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OdbxQS9KEeOlZIh7PImd0A")]
 [DisplayName("Display Capabilities")]
-public record DisplayCapabilities2
+public partial record DisplayCapabilities2
 {
     /// <summary>
     /// Type of display (for example merchant or cardholder).

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity48Cho
     /// <summary>Number of investment fund units redeemed.</summary>
     [IsoId("0ffa4162-d088-4060-875f-ac0d58dc0fb2")]
     [DisplayName("Units Number")]
-    public record UnitsNumber : FinancialInstrumentQuantity48Choice_
+    public partial record UnitsNumber : FinancialInstrumentQuantity48Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("UnitsNb")]

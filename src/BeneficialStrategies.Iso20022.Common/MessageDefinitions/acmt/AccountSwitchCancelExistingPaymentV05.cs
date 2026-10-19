@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_R3AApjEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Cancel Existing Payment V05")]
-public record AccountSwitchCancelExistingPaymentV05 : IOuterRecord
+public partial record AccountSwitchCancelExistingPaymentV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

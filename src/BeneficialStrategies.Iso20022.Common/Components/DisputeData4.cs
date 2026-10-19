@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kfXKsXHDEe60F8I8TAMKmg")]
 [DisplayName("Dispute Data4")]
-public record DisputeData4
+public partial record DisputeData4
 {
     /// <summary>
     /// Cycle.

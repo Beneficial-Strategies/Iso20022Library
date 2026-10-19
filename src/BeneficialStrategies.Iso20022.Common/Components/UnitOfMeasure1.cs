@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m5ZdU_cqEeiW-auGnDPZIw")]
 [DisplayName("Unit Of Measure")]
-public record UnitOfMeasure1
+public partial record UnitOfMeasure1
 {
     /// <summary>
     /// Unit of measure of the item being shipped.

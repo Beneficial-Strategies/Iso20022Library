@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UL3KoXbhEfCmC4yYaU27Kg")]
 [DisplayName("Local Amenity2")]
-public record LocalAmenity2
+public partial record LocalAmenity2
 {
     /// <summary>
     /// Type of additional service available. P000-P999 reserved for private use, N000-N999 reserved for national use.

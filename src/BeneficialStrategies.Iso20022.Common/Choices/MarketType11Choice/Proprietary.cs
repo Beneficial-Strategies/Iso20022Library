@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType11Choice
     [IsoId("_AcsYgdokEeC60axPepSq7g_-428545907")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MarketType11Choice_
+    public partial record Proprietary : MarketType11Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

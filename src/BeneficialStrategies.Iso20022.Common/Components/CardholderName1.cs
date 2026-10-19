@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zc_F4EaqEeeIjf8aP9KbJA")]
 [DisplayName("Cardholder Name")]
-public record CardholderName1
+public partial record CardholderName1
 {
     /// <summary>
     /// Exact replication of the name of the cardholder as it appears on the card.

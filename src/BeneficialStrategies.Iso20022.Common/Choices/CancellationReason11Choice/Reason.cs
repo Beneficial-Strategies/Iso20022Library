@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason11Choice
     [IsoId("_A0Fk0tokEeC60axPepSq7g_-754464307")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : CancellationReason11Choice_
+    public partial record Reason : CancellationReason11Choice_
     {
         /// <summary>
         /// Specifies the reason why the trade is wainting the cancellation.

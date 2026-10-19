@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_CPQ1PTbtEead9bDRE_1DAQ")]
 [DisplayName("Subscription Multiple Order")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record SubscriptionMultipleOrder6
+public partial record SubscriptionMultipleOrder6
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.

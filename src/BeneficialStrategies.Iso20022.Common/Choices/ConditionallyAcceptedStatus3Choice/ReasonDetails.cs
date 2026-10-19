@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConditionallyAcceptedStatus3Choi
     [IsoId("_s1kxx0HXEeamVPoS58KxXA")]
     [DisplayName("Reason Details")]
     [IsoXmlTag("RsnDtls")]
-    public record ReasonDetails : ConditionallyAcceptedStatus3Choice_
+    public partial record ReasonDetails : ConditionallyAcceptedStatus3Choice_
     {
         /// <summary>
         /// Reason for the conditionally accepted status expressed as a code.

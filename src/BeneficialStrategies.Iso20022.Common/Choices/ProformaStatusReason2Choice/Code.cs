@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProformaStatusReason2Choice
     /// </summary>
     [IsoId("_MfWS0UzDEeafiMTDrtSnyw")]
     [DisplayName("Code")]
-    public record Code : ProformaStatusReason2Choice_
+    public partial record Code : ProformaStatusReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

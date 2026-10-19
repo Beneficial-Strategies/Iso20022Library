@@ -33,5 +33,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RBDV4ZS7EemqYPWMBuVawg")]
     [DisplayName("Financial Institution Identification 11 Choice")]
-    public abstract record FinancialInstitutionIdentification11Choice_ { }
+    public abstract partial record FinancialInstitutionIdentification11Choice_ { }
 }

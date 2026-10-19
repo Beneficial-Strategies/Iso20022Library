@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("33efad92-9020-40eb-8350-871593f70002")]
 [DisplayName("Switch Order Status And Reason3")]
-public record SwitchOrderStatusAndReason3
+public partial record SwitchOrderStatusAndReason3
 {
     /// <summary>
     /// Reference assigned to a set of orders or trades in order to link them together.

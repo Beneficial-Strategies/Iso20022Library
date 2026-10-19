@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IikQsUHtEeaNSo9he0Belg")]
 [DisplayName("Partially Settled Status")]
-public record PartiallySettledStatus10
+public partial record PartiallySettledStatus10
 {
     /// <summary>
     /// Reason for the partially settled status.

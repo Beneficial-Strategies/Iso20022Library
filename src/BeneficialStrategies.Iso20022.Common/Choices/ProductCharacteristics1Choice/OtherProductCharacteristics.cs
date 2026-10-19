@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCharacteristics1Choice
     [IsoId("_RbrR1dp-Ed-ak6NoX_4Aeg_816698034")]
     [DisplayName("Other Product Characteristics")]
     [IsoXmlTag("OthrPdctChrtcs")]
-    public record OtherProductCharacteristics : ProductCharacteristics1Choice_
+    public partial record OtherProductCharacteristics : ProductCharacteristics1Choice_
     {
         /// <summary>
         /// Identifier issued to a person for which no specific identifier has been defined.

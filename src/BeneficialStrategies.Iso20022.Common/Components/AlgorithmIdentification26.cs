@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t4S58aRPEeeWXKXf3KjtmQ")]
 [DisplayName("Algorithm Identification")]
-public record AlgorithmIdentification26
+public partial record AlgorithmIdentification26
 {
     /// <summary>
     /// Mask generator function cryptographic algorithm.

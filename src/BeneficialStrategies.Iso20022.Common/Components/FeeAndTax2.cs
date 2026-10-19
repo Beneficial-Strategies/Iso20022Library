@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("426b7bdb-6721-4368-b82d-1a21fc0ea3a0")]
 [DisplayName("Fee And Tax2")]
-public record FeeAndTax2
+public partial record FeeAndTax2
 {
     /// <summary>
     /// Reference to the agreement established between the fund and another party.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9FG4MUNJEeiut6dbx3wnBg")]
 [DisplayName("Settlement Service")]
-public record SettlementService2
+public partial record SettlementService2
 {
     /// <summary>
     /// Settlement service actually applied to the transaction.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_8saXYAgpEeSUG-8hqXsVMQ")]
     [DisplayName("De Minimus 1 Choice")]
-    public abstract record DeMinimus1Choice_ { }
+    public abstract partial record DeMinimus1Choice_ { }
 }

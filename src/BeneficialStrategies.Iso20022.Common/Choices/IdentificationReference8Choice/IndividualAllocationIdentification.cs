@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice
     /// </summary>
     [IsoId("_AcPsktokEeC60axPepSq7g_1936813349")]
     [DisplayName("Individual Allocation Identification")]
-    public record IndividualAllocationIdentification : IdentificationReference8Choice_
+    public partial record IndividualAllocationIdentification : IdentificationReference8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

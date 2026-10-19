@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwsDyQEcEeCQm6a_G2yO_w_811768700")]
 [DisplayName("Response Type")]
-public record ResponseType1
+public partial record ResponseType1
 {
     /// <summary>
     /// Result of the transaction.

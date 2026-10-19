@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jPs8QUYYEfCQAqQ9lolFUg")]
 [DisplayName("Transaction Specific Data1")]
-public record TransactionSpecificData1
+public partial record TransactionSpecificData1
 {
     /// <summary>
     /// Details of good and services included in the sale.

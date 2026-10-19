@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RfDOYUzAEeafiMTDrtSnyw")]
     [DisplayName("Disabled Status Reason 1 Choice")]
-    public abstract record DisabledStatusReason1Choice_ { }
+    public abstract partial record DisabledStatusReason1Choice_ { }
 }

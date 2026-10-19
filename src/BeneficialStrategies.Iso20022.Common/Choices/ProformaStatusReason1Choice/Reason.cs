@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProformaStatusReason1Choice
     [IsoId("_5BVa80zCEeafiMTDrtSnyw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : ProformaStatusReason1Choice_
+    public partial record Reason : ProformaStatusReason1Choice_
     {
         /// <summary>
         /// Reason for the proforma account status.

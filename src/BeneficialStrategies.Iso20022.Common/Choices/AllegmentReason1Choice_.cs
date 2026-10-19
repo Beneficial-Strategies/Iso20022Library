@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_A4j1INokEeC60axPepSq7g_-73094806")]
     [DisplayName("Allegment Reason 1 Choice")]
-    public abstract record AllegmentReason1Choice_ { }
+    public abstract partial record AllegmentReason1Choice_ { }
 }

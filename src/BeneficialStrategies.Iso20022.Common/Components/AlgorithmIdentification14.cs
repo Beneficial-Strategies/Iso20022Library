@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IHpysWjBEeSP8Z8nx8HTuQ")]
 [DisplayName("Algorithm Identification")]
-public record AlgorithmIdentification14
+public partial record AlgorithmIdentification14
 {
     /// <summary>
     /// Identification of the encryption algorithm.

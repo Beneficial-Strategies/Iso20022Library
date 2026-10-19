@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cTpNkXdBEe6YlIMyoxWMJA")]
 [DisplayName("Encrypted Data2")]
-public record EncryptedData2
+public partial record EncryptedData2
 {
     /// <summary>
     /// Control.

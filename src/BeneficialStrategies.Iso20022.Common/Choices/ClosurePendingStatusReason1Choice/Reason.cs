@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choic
     [IsoId("_UwXSs2CLEeabZtzjEVWYCQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : ClosurePendingStatusReason1Choice_
+    public partial record Reason : ClosurePendingStatusReason1Choice_
     {
         /// <summary>
         /// Reason for the closure pending status.

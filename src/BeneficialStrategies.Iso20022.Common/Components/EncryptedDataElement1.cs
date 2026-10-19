@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5yR_YMVvEeem1auQ2bBhWw")]
 [DisplayName("Encrypted Data Element")]
-public record EncryptedDataElement1
+public partial record EncryptedDataElement1
 {
     /// <summary>
     /// Identifies the element that has been encrypted.

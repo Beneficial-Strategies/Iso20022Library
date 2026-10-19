@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Oqd4sQd3Ee2fOITqoTnSLQ")]
 [DisplayName("Status And Reason")]
-public record StatusAndReason46
+public partial record StatusAndReason46
 {
     /// <summary>
     /// Status of affirmation of a trade.

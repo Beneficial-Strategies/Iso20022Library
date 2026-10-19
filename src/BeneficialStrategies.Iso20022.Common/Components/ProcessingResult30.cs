@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sb7D4ROGEfC1ZfCQz0xB3g")]
 [DisplayName("Processing Result30")]
-public record ProcessingResult30
+public partial record ProcessingResult30
 {
     /// <summary>
     /// Identification of response source.

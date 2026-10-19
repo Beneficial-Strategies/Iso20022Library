@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason1Choi
     [IsoId("_Azyp5NokEeC60axPepSq7g_-331834835")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : InstructionProcessingReason1Choice_
+    public partial record Reason : InstructionProcessingReason1Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction/request has a rejected status.

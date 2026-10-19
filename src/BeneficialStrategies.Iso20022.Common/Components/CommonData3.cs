@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b3R2QTJ2EeOqyZqt0rCZLg")]
 [DisplayName("Common Data")]
-public record CommonData3
+public partial record CommonData3
 {
     /// <summary>
     /// Data related to the environment of the transaction, common to a set of transaction.

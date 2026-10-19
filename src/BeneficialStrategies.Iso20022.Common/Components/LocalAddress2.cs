@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qW_LgT_XEfCQAqQ9lolFUg")]
 [DisplayName("Local Address2")]
-public record LocalAddress2
+public partial record LocalAddress2
 {
     /// <summary>
     /// First line of an address.

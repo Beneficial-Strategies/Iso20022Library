@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N5eWMEy9EeafiMTDrtSnyw")]
 [DisplayName("Account Status")]
-public record AccountStatus2
+public partial record AccountStatus2
 {
     /// <summary>
     /// Account can be used for its intended purpose.

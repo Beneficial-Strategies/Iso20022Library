@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Pc7lEVr3Eea4y99eritluQ")]
     [DisplayName("Blocked Reason 2 Choice")]
-    public abstract record BlockedReason2Choice_ { }
+    public abstract partial record BlockedReason2Choice_ { }
 }

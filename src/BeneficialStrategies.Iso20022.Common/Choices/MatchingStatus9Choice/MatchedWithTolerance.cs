@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus9Choice
     [IsoId("_A4aEJNokEeC60axPepSq7g_1625799281")]
     [DisplayName("Matched With Tolerance")]
     [IsoXmlTag("MtchdWthTlrnce")]
-    public record MatchedWithTolerance : MatchingStatus9Choice_
+    public partial record MatchedWithTolerance : MatchingStatus9Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

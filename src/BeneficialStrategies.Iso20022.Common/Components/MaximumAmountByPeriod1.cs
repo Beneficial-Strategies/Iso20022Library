@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qotj09p-Ed-ak6NoX_4Aeg_540897")]
 [DisplayName("Maximum Amount By Period")]
-public record MaximumAmountByPeriod1
+public partial record MaximumAmountByPeriod1
 {
     /// <summary>
     /// Maximum amount allowed over a specific period of time.

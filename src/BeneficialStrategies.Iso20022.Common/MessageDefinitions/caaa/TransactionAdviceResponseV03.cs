@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 )]
 [IsoId("_O2Fk4U7SEeyGi9JAv6wq7Q")]
 [DisplayName("Transaction Advice Response V")]
-public record TransactionAdviceResponseV03 : IOuterRecord
+public partial record TransactionAdviceResponseV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ymArETEyEe6g-ffJsqGiSA")]
 [DisplayName("Group5")]
-public record Group5
+public partial record Group5
 {
     /// <summary>
     /// Modification Code.

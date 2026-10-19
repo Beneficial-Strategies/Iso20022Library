@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_dK0IcxdHEeK5g-3oYI0_9Q")]
     [DisplayName("Payment Instrument 17 Choice")]
-    public abstract record PaymentInstrument17Choice_ { }
+    public abstract partial record PaymentInstrument17Choice_ { }
 }

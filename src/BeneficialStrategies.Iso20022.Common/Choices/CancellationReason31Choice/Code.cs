@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason31Choice
     /// </summary>
     [IsoId("_tr9nkVM4Eear4I4mBVNwZg")]
     [DisplayName("Code")]
-    public record Code : CancellationReason31Choice_
+    public partial record Code : CancellationReason31Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

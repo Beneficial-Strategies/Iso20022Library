@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("9563f788-9e57-423d-ab56-b2fd1dc4aa00")]
 [DisplayName("Subscription Bulk Order06")]
-public record SubscriptionBulkOrder06
+public partial record SubscriptionBulkOrder06
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.

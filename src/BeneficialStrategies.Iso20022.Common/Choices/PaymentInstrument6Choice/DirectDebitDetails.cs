@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument6Choice
     [IsoId("_VKiwQ9p-Ed-ak6NoX_4Aeg_-620434595")]
     [DisplayName("Direct Debit Details")]
     [IsoXmlTag("DrctDbtDtls")]
-    public record DirectDebitDetails : PaymentInstrument6Choice_
+    public partial record DirectDebitDetails : PaymentInstrument6Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.

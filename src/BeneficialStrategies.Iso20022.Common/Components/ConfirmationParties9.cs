@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YMcpnwasEe2phaVG0lYKTw")]
 [DisplayName("Confirmation Parties")]
-public record ConfirmationParties9
+public partial record ConfirmationParties9
 {
     /// <summary>
     /// Party that identifies the underlying investor.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5Ty4AQ4VEeKGXqvMN6jpiw")]
 [DisplayName("Party And Certificate")]
-public record PartyAndCertificate2
+public partial record PartyAndCertificate2
 {
     /// <summary>
     /// Entity involved in an activity.

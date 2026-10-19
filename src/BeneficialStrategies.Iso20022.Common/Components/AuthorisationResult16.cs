@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WPf4US5BEeunNvJlR_vCbg")]
 [DisplayName("Authorisation Result")]
-public record AuthorisationResult16
+public partial record AuthorisationResult16
 {
     /// <summary>
     /// Type of party that has delivered or declined the card payment authorisation (the party is not identified).

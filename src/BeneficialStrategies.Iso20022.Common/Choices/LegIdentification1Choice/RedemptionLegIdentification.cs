@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegIdentification1Choice
     /// </summary>
     [IsoId("_1CxGQkglEea9YuSvQGoi-w")]
     [DisplayName("Redemption Leg Identification")]
-    public record RedemptionLegIdentification : LegIdentification1Choice_
+    public partial record RedemptionLegIdentification : LegIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

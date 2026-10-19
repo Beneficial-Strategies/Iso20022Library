@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pxVPYSGaEeWKAaDJcYGKLw")]
 [DisplayName("Account Management Status And Reason")]
-public record AccountManagementStatusAndReason4
+public partial record AccountManagementStatusAndReason4
 {
     /// <summary>
     /// Status of the account opening instruction or account modification instruction.

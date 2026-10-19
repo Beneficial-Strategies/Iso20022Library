@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o4QsYSVKEe6pm5v5rjJOgQ")]
 [DisplayName("Equalisation Methodology Type2")]
-public record EqualisationMethodologyType2
+public partial record EqualisationMethodologyType2
 {
     /// <summary>
     /// Equalisation Methodology Type Code.

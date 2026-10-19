@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QoQ34Np-Ed-ak6NoX_4Aeg_126946620")]
 [DisplayName("References")]
-public record References6
+public partial record References6
 {
     /// <summary>
     /// Identify the type of rejected request.

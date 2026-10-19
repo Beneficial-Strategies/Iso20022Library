@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jh2RQBcTEeit0dtP9bTmEg")]
 [DisplayName("Claim Information")]
-public record ClaimInformation1
+public partial record ClaimInformation1
 {
     /// <summary>
     /// Code presented by the customer to claim funds.

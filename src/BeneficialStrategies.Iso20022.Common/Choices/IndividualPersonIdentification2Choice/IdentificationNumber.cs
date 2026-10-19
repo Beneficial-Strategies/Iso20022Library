@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentification2C
     [IsoId("_6KMwsSGZEeWKAaDJcYGKLw")]
     [DisplayName("Identification Number")]
     [IsoXmlTag("IdNb")]
-    public record IdentificationNumber : IndividualPersonIdentification2Choice_
+    public partial record IdentificationNumber : IndividualPersonIdentification2Choice_
     {
         /// <summary>
         /// Identification of a party, such as a tax or social security identifier.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType41Choice
     /// </summary>
     [IsoId("_VizA0doqEeCWg-hsBVGrDA_-796305594")]
     [DisplayName("Code")]
-    public record Code : IdentificationType41Choice_
+    public partial record Code : IdentificationType41Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

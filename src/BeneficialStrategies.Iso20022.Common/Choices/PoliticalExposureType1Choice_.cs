@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c6LHoRRvEeOKWo1NF21OVw")]
     [DisplayName("Political Exposure Type 1 Choice")]
-    public abstract record PoliticalExposureType1Choice_ { }
+    public abstract partial record PoliticalExposureType1Choice_ { }
 }

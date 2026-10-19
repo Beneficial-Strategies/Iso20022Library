@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lhtygXvREeS2PZh7wUMQog")]
 [DisplayName("Card Transaction")]
-public record CardTransaction14
+public partial record CardTransaction14
 {
     /// <summary>
     /// Type of key exchange.

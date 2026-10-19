@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartiallySettled21Choice
     /// </summary>
     [IsoId("_SSiV8UHtEeaNSo9he0Belg")]
     [DisplayName("Code")]
-    public record Code : PartiallySettled21Choice_
+    public partial record Code : PartiallySettled21Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

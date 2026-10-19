@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnabledStatusReason2Choice
     /// </summary>
     [IsoId("_ScfY8Ey-EeafiMTDrtSnyw")]
     [DisplayName("Code")]
-    public record Code : EnabledStatusReason2Choice_
+    public partial record Code : EnabledStatusReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

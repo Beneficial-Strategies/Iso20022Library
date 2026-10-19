@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yqs_gHrvEeSz_of_1TY14A")]
 [DisplayName("Card Acceptor Terminal")]
-public record CardAcceptorTerminal1
+public partial record CardAcceptorTerminal1
 {
     /// <summary>
     /// Identification of the terminal.

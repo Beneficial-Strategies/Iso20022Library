@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType30Choice
     [IsoId("_AbpPpNokEeC60axPepSq7g_-739644230")]
     [DisplayName("Alternate Classification")]
     [IsoXmlTag("AltrnClssfctn")]
-    public record AlternateClassification : ClassificationType30Choice_
+    public partial record AlternateClassification : ClassificationType30Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

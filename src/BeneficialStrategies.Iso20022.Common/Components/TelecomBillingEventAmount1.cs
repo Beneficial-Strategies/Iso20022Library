@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Av2xUVXZEfC0lMwgjvMClw")]
 [DisplayName("Telecom Billing Event Amount1")]
-public record TelecomBillingEventAmount1
+public partial record TelecomBillingEventAmount1
 {
     /// <summary>
     /// Description of the amount details.

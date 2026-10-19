@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H51h0_PdEeihCvvpsmGI2w")]
 [DisplayName("Travel Agency")]
-public record TravelAgency2
+public partial record TravelAgency2
 {
     /// <summary>
     /// Information describing the travel agency or party providing travel-related services.

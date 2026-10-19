@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lK_YgYO8EeSWSLYdc10LRg")]
 [DisplayName("Card Transaction Context")]
-public record CardTransactionContext4
+public partial record CardTransactionContext4
 {
     /// <summary>
     /// Data used to assign specific condition such as liability shift or preferential interchange fees.

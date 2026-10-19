@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CustomerConductClassification1Ch
     [IsoId("_gifSQBdwEeKYM7Bc71nDlA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CustomerConductClassification1Choice_
+    public partial record Proprietary : CustomerConductClassification1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

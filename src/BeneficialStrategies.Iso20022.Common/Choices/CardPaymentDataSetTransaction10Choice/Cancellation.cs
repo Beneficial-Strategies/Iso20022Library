@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction10C
     [IsoId("_bgZKs00ZEeybj420QgWBkA")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public record Cancellation : CardPaymentDataSetTransaction10Choice_
+    public partial record Cancellation : CardPaymentDataSetTransaction10Choice_
     {
         /// <summary>
         /// Sequential counter of the transaction.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_byoyAZUsEe62CMB9luireQ")]
 [DisplayName("Acceptor Reconciliation Request V12")]
-public record AcceptorReconciliationRequestV12 : IOuterRecord
+public partial record AcceptorReconciliationRequestV12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

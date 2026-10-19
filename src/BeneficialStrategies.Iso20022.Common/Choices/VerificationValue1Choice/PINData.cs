@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
     [IsoId("_4EhKppaNEemfCcEf5rVTyg")]
     [DisplayName("PIN Data")]
     [IsoXmlTag("PINData")]
-    public record PINData : VerificationValue1Choice_
+    public partial record PINData : VerificationValue1Choice_
     {
         /// <summary>
         /// Identifies the key management scheme and associated control field format.

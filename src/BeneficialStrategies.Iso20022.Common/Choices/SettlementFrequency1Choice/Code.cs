@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFrequency1Choice
     /// </summary>
     [IsoId("_nkfPUCDUEeWCLu74WLgP4w")]
     [DisplayName("Code")]
-    public record Code : SettlementFrequency1Choice_
+    public partial record Code : SettlementFrequency1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDgQarEe2phaVG0lYKTw")]
     [DisplayName("Acknowledged Accepted")]
     [IsoXmlTag("AckdAccptd")]
-    public record AcknowledgedAccepted : ProcessingStatus98Choice_
+    public partial record AcknowledgedAccepted : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

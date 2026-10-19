@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BzjroCDSEeWCLu74WLgP4w")]
 [DisplayName("Treasury Profile")]
-public record TreasuryProfile1
+public partial record TreasuryProfile1
 {
     /// <summary>
     /// Execution date of treasury bond trade.

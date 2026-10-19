@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice
     /// </summary>
     [IsoId("_t7vvJRdHEeK5g-3oYI0_9Q")]
     [DisplayName("Bankers Draft")]
-    public record BankersDraft : PaymentInstrument17Choice_
+    public partial record BankersDraft : PaymentInstrument17Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

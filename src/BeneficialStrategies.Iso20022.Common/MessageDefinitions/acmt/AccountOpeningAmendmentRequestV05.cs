@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_R2-ycTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Opening Amendment Request V05")]
-public record AccountOpeningAmendmentRequestV05 : IOuterRecord
+public partial record AccountOpeningAmendmentRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

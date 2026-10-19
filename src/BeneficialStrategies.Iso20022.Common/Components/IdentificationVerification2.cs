@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tpjOU1kyEeGeoaLUQk__nA_-767383057")]
 [DisplayName("Identification Verification")]
-public record IdentificationVerification2
+public partial record IdentificationVerification2
 {
     /// <summary>
     /// Unique identification, as assigned by a sending party, to unambiguously identify the party and account identification information group within the message.

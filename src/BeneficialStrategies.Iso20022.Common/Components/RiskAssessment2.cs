@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hh16scSsEeuBjv5G5kw00g")]
 [DisplayName("Risk Assessment")]
-public record RiskAssessment2
+public partial record RiskAssessment2
 {
     /// <summary>
     /// Entity providing an intermediate result of a risk assessment process.

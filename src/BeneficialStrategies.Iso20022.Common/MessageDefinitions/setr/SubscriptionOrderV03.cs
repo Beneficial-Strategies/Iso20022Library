@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_5KY-KNE7Ed-BzquC8wXy7w_215603327")]
 [DisplayName("Subscription Order V")]
-public record SubscriptionOrderV03 : IOuterRecord
+public partial record SubscriptionOrderV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

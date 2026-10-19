@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_e1f64xdCEeK5g-3oYI0_9Q")]
     [DisplayName("Party 14 Choice")]
-    public abstract record Party14Choice_ { }
+    public abstract partial record Party14Choice_ { }
 }

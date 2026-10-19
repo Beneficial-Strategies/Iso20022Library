@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification5Choice
     /// </summary>
     [IsoId("_QRUXgdp-Ed-ak6NoX_4Aeg_-1819499292")]
     [DisplayName("Tax Identification Number")]
-    public record TaxIdentificationNumber : PartyIdentification5Choice_
+    public partial record TaxIdentificationNumber : PartyIdentification5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

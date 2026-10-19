@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("b567fa88-7149-489e-9058-cbedd3f4632d")]
 [DisplayName("Switch Execution8")]
-public record SwitchExecution8
+public partial record SwitchExecution8
 {
     /// <summary>
     /// Indicates whether the confirmation is an amendment of a previous confirmation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_00AMoTEyEe6g-ffJsqGiSA")]
 [DisplayName("Verification Report5")]
-public record VerificationReport5
+public partial record VerificationReport5
 {
     /// <summary>
     /// Original Identification.

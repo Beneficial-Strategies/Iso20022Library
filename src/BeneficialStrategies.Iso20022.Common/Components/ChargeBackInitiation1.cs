@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qz-mEFDZEee94_dUz-hvgw")]
 [DisplayName("Charge Back Initiation")]
-public record ChargeBackInitiation1
+public partial record ChargeBackInitiation1
 {
     /// <summary>
     /// Environment of the chargeback.

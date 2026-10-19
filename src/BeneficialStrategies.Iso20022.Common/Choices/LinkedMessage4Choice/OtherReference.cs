@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage4Choice
     [IsoId("_5R1ss6DjEeahP9OZs6K4wg")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
-    public record OtherReference : LinkedMessage4Choice_
+    public partial record OtherReference : LinkedMessage4Choice_
     {
         /// <summary>
         /// Message identification of a message. This reference was assigned by the party issuing the message.

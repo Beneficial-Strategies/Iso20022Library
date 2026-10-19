@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_n_3QoRN4EfC1ZfCQz0xB3g")]
 [DisplayName("Additional Service3")]
-public record AdditionalService3
+public partial record AdditionalService3
 {
     /// <summary>
     /// Type of additional service applied to the transaction.

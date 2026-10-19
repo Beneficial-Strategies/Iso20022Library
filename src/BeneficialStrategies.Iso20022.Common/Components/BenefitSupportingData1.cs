@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LarakCq-EfCD0_iZ8tw-zA")]
 [DisplayName("Benefit Supporting Data1")]
-public record BenefitSupportingData1
+public partial record BenefitSupportingData1
 {
     /// <summary>
     /// Identification of the benefit administrator.

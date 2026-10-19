@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Io6h4XG7Ee60F8I8TAMKmg")]
 [DisplayName("Risk Assessment3")]
-public record RiskAssessment3
+public partial record RiskAssessment3
 {
     /// <summary>
     /// Entity Identification.

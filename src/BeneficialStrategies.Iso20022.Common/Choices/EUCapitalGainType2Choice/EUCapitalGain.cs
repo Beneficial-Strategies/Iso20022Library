@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUCapitalGainType2Choice
     /// </summary>
     [IsoId("_f57zwdoqEeCWg-hsBVGrDA_-1285095574")]
     [DisplayName("EU Capital Gain")]
-    public record EUCapitalGain : EUCapitalGainType2Choice_
+    public partial record EUCapitalGain : EUCapitalGainType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

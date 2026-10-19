@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("__Yc0UaFAEe-MRKYsaX6JDg")]
 [DisplayName("Acceptor Currency Conversion Advice V09")]
-public record AcceptorCurrencyConversionAdviceV09 : IOuterRecord
+public partial record AcceptorCurrencyConversionAdviceV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

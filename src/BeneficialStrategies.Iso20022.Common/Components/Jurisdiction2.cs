@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uh9kAMVaEeuips4fuphvoQ")]
 [DisplayName("Jurisdiction")]
-public record Jurisdiction2
+public partial record Jurisdiction2
 {
     /// <summary>
     /// When true, indicates the transaction is considered to be domestic.

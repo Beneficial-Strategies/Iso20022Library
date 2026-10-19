@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction10C
     [IsoId("_bgZKsU0ZEeybj420QgWBkA")]
     [DisplayName("Completion")]
     [IsoXmlTag("Cmpltn")]
-    public record Completion : CardPaymentDataSetTransaction10Choice_
+    public partial record Completion : CardPaymentDataSetTransaction10Choice_
     {
         /// <summary>
         /// Sequential counter of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WsmcQxOAEeKjmvxNCObNeQ")]
 [DisplayName("Mi FID Classification")]
-public record MiFIDClassification1
+public partial record MiFIDClassification1
 {
     /// <summary>
     /// MiFID classification of the account owner.

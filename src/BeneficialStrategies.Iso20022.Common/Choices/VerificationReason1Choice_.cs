@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qo3U1Np-Ed-ak6NoX_4Aeg_-449981895")]
     [DisplayName("Verification Reason 1 Choice")]
-    public abstract record VerificationReason1Choice_ { }
+    public abstract partial record VerificationReason1Choice_ { }
 }

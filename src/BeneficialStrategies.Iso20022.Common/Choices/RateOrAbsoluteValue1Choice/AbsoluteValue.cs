@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrAbsoluteValue1Choice
     /// </summary>
     [IsoId("_RBcz8dp-Ed-ak6NoX_4Aeg_-1504048386")]
     [DisplayName("Absolute Value")]
-    public record AbsoluteValue : RateOrAbsoluteValue1Choice_
+    public partial record AbsoluteValue : RateOrAbsoluteValue1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

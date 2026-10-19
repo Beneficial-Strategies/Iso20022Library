@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GY8mMSCBEeWhHbfCMWc1cw")]
 [DisplayName("Account Parties")]
-public record AccountParties13
+public partial record AccountParties13
 {
     /// <summary>
     /// Main party associated with the account.

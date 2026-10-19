@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_sfc1cZEjEeakHoV5BVecAQ")]
     [DisplayName("Revaluation 3 Choice")]
-    public abstract record Revaluation3Choice_ { }
+    public abstract partial record Revaluation3Choice_ { }
 }

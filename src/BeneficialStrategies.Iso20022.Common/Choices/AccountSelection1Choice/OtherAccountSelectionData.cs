@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection1Choice
     [IsoId("_RjijYyFSEeWgV9SQSyaAog")]
     [DisplayName("Other Account Selection Data")]
     [IsoXmlTag("OthrAcctSelctnData")]
-    public record OtherAccountSelectionData : AccountSelection1Choice_
+    public partial record OtherAccountSelectionData : AccountSelection1Choice_
     {
         /// <summary>
         /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.

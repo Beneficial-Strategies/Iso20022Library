@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rmb7gRwREe6O0NdiBuX__w")]
 [DisplayName("Safekeeping Place Type And Any BIC Identifier3")]
-public record SafekeepingPlaceTypeAndAnyBICIdentifier3
+public partial record SafekeepingPlaceTypeAndAnyBICIdentifier3
 {
     /// <summary>
     /// Safekeeping Place Type.

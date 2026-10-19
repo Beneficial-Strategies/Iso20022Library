@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RzOPL9p-Ed-ak6NoX_4Aeg_-1110358755")]
 [DisplayName("Investment Account")]
-public record InvestmentAccount26
+public partial record InvestmentAccount26
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderType2Choice
     /// </summary>
     [IsoId("_dOFRwVxUEeWvPv3PXpS3fw")]
     [DisplayName("Type")]
-    public record Type : OrderType2Choice_
+    public partial record Type : OrderType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

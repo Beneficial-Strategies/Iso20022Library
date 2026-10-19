@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification39Choice
     /// </summary>
     [IsoId("_mpl8ZdmpEeeN3v2fup_Shw")]
     [DisplayName("E Mail")]
-    public record EMail : AccountIdentification39Choice_
+    public partial record EMail : AccountIdentification39Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

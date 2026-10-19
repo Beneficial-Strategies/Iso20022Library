@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_nxVGUC8QEeKW5usMQLtzqw")]
     [DisplayName("Card Payment Data Set Transaction 1 Choice")]
-    public abstract record CardPaymentDataSetTransaction1Choice_ { }
+    public abstract partial record CardPaymentDataSetTransaction1Choice_ { }
 }

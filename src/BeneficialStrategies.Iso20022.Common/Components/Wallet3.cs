@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mtLxgW9wEe6DxcrvCrq6hQ")]
 [DisplayName("Wallet3")]
-public record Wallet3
+public partial record Wallet3
 {
     /// <summary>
     /// Provider.

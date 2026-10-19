@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1GvAoVOZEeO1RfnvbrvgKg")]
 [DisplayName("Card Payment Environment")]
-public record CardPaymentEnvironment31
+public partial record CardPaymentEnvironment31
 {
     /// <summary>
     /// Acquirer involved in the card payment transaction.

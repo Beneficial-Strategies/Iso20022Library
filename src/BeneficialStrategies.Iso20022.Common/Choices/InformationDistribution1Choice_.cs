@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9jvwACCUEeWJd9HF2tO7BA")]
     [DisplayName("Information Distribution 1 Choice")]
-    public abstract record InformationDistribution1Choice_ { }
+    public abstract partial record InformationDistribution1Choice_ { }
 }

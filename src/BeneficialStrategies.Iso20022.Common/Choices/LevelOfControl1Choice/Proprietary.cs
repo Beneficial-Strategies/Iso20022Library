@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LevelOfControl1Choice
     [IsoId("_SlfVkCDDEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LevelOfControl1Choice_
+    public partial record Proprietary : LevelOfControl1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

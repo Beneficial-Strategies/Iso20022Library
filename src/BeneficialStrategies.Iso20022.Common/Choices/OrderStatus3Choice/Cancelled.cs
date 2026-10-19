@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice
     [IsoId("_vIDnY0H7EeaV3ab_pHzFIQ")]
     [DisplayName("Cancelled")]
     [IsoXmlTag("Canc")]
-    public record Cancelled : OrderStatus3Choice_
+    public partial record Cancelled : OrderStatus3Choice_
     {
         /// <summary>
         /// Reason for the cancelled status.

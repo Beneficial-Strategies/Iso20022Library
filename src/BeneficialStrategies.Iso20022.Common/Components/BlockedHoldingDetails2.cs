@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H0B8ESGdEeWKAaDJcYGKLw")]
 [DisplayName("Blocked Holding Details")]
-public record BlockedHoldingDetails2
+public partial record BlockedHoldingDetails2
 {
     /// <summary>
     /// Specifies how the blocked account holding is defined.

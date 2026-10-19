@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rVNPERNoEfC1ZfCQz0xB3g")]
 [DisplayName("Risk Assessment4")]
-public record RiskAssessment4
+public partial record RiskAssessment4
 {
     /// <summary>
     /// Identification of the party.

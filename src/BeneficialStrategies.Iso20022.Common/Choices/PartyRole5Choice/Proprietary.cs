@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyRole5Choice
     [IsoId("_pvNFUyDSEeWCLu74WLgP4w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PartyRole5Choice_
+    public partial record Proprietary : PartyRole5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

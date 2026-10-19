@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6GFykQauEe2phaVG0lYKTw")]
 [DisplayName("Order")]
-public record Order23
+public partial record Order23
 {
     /// <summary>
     /// Specifies the type of business process.

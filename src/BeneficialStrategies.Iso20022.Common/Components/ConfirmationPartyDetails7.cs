@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h-wZ7Y-iEeaEa8S_GI1QNA")]
 [DisplayName("Confirmation Party Details")]
-public record ConfirmationPartyDetails7
+public partial record ConfirmationPartyDetails7
 {
     /// <summary>
     /// Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun &amp; Bradstreet Identification.

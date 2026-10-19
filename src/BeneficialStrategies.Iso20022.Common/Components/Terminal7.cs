@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CYyeUW6fEe6DxcrvCrq6hQ")]
 [DisplayName("Terminal7")]
-public record Terminal7
+public partial record Terminal7
 {
     /// <summary>
     /// Identification.

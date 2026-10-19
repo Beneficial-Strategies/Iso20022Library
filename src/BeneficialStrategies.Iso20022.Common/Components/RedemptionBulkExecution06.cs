@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("51275b2e-45a7-47a6-93bb-88d4326f8423")]
 [DisplayName("Redemption Bulk Execution06")]
-public record RedemptionBulkExecution06
+public partial record RedemptionBulkExecution06
 {
     /// <summary>
     /// Indicates whether the confirmation is an amendment of a previous confirmation.

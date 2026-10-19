@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementInstructionReason1Choi
     [IsoId("_fF7OwCCsEeWJd9HF2tO7BA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementInstructionReason1Choice_
+    public partial record Proprietary : SettlementInstructionReason1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

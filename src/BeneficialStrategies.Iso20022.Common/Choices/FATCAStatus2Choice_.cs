@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_v4N-sSCVEeWJd9HF2tO7BA")]
     [DisplayName("FATCA Status 2 Choice")]
-    public abstract record FATCAStatus2Choice_ { }
+    public abstract partial record FATCAStatus2Choice_ { }
 }

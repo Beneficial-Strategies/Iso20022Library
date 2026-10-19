@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PUhYHtp-Ed-ak6NoX_4Aeg_-335182924")]
 [DisplayName("Restriction")]
-public record Restriction1
+public partial record Restriction1
 {
     /// <summary>
     /// Type of the restriction.

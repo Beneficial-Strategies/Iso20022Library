@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Incoterms4Choice.Proprietary), nameof(Incoterms4Choice.Proprietary))]
     [IsoId("_S5ezYAEcEeCQm6a_G2yO_w_-552526097")]
     [DisplayName("Incoterms 4 Choice")]
-    public abstract record Incoterms4Choice_ { }
+    public abstract partial record Incoterms4Choice_ { }
 }

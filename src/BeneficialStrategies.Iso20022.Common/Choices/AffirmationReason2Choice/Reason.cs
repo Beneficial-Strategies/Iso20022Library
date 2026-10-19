@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationReason2Choice
     [IsoId("_YFYT8wd3Ee2fOITqoTnSLQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : AffirmationReason2Choice_
+    public partial record Reason : AffirmationReason2Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction/request has a unaffirmed status.

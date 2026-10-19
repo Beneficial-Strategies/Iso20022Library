@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity51Cho
     /// <summary>Quantity expressed as a net amount of money.</summary>
     [IsoId("016bef78-b272-42a4-aaef-d2e24de08d1a")]
     [DisplayName("Net Amount")]
-    public record NetAmount : FinancialInstrumentQuantity51Choice_
+    public partial record NetAmount : FinancialInstrumentQuantity51Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NetAmt")]

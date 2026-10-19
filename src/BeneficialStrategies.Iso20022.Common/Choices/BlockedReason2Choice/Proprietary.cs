@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedReason2Choice
     [IsoId("_P2OO01r3Eea4y99eritluQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BlockedReason2Choice_
+    public partial record Proprietary : BlockedReason2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

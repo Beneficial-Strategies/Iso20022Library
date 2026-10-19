@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_k8erYHu5EeSLmfFG0DG7zQ")]
 [DisplayName("Reconciliation Initiation")]
-public record ReconciliationInitiation : IOuterRecord
+public partial record ReconciliationInitiation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AwaitingCancellationReason1Choic
     /// </summary>
     [IsoId("_A4QTINokEeC60axPepSq7g_358058758")]
     [DisplayName("Code")]
-    public record Code : AwaitingCancellationReason1Choice_
+    public partial record Code : AwaitingCancellationReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

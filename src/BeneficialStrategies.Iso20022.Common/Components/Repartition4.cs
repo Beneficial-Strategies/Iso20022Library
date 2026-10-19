@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wrHbcSC6EeWPMvNwVtiMsA")]
 [DisplayName("Repartition")]
-public record Repartition4
+public partial record Repartition4
 {
     /// <summary>
     /// Amount, units or percentage of financial instrument invested or withdrawn.

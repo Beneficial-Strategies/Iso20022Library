@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_mpdBZQd3Ee2fOITqoTnSLQ")]
     [DisplayName("Awaiting Affirmation Reason 2 Choice")]
-    public abstract record AwaitingAffirmationReason2Choice_ { }
+    public abstract partial record AwaitingAffirmationReason2Choice_ { }
 }

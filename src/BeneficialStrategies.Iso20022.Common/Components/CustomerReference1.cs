@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0Fh7xPPaEeihCvvpsmGI2w")]
 [DisplayName("Customer Reference")]
-public record CustomerReference1
+public partial record CustomerReference1
 {
     /// <summary>
     /// Defines the content of the value provided in the Customer Reference detail.

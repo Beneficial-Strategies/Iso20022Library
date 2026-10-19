@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AVY2oNokEeC60axPepSq7g_-1057295935")]
 [DisplayName("Other Prices")]
-public record OtherPrices1
+public partial record OtherPrices1
 {
     /// <summary>
     /// Specifies the maximum price.

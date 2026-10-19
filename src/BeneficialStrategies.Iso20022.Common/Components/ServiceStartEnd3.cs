@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_22SOsXTkEe6h-4AZRg9sVg")]
 [DisplayName("Service Start End3")]
-public record ServiceStartEnd3
+public partial record ServiceStartEnd3
 {
     /// <summary>
     /// Location.

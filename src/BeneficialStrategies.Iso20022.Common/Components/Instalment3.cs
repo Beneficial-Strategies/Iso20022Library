@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NTS84EVIEeea-M6VZkEPUw")]
 [DisplayName("Instalment")]
-public record Instalment3
+public partial record Instalment3
 {
     /// <summary>
     /// Indicates the occurrence of a single instalment payment within a series of instalment payments.

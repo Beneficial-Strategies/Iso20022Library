@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1Bk5i2XREeOWzsrIp2keDA")]
     [DisplayName("Matching Reason 4 Choice")]
-    public abstract record MatchingReason4Choice_ { }
+    public abstract partial record MatchingReason4Choice_ { }
 }

@@ -30,5 +30,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_JYYKawhDEeSUPbC7DbLJpQ")]
     [DisplayName("Account Parties 7 Choice")]
-    public abstract record AccountParties7Choice_ { }
+    public abstract partial record AccountParties7Choice_ { }
 }

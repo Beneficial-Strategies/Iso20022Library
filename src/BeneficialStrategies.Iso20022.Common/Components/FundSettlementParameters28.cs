@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("ffe33714-eb93-434e-95cf-8bc7c6e54cf6")]
 [DisplayName("Fund Settlement Parameters28")]
-public record FundSettlementParameters28
+public partial record FundSettlementParameters28
 {
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.

@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wPBNlewhEeiMkKo2clXHdQ")]
     [DisplayName("Retrieval Delivery Method 1 Choice")]
-    public abstract record RetrievalDeliveryMethod1Choice_ { }
+    public abstract partial record RetrievalDeliveryMethod1Choice_ { }
 }

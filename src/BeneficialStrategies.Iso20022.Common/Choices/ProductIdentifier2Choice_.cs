@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rb1C0Np-Ed-ak6NoX_4Aeg_-1291805290")]
     [DisplayName("Product Identifier 2 Choice")]
-    public abstract record ProductIdentifier2Choice_ { }
+    public abstract partial record ProductIdentifier2Choice_ { }
 }

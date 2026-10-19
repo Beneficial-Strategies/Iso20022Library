@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x14swQ2aEeSNWNtJlXOAhg")]
 [DisplayName("Balance Transfer Funding Limit")]
-public record BalanceTransferFundingLimit1
+public partial record BalanceTransferFundingLimit1
 {
     /// <summary>
     /// Maximum value and related currency that can be sent by the new account servicer to the old account servicer in case of a negative closing balance.

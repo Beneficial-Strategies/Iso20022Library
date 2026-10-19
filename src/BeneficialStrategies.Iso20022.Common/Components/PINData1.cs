@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oIKMwEbYEeeIjf8aP9KbJA")]
 [DisplayName("PIN Data")]
-public record PINData1
+public partial record PINData1
 {
     /// <summary>
     /// Identifies the key management scheme and associated control field format.

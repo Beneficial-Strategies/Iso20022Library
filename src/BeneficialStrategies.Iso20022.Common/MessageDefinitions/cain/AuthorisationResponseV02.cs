@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_El96hVKoEeeXvpI8ztnTow")]
 [DisplayName("Authorisation Response V")]
-public record AuthorisationResponseV02 : IOuterRecord
+public partial record AuthorisationResponseV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

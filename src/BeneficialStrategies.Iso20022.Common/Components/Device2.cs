@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HWMLUYKvEeu4svNQ5N-l6w")]
 [DisplayName("Device")]
-public record Device2
+public partial record Device2
 {
     /// <summary>
     /// Manufacturer of the device.

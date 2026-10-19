@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AwaitingAffirmationReason2Choice
     /// </summary>
     [IsoId("_m6cDsQd3Ee2fOITqoTnSLQ")]
     [DisplayName("Code")]
-    public record Code : AwaitingAffirmationReason2Choice_
+    public partial record Code : AwaitingAffirmationReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QlWS8XjMEe6YlIMyoxWMJA")]
 [DisplayName("Programme Mode5")]
-public record ProgrammeMode5
+public partial record ProgrammeMode5
 {
     /// <summary>
     /// Applied Identification.

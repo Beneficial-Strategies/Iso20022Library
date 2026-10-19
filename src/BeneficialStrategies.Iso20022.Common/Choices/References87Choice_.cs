@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References87Choice.OtherReference))]
     [JsonDerivedType(typeof(References87Choice.PreviousReference))]
     [JsonDerivedType(typeof(References87Choice.OtherReference))]
-    public abstract record References87Choice_
+    public abstract partial record References87Choice_
     {
     }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency37Choice
     /// </summary>
     [IsoId("_GlS6xGoFEearR-CA7eRZXQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : Frequency37Choice_
+    public partial record Proprietary : Frequency37Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

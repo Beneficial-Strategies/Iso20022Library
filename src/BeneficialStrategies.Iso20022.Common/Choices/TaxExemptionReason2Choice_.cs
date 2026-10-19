@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_OpVJYSDAEeWPMvNwVtiMsA")]
     [DisplayName("Tax Exemption Reason 2 Choice")]
-    public abstract record TaxExemptionReason2Choice_ { }
+    public abstract partial record TaxExemptionReason2Choice_ { }
 }

@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_rM_TIQgpEeSUG-8hqXsVMQ")]
 [DisplayName("Account Modification Instruction V")]
-public record AccountModificationInstructionV05 : IOuterRecord
+public partial record AccountModificationInstructionV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FATCAForm1Choice.Proprietary), nameof(FATCAForm1Choice.Proprietary))]
     [IsoId("_blPakQjLEeS5F6qHcKOrew")]
     [DisplayName("FATCA Form 1 Choice")]
-    public abstract record FATCAForm1Choice_ { }
+    public abstract partial record FATCAForm1Choice_ { }
 }

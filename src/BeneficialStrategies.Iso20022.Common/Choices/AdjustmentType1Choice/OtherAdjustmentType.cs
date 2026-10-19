@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdjustmentType1Choice
     /// </summary>
     [IsoId("_X_NUQBrXEeOVR9VN6fAMUg")]
     [DisplayName("Other Adjustment Type")]
-    public record OtherAdjustmentType : AdjustmentType1Choice_
+    public partial record OtherAdjustmentType : AdjustmentType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

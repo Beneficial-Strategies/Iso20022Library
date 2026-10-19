@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
     [IsoId("_CgNiAggqEeSUG-8hqXsVMQ")]
     [DisplayName("De Minimus Applicable")]
     [IsoXmlTag("DeMnmsAplbl")]
-    public record DeMinimusApplicable : DeMinimus1Choice_
+    public partial record DeMinimusApplicable : DeMinimus1Choice_
     {
         /// <summary>
         /// Indicates whether the investor permits its beneficial owners that are restricted persons, if any, to participate in profits and losses allocated to the investor that are attribute to new issue securities.

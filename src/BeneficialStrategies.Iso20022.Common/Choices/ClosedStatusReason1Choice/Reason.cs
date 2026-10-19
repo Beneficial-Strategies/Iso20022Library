@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosedStatusReason1Choice
     [IsoId("_U2WaA0zDEeafiMTDrtSnyw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : ClosedStatusReason1Choice_
+    public partial record Reason : ClosedStatusReason1Choice_
     {
         /// <summary>
         /// Reason for the closed account status.

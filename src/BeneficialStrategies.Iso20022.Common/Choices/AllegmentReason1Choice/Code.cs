@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllegmentReason1Choice
     /// </summary>
     [IsoId("_A4j1IdokEeC60axPepSq7g_2095583145")]
     [DisplayName("Code")]
-    public record Code : AllegmentReason1Choice_
+    public partial record Code : AllegmentReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

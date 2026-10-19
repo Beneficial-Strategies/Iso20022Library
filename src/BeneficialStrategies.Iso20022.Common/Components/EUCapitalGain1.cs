@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VMU49tp-Ed-ak6NoX_4Aeg_-2038636441")]
 [DisplayName("EU Capital Gain")]
-public record EUCapitalGain1
+public partial record EUCapitalGain1
 {
     /// <summary>
     /// Structured format.

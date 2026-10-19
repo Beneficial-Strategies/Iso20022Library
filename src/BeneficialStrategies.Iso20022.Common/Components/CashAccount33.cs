@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_77E8gSCpEeWJd9HF2tO7BA")]
 [DisplayName("Cash Account")]
-public record CashAccount33
+public partial record CashAccount33
 {
     /// <summary>
     /// Currency associated with the payment instrument.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4epUjxwMEe6O0NdiBuX__w")]
 [DisplayName("Subscription Multiple Execution6")]
-public record SubscriptionMultipleExecution6
+public partial record SubscriptionMultipleExecution6
 {
     /// <summary>
     /// Amendment Indicator.

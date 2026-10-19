@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementInstructionGeneration1
     [IsoId("_AbMjtNokEeC60axPepSq7g_-1865337149")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementInstructionGeneration1Choice_
+    public partial record Proprietary : SettlementInstructionGeneration1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

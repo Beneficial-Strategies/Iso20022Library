@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_IJx60YJOEe6dZ_jHhjXHQg")]
 [DisplayName("Verification Response V03")]
-public record VerificationResponseV03 : IOuterRecord
+public partial record VerificationResponseV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

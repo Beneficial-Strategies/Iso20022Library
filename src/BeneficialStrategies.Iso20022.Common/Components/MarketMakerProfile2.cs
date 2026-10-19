@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Zv1oMe6SEemVDc1WJaqofw")]
 [DisplayName("Market Maker Profile")]
-public record MarketMakerProfile2
+public partial record MarketMakerProfile2
 {
     /// <summary>
     /// Period of the contract.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_SE84Utp-Ed-ak6NoX_4Aeg_-1277150734")]
 [DisplayName("Redemption Bulk Order")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record RedemptionBulkOrder4
+public partial record RedemptionBulkOrder4
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.

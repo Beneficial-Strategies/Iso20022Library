@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B66xo_S0Eeife6veM7daYw")]
 [DisplayName("Discount")]
-public record Discount3
+public partial record Discount3
 {
     /// <summary>
     /// Describes the type of discount applied to the transaction.

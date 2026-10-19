@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nTBeERyvEey6gI8SKlv7rg")]
 [DisplayName("Travel Document")]
-public record TravelDocument2
+public partial record TravelDocument2
 {
     /// <summary>
     /// Type of travel document.

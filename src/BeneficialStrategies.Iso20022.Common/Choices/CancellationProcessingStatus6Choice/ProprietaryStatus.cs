@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus6Cho
     [IsoId("_A4HJNtokEeC60axPepSq7g_-2026040667")]
     [DisplayName("Proprietary Status")]
     [IsoXmlTag("PrtrySts")]
-    public record ProprietaryStatus : CancellationProcessingStatus6Choice_
+    public partial record ProprietaryStatus : CancellationProcessingStatus6Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

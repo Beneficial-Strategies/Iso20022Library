@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity29Cho
     [IsoId("_52gvZ0_3Eea1ZIrmU5dI3w")]
     [DisplayName("Net Amount")]
     [IsoXmlTag("NetAmt")]
-    public record NetAmount : FinancialInstrumentQuantity29Choice_
+    public partial record NetAmount : FinancialInstrumentQuantity29Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

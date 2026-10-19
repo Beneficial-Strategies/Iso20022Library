@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice
     [IsoId("_vIDnZ0H7EeaV3ab_pHzFIQ")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
-    public record Rejected : OrderStatus3Choice_
+    public partial record Rejected : OrderStatus3Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

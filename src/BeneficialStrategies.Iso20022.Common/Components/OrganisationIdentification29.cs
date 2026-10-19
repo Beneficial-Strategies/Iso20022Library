@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6VggQW48EeiU9cctagi5ow")]
 [DisplayName("Organisation Identification")]
-public record OrganisationIdentification29
+public partial record OrganisationIdentification29
 {
     /// <summary>
     /// Business identification code of the organisation.

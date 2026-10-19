@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4XBJoX5QEe6YlIMyoxWMJA")]
 [DisplayName("Content Information Type41")]
-public record ContentInformationType41
+public partial record ContentInformationType41
 {
     /// <summary>
     /// MAC Data.

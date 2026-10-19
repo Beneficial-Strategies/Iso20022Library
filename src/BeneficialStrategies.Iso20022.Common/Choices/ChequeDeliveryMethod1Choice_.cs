@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QbwF5tp-Ed-ak6NoX_4Aeg_258234806")]
     [DisplayName("Cheque Delivery Method 1 Choice")]
-    public abstract record ChequeDeliveryMethod1Choice_ { }
+    public abstract partial record ChequeDeliveryMethod1Choice_ { }
 }

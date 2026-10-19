@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AkN0cahPEeuOaMA1YOy5YQ")]
 [DisplayName("Processing Result")]
-public record ProcessingResult12
+public partial record ProcessingResult12
 {
     /// <summary>
     /// Data pertaining to the approval of the transaction.

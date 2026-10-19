@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction11C
     [IsoId("_1ylO13JCEe299ZbWCkdR_w")]
     [DisplayName("Authorisation Response")]
     [IsoXmlTag("AuthstnRspn")]
-    public record AuthorisationResponse : CardPaymentDataSetTransaction11Choice_
+    public partial record AuthorisationResponse : CardPaymentDataSetTransaction11Choice_
     {
         /// <summary>
         /// Sequential counter of the transaction.

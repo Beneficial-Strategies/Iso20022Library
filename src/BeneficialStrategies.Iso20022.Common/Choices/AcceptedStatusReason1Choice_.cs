@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wEWdkWBlEeaR1OOiVxm3Gg")]
     [DisplayName("Accepted Status Reason 1 Choice")]
-    public abstract record AcceptedStatusReason1Choice_ { }
+    public abstract partial record AcceptedStatusReason1Choice_ { }
 }

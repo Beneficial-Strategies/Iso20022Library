@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient4Choice
     [IsoId("_N1aSo2i0EeS87LmvcA55sg")]
     [DisplayName("KEK")]
     [IsoXmlTag("KEK")]
-    public record KEK : Recipient4Choice_
+    public partial record KEK : Recipient4Choice_
     {
         /// <summary>
         /// Version of the data structure.

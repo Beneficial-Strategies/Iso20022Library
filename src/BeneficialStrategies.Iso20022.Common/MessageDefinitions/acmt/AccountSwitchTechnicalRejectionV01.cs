@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_0UASkhMMEeSTk5fcu7tr9w")]
 [DisplayName("Account Switch Technical Rejection V")]
-public record AccountSwitchTechnicalRejectionV01 : IOuterRecord
+public partial record AccountSwitchTechnicalRejectionV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

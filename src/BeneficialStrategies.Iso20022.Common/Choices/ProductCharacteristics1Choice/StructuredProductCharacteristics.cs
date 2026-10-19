@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCharacteristics1Choice
     [IsoId("_RbrR1Np-Ed-ak6NoX_4Aeg_1622931729")]
     [DisplayName("Structured Product Characteristics")]
     [IsoXmlTag("StrdPdctChrtcs")]
-    public record StructuredProductCharacteristics : ProductCharacteristics1Choice_
+    public partial record StructuredProductCharacteristics : ProductCharacteristics1Choice_
     {
         /// <summary>
         /// Specifies the type of product characteristic by means of a code.

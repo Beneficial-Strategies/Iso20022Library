@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RPqrKPGgEeiGNursv3uE_g")]
 [DisplayName("Account Statement Details")]
-public record AccountStatementDetails1
+public partial record AccountStatementDetails1
 {
     /// <summary>
     /// Date of the transaction.

@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("55e2ca53-a1ac-4cc7-864b-523be1261957")]
 [DisplayName("Redemption Order V05")]
-public record RedemptionOrderV05 : IOuterRecord
+public partial record RedemptionOrderV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

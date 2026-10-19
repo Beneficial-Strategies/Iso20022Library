@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessProcessType2Choice
     [IsoId("_0w-KVZBgEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BusinessProcessType2Choice_
+    public partial record Proprietary : BusinessProcessType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

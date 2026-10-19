@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_l2kEAROHEfC1ZfCQz0xB3g")]
 [DisplayName("Authorisation Initiation V05")]
-public record AuthorisationInitiationV05 : IOuterRecord
+public partial record AuthorisationInitiationV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VA2oydp-Ed-ak6NoX_4Aeg_-1845301749")]
 [DisplayName("Fund Order Type")]
-public record FundOrderType1
+public partial record FundOrderType1
 {
     /// <summary>
     /// Structured format.

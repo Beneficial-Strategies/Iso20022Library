@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u3FRsTKCEeOqyZqt0rCZLg")]
 [DisplayName("Card Payment Transaction")]
-public record CardPaymentTransaction29
+public partial record CardPaymentTransaction29
 {
     /// <summary>
     /// Type of transaction being undertaken for the main service.

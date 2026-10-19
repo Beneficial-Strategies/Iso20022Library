@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fx_H8XbbEfCmC4yYaU27Kg")]
 [DisplayName("Device Identification2")]
-public record DeviceIdentification2
+public partial record DeviceIdentification2
 {
     /// <summary>
     /// Type of device. P000-P999 reserved for private use, N000-N999 reserved for national use.

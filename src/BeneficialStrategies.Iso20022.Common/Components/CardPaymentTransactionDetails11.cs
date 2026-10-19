@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x1MNYS8PEeKW5usMQLtzqw")]
 [DisplayName("Card Payment Transaction Details")]
-public record CardPaymentTransactionDetails11
+public partial record CardPaymentTransactionDetails11
 {
     /// <summary>
     /// Currency associated with the transaction.

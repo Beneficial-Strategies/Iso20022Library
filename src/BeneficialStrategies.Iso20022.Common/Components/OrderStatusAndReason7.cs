@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RMBsRNp-Ed-ak6NoX_4Aeg_-571096042")]
 [DisplayName("Order Status And Reason")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record OrderStatusAndReason7
+public partial record OrderStatusAndReason7
 {
     /// <summary>
     /// Reference assigned to a set of orders or trades in order to link them together.

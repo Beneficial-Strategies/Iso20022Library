@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification54Choice
     /// </summary>
     [IsoId("_5q1Fo1HSEey4xOoMoOPSJQ")]
     [DisplayName("MSISDN")]
-    public record MSISDN : AccountIdentification54Choice_
+    public partial record MSISDN : AccountIdentification54Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

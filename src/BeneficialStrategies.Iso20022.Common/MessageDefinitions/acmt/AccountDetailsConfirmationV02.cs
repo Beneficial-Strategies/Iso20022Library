@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_o6y4K9E9Ed-BzquC8wXy7w_-1762172506")]
 [DisplayName("Account Details Confirmation V")]
-public record AccountDetailsConfirmationV02 : IOuterRecord
+public partial record AccountDetailsConfirmationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

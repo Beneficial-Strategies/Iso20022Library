@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient2Choice
     [IsoId("_E8e4BQioEeKn9O5oyej_zw")]
     [DisplayName("Key Transport")]
     [IsoXmlTag("KeyTrnsprt")]
-    public record KeyTransport : Recipient2Choice_
+    public partial record KeyTransport : Recipient2Choice_
     {
         /// <summary>
         /// Version of the cryptographic key.

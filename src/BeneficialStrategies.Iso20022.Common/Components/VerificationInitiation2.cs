@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9_sxcYELEeu6D49Gi-ZPwQ")]
 [DisplayName("Verification Initiation")]
-public record VerificationInitiation2
+public partial record VerificationInitiation2
 {
     /// <summary>
     /// Environment of the transaction.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod7Choice
     /// <summary>Settlement via a debit transfer transaction.</summary>
     [IsoId("_GcCY03eKEfCdoODv2ypKfw")]
     [DisplayName("Debit")]
-    public record Debit : SettlementMethod7Choice_
+    public partial record Debit : SettlementMethod7Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dbt")]

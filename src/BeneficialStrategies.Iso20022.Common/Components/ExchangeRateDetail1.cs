@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g9N7sINmEeuHqfO1LgkE9Q")]
 [DisplayName("Exchange Rate Detail")]
-public record ExchangeRateDetail1
+public partial record ExchangeRateDetail1
 {
     /// <summary>
     /// Identifies the party to which this detail applies.

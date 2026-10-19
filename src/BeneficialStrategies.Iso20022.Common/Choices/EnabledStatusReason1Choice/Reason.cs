@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnabledStatusReason1Choice
     [IsoId("_5-mGsEy9EeafiMTDrtSnyw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : EnabledStatusReason1Choice_
+    public partial record Reason : EnabledStatusReason1Choice_
     {
         /// <summary>
         /// Reason for the enabled account status.

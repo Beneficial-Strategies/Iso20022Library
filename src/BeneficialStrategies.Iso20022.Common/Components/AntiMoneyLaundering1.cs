@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jG3qgHs-EeSTS7uHCe8FPQ")]
 [DisplayName("Anti Money Laundering")]
-public record AntiMoneyLaundering1
+public partial record AntiMoneyLaundering1
 {
     /// <summary>
     /// Name of the sender.

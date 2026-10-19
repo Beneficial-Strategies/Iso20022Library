@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChequeDeliveryMethod1Choice
     /// </summary>
     [IsoId("_QbwF6Np-Ed-ak6NoX_4Aeg_1076475245")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ChequeDeliveryMethod1Choice_
+    public partial record Proprietary : ChequeDeliveryMethod1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

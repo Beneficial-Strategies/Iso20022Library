@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_8EacxzbsEead9bDRE_1DAQ")]
 [DisplayName("Switch Execution")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record SwitchExecution7
+public partial record SwitchExecution7
 {
     /// <summary>
     /// Indicates whether the confirmation is an amendment of a previous confirmation.

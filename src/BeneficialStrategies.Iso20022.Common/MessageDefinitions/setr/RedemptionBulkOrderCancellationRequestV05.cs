@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("9d101db3-af91-42b5-bfad-48d874c22b05")]
 [DisplayName("Redemption Bulk Order Cancellation Request V05")]
-public record RedemptionBulkOrderCancellationRequestV05 : IOuterRecord
+public partial record RedemptionBulkOrderCancellationRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

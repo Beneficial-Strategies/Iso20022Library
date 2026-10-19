@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rqeg4V1pEeeu75xdwwAXQw")]
 [DisplayName("Service Start End")]
-public record ServiceStartEnd1
+public partial record ServiceStartEnd1
 {
     /// <summary>
     /// Location of service (for example, Paris CDG, Paris Gare du Nord, etc.).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VHhwSvcAEeiW-auGnDPZIw")]
 [DisplayName("Lodging Property")]
-public record LodgingProperty1
+public partial record LodgingProperty1
 {
     /// <summary>
     /// Type of accommodations.

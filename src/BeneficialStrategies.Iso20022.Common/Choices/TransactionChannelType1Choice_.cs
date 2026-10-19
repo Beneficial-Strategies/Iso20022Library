@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_JtX4MRRGEeOKWo1NF21OVw")]
     [DisplayName("Transaction Channel Type 1 Choice")]
-    public abstract record TransactionChannelType1Choice_ { }
+    public abstract partial record TransactionChannelType1Choice_ { }
 }

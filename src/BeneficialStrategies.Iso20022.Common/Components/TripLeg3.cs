@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_stVioXQ9Ee6Y1uOeeiF_Eg")]
 [DisplayName("Trip Leg3")]
-public record TripLeg3
+public partial record TripLeg3
 {
     /// <summary>
     /// Sequence Number.

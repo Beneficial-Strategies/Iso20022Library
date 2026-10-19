@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnaffirmedReason3Choice
     [IsoId("_XiELgwd3Ee2fOITqoTnSLQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UnaffirmedReason3Choice_
+    public partial record Proprietary : UnaffirmedReason3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

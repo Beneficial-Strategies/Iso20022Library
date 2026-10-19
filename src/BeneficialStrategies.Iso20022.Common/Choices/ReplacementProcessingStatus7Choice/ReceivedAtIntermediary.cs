@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
     [IsoId("_A5cl8dokEeC60axPepSq7g_-2064708569")]
     [DisplayName("Received At Intermediary")]
     [IsoXmlTag("RcvdAtIntrmy")]
-    public record ReceivedAtIntermediary : ReplacementProcessingStatus7Choice_
+    public partial record ReceivedAtIntermediary : ReplacementProcessingStatus7Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

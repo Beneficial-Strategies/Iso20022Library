@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationType1Choice
     /// </summary>
     [IsoId("_tv-sYUzLEeafiMTDrtSnyw")]
     [DisplayName("Code")]
-    public record Code : ConfirmationType1Choice_
+    public partial record Code : ConfirmationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

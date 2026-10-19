@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationRight1Choice
     [IsoId("_MarVcThPEeaTjZWmPo-9OA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CancellationRight1Choice_
+    public partial record Proprietary : CancellationRight1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

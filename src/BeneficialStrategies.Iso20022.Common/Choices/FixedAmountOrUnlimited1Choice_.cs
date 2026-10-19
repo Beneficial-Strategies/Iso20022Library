@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9m4ooEqAEeKw5sECfP82rg")]
     [DisplayName("Fixed Amount Or Unlimited 1 Choice")]
-    public abstract record FixedAmountOrUnlimited1Choice_ { }
+    public abstract partial record FixedAmountOrUnlimited1Choice_ { }
 }

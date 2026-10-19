@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d4SvRdcZEeqRFcf2R4bPBw")]
 [DisplayName("Identification Information")]
-public record IdentificationInformation4
+public partial record IdentificationInformation4
 {
     /// <summary>
     /// Account owner that owes an amount of money or to whom an amount of money is due.

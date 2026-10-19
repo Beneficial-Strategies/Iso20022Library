@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R1YN9PJpEeiJn9rM2Znz2w")]
 [DisplayName("Loyalty Programme")]
-public record LoyaltyProgramme2
+public partial record LoyaltyProgramme2
 {
     /// <summary>
     /// Type of loyalty programme (for example, airline, lodging, vehicle and rail etc.).

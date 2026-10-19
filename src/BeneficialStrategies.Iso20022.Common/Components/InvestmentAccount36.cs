@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J-WeURKLEeKj15WxqwlXPw")]
 [DisplayName("Investment Account")]
-public record InvestmentAccount36
+public partial record InvestmentAccount36
 {
     /// <summary>
     /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.

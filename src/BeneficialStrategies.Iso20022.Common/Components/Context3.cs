@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_drTTUVBPEeedyPuM0kK2EQ")]
 [DisplayName("Context")]
-public record Context3
+public partial record Context3
 {
     /// <summary>
     /// Context of the card payment transaction at the point of service.

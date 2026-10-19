@@ -19,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FinancialInstrumentQuantity49Choice.DigitalTokenUnit), nameof(FinancialInstrumentQuantity49Choice.DigitalTokenUnit))]
     [IsoId("c5556994-830b-4d35-8355-f621b5085941")]
     [DisplayName("Financial Instrument Quantity 49 Choice")]
-    public abstract record FinancialInstrumentQuantity49Choice_ { }
+    public abstract partial record FinancialInstrumentQuantity49Choice_ { }
 }

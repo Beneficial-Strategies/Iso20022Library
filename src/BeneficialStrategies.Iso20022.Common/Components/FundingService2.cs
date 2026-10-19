@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eC8lMYKxEeu4svNQ5N-l6w")]
 [DisplayName("Funding Service")]
-public record FundingService2
+public partial record FundingService2
 {
     /// <summary>
     /// Funding service details.

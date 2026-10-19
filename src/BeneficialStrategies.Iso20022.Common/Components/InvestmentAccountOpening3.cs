@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J-CIcUzKEeafiMTDrtSnyw")]
 [DisplayName("Investment Account Opening")]
-public record InvestmentAccountOpening3
+public partial record InvestmentAccountOpening3
 {
     /// <summary>
     /// Specifies if the account opening instruction is about a newly created account or a supplementary account.

@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_wy_OWNE7Ed-BzquC8wXy7w_1331513670")]
 [DisplayName("Request For Order Status Report V")]
-public record RequestForOrderStatusReportV03 : IOuterRecord
+public partial record RequestForOrderStatusReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

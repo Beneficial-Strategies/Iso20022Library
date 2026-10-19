@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument11Choice
     [IsoId("_SBhw59p-Ed-ak6NoX_4Aeg_-925008187")]
     [DisplayName("Cash Account Details")]
     [IsoXmlTag("CshAcctDtls")]
-    public record CashAccountDetails : PaymentInstrument11Choice_
+    public partial record CashAccountDetails : PaymentInstrument11Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.

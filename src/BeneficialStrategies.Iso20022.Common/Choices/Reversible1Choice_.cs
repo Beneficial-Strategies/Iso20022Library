@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reversible1Choice.Proprietary), nameof(Reversible1Choice.Proprietary))]
     [IsoId("_AYOIONokEeC60axPepSq7g_-1179089003")]
     [DisplayName("Reversible 1 Choice")]
-    public abstract record Reversible1Choice_ { }
+    public abstract partial record Reversible1Choice_ { }
 }

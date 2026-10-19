@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType4Choice
     [IsoId("_9KbWEwhKEe2fOITqoTnSLQ")]
     [DisplayName("Securities Financing Details")]
     [IsoXmlTag("SctiesFincgDtls")]
-    public record SecuritiesFinancingDetails : TwoLegTransactionType4Choice_
+    public partial record SecuritiesFinancingDetails : TwoLegTransactionType4Choice_
     {
         /// <summary>
         /// Date/Time at which rate change has taken place.

@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_R3AntzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Request Payment V05")]
-public record AccountSwitchRequestPaymentV05 : IOuterRecord
+public partial record AccountSwitchRequestPaymentV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HDOPwHvREeS2PZh7wUMQog")]
 [DisplayName("Acquirer Key Exchange Response")]
-public record AcquirerKeyExchangeResponse1
+public partial record AcquirerKeyExchangeResponse1
 {
     /// <summary>
     /// Environment of the transaction.

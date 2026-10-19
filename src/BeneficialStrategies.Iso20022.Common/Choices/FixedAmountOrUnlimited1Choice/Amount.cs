@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedAmountOrUnlimited1Choice
     [IsoId("_HfJHMEqBEeKw5sECfP82rg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : FixedAmountOrUnlimited1Choice_
+    public partial record Amount : FixedAmountOrUnlimited1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

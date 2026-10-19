@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WO-mMWkjEeSTIuB9A-QJ6g")]
 [DisplayName("Plain Card Data")]
-public record PlainCardData8
+public partial record PlainCardData8
 {
     /// <summary>
     /// Primary Account Number (PAN) of the card, or surrogate of the PAN by a payment token.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EncryptedData2Choice
     /// Hexadecimal Binary.
     /// </summary>
     [DisplayName("Hexadecimal Binary")]
-    public record HexadecimalBinary : EncryptedData2Choice_
+    public partial record HexadecimalBinary : EncryptedData2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

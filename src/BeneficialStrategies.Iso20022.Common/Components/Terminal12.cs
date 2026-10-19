@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ")]
 [DisplayName("Terminal12")]
-public record Terminal12
+public partial record Terminal12
 {
     /// <summary>
     /// Identification of the terminal.

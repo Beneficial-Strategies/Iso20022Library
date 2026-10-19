@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1gGtkA1dEeKGXqvMN6jpiw")]
     [DisplayName("Communication Format 1 Choice")]
-    public abstract record CommunicationFormat1Choice_ { }
+    public abstract partial record CommunicationFormat1Choice_ { }
 }

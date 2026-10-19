@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("35ae8c59-46db-440f-bb8b-e9720b3da711")]
 [DisplayName("Payment Transaction181")]
-public record PaymentTransaction181
+public partial record PaymentTransaction181
 {
     /// <summary>
     /// Choice between cash-in or cash-out.

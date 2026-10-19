@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus22Choice
     [IsoId("_0syLA0gsEeaD2L_hzZaE0w")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
-    public record Rejected : CancellationStatus22Choice_
+    public partial record Rejected : CancellationStatus22Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

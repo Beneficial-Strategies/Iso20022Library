@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QdGJudp-Ed-ak6NoX_4Aeg_1879697")]
 [DisplayName("Direct Debit Mandate")]
-public record DirectDebitMandate4
+public partial record DirectDebitMandate4
 {
     /// <summary>
     /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.

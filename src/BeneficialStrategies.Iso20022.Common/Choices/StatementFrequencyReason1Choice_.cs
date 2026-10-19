@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gGvAoxc_EeK5g-3oYI0_9Q")]
     [DisplayName("Statement Frequency Reason 1 Choice")]
-    public abstract record StatementFrequencyReason1Choice_ { }
+    public abstract partial record StatementFrequencyReason1Choice_ { }
 }

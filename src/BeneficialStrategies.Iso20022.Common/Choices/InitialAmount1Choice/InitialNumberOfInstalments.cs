@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialAmount1Choice
     /// </summary>
     [IsoId("_XuNrcSDaEeWCLu74WLgP4w")]
     [DisplayName("Initial Number Of Instalments")]
-    public record InitialNumberOfInstalments : InitialAmount1Choice_
+    public partial record InitialNumberOfInstalments : InitialAmount1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

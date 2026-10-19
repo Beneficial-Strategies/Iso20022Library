@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticalExposureType2Choice
     [IsoId("_wk5jQ5UgEemC09f0MxYkRg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PoliticalExposureType2Choice_
+    public partial record Proprietary : PoliticalExposureType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PI3P75S8EemqYPWMBuVawg")]
 [DisplayName("Third Party Rights")]
-public record ThirdPartyRights2
+public partial record ThirdPartyRights2
 {
     /// <summary>
     /// Type of third party right.

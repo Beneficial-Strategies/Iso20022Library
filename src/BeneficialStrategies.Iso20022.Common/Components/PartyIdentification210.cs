@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OIOBdPfUEei89sMSHxl1ew")]
 [DisplayName("Party Identification")]
-public record PartyIdentification210
+public partial record PartyIdentification210
 {
     /// <summary>
     /// Contains the personal ID associated with the individual working in a temporary capacity.

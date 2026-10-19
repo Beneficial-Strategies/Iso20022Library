@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZD4mEEgQEea9YuSvQGoi-w")]
 [DisplayName("Series")]
-public record Series1
+public partial record Series1
 {
     /// <summary>
     /// Issue date of the fund series. It is typically applicable to a redemption order, subscription order confirmation or redemption order confirmation, but may be specified in the subscription order, if known.

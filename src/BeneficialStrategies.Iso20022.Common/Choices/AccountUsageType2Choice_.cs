@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_K-b04b-FEeWfsa741pI6WA")]
     [DisplayName("Account Usage Type 2 Choice")]
-    public abstract record AccountUsageType2Choice_ { }
+    public abstract partial record AccountUsageType2Choice_ { }
 }

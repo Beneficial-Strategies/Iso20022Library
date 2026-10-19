@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties8Choice
     [IsoId("_J1TYWSCBEeWhHbfCMWc1cw")]
     [DisplayName("Nominee")]
     [IsoXmlTag("Nmnee")]
-    public record Nominee : AccountParties8Choice_
+    public partial record Nominee : AccountParties8Choice_
     {
         /// <summary>
         /// Information about the organisation or individual person.

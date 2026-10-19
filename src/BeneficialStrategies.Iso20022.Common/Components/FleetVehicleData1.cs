@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MNbyIUYmEfCJpvfyM9roFQ")]
 [DisplayName("Fleet Vehicle Data1")]
-public record FleetVehicleData1
+public partial record FleetVehicleData1
 {
     /// <summary>
     /// Identification number assigned to the vehicle by the fleet operator. This may not be a legal registration.

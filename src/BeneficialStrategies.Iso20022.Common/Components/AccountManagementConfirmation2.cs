@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VSqnQQjhEeSI9qETkJHgqw")]
 [DisplayName("Account Management Confirmation")]
-public record AccountManagementConfirmation2
+public partial record AccountManagementConfirmation2
 {
     /// <summary>
     /// Specifies if the confirmation message applies to an account opening, an account modification request or to a get account details.

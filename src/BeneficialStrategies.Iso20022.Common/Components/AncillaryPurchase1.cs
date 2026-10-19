@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6_5EA_QVEeihCvvpsmGI2w")]
 [DisplayName("Ancillary Purchase")]
-public record AncillaryPurchase1
+public partial record AncillaryPurchase1
 {
     /// <summary>
     /// Contains the form number assigned by the carrier for the transaction.

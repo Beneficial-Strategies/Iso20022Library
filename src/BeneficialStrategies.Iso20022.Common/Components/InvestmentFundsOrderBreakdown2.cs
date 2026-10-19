@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y0VCoThjEeamLZQeccJa7w")]
 [DisplayName("Investment Funds Order Breakdown")]
-public record InvestmentFundsOrderBreakdown2
+public partial record InvestmentFundsOrderBreakdown2
 {
     /// <summary>
     /// Type of order breakdown.

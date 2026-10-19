@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UyQMGtp-Ed-ak6NoX_4Aeg_94624297")]
 [DisplayName("Conditionally Accepted Status")]
-public record ConditionallyAcceptedStatus1
+public partial record ConditionallyAcceptedStatus1
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3YgJsTEyEe6g-ffJsqGiSA")]
 [DisplayName("Organisation43")]
-public record Organisation43
+public partial record Organisation43
 {
     /// <summary>
     /// Full Legal Name.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V8JsAW9qEe6DxcrvCrq6hQ")]
 [DisplayName("Contact Personal1")]
-public record ContactPersonal1
+public partial record ContactPersonal1
 {
     /// <summary>
     /// Name.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZmYyEZJOEeuuktRxxQZoNQ")]
 [DisplayName("Instalment Amount Details")]
-public record InstalmentAmountDetails2
+public partial record InstalmentAmountDetails2
 {
     /// <summary>
     /// Instalment amount detail type.

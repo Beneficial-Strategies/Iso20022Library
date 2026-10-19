@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction12C
     /// Authorisation Response.
     /// </summary>
     [DisplayName("Authorisation Response")]
-    public record AuthorisationResponse : CardPaymentDataSetTransaction12Choice_
+    public partial record AuthorisationResponse : CardPaymentDataSetTransaction12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

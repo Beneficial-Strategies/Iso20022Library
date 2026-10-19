@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZOHLwXTrEe6h-4AZRg9sVg")]
 [DisplayName("Lodging Room2")]
-public record LodgingRoom2
+public partial record LodgingRoom2
 {
     /// <summary>
     /// Type.

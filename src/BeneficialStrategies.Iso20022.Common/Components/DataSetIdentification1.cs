@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwsDxAEcEeCQm6a_G2yO_w_-1490050341")]
 [DisplayName("Data Set Identification")]
-public record DataSetIdentification1
+public partial record DataSetIdentification1
 {
     /// <summary>
     /// Name of the data set.

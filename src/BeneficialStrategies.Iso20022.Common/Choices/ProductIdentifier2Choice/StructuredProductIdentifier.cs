@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice
     [IsoId("_Rb1C0dp-Ed-ak6NoX_4Aeg_-1291805271")]
     [DisplayName("Structured Product Identifier")]
     [IsoXmlTag("StrdPdctIdr")]
-    public record StructuredProductIdentifier : ProductIdentifier2Choice_
+    public partial record StructuredProductIdentifier : ProductIdentifier2Choice_
     {
         /// <summary>
         /// Specifies the type of product identifier by means of a code.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice
     [IsoId("_bpQwZUHPEeazV4RAqPV71g")]
     [DisplayName("Switch Order Details Report")]
     [IsoXmlTag("SwtchOrdrDtlsRpt")]
-    public record SwitchOrderDetailsReport : Status24Choice_
+    public partial record SwitchOrderDetailsReport : Status24Choice_
     {
         /// <summary>
         /// Reference assigned to a set of orders or trades in order to link them together.

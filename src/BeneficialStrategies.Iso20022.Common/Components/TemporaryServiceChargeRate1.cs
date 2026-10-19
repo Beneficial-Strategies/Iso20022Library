@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O_NroVXcEfC0lMwgjvMClw")]
 [DisplayName("Temporary Service Charge Rate1")]
-public record TemporaryServiceChargeRate1
+public partial record TemporaryServiceChargeRate1
 {
     /// <summary>
     /// Type of hours worked. P000-P999 reserved for private use, N000-N999 reserved for national use.

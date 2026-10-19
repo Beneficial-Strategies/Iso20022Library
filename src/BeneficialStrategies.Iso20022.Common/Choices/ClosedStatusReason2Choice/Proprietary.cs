@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosedStatusReason2Choice
     [IsoId("_lSNvg0zDEeafiMTDrtSnyw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ClosedStatusReason2Choice_
+    public partial record Proprietary : ClosedStatusReason2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jR2x4QjUEeS5F6qHcKOrew")]
     [DisplayName("FATCA Source 1 Choice")]
-    public abstract record FATCASource1Choice_ { }
+    public abstract partial record FATCASource1Choice_ { }
 }

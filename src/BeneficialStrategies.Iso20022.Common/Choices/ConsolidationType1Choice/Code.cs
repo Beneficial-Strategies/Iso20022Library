@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsolidationType1Choice
     /// </summary>
     [IsoId("_QFc8kCDVEeWCLu74WLgP4w")]
     [DisplayName("Code")]
-    public record Code : ConsolidationType1Choice_
+    public partial record Code : ConsolidationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

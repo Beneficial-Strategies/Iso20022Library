@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties12Choice
     [IsoId("_mp9DUZQ_EemqYPWMBuVawg")]
     [DisplayName("Primary Owner")]
     [IsoXmlTag("PmryOwnr")]
-    public record PrimaryOwner : AccountParties12Choice_
+    public partial record PrimaryOwner : AccountParties12Choice_
     {
         /// <summary>
         /// Information about the organisation or individual person.

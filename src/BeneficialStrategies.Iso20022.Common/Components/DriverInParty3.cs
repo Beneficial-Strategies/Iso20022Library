@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gN5CUXTgEe6h-4AZRg9sVg")]
 [DisplayName("Driver In Party3")]
-public record DriverInParty3
+public partial record DriverInParty3
 {
     /// <summary>
     /// Name.

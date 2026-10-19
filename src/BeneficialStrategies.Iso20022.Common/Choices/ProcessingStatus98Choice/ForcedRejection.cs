@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDiQarEe2phaVG0lYKTw")]
     [DisplayName("Forced Rejection")]
     [IsoXmlTag("ForcdRjctn")]
-    public record ForcedRejection : ProcessingStatus98Choice_
+    public partial record ForcedRejection : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

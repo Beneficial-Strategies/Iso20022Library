@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XRiBY_i7EeiJaN6-Lf-c_w")]
 [DisplayName("Local Amenity")]
-public record LocalAmenity1
+public partial record LocalAmenity1
 {
     /// <summary>
     /// Type of additional service available.

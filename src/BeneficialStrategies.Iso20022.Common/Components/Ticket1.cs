@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_em5RL_P0EeihCvvpsmGI2w")]
 [DisplayName("Ticket")]
-public record Ticket1
+public partial record Ticket1
 {
     /// <summary>
     /// Contains the ticket number.

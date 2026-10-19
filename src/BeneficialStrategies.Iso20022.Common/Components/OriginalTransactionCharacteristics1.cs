@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZET-AXpmEe6YlIMyoxWMJA")]
 [DisplayName("Original Transaction Characteristics1")]
-public record OriginalTransactionCharacteristics1
+public partial record OriginalTransactionCharacteristics1
 {
     /// <summary>
     /// Transaction Type.

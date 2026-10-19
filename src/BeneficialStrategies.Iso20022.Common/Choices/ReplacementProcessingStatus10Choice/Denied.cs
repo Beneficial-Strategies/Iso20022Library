@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
     [IsoId("_Rhhu9QeDEe2fOITqoTnSLQ")]
     [DisplayName("Denied")]
     [IsoXmlTag("Dnd")]
-    public record Denied : ReplacementProcessingStatus10Choice_
+    public partial record Denied : ReplacementProcessingStatus10Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

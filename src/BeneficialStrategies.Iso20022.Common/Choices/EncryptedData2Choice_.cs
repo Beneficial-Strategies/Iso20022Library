@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_FN8A0XdCEe6YlIMyoxWMJA")]
     [DisplayName("Encrypted Data2Choice")]
-    public abstract record EncryptedData2Choice_ { }
+    public abstract partial record EncryptedData2Choice_ { }
 }

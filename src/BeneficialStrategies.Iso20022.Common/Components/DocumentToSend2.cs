@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L2J9sQgqEeSUG-8hqXsVMQ")]
 [DisplayName("Document To Send")]
-public record DocumentToSend2
+public partial record DocumentToSend2
 {
     /// <summary>
     /// Type of document.

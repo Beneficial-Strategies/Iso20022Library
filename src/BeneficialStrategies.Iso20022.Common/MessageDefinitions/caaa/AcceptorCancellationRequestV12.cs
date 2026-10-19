@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 )]
 [IsoId("_4M9-0XMMEe2vXY6MoVq19w")]
 [DisplayName("Acceptor Cancellation Request V")]
-public record AcceptorCancellationRequestV12 : IOuterRecord
+public partial record AcceptorCancellationRequestV12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

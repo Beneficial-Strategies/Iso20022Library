@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressType1Choice
     [IsoId("_RSyHcCCKEeWJd9HF2tO7BA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AddressType1Choice_
+    public partial record Proprietary : AddressType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

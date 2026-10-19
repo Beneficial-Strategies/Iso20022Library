@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EndPoint2Choice
     /// <summary>Number of the payments that will be made in completing this frequency sequence.</summary>
     [IsoId("_a2rekbvGEfCYYbmqNrQFSg")]
     [DisplayName("Number Of Payments")]
-    public record NumberOfPayments : EndPoint2Choice_
+    public partial record NumberOfPayments : EndPoint2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NbOfPmts")]

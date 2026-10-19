@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gbR24SFWEeWgV9SQSyaAog")]
     [DisplayName("Individual Person Identification 1 Choice")]
-    public abstract record IndividualPersonIdentification1Choice_ { }
+    public abstract partial record IndividualPersonIdentification1Choice_ { }
 }

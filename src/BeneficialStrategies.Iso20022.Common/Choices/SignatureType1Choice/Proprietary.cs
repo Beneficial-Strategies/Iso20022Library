@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SignatureType1Choice
     [IsoId("_wZVUMDoHEeabspMEjqY5TQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SignatureType1Choice_
+    public partial record Proprietary : SignatureType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

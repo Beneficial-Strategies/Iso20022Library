@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mt51QVW5EeeiG_nL4vgKnQ")]
 [DisplayName("Transaction")]
-public record Transaction102
+public partial record Transaction102
 {
     /// <summary>
     /// Detailed description of an error that caused the message to be corrected/amended. Transmitted for further analysis.

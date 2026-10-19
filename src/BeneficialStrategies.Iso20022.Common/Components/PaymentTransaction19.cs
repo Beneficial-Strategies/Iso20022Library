@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VYjXFtp-Ed-ak6NoX_4Aeg_233511564")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction19
+public partial record PaymentTransaction19
 {
     /// <summary>
     /// Amount of money to be transferred between the debtor and creditor before bank transaction charges.

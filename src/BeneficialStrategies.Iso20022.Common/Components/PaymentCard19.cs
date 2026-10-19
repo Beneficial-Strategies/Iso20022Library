@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5ZgMYY0tEeW1W6lLicSC4w")]
 [DisplayName("Payment Card")]
-public record PaymentCard19
+public partial record PaymentCard19
 {
     /// <summary>
     /// Sensitive data of the card (PlainCardData1 including the envelope), encrypted with a cryptographic key.

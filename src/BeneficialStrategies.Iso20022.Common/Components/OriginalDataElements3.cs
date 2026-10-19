@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GCyNcW3nEe6dwbOqHXrHWg")]
 [DisplayName("Original Data Elements3")]
-public record OriginalDataElements3
+public partial record OriginalDataElements3
 {
     /// <summary>
     /// Message Class.

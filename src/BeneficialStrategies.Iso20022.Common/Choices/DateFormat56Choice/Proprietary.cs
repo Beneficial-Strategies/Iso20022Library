@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat56Choice
     [IsoId("_7oUppeWdEeevU7McUP3D1w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DateFormat56Choice_
+    public partial record Proprietary : DateFormat56Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

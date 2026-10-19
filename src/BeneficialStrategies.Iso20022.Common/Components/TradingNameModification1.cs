@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ogVZgA4jEeK3IMoVvcTkkg")]
 [DisplayName("Trading Name Modification")]
-public record TradingNameModification1
+public partial record TradingNameModification1
 {
     /// <summary>
     /// Specifies the type of change.

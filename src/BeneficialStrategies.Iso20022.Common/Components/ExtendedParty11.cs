@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xFUDKUNMEeamLdeYEZm56w")]
 [DisplayName("Extended Party")]
-public record ExtendedParty11
+public partial record ExtendedParty11
 {
     /// <summary>
     /// Other type of party&apos;s role.

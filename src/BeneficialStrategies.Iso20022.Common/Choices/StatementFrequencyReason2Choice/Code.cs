@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementFrequencyReason2Choice
     /// </summary>
     [IsoId("_sGXPISDAEeWPMvNwVtiMsA")]
     [DisplayName("Code")]
-    public record Code : StatementFrequencyReason2Choice_
+    public partial record Code : StatementFrequencyReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

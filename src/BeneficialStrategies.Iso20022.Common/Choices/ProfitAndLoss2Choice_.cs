@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ProfitAndLoss2Choice.Loss), nameof(ProfitAndLoss2Choice.Loss))]
     [IsoId("_NDhRoWYDEeaJx-BUPcSWQA")]
     [DisplayName("Profit And Loss 2 Choice")]
-    public abstract record ProfitAndLoss2Choice_ { }
+    public abstract partial record ProfitAndLoss2Choice_ { }
 }

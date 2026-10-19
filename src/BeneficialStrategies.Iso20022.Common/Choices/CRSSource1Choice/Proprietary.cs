@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CRSSource1Choice
     [IsoId("_J3oBA0NfEeamLdeYEZm56w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CRSSource1Choice_
+    public partial record Proprietary : CRSSource1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

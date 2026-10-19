@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ijIuEFxYEeWvPv3PXpS3fw")]
     [DisplayName("Registered Shareholder Name 1 Choice")]
-    public abstract record RegisteredShareholderName1Choice_ { }
+    public abstract partial record RegisteredShareholderName1Choice_ { }
 }

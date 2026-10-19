@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-312EToQEeabspMEjqY5TQ")]
 [DisplayName("Order Waiver")]
-public record OrderWaiver1
+public partial record OrderWaiver1
 {
     /// <summary>
     /// Reason why the order has to be handled differently, probably in a manual fashion, because, for example, the investment manager has agreed a waiver to the terms.

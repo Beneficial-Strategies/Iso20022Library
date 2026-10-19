@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OEJH4eWiEeevU7McUP3D1w")]
 [DisplayName("Card Payment Invoice")]
-public record CardPaymentInvoice3
+public partial record CardPaymentInvoice3
 {
     /// <summary>
     /// General data relevant to the main body of the invoice such as date of issue, currency code and identification number.

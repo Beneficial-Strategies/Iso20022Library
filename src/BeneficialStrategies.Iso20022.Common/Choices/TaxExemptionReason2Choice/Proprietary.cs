@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxExemptionReason2Choice
     [IsoId("_PE3O0yDAEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TaxExemptionReason2Choice_
+    public partial record Proprietary : TaxExemptionReason2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

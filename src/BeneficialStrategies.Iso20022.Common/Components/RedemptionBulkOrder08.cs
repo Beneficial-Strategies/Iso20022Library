@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("d68e304c-a9ed-4f64-a365-aeb8fd627c4f")]
 [DisplayName("Redemption Bulk Order08")]
-public record RedemptionBulkOrder08
+public partial record RedemptionBulkOrder08
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party.

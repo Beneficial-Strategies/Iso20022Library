@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__YZO0WkIEeS7zPBpvm732w")]
 [DisplayName("Algorithm Identification")]
-public record AlgorithmIdentification15
+public partial record AlgorithmIdentification15
 {
     /// <summary>
     /// Identification of the MAC algorithm.

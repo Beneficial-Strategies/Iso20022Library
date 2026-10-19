@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_ZjQG0WmFEeS7iYydEtv3Ug")]
 [DisplayName("Card Payment Data Set")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record CardPaymentDataSet10
+public partial record CardPaymentDataSet10
 {
     /// <summary>
     /// Identification of the data set.

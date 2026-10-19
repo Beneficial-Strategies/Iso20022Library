@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JazOkVXhEfC0lMwgjvMClw")]
 [DisplayName("Sale Item5")]
-public record SaleItem5
+public partial record SaleItem5
 {
     /// <summary>
     /// Contains the product type of the sale line item.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E1lxcWl-EfCyxsm1jzUNug")]
 [DisplayName("Transaction Amounts6")]
-public record TransactionAmounts6
+public partial record TransactionAmounts6
 {
     /// <summary>
     /// Qualifier or type of amount.

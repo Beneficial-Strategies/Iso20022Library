@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VSvC-9p-Ed-ak6NoX_4Aeg_1927276750")]
 [DisplayName("Tax Exemption Reason")]
-public record TaxExemptionReason1
+public partial record TaxExemptionReason1
 {
     /// <summary>
     /// Structured format.

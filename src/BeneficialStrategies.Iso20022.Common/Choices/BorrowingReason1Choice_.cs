@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AYq0IdokEeC60axPepSq7g_1157886245")]
     [DisplayName("Borrowing Reason 1 Choice")]
-    public abstract record BorrowingReason1Choice_ { }
+    public abstract partial record BorrowingReason1Choice_ { }
 }

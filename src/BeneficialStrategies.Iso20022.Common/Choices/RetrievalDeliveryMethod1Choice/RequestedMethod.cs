@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RetrievalDeliveryMethod1Choice
     /// </summary>
     [IsoId("_-v7SQ-whEeiMkKo2clXHdQ")]
     [DisplayName("Requested Method")]
-    public record RequestedMethod : RetrievalDeliveryMethod1Choice_
+    public partial record RequestedMethod : RetrievalDeliveryMethod1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rYJ6FvJoEeiJn9rM2Znz2w")]
 [DisplayName("Sale Summary")]
-public record SaleSummary1
+public partial record SaleSummary1
 {
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.

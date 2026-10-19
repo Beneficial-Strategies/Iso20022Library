@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup1Choice
     /// </summary>
     [IsoId("_9SraUA4TEeKGXqvMN6jpiw")]
     [DisplayName("Group Identification")]
-    public record GroupIdentification : PartyOrGroup1Choice_
+    public partial record GroupIdentification : PartyOrGroup1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

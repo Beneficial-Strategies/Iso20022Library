@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod2Choice
     [IsoId("_7HIKcW48EeiU9cctagi5ow")]
     [DisplayName("Credit")]
     [IsoXmlTag("Cdt")]
-    public record Credit : SettlementMethod2Choice_
+    public partial record Credit : SettlementMethod2Choice_
     {
         /// <summary>
         /// Set of elements used to reference a payment instruction.

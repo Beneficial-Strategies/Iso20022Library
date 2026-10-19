@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SkxHpQEcEeCQm6a_G2yO_w_-1189818940")]
 [DisplayName("Trade Party")]
-public record TradeParty1
+public partial record TradeParty1
 {
     /// <summary>
     /// Unique identification, as assigned by an organisation, to unambiguously identify a party.

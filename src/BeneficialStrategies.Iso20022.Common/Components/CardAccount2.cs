@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tCyOgXuVEeSVeNXcmBQ4hQ")]
 [DisplayName("Card Account")]
-public record CardAccount2
+public partial record CardAccount2
 {
     /// <summary>
     /// Type of cardholder account used for the transaction.

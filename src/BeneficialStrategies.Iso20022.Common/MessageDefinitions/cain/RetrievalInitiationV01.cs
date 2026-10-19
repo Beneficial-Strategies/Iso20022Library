@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_IcTD1FaCEeeFltjJxERUxw")]
 [DisplayName("Retrieval Initiation V")]
-public record RetrievalInitiationV01 : IOuterRecord
+public partial record RetrievalInitiationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

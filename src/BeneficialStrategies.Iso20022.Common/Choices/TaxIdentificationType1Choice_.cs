@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yWmpEAhIEeSUPbC7DbLJpQ")]
     [DisplayName("Tax Identification Type 1 Choice")]
-    public abstract record TaxIdentificationType1Choice_ { }
+    public abstract partial record TaxIdentificationType1Choice_ { }
 }

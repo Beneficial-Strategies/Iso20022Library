@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U2KG0brQEeiRnc958wUXqA")]
 [DisplayName("Account Details")]
-public record AccountDetails2
+public partial record AccountDetails2
 {
     /// <summary>
     /// Name of the account as assigned by the account servicing institution in an agreement with the account owner in order to provide an additional means of identification of the account.

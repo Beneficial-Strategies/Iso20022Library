@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S-10hgEcEeCQm6a_G2yO_w_-323080810")]
 [DisplayName("Consignment")]
-public record Consignment2
+public partial record Consignment2
 {
     /// <summary>
     /// Party consigning goods as stipulated in the transport contract by the party ordering transport.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Incoterms4Choice
     /// </summary>
     [IsoId("_S5ezYQEcEeCQm6a_G2yO_w_-666365163")]
     [DisplayName("Code")]
-    public record Code : Incoterms4Choice_
+    public partial record Code : Incoterms4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

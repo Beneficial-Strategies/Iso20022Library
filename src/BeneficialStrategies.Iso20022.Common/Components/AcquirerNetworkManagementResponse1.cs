@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aNF6EHvFEeSKFIcWw3l4Yw")]
 [DisplayName("Acquirer Network Management Response")]
-public record AcquirerNetworkManagementResponse1
+public partial record AcquirerNetworkManagementResponse1
 {
     /// <summary>
     /// Environment of the transaction.

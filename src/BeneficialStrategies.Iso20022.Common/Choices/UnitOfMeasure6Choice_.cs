@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QMk1cfFSEee_LsXdoqzkWg")]
     [DisplayName("Unit Of Measure 6 Choice")]
-    public abstract record UnitOfMeasure6Choice_ { }
+    public abstract partial record UnitOfMeasure6Choice_ { }
 }

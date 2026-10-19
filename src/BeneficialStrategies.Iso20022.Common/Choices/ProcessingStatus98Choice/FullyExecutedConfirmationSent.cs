@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDiwarEe2phaVG0lYKTw")]
     [DisplayName("Fully Executed Confirmation Sent")]
     [IsoXmlTag("FullyExctdConfSnt")]
-    public record FullyExecutedConfirmationSent : ProcessingStatus98Choice_
+    public partial record FullyExecutedConfirmationSent : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

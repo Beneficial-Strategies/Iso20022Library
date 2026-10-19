@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PlanStatus1Choice.Proprietary), nameof(PlanStatus1Choice.Proprietary))]
     [IsoId("_x_mUgQjbEeS5F6qHcKOrew")]
     [DisplayName("Plan Status 1 Choice")]
-    public abstract record PlanStatus1Choice_ { }
+    public abstract partial record PlanStatus1Choice_ { }
 }

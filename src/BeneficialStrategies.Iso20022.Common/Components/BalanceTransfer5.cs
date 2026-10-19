@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8NntVTEsEe6GxLzpkVnWYg")]
 [DisplayName("Balance Transfer5")]
-public record BalanceTransfer5
+public partial record BalanceTransfer5
 {
     /// <summary>
     /// Balance Transfer Reference.

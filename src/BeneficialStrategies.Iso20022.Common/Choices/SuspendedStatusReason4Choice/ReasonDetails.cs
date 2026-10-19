@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason4Choice
     [IsoId("_aSlPVUHlEea8I67lh6qdSQ")]
     [DisplayName("Reason Details")]
     [IsoXmlTag("RsnDtls")]
-    public record ReasonDetails : SuspendedStatusReason4Choice_
+    public partial record ReasonDetails : SuspendedStatusReason4Choice_
     {
         /// <summary>
         /// Reason for the conditionally accepted status expressed as a code.

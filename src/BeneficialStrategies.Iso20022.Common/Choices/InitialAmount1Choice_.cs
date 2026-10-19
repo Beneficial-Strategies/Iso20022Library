@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InitialAmount1Choice.Amount), nameof(InitialAmount1Choice.Amount))]
     [IsoId("_Ru9ewCDaEeWCLu74WLgP4w")]
     [DisplayName("Initial Amount 1 Choice")]
-    public abstract record InitialAmount1Choice_ { }
+    public abstract partial record InitialAmount1Choice_ { }
 }

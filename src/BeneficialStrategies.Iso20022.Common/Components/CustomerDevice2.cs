@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c9QGQEamEeeIjf8aP9KbJA")]
 [DisplayName("Customer Device")]
-public record CustomerDevice2
+public partial record CustomerDevice2
 {
     /// <summary>
     /// Information about the customer device.

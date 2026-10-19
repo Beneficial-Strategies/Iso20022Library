@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ONWpx5S8EemqYPWMBuVawg")]
 [DisplayName("Investment Plan")]
-public record InvestmentPlan16
+public partial record InvestmentPlan16
 {
     /// <summary>
     /// Frequency of the investment or divestment.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__1ydcWiwEeS87LmvcA55sg")]
 [DisplayName("Point Of Interaction Component")]
-public record PointOfInteractionComponent5
+public partial record PointOfInteractionComponent5
 {
     /// <summary>
     /// Type of component belonging to a POI (Point Of Interaction) Terminal.

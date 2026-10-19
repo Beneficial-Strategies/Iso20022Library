@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pFv0qvGOEeiGNursv3uE_g")]
 [DisplayName("MAC Data")]
-public record MACData1
+public partial record MACData1
 {
     /// <summary>
     /// Identifies the key management scheme and associated structure of the remainder of the data element.

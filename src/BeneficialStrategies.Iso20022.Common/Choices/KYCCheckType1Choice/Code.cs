@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KYCCheckType1Choice
     /// </summary>
     [IsoId("_CsmgIBRyEeOKWo1NF21OVw")]
     [DisplayName("Code")]
-    public record Code : KYCCheckType1Choice_
+    public partial record Code : KYCCheckType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(NameAndAddress), nameof(NameAndAddress))]
     [KnownType(typeof(DigitalLedgerIdentification))]
     [JsonDerivedType(typeof(DigitalLedgerIdentification), nameof(DigitalLedgerIdentification))]
-    public abstract record PartyIdentification262Choice_;
+    public abstract partial record PartyIdentification262Choice_;
 }

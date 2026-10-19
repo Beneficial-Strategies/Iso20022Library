@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Athp0NokEeC60axPepSq7g_480086930")]
 [DisplayName("Two Leg Transaction Details")]
-public record TwoLegTransactionDetails1
+public partial record TwoLegTransactionDetails1
 {
     /// <summary>
     /// Specifies the date/time on which the trade was executed.

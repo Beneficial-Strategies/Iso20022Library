@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxExemptionReason2Choice
     /// </summary>
     [IsoId("_PE3O0SDAEeWPMvNwVtiMsA")]
     [DisplayName("Code")]
-    public record Code : TaxExemptionReason2Choice_
+    public partial record Code : TaxExemptionReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

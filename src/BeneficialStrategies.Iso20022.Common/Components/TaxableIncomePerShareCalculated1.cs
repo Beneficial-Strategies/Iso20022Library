@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VSl5B9p-Ed-ak6NoX_4Aeg_-362445404")]
 [DisplayName("Taxable Income Per Share Calculated")]
-public record TaxableIncomePerShareCalculated1
+public partial record TaxableIncomePerShareCalculated1
 {
     /// <summary>
     /// Structured format.

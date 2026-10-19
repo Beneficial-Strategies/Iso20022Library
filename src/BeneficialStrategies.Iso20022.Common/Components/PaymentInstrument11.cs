@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jKdmcRc2EeK5g-3oYI0_9Q")]
 [DisplayName("Payment Instrument")]
-public record PaymentInstrument11
+public partial record PaymentInstrument11
 {
     /// <summary>
     /// Currency associated with the payment instrument.

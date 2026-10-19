@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesLendingType1Choice
     [IsoId("_AYhDIdokEeC60axPepSq7g_-1325852058")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SecuritiesLendingType1Choice_
+    public partial record Proprietary : SecuritiesLendingType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

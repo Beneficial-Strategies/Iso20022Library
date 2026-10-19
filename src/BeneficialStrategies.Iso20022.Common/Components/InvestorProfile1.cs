@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WK6_oCDNEeWPMvNwVtiMsA")]
 [DisplayName("Investor Profile")]
-public record InvestorProfile1
+public partial record InvestorProfile1
 {
     /// <summary>
     /// Type of profile.

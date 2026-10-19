@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber17Choice
     /// </summary>
     [IsoId("_dPmKtZBgEeakHoV5BVecAQ")]
     [DisplayName("Short Number")]
-    public record ShortNumber : DocumentNumber17Choice_
+    public partial record ShortNumber : DocumentNumber17Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

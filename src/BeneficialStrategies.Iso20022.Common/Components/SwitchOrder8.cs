@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("906f2c3f-6693-415a-ae48-44d8780df86b")]
 [DisplayName("Switch Order8")]
-public record SwitchOrder8
+public partial record SwitchOrder8
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.

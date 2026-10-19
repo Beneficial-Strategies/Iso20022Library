@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M_WgURQvEeKebsB9eKJSkA")]
 [DisplayName("Investment Fund Cash Settlement Information")]
-public record InvestmentFundCashSettlementInformation5
+public partial record InvestmentFundCashSettlementInformation5
 {
     /// <summary>
     /// Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.

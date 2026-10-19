@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOwner1Choice
     [IsoId("_3SysEyFUEeWgV9SQSyaAog")]
     [DisplayName("Organisation Owner Identification")]
     [IsoXmlTag("OrgOwnrId")]
-    public record OrganisationOwnerIdentification : AccountOwner1Choice_
+    public partial record OrganisationOwnerIdentification : AccountOwner1Choice_
     {
         /// <summary>
         /// Identification of the organisation.

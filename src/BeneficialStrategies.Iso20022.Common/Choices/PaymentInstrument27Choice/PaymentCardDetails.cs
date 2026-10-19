@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument27Choice
     /// Payment Card Details.
     /// </summary>
     [DisplayName("Payment Card Details")]
-    public record PaymentCardDetails : PaymentInstrument27Choice_
+    public partial record PaymentCardDetails : PaymentInstrument27Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

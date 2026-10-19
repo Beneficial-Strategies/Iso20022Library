@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice
     /// </summary>
     [IsoId("_Ad4rUtokEeC60axPepSq7g_-1440510389")]
     [DisplayName("Collateral Transaction Identification")]
-    public record CollateralTransactionIdentification : IdentificationReference11Choice_
+    public partial record CollateralTransactionIdentification : IdentificationReference11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

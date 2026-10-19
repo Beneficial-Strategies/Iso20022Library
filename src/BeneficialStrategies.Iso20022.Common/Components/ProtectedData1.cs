@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SmzOEEYdEeegp_DADCe7HQ")]
 [DisplayName("Protected Data")]
-public record ProtectedData1
+public partial record ProtectedData1
 {
     /// <summary>
     /// Type of data protection.

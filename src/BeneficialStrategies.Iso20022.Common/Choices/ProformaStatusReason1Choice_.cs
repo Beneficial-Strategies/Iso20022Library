@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_4nJZUUzCEeafiMTDrtSnyw")]
     [DisplayName("Proforma Status Reason 1 Choice")]
-    public abstract record ProformaStatusReason1Choice_ { }
+    public abstract partial record ProformaStatusReason1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFrequency1Choice
     [IsoId("_pqiV0CDUEeWCLu74WLgP4w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementFrequency1Choice_
+    public partial record Proprietary : SettlementFrequency1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

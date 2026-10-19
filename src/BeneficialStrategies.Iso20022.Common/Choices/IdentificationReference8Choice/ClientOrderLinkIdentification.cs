@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice
     /// </summary>
     [IsoId("_AcF7ldokEeC60axPepSq7g_1543139442")]
     [DisplayName("Client Order Link Identification")]
-    public record ClientOrderLinkIdentification : IdentificationReference8Choice_
+    public partial record ClientOrderLinkIdentification : IdentificationReference8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup2Choice
     [IsoId("_DDQTg249EeiU9cctagi5ow")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
-    public record Party : PartyOrGroup2Choice_
+    public partial record Party : PartyOrGroup2Choice_
     {
         /// <summary>
         /// Entity involved in an activity.

@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_oA-7SNE9Ed-BzquC8wXy7w_-1394534356")]
 [DisplayName("Account Closing Request V")]
-public record AccountClosingRequestV01 : IOuterRecord
+public partial record AccountClosingRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

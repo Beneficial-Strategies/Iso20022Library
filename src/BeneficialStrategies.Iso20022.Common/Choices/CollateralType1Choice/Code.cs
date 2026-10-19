@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralType1Choice
     /// </summary>
     [IsoId("_AYhDI9okEeC60axPepSq7g_-109189380")]
     [DisplayName("Code")]
-    public record Code : CollateralType1Choice_
+    public partial record Code : CollateralType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

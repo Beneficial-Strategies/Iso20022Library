@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("3ad5426e-854c-4d30-b7e5-aff0785a43ab")]
 [DisplayName("Order Cancellation Status Report V05")]
-public record OrderCancellationStatusReportV05 : IOuterRecord
+public partial record OrderCancellationStatusReportV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

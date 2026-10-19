@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uvgygxQLEeKCyZtSz_i3FA")]
 [DisplayName("Regulatory Information")]
-public record RegulatoryInformation1
+public partial record RegulatoryInformation1
 {
     /// <summary>
     /// Sector of economic activity, for example, SAE in the Italian market.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_trtR1vfeEei89sMSHxl1ew")]
 [DisplayName("Amount")]
-public record Amount12
+public partial record Amount12
 {
     /// <summary>
     /// Type of hours worked.

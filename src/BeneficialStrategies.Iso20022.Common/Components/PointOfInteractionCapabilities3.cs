@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L_T7YWiuEeS87LmvcA55sg")]
 [DisplayName("Point Of Interaction Capabilities")]
-public record PointOfInteractionCapabilities3
+public partial record PointOfInteractionCapabilities3
 {
     /// <summary>
     /// Card reading capabilities of the POI (Point Of Interaction) performing the transaction.

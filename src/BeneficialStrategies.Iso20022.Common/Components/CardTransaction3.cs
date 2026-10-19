@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BbVP4XsxEeSTS7uHCe8FPQ")]
 [DisplayName("Card Transaction")]
-public record CardTransaction3
+public partial record CardTransaction3
 {
     /// <summary>
     /// Date and time of the transaction transported unchanged by the acquirer from the card acceptor to the issuer. Corresponds to the CAPE data element TransactionIdentification/ TransactionDateTime.

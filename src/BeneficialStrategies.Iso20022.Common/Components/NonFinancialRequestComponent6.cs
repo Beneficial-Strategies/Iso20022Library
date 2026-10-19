@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7jU_AbX0EfCUZfsQO4rYeA")]
 [DisplayName("Non Financial Request Component6")]
-public record NonFinancialRequestComponent6
+public partial record NonFinancialRequestComponent6
 {
     /// <summary>
     /// Environment of the transaction.

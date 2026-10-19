@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("ea4813b0-c4d4-476f-866a-f03d07723258")]
 [DisplayName("Subscription Multiple Execution7")]
-public record SubscriptionMultipleExecution7
+public partial record SubscriptionMultipleExecution7
 {
     /// <summary>
     /// Indicates whether the confirmation is an amendment of a previous confirmation.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_8Cb1kRQVEeKebsB9eKJSkA")]
 [DisplayName("Investment Plan")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record InvestmentPlan6
+public partial record InvestmentPlan6
 {
     /// <summary>
     /// Frequency of the investment or divestment.

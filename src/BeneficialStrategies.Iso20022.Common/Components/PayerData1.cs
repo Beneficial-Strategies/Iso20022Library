@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kqIgsSzvEfCD0_iZ8tw-zA")]
 [DisplayName("Payer Data1")]
-public record PayerData1
+public partial record PayerData1
 {
     /// <summary>
     /// Financial institution-related data required by business and/or regulation (for example, money or funds transfer).

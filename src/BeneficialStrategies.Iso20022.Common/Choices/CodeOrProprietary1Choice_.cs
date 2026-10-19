@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qotj1tp-Ed-ak6NoX_4Aeg_-1810617673")]
     [DisplayName("Code Or Proprietary 1 Choice")]
-    public abstract record CodeOrProprietary1Choice_ { }
+    public abstract partial record CodeOrProprietary1Choice_ { }
 }

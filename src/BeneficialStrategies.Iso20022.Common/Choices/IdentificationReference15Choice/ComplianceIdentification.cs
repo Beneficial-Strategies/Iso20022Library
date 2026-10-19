@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference15Choice
     /// Compliance Identification.
     /// </summary>
     [DisplayName("Compliance Identification")]
-    public record ComplianceIdentification : IdentificationReference15Choice_
+    public partial record ComplianceIdentification : IdentificationReference15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

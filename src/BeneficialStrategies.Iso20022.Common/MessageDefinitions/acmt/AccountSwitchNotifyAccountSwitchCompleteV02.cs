@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_7HK1q242EeiU9cctagi5ow")]
 [DisplayName("Account Switch Notify Account Switch Complete V")]
-public record AccountSwitchNotifyAccountSwitchCompleteV02 : IOuterRecord
+public partial record AccountSwitchNotifyAccountSwitchCompleteV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

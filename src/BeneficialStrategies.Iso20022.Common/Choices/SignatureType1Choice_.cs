@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_k8doQDoHEeabspMEjqY5TQ")]
     [DisplayName("Signature Type 1 Choice")]
-    public abstract record SignatureType1Choice_ { }
+    public abstract partial record SignatureType1Choice_ { }
 }

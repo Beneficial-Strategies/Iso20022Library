@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionChannelType1Choice
     [IsoId("_hrW7UBRGEeOKWo1NF21OVw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TransactionChannelType1Choice_
+    public partial record Proprietary : TransactionChannelType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

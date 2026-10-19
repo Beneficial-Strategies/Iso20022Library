@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QRxDcNp-Ed-ak6NoX_4Aeg_-1749123923")]
 [DisplayName("Rounding Parameters")]
-public record RoundingParameters1
+public partial record RoundingParameters1
 {
     /// <summary>
     /// Float value specifying the value to which rounding is required, eg, 10 means round to a multiple of 10 units/shares, 0.5 means round to a multiple of 0.5 units/shares.

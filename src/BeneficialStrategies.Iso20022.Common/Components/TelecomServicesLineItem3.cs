@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h1mXQXTxEe6h-4AZRg9sVg")]
 [DisplayName("Telecom Services Line Item3")]
-public record TelecomServicesLineItem3
+public partial record TelecomServicesLineItem3
 {
     /// <summary>
     /// Start Date Time.

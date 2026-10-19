@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument26Choice
     /// Cheque Details.
     /// </summary>
     [DisplayName("Cheque Details")]
-    public record ChequeDetails : PaymentInstrument26Choice_
+    public partial record ChequeDetails : PaymentInstrument26Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

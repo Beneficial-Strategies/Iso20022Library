@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VGhL7tp-Ed-ak6NoX_4Aeg_-1557006265")]
 [DisplayName("Expected Execution Details")]
-public record ExpectedExecutionDetails1
+public partial record ExpectedExecutionDetails1
 {
     /// <summary>
     /// Expected date or expected date and time at which a price will be applied according to the terms of the prospectus.

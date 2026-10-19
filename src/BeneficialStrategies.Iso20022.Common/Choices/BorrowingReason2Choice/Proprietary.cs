@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BorrowingReason2Choice
     [IsoId("_7dQRiZEjEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BorrowingReason2Choice_
+    public partial record Proprietary : BorrowingReason2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
