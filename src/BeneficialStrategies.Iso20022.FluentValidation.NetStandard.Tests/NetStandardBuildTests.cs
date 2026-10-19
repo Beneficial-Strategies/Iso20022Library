@@ -133,4 +133,24 @@ public class NetStandardBuildTests
         Assert.False(sut.Validate(new JsonEnvelope<TinyMessage>(Json("BAD"))).IsValid);
         Assert.False(sut.Validate(new JsonEnvelope<TinyMessage>("{not json")).IsValid);
     }
+
+    [Fact]
+    public void XmlExtension_ReadsAndValidatesAMessageOfTheTestsOwn()
+    {
+        IValidator<ITinyMessage> sut = TinyRules();
+
+        var good = sut.Validate(TinyXml("OK"), out TinyMessage? message);
+        var bad = sut.Validate(TinyXml("BAD"), out TinyMessage? rejected);
+        var malformed = sut.Validate("<not-xml", out TinyMessage? none);
+        var wrongRoot = sut.Validate("<Other xmlns=\"urn:not-iso20022\"/>", out TinyMessage? alsoNone);
+
+        Assert.True(good.IsValid);
+        Assert.Equal("OK", message!.Identification.Value);
+        Assert.False(bad.IsValid);
+        Assert.NotNull(rejected); // read, but a rule failed: the record is still returned
+        Assert.Equal("Xml." + IssueCode.MalformedXml, Assert.Single(malformed.Errors).ErrorCode);
+        Assert.Null(none);
+        Assert.Contains(wrongRoot.Errors, e => e.ErrorCode == "Xml." + IssueCode.WrongRoot);
+        Assert.Null(alsoNone);
+    }
 }

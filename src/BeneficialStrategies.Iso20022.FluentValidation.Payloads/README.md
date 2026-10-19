@@ -8,6 +8,7 @@ Validate raw ISO 20022 XML or JSON payloads (for example off a message queue): t
 validators of [BeneficialStrategies.Iso20022.FluentValidation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation).
 
 * Depends on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the serializers are there), FluentValidation and `Microsoft.Extensions.DependencyInjection.Abstractions`; not on the message records.
+* To validate XML with a plain method call, with every reading problem reported and the record handed back, and no container, see [BeneficialStrategies.Iso20022.FluentValidation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml); the envelope validators here are being moved onto it (#21).
 * Targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0, like the validators package it works with.
 * The message records are found by the `Iso20022MessageTypeRegistry` of Primitives: the loaded assemblies that reference it, plus the ones you hand to `AddIso20022PayloadValidators(messageAssemblies: [...])` or `Iso20022MessageTypeRegistry.AddAssembly(...)`. Do that when a payload may arrive before any record type has been used in the process.
 * The validators are written for the message interfaces; the envelope validators validate the record the payload is read into, through the validator of its interface.
