@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X0VqYY7fEe6S0_1AaJzQCA")]
 [DisplayName("Report Content2")]
-public record ReportContent2
+public partial record ReportContent2
 {
     /// <summary>
     /// Report Line Sequence.

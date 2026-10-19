@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_KYxnQRIlEeyLzJfz3xPQNA")]
     [DisplayName("Rate Or Name 4 Choice")]
-    public abstract record RateOrName4Choice_ { }
+    public abstract partial record RateOrName4Choice_ { }
 }

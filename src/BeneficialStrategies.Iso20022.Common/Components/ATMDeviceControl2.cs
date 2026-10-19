@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GmxrcV27EeekzJIz1JxYSQ")]
 [DisplayName("ATM Device Control")]
-public record ATMDeviceControl2
+public partial record ATMDeviceControl2
 {
     /// <summary>
     /// Environment of the transaction.

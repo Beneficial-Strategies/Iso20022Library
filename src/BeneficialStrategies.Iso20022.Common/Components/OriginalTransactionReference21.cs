@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AYcLaVkKEeSeLKjZh_lWZw")]
 [DisplayName("Original Transaction Reference")]
-public record OriginalTransactionReference21
+public partial record OriginalTransactionReference21
 {
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.

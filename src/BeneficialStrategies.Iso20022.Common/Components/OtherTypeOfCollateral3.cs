@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dkcYoSqUEeyR9JrVGfaMKw")]
 [DisplayName("Other Type Of Collateral")]
-public record OtherTypeOfCollateral3
+public partial record OtherTypeOfCollateral3
 {
     /// <summary>
     /// Provides details about the collateral.

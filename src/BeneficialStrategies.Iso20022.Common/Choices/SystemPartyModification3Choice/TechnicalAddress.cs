@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice
     /// Technical Address.
     /// </summary>
     [DisplayName("Technical Address")]
-    public record TechnicalAddress : SystemPartyModification3Choice_
+    public partial record TechnicalAddress : SystemPartyModification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

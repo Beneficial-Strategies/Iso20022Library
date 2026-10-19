@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_foFnEFZYEeen1vB4iz5SyA")]
     [DisplayName("Verification Response")]
-    public record VerificationResponse : RecordMessage1Choice_
+    public partial record VerificationResponse : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeHorizon1Choice
     /// </summary>
     [IsoId("_3lufkDcuEeidBoT_PugKiA")]
     [DisplayName("Number Of Years")]
-    public record NumberOfYears : TimeHorizon1Choice_
+    public partial record NumberOfYears : TimeHorizon1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RbYW5dp-Ed-ak6NoX_4Aeg_109024765")]
 [DisplayName("Deletion")]
-public record Deletion2
+public partial record Deletion2
 {
     /// <summary>
     /// Content of the deleted element.

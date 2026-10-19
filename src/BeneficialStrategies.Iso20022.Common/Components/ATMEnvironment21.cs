@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ePAPUaazEe-s1ZClExRjdw")]
 [DisplayName("ATM Environment21")]
-public record ATMEnvironment21
+public partial record ATMEnvironment21
 {
     /// <summary>
     /// Acquirer.

@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_XAW1sYFrEeWtPe6Crjmeug")]
 [DisplayName("Collateral And Exposure Report V")]
-public record CollateralAndExposureReportV03 : IOuterRecord
+public partial record CollateralAndExposureReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__Pad0V6HEe26aImdqMavcg")]
 [DisplayName("Cheque")]
-public record Cheque16
+public partial record Cheque16
 {
     /// <summary>
     /// Specifies the type of cheque to be issued.

@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_quPoNdE8Ed-BzquC8wXy7w_-1126725598")]
 [DisplayName("Intent To Pay Report V")]
-public record IntentToPayReportV01 : IOuterRecord
+public partial record IntentToPayReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

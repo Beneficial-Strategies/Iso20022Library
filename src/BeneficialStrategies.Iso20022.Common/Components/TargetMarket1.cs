@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_z1KXQDQpEeifw8iDiyZLmQ")]
 [DisplayName("Target Market")]
-public record TargetMarket1
+public partial record TargetMarket1
 {
     /// <summary>
     /// Investor for which the financial instrument is targeted.

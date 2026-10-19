@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_xPtUfmjNEeiRg5NzP0jkQg")]
     [DisplayName("Residence Type")]
     [IsoXmlTag("ResTp")]
-    public record ResidenceType : UpdateLogPartyRecord1Choice_
+    public partial record ResidenceType : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Old value before the update.

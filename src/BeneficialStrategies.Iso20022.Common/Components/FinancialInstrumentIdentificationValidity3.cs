@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QCL0wZJKEeuAlLVx8pyt3w")]
 [DisplayName("Financial Instrument Identification Validity")]
-public record FinancialInstrumentIdentificationValidity3
+public partial record FinancialInstrumentIdentificationValidity3
 {
     /// <summary>
     /// Way(s) of identifying the security.

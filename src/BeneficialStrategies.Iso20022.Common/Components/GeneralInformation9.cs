@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nhBqoUj4Ee-KhcStGV4xTg")]
 [DisplayName("General Information9")]
-public record GeneralInformation9
+public partial record GeneralInformation9
 {
     /// <summary>
     /// Block Indicator.

@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 )]
 [IsoId("_it_dUIrdEeSvuOJS0mmL0g")]
 [DisplayName("ATM Device Report V")]
-public record ATMDeviceReportV01 : IOuterRecord
+public partial record ATMDeviceReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

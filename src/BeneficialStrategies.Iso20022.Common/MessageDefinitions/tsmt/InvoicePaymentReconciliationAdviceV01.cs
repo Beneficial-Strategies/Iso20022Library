@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_OTgzNDc3-AOSNFX-8224506")]
 [DisplayName("Invoice Payment Reconciliation Advice V")]
-public record InvoicePaymentReconciliationAdviceV01 : IOuterRecord
+public partial record InvoicePaymentReconciliationAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

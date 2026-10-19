@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PhIFEb5XEeexmbB7KsjCwA")]
 [DisplayName("Fraction Disposition Type SD")]
-public record FractionDispositionTypeSD3
+public partial record FractionDispositionTypeSD3
 {
     /// <summary>
     /// Xpath to the element that is being extended.

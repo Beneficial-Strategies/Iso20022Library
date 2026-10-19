@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d1KFQD8VEeih8-WNbS6hbA")]
 [DisplayName("Other Target Market")]
-public record OtherTargetMarket1
+public partial record OtherTargetMarket1
 {
     /// <summary>
     /// Type of target market parameter.

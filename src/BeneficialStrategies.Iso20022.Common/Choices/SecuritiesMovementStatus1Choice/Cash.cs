@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     [IsoId("_VW6bQOCzEei2UYJ62ws-Fw")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
-    public record Cash : SecuritiesMovementStatus1Choice_
+    public partial record Cash : SecuritiesMovementStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

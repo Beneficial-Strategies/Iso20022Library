@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD8Choice
     /// <summary>Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited.</summary>
     [IsoId("_0XjYabskEfCWCehgFzyN4w")]
     [DisplayName("New To Old")]
-    public record NewToOld : CorporateActionRateSD8Choice_
+    public partial record NewToOld : CorporateActionRateSD8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NewToOd")]

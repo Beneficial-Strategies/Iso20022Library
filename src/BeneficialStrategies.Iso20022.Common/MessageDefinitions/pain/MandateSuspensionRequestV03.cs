@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_rUYOLdcBEeq_l4BJLVUF2Q")]
 [DisplayName("Mandate Suspension Request V")]
-public record MandateSuspensionRequestV03 : IOuterRecord
+public partial record MandateSuspensionRequestV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

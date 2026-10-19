@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rfndQWf2Eembv_9KtOEw8g")]
 [DisplayName("Warrant")]
-public record Warrant4
+public partial record Warrant4
 {
     /// <summary>
     /// Specifies the ratio or multiply factor used to convert from contracts to shares.

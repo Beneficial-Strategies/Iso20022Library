@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K8BEsWcxEemvNLufWGIVOQ")]
 [DisplayName("Account Link Update2")]
-public record AccountLinkUpdate2
+public partial record AccountLinkUpdate2
 {
     /// <summary>
     /// Valid To.

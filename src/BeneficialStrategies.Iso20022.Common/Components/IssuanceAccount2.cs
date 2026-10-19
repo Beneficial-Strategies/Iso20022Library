@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mzWcD-FgEeWIA4E9cYSxxQ")]
 [DisplayName("Issuance Account")]
-public record IssuanceAccount2
+public partial record IssuanceAccount2
 {
     /// <summary>
     /// Account to or from which a securities entry is made.

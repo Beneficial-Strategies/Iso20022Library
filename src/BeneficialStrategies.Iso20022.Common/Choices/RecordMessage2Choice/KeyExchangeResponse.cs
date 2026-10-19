@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the key exchange response message.</summary>
     [IsoId("_kNBjv27-EfC68Y4jZPNEug")]
     [DisplayName("Key Exchange Response")]
-    public record KeyExchangeResponse : RecordMessage2Choice_
+    public partial record KeyExchangeResponse : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("KeyXchgRspn")]

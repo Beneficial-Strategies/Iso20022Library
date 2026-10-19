@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMTky-AOSNFX-8224490")]
 [DisplayName("Encapsulated Business Message")]
-public record EncapsulatedBusinessMessage1
+public partial record EncapsulatedBusinessMessage1
 {
     /// <summary>
     /// The Business Application Header associated to the encapsulated message if it exists.

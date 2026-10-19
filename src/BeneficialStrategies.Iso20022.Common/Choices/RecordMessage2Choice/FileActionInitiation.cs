@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the file action initiation message.</summary>
     [IsoId("_kNBjqW7-EfC68Y4jZPNEug")]
     [DisplayName("File Action Initiation")]
-    public record FileActionInitiation : RecordMessage2Choice_
+    public partial record FileActionInitiation : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FileActnInitn")]

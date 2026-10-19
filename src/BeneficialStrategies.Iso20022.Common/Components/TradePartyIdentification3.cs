@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PdKWsdp-Ed-ak6NoX_4Aeg_-1580495666")]
 [DisplayName("Trade Party Identification")]
-public record TradePartyIdentification3
+public partial record TradePartyIdentification3
 {
     /// <summary>
     /// Identifies the fund which is one of the parties in a treasury trade.

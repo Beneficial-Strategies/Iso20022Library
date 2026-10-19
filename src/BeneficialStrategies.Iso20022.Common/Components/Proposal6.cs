@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5BYWQSqREeyR9JrVGfaMKw")]
 [DisplayName("Proposal")]
-public record Proposal6
+public partial record Proposal6
 {
     /// <summary>
     /// Indicates whether this is an initial or counter proposal.

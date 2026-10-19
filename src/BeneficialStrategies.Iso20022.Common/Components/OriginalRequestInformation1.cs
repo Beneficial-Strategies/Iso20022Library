@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TiOuodp-Ed-ak6NoX_4Aeg_1502660608")]
 [DisplayName("Original Request Information")]
-public record OriginalRequestInformation1
+public partial record OriginalRequestInformation1
 {
     /// <summary>
     /// Unique and unambiguous identifier of the original request message as assigned by the original sending party.

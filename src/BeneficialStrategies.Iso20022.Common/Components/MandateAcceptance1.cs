@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RBmk9tp-Ed-ak6NoX_4Aeg_-1832843790")]
 [DisplayName("Mandate Acceptance")]
-public record MandateAcceptance1
+public partial record MandateAcceptance1
 {
     /// <summary>
     /// Set of elements used to provide information on the original messsage.

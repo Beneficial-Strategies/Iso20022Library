@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_K3a_kOCdEei2UYJ62ws-Fw")]
     [DisplayName("Collateral Status 3 Choice")]
-    public abstract record CollateralStatus3Choice_ { }
+    public abstract partial record CollateralStatus3Choice_ { }
 }

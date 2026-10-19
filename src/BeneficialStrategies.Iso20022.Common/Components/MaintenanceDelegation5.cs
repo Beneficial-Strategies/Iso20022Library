@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yb0IQbAGEeah1_v59tW6Rg")]
 [DisplayName("Maintenance Delegation")]
-public record MaintenanceDelegation5
+public partial record MaintenanceDelegation5
 {
     /// <summary>
     /// Type of delegation action.

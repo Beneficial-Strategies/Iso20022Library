@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qkr_cNp-Ed-ak6NoX_4Aeg_2036685643")]
 [DisplayName("Reference")]
-public record Reference20
+public partial record Reference20
 {
     /// <summary>
     /// Provides the reference to the interest payment request.

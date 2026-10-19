@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(EligibilityIdentification3Choice.IssuerCSDIdentification), nameof(EligibilityIdentification3Choice.IssuerCSDIdentification))]
     [IsoId("_w8PAkWc-EemvNLufWGIVOQ")]
     [DisplayName("Eligibility Identification 3 Choice")]
-    public abstract record EligibilityIdentification3Choice_ { }
+    public abstract partial record EligibilityIdentification3Choice_ { }
 }

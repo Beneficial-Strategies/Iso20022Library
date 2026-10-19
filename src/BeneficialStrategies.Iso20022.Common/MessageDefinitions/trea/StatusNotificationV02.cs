@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 )]
 [IsoId("_VgTq09E8Ed-BzquC8wXy7w_1259743081")]
 [DisplayName("Status Notification V")]
-public record StatusNotificationV02 : IOuterRecord
+public partial record StatusNotificationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

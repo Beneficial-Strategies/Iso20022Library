@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PriceRateOrAmount6Choice.Rate))]
     [JsonDerivedType(typeof(PriceRateOrAmount6Choice.Amount))]
     [JsonDerivedType(typeof(PriceRateOrAmount6Choice.AmountWithCurrency))]
-    public abstract record PriceRateOrAmount6Choice_
+    public abstract partial record PriceRateOrAmount6Choice_
     {
     }
 }

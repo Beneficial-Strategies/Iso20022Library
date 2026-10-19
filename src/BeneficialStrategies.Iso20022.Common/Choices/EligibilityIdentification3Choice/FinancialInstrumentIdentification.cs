@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EligibilityIdentification3Choice
     /// <summary>ISIN used to identify the security to be defined as eligible.</summary>
     [IsoId("_xHPWs2c-EemvNLufWGIVOQ")]
     [DisplayName("Financial Instrument Identification")]
-    public record FinancialInstrumentIdentification : EligibilityIdentification3Choice_
+    public partial record FinancialInstrumentIdentification : EligibilityIdentification3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FinInstrmId")]

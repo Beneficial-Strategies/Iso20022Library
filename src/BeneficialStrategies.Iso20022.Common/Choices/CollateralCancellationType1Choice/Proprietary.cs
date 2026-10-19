@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralCancellationType1Choic
     [IsoId("_QmxqIdp-Ed-ak6NoX_4Aeg_-418587863")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CollateralCancellationType1Choice_
+    public partial record Proprietary : CollateralCancellationType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

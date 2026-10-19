@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TTfIAtp-Ed-ak6NoX_4Aeg_1116778698")]
 [DisplayName("Performance Factors")]
-public record PerformanceFactors1
+public partial record PerformanceFactors1
 {
     /// <summary>
     /// Value of the NAV before all corporate events of the valuation date, divided by the value of the NAV after the corporate event.

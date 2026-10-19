@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjI3-AOSNFX-8224493")]
 [DisplayName("Qualified Party And XML Signature")]
-public record QualifiedPartyAndXMLSignature1
+public partial record QualifiedPartyAndXMLSignature1
 {
     /// <summary>
     /// Identification of the signing party.

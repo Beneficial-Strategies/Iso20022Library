@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sp--1gEcEeCQm6a_G2yO_w_-1939966628")]
 [DisplayName("Financial Card")]
-public record FinancialCard1
+public partial record FinancialCard1
 {
     /// <summary>
     /// Monetary value of the credit limit for this financial card.

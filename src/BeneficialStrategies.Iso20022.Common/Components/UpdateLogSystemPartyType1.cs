@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5Lc0Q2jTEeiRg5NzP0jkQg")]
 [DisplayName("Update Log System Party Type")]
-public record UpdateLogSystemPartyType1
+public partial record UpdateLogSystemPartyType1
 {
     /// <summary>
     /// Old value before the update.

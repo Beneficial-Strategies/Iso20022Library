@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cafm;
 )]
 [IsoId("_LzUbFFZjEeen1vB4iz5SyA")]
 [DisplayName("File Action Response V")]
-public record FileActionResponseV01 : IOuterRecord
+public partial record FileActionResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tv5YAANyEe2-vqzwMUAewg")]
 [DisplayName("FX Commission Or Fee")]
-public record FXCommissionOrFee1
+public partial record FXCommissionOrFee1
 {
     /// <summary>
     /// Type of the commission or fee.

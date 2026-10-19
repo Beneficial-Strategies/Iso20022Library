@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9oAg0wy6EeS3puOfnJm56A")]
 [DisplayName("Line Item Details")]
-public record LineItemDetails12
+public partial record LineItemDetails12
 {
     /// <summary>
     /// Sequential number assigned to a line item.

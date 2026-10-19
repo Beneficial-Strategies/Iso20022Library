@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ga5BAMIsEei34K_Q744LyA")]
 [DisplayName("Other Parties")]
-public record OtherParties38
+public partial record OtherParties38
 {
     /// <summary>
     /// Issuer of the financial instrument.

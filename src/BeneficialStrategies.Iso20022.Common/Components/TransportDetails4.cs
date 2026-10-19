@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2ZcofzckEeSaC-PiOaz_KQ")]
 [DisplayName("Transport Details")]
-public record TransportDetails4
+public partial record TransportDetails4
 {
     /// <summary>
     /// Reference to the identification of the underlying transport document.

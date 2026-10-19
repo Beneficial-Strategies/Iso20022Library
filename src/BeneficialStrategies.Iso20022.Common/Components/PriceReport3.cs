@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_brky0RmCEeKxsrht2duUcg")]
 [DisplayName("Price Report")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-08-07.")]
-public record PriceReport3
+public partial record PriceReport3
 {
     /// <summary>
     /// Information related to the price valuation of a financial instrument.

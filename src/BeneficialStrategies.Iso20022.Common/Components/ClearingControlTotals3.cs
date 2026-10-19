@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Na42UY1KEe6S0_1AaJzQCA")]
 [DisplayName("Clearing Control Totals3")]
-public record ClearingControlTotals3
+public partial record ClearingControlTotals3
 {
     /// <summary>
     /// Count.

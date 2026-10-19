@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BjP6AQN1Ee2-vqzwMUAewg")]
 [DisplayName("General Information")]
-public record GeneralInformation8
+public partial record GeneralInformation8
 {
     /// <summary>
     /// Indicates whether the trade is a block or single trade.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7qk3ikWdEempSe_3C1a9EQ")]
 [DisplayName("Electronic Invoice")]
-public record ElectronicInvoice1
+public partial record ElectronicInvoice1
 {
     /// <summary>
     /// Type of elements to be presented in the electronic invoice (e-invoice).

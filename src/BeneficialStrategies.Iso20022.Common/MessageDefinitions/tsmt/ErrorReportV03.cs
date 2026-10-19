@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_oHDjhdE8Ed-BzquC8wXy7w_-1687018808")]
 [DisplayName("Error Report V")]
-public record ErrorReportV03 : IOuterRecord
+public partial record ErrorReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

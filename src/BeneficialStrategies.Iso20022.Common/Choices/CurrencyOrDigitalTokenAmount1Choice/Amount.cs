@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
     [IsoId("_8le6IANhEe2-vqzwMUAewg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : CurrencyOrDigitalTokenAmount1Choice_
+    public partial record Amount : CurrencyOrDigitalTokenAmount1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

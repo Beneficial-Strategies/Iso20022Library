@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_umPyoYq6EeSHjtO_wHA7PQ")]
 [DisplayName("ATM Transaction Amounts")]
-public record ATMTransactionAmounts4
+public partial record ATMTransactionAmounts4
 {
     /// <summary>
     /// True if limits may be displayed on the ATM to the customer.

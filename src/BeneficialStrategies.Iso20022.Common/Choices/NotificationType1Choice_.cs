@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_KYeWkLkuEe68nbz8Nl_hLQ")]
     [DisplayName("Notification Type1Choice")]
-    public abstract record NotificationType1Choice_ { }
+    public abstract partial record NotificationType1Choice_ { }
 }

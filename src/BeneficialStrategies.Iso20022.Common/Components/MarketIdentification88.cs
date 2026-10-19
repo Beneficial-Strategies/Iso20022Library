@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5YWZ4UeIEeSzluxs8tdrVw")]
 [DisplayName("Market Identification")]
-public record MarketIdentification88
+public partial record MarketIdentification88
 {
     /// <summary>
     /// Code allocated to places of trade, ie, stock exchanges, regulated markets, for example, Electronic Trading Platforms (ECN), and unregulated markets, for example, Automated Trading Systems (ATS), as sources of prices and related information, in order to facilitate automated processing.

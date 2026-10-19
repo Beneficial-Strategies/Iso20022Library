@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QmevMNp-Ed-ak6NoX_4Aeg_386196874")]
 [DisplayName("Reference")]
-public record Reference16
+public partial record Reference16
 {
     /// <summary>
     /// Identification of the collateral message cancellation request.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZOUQbDEEe-g3p7goNrabg")]
 [DisplayName("Eligible Securities Creation Request V01")]
-public record EligibleSecuritiesCreationRequestV01 : IOuterRecord
+public partial record EligibleSecuritiesCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

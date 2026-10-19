@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cafc;
 )]
 [IsoId("_WzFGdFciEeeFltjJxERUxw")]
 [DisplayName("Fee Collection Response V")]
-public record FeeCollectionResponseV01 : IOuterRecord
+public partial record FeeCollectionResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

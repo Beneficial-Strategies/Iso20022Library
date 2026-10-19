@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aZLdATAOEeugIJ3Gvoevmg")]
 [DisplayName("Process Timing")]
-public record ProcessTiming5
+public partial record ProcessTiming5
 {
     /// <summary>
     /// Waiting time after the previous action in months, days, hours and minutes, leading zeros could be omitted.

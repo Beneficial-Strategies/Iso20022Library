@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_2y5Nxlj6EeOgwYxfAV02bg")]
     [DisplayName("Received Reason 2 Choice")]
-    public abstract record ReceivedReason2Choice_ { }
+    public abstract partial record ReceivedReason2Choice_ { }
 }

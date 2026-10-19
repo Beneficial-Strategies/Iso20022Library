@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_OTgzNTEy-AOSNFX-8224507")]
 [DisplayName("Party Event Advice V")]
-public record PartyEventAdviceV01 : IOuterRecord
+public partial record PartyEventAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

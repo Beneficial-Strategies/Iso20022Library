@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XQgAsItpEeSDLd7nI4Quzw")]
 [DisplayName("ATM Diagnostic Response")]
-public record ATMDiagnosticResponse1
+public partial record ATMDiagnosticResponse1
 {
     /// <summary>
     /// Environment of the ATM.

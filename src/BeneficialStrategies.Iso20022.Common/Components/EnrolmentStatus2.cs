@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UalrzeH7Eeqbls7Gk4-ckA")]
 [DisplayName("Enrolment Status")]
-public record EnrolmentStatus2
+public partial record EnrolmentStatus2
 {
     /// <summary>
     /// Unique identification of the original instruction.

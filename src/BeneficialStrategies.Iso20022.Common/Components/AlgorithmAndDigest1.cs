@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjQw-AOSNFX-8224494")]
 [DisplayName("Algorithm And Digest")]
-public record AlgorithmAndDigest1
+public partial record AlgorithmAndDigest1
 {
     /// <summary>
     /// Digest algorithm used to create the digest.

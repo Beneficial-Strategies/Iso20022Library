@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HolxYeLaEeWFtOV72FbX9w")]
     [DisplayName("Distribution Policy 2 Choice")]
-    public abstract record DistributionPolicy2Choice_ { }
+    public abstract partial record DistributionPolicy2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QeZTYb-8Eeeb2ZBoAlSG1Q")]
 [DisplayName("Corporate Action Unallocated Details SD")]
-public record CorporateActionUnallocatedDetailsSD6
+public partial record CorporateActionUnallocatedDetailsSD6
 {
     /// <summary>
     /// Type of Participants positions distribution balance concerned in unallocated payment.

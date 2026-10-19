@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TiFktdp-Ed-ak6NoX_4Aeg_1101123529")]
 [DisplayName("Financing Result")]
-public record FinancingResult1
+public partial record FinancingResult1
 {
     /// <summary>
     /// Specifies the status of the financing request (e.g. financed. not financed).

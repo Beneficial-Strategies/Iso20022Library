@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_97ufHHltEeG7BsjMvd1mEw_-864278160")]
 [DisplayName("Undertaking Termination Notice")]
-public record UndertakingTerminationNotice1
+public partial record UndertakingTerminationNotice1
 {
     /// <summary>
     /// Details related to the identification of the undertaking.

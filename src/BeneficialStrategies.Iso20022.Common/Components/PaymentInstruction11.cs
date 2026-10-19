@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_GWSo0TimEeKpHbBQ3XWFBw")]
 [DisplayName("Payment Instruction")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record PaymentInstruction11
+public partial record PaymentInstruction11
 {
     /// <summary>
     /// Reference assigned by a sending party to unambiguously identify the payment information block within the message.

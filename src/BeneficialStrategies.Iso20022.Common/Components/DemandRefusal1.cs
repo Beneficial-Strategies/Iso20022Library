@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-FHEkHltEeG7BsjMvd1mEw_-1919643766")]
 [DisplayName("Demand Refusal")]
-public record DemandRefusal1
+public partial record DemandRefusal1
 {
     /// <summary>
     /// Details related to the identification of the undertaking.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UnE22tp-Ed-ak6NoX_4Aeg_12968577")]
 [DisplayName("Variation Margin")]
-public record VariationMargin1
+public partial record VariationMargin1
 {
     /// <summary>
     /// Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.

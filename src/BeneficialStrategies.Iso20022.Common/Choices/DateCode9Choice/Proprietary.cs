@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode9Choice
     [IsoId("_QnElEdp-Ed-ak6NoX_4Aeg_72492977")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DateCode9Choice_
+    public partial record Proprietary : DateCode9Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

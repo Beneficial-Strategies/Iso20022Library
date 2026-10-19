@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_THHf8tp-Ed-ak6NoX_4Aeg_1994885996")]
 [DisplayName("Payment Type Information")]
-public record PaymentTypeInformation20
+public partial record PaymentTypeInformation20
 {
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the instruction.

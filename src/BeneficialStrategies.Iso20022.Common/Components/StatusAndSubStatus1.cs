@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X3w_o4xlEeKdxfnzD2sqyA")]
 [DisplayName("Status And Sub Status")]
-public record StatusAndSubStatus1
+public partial record StatusAndSubStatus1
 {
     /// <summary>
     /// Status expressed as a code.

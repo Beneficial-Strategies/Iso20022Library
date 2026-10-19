@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_iE0UQNE8Ed-BzquC8wXy7w_1228841128")]
 [DisplayName("Activity Report Request V")]
-public record ActivityReportRequestV03 : IOuterRecord
+public partial record ActivityReportRequestV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

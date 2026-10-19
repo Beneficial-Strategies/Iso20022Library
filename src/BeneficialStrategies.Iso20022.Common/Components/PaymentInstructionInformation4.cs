@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_PkUHqtp-Ed-ak6NoX_4Aeg_1196042811")]
 [DisplayName("Payment Instruction Information")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-08-07.")]
-public record PaymentInstructionInformation4
+public partial record PaymentInstructionInformation4
 {
     /// <summary>
     /// Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.

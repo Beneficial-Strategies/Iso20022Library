@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_7-eWJTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Modification 2 Choice")]
-    public abstract record SecuritiesAccountModification2Choice_ { }
+    public abstract partial record SecuritiesAccountModification2Choice_ { }
 }

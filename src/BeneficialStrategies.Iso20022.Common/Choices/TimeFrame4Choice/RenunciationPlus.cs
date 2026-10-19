@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame4Choice
     /// </summary>
     [IsoId("_UAew69p-Ed-ak6NoX_4Aeg_500203194")]
     [DisplayName("Renunciation Plus")]
-    public record RenunciationPlus : TimeFrame4Choice_
+    public partial record RenunciationPlus : TimeFrame4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 )]
 [IsoId("_BUZXMH1LEeCF8NjrBemJWQ_1543411923")]
 [DisplayName("Invoice Financing Request Status V")]
-public record InvoiceFinancingRequestStatusV01 : IOuterRecord
+public partial record InvoiceFinancingRequestStatusV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

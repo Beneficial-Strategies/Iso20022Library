@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType13Choice
     [IsoId("_ff2x4EeIEeSzluxs8tdrVw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MarketType13Choice_
+    public partial record Proprietary : MarketType13Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

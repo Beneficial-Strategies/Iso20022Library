@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kpU3oO5NEeCisYr99QEiWA_1758511651")]
 [DisplayName("System Restriction")]
-public record SystemRestriction1
+public partial record SystemRestriction1
 {
     /// <summary>
     /// Specifies the date from which the restriction is valid.

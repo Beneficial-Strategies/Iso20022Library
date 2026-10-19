@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3bfJsStFEeySlt9bF77XfA")]
 [DisplayName("Request Details")]
-public record RequestDetails28
+public partial record RequestDetails28
 {
     /// <summary>
     /// Specifies the  removal processing change requested.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rca4sNp-Ed-ak6NoX_4Aeg_-583688066")]
 [DisplayName("Additional References")]
-public record AdditionalReferences
+public partial record AdditionalReferences
 {
     /// <summary>
     /// Unambiguous reference to a previous message having a business relevance with this message.

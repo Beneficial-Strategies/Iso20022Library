@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XFNQYeLaEeWFtOV72FbX9w")]
     [DisplayName("Trade Transaction Condition 7 Choice")]
-    public abstract record TradeTransactionCondition7Choice_ { }
+    public abstract partial record TradeTransactionCondition7Choice_ { }
 }

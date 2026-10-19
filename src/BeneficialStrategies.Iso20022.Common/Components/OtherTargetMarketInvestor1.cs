@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8aPsYDcLEeiIxKQErQxblg")]
 [DisplayName("Other Target Market Investor")]
-public record OtherTargetMarketInvestor1
+public partial record OtherTargetMarketInvestor1
 {
     /// <summary>
     /// Type of investor.

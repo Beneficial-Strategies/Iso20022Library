@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sp5_gtp-Ed-ak6NoX_4Aeg_-1649364101")]
 [DisplayName("Shipment Date Range")]
-public record ShipmentDateRange1
+public partial record ShipmentDateRange1
 {
     /// <summary>
     /// Earliest date whereby the goods must be shipped.

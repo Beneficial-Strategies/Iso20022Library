@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r3cB8a4QEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Deposited Media")]
-public record ATMDepositedMedia3
+public partial record ATMDepositedMedia3
 {
     /// <summary>
     /// Type of deposited media.

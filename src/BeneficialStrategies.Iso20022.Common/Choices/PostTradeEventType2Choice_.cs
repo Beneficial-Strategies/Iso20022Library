@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6NBoAUj-Ee-KhcStGV4xTg")]
     [DisplayName("Post Trade Event Type2Choice")]
-    public abstract record PostTradeEventType2Choice_ { }
+    public abstract partial record PostTradeEventType2Choice_ { }
 }

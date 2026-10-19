@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesUpdateReason1Choice
     [IsoId("_EjynM5I8EeuAlLVx8pyt3w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SecuritiesUpdateReason1Choice_
+    public partial record Proprietary : SecuritiesUpdateReason1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

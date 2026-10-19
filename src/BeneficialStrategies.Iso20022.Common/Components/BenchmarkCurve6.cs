@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P1sQ4ZJKEeuAlLVx8pyt3w")]
 [DisplayName("Benchmark Curve")]
-public record BenchmarkCurve6
+public partial record BenchmarkCurve6
 {
     /// <summary>
     /// Either a swap spread or spread to benchmark depending upon order type. In case of a spread to benchmark, the price offset is expressed in terms of basis points relative to a benchmark - this can be a positive or a negative spread. In case of a swap spread, the price offset is a target spread for a swap.

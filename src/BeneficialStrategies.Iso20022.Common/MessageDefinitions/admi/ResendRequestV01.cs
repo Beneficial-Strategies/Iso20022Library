@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 )]
 [IsoId("_5xUioZb3Eee4htziCyV8eA")]
 [DisplayName("Resend Request V")]
-public record ResendRequestV01 : IOuterRecord
+public partial record ResendRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

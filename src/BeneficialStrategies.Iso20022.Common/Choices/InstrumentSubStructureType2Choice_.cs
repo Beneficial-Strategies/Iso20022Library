@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QYb2YeLaEeWFtOV72FbX9w")]
     [DisplayName("Instrument Sub Structure Type 2 Choice")]
-    public abstract record InstrumentSubStructureType2Choice_ { }
+    public abstract partial record InstrumentSubStructureType2Choice_ { }
 }

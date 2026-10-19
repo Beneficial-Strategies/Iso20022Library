@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TimeFrame7Choice.Prepayment), nameof(TimeFrame7Choice.Prepayment))]
     [IsoId("_5ufTETgDEei6RvewLQWEqw")]
     [DisplayName("Time Frame 7 Choice")]
-    public abstract record TimeFrame7Choice_ { }
+    public abstract partial record TimeFrame7Choice_ { }
 }

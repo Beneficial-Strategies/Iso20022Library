@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 )]
 [IsoId("_KP1cKNE8Ed-BzquC8wXy7w_-352671200")]
 [DisplayName("Cancel Foreign Exchange Option V")]
-public record CancelForeignExchangeOptionV02 : IOuterRecord
+public partial record CancelForeignExchangeOptionV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

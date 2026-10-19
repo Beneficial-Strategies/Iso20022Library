@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ErrorHandling2Choice
     /// </summary>
     [IsoId("_jwIVARbvEeOy-PlRuFSUzQ")]
     [DisplayName("Code")]
-    public record Code : ErrorHandling2Choice_
+    public partial record Code : ErrorHandling2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 )]
 [IsoId("_9fRMkHltEeG7BsjMvd1mEw_980511566")]
 [DisplayName("Undertaking Application V")]
-public record UndertakingApplicationV01 : IOuterRecord
+public partial record UndertakingApplicationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-JJEAfGQEeibbsF9Yi4diw")]
 [DisplayName("Terminal Management Data Set")]
-public record TerminalManagementDataSet28
+public partial record TerminalManagementDataSet28
 {
     /// <summary>
     /// Identification of the data set containing the status report.

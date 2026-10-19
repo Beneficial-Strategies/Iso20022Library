@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpos
     /// </summary>
     [IsoId("_3LyNoUiNEeOdL6nMHefDgg")]
     [DisplayName("Cash SSI Purpose")]
-    public record CashSSIPurpose : MarketIdentificationOrCashPurpose1Choice_
+    public partial record CashSSIPurpose : MarketIdentificationOrCashPurpose1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

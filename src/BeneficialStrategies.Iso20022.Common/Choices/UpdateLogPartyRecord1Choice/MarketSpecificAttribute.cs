@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_xPt7hWjNEeiRg5NzP0jkQg")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
-    public record MarketSpecificAttribute : UpdateLogPartyRecord1Choice_
+    public partial record MarketSpecificAttribute : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Old value before the update.

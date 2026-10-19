@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FElasbnxEeq5Lv5RTGDs7Q")]
 [DisplayName("Time Frame")]
-public record TimeFrame7
+public partial record TimeFrame7
 {
     /// <summary>
     /// Description of the timeframe.

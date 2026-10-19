@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WKR_ESqSEeyR9JrVGfaMKw")]
 [DisplayName("Collateral Substitution")]
-public record CollateralSubstitution8
+public partial record CollateralSubstitution8
 {
     /// <summary>
     /// Indicates whether the collateral substitution request is new or updated.

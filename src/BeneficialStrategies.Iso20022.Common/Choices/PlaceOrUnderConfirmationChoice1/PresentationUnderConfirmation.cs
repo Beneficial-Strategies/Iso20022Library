@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOrUnderConfirmationChoice1
     /// </summary>
     [IsoId("_97kuFHltEeG7BsjMvd1mEw_1998762195")]
     [DisplayName("Presentation Under Confirmation")]
-    public record PresentationUnderConfirmation : PlaceOrUnderConfirmationChoice1_
+    public partial record PresentationUnderConfirmation : PlaceOrUnderConfirmationChoice1_
     {
         /// <summary>
         /// Contains the main value for the container.

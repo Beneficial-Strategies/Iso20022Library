@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rK8SgcQXEe2pvZQ_33Qz1Q")]
 [DisplayName("Investor Requirements4")]
-public record InvestorRequirements4
+public partial record InvestorRequirements4
 {
     /// <summary>
     /// Return Profile Preservation.

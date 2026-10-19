@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 )]
 [IsoId("_suRVUS9dEeS94oXWDaBauA")]
 [DisplayName("Settlement Obligation Report V")]
-public record SettlementObligationReportV03 : IOuterRecord
+public partial record SettlementObligationReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

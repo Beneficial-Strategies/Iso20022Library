@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_isOssFvBEe-c2-hex9EchA")]
 [DisplayName("Trade Data Report2")]
-public record TradeDataReport2
+public partial record TradeDataReport2
 {
     /// <summary>
     /// Linked Report Identification.

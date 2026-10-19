@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_fW_fY-IxEeqbls7Gk4-ckA")]
     [DisplayName("Creditor Enrolment Status Reason 2 Choice")]
-    public abstract record CreditorEnrolmentStatusReason2Choice_ { }
+    public abstract partial record CreditorEnrolmentStatusReason2Choice_ { }
 }

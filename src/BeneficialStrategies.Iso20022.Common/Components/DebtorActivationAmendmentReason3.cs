@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wpEdQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Debtor Activation Amendment Reason3")]
-public record DebtorActivationAmendmentReason3
+public partial record DebtorActivationAmendmentReason3
 {
     /// <summary>
     /// Originator.

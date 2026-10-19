@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityRestrictionType2Choice
     /// </summary>
     [IsoId("_dF_Po-LxEeWOD7aAy2fAcA")]
     [DisplayName("Restriction Type")]
-    public record RestrictionType : SecurityRestrictionType2Choice_
+    public partial record RestrictionType : SecurityRestrictionType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

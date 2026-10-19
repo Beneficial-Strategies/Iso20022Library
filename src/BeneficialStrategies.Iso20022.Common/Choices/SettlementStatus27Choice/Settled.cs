@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice
     [IsoId("_xAc3AOCbEei2UYJ62ws-Fw")]
     [DisplayName("Settled")]
     [IsoXmlTag("Sttld")]
-    public record Settled : SettlementStatus27Choice_
+    public partial record Settled : SettlementStatus27Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

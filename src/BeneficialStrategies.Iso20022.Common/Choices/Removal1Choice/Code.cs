@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Removal1Choice
     /// </summary>
     [IsoId("_xeEJoPkREeicy5Zn42b9bg")]
     [DisplayName("Code")]
-    public record Code : Removal1Choice_
+    public partial record Code : Removal1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

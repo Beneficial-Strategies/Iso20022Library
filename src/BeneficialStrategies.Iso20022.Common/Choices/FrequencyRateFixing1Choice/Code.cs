@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyRateFixing1Choice
     /// </summary>
     [IsoId("_p0WokI9PEeqMo4JxiuZGSw")]
     [DisplayName("Code")]
-    public record Code : FrequencyRateFixing1Choice_
+    public partial record Code : FrequencyRateFixing1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

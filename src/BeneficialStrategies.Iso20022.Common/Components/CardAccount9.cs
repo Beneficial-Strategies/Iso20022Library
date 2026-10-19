@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuUbsa4AEeWL1uap3dNhCQ")]
 [DisplayName("Card Account")]
-public record CardAccount9
+public partial record CardAccount9
 {
     /// <summary>
     /// Sequence number of the account data for multi-account deposit.

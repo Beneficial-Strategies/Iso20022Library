@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus29Choice
     [IsoId("_Y_KSwOBPEeiVRbNQx5-Vhg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : CancellationStatus29Choice_
+    public partial record Reason : CancellationStatus29Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction is cancelled.

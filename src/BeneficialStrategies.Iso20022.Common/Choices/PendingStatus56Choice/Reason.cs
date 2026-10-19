@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus56Choice
     [IsoId("_iJpf0OBkEeiVRbNQx5-Vhg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : PendingStatus56Choice_
+    public partial record Reason : PendingStatus56Choice_
     {
         /// <summary>
         /// Specifies the reason of the pending status expressed as a code.

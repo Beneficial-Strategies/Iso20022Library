@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Iue04TAPEeOKib24wnHaFg")]
 [DisplayName("Consignment")]
-public record Consignment3
+public partial record Consignment3
 {
     /// <summary>
     /// Total quantity of packaging units, eg number of boxes, containers, pallets, etc.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PPNyoWp7EemmaZLSPtWX5A")]
 [DisplayName("Option")]
-public record Option15
+public partial record Option15
 {
     /// <summary>
     /// Specifies whether the option contract settles at the open or close of the market.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ObligationType1Choice
     [IsoId("_QmCDQdp-Ed-ak6NoX_4Aeg_1613021379")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ObligationType1Choice_
+    public partial record Proprietary : ObligationType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

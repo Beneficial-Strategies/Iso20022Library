@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_QmhwsRs8EeqrvK3udMUsNQ")]
     [DisplayName("Key Exchange Response")]
-    public record KeyExchangeResponse : RecordMessage1Choice_
+    public partial record KeyExchangeResponse : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Status6Choice.Proprietary), nameof(Status6Choice.Proprietary))]
     [IsoId("_Su5UCAEcEeCQm6a_G2yO_w_-54288396")]
     [DisplayName("Status 6 Choice")]
-    public abstract record Status6Choice_ { }
+    public abstract partial record Status6Choice_ { }
 }

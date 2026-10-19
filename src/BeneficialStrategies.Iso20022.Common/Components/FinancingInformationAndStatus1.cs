@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RYGZYtp-Ed-ak6NoX_4Aeg_645590457")]
 [DisplayName("Financing Information And Status")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record FinancingInformationAndStatus1
+public partial record FinancingInformationAndStatus1
 {
     /// <summary>
     /// Specifies summary information about invoices/instalments financed, such as total amount financed, number of single requests accepted.

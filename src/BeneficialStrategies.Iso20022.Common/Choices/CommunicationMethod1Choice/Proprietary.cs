@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod1Choice
     [IsoId("_93Z_xXltEeG7BsjMvd1mEw_2012808209")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CommunicationMethod1Choice_
+    public partial record Proprietary : CommunicationMethod1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

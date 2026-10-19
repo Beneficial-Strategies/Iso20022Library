@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_DZrOc1hPEeih3fUfzR38Ig")]
     [DisplayName("System Party Type 1 Choice")]
-    public abstract record SystemPartyType1Choice_ { }
+    public abstract partial record SystemPartyType1Choice_ { }
 }

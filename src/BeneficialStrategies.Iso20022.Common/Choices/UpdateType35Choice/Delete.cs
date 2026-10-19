@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType35Choice
     [IsoId("_QOJ0M5JKEeuAlLVx8pyt3w")]
     [DisplayName("Delete")]
     [IsoXmlTag("Del")]
-    public record Delete : UpdateType35Choice_
+    public partial record Delete : UpdateType35Choice_
     {
         /// <summary>
         /// Provides additional details about the financial instrument.

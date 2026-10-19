@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancingRateOrAmountChoice
     /// </summary>
     [IsoId("_RXzectp-Ed-ak6NoX_4Aeg_-1476607691")]
     [DisplayName("Rate")]
-    public record Rate : FinancingRateOrAmountChoice_
+    public partial record Rate : FinancingRateOrAmountChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

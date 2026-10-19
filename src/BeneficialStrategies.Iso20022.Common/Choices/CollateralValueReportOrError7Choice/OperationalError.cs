@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError7Cho
     /// Operational Error.
     /// </summary>
     [DisplayName("Operational Error")]
-    public record OperationalError : CollateralValueReportOrError7Choice_
+    public partial record OperationalError : CollateralValueReportOrError7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

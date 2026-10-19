@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9hWQMnltEeG7BsjMvd1mEw_1943951405")]
 [DisplayName("Demand Withdrawal Notification V")]
-public record DemandWithdrawalNotificationV01 : IOuterRecord
+public partial record DemandWithdrawalNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

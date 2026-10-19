@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0AdHJygtEeyB747fKu7_rw")]
 [DisplayName("Summary")]
-public record Summary3
+public partial record Summary3
 {
     /// <summary>
     /// Sum of the exposures of all transactions which are in the favour of party A. That is, all transactions which would have an amount payable by party B to party A if they were being terminated.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__gn0GPSgEeicy5Zn42b9bg")]
 [DisplayName("Collateral Amount")]
-public record CollateralAmount9
+public partial record CollateralAmount9
 {
     /// <summary>
     /// Actual market value post haircut expressed in the collateral currency.

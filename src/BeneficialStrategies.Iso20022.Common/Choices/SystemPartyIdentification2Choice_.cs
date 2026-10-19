@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wwhf0Wc-EemvNLufWGIVOQ")]
     [DisplayName("System Party Identification 2 Choice")]
-    public abstract record SystemPartyIdentification2Choice_ { }
+    public abstract partial record SystemPartyIdentification2Choice_ { }
 }

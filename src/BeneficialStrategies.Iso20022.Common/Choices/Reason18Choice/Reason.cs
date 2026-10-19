@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason18Choice
     [IsoId("_zRXpgeLtEeWOD7aAy2fAcA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : Reason18Choice_
+    public partial record Reason : Reason18Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

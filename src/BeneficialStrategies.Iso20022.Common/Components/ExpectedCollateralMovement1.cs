@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UmVP9dp-Ed-ak6NoX_4Aeg_571972876")]
 [DisplayName("Expected Collateral Movement")]
-public record ExpectedCollateralMovement1
+public partial record ExpectedCollateralMovement1
 {
     /// <summary>
     /// Type of collateral that will be delivered.

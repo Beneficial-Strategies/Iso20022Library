@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_eaasH12lEeOb__BffbPEig")]
 [DisplayName("DTCCCANO Market Data SD 1 V")]
-public record DTCCCANOMarketDataSD1V06 : IOuterRecord
+public partial record DTCCCANOMarketDataSD1V06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

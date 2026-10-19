@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzg0-AOSNFX-8224502")]
 [DisplayName("Percentage And Period")]
-public record PercentageAndPeriod1
+public partial record PercentageAndPeriod1
 {
     /// <summary>
     /// Covered percentage (max 100%).

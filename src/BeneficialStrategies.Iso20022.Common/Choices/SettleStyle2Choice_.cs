@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_rPPgweLaEeWFtOV72FbX9w")]
     [DisplayName("Settle Style 2 Choice")]
-    public abstract record SettleStyle2Choice_ { }
+    public abstract partial record SettleStyle2Choice_ { }
 }

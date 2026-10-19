@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_el9wcID3EeSQoe-8fZQlpA")]
 [DisplayName("Security Identification")]
-public record SecurityIdentification18
+public partial record SecurityIdentification18
 {
     /// <summary>
     /// Security identification source of the trade.

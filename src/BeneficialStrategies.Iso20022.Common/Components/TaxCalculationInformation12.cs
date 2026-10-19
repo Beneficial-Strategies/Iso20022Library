@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("61b9a6d5-d27b-4cdb-b5df-0ca6a9409801")]
 [DisplayName("Tax Calculation Information12")]
-public record TaxCalculationInformation12
+public partial record TaxCalculationInformation12
 {
     /// <summary>
     /// Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.

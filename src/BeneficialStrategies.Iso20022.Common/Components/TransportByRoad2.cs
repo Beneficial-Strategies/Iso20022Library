@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuOe2dp-Ed-ak6NoX_4Aeg_-77444670")]
 [DisplayName("Transport By Road")]
-public record TransportByRoad2
+public partial record TransportByRoad2
 {
     /// <summary>
     /// Identifies the location where the goods are received for transportation.

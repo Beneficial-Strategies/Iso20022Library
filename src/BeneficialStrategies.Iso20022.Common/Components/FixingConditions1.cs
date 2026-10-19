@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-eNb8KZqEea16Jw8SEVrDQ")]
 [DisplayName("Fixing Conditions")]
-public record FixingConditions1
+public partial record FixingConditions1
 {
     /// <summary>
     /// The date on which the trade was executed.

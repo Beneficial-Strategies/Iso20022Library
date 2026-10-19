@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_wPMnkRs8EeqrvK3udMUsNQ")]
     [DisplayName("Reconciliation Initiation")]
-    public record ReconciliationInitiation : RecordMessage1Choice_
+    public partial record ReconciliationInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

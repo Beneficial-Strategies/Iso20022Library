@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_ZsRA2NEvEd-BzquC8wXy7w_2012426718")]
 [DisplayName("Fund Processing Passport Report V")]
-public record FundProcessingPassportReportV02 : IOuterRecord
+public partial record FundProcessingPassportReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LWM1qzdyEe6UObU50fB8Cw")]
 [DisplayName("Local Market Annex6")]
-public record LocalMarketAnnex6
+public partial record LocalMarketAnnex6
 {
     /// <summary>
     /// Country.

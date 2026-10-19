@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType9Choice
     [IsoId("_QlIratp-Ed-ak6NoX_4Aeg_867713277")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MarketType9Choice_
+    public partial record Proprietary : MarketType9Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_82z_cZIVEe-HRNGM304Vlw")]
 [DisplayName("Report Parameters7")]
-public record ReportParameters7
+public partial record ReportParameters7
 {
     /// <summary>
     /// Net Position Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qk_hd9p-Ed-ak6NoX_4Aeg_937619716")]
 [DisplayName("Report Parameters")]
-public record ReportParameters1
+public partial record ReportParameters1
 {
     /// <summary>
     /// After netting, reference that is common to a net transaction to settle and all its underlying trades.

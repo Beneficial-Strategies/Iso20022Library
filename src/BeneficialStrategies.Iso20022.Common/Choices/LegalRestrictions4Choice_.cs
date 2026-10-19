@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_J_DnkeLcEeWFtOV72FbX9w")]
     [DisplayName("Legal Restrictions 4 Choice")]
-    public abstract record LegalRestrictions4Choice_ { }
+    public abstract partial record LegalRestrictions4Choice_ { }
 }

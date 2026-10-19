@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jBTw8e5NEeCisYr99QEiWA_246169338")]
 [DisplayName("Collateral Status Reason1")]
-public record CollateralStatusReason1
+public partial record CollateralStatusReason1
 {
     /// <summary>
     /// Status of the collateral data maintenance instruction.

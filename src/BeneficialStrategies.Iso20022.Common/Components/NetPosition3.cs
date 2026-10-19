@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Hkd7wS6aEeSQQqw1BT_aMg")]
 [DisplayName("Net Position")]
-public record NetPosition3
+public partial record NetPosition3
 {
     /// <summary>
     /// Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lUCXwJR9Eeak6e8_Fc5fQg")]
 [DisplayName("Non Deliverable Forward Conditions")]
-public record NonDeliverableForwardConditions1
+public partial record NonDeliverableForwardConditions1
 {
     /// <summary>
     /// Specifies whether the instruction is an NDF opening or fixing.

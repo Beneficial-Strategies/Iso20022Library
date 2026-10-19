@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Doh40a1yEeWMg5rOByfExw")]
 [DisplayName("ATM Withdrawal Request")]
-public record ATMWithdrawalRequest2
+public partial record ATMWithdrawalRequest2
 {
     /// <summary>
     /// Environment of the withdrawal transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dtfQ4J2jEe-4seDr3Li2Ew")]
 [DisplayName("ATM Version Report1")]
-public record ATMVersionReport1
+public partial record ATMVersionReport1
 {
     /// <summary>
     /// Configuration Version.

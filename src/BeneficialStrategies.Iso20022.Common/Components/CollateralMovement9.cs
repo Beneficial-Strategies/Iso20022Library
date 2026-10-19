@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WPYN8ILaEeWrrO9HojbPQA")]
 [DisplayName("Collateral Movement")]
-public record CollateralMovement9
+public partial record CollateralMovement9
 {
     /// <summary>
     /// Specifies the type of collateral.

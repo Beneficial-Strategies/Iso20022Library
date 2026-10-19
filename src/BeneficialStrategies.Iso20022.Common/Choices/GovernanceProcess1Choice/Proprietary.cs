@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceProcess1Choice
     [IsoId("_rod9wID4Eeiw-daIkkmMqQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : GovernanceProcess1Choice_
+    public partial record Proprietary : GovernanceProcess1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

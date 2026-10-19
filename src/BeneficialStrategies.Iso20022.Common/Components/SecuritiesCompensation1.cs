@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uot1kdp-Ed-ak6NoX_4Aeg_-1569066973")]
 [DisplayName("Securities Compensation")]
-public record SecuritiesCompensation1
+public partial record SecuritiesCompensation1
 {
     /// <summary>
     /// Place where settlement of the securities takes place.

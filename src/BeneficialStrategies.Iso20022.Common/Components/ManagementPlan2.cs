@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4emF8R3aEeKKrOIoqWglDw")]
 [DisplayName("Management Plan")]
-public record ManagementPlan2
+public partial record ManagementPlan2
 {
     /// <summary>
     /// Identification of the point of interaction for terminal management.

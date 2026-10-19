@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CsoAsWQcEeSTN56gbbyx2g")]
 [DisplayName("Collateral Ownership")]
-public record CollateralOwnership1
+public partial record CollateralOwnership1
 {
     /// <summary>
     /// Indicates that the collateral is owned by the clearing member or not.

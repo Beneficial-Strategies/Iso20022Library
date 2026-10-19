@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kz8lEexNEe6M4Kz-BKMIbA")]
 [DisplayName("Manifest Data2")]
-public record ManifestData2
+public partial record ManifestData2
 {
     /// <summary>
     /// Document Type.

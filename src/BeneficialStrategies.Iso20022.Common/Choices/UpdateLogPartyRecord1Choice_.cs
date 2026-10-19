@@ -71,5 +71,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xPtUfWjNEeiRg5NzP0jkQg")]
     [DisplayName("Update Log Party Record 1 Choice")]
-    public abstract record UpdateLogPartyRecord1Choice_ { }
+    public abstract partial record UpdateLogPartyRecord1Choice_ { }
 }

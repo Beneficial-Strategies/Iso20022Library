@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeResolutionType1Choice
     [IsoId("_QmogN9p-Ed-ak6NoX_4Aeg_1169108954")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public record ProprietaryIdentification : DisputeResolutionType1Choice_
+    public partial record ProprietaryIdentification : DisputeResolutionType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

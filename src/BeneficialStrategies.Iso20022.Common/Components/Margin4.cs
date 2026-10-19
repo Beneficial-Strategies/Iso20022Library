@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-aesraMOEeCojJW5vEuTEQ_-272677709")]
 [DisplayName("Margin")]
-public record Margin4
+public partial record Margin4
 {
     /// <summary>
     /// Specifies the type of margin that is calculated.

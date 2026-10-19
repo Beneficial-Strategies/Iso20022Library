@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QajzFNp-Ed-ak6NoX_4Aeg_-1357819098")]
 [DisplayName("Price Value Change")]
-public record PriceValueChange1
+public partial record PriceValueChange1
 {
     /// <summary>
     /// Amount by which the price has changed.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedOrRecurrentDate1Choice
     [IsoId("_98U8AXltEeG7BsjMvd1mEw_-1677013285")]
     [DisplayName("Recurrent Date")]
     [IsoXmlTag("RcrntDt")]
-    public record RecurrentDate : FixedOrRecurrentDate1Choice_
+    public partial record RecurrentDate : FixedOrRecurrentDate1Choice_
     {
         /// <summary>
         /// Date on which a recurrent date will commence.

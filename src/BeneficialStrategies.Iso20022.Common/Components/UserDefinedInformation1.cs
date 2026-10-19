@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RKFyldp-Ed-ak6NoX_4Aeg_-1294803117")]
 [DisplayName("User Defined Information")]
-public record UserDefinedInformation1
+public partial record UserDefinedInformation1
 {
     /// <summary>
     /// Identifies the nature of the user information.

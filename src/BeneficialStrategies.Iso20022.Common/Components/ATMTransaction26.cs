@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iiJCga48EeWRfYPBaeOY8w")]
 [DisplayName("ATM Transaction")]
-public record ATMTransaction26
+public partial record ATMTransaction26
 {
     /// <summary>
     /// Type of logical or physical operation on the ATM for which the counters are computed.

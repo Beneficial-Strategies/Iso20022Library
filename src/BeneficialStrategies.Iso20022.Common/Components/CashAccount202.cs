@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zWv7cTfjEei6RvewLQWEqw")]
 [DisplayName("Cash Account")]
-public record CashAccount202
+public partial record CashAccount202
 {
     /// <summary>
     /// Currency of the settlement.

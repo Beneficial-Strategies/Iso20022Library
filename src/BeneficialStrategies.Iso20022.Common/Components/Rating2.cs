@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6xRCcL_IEeuexrfMa3dl_Q")]
 [DisplayName("Rating")]
-public record Rating2
+public partial record Rating2
 {
     /// <summary>
     /// Provides the rating of the financial instrument.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yPqnozEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate20")]
-public record Mandate20
+public partial record Mandate20
 {
     /// <summary>
     /// Mandate Identification.

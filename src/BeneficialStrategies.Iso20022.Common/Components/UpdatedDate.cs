@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RfGZQ9p-Ed-ak6NoX_4Aeg_-651747461")]
 [DisplayName("Updated Date")]
-public record UpdatedDate
+public partial record UpdatedDate
 {
     /// <summary>
     /// Date of last revision.

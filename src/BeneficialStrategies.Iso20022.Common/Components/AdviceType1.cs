@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5ZNFsNolEembTrt_WixjyQ")]
 [DisplayName("Advice Type")]
-public record AdviceType1
+public partial record AdviceType1
 {
     /// <summary>
     /// Type of credit advice requested.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QmogONp-Ed-ak6NoX_4Aeg_-847110751")]
     [DisplayName("Collateral Cancellation Type 1 Choice")]
-    public abstract record CollateralCancellationType1Choice_ { }
+    public abstract partial record CollateralCancellationType1Choice_ { }
 }

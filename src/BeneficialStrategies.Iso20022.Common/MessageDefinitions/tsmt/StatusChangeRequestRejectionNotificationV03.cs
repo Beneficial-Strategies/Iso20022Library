@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_wtWq8tE8Ed-BzquC8wXy7w_233635590")]
 [DisplayName("Status Change Request Rejection Notification V")]
-public record StatusChangeRequestRejectionNotificationV03 : IOuterRecord
+public partial record StatusChangeRequestRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

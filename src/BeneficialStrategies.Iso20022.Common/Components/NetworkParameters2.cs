@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xeuz0UeTEeODR7vDcYOqmg")]
 [DisplayName("Network Parameters")]
-public record NetworkParameters2
+public partial record NetworkParameters2
 {
     /// <summary>
     /// IP address or hostname.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundOrderType5Choice
     /// </summary>
     [IsoId("_Ix7loV8rEeicg40_9gK9vQ")]
     [DisplayName("Code")]
-    public record Code : FundOrderType5Choice_
+    public partial record Code : FundOrderType5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

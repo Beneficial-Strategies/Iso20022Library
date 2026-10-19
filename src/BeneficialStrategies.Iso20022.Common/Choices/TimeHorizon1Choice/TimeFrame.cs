@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeHorizon1Choice
     /// </summary>
     [IsoId("_7x92gDcuEeidBoT_PugKiA")]
     [DisplayName("Time Frame")]
-    public record TimeFrame : TimeHorizon1Choice_
+    public partial record TimeFrame : TimeHorizon1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TmFrame")]

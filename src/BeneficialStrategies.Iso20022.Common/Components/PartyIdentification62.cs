@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tclvZToyEeOr__K5A0LSog")]
 [DisplayName("Party Identification")]
-public record PartyIdentification62
+public partial record PartyIdentification62
 {
     /// <summary>
     /// Identification of the financial institution expressed as a BIC.

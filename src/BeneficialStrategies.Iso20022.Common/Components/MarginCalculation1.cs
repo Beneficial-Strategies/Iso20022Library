@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-dwqLKMOEeCojJW5vEuTEQ_1443454160")]
 [DisplayName("Margin Calculation")]
-public record MarginCalculation1
+public partial record MarginCalculation1
 {
     /// <summary>
     /// Total margin requirement (expressed in the reporting currency) that must be provided by the clearing member to the central counterparty. This is the total requirement calculated to cover the initial margin and the variation margin.

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_6SbBIZeSEeen_cyMrluY4w")]
 [DisplayName("Party Report V")]
-public record PartyReportV01 : IOuterRecord
+public partial record PartyReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

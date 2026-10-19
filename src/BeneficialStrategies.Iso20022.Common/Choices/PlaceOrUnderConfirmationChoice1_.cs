@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_97kuEnltEeG7BsjMvd1mEw_-1026438563")]
     [DisplayName("Place Or Under Confirmation Choice")]
-    public abstract record PlaceOrUnderConfirmationChoice1_ { }
+    public abstract partial record PlaceOrUnderConfirmationChoice1_ { }
 }

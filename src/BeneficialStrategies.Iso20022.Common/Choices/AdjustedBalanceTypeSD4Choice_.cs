@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RWpyEcSTEeeRJJtE9TSlkw")]
     [DisplayName("Adjusted Balance Type SD 4 Choice")]
-    public abstract record AdjustedBalanceTypeSD4Choice_ { }
+    public abstract partial record AdjustedBalanceTypeSD4Choice_ { }
 }

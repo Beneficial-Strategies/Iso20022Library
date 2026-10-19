@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_jTt_tx62Eeu31YsWNiv_cw")]
 [DisplayName("Security Creation Status Advice V")]
-public record SecurityCreationStatusAdviceV01 : IOuterRecord
+public partial record SecurityCreationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5ry10Z9wEeejnerJgFeC2w")]
 [DisplayName("Party Data Search Criteria")]
-public record PartyDataSearchCriteria2
+public partial record PartyDataSearchCriteria2
 {
     /// <summary>
     /// Specifies the opening date of the party.

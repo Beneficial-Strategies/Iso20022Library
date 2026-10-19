@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType2Choice
     /// </summary>
     [IsoId("_76G8c6MgEeCJ6YNENx4h-w_-1082024094")]
     [DisplayName("Payment Control")]
-    public record PaymentControl : RequestType2Choice_
+    public partial record PaymentControl : RequestType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RaowANp-Ed-ak6NoX_4Aeg_-1146148189")]
 [DisplayName("Mis Match Report")]
-public record MisMatchReport3
+public partial record MisMatchReport3
 {
     /// <summary>
     /// Total number of mismatches between two baselines or between one baseline and one data set.

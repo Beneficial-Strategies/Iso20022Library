@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Unhixtp-Ed-ak6NoX_4Aeg_948055066")]
 [DisplayName("Collateral Cancellation Status")]
-public record CollateralCancellationStatus1
+public partial record CollateralCancellationStatus1
 {
     /// <summary>
     /// Allows to provide a cancellation status using a code or a proprietary status.

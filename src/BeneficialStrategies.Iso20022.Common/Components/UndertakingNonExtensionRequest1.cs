@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-D6xxnltEeG7BsjMvd1mEw_-1432358339")]
 [DisplayName("Undertaking Non Extension Request")]
-public record UndertakingNonExtensionRequest1
+public partial record UndertakingNonExtensionRequest1
 {
     /// <summary>
     /// Details related to the requesting party.

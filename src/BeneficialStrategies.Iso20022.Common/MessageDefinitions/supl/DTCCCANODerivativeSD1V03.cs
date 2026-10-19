@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_1OJ85DL3EeKU9IrkkToqcw_396610797")]
 [DisplayName("DTCCCANO Derivative SD 1 V")]
-public record DTCCCANODerivativeSD1V03 : IOuterRecord
+public partial record DTCCCANODerivativeSD1V03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

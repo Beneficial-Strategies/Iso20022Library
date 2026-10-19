@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zoKi8SgtEeyB747fKu7_rw")]
 [DisplayName("Collateral")]
-public record Collateral53
+public partial record Collateral53
 {
     /// <summary>
     /// Provides information about the collateral account, that is the identification, the type and optionally the name.

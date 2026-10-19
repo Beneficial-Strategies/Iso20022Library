@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__MbGwRIoEeyZaPkaPAzTvQ")]
     [DisplayName("Removal Processing 2 Choice")]
-    public abstract record RemovalProcessing2Choice_ { }
+    public abstract partial record RemovalProcessing2Choice_ { }
 }

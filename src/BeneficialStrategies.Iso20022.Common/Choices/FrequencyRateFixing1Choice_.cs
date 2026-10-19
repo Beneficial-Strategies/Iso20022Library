@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_OPAdMI9PEeqMo4JxiuZGSw")]
     [DisplayName("Frequency Rate Fixing 1 Choice")]
-    public abstract record FrequencyRateFixing1Choice_ { }
+    public abstract partial record FrequencyRateFixing1Choice_ { }
 }

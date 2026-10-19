@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice
     /// Market Specific Attribute.
     /// </summary>
     [DisplayName("Market Specific Attribute")]
-    public record MarketSpecificAttribute : UpdateLogPartyRecord2Choice_
+    public partial record MarketSpecificAttribute : UpdateLogPartyRecord2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

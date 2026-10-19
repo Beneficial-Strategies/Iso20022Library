@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_g7hKgAMdEeujMs2LsB3mMw")]
 [DisplayName("EUPSD 2 SCA Data SD 1 V")]
-public record EUPSD2SCADataSD1V01 : IOuterRecord
+public partial record EUPSD2SCADataSD1V01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

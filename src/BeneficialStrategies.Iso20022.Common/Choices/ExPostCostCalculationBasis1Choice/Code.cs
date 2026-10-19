@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExPostCostCalculationBasis1Choic
     /// </summary>
     [IsoId("_dnKIEJ9XEeqxTNfi5y7ywQ")]
     [DisplayName("Code")]
-    public record Code : ExPostCostCalculationBasis1Choice_
+    public partial record Code : ExPostCostCalculationBasis1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

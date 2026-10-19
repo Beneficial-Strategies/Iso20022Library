@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hdxhIZ9PEe-nbM0aSPcoiQ")]
 [DisplayName("ATM Deposited Media4")]
-public record ATMDepositedMedia4
+public partial record ATMDepositedMedia4
 {
     /// <summary>
     /// Account Sequence Number.

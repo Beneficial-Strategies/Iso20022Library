@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UscfANp-Ed-ak6NoX_4Aeg_1902245509")]
 [DisplayName("Trade Data")]
-public record TradeData1
+public partial record TradeData1
 {
     /// <summary>
     /// Refers to the identification of a notification.

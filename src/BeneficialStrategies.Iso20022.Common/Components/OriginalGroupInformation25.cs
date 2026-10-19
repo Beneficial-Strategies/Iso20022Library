@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Pe9Ge9p-Ed-ak6NoX_4Aeg_-379878312")]
 [DisplayName("Original Group Information")]
-public record OriginalGroupInformation25
+public partial record OriginalGroupInformation25
 {
     /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.

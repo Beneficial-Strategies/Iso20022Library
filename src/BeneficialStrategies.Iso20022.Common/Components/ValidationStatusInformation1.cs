@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RXzec9p-Ed-ak6NoX_4Aeg_714459273")]
 [DisplayName("Validation Status Information")]
-public record ValidationStatusInformation1
+public partial record ValidationStatusInformation1
 {
     /// <summary>
     /// The result of the technical validation (e.g. Accepted, Reception error) executed on the request message.

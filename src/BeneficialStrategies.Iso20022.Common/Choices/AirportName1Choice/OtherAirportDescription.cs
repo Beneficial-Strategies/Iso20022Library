@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice
     [IsoId("_SsSlJdp-Ed-ak6NoX_4Aeg_-564217545")]
     [DisplayName("Other Airport Description")]
     [IsoXmlTag("OthrAirprtDesc")]
-    public record OtherAirportDescription : AirportName1Choice_
+    public partial record OtherAirportDescription : AirportName1Choice_
     {
         /// <summary>
         /// Identifies the town where the airport is located. For example: London.

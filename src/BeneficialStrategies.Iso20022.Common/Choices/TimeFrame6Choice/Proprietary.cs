@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame6Choice
     [IsoId("__pI3ADcbEeidBoT_PugKiA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TimeFrame6Choice_
+    public partial record Proprietary : TimeFrame6Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

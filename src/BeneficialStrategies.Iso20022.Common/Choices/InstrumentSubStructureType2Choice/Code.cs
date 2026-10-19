@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentSubStructureType2Choic
     /// </summary>
     [IsoId("_QkVkYeLaEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : InstrumentSubStructureType2Choice_
+    public partial record Code : InstrumentSubStructureType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

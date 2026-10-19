@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalActivation2Choice
     /// </summary>
     [IsoId("_UPBU8eH7Eeqbls7Gk4-ckA")]
     [DisplayName("Original Debtor Identification")]
-    public record OriginalDebtorIdentification : OriginalActivation2Choice_
+    public partial record OriginalDebtorIdentification : OriginalActivation2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OrgnlDbtrId")]

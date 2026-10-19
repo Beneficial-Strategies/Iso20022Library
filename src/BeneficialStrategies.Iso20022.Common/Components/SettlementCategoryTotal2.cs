@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-LcTQZMmEeuleeHpFMMhmQ")]
 [DisplayName("Settlement Category Total")]
-public record SettlementCategoryTotal2
+public partial record SettlementCategoryTotal2
 {
     /// <summary>
     /// Number of transactions.

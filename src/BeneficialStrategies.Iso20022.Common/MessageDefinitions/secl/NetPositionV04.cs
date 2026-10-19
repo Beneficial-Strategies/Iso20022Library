@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_YZ-MgYcPEe-m68RYMhvgvg")]
 [DisplayName("Net Position V04")]
-public record NetPositionV04 : IOuterRecord
+public partial record NetPositionV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

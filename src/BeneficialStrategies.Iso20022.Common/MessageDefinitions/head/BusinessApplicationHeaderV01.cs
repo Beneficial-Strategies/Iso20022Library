@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.head;
 )]
 [IsoId("_qJyPQtFHEd-BzquC8wXy7w_1346744518")]
 [DisplayName("Business Application Header V")]
-public record BusinessApplicationHeaderV01 : IOuterRecord
+public partial record BusinessApplicationHeaderV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

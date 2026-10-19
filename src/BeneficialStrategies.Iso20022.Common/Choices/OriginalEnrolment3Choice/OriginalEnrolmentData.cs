@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment3Choice
     /// Original Enrolment Data.
     /// </summary>
     [DisplayName("Original Enrolment Data")]
-    public record OriginalEnrolmentData : OriginalEnrolment3Choice_
+    public partial record OriginalEnrolmentData : OriginalEnrolment3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

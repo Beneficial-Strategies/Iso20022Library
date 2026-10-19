@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o6uPAZIWEe-HRNGM304Vlw")]
 [DisplayName("Statement86")]
-public record Statement86
+public partial record Statement86
 {
     /// <summary>
     /// Statement Identification.

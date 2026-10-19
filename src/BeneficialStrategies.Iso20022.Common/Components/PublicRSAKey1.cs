@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ol9RQItPEeSxlKlAGYErFg")]
 [DisplayName("Public RSA Key")]
-public record PublicRSAKey1
+public partial record PublicRSAKey1
 {
     /// <summary>
     /// Modulus of the RSA key.

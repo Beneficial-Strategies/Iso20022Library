@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_KAlNuZ2fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Audit Trail Report V")]
-public record SecuritiesAccountAuditTrailReportV01 : IOuterRecord
+public partial record SecuritiesAccountAuditTrailReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

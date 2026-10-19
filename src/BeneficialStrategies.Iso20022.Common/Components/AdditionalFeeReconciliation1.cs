@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LudzZsy0EeiqqJhU2tqK8A")]
 [DisplayName("Additional Fee Reconciliation")]
-public record AdditionalFeeReconciliation1
+public partial record AdditionalFeeReconciliation1
 {
     /// <summary>
     /// Reconciliation credit or debit indicator.

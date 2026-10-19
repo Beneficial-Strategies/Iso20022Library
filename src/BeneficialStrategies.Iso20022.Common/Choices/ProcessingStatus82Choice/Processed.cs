@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus82Choice
     [IsoId("_FjyNQRIwEeydmIVkS03esw")]
     [DisplayName("Processed")]
     [IsoXmlTag("Prcd")]
-    public record Processed : ProcessingStatus82Choice_
+    public partial record Processed : ProcessingStatus82Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

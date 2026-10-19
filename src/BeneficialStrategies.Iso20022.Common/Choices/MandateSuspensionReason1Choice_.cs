@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gW_7w4PDEeahmOIR_zFG6A")]
     [DisplayName("Mandate Suspension Reason 1 Choice")]
-    public abstract record MandateSuspensionReason1Choice_ { }
+    public abstract partial record MandateSuspensionReason1Choice_ { }
 }

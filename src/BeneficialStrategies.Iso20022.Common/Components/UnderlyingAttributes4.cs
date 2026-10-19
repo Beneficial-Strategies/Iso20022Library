@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1RJ4sWp7EemmaZLSPtWX5A")]
 [DisplayName("Underlying Attributes")]
-public record UnderlyingAttributes4
+public partial record UnderlyingAttributes4
 {
     /// <summary>
     /// Percent of the strike price that this underlying represents.

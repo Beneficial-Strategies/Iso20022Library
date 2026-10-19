@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_p37YMZ9BEeqxTNfi5y7ywQ")]
 [DisplayName("Individual Cost Or Charge")]
-public record IndividualCostOrCharge2
+public partial record IndividualCostOrCharge2
 {
     /// <summary>
     /// Type of cost or charge.

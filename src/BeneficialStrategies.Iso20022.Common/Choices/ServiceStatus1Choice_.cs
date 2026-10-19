@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_z_f3DfDXEemsS_0xy2XRug")]
     [DisplayName("Service Status 1 Choice")]
-    public abstract record ServiceStatus1Choice_ { }
+    public abstract partial record ServiceStatus1Choice_ { }
 }

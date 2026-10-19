@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzMw-AOSNFX-8224500")]
 [DisplayName("Financing Notification Parties")]
-public record FinancingNotificationParties1
+public partial record FinancingNotificationParties1
 {
     /// <summary>
     /// Party that notifies a third party.

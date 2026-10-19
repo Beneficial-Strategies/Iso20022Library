@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Bv1XkY4SEeW6h7rGyYlyTg")]
 [DisplayName("Certification Request")]
-public record CertificationRequest2
+public partial record CertificationRequest2
 {
     /// <summary>
     /// Version of the certificate request information data structure.

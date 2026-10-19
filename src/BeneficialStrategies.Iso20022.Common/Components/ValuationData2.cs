@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TIKBxNp-Ed-ak6NoX_4Aeg_-1153647347")]
 [DisplayName("Valuation Data")]
-public record ValuationData2
+public partial record ValuationData2
 {
     /// <summary>
     /// Reference to the latest trade identification of the NDF opening trade.

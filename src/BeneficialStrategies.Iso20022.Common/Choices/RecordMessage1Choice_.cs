@@ -198,5 +198,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_F2jDAFZVEeen1vB4iz5SyA")]
     [DisplayName("Record Message 1 Choice")]
-    public abstract record RecordMessage1Choice_ { }
+    public abstract partial record RecordMessage1Choice_ { }
 }

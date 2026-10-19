@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Zei4YZ9dEe-nbM0aSPcoiQ")]
 [DisplayName("Payment Card36")]
-public record PaymentCard36
+public partial record PaymentCard36
 {
     /// <summary>
     /// Card Data Entry Mode.

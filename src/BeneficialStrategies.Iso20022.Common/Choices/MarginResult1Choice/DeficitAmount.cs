@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginResult1Choice
     [IsoId("_Qk1wd9p-Ed-ak6NoX_4Aeg_-1636463476")]
     [DisplayName("Deficit Amount")]
     [IsoXmlTag("DfcitAmt")]
-    public record DeficitAmount : MarginResult1Choice_
+    public partial record DeficitAmount : MarginResult1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

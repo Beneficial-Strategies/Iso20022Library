@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k1mCsFBCEeedyPuM0kK2EQ")]
 [DisplayName("Record")]
-public record Record1
+public partial record Record1
 {
     /// <summary>
     /// Sequence counter of the record from 1 to n

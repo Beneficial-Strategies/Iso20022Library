@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_X5McYb11Eeiut6mmSKzDFQ")]
     [DisplayName("Technical Identification 2 Choice")]
-    public abstract record TechnicalIdentification2Choice_ { }
+    public abstract partial record TechnicalIdentification2Choice_ { }
 }

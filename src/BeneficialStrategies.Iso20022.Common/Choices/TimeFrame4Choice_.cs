@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UAew6dp-Ed-ak6NoX_4Aeg_1996622705")]
     [DisplayName("Time Frame 4 Choice")]
-    public abstract record TimeFrame4Choice_ { }
+    public abstract partial record TimeFrame4Choice_ { }
 }

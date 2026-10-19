@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyValue3Choice
     /// <summary>Encrypted value of the cryptographic key.</summary>
     [IsoId("_Pa-OMcPzEfCTf8R2j0RpdQ")]
     [DisplayName("Encrypted Key Value")]
-    public record EncryptedKeyValue : KeyValue3Choice_
+    public partial record EncryptedKeyValue : KeyValue3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NcrptdKeyVal")]

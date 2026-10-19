@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_2hJwodQrEeK0PPbKncCqzA")]
 [DisplayName("Forward Data Set Submission Report V")]
-public record ForwardDataSetSubmissionReportV04 : IOuterRecord
+public partial record ForwardDataSetSubmissionReportV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

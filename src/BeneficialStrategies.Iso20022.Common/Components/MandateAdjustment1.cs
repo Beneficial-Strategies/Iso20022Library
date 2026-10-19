@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PJFAQGVQEeacpJ-gG9kyUQ")]
 [DisplayName("Mandate Adjustment")]
-public record MandateAdjustment1
+public partial record MandateAdjustment1
 {
     /// <summary>
     /// Specifies whether an adjustment is to be applied on pre-agreed collection date or not.

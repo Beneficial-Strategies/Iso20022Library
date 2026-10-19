@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UpeXzQF1EeutW5-TpeYJhA")]
 [DisplayName("Collateral Valuation")]
-public record CollateralValuation12
+public partial record CollateralValuation12
 {
     /// <summary>
     /// Identification of the valued collateral.

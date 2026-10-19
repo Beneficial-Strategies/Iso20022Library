@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 )]
 [IsoId("_YbuXga4NEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Withdrawal Completion Acknowledgement V")]
-public record ATMWithdrawalCompletionAcknowledgementV02 : IOuterRecord
+public partial record ATMWithdrawalCompletionAcknowledgementV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

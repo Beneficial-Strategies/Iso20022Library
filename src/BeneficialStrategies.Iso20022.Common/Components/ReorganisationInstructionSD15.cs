@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_assCoXG2Ee6S2Llv74R19w")]
 [DisplayName("Reorganisation Instruction SD15")]
-public record ReorganisationInstructionSD15
+public partial record ReorganisationInstructionSD15
 {
     /// <summary>
     /// Place And Name.

@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_YyxioRVaEeOCqpkCrPgk4g")]
 [DisplayName("Intent To Pay Notification V")]
-public record IntentToPayNotificationV02 : IOuterRecord
+public partial record IntentToPayNotificationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

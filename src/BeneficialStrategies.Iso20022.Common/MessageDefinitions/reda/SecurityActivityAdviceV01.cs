@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_jTtYqx62Eeu31YsWNiv_cw")]
 [DisplayName("Security Activity Advice V")]
-public record SecurityActivityAdviceV01 : IOuterRecord
+public partial record SecurityActivityAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

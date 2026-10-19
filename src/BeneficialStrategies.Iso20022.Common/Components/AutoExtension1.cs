@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_95V5dnltEeG7BsjMvd1mEw_1894661864")]
 [DisplayName("Auto Extension")]
-public record AutoExtension1
+public partial record AutoExtension1
 {
     /// <summary>
     /// Indicates that the undertaking is automatically extendable and the period of extension.

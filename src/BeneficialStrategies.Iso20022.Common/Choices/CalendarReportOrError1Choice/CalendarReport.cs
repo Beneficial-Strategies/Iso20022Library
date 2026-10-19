@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarReportOrError1Choice
     [IsoId("_dVcQ44m7Eeipw6hHPgB4Sw")]
     [DisplayName("Calendar Report")]
     [IsoXmlTag("CalRpt")]
-    public record CalendarReport : CalendarReportOrError1Choice_
+    public partial record CalendarReport : CalendarReportOrError1Choice_
     {
         /// <summary>
         /// Identification of the service or system for which the calendar information is provided.

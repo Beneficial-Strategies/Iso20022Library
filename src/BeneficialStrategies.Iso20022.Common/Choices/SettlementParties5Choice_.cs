@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_uU7Ll4FvEeWtPe6Crjmeug")]
     [DisplayName("Settlement Parties 5 Choice")]
-    public abstract record SettlementParties5Choice_ { }
+    public abstract partial record SettlementParties5Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GCpiQUjrEe-KhcStGV4xTg")]
 [DisplayName("Trade Data44")]
-public record TradeData44
+public partial record TradeData44
 {
     /// <summary>
     /// Originator Reference.

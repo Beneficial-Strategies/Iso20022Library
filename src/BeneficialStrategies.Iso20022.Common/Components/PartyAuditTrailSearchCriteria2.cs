@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W5x_8Z7iEeezh9vfeoBoQw")]
 [DisplayName("Party Audit Trail Search Criteria")]
-public record PartyAuditTrailSearchCriteria2
+public partial record PartyAuditTrailSearchCriteria2
 {
     /// <summary>
     /// Describes party to be queried.

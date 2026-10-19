@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IIORwOKDEe2QzKqbsy1xHQ")]
 [DisplayName("FX Supplementary Data1")]
-public record FXSupplementaryData1
+public partial record FXSupplementaryData1
 {
     /// <summary>
     /// Amount.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1koBMJUIEeak6e8_Fc5fQg")]
     [DisplayName("NDF Opening Fixing 1 Choice")]
-    public abstract record NDFOpeningFixing1Choice_ { }
+    public abstract partial record NDFOpeningFixing1Choice_ { }
 }

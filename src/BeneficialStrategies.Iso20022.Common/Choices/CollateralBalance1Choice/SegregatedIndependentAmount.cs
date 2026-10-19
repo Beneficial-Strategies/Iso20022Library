@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralBalance1Choice
     [IsoId("_UnXxytp-Ed-ak6NoX_4Aeg_1045799197")]
     [DisplayName("Segregated Independent Amount")]
     [IsoXmlTag("SgrtdIndpdntAmt")]
-    public record SegregatedIndependentAmount : CollateralBalance1Choice_
+    public partial record SegregatedIndependentAmount : CollateralBalance1Choice_
     {
         /// <summary>
         /// Post haircut market value of all margin collateral held by party A.

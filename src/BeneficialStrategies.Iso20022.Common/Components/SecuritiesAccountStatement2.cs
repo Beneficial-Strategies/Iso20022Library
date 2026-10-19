@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QDcSkeGBEeWCAvUNsZ5u6g")]
 [DisplayName("Securities Account Statement")]
-public record SecuritiesAccountStatement2
+public partial record SecuritiesAccountStatement2
 {
     /// <summary>
     /// Date for which the statement is valid.

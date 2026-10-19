@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJ8opdp-Ed-ak6NoX_4Aeg_1748144086")]
 [DisplayName("Report Type")]
-public record ReportType1
+public partial record ReportType1
 {
     /// <summary>
     /// Specifies whether the pushed through baseline is a new one or an amendment or a resubmission.

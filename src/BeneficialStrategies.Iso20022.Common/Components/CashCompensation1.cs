@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UokEmtp-Ed-ak6NoX_4Aeg_-1006073827")]
 [DisplayName("Cash Compensation")]
-public record CashCompensation1
+public partial record CashCompensation1
 {
     /// <summary>
     /// Provides the original amount to be settled.

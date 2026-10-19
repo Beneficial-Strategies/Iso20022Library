@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xDw1NTEyEe6g-ffJsqGiSA")]
     [DisplayName("Original Enrolment3Choice")]
-    public abstract record OriginalEnrolment3Choice_ { }
+    public abstract partial record OriginalEnrolment3Choice_ { }
 }

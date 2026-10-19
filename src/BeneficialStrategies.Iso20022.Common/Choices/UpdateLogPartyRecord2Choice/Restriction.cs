@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice
     /// Restriction.
     /// </summary>
     [DisplayName("Restriction")]
-    public record Restriction : UpdateLogPartyRecord2Choice_
+    public partial record Restriction : UpdateLogPartyRecord2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

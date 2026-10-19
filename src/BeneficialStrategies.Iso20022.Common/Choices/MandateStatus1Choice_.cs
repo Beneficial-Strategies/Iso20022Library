@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ChH7Y5nAEeao_Z127E9uYg")]
     [DisplayName("Mandate Status 1 Choice")]
-    public abstract record MandateStatus1Choice_ { }
+    public abstract partial record MandateStatus1Choice_ { }
 }

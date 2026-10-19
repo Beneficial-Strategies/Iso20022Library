@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_102h8eGEEeWCAvUNsZ5u6g")]
 [DisplayName("Securities Account Status")]
-public record SecuritiesAccountStatus2
+public partial record SecuritiesAccountStatus2
 {
     /// <summary>
     /// Unique identification of the securities account referenced by a request.

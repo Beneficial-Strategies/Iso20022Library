@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     [IsoId("_yJhSo4v-Eei289CGNqs21g")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
-    public record PartyIdentification : SystemPartyModification2Choice_
+    public partial record PartyIdentification : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Starting date from which the identification is valid.

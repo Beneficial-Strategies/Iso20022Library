@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_uMgQ9y-1Ee-7Nrf72hv69A")]
 [DisplayName("Security CSD Link Creation Request V01")]
-public record SecurityCSDLinkCreationRequestV01 : IOuterRecord
+public partial record SecurityCSDLinkCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

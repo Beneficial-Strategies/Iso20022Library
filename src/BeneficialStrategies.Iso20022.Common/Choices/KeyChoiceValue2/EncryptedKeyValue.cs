@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyChoiceValue2
     [IsoId("_FjgS0bTqEeeQy4o2AayYHg")]
     [DisplayName("Encrypted Key Value")]
     [IsoXmlTag("NcrptdKeyVal")]
-    public record EncryptedKeyValue : KeyChoiceValue2_
+    public partial record EncryptedKeyValue : KeyChoiceValue2_
     {
         /// <summary>
         /// Type of data protection.

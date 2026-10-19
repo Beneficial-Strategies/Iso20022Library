@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qk1wddp-Ed-ak6NoX_4Aeg_-1613861504")]
     [DisplayName("Margin Result 1 Choice")]
-    public abstract record MarginResult1Choice_ { }
+    public abstract partial record MarginResult1Choice_ { }
 }

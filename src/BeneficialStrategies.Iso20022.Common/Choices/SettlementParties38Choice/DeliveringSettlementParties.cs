@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties38Choice
     /// Delivering Settlement Parties.
     /// </summary>
     [DisplayName("Delivering Settlement Parties")]
-    public record DeliveringSettlementParties : SettlementParties38Choice_
+    public partial record DeliveringSettlementParties : SettlementParties38Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

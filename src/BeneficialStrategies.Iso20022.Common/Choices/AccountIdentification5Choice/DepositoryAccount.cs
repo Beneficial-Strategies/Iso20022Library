@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification5Choice
     /// </summary>
     [IsoId("_Pdd4ttp-Ed-ak6NoX_4Aeg_1488805194")]
     [DisplayName("Depository Account")]
-    public record DepositoryAccount : AccountIdentification5Choice_
+    public partial record DepositoryAccount : AccountIdentification5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

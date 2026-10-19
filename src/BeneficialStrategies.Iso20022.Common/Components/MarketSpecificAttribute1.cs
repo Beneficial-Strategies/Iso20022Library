@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_klTTQu5NEeCisYr99QEiWA_73724260")]
 [DisplayName("Market Specific Attribute")]
-public record MarketSpecificAttribute1
+public partial record MarketSpecificAttribute1
 {
     /// <summary>
     /// Specifies the name of the market-specific attribute.

@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_CwT80ZEyEeqpOcPiYTdepQ")]
 [DisplayName("Fund Reference Data Report V")]
-public record FundReferenceDataReportV05 : IOuterRecord
+public partial record FundReferenceDataReportV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

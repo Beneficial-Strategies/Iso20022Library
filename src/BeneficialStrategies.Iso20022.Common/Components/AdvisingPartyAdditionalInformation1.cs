@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GBqPw34hEeG2Zfa6JvOQSQ")]
 [DisplayName("Advising Party Additional Information")]
-public record AdvisingPartyAdditionalInformation1
+public partial record AdvisingPartyAdditionalInformation1
 {
     /// <summary>
     /// Unique and unambiguous identifier assigned as a reference.

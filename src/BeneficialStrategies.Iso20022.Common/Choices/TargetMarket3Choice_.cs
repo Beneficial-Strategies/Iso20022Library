@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_JK13wDcREeiIxKQErQxblg")]
     [DisplayName("Target Market 3 Choice")]
-    public abstract record TargetMarket3Choice_ { }
+    public abstract partial record TargetMarket3Choice_ { }
 }

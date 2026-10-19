@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Purpose3Choice.Proprietary), nameof(Purpose3Choice.Proprietary))]
     [IsoId("_J8-MUSUOEeOgKIHGINc2Uw")]
     [DisplayName("Purpose 3 Choice")]
-    public abstract record Purpose3Choice_ { }
+    public abstract partial record Purpose3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6c02UTEyEe6g-ffJsqGiSA")]
 [DisplayName("Report Query Criteria3")]
-public record ReportQueryCriteria3
+public partial record ReportQueryCriteria3
 {
     /// <summary>
     /// New Query Name.

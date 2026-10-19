@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTradeTransactionType1C
     /// </summary>
     [IsoId("_93QOxHltEeG7BsjMvd1mEw_-1518978028")]
     [DisplayName("Code")]
-    public record Code : UnderlyingTradeTransactionType1Choice_
+    public partial record Code : UnderlyingTradeTransactionType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QM-3EDcMEeiIxKQErQxblg")]
     [DisplayName("Target Market 1 Choice")]
-    public abstract record TargetMarket1Choice_ { }
+    public abstract partial record TargetMarket1Choice_ { }
 }

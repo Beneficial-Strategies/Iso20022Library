@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RtBnUY4CEeWrZqsymMFdfg")]
 [DisplayName("Header")]
-public record Header29
+public partial record Header29
 {
     /// <summary>
     /// Version of the terminal management protocol specifications.

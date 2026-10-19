@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ryErUbZ5EfCUZfsQO4rYeA")]
 [DisplayName("Security Parameters18")]
-public record SecurityParameters18
+public partial record SecurityParameters18
 {
     /// <summary>
     /// Cryptographic key used to protect the key download.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialPhysicalForm3Choice
     /// </summary>
     [IsoId("_m9IgceLcEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : InitialPhysicalForm3Choice_
+    public partial record Code : InitialPhysicalForm3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

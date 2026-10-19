@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uk2CNNp-Ed-ak6NoX_4Aeg_-526751507")]
 [DisplayName("Total Variation Margin")]
-public record TotalVariationMargin1
+public partial record TotalVariationMargin1
 {
     /// <summary>
     /// Specifies whether the variation margin position is short or long, that is, wether the balance is a negative or positive balance.

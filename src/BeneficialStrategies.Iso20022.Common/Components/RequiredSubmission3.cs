@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Rax58tp-Ed-ak6NoX_4Aeg_-1897093654")]
 [DisplayName("Required Submission")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record RequiredSubmission3
+public partial record RequiredSubmission3
 {
     /// <summary>
     /// Specifies with party(ies) is authorised to submit the data set as part of the transaction.

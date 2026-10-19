@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q5CaAD8PEeih8-WNbS6hbA")]
 [DisplayName("Other Distribution Strategy")]
-public record OtherDistributionStrategy1
+public partial record OtherDistributionStrategy1
 {
     /// <summary>
     /// Type of distribution strategy.

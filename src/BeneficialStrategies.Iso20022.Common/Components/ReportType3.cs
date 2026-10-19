@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RKFykdp-Ed-ak6NoX_4Aeg_1945213198")]
 [DisplayName("Report Type")]
-public record ReportType3
+public partial record ReportType3
 {
     /// <summary>
     /// Specifies whether the report is for a matched or pre-matched data set.

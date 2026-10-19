@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     [IsoId("_yJhSqYv-Eei289CGNqs21g")]
     [DisplayName("Party Address")]
     [IsoXmlTag("PtyAdr")]
-    public record PartyAddress : SystemPartyModification2Choice_
+    public partial record PartyAddress : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Identifies the nature of the postal address.

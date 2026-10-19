@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_929T0HltEeG7BsjMvd1mEw_-112960495")]
     [DisplayName("Governance Identification 1 Choice")]
-    public abstract record GovernanceIdentification1Choice_ { }
+    public abstract partial record GovernanceIdentification1Choice_ { }
 }

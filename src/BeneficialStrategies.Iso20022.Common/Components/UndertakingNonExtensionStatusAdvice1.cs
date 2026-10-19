@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-GdIZ3ltEeG7BsjMvd1mEw_177542708")]
 [DisplayName("Undertaking Non Extension Status Advice")]
-public record UndertakingNonExtensionStatusAdvice1
+public partial record UndertakingNonExtensionStatusAdvice1
 {
     /// <summary>
     /// Details related to the notifying party.

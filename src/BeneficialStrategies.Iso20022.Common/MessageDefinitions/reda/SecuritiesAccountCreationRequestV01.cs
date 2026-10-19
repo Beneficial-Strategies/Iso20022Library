@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_KAlNzZ2fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Creation Request V")]
-public record SecuritiesAccountCreationRequestV01 : IOuterRecord
+public partial record SecuritiesAccountCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

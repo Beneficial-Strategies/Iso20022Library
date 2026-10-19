@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount2Cho
     /// Digital Token Amount.
     /// </summary>
     [DisplayName("Digital Token Amount")]
-    public record DigitalTokenAmount : CurrencyOrDigitalTokenAmount2Choice_
+    public partial record DigitalTokenAmount : CurrencyOrDigitalTokenAmount2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

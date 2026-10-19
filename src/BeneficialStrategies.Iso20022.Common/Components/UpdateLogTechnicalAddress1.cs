@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pAXiM2jSEeiRg5NzP0jkQg")]
 [DisplayName("Update Log Technical Address")]
-public record UpdateLogTechnicalAddress1
+public partial record UpdateLogTechnicalAddress1
 {
     /// <summary>
     /// Old value before the update.

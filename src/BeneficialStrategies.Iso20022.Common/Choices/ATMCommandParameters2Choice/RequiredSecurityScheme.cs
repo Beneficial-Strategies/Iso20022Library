@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice
     /// </summary>
     [IsoId("_3rN4AItHEeSxlKlAGYErFg")]
     [DisplayName("Required Security Scheme")]
-    public record RequiredSecurityScheme : ATMCommandParameters2Choice_
+    public partial record RequiredSecurityScheme : ATMCommandParameters2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

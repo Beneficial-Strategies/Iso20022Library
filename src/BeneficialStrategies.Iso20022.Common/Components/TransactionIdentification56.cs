@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XosNUY7aEe6S0_1AaJzQCA")]
 [DisplayName("Transaction Identification56")]
-public record TransactionIdentification56
+public partial record TransactionIdentification56
 {
     /// <summary>
     /// Purchase Identifier Type.

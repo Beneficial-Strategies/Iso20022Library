@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExpectedCollateral2Choice
     [IsoId("_-sdWMYLZEeWrrO9HojbPQA")]
     [DisplayName("Expected Collateral Details")]
     [IsoXmlTag("XpctdCollDtls")]
-    public record ExpectedCollateralDetails : ExpectedCollateral2Choice_
+    public partial record ExpectedCollateralDetails : ExpectedCollateral2Choice_
     {
         /// <summary>
         /// Provides the expected collateral type and direction for the variation margin.

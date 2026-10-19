@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VujxkfmsEeuM-bZFEQa_yw")]
 [DisplayName("Business Application Header")]
-public record BusinessApplicationHeader7
+public partial record BusinessApplicationHeader7
 {
     /// <summary>
     /// Contains the character set of the text-based elements used in the Business Message.

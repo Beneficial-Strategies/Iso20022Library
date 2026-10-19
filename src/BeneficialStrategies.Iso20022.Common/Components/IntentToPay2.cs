@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9-CfYRVaEeOCqpkCrPgk4g")]
 [DisplayName("Intent To Pay")]
-public record IntentToPay2
+public partial record IntentToPay2
 {
     /// <summary>
     /// Specifies if breakdown is by purchase order or commercial invoice.

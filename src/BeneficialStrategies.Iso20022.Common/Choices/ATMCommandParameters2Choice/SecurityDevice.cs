@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice
     [IsoId("_InOGIItIEeSxlKlAGYErFg")]
     [DisplayName("Security Device")]
     [IsoXmlTag("SctyDvc")]
-    public record SecurityDevice : ATMCommandParameters2Choice_
+    public partial record SecurityDevice : ATMCommandParameters2Choice_
     {
         /// <summary>
         /// Serial number of the device.

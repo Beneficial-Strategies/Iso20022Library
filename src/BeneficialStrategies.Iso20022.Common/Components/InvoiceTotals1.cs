@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tho4zNp-Ed-ak6NoX_4Aeg_-773420460")]
 [DisplayName("Invoice Totals")]
-public record InvoiceTotals1
+public partial record InvoiceTotals1
 {
     /// <summary>
     /// Total amount subject to tax.

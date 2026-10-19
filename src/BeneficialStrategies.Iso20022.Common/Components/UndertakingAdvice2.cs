@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-AfqUnltEeG7BsjMvd1mEw_27275144")]
 [DisplayName("Undertaking Advice")]
-public record UndertakingAdvice2
+public partial record UndertakingAdvice2
 {
     /// <summary>
     /// Unique and unambiguous identifier assigned by the applicant to the undertaking.

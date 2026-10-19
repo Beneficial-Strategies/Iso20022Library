@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("7967c9b0-ad21-45bd-ac67-2629422408f5")]
 [DisplayName("Remittance Information27")]
-public record RemittanceInformation27
+public partial record RemittanceInformation27
 {
     /// <summary>
     /// Unique identification, assigned by the originator, to unambiguously identify the remittance information within the message.

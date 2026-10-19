@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sDR-Ab-3Eeeb2ZBoAlSG1Q")]
 [DisplayName("Financial Instrument Attributes SD")]
-public record FinancialInstrumentAttributesSD18
+public partial record FinancialInstrumentAttributesSD18
 {
     /// <summary>
     /// Security identification of the security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market.

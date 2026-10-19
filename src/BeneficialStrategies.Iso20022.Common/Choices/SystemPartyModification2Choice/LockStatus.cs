@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     [IsoId("__edeA4v_Eei289CGNqs21g")]
     [DisplayName("Lock Status")]
     [IsoXmlTag("LckSts")]
-    public record LockStatus : SystemPartyModification2Choice_
+    public partial record LockStatus : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Specifies the date from which the lock status is valid.

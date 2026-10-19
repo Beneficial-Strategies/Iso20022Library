@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus3Choice
     [IsoId("_FCi6EOChEei2UYJ62ws-Fw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CollateralStatus3Choice_
+    public partial record Proprietary : CollateralStatus3Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

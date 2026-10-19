@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zxUwC-H5Eeqbls7Gk4-ckA")]
 [DisplayName("Creditor Enrolment Amendment")]
-public record CreditorEnrolmentAmendment4
+public partial record CreditorEnrolmentAmendment4
 {
     /// <summary>
     /// Specific attributes of the creditor and service enrolment provided by the creditor for its enrolment.

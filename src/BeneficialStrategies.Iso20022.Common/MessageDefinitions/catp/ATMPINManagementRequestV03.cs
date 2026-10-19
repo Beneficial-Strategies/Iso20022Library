@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_fGIKMaFFEe-MRKYsaX6JDg")]
 [DisplayName("ATMPIN Management Request V03")]
-public record ATMPINManagementRequestV03 : IOuterRecord
+public partial record ATMPINManagementRequestV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

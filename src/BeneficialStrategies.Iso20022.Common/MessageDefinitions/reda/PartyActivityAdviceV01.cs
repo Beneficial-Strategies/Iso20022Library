@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("__JD_8ZeSEeen_cyMrluY4w")]
 [DisplayName("Party Activity Advice V")]
-public record PartyActivityAdviceV01 : IOuterRecord
+public partial record PartyActivityAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

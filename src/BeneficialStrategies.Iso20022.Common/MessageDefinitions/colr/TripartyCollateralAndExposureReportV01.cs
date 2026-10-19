@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_2uaM0Ss7EeySlt9bF77XfA")]
 [DisplayName("Triparty Collateral And Exposure Report V")]
-public record TripartyCollateralAndExposureReportV01 : IOuterRecord
+public partial record TripartyCollateralAndExposureReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

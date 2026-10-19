@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginTerms1Choice
     [IsoId("_QmogNNp-Ed-ak6NoX_4Aeg_1633105891")]
     [DisplayName("Segregated Independent Amount Margin")]
     [IsoXmlTag("SgrtdIndpdntAmtMrgn")]
-    public record SegregatedIndependentAmountMargin : MarginTerms1Choice_
+    public partial record SegregatedIndependentAmountMargin : MarginTerms1Choice_
     {
         /// <summary>
         /// Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of segregated independent amount).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YYdtSTE_Ee62xuUQ2zyZww")]
 [DisplayName("Contact14")]
-public record Contact14
+public partial record Contact14
 {
     /// <summary>
     /// Name Prefix.

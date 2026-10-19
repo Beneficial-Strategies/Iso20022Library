@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Bu5zUS9aEeS94oXWDaBauA")]
 [DisplayName("Settlement Obligation")]
-public record SettlementObligation7
+public partial record SettlementObligation7
 {
     /// <summary>
     /// Last reference given by the settlement platform (this is the central securities depository) to the transaction (non settled instruction).

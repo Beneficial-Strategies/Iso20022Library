@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BPOApplicableRules1Choice
     /// </summary>
     [IsoId("_GHRpoNNrEeKdOs2hjJ_3WQ")]
     [DisplayName("Other Rules And Version")]
-    public record OtherRulesAndVersion : BPOApplicableRules1Choice_
+    public partial record OtherRulesAndVersion : BPOApplicableRules1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

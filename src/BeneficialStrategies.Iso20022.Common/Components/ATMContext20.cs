@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CdeSga5EEeWCgYcWSNgX5g")]
 [DisplayName("ATM Context")]
-public record ATMContext20
+public partial record ATMContext20
 {
     /// <summary>
     /// Unique identification of the customer session in which the exception occurred.

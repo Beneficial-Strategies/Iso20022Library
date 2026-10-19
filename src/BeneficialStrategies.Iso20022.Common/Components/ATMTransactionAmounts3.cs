@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_awno0Yq2EeSIDtZ76p6McQ")]
 [DisplayName("ATM Transaction Amounts")]
-public record ATMTransactionAmounts3
+public partial record ATMTransactionAmounts3
 {
     /// <summary>
     /// Type of limit.

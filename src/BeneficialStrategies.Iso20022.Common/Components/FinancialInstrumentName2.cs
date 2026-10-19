@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Olzf4WqUEemHy6n1hjosWw")]
 [DisplayName("Financial Instrument Name")]
-public record FinancialInstrumentName2
+public partial record FinancialInstrumentName2
 {
     /// <summary>
     /// Short name of the security expressed as ISO 18773/18774.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressOrParty1Choice
     [IsoId("_-Eq_sXltEeG7BsjMvd1mEw_-1059783639")]
     [DisplayName("New Beneficiary")]
     [IsoXmlTag("NewBnfcry")]
-    public record NewBeneficiary : AddressOrParty1Choice_
+    public partial record NewBeneficiary : AddressOrParty1Choice_
     {
         /// <summary>
         /// Name by which a party is known and is usually used to identify that party.

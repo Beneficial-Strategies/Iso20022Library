@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rh-hcLzTEeivTd4NUfCi2g")]
 [DisplayName("Basket Identification And Eligibility Set Profile")]
-public record BasketIdentificationAndEligibilitySetProfile1
+public partial record BasketIdentificationAndEligibilitySetProfile1
 {
     /// <summary>
     /// Number identifying the preferred collateral basket.

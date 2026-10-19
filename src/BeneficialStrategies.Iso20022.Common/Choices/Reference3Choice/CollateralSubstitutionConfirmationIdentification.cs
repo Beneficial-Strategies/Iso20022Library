@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice
     /// </summary>
     [IsoId("_d0qV5wLyEeutW5-TpeYJhA")]
     [DisplayName("Collateral Substitution Confirmation Identification")]
-    public record CollateralSubstitutionConfirmationIdentification : Reference3Choice_
+    public partial record CollateralSubstitutionConfirmationIdentification : Reference3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

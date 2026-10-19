@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qxz5MRInEeyZaPkaPAzTvQ")]
 [DisplayName("Collateral Date")]
-public record CollateralDate2
+public partial record CollateralDate2
 {
     /// <summary>
     /// Date the transaction was agreed between the trading parties.

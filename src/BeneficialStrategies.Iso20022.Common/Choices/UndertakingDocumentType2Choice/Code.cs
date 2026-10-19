@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UndertakingDocumentType2Choice
     /// </summary>
     [IsoId("_we6lhjPGEeKaav-uUgD4RA")]
     [DisplayName("Code")]
-    public record Code : UndertakingDocumentType2Choice_
+    public partial record Code : UndertakingDocumentType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

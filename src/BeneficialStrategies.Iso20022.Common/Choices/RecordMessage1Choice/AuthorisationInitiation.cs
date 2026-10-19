@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_csijUFZVEeen1vB4iz5SyA")]
     [DisplayName("Authorisation Initiation")]
-    public record AuthorisationInitiation : RecordMessage1Choice_
+    public partial record AuthorisationInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

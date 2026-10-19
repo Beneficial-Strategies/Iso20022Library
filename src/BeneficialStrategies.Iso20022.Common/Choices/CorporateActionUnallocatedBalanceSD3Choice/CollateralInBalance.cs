@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
     [IsoId("_ujGePcSTEeeRJJtE9TSlkw")]
     [DisplayName("Collateral In Balance")]
     [IsoXmlTag("CollInBal")]
-    public record CollateralInBalance : CorporateActionUnallocatedBalanceSD3Choice_
+    public partial record CollateralInBalance : CorporateActionUnallocatedBalanceSD3Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

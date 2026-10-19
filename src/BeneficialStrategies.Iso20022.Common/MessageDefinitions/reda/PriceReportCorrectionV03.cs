@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_ZtBOz9EvEd-BzquC8wXy7w_-770509177")]
 [DisplayName("Price Report Correction V")]
-public record PriceReportCorrectionV03 : IOuterRecord
+public partial record PriceReportCorrectionV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SbJx2tp-Ed-ak6NoX_4Aeg_-1025425136")]
 [DisplayName("Price Valuation")]
-public record PriceValuation3
+public partial record PriceValuation3
 {
     /// <summary>
     /// Unique technical identifier for an instance of a price valuation within a price report, as assigned by the issuer of the report.

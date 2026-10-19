@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BogXkZHjEe6qwqnYOGEReg")]
 [DisplayName("Terminal Package Type5")]
-public record TerminalPackageType5
+public partial record TerminalPackageType5
 {
     /// <summary>
     /// POI Component Identification.

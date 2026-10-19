@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZMfEbDEEe-g3p7goNrabg")]
 [DisplayName("Collateral Data Status Advice V01")]
-public record CollateralDataStatusAdviceV01 : IOuterRecord
+public partial record CollateralDataStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

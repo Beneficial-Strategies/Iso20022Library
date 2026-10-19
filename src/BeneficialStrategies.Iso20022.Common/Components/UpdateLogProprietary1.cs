@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LituOGjOEeiRg5NzP0jkQg")]
 [DisplayName("Update Log Proprietary")]
-public record UpdateLogProprietary1
+public partial record UpdateLogProprietary1
 {
     /// <summary>
     /// Name of the field whose value has been changed.

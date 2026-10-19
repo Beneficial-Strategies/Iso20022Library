@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RIosoYqPEeSRT5rEzcAHEw")]
 [DisplayName("ATM Customer")]
-public record ATMCustomer3
+public partial record ATMCustomer3
 {
     /// <summary>
     /// Profile of the customer selected to perform the withdrawal.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     [IsoId("_yJhSpYv-Eei289CGNqs21g")]
     [DisplayName("Party Name")]
     [IsoXmlTag("PtyNm")]
-    public record PartyName : SystemPartyModification2Choice_
+    public partial record PartyName : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Specifies the date from which the party name is valid.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ocESMzDtEey2N-DB7H7A5A")]
 [DisplayName("Instructions Transactions Sequence")]
-public record InstructionsTransactionsSequence2
+public partial record InstructionsTransactionsSequence2
 {
     /// <summary>
     /// Number which further identifies DTC instruction reference number. Not applicable to reorganisation / custody deposits.

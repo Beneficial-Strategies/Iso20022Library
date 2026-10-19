@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("__WOCMFZXEeen1vB4iz5SyA")]
     [DisplayName("Settlement Reporting Initiation")]
-    public record SettlementReportingInitiation : RecordMessage1Choice_
+    public partial record SettlementReportingInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

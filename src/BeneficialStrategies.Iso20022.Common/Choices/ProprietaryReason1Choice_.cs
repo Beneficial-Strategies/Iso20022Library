@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_uoL4YVhFEeOMYfRGLS0NbA")]
     [DisplayName("Proprietary Reason 1 Choice")]
-    public abstract record ProprietaryReason1Choice_ { }
+    public abstract partial record ProprietaryReason1Choice_ { }
 }

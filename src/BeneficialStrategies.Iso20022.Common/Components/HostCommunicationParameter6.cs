@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-yW3QQufEeqw5uEXxQ9H4g")]
 [DisplayName("Host Communication Parameter")]
-public record HostCommunicationParameter6
+public partial record HostCommunicationParameter6
 {
     /// <summary>
     /// Type of action for the configuration parameters.

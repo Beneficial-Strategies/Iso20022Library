@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Un-Otdp-Ed-ak6NoX_4Aeg_-902133760")]
 [DisplayName("Agreement")]
-public record Agreement2
+public partial record Agreement2
 {
     /// <summary>
     /// Full details of the supporting legal agreement under which the margin call can be issued and/or governed.

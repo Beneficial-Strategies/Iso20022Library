@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XBCccc0SEeuAE-cYsQdwHQ")]
 [DisplayName("Fund Reference Data Report")]
-public record FundReferenceDataReport4
+public partial record FundReferenceDataReport4
 {
     /// <summary>
     /// Unique technical identifier for an instance of a report within a fund reference data report, as assigned by the issuer of the report.

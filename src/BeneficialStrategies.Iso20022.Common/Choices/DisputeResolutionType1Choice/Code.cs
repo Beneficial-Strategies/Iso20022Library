@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeResolutionType1Choice
     /// </summary>
     [IsoId("_QmogNtp-Ed-ak6NoX_4Aeg_1461066692")]
     [DisplayName("Code")]
-    public record Code : DisputeResolutionType1Choice_
+    public partial record Code : DisputeResolutionType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_nmHOQaFFEe-MRKYsaX6JDg")]
 [DisplayName("ATM Deposit Request V02")]
-public record ATMDepositRequestV02 : IOuterRecord
+public partial record ATMDepositRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

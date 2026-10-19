@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nKkasYr7EeSvuOJS0mmL0g")]
 [DisplayName("ATM Security Configuration")]
-public record ATMSecurityConfiguration3
+public partial record ATMSecurityConfiguration3
 {
     /// <summary>
     /// True if the security module is able to perform encryption with an asymmetric key.

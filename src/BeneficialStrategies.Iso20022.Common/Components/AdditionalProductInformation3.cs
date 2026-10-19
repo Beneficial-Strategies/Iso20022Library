@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Zy-BASY2Ee6m8LTtAzU6hA")]
 [DisplayName("Additional Product Information3")]
-public record AdditionalProductInformation3
+public partial record AdditionalProductInformation3
 {
     /// <summary>
     /// Financial Instrument Transaction Costs Ex Ante UK.

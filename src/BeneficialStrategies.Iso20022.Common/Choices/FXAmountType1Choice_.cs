@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Z-9lgwN2Ee2-vqzwMUAewg")]
     [DisplayName("FX Amount Type 1 Choice")]
-    public abstract record FXAmountType1Choice_ { }
+    public abstract partial record FXAmountType1Choice_ { }
 }

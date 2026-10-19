@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJpGotp-Ed-ak6NoX_4Aeg_-1074370626")]
 [DisplayName("Instruction Type")]
-public record InstructionType3
+public partial record InstructionType3
 {
     /// <summary>
     /// Specifies whether the data set has to be matched or pre-matched.

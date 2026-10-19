@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-Cue8nltEeG7BsjMvd1mEw_1352240882")]
 [DisplayName("Original Message")]
-public record OriginalMessage1
+public partial record OriginalMessage1
 {
     /// <summary>
     /// XML schema-instance namespace, for example &quot;tsin.008.001.01&quot;.

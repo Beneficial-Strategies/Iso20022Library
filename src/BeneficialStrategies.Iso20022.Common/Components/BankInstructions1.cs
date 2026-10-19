@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-E96onltEeG7BsjMvd1mEw_-1962266357")]
 [DisplayName("Bank Instructions")]
-public record BankInstructions1
+public partial record BankInstructions1
 {
     /// <summary>
     /// Instructions from the bank.

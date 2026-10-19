@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__fRWYOCuEei2UYJ62ws-Fw")]
 [DisplayName("Collateral Amount")]
-public record CollateralAmount5
+public partial record CollateralAmount5
 {
     /// <summary>
     /// Margin amount needed when the instruction reported creates an exposure.

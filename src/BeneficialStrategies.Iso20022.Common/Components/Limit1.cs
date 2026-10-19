@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJpGpNp-Ed-ak6NoX_4Aeg_-234268618")]
 [DisplayName("Limit")]
-public record Limit1
+public partial record Limit1
 {
     /// <summary>
     /// Number of occurrences of a particular event.

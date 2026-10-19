@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UJ6-h-OPEem5PtD3jXNVeQ")]
 [DisplayName("Transaction Identifications")]
-public record TransactionIdentifications44
+public partial record TransactionIdentifications44
 {
     /// <summary>
     /// Reference assigned to the instruction by the triparty-agent/service-provider.

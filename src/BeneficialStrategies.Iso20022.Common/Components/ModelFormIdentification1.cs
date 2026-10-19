@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_94mSlXltEeG7BsjMvd1mEw_-921216115")]
 [DisplayName("Model Form Identification")]
-public record ModelFormIdentification1
+public partial record ModelFormIdentification1
 {
     /// <summary>
     /// Identification of the model form.

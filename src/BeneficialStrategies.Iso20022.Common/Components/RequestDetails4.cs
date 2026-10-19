@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuwKFgEcEeCQm6a_G2yO_w_-1482671344")]
 [DisplayName("Request Details")]
-public record RequestDetails4
+public partial record RequestDetails4
 {
     /// <summary>
     /// Key for which the specific data is returned, for example, a BIC.

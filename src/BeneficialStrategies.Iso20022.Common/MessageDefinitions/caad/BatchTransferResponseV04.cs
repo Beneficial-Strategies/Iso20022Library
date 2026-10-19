@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_w8HcIROHEfC1ZfCQz0xB3g")]
 [DisplayName("Batch Transfer Response V04")]
-public record BatchTransferResponseV04 : IOuterRecord
+public partial record BatchTransferResponseV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

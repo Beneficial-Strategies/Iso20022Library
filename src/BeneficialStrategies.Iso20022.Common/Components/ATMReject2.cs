@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RdZ94a42EeWpsoxRhdX-8A")]
 [DisplayName("ATM Reject")]
-public record ATMReject2
+public partial record ATMReject2
 {
     /// <summary>
     /// Identification of the entity sending the reject message.

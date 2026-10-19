@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ug_1x-H7Eeqbls7Gk4-ckA")]
 [DisplayName("Activation Status")]
-public record ActivationStatus2
+public partial record ActivationStatus2
 {
     /// <summary>
     /// Unique identification of the original instruction.

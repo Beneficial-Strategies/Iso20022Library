@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4MbhUa4TEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Completion Acknowledgement")]
-public record ATMCompletionAcknowledgement2
+public partial record ATMCompletionAcknowledgement2
 {
     /// <summary>
     /// ATM information.

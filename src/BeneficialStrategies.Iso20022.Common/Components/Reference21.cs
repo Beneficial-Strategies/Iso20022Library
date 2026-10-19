@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dOIDYPkCEeicy5Zn42b9bg")]
 [DisplayName("Reference")]
-public record Reference21
+public partial record Reference21
 {
     /// <summary>
     /// Unique reference identifying the collateral management transaction (exposure) from the collateral taker&apos;s or the collateral giver point of view.

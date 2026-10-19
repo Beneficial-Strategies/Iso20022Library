@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification31Choice
     [IsoId("_su6ah_SaEeSfzLT5J5kvFg")]
     [DisplayName("Domestic Account")]
     [IsoXmlTag("DmstAcct")]
-    public record DomesticAccount : AccountIdentification31Choice_
+    public partial record DomesticAccount : AccountIdentification31Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.

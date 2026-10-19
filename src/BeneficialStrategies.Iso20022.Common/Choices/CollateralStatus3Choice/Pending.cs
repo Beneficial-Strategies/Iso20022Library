@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus3Choice
     [IsoId("_g1stYOCgEei2UYJ62ws-Fw")]
     [DisplayName("Pending")]
     [IsoXmlTag("Pdg")]
-    public record Pending : CollateralStatus3Choice_
+    public partial record Pending : CollateralStatus3Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

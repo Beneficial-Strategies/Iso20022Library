@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TiiQo9p-Ed-ak6NoX_4Aeg_1653900933")]
 [DisplayName("Cancellation Request Information")]
-public record CancellationRequestInformation1
+public partial record CancellationRequestInformation1
 {
     /// <summary>
     /// Unique and unambiguous identifier of the original financing request message as assigned by the original sending party.

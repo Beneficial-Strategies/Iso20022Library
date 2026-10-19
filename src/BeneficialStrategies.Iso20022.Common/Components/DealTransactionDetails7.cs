@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b2hQgRIlEeyLzJfz3xPQNA")]
 [DisplayName("Deal Transaction Details")]
-public record DealTransactionDetails7
+public partial record DealTransactionDetails7
 {
     /// <summary>
     /// Closing date/time or maturity date/time of the transaction.

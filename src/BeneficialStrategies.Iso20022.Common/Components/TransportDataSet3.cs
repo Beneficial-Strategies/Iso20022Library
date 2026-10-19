@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_StVuB9p-Ed-ak6NoX_4Aeg_1434989448")]
 [DisplayName("Transport Data Set")]
-public record TransportDataSet3
+public partial record TransportDataSet3
 {
     /// <summary>
     /// Identifies the submitted transport data set.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tbkJAIqKEeSRT5rEzcAHEw")]
 [DisplayName("ATM Command Identification")]
-public record ATMCommandIdentification1
+public partial record ATMCommandIdentification1
 {
     /// <summary>
     /// Identification of the entity issuing the command.

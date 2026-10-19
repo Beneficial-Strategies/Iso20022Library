@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 )]
 [IsoId("_poi64ZRyEeak6e8_Fc5fQg")]
 [DisplayName("Foreign Exchange Trade Instruction Cancellation V")]
-public record ForeignExchangeTradeInstructionCancellationV04 : IOuterRecord
+public partial record ForeignExchangeTradeInstructionCancellationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

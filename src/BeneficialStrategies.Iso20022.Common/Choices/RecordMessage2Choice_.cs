@@ -79,7 +79,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RecordMessage2Choice.ReversalResponse))]
     [JsonDerivedType(typeof(RecordMessage2Choice.SettlementReportingInitiation))]
     [JsonDerivedType(typeof(RecordMessage2Choice.SettlementReportingResponse))]
-    public abstract record RecordMessage2Choice_
+    public abstract partial record RecordMessage2Choice_
     {
     }
 }

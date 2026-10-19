@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PzlYF5JKEeuAlLVx8pyt3w")]
 [DisplayName("Common Financial Instrument Attributes")]
-public record CommonFinancialInstrumentAttributes10
+public partial record CommonFinancialInstrumentAttributes10
 {
     /// <summary>
     /// Specifies the status of the security within its lifecycle.

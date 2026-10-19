@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PidRpYcSEe-U27oWwgmhCQ")]
 [DisplayName("Settlement Obligation9")]
-public record SettlementObligation9
+public partial record SettlementObligation9
 {
     /// <summary>
     /// Settlement Obligation Identification.

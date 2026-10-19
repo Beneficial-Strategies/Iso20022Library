@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_4eXSYaoxEfCG2_q2WT-90w")]
 [DisplayName("Trade Leg Statement V05")]
-public record TradeLegStatementV05 : IOuterRecord
+public partial record TradeLegStatementV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

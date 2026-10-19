@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yRMkLfDBEemsS_0xy2XRug")]
     [DisplayName("Creditor Enrolment Amendment Reason 1 Choice")]
-    public abstract record CreditorEnrolmentAmendmentReason1Choice_ { }
+    public abstract partial record CreditorEnrolmentAmendmentReason1Choice_ { }
 }

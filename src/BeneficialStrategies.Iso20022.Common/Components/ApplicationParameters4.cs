@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LxhfoWpyEeSMqvBfBY1c9A")]
 [DisplayName("Application Parameters")]
-public record ApplicationParameters4
+public partial record ApplicationParameters4
 {
     /// <summary>
     /// Identification of the payment application.

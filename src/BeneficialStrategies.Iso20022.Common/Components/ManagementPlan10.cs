@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H559EU6qEeyGi9JAv6wq7Q")]
 [DisplayName("Management Plan")]
-public record ManagementPlan10
+public partial record ManagementPlan10
 {
     /// <summary>
     /// Identification of the point of interaction (POI) for terminal management.

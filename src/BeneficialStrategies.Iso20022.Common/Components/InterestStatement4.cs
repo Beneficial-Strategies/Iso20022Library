@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h8DYIYF0EeWtPe6Crjmeug")]
 [DisplayName("Interest Statement")]
-public record InterestStatement4
+public partial record InterestStatement4
 {
     /// <summary>
     /// Provides the period during which the interest rate has been applied.

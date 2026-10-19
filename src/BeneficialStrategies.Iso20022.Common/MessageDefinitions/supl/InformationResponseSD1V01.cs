@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"This extends the message InformationRequestResponse.")]
 [IsoId("_8nOCwC_7EeOKib24wnHaFg")]
 [DisplayName("Information Response SD 1 V")]
-public record InformationResponseSD1V01 : IOuterRecord
+public partial record InformationResponseSD1V01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

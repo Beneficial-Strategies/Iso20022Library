@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_95ylZXltEeG7BsjMvd1mEw_856781964")]
 [DisplayName("Non Extension")]
-public record NonExtension1
+public partial record NonExtension1
 {
     /// <summary>
     /// Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent.

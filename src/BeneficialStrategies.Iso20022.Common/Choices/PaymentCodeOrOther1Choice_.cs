@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ogNJwNP8EeK0PPbKncCqzA")]
     [DisplayName("Payment Code Or Other 1 Choice")]
-    public abstract record PaymentCodeOrOther1Choice_ { }
+    public abstract partial record PaymentCodeOrOther1Choice_ { }
 }

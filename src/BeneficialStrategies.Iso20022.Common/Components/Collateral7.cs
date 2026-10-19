@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cvIIYV9-EeSMgPeFpRHeJw")]
 [DisplayName("Collateral")]
-public record Collateral7
+public partial record Collateral7
 {
     /// <summary>
     /// Specifies the reference to the unambiguous identification of the margin call request.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_epxpwJR-Eeak6e8_Fc5fQg")]
 [DisplayName("Opening Conditions")]
-public record OpeningConditions1
+public partial record OpeningConditions1
 {
     /// <summary>
     /// Specifies the settlement currency of the non deliverable trade.

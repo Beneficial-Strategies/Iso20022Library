@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QDTwsdp-Ed-ak6NoX_4Aeg_-1939165929")]
 [DisplayName("Contact Identification")]
-public record ContactIdentification3
+public partial record ContactIdentification3
 {
     /// <summary>
     /// Business Identifier Code to identify the financial institution that the contact person belongs to.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-xcAEa4LEeWZgJQOa6iKCQ")]
 [DisplayName("Card Account")]
-public record CardAccount11
+public partial record CardAccount11
 {
     /// <summary>
     /// Method used by the cardholder and the terminal for the choice of the account.

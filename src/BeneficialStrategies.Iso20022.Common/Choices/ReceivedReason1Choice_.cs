@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ReceivedReason1Choice.Reason), nameof(ReceivedReason1Choice.Reason))]
     [IsoId("_9wz1bljqEeOnqqBHs8Gasw")]
     [DisplayName("Received Reason 1 Choice")]
-    public abstract record ReceivedReason1Choice_ { }
+    public abstract partial record ReceivedReason1Choice_ { }
 }

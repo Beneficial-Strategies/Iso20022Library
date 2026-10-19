@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GlobalNote2Choice
     [IsoId("_Tsvfw-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : GlobalNote2Choice_
+    public partial record Proprietary : GlobalNote2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y-DEIfwLEeGHDMP28rpT3g_1761080314")]
 [DisplayName("Transaction Data")]
-public record TransactionData1
+public partial record TransactionData1
 {
     /// <summary>
     /// Brand name of the card.

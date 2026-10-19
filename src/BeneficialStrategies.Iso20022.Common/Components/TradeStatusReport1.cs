@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-C4P-HltEeG7BsjMvd1mEw_2067370861")]
 [DisplayName("Trade Status Report")]
-public record TradeStatusReport1
+public partial record TradeStatusReport1
 {
     /// <summary>
     /// Information concerning the original message to which the TradeStatusReport is sent in response.

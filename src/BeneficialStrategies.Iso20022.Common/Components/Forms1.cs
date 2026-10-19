@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cx-V4TgCEei6RvewLQWEqw")]
 [DisplayName("Forms")]
-public record Forms1
+public partial record Forms1
 {
     /// <summary>
     /// Indicates whether a physical application form is required.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_x0dSUTEyEe6g-ffJsqGiSA")]
     [DisplayName("Collateral Value Criteria Definition4Choice")]
-    public abstract record CollateralValueCriteriaDefinition4Choice_ { }
+    public abstract partial record CollateralValueCriteriaDefinition4Choice_ { }
 }

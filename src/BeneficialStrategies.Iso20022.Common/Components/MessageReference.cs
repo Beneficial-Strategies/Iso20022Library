@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RB5f4tp-Ed-ak6NoX_4Aeg_1955131952")]
 [DisplayName("Message Reference")]
-public record MessageReference
+public partial record MessageReference
 {
     /// <summary>
     /// Business reference of the present message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.

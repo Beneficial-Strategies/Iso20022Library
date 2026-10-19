@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gJenIIn2EeS9F4Qrq_eaVA")]
 [DisplayName("Terminal Hosting")]
-public record TerminalHosting1
+public partial record TerminalHosting1
 {
     /// <summary>
     /// Type of ATM terminal hosting.

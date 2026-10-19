@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_taYAHgLqEeutW5-TpeYJhA")]
 [DisplayName("Summary Amounts")]
-public record SummaryAmounts2
+public partial record SummaryAmounts2
 {
     /// <summary>
     /// Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.

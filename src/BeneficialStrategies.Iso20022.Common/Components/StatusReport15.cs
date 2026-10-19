@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r0Z0wbYEEfCUZfsQO4rYeA")]
 [DisplayName("Status Report15")]
-public record StatusReport15
+public partial record StatusReport15
 {
     /// <summary>
     /// Identification of the point of interaction for terminal management.

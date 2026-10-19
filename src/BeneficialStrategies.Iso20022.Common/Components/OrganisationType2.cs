@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AGP6yeH5Eeqbls7Gk4-ckA")]
 [DisplayName("Organisation Type")]
-public record OrganisationType2
+public partial record OrganisationType2
 {
     /// <summary>
     /// Business identification code of the organisation is requested.

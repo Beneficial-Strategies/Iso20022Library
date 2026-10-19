@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 )]
 [IsoId("_XnwLEY3bEeW56qaqQ8B0kQ")]
 [DisplayName("Status Report V")]
-public record StatusReportV05 : IOuterRecord
+public partial record StatusReportV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

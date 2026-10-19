@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_prPCsVhAEeiv7OYKCzUSAg")]
 [DisplayName("Request Handling")]
-public record RequestHandling2
+public partial record RequestHandling2
 {
     /// <summary>
     /// Specifies the status of the request, for example the result of the schema validation or a business processing result/error.

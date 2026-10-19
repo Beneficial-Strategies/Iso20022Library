@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxableIncomePerShareCalculated3
     /// <summary>Taxable income per share calculated expressed as a proprietary code.</summary>
     [IsoId("9b8738fe-8173-4ffc-ac40-2f21598ff8f4")]
     [DisplayName("Proprietary")]
-    public record Proprietary : TaxableIncomePerShareCalculated3Choice_
+    public partial record Proprietary : TaxableIncomePerShareCalculated3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

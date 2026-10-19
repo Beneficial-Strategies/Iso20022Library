@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ymh6kYFxEeWtPe6Crjmeug")]
 [DisplayName("Collateral Account")]
-public record CollateralAccount2
+public partial record CollateralAccount2
 {
     /// <summary>
     /// Unique identification of the collateral account.

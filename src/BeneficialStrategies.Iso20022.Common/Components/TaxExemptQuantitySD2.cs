@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2m0Rsb5YEeexmbB7KsjCwA")]
 [DisplayName("Tax Exempt Quantity SD")]
-public record TaxExemptQuantitySD2
+public partial record TaxExemptQuantitySD2
 {
     /// <summary>
     /// Xpath to the element that is being extended.

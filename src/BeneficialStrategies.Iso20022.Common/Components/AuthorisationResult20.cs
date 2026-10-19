@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JKTUkZ-vEe-nbM0aSPcoiQ")]
 [DisplayName("Authorisation Result20")]
-public record AuthorisationResult20
+public partial record AuthorisationResult20
 {
     /// <summary>
     /// Authorisation Entity.

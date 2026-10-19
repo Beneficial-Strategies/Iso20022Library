@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zaajgTEyEe6g-ffJsqGiSA")]
 [DisplayName("Creditor Enrolment Amendment5")]
-public record CreditorEnrolmentAmendment5
+public partial record CreditorEnrolmentAmendment5
 {
     /// <summary>
     /// Original Business Instruction.

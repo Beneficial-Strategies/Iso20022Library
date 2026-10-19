@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjk0-AOSNFX-8224497")]
 [DisplayName("Financial Item Parameters")]
-public record FinancialItemParameters1
+public partial record FinancialItemParameters1
 {
     /// <summary>
     /// Unique identification of this item relative to the issuing party.

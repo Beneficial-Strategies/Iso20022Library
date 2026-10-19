@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5vhw04cREe-U27oWwgmhCQ")]
     [DisplayName("Trade Leg Notification Identification1Choice")]
-    public abstract record TradeLegNotificationIdentification1Choice_ { }
+    public abstract partial record TradeLegNotificationIdentification1Choice_ { }
 }

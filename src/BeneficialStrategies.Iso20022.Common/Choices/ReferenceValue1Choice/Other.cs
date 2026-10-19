@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice
     [IsoId("_rIqsMMeQEeysUoBKYz1Ytw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : ReferenceValue1Choice_
+    public partial record Other : ReferenceValue1Choice_
     {
         /// <summary>
         /// Type of reference

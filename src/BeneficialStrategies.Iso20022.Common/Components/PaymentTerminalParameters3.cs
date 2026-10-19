@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yXTpAY3-EeWRwov1g9WL_A")]
 [DisplayName("Payment Terminal Parameters")]
-public record PaymentTerminalParameters3
+public partial record PaymentTerminalParameters3
 {
     /// <summary>
     /// Type of action for the configuration parameters.

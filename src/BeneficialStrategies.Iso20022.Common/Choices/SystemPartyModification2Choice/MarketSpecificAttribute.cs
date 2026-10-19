@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     [IsoId("_yJhSrYv-Eei289CGNqs21g")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
-    public record MarketSpecificAttribute : SystemPartyModification2Choice_
+    public partial record MarketSpecificAttribute : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Specifies the name of the market-specific attribute.

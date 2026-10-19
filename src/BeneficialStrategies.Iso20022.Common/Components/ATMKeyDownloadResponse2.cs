@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F5BX4a46EeWRfYPBaeOY8w")]
 [DisplayName("ATM Key Download Response")]
-public record ATMKeyDownloadResponse2
+public partial record ATMKeyDownloadResponse2
 {
     /// <summary>
     /// Environment of the key download.

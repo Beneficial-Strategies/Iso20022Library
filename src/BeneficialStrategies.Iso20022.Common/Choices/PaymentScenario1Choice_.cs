@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_J3dO8Gw9Ee-t2JGPeXy0Sw")]
     [DisplayName("Payment Scenario1Choice")]
-    public abstract record PaymentScenario1Choice_ { }
+    public abstract partial record PaymentScenario1Choice_ { }
 }

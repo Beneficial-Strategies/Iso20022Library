@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3yXwUWNwEeSIWbZ6by9dnA")]
 [DisplayName("Cash Collateral")]
-public record CashCollateral3
+public partial record CashCollateral3
 {
     /// <summary>
     /// Provides the identification of the proposed collateral.

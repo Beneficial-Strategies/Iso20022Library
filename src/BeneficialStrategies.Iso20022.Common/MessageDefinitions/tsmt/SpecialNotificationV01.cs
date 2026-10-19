@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_uldKWNE8Ed-BzquC8wXy7w_-3505275")]
 [DisplayName("Special Notification V")]
-public record SpecialNotificationV01 : IOuterRecord
+public partial record SpecialNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

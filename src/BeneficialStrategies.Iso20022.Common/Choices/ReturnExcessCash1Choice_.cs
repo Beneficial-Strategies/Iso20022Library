@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_BGt5wALpEeutW5-TpeYJhA")]
     [DisplayName("Return Excess Cash 1 Choice")]
-    public abstract record ReturnExcessCash1Choice_ { }
+    public abstract partial record ReturnExcessCash1Choice_ { }
 }

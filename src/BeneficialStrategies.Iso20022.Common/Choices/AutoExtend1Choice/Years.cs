@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutoExtend1Choice
     /// </summary>
     [IsoId("_95fqcnltEeG7BsjMvd1mEw_960984968")]
     [DisplayName("Years")]
-    public record Years : AutoExtend1Choice_
+    public partial record Years : AutoExtend1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

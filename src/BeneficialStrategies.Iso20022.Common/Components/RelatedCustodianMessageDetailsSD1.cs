@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1WNFoTL3EeKU9IrkkToqcw_735116614")]
 [DisplayName("Related Custodian Message Details SD")]
-public record RelatedCustodianMessageDetailsSD1
+public partial record RelatedCustodianMessageDetailsSD1
 {
     /// <summary>
     /// Reference the CAEV value from the received custodian message. Applicable to custodian service only.

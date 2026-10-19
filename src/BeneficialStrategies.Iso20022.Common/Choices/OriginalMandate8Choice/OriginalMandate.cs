@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice
     [IsoId("_bQuQE9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
-    public record OriginalMandate : OriginalMandate8Choice_
+    public partial record OriginalMandate : OriginalMandate8Choice_
     {
         /// <summary>
         /// Unique identification, as assigned by the responsible party (such as the creditor) or agent (such as the debtor agent), to unambiguously identify the mandate.

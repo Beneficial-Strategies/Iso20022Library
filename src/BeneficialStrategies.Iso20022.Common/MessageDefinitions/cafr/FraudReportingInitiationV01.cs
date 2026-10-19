@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 )]
 [IsoId("_tme-4Xa1Eeef9c2nwgY9Xw")]
 [DisplayName("Fraud Reporting Initiation V")]
-public record FraudReportingInitiationV01 : IOuterRecord
+public partial record FraudReportingInitiationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

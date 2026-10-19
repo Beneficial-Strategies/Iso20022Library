@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError3Choice
     [IsoId("_7fpegVhLEeih3fUfzR38Ig")]
     [DisplayName("Party Report")]
     [IsoXmlTag("PtyRpt")]
-    public record PartyReport : PartyOrOperationalError3Choice_
+    public partial record PartyReport : PartyOrOperationalError3Choice_
     {
         /// <summary>
         /// Unique identification to unambiguously identify the party within the system.

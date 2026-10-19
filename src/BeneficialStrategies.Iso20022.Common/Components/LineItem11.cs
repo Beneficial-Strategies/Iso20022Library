@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nxeDkefIEeKNfc-Rw_dPYg")]
 [DisplayName("Line Item")]
-public record LineItem11
+public partial record LineItem11
 {
     /// <summary>
     /// Information about the goods and/or services of a trade transaction.

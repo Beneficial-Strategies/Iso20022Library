@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Si1WsbSaEeq-6ssAXwSh-g")]
 [DisplayName("Investor Type")]
-public record InvestorType2
+public partial record InvestorType2
 {
     /// <summary>
     /// Specifies whether the product is aimed at the retail investor. If neutral, the manufacturer estimates that there is neither a negative nor a positive target market. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 01010.

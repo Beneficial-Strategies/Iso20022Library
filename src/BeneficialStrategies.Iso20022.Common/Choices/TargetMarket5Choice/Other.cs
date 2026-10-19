@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TargetMarket5Choice
     /// </summary>
     [IsoId("_xfZQE7VLEeqkjqDuFVh1-A")]
     [DisplayName("Other")]
-    public record Other : TargetMarket5Choice_
+    public partial record Other : TargetMarket5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

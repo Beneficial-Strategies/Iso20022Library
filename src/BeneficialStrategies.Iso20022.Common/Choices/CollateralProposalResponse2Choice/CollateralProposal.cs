@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposalResponse2Choic
     [IsoId("_vslfMWTUEeSSTJlMfOKFsA")]
     [DisplayName("Collateral Proposal")]
     [IsoXmlTag("CollPrpsl")]
-    public record CollateralProposal : CollateralProposalResponse2Choice_
+    public partial record CollateralProposal : CollateralProposalResponse2Choice_
     {
         /// <summary>
         /// Provides the collateral proposal response for the variation margin.

@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_LAGyS75MEeexmbB7KsjCwA")]
 [DisplayName("DTCCCAPASD 1 V")]
-public record DTCCCAPASD1V06 : IOuterRecord
+public partial record DTCCCAPASD1V06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat7Choice
     [IsoId("_XEoW6S7CEeSQQqw1BT_aMg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SafekeepingPlaceFormat7Choice_
+    public partial record Proprietary : SafekeepingPlaceFormat7Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity.

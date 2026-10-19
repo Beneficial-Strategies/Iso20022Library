@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent2Choice
     /// Protected Data.
     /// </summary>
     [DisplayName("Protected Data")]
-    public record ProtectedData : ReportContent2Choice_
+    public partial record ProtectedData : ReportContent2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

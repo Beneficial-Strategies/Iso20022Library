@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 [Description(@"Terminal maintenance actions to be performed by a point of interaction (POI).")]
 [IsoId("_OQCLwY3xEeWYyJ6P6VfQMg")]
 [DisplayName("Management Plan Replacement V")]
-public record ManagementPlanReplacementV05 : IOuterRecord
+public partial record ManagementPlanReplacementV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

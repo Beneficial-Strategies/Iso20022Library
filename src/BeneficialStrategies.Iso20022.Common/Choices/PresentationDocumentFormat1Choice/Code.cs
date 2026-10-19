@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PresentationDocumentFormat1Choic
     /// </summary>
     [IsoId("_94JmoXltEeG7BsjMvd1mEw_-430320891")]
     [DisplayName("Code")]
-    public record Code : PresentationDocumentFormat1Choice_
+    public partial record Code : PresentationDocumentFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

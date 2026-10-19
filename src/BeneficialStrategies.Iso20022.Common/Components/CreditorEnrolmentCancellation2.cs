@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UedfLeH7Eeqbls7Gk4-ckA")]
 [DisplayName("Creditor Enrolment Cancellation")]
-public record CreditorEnrolmentCancellation2
+public partial record CreditorEnrolmentCancellation2
 {
     /// <summary>
     /// Unique identification of the original instruction.

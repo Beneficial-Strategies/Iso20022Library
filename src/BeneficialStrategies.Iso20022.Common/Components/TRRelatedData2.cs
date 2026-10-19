@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PRFA0LTpEeeQy4o2AayYHg")]
 [DisplayName("TR Related Data")]
-public record TRRelatedData2
+public partial record TRRelatedData2
 {
     /// <summary>
     /// Specific TR34 command where the TRBlock is a TR34 block.

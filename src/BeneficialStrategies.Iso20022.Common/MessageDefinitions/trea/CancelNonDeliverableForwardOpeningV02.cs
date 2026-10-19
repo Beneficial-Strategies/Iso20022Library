@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 )]
 [IsoId("_L_cYkNE8Ed-BzquC8wXy7w_-895168583")]
 [DisplayName("Cancel Non Deliverable Forward Opening V")]
-public record CancelNonDeliverableForwardOpeningV02 : IOuterRecord
+public partial record CancelNonDeliverableForwardOpeningV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

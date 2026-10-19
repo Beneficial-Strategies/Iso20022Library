@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusReason7Choice
     /// <summary>Status reason expressed as a code.</summary>
     [IsoId("_nLSClqkxEeynsLtPxJMJTQ")]
     [DisplayName("Code")]
-    public record Code : StatusReason7Choice_
+    public partial record Code : StatusReason7Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

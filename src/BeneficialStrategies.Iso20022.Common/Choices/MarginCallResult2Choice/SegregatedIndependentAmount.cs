@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice
     [IsoId("_9boCQqMPEeCojJW5vEuTEQ_-1606532938")]
     [DisplayName("Segregated Independent Amount")]
     [IsoXmlTag("SgrtdIndpdntAmt")]
-    public record SegregatedIndependentAmount : MarginCallResult2Choice_
+    public partial record SegregatedIndependentAmount : MarginCallResult2Choice_
     {
         /// <summary>
         /// Amount payable by party B to party A.

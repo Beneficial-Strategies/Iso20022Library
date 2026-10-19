@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6YV-8TEyEe6g-ffJsqGiSA")]
 [DisplayName("Activation Status3")]
-public record ActivationStatus3
+public partial record ActivationStatus3
 {
     /// <summary>
     /// Original Business Instruction.

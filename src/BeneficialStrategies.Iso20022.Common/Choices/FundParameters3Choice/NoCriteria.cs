@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters3Choice
     /// </summary>
     [IsoId("_Q6l-Adp-Ed-ak6NoX_4Aeg_-960504070")]
     [DisplayName("No Criteria")]
-    public record NoCriteria : FundParameters3Choice_
+    public partial record NoCriteria : FundParameters3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

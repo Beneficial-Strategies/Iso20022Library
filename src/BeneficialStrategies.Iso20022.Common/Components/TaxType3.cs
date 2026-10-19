@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VR_cE9p-Ed-ak6NoX_4Aeg_-1494522709")]
 [DisplayName("Tax Type")]
-public record TaxType3
+public partial record TaxType3
 {
     /// <summary>
     /// Structured format.

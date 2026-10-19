@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xt8rgJOnEe6NHuby77_zUQ")]
 [DisplayName("Management Plan Content12")]
-public record ManagementPlanContent12
+public partial record ManagementPlanContent12
 {
     /// <summary>
     /// TM Challenge.

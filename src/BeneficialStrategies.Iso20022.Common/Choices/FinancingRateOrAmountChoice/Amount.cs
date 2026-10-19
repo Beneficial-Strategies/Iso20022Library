@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancingRateOrAmountChoice
     [IsoId("_RXzecdp-Ed-ak6NoX_4Aeg_-1499695892")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : FinancingRateOrAmountChoice_
+    public partial record Amount : FinancingRateOrAmountChoice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

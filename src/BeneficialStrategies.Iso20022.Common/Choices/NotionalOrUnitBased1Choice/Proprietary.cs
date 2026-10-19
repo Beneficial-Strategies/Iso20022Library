@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotionalOrUnitBased1Choice
     [IsoId("_Fop9AJ9WEeqxTNfi5y7ywQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : NotionalOrUnitBased1Choice_
+    public partial record Proprietary : NotionalOrUnitBased1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

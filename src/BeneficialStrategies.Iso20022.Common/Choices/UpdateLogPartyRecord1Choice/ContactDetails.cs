@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_xPt7gWjNEeiRg5NzP0jkQg")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
-    public record ContactDetails : UpdateLogPartyRecord1Choice_
+    public partial record ContactDetails : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Old value before change

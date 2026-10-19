@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice
     /// </summary>
     [IsoId("_d0qV3QLyEeutW5-TpeYJhA")]
     [DisplayName("Margin Call Request Identification")]
-    public record MarginCallRequestIdentification : Reference3Choice_
+    public partial record MarginCallRequestIdentification : Reference3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

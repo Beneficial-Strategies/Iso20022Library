@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gxMLOs--EemV7s8E008B2w")]
 [DisplayName("Contract Reference")]
-public record ContractReference1
+public partial record ContractReference1
 {
     /// <summary>
     /// Type of the contract referred to.

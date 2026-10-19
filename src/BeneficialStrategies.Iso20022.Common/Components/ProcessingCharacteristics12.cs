@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TbjMLTdyEe6UObU50fB8Cw")]
 [DisplayName("Processing Characteristics12")]
-public record ProcessingCharacteristics12
+public partial record ProcessingCharacteristics12
 {
     /// <summary>
     /// Dealing Currency Accepted.

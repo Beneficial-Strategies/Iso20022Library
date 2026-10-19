@@ -5,6 +5,8 @@
 
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice;
 

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iXLKgbAHEeah1_v59tW6Rg")]
 [DisplayName("Acceptor Configuration")]
-public record AcceptorConfiguration6
+public partial record AcceptorConfiguration6
 {
     /// <summary>
     /// Identification of the terminal management system (TMS) sending the acceptor parameters.

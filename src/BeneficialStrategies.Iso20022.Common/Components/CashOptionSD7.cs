@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EZr8wXh6EeOF3uSOaAf1Lg")]
 [DisplayName("Cash Option SD")]
-public record CashOptionSD7
+public partial record CashOptionSD7
 {
     /// <summary>
     /// xPath to the element that is being extended.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice
     /// </summary>
     [IsoId("_sW8TgQLyEeutW5-TpeYJhA")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
-    public record TripartyAgentServiceProviderCollateralInstructionIdentification
+    public partial record TripartyAgentServiceProviderCollateralInstructionIdentification
         : Reference3Choice_
     {
         /// <summary>

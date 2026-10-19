@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     [IsoId("_jqUPcOCzEei2UYJ62ws-Fw")]
     [DisplayName("Manually Accepted")]
     [IsoXmlTag("MnlyAccptd")]
-    public record ManuallyAccepted : SecuritiesMovementStatus1Choice_
+    public partial record ManuallyAccepted : SecuritiesMovementStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

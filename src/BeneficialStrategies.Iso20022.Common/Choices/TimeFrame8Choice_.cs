@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bxgQATgFEei6RvewLQWEqw")]
     [DisplayName("Time Frame 8 Choice")]
-    public abstract record TimeFrame8Choice_ { }
+    public abstract partial record TimeFrame8Choice_ { }
 }

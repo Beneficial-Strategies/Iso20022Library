@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q_LxkaEtEe-MRKYsaX6JDg")]
 [DisplayName("ATMPIN Management Request3")]
-public record ATMPINManagementRequest3
+public partial record ATMPINManagementRequest3
 {
     /// <summary>
     /// Environment.

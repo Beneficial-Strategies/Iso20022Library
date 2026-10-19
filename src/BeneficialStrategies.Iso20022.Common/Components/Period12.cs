@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1d5nse3_Ee6nAu63uIo75Q")]
 [DisplayName("Period12")]
-public record Period12
+public partial record Period12
 {
     /// <summary>
     /// Start Date.

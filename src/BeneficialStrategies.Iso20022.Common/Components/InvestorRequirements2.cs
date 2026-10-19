@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_47o54aDsEequlaOyi6MUhw")]
 [DisplayName("Investor Requirements")]
-public record InvestorRequirements2
+public partial record InvestorRequirements2
 {
     /// <summary>
     /// Specifies whether the product is compatible with a client who is looking for the preservation of capital. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 05010.

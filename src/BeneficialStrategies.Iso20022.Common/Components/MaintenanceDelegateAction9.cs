@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-L7mAZQyEe6HYLAajyhWIQ")]
 [DisplayName("Maintenance Delegate Action9")]
-public record MaintenanceDelegateAction9
+public partial record MaintenanceDelegateAction9
 {
     /// <summary>
     /// Periodic Action.

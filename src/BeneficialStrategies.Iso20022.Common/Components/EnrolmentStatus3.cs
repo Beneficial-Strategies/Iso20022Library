@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w_CtQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Enrolment Status3")]
-public record EnrolmentStatus3
+public partial record EnrolmentStatus3
 {
     /// <summary>
     /// Original Business Instruction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DdquQdwnEeeKpa-yxjuKzQ")]
 [DisplayName("Error Action")]
-public record ErrorAction4
+public partial record ErrorAction4
 {
     /// <summary>
     /// List of error action result codes.

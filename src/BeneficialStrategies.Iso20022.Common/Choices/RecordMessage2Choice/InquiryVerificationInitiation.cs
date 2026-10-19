@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the inquiry verification initiation message.</summary>
     [IsoId("_kNBjuW7-EfC68Y4jZPNEug")]
     [DisplayName("Inquiry Verification Initiation")]
-    public record InquiryVerificationInitiation : RecordMessage2Choice_
+    public partial record InquiryVerificationInitiation : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NqryVrfctnInitn")]

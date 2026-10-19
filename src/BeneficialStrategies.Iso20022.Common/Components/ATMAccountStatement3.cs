@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Q3v8aETEe-MRKYsaX6JDg")]
 [DisplayName("ATM Account Statement3")]
-public record ATMAccountStatement3
+public partial record ATMAccountStatement3
 {
     /// <summary>
     /// Account Identifier.

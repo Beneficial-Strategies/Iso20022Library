@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S0j3JQEcEeCQm6a_G2yO_w_-1391363136")]
 [DisplayName("Settlement Sub Total Calculated Tax")]
-public record SettlementSubTotalCalculatedTax1
+public partial record SettlementSubTotalCalculatedTax1
 {
     /// <summary>
     /// Type of tax applied.

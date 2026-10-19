@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_z-GI0FZWEeen1vB4iz5SyA")]
     [DisplayName("Charge Back Response")]
-    public record ChargeBackResponse : RecordMessage1Choice_
+    public partial record ChargeBackResponse : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

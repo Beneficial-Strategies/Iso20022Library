@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RXzed9p-Ed-ak6NoX_4Aeg_-377525821")]
 [DisplayName("Cancellation Status Information")]
-public record CancellationStatusInformation1
+public partial record CancellationStatusInformation1
 {
     /// <summary>
     /// Information on the business status of the cancellation.

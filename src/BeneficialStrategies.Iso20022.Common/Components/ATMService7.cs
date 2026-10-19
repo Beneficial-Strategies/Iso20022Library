@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IAYH0Yq0EeSIDtZ76p6McQ")]
 [DisplayName("ATM Service")]
-public record ATMService7
+public partial record ATMService7
 {
     /// <summary>
     /// Describes the type of inquiry selected by the customer or the ATM.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PyxaV9p-Ed-ak6NoX_4Aeg_-1837581386")]
 [DisplayName("Payment Information")]
-public record PaymentInformation15
+public partial record PaymentInformation15
 {
     /// <summary>
     /// Payment method that will be used for invoice payment to transfer the funds to the creditor.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7LN-oFD3Eee94_dUz-hvgw")]
 [DisplayName("File Action Details")]
-public record FileActionDetails1
+public partial record FileActionDetails1
 {
     /// <summary>
     /// Identification of the file.

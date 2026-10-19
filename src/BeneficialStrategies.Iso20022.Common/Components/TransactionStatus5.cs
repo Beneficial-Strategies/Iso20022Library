@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RbFb9Np-Ed-ak6NoX_4Aeg_-2036389843")]
 [DisplayName("Transaction Status")]
-public record TransactionStatus5
+public partial record TransactionStatus5
 {
     /// <summary>
     /// Identifies the status of the transaction by means of a code.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyRateFixing1Choice
     /// </summary>
     [IsoId("_GfUYMI9QEeqMo4JxiuZGSw")]
     [DisplayName("Number Of Days")]
-    public record NumberOfDays : FrequencyRateFixing1Choice_
+    public partial record NumberOfDays : FrequencyRateFixing1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

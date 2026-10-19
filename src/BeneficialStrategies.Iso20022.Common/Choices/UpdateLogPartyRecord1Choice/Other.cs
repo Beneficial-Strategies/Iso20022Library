@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_7aOnsWjNEeiRg5NzP0jkQg")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : UpdateLogPartyRecord1Choice_
+    public partial record Other : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Name of the field whose value has been changed.

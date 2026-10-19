@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qTFCcfSwEemJpbG3s5kY2A")]
 [DisplayName("Payment Status Reason")]
-public record PaymentStatusReason1
+public partial record PaymentStatusReason1
 {
     /// <summary>
     /// Specifies the reason for the status report.

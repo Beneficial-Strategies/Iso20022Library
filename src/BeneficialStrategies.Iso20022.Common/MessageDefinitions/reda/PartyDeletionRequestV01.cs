@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_77TqgZeSEeen_cyMrluY4w")]
 [DisplayName("Party Deletion Request V")]
-public record PartyDeletionRequestV01 : IOuterRecord
+public partial record PartyDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarReportOrError1Choice
     [IsoId("_dVcQ4om7Eeipw6hHPgB4Sw")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : CalendarReportOrError1Choice_
+    public partial record OperationalError : CalendarReportOrError1Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

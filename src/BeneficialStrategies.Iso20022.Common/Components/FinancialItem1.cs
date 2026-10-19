@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzMy-AOSNFX-8224500")]
 [DisplayName("Financial Item")]
-public record FinancialItem1
+public partial record FinancialItem1
 {
     /// <summary>
     /// Parameters identifying the context of the item.

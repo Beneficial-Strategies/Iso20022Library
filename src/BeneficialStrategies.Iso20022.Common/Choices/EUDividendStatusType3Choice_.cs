@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(EUDividendStatusType3Choice.Proprietary), nameof(EUDividendStatusType3Choice.Proprietary))]
     [IsoId("d342294d-3920-49b3-a4d7-53550e73e181")]
     [DisplayName("EU Dividend Status Type 3 Choice")]
-    public abstract record EUDividendStatusType3Choice_ { }
+    public abstract partial record EUDividendStatusType3Choice_ { }
 }

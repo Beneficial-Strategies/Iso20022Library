@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kK-5sRIoEeyZaPkaPAzTvQ")]
 [DisplayName("Collateral Transaction Amount Breakdown")]
-public record CollateralTransactionAmountBreakdown2
+public partial record CollateralTransactionAmountBreakdown2
 {
     /// <summary>
     /// Identification of the underlying transaction (exposure split).

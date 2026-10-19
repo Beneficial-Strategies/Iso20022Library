@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the amendment message.</summary>
     [IsoId("_kNBjlW7-EfC68Y4jZPNEug")]
     [DisplayName("Amendment")]
-    public record Amendment : RecordMessage2Choice_
+    public partial record Amendment : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Amdmnt")]

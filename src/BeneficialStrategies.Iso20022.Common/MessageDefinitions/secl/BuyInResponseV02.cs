@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_-gvFoKMOEeCojJW5vEuTEQ_228033973")]
 [DisplayName("Buy In Response V02")]
-public record BuyInResponseV02 : IOuterRecord
+public partial record BuyInResponseV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

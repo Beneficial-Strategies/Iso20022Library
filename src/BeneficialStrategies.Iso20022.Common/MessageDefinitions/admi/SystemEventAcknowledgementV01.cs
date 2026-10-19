@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 )]
 [IsoId("_-4fJISzhEeKZfox_pyYpTA")]
 [DisplayName("System Event Acknowledgement V")]
-public record SystemEventAcknowledgementV01 : IOuterRecord
+public partial record SystemEventAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

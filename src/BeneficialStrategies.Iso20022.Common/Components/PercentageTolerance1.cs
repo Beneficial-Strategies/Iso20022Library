@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SsvRF9p-Ed-ak6NoX_4Aeg_964334524")]
 [DisplayName("Percentage Tolerance")]
-public record PercentageTolerance1
+public partial record PercentageTolerance1
 {
     /// <summary>
     /// Variance in percentage allowed over the agreed dimension. For example, plus 10 percent.

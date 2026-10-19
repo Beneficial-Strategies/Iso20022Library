@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5GXZsTEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Copy4")]
-public record MandateCopy4
+public partial record MandateCopy4
 {
     /// <summary>
     /// Original Message Information.

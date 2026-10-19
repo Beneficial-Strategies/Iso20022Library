@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P4LStOIKEeqbls7Gk4-ckA")]
 [DisplayName("Debtor Activation Status Reason")]
-public record DebtorActivationStatusReason2
+public partial record DebtorActivationStatusReason2
 {
     /// <summary>
     /// Party that issues the cancellation request.

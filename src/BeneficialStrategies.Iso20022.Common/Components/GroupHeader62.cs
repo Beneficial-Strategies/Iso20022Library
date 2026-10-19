@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aYOyMaCmEeKBuYKLDCCgNQ")]
 [DisplayName("Group Header")]
-public record GroupHeader62
+public partial record GroupHeader62
 {
     /// <summary>
     /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.

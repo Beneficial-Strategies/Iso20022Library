@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h4b_UMYeEeiSF9q-coWegA")]
 [DisplayName("Valuations Details")]
-public record ValuationsDetails1
+public partial record ValuationsDetails1
 {
     /// <summary>
     /// Last reported/known price of a financial instrument in a market.

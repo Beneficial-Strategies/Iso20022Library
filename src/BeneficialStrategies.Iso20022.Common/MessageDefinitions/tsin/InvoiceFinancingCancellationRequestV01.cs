@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 )]
 [IsoId("_BUjIPn1LEeCF8NjrBemJWQ_-1871971623")]
 [DisplayName("Invoice Financing Cancellation Request V")]
-public record InvoiceFinancingCancellationRequestV01 : IOuterRecord
+public partial record InvoiceFinancingCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

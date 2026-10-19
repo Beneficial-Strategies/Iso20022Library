@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vsvQMWTUEeSSTJlMfOKFsA")]
 [DisplayName("Collateral Proposal Response Type")]
-public record CollateralProposalResponseType2
+public partial record CollateralProposalResponseType2
 {
     /// <summary>
     /// Unique identifier for a collateral proposal.

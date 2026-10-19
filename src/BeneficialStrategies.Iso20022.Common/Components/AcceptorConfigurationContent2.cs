@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_76B1cQvbEeK9Xewg3qiFQA")]
 [DisplayName("Acceptor Configuration Content")]
-public record AcceptorConfigurationContent2
+public partial record AcceptorConfigurationContent2
 {
     /// <summary>
     /// Acceptor parameters dedicated to an acquirer protocol.

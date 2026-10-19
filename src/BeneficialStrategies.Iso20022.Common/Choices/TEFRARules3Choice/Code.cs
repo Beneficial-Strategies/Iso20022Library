@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TEFRARules3Choice
     /// </summary>
     [IsoId("_irPNceLcEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : TEFRARules3Choice_
+    public partial record Code : TEFRARules3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

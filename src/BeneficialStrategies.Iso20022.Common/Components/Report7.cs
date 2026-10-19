@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PbV9AYcSEe-U27oWwgmhCQ")]
 [DisplayName("Report7")]
-public record Report7
+public partial record Report7
 {
     /// <summary>
     /// Non Clearing Member.

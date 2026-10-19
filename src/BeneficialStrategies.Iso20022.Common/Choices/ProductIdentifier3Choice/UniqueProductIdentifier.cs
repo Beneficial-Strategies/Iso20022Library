@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier3Choice
     /// Unique Product Identifier.
     /// </summary>
     [DisplayName("Unique Product Identifier")]
-    public record UniqueProductIdentifier : ProductIdentifier3Choice_
+    public partial record UniqueProductIdentifier : ProductIdentifier3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

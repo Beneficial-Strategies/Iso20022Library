@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters4Choice
     [IsoId("_KQCmF2omEeipaMTLlhaKMQ")]
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
-    public record Parameters : FundParameters4Choice_
+    public partial record Parameters : FundParameters4Choice_
     {
         /// <summary>
         /// Financial instrument for which the report is requested.

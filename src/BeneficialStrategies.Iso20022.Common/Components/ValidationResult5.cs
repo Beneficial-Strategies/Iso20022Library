@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ra7q8dp-Ed-ak6NoX_4Aeg_-1034400483")]
 [DisplayName("Validation Result")]
-public record ValidationResult5
+public partial record ValidationResult5
 {
     /// <summary>
     /// Sequential number assigned to the mismatch.

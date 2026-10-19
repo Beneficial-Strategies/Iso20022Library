@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tm2v9tp-Ed-ak6NoX_4Aeg_888710434")]
 [DisplayName("Insurance Data Set")]
-public record InsuranceDataSet1
+public partial record InsuranceDataSet1
 {
     /// <summary>
     /// Identifies the insurancedata set.

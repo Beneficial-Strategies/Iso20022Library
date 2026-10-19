@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_f2gQwTpyEemk2e6qGBk8IQ")]
 [DisplayName("Security Characteristics")]
-public record SecurityCharacteristics3
+public partial record SecurityCharacteristics3
 {
     /// <summary>
     /// Unique identification, as known by the account owner, to unambiguously identify the security.

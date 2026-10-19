@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_s3o9qNE8Ed-BzquC8wXy7w_1220286611")]
 [DisplayName("Role And Baseline Acceptance Notification V")]
-public record RoleAndBaselineAcceptanceNotificationV01 : IOuterRecord
+public partial record RoleAndBaselineAcceptanceNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

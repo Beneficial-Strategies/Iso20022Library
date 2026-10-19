@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 )]
 [IsoId("_P04uca4WEeW_TaP-ygI0SQ")]
 [DisplayName("ATM Inquiry Response V")]
-public record ATMInquiryResponseV02 : IOuterRecord
+public partial record ATMInquiryResponseV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

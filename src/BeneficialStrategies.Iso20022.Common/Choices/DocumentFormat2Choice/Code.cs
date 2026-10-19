@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat2Choice
     /// </summary>
     [IsoId("_ElusseatEeqCKaUycnDWEg")]
     [DisplayName("Code")]
-    public record Code : DocumentFormat2Choice_
+    public partial record Code : DocumentFormat2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 )]
 [IsoId("_w_hFlVZbEeen1vB4iz5SyA")]
 [DisplayName("Batch Transfer Response V")]
-public record BatchTransferResponseV01 : IOuterRecord
+public partial record BatchTransferResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

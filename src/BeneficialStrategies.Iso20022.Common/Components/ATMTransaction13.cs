@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0xerYa15EeWMg5rOByfExw")]
 [DisplayName("ATM Transaction")]
-public record ATMTransaction13
+public partial record ATMTransaction13
 {
     /// <summary>
     /// True if cash has to be dispensed by the ATM for the transaction.

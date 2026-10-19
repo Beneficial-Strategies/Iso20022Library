@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError4Choice
     /// Audit Trail.
     /// </summary>
     [DisplayName("Audit Trail")]
-    public record AuditTrail : PartyAuditTrailOrError4Choice_
+    public partial record AuditTrail : PartyAuditTrailOrError4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

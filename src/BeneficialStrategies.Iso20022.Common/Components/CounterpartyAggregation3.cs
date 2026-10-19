@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SZLjaSs_EeySlt9bF77XfA")]
 [DisplayName("Counterparty Aggregation")]
-public record CounterpartyAggregation3
+public partial record CounterpartyAggregation3
 {
     /// <summary>
     /// Specifies whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).

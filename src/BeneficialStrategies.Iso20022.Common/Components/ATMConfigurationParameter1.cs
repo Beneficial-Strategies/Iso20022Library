@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mv--sIn9EeShMpas3885ww")]
 [DisplayName("ATM Configuration Parameter")]
-public record ATMConfigurationParameter1
+public partial record ATMConfigurationParameter1
 {
     /// <summary>
     /// Type of the ATM configuration.

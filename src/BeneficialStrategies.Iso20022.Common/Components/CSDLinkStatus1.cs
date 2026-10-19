@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hiJFnWliEeGaMcKyqKNRfQ_-127584604")]
 [DisplayName("CSD Link Status")]
-public record CSDLinkStatus1
+public partial record CSDLinkStatus1
 {
     /// <summary>
     /// Status of the party maintenance instruction.

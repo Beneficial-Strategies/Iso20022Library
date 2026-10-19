@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T5pTMaEPEe-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction41")]
-public record ATMTransaction41
+public partial record ATMTransaction41
 {
     /// <summary>
     /// Transaction Identification.

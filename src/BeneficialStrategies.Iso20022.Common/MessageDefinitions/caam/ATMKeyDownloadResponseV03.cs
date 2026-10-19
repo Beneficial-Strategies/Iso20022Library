@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 )]
 [IsoId("_ya2bYbTzEeeQy4o2AayYHg")]
 [DisplayName("ATM Key Download Response V")]
-public record ATMKeyDownloadResponseV03 : IOuterRecord
+public partial record ATMKeyDownloadResponseV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

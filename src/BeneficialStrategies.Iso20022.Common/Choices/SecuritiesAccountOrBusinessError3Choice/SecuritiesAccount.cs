@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrBusinessError
     [IsoId("_yNtKMTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Securities Account")]
     [IsoXmlTag("SctiesAcct")]
-    public record SecuritiesAccount : SecuritiesAccountOrBusinessError3Choice_
+    public partial record SecuritiesAccount : SecuritiesAccountOrBusinessError3Choice_
     {
         /// <summary>
         /// Legal opening date of the securities account.

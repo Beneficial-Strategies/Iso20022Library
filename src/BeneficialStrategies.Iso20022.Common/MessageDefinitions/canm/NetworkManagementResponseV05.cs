@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_b8hnUROIEfC1ZfCQz0xB3g")]
 [DisplayName("Network Management Response V05")]
-public record NetworkManagementResponseV05 : IOuterRecord
+public partial record NetworkManagementResponseV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

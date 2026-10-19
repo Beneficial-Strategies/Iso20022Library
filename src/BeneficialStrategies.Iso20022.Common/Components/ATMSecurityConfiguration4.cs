@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u0cgsYr8EeSvuOJS0mmL0g")]
 [DisplayName("ATM Security Configuration")]
-public record ATMSecurityConfiguration4
+public partial record ATMSecurityConfiguration4
 {
     /// <summary>
     /// Maximum number of certificates in a certificate path, the security module is able to manage.

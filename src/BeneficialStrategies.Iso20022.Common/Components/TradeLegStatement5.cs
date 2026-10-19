@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2ptroao2EfCG2_q2WT-90w")]
 [DisplayName("Trade Leg Statement5")]
-public record TradeLegStatement5
+public partial record TradeLegStatement5
 {
     /// <summary>
     /// Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).

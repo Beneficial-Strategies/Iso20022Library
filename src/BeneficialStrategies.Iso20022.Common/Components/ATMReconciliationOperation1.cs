@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y2c5kJ2hEe-4seDr3Li2Ew")]
 [DisplayName("ATM Reconciliation Operation1")]
-public record ATMReconciliationOperation1
+public partial record ATMReconciliationOperation1
 {
     /// <summary>
     /// Type Of Operation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuwKEwEcEeCQm6a_G2yO_w_-358984797")]
 [DisplayName("Report Parameter")]
-public record ReportParameter1
+public partial record ReportParameter1
 {
     /// <summary>
     /// Name or type of the parameter being returned.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VZADBtp-Ed-ak6NoX_4Aeg_1063188298")]
 [DisplayName("Valuation Statistics")]
-public record ValuationStatistics2
+public partial record ValuationStatistics2
 {
     /// <summary>
     /// Currency of the valuation statistics.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DeICUaEXEe-MRKYsaX6JDg")]
 [DisplayName("Acceptor Configuration Content14")]
-public record AcceptorConfigurationContent14
+public partial record AcceptorConfigurationContent14
 {
     /// <summary>
     /// Replace Configuration.

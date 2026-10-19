@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TargetMarket4Choice.Other), nameof(TargetMarket4Choice.Other))]
     [IsoId("_eEqHsNdhEeibyvRfU9vJ7w")]
     [DisplayName("Target Market 4 Choice")]
-    public abstract record TargetMarket4Choice_ { }
+    public abstract partial record TargetMarket4Choice_ { }
 }

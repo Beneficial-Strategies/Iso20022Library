@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RbYW4Np-Ed-ak6NoX_4Aeg_-262227221")]
 [DisplayName("Addition")]
-public record Addition2
+public partial record Addition2
 {
     /// <summary>
     /// Content of the new element.

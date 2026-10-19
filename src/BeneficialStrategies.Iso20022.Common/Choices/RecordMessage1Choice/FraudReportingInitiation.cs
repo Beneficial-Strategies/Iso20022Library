@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_xyAZ0FZYEeen1vB4iz5SyA")]
     [DisplayName("Fraud Reporting Initiation")]
-    public record FraudReportingInitiation : RecordMessage1Choice_
+    public partial record FraudReportingInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

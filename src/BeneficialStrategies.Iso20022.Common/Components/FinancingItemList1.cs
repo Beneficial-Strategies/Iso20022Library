@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMTk3-AOSNFX-8224490")]
 [DisplayName("Financing Item List")]
-public record FinancingItemList1
+public partial record FinancingItemList1
 {
     /// <summary>
     /// Identification assigned to unambiguously identify the financing item list.

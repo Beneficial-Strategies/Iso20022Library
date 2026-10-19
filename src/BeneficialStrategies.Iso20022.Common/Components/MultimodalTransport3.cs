@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_StCMANp-Ed-ak6NoX_4Aeg_1369687043")]
 [DisplayName("Multimodal Transport")]
-public record MultimodalTransport3
+public partial record MultimodalTransport3
 {
     /// <summary>
     /// Identifies the location where the goods are take in charge for transportation.

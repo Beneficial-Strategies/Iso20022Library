@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Removal1Choice
     [IsoId("_39lx0PkREeicy5Zn42b9bg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Removal1Choice_
+    public partial record Proprietary : Removal1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

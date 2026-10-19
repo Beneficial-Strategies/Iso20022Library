@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-eWgAKMOEeCojJW5vEuTEQ_-52349864")]
 [DisplayName("Variation Margin")]
-public record VariationMargin3
+public partial record VariationMargin3
 {
     /// <summary>
     /// Provides details about the security identification.

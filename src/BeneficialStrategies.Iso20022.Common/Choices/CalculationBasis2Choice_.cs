@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CalculationBasis2Choice.Proprietary), nameof(CalculationBasis2Choice.Proprietary))]
     [IsoId("2ab7a9e2-cd84-4250-af38-6aea4dd34b2b")]
     [DisplayName("CalculationBasis2Choice")]
-    public abstract record CalculationBasis2Choice_ { }
+    public abstract partial record CalculationBasis2Choice_ { }
 }

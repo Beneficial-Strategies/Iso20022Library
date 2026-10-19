@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OFzg0YtrEeSDLd7nI4Quzw")]
 [DisplayName("Automated Teller Machine")]
-public record AutomatedTellerMachine7
+public partial record AutomatedTellerMachine7
 {
     /// <summary>
     /// ATM terminal device identification for the acquirer and the issuer.

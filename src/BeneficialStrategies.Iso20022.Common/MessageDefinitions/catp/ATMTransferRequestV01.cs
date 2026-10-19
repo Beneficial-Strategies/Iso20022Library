@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 )]
 [IsoId("_vueJoK4rEeWLdt0vLARX2Q")]
 [DisplayName("ATM Transfer Request V")]
-public record ATMTransferRequestV01 : IOuterRecord
+public partial record ATMTransferRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

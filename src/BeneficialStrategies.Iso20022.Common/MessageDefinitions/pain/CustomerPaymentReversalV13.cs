@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.pain;
     @"Scope|The CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.|Usage|The CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.|The CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.|The CustomerPaymentReversal message can be used in domestic and cross-border scenarios."
 )]
 [DisplayName("Customer Payment Reversal V13")]
-public record CustomerPaymentReversalV13 : IOuterRecord
+public partial record CustomerPaymentReversalV13 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

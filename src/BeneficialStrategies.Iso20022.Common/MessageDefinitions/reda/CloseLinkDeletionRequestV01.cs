@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZL4AbDEEe-g3p7goNrabg")]
 [DisplayName("Close Link Deletion Request V01")]
-public record CloseLinkDeletionRequestV01 : IOuterRecord
+public partial record CloseLinkDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rxPTtsyxEeiqqJhU2tqK8A")]
 [DisplayName("Message Reconcillation")]
-public record MessageReconcillation1
+public partial record MessageReconcillation1
 {
     /// <summary>
     /// Contains the reconciliation message type.

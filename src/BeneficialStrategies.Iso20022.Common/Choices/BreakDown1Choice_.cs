@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_tbfaMBrYEeOVR9VN6fAMUg")]
     [DisplayName("Break Down 1 Choice")]
-    public abstract record BreakDown1Choice_ { }
+    public abstract partial record BreakDown1Choice_ { }
 }

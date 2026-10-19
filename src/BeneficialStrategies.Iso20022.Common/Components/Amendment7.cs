@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9_dIgXltEeG7BsjMvd1mEw_2073465972")]
 [DisplayName("Amendment")]
-public record Amendment7
+public partial record Amendment7
 {
     /// <summary>
     /// Identification of the proposed amendment.

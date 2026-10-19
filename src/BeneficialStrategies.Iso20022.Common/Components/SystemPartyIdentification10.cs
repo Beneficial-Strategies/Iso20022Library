@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_90Gi0b10Eeiut6mmSKzDFQ")]
 [DisplayName("System Party Identification")]
-public record SystemPartyIdentification10
+public partial record SystemPartyIdentification10
 {
     /// <summary>
     /// Starting date from which the identification is valid.

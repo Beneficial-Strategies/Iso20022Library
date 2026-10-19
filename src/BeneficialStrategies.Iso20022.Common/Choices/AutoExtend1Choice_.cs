@@ -19,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AutoExtend1Choice.Date), nameof(AutoExtend1Choice.Date))]
     [IsoId("_95V5enltEeG7BsjMvd1mEw_-1540173231")]
     [DisplayName("Auto Extend 1 Choice")]
-    public abstract record AutoExtend1Choice_ { }
+    public abstract partial record AutoExtend1Choice_ { }
 }

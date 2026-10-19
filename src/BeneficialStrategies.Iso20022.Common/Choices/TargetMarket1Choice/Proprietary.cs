@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TargetMarket1Choice
     [IsoId("_KLUycDcTEeiIxKQErQxblg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TargetMarket1Choice_
+    public partial record Proprietary : TargetMarket1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7xh9US9WEeS94oXWDaBauA")]
 [DisplayName("Buy In")]
-public record BuyIn4
+public partial record BuyIn4
 {
     /// <summary>
     /// Indicates whether the message is a warning only or a notification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tn5Rx9p-Ed-ak6NoX_4Aeg_-1905127733")]
 [DisplayName("Report Line")]
-public record ReportLine3
+public partial record ReportLine3
 {
     /// <summary>
     /// Unique identification of the purchase order, assigned by the buyer.

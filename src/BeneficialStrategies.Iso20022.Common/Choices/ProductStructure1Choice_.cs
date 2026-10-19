@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_G5LTIKDqEequlaOyi6MUhw")]
     [DisplayName("Product Structure 1 Choice")]
-    public abstract record ProductStructure1Choice_ { }
+    public abstract partial record ProductStructure1Choice_ { }
 }

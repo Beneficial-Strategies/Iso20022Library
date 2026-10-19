@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_52zPwNwoEeeKpa-yxjuKzQ")]
 [DisplayName("Trigger Information")]
-public record TriggerInformation1
+public partial record TriggerInformation1
 {
     /// <summary>
     /// Actor who trigger the request.

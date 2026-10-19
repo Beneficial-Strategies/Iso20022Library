@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lvDMenFwEemaN4ndAVY1ZQ")]
 [DisplayName("Generic Organisation Type")]
-public record GenericOrganisationType1
+public partial record GenericOrganisationType1
 {
     /// <summary>
     /// Type assigned by an institution for the organisation.

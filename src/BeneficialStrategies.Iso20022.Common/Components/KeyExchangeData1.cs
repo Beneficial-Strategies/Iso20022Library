@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ciSS0f5tEeiLerArw36g0w")]
 [DisplayName("Key Exchange Data")]
-public record KeyExchangeData1
+public partial record KeyExchangeData1
 {
     /// <summary>
     /// Identifies the key management scheme and associated structure of the remainder of the data element

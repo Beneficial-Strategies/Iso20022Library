@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeLegNotificationIdentificati
     /// Trade Leg Notification Identification.
     /// </summary>
     [DisplayName("Trade Leg Notification Identification")]
-    public record TradeLegNotificationIdentification : TradeLegNotificationIdentification1Choice_
+    public partial record TradeLegNotificationIdentification : TradeLegNotificationIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

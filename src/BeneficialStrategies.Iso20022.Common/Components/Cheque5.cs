@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QbmU4dp-Ed-ak6NoX_4Aeg_-1212009635")]
 [DisplayName("Cheque")]
-public record Cheque5
+public partial record Cheque5
 {
     /// <summary>
     /// Specifies the type of cheque to be issued by the first agent.

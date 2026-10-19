@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period8Choice
     [IsoId("_ctouQv1cEeiAfJEqh4xF_Q")]
     [DisplayName("From Date To Date")]
     [IsoXmlTag("FrDtToDt")]
-    public record FromDateToDate : Period8Choice_
+    public partial record FromDateToDate : Period8Choice_
     {
         /// <summary>
         /// Date and time at which the period starts.

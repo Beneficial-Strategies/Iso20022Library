@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eVSbC5IOEe-HRNGM304Vlw")]
 [DisplayName("Non Guaranteed Trade4")]
-public record NonGuaranteedTrade4
+public partial record NonGuaranteedTrade4
 {
     /// <summary>
     /// Trade Counterparty Member Identification.

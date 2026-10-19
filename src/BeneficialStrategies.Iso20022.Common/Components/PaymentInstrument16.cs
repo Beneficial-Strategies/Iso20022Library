@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q3QsMF8rEeicg40_9gK9vQ")]
 [DisplayName("Payment Instrument")]
-public record PaymentInstrument16
+public partial record PaymentInstrument16
 {
     /// <summary>
     /// Type of order to which the payment instrument applies.

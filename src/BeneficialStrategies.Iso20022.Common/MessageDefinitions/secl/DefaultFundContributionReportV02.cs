@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 )]
 [IsoId("_-hesiaMOEeCojJW5vEuTEQ_-1558125935")]
 [DisplayName("Default Fund Contribution Report V")]
-public record DefaultFundContributionReportV02 : IOuterRecord
+public partial record DefaultFundContributionReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

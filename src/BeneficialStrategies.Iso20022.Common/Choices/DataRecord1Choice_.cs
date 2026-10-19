@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(DataRecord1Choice.Text), nameof(DataRecord1Choice.Text))]
     [IsoId("_Gl7WgJb8Eeuc6pwKtqbEVQ")]
     [DisplayName("Data Record 1 Choice")]
-    public abstract record DataRecord1Choice_ { }
+    public abstract partial record DataRecord1Choice_ { }
 }

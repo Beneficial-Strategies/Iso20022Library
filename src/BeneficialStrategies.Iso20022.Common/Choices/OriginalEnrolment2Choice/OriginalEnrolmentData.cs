@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice
     [IsoId("_UZbOI-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Original Enrolment Data")]
     [IsoXmlTag("OrgnlEnrlmntData")]
-    public record OriginalEnrolmentData : OriginalEnrolment2Choice_
+    public partial record OriginalEnrolmentData : OriginalEnrolment2Choice_
     {
         /// <summary>
         /// Detailed activation data related to the creditor enrolment.

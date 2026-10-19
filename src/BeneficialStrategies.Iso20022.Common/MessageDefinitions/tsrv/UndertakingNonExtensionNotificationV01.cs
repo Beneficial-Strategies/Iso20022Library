@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9i_O8nltEeG7BsjMvd1mEw_-188871383")]
 [DisplayName("Undertaking Non Extension Notification V")]
-public record UndertakingNonExtensionNotificationV01 : IOuterRecord
+public partial record UndertakingNonExtensionNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

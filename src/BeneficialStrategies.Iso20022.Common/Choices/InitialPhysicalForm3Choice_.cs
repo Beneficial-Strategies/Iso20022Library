@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_mx0oUeLcEeWFtOV72FbX9w")]
     [DisplayName("Initial Physical Form 3 Choice")]
-    public abstract record InitialPhysicalForm3Choice_ { }
+    public abstract partial record InitialPhysicalForm3Choice_ { }
 }

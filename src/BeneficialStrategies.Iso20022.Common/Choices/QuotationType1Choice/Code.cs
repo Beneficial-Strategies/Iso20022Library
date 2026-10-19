@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuotationType1Choice
     /// </summary>
     [IsoId("_ZSNVcNK4EeihtcVwfFPNlg")]
     [DisplayName("Code")]
-    public record Code : QuotationType1Choice_
+    public partial record Code : QuotationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

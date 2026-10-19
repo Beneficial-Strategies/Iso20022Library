@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice
     /// Address.
     /// </summary>
     [DisplayName("Address")]
-    public record Address : UpdateLogPartyRecord2Choice_
+    public partial record Address : UpdateLogPartyRecord2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ul4kBtp-Ed-ak6NoX_4Aeg_-2038049081")]
 [DisplayName("Amount")]
-public record Amount1
+public partial record Amount1
 {
     /// <summary>
     /// Undisputed amount of the margin call request.

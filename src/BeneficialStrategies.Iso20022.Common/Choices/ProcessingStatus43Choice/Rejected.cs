@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice
     [IsoId("_fDHA9VhFEeOMYfRGLS0NbA")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
-    public record Rejected : ProcessingStatus43Choice_
+    public partial record Rejected : ProcessingStatus43Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8g_CI2jSEeiRg5NzP0jkQg")]
 [DisplayName("Update Log Market Specific Attribute")]
-public record UpdateLogMarketSpecificAttribute1
+public partial record UpdateLogMarketSpecificAttribute1
 {
     /// <summary>
     /// Old value before the update.

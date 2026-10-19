@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9b69MKMPEeCojJW5vEuTEQ_2035479962")]
 [DisplayName("Margin Call Result")]
-public record MarginCallResult3
+public partial record MarginCallResult3
 {
     /// <summary>
     /// Specifies the total amount required by the clearing member to participate to the default fund.

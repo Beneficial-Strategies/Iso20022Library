@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_R3SUyzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Report Query Request V02")]
-public record ReportQueryRequestV02 : IOuterRecord
+public partial record ReportQueryRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

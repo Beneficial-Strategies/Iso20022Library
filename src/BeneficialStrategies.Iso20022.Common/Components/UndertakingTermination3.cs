@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_98BaAHltEeG7BsjMvd1mEw_969313560")]
 [DisplayName("Undertaking Termination")]
-public record UndertakingTermination3
+public partial record UndertakingTermination3
 {
     /// <summary>
     /// Date on which the termination is effective.

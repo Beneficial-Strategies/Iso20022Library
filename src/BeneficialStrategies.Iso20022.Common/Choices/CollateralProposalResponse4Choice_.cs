@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_vsq8gStIEeyOa655cLd-DQ")]
     [DisplayName("Collateral Proposal Response 4 Choice")]
-    public abstract record CollateralProposalResponse4Choice_ { }
+    public abstract partial record CollateralProposalResponse4Choice_ { }
 }

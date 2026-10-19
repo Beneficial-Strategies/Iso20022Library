@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_P5yGtZJKEeuAlLVx8pyt3w")]
     [DisplayName("Security Or Business Error 4 Choice")]
-    public abstract record SecurityOrBusinessError4Choice_ { }
+    public abstract partial record SecurityOrBusinessError4Choice_ { }
 }

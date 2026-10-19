@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xtxKwYv-Eei289CGNqs21g")]
 [DisplayName("System Party Modification")]
-public record SystemPartyModification2
+public partial record SystemPartyModification2
 {
     /// <summary>
     /// Specifies the type of requested modification.

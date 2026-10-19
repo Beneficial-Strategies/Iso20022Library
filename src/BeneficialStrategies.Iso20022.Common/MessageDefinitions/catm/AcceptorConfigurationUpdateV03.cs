@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 )]
 [IsoId("_TsQpkTZ8EeOP_KvUKe29ng")]
 [DisplayName("Acceptor Configuration Update V")]
-public record AcceptorConfigurationUpdateV03 : IOuterRecord
+public partial record AcceptorConfigurationUpdateV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_-EhOtHltEeG7BsjMvd1mEw_136442454")]
     [DisplayName("Address Or Party 1 Choice")]
-    public abstract record AddressOrParty1Choice_ { }
+    public abstract partial record AddressOrParty1Choice_ { }
 }

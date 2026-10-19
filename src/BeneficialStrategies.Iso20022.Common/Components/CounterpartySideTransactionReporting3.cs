@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F7ysVUjrEe-KhcStGV4xTg")]
 [DisplayName("Counterparty Side Transaction Reporting3")]
-public record CounterpartySideTransactionReporting3
+public partial record CounterpartySideTransactionReporting3
 {
     /// <summary>
     /// Reporting Jurisdiction.

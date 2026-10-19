@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice
     /// Domestic Account.
     /// </summary>
     [DisplayName("Domestic Account")]
-    public record DomesticAccount : AccountIdentification80Choice_
+    public partial record DomesticAccount : AccountIdentification80Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

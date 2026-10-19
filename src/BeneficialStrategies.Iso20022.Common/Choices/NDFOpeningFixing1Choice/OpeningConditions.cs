@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NDFOpeningFixing1Choice
     [IsoId("_hvh9oLC1EeaYscKJ1tWGRA")]
     [DisplayName("Opening Conditions")]
     [IsoXmlTag("OpngConds")]
-    public record OpeningConditions : NDFOpeningFixing1Choice_
+    public partial record OpeningConditions : NDFOpeningFixing1Choice_
     {
         /// <summary>
         /// Specifies the settlement currency of the non deliverable trade.

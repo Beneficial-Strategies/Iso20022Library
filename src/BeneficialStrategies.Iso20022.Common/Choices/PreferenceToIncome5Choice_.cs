@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_4jwgS-LZEeWFtOV72FbX9w")]
     [DisplayName("Preference To Income 5 Choice")]
-    public abstract record PreferenceToIncome5Choice_ { }
+    public abstract partial record PreferenceToIncome5Choice_ { }
 }

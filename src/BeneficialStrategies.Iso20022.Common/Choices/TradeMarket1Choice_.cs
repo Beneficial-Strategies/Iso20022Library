@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_OTgzMzEx-AOSNFX-8224498")]
     [DisplayName("Trade Market 1 Choice")]
-    public abstract record TradeMarket1Choice_ { }
+    public abstract partial record TradeMarket1Choice_ { }
 }

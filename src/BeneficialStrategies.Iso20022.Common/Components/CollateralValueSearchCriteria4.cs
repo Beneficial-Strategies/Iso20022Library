@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x48JtzEyEe6g-ffJsqGiSA")]
 [DisplayName("Collateral Value Search Criteria4")]
-public record CollateralValueSearchCriteria4
+public partial record CollateralValueSearchCriteria4
 {
     /// <summary>
     /// Cash Account Identification.

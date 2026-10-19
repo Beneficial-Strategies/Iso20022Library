@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Stxy7Np-Ed-ak6NoX_4Aeg_-388669200")]
 [DisplayName("Transport By Air")]
-public record TransportByAir2
+public partial record TransportByAir2
 {
     /// <summary>
     /// Place from where the goods must leave.

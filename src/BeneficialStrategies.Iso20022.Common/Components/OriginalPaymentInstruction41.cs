@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b2IDMdcZEeqRFcf2R4bPBw")]
 [DisplayName("Original Payment Instruction")]
-public record OriginalPaymentInstruction41
+public partial record OriginalPaymentInstruction41
 {
     /// <summary>
     /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed payment information group.|Usage: The instructing party is the party sending the reversal message and not the party that sent the original instruction that is being reversed.

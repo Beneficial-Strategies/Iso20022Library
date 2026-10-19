@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__7yZ5zpsEemk2e6qGBk8IQ")]
 [DisplayName("Collateral Value Return Criteria")]
-public record CollateralValueReturnCriteria1
+public partial record CollateralValueReturnCriteria1
 {
     /// <summary>
     /// Indicates whether the cash account owner information is requested.

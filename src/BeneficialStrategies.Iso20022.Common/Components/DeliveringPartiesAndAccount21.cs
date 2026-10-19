@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3SHE_ZIOEe-HRNGM304Vlw")]
 [DisplayName("Delivering Parties And Account21")]
-public record DeliveringPartiesAndAccount21
+public partial record DeliveringPartiesAndAccount21
 {
     /// <summary>
     /// Depository.

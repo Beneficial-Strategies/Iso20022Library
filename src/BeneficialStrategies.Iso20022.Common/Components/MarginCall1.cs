@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uk_MJdp-Ed-ak6NoX_4Aeg_138884862")]
 [DisplayName("Margin Call")]
-public record MarginCall1
+public partial record MarginCall1
 {
     /// <summary>
     /// Sum of the exposures of all transactions which are in the favour of party A. That is, all transactions which would have an amount payable by party B to party A if they were being terminated.

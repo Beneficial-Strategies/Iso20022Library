@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qk_hdNp-Ed-ak6NoX_4Aeg_1848984262")]
     [DisplayName("Margin Product Type 1 Choice")]
-    public abstract record MarginProductType1Choice_ { }
+    public abstract partial record MarginProductType1Choice_ { }
 }

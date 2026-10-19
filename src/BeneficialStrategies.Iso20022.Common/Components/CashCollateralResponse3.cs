@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2Q43cStIEeyOa655cLd-DQ")]
 [DisplayName("Cash Collateral Response")]
-public record CashCollateralResponse3
+public partial record CashCollateralResponse3
 {
     /// <summary>
     /// Specifies the status of the collateral proposal.

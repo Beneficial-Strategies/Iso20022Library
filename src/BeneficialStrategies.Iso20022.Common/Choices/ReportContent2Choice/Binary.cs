@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent2Choice
     /// Binary.
     /// </summary>
     [DisplayName("Binary")]
-    public record Binary : ReportContent2Choice_
+    public partial record Binary : ReportContent2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

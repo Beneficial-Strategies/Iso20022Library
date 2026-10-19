@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DebtorActivationAmendmentReason1
     /// </summary>
     [IsoId("_bjMUb_GAEemQ7oqCO5NTQw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : DebtorActivationAmendmentReason1Choice_
+    public partial record Proprietary : DebtorActivationAmendmentReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

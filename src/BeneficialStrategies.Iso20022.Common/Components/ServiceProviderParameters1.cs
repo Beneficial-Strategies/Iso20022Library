@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iGGCMDAKEeugIJ3Gvoevmg")]
 [DisplayName("Service Provider Parameters")]
-public record ServiceProviderParameters1
+public partial record ServiceProviderParameters1
 {
     /// <summary>
     /// Type of action for the configuration parameters.

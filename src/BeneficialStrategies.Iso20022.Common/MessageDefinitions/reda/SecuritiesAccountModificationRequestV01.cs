@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_KAu-rZ2fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Modification Request V")]
-public record SecuritiesAccountModificationRequestV01 : IOuterRecord
+public partial record SecuritiesAccountModificationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VbtT4bTlEeeQy4o2AayYHg")]
 [DisplayName("ATM Security Context")]
-public record ATMSecurityContext5
+public partial record ATMSecurityContext5
 {
     /// <summary>
     /// Key exchange security scheme in activation on the ATM for the host manager.

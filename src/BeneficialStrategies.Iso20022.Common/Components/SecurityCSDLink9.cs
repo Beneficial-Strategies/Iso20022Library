@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yhSS0Wc-EemvNLufWGIVOQ")]
 [DisplayName("Security CSD Link9")]
-public record SecurityCSDLink9
+public partial record SecurityCSDLink9
 {
     /// <summary>
     /// Financial Instrument Identification.

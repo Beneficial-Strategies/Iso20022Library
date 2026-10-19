@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A8HNEYtzEeSLQutgI1Ulfw")]
 [DisplayName("ATM Totals")]
-public record ATMTotals3
+public partial record ATMTotals3
 {
     /// <summary>
     /// Identification of the type of transaction. The following values are predefined: Withdrawal, QuickWithdrawal, WithdrawalForDisabledPerson, CashDeposit, Transfer, InternationalTransfer, PeriodicTransfer, CheckCommand, MobileTopUp, Moneo.

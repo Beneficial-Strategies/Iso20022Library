@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalActivation3Choice
     /// Original Activation Data.
     /// </summary>
     [DisplayName("Original Activation Data")]
-    public record OriginalActivationData : OriginalActivation3Choice_
+    public partial record OriginalActivationData : OriginalActivation3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

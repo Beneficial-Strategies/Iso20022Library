@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_5jHEEZeSEeen_cyMrluY4w")]
 [DisplayName("Party Status Advice V")]
-public record PartyStatusAdviceV01 : IOuterRecord
+public partial record PartyStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_sVqYsGtdEeCY4-KZ9JEyUQ_114633584")]
 [DisplayName("Static Data Request V01")]
-public record StaticDataRequestV01 : IOuterRecord
+public partial record StaticDataRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

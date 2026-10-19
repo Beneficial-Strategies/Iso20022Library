@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yBQtU-IJEeqbls7Gk4-ckA")]
     [DisplayName("Debtor Activation Status Reason 1 Choice")]
-    public abstract record DebtorActivationStatusReason1Choice_ { }
+    public abstract partial record DebtorActivationStatusReason1Choice_ { }
 }

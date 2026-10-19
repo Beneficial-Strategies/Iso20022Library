@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TiYfoNp-Ed-ak6NoX_4Aeg_1465496511")]
 [DisplayName("Request Group Information")]
-public record RequestGroupInformation1
+public partial record RequestGroupInformation1
 {
     /// <summary>
     /// Point to point reference assigned by the financing requestor to unambiguously identify the invoice financing request message.||Usage: The financing requestor has to make sure that &apos;GroupIdentification&apos; is unique for a pre-agreed period.

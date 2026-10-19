@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AuditTrailOrBusinessError6Choice
     [IsoId("_bcWXkWc-EemvNLufWGIVOQ")]
     [DisplayName("Audit Trail")]
     [IsoXmlTag("AudtTrl")]
-    public record AuditTrail : AuditTrailOrBusinessError6Choice_
+    public partial record AuditTrail : AuditTrailOrBusinessError6Choice_
     {
         /// <summary>
         /// Name of the field whose value has been changed.

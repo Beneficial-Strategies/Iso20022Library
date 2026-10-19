@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GlobalNote2Choice
     /// </summary>
     [IsoId("_TsvfweLaEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : GlobalNote2Choice_
+    public partial record Code : GlobalNote2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

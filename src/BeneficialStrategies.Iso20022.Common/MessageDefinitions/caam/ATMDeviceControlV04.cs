@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_RxMQwaFCEe-MRKYsaX6JDg")]
 [DisplayName("ATM Device Control V04")]
-public record ATMDeviceControlV04 : IOuterRecord
+public partial record ATMDeviceControlV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

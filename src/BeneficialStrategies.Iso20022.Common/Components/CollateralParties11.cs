@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SBomESs_EeySlt9bF77XfA")]
 [DisplayName("Collateral Parties")]
-public record CollateralParties11
+public partial record CollateralParties11
 {
     /// <summary>
     /// Counterparty of party A.

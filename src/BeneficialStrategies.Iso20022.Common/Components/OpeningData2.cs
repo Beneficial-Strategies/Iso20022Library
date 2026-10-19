@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U8POidp-Ed-ak6NoX_4Aeg_328638139")]
 [DisplayName("Opening Data")]
-public record OpeningData2
+public partial record OpeningData2
 {
     /// <summary>
     /// Date at which the trading parties execute a treasury trade.

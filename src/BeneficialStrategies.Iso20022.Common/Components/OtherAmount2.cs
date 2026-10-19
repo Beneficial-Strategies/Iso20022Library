@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rSQAQFBGEeedyPuM0kK2EQ")]
 [DisplayName("Other Amount")]
-public record OtherAmount2
+public partial record OtherAmount2
 {
     /// <summary>
     /// Number of other amounts involved in clearing.

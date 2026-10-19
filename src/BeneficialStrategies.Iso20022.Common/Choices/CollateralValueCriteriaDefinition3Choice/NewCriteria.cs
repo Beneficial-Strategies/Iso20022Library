@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
     [IsoId("__xM6gzpsEemk2e6qGBk8IQ")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : CollateralValueCriteriaDefinition3Choice_
+    public partial record NewCriteria : CollateralValueCriteriaDefinition3Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

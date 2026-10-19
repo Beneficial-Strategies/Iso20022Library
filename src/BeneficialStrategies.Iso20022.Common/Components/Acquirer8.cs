@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zpnMMYp1EeS3NqNpgnMh2w")]
 [DisplayName("Acquirer")]
-public record Acquirer8
+public partial record Acquirer8
 {
     /// <summary>
     /// Identification of the ATM manager.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ql4SSNp-Ed-ak6NoX_4Aeg_-44053834")]
     [DisplayName("Obligation Type 1 Choice")]
-    public abstract record ObligationType1Choice_ { }
+    public abstract partial record ObligationType1Choice_ { }
 }

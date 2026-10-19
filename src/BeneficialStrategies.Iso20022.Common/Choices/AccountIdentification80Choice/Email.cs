@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice
     /// Email.
     /// </summary>
     [DisplayName("Email")]
-    public record Email : AccountIdentification80Choice_
+    public partial record Email : AccountIdentification80Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iNo2MYPLEeWLIolfk4fFwQ")]
 [DisplayName("Interest Calculation")]
-public record InterestCalculation4
+public partial record InterestCalculation4
 {
     /// <summary>
     /// Indicates the calculation date of the interest amount.

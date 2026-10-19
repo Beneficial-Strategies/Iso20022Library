@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOrInvestor2Choice
     /// Investor CSD.
     /// </summary>
     [DisplayName("Investor CSD")]
-    public record InvestorCSD : IssuerOrInvestor2Choice_
+    public partial record InvestorCSD : IssuerOrInvestor2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

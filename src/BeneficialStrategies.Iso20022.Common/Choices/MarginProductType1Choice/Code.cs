@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginProductType1Choice
     /// </summary>
     [IsoId("_Qk_hddp-Ed-ak6NoX_4Aeg_-96904731")]
     [DisplayName("Code")]
-    public record Code : MarginProductType1Choice_
+    public partial record Code : MarginProductType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

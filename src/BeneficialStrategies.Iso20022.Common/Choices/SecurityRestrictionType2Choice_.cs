@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c8LMVeLxEeWOD7aAy2fAcA")]
     [DisplayName("Security Restriction Type 2 Choice")]
-    public abstract record SecurityRestrictionType2Choice_ { }
+    public abstract partial record SecurityRestrictionType2Choice_ { }
 }

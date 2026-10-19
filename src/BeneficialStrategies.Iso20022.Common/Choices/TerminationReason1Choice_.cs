@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_932rsXltEeG7BsjMvd1mEw_1357060754")]
     [DisplayName("Termination Reason 1 Choice")]
-    public abstract record TerminationReason1Choice_ { }
+    public abstract partial record TerminationReason1Choice_ { }
 }

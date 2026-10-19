@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_kBNoCQM-Ee2nqoJcXIhTdw")]
 [DisplayName("Netting Cut Off Reference Data Report V")]
-public record NettingCutOffReferenceDataReportV02 : IOuterRecord
+public partial record NettingCutOffReferenceDataReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MaturityRedemptionType3Choice
     /// </summary>
     [IsoId("_eFqj8eLxEeWOD7aAy2fAcA")]
     [DisplayName("Code")]
-    public record Code : MaturityRedemptionType3Choice_
+    public partial record Code : MaturityRedemptionType3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

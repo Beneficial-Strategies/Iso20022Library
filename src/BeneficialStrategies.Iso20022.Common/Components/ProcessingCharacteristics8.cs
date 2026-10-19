@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IkoaAbnxEeq5Lv5RTGDs7Q")]
 [DisplayName("Processing Characteristics")]
-public record ProcessingCharacteristics8
+public partial record ProcessingCharacteristics8
 {
     /// <summary>
     /// Currency in which a subscription is accepted.

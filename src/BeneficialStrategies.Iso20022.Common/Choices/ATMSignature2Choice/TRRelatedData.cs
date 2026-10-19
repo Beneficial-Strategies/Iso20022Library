@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature2Choice
     [IsoId("_iFHDY7TwEeeQy4o2AayYHg")]
     [DisplayName("TR Related Data")]
     [IsoXmlTag("TRRltdData")]
-    public record TRRelatedData : ATMSignature2Choice_
+    public partial record TRRelatedData : ATMSignature2Choice_
     {
         /// <summary>
         /// Specific TR34 command where the TRBlock is a TR34 block.

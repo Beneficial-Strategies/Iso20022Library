@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9yyli3ltEeG7BsjMvd1mEw_-1016607830")]
 [DisplayName("Automatic Variation")]
-public record AutomaticVariation1
+public partial record AutomaticVariation1
 {
     /// <summary>
     /// Identification of the automatic variation.

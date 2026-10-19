@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RBvu4dp-Ed-ak6NoX_4Aeg_2046006177")]
 [DisplayName("Acceptance Result")]
-public record AcceptanceResult6
+public partial record AcceptanceResult6
 {
     /// <summary>
     /// Indicates whether the mandate request was accepted or rejected.

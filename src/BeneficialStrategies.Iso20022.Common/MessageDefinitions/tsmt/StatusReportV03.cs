@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_1C-AWNE8Ed-BzquC8wXy7w_-145028832")]
 [DisplayName("Status Report V")]
-public record StatusReportV03 : IOuterRecord
+public partial record StatusReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

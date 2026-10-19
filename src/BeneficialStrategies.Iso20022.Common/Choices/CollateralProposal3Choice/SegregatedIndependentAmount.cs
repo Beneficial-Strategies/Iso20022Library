@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposal3Choice
     [IsoId("_P0F1U19-EeSMgPeFpRHeJw")]
     [DisplayName("Segregated Independent Amount")]
     [IsoXmlTag("SgrtdIndpdntAmt")]
-    public record SegregatedIndependentAmount : CollateralProposal3Choice_
+    public partial record SegregatedIndependentAmount : CollateralProposal3Choice_
     {
         /// <summary>
         /// Provides the call amount that is agreed and that will result in a collateral movement.

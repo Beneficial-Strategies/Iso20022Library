@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus82Choice
     [IsoId("_FjyNQxIwEeydmIVkS03esw")]
     [DisplayName("Future")]
     [IsoXmlTag("Futr")]
-    public record Future : ProcessingStatus82Choice_
+    public partial record Future : ProcessingStatus82Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

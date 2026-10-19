@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XCwBUQ8iEeSFHsNYty4C9Q")]
 [DisplayName("Option")]
-public record Option10
+public partial record Option10
 {
     /// <summary>
     /// Type of data to indicate whether a trade is an option or resulted by an option exercise.

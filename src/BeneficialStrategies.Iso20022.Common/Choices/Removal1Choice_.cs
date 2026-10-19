@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Removal1Choice.Proprietary), nameof(Removal1Choice.Proprietary))]
     [IsoId("_f6-tYPkREeicy5Zn42b9bg")]
     [DisplayName("Removal 1 Choice")]
-    public abstract record Removal1Choice_ { }
+    public abstract partial record Removal1Choice_ { }
 }

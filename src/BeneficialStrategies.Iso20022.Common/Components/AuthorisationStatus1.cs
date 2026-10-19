@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HhcNkHbNEeef9c2nwgY9Xw")]
 [DisplayName("Authorisation Status")]
-public record AuthorisationStatus1
+public partial record AuthorisationStatus1
 {
     /// <summary>
     /// Indicates whether the transaction was authorised or not.

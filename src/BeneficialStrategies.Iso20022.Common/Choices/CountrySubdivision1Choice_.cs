@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_93jww3ltEeG7BsjMvd1mEw_-652907596")]
     [DisplayName("Country Subdivision 1 Choice")]
-    public abstract record CountrySubdivision1Choice_ { }
+    public abstract partial record CountrySubdivision1Choice_ { }
 }

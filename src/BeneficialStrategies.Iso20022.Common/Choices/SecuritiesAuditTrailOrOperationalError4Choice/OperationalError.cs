@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
     [IsoId("_Ptf-M5JKEeuAlLVx8pyt3w")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : SecuritiesAuditTrailOrOperationalError4Choice_
+    public partial record OperationalError : SecuritiesAuditTrailOrOperationalError4Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

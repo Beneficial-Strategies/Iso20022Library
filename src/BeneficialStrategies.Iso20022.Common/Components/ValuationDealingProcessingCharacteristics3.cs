@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DovC8UlNEeiZP-CimVE7Hg")]
 [DisplayName("Valuation Dealing Processing Characteristics")]
-public record ValuationDealingProcessingCharacteristics3
+public partial record ValuationDealingProcessingCharacteristics3
 {
     /// <summary>
     /// Frequency of the valuation.

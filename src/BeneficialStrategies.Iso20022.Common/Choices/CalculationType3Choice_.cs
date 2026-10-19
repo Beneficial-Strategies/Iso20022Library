@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_MpzBp-LaEeWFtOV72FbX9w")]
     [DisplayName("Calculation Type 3 Choice")]
-    public abstract record CalculationType3Choice_ { }
+    public abstract partial record CalculationType3Choice_ { }
 }

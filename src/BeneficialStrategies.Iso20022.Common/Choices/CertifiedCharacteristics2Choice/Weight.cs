@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     [IsoId("_3DBVNzANEeOKib24wnHaFg")]
     [DisplayName("Weight")]
     [IsoXmlTag("Wght")]
-    public record Weight : CertifiedCharacteristics2Choice_
+    public partial record Weight : CertifiedCharacteristics2Choice_
     {
         /// <summary>
         /// Specifies a unit of measure with a code or free text.

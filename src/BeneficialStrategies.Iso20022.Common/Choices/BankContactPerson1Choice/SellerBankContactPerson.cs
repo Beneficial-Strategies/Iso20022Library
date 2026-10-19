@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
     [IsoId("_pb7W8DAZEeOKib24wnHaFg")]
     [DisplayName("Seller Bank Contact Person")]
     [IsoXmlTag("SellrBkCtctPrsn")]
-    public record SellerBankContactPerson : BankContactPerson1Choice_
+    public partial record SellerBankContactPerson : BankContactPerson1Choice_
     {
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.

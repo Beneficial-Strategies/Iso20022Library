@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E2lAYIonEeSaAcF2oE2GNQ")]
 [DisplayName("ATM Media Mix")]
-public record ATMMediaMix1
+public partial record ATMMediaMix1
 {
     /// <summary>
     /// Logical unit number of the cash dispenser.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Aj9XsTpuEemk2e6qGBk8IQ")]
 [DisplayName("Collateral Value Search Criteria")]
-public record CollateralValueSearchCriteria3
+public partial record CollateralValueSearchCriteria3
 {
     /// <summary>
     /// Unique and unambiguous identification for the cash account between the account owner and the account servicer.

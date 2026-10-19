@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Y-Lll4FxEeWtPe6Crjmeug")]
     [DisplayName("Collateral Account Identification Type 2 Choice")]
-    public abstract record CollateralAccountIdentificationType2Choice_ { }
+    public abstract partial record CollateralAccountIdentificationType2Choice_ { }
 }

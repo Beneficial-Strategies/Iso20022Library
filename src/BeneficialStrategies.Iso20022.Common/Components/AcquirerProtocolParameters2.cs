@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Kszxs31DEeCF8NjrBemJWQ_-1699240032")]
 [DisplayName("Acquirer Protocol Parameters")]
-public record AcquirerProtocolParameters2
+public partial record AcquirerProtocolParameters2
 {
     /// <summary>
     /// Mode for the financial capture of the transaction by the acquirer.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError7Cho
     /// Business Report.
     /// </summary>
     [DisplayName("Business Report")]
-    public record BusinessReport : CollateralValueReportOrError7Choice_
+    public partial record BusinessReport : CollateralValueReportOrError7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_KI1l8XfYEe2I4Iip2NEM0A")]
 [DisplayName("Foreign Exchange Trade Confirmation Status Advice Acknowledgement V02")]
-public record ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02 : IOuterRecord
+public partial record ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

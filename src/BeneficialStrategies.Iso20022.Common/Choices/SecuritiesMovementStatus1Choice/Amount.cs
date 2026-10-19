@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     [IsoId("_TAzfgOCzEei2UYJ62ws-Fw")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : SecuritiesMovementStatus1Choice_
+    public partial record Amount : SecuritiesMovementStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uk2CN9p-Ed-ak6NoX_4Aeg_1785473393")]
 [DisplayName("Variation Margin2")]
-public record VariationMargin2
+public partial record VariationMargin2
 {
     /// <summary>
     /// Margin required to cover the risk because of the price fluctuations occurred on the unsettled exposures towards the central counterparty.

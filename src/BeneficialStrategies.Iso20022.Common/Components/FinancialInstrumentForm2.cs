@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dPETJeLxEeWOD7aAy2fAcA")]
 [DisplayName("Financial Instrument Form")]
-public record FinancialInstrumentForm2
+public partial record FinancialInstrumentForm2
 {
     /// <summary>
     /// Indicates the booking appearance of the financial Instrument.

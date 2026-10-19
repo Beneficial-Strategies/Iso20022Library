@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice
     [IsoId("_HK0lE2jHEeiCUdTMLdZoIg")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : PartyAuditTrailOrError2Choice_
+    public partial record BusinessError : PartyAuditTrailOrError2Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

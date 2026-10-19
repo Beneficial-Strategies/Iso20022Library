@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Pu8gMieEei73Ywzx0CAAg")]
 [DisplayName("Implementation Specification")]
-public record ImplementationSpecification1
+public partial record ImplementationSpecification1
 {
     /// <summary>
     /// Name of the implementation specification registry in which the implementation specification of the ISO 20022 message is maintained.

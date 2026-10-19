@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QnOWE9p-Ed-ak6NoX_4Aeg_-1322304897")]
 [DisplayName("Reference")]
-public record Reference17
+public partial record Reference17
 {
     /// <summary>
     /// Identification of the collateral substitution request.

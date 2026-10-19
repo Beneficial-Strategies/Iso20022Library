@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ATMSignature3Choice.TRRelatedData), nameof(ATMSignature3Choice.TRRelatedData))]
     [IsoId("_Aa2d8cPzEfCTf8R2j0RpdQ")]
     [DisplayName("ATMSignature3Choice")]
-    public abstract record ATMSignature3Choice_ { }
+    public abstract partial record ATMSignature3Choice_ { }
 }

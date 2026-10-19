@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ObBcUbZ6EfCUZfsQO4rYeA")]
 [DisplayName("Security Parameters19")]
-public record SecurityParameters19
+public partial record SecurityParameters19
 {
     /// <summary>
     /// Random value from the host.

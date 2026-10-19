@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nkIKwItqEeSDLd7nI4Quzw")]
 [DisplayName("Host To ATM Request")]
-public record HostToATMRequest1
+public partial record HostToATMRequest1
 {
     /// <summary>
     /// Environment of the ATM.

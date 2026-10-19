@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeMarket1Choice
     [IsoId("_NzE0NzQ5-AOSNFX-5096945")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TradeMarket1Choice_
+    public partial record Proprietary : TradeMarket1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

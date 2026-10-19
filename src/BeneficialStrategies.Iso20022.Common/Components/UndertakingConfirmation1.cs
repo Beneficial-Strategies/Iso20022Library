@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9yV5knltEeG7BsjMvd1mEw_-1807654359")]
 [DisplayName("Undertaking Confirmation")]
-public record UndertakingConfirmation1
+public partial record UndertakingConfirmation1
 {
     /// <summary>
     /// Party that adds its undertaking to honour the undertaking or amendment of the undertaking.

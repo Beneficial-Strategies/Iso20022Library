@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5vqksTZ7EeOP_KvUKe29ng")]
 [DisplayName("Acceptor Configuration")]
-public record AcceptorConfiguration3
+public partial record AcceptorConfiguration3
 {
     /// <summary>
     /// Identification of the point of interaction for terminal management.

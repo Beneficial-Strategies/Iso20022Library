@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_J4YkLygrEeyB747fKu7_rw")]
 [DisplayName("Margin Call Response V")]
-public record MarginCallResponseV05 : IOuterRecord
+public partial record MarginCallResponseV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

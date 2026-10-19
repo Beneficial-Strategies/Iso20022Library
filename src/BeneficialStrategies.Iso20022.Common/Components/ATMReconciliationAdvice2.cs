@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MEvd0a47EeWRfYPBaeOY8w")]
 [DisplayName("ATM Reconciliation Advice")]
-public record ATMReconciliationAdvice2
+public partial record ATMReconciliationAdvice2
 {
     /// <summary>
     /// Environment of the ATM.

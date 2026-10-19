@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References70Choice
     /// </summary>
     [IsoId("_F1wScFSOEemTt7251YwCKw")]
     [DisplayName("Client Collateral Instruction Identification")]
-    public record ClientCollateralInstructionIdentification : References70Choice_
+    public partial record ClientCollateralInstructionIdentification : References70Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bRP60Wc-EemvNLufWGIVOQ")]
     [DisplayName("Audit Trail Or Business Error 6 Choice")]
-    public abstract record AuditTrailOrBusinessError6Choice_ { }
+    public abstract partial record AuditTrailOrBusinessError6Choice_ { }
 }

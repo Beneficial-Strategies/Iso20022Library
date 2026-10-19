@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6jOVEYqFEeSRT5rEzcAHEw")]
 [DisplayName("Action")]
-public record Action5
+public partial record Action5
 {
     /// <summary>
     /// Type of action to be performed by the card acceptor.

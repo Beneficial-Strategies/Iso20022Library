@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uj_XoWpuEeSMqvBfBY1c9A")]
 [DisplayName("Payment Terminal Parameters")]
-public record PaymentTerminalParameters2
+public partial record PaymentTerminalParameters2
 {
     /// <summary>
     /// Identification of the vendor for the MTM, if the POI manages various subsets of terminal parameters.

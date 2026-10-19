@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-EhOsXltEeG7BsjMvd1mEw_-2096165478")]
 [DisplayName("Party And Type")]
-public record PartyAndType1
+public partial record PartyAndType1
 {
     /// <summary>
     /// Type of additional party.

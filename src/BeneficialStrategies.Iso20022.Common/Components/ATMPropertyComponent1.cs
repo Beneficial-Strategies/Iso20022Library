@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8zqmEJ2gEe-4seDr3Li2Ew")]
 [DisplayName("ATM Property Component1")]
-public record ATMPropertyComponent1
+public partial record ATMPropertyComponent1
 {
     /// <summary>
     /// Property Name.

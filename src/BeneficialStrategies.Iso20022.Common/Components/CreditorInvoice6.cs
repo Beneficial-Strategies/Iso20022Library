@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1GcAcTEyEe6g-ffJsqGiSA")]
 [DisplayName("Creditor Invoice6")]
-public record CreditorInvoice6
+public partial record CreditorInvoice6
 {
     /// <summary>
     /// Limited Presentment Indicator.

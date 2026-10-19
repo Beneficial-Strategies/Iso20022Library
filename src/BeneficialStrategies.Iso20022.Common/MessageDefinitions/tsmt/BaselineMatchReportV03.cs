@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_lhzYiNE8Ed-BzquC8wXy7w_-1930237011")]
 [DisplayName("Baseline Match Report V")]
-public record BaselineMatchReportV03 : IOuterRecord
+public partial record BaselineMatchReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yDLnEA2IEeSwB74WgTbh4Q")]
 [DisplayName("Trade")]
-public record Trade2
+public partial record Trade2
 {
     /// <summary>
     /// Unique reference identification assigned to the trade by the instructing party. This reference will be used throughout the trade life cycle to identify the particular trade.

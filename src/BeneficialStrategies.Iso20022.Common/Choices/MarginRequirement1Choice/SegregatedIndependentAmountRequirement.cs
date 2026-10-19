@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginRequirement1Choice
     [IsoId("_QmogMdp-Ed-ak6NoX_4Aeg_-911647050")]
     [DisplayName("Segregated Independent Amount Requirement")]
     [IsoXmlTag("SgrtdIndpdntAmtRqrmnt")]
-    public record SegregatedIndependentAmountRequirement : MarginRequirement1Choice_
+    public partial record SegregatedIndependentAmountRequirement : MarginRequirement1Choice_
     {
         /// <summary>
         /// Amount of new margin that will be delivered to one party by the other party after rounding, threshold and minimum transfer amount are taken into account.

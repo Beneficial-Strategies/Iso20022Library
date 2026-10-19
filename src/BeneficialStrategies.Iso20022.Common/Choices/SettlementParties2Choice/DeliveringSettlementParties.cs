@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties2Choice
     [IsoId("_-an2lqMOEeCojJW5vEuTEQ_715985560")]
     [DisplayName("Delivering Settlement Parties")]
     [IsoXmlTag("DlvrgSttlmPties")]
-    public record DeliveringSettlementParties : SettlementParties2Choice_
+    public partial record DeliveringSettlementParties : SettlementParties2Choice_
     {
         /// <summary>
         /// First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.

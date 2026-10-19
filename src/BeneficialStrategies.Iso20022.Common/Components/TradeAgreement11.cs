@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NoHuwVN5EeOEi5J12GuNGQ")]
 [DisplayName("Trade Agreement")]
-public record TradeAgreement11
+public partial record TradeAgreement11
 {
     /// <summary>
     /// Date on which the trading parties agreed to amend or cancel the trade.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice
     /// Lock Status.
     /// </summary>
     [DisplayName("Lock Status")]
-    public record LockStatus : UpdateLogPartyRecord2Choice_
+    public partial record LockStatus : UpdateLogPartyRecord2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

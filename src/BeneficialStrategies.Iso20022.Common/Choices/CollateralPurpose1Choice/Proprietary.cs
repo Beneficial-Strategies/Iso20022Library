@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPurpose1Choice
     [IsoId("_Qkr_ddp-Ed-ak6NoX_4Aeg_-438505533")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CollateralPurpose1Choice_
+    public partial record Proprietary : CollateralPurpose1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

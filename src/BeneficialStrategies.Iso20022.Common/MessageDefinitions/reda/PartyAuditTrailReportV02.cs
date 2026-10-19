@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_R3RGgzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Party Audit Trail Report V02")]
-public record PartyAuditTrailReportV02 : IOuterRecord
+public partial record PartyAuditTrailReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

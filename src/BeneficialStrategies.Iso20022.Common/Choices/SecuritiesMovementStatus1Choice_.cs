@@ -61,5 +61,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_IeQt0OCzEei2UYJ62ws-Fw")]
     [DisplayName("Securities Movement Status 1 Choice")]
-    public abstract record SecuritiesMovementStatus1Choice_ { }
+    public abstract partial record SecuritiesMovementStatus1Choice_ { }
 }

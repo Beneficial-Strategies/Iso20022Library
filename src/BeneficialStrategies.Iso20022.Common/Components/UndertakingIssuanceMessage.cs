@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_98U8CHltEeG7BsjMvd1mEw_1927881342")]
 [DisplayName("Undertaking Issuance Message")]
-public record UndertakingIssuanceMessage
+public partial record UndertakingIssuanceMessage
 {
     /// <summary>
     /// Independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be collected on the presentation of documents that comply with its terms and conditions.

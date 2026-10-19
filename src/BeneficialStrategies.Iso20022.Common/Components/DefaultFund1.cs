@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UqpvS9p-Ed-ak6NoX_4Aeg_1890910429")]
 [DisplayName("Default Fund")]
-public record DefaultFund1
+public partial record DefaultFund1
 {
     /// <summary>
     /// Specifies the account identification of the clearing member at the ICSD (International Central Securities Depository) or at the central bank.

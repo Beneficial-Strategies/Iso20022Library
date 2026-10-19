@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 )]
 [IsoId("_5h17wWp0EeSMqvBfBY1c9A")]
 [DisplayName("Terminal Management Rejection V")]
-public record TerminalManagementRejectionV03 : IOuterRecord
+public partial record TerminalManagementRejectionV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

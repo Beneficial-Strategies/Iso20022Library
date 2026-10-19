@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_paNNeNE8Ed-BzquC8wXy7w_-1602880214")]
 [DisplayName("Full Push Through Report V")]
-public record FullPushThroughReportV03 : IOuterRecord
+public partial record FullPushThroughReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

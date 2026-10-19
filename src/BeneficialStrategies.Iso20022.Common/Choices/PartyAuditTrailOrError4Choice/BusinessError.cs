@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError4Choice
     /// Business Error.
     /// </summary>
     [DisplayName("Business Error")]
-    public record BusinessError : PartyAuditTrailOrError4Choice_
+    public partial record BusinessError : PartyAuditTrailOrError4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

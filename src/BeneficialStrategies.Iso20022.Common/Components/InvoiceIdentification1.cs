@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RaVOAtp-Ed-ak6NoX_4Aeg_905732542")]
 [DisplayName("Invoice Identification")]
-public record InvoiceIdentification1
+public partial record InvoiceIdentification1
 {
     /// <summary>
     /// Identifies the document.

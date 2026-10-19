@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXAmountType1Choice
     /// </summary>
     [IsoId("_Z-9lhQN2Ee2-vqzwMUAewg")]
     [DisplayName("Code")]
-    public record Code : FXAmountType1Choice_
+    public partial record Code : FXAmountType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

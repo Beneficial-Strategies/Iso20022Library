@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     [IsoId("_aHcyEOCzEei2UYJ62ws-Fw")]
     [DisplayName("Excluded")]
     [IsoXmlTag("Excld")]
-    public record Excluded : SecuritiesMovementStatus1Choice_
+    public partial record Excluded : SecuritiesMovementStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

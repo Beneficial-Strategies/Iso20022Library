@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_2uaNRys7EeySlt9bF77XfA")]
 [DisplayName("Triparty Collateral Unilateral Removal Request V")]
-public record TripartyCollateralUnilateralRemovalRequestV01 : IOuterRecord
+public partial record TripartyCollateralUnilateralRemovalRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

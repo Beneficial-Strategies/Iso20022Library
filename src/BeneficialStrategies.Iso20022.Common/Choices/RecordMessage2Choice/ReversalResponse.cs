@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the reversal response message.</summary>
     [IsoId("_kNBj027-EfC68Y4jZPNEug")]
     [DisplayName("Reversal Response")]
-    public record ReversalResponse : RecordMessage2Choice_
+    public partial record ReversalResponse : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RvslRspn")]

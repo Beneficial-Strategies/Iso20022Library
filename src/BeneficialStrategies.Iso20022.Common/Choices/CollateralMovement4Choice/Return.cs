@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement4Choice
     [IsoId("_yckWY4FvEeWtPe6Crjmeug")]
     [DisplayName("Return")]
     [IsoXmlTag("Rtr")]
-    public record Return : CollateralMovement4Choice_
+    public partial record Return : CollateralMovement4Choice_
     {
         /// <summary>
         /// Specifies the reference to the unambiguous identification of the margin call request.

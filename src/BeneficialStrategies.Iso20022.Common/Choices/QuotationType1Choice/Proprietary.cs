@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuotationType1Choice
     [IsoId("_aZwzYNK4EeihtcVwfFPNlg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : QuotationType1Choice_
+    public partial record Proprietary : QuotationType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

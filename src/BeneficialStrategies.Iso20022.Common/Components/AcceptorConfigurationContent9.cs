@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_No_w0QufEeqw5uEXxQ9H4g")]
 [DisplayName("Acceptor Configuration Content")]
-public record AcceptorConfigurationContent9
+public partial record AcceptorConfigurationContent9
 {
     /// <summary>
     /// True if the whole configuration related to the terminal manager has to be replaced by the configuration included in the message content.

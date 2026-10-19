@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-ezL8aMOEeCojJW5vEuTEQ_1121588279")]
 [DisplayName("Settlement Obligation")]
-public record SettlementObligation5
+public partial record SettlementObligation5
 {
     /// <summary>
     /// Provides the identification of an existing obligation that is linked to the new obligation.

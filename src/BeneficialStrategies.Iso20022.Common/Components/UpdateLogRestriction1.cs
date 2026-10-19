@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rhJnc2jTEeiRg5NzP0jkQg")]
 [DisplayName("Update Log Restriction")]
-public record UpdateLogRestriction1
+public partial record UpdateLogRestriction1
 {
     /// <summary>
     /// Old value before the update.

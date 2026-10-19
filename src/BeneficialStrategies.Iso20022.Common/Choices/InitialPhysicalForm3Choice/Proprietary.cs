@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialPhysicalForm3Choice
     [IsoId("_m9Igc-LcEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InitialPhysicalForm3Choice_
+    public partial record Proprietary : InitialPhysicalForm3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     [IsoId("_yJhSq4v-Eei289CGNqs21g")]
     [DisplayName("System Restriction")]
     [IsoXmlTag("SysRstrctn")]
-    public record SystemRestriction : SystemPartyModification2Choice_
+    public partial record SystemRestriction : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Specifies the date from which the restriction is valid.

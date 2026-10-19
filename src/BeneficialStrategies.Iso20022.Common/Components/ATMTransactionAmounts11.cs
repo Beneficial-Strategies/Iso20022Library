@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LyqdcaDtEe-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction Amounts11")]
-public record ATMTransactionAmounts11
+public partial record ATMTransactionAmounts11
 {
     /// <summary>
     /// Currency.

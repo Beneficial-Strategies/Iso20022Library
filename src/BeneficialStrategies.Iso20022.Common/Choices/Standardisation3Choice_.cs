@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PbNAMWp7EemmaZLSPtWX5A")]
     [DisplayName("Standardisation 3 Choice")]
-    public abstract record Standardisation3Choice_ { }
+    public abstract partial record Standardisation3Choice_ { }
 }

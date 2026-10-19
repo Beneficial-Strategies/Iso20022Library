@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_IfVZwV8rEeicg40_9gK9vQ")]
     [DisplayName("Fund Order Type 5 Choice")]
-    public abstract record FundOrderType5Choice_ { }
+    public abstract partial record FundOrderType5Choice_ { }
 }

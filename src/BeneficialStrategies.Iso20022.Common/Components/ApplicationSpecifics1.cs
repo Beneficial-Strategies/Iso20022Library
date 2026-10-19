@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jLluUe5NEeCisYr99QEiWA_17771453")]
 [DisplayName("Application Specifics")]
-public record ApplicationSpecifics1
+public partial record ApplicationSpecifics1
 {
     /// <summary>
     /// A system user is a user account defined in the static data. It represents an individual or an application that interacts with the system administrator (e. g. T2S), triggering the available functions. The set of functions available to each system user stems from the set of privileges for which the system user is grantee. System administrator does not provide any attribute for distinguishing between individuals and applications.

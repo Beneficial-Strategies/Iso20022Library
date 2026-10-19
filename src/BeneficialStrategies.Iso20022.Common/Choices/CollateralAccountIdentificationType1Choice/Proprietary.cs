@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralAccountIdentificationT
     [IsoId("_vW0gOaMOEeCojJW5vEuTEQ_-1071402560")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CollateralAccountIdentificationType1Choice_
+    public partial record Proprietary : CollateralAccountIdentificationType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

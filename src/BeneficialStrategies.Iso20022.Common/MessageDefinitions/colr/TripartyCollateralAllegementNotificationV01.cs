@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_xMpNYSs7EeySlt9bF77XfA")]
 [DisplayName("Triparty Collateral Allegement Notification V")]
-public record TripartyCollateralAllegementNotificationV01 : IOuterRecord
+public partial record TripartyCollateralAllegementNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

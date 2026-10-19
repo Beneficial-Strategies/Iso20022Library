@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_2VKQNeLbEeWFtOV72FbX9w")]
     [DisplayName("Settlement Type 3 Choice")]
-    public abstract record SettlementType3Choice_ { }
+    public abstract partial record SettlementType3Choice_ { }
 }

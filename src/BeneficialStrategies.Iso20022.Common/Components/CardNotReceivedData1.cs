@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t-vZMXR4EfC68Y4jZPNEug")]
 [DisplayName("Card Not Received Data1")]
-public record CardNotReceivedData1
+public partial record CardNotReceivedData1
 {
     /// <summary>
     /// Date of card when mailed to the cardholder.

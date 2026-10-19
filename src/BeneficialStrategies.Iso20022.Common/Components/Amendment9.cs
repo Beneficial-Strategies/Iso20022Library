@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9_wDcHltEeG7BsjMvd1mEw_-868509945")]
 [DisplayName("Amendment")]
-public record Amendment9
+public partial record Amendment9
 {
     /// <summary>
     /// Contents of the related UndertakingAmendmentResponse message.

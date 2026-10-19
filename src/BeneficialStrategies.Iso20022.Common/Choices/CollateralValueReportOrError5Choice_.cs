@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_95GpHzpvEemk2e6qGBk8IQ")]
     [DisplayName("Collateral Value Report Or Error 5 Choice")]
-    public abstract record CollateralValueReportOrError5Choice_ { }
+    public abstract partial record CollateralValueReportOrError5Choice_ { }
 }

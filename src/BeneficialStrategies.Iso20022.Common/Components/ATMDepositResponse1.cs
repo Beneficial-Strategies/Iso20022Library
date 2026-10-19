@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Eg99cK4GEeWL1uap3dNhCQ")]
 [DisplayName("ATM Deposit Response")]
-public record ATMDepositResponse1
+public partial record ATMDepositResponse1
 {
     /// <summary>
     /// Environment of the deposit transaction.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionStrategy1Choice
     /// </summary>
     [IsoId("_4p7P4DcgEeidBoT_PugKiA")]
     [DisplayName("Code")]
-    public record Code : DistributionStrategy1Choice_
+    public partial record Code : DistributionStrategy1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

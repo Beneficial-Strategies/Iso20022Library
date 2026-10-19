@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BwZSkXJtEe299ZbWCkdR_w")]
 [DisplayName("Terminal Management Data Set")]
-public record TerminalManagementDataSet32
+public partial record TerminalManagementDataSet32
 {
     /// <summary>
     /// Identification of the data set containing the management plan.

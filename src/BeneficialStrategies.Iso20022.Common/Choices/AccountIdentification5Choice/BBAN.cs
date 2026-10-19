@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification5Choice
     /// </summary>
     [IsoId("_Pdd4tNp-Ed-ak6NoX_4Aeg_-2103439422")]
     [DisplayName("BBAN")]
-    public record BBAN : AccountIdentification5Choice_
+    public partial record BBAN : AccountIdentification5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

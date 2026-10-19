@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2snkEY1IEe6S0_1AaJzQCA")]
 [DisplayName("Clearing Batch Data3")]
-public record ClearingBatchData3
+public partial record ClearingBatchData3
 {
     /// <summary>
     /// Method.

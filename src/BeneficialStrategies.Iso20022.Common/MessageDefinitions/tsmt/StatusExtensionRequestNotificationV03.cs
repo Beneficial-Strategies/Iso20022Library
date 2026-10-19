@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_zU2RotE8Ed-BzquC8wXy7w_883782458")]
 [DisplayName("Status Extension Request Notification V")]
-public record StatusExtensionRequestNotificationV03 : IOuterRecord
+public partial record StatusExtensionRequestNotificationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

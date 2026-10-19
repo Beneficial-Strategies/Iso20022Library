@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_12okUWp7EemmaZLSPtWX5A")]
 [DisplayName("Future")]
-public record Future4
+public partial record Future4
 {
     /// <summary>
     /// Ratio or multiplying factor used to convert one contract into a quantity.

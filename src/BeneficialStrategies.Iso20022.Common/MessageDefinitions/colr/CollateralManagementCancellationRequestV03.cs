@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_AP6ogV9MEeSMgPeFpRHeJw")]
 [DisplayName("Collateral Management Cancellation Request V")]
-public record CollateralManagementCancellationRequestV03 : IOuterRecord
+public partial record CollateralManagementCancellationRequestV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

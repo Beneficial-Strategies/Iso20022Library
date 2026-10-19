@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent2Choice
     /// Text.
     /// </summary>
     [DisplayName("Text")]
-    public record Text : ReportContent2Choice_
+    public partial record Text : ReportContent2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

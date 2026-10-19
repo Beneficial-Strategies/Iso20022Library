@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 )]
 [IsoId("_Gvo5oIttEeSLQutgI1Ulfw")]
 [DisplayName("ATM Reconciliation Advice V")]
-public record ATMReconciliationAdviceV01 : IOuterRecord
+public partial record ATMReconciliationAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

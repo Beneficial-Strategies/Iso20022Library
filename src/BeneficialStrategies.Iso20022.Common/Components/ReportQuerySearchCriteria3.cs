@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6fCc1TEyEe6g-ffJsqGiSA")]
 [DisplayName("Report Query Search Criteria3")]
-public record ReportQuerySearchCriteria3
+public partial record ReportQuerySearchCriteria3
 {
     /// <summary>
     /// Account Identification.

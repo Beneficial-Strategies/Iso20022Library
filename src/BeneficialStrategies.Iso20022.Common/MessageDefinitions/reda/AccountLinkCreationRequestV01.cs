@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_uMfpsS-1Ee-7Nrf72hv69A")]
 [DisplayName("Account Link Creation Request V01")]
-public record AccountLinkCreationRequestV01 : IOuterRecord
+public partial record AccountLinkCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

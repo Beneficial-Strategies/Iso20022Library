@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gtlD0YokEeSaAcF2oE2GNQ")]
 [DisplayName("Detailed Amount")]
-public record DetailedAmount12
+public partial record DetailedAmount12
 {
     /// <summary>
     /// Amount to be dispensed by the ATM after the approval of the withdrawal transaction.

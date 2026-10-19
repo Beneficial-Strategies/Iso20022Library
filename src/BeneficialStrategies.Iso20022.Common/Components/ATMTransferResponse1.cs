@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7PP2cK4xEeWpsoxRhdX-8A")]
 [DisplayName("ATM Transfer Response")]
-public record ATMTransferResponse1
+public partial record ATMTransferResponse1
 {
     /// <summary>
     /// Environment of the transaction.

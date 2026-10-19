@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k0cdIa4MEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Cassette Counters")]
-public record ATMCassetteCounters3
+public partial record ATMCassetteCounters3
 {
     /// <summary>
     /// Amount of one media unit, if the media type is valued.

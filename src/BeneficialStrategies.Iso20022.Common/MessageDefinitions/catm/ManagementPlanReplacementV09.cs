@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 )]
 [IsoId("_vWfH8Si8Eeurkfo6MpvKDA")]
 [DisplayName("Management Plan Replacement V")]
-public record ManagementPlanReplacementV09 : IOuterRecord
+public partial record ManagementPlanReplacementV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_j0IVwtE8Ed-BzquC8wXy7w_1561210255")]
 [DisplayName("Amendment Acceptance V")]
-public record AmendmentAcceptanceV02 : IOuterRecord
+public partial record AmendmentAcceptanceV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

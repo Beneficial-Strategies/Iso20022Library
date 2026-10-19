@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TBrGFgEcEeCQm6a_G2yO_w_1465529279")]
 [DisplayName("Document Adjustment")]
-public record DocumentAdjustment2
+public partial record DocumentAdjustment2
 {
     /// <summary>
     /// Amount of money of the document adjustment.

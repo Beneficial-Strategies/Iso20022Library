@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7vrLEFA9EeedyPuM0kK2EQ")]
 [DisplayName("Clearing Control Totals")]
-public record ClearingControlTotals1
+public partial record ClearingControlTotals1
 {
     /// <summary>
     /// Number of clearing transactions. To be used for control purpose.

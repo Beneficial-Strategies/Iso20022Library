@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cIeP8Wf9Eembv_9KtOEw8g")]
 [DisplayName("Security Restriction")]
-public record SecurityRestriction3
+public partial record SecurityRestriction3
 {
     /// <summary>
     /// Period during which the restriction applies.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w_JcYMX1EeiSF9q-coWegA")]
 [DisplayName("Transaction Status")]
-public record TransactionStatus6
+public partial record TransactionStatus6
 {
     /// <summary>
     /// Provides the status after comparing the exposure and the collateral required for the transaction.

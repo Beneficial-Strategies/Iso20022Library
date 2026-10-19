@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SBqscOhlEeqspItL-MF5VQ")]
 [DisplayName("Crystallisation Day")]
-public record CrystallisationDay1
+public partial record CrystallisationDay1
 {
     /// <summary>
     /// Fix of the penultimate accrual date of the transaction to the final (repurchase) date. Crystallizing the penultimate fixing into a fixed rate for the final business day. This will allow for parties to send timely settlement instructions for the repurchase leg of the transaction. Default value is 1 day. If not 1 then crystallization period must be used.

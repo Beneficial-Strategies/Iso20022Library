@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cIPBMLzcEeivTd4NUfCi2g")]
     [DisplayName("Response Status 9 Choice")]
-    public abstract record ResponseStatus9Choice_ { }
+    public abstract partial record ResponseStatus9Choice_ { }
 }

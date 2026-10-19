@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_70DO0Tp0Eemk2e6qGBk8IQ")]
 [DisplayName("Securities Account Modification")]
-public record SecuritiesAccountModification2
+public partial record SecuritiesAccountModification2
 {
     /// <summary>
     /// Specifies the type of requested modification.

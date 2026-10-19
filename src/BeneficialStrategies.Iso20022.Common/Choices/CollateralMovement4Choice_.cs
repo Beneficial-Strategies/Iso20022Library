@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yGZ5JYFvEeWtPe6Crjmeug")]
     [DisplayName("Collateral Movement 4 Choice")]
-    public abstract record CollateralMovement4Choice_ { }
+    public abstract partial record CollateralMovement4Choice_ { }
 }

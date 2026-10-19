@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ss0ngTDrEey2N-DB7H7A5A")]
 [DisplayName("Corporate Action General Information SD")]
-public record CorporateActionGeneralInformationSD52
+public partial record CorporateActionGeneralInformationSD52
 {
     /// <summary>
     /// Xpath to the element that is being extended.

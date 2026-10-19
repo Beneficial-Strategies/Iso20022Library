@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TIAQw9p-Ed-ak6NoX_4Aeg_1813124879")]
 [DisplayName("Non Deliverable Forward Valuation Conditions")]
-public record NonDeliverableForwardValuationConditions2
+public partial record NonDeliverableForwardValuationConditions2
 {
     /// <summary>
     /// Specifies the currency in which the non deliverable trade has to be settled ie the deliverable currency.

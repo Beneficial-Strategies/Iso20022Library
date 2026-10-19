@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_ApDrEC_9EeOKib24wnHaFg")]
 [DisplayName("Account And Parties")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record AccountAndParties2
+public partial record AccountAndParties2
 {
     /// <summary>
     /// Description of the account.

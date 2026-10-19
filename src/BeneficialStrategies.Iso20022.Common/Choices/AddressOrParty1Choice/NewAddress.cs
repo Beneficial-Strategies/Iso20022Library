@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressOrParty1Choice
     [IsoId("_-Eq_sHltEeG7BsjMvd1mEw_907954656")]
     [DisplayName("New Address")]
     [IsoXmlTag("NewAdr")]
-    public record NewAddress : AddressOrParty1Choice_
+    public partial record NewAddress : AddressOrParty1Choice_
     {
         /// <summary>
         /// Identifies the nature of the postal address.

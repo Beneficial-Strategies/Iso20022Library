@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_rvMtQSs7EeySlt9bF77XfA")]
 [DisplayName("Triparty Collateral Allegement Notification Cancellation Advice V")]
-public record TripartyCollateralAllegementNotificationCancellationAdviceV01 : IOuterRecord
+public partial record TripartyCollateralAllegementNotificationCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

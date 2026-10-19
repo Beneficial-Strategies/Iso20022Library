@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice
     /// </summary>
     [IsoId("_d0qV3gLyEeutW5-TpeYJhA")]
     [DisplayName("Dispute Notification Identification")]
-    public record DisputeNotificationIdentification : Reference3Choice_
+    public partial record DisputeNotificationIdentification : Reference3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

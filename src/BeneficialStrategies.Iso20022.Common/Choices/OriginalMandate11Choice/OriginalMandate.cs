@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate11Choice
     /// Original Mandate.
     /// </summary>
     [DisplayName("Original Mandate")]
-    public record OriginalMandate : OriginalMandate11Choice_
+    public partial record OriginalMandate : OriginalMandate11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

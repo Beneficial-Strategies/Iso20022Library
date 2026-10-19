@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Hnr6scVJEeeWeZMpNX1JUQ")]
 [DisplayName("Securities Quantity Details SD")]
-public record SecuritiesQuantityDetailsSD3
+public partial record SecuritiesQuantityDetailsSD3
 {
     /// <summary>
     /// For rights subscription events with an oversubscription feature, the quantity of the oversubscription for the given instruction.

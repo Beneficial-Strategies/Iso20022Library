@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UnrTydp-Ed-ak6NoX_4Aeg_-116466273")]
     [DisplayName("Dispute Resolution Type 2 Choice")]
-    public abstract record DisputeResolutionType2Choice_ { }
+    public abstract partial record DisputeResolutionType2Choice_ { }
 }

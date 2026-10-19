@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle1Choice
     [IsoId("_Q_N_UNp-Ed-ak6NoX_4Aeg_-41434346")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : OptionStyle1Choice_
+    public partial record Proprietary : OptionStyle1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

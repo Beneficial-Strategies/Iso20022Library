@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.pain;
     @"The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file)."
 )]
 [DisplayName("Creditor Payment Activation Request Status Report V12")]
-public record CreditorPaymentActivationRequestStatusReportV12 : IOuterRecord
+public partial record CreditorPaymentActivationRequestStatusReportV12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

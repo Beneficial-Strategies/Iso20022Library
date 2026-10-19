@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_uMgQwS-1Ee-7Nrf72hv69A")]
 [DisplayName("Account Link Maintenance Request V01")]
-public record AccountLinkMaintenanceRequestV01 : IOuterRecord
+public partial record AccountLinkMaintenanceRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uoa6pdp-Ed-ak6NoX_4Aeg_1642095269")]
 [DisplayName("Margin Collateral")]
-public record MarginCollateral1
+public partial record MarginCollateral1
 {
     /// <summary>
     /// Post haircut market value of all margin collateral held by party A.

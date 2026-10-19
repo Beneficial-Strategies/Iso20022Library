@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice
     [IsoId("_6n8NYBrYEeOVR9VN6fAMUg")]
     [DisplayName("By Commercial Invoice")]
     [IsoXmlTag("ByComrclInvc")]
-    public record ByCommercialInvoice : BreakDown1Choice_
+    public partial record ByCommercialInvoice : BreakDown1Choice_
     {
         /// <summary>
         /// Reference to the identification of the underlying commercial document.

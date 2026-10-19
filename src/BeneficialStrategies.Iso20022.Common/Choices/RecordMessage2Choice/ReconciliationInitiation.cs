@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the reconciliation initiation message.</summary>
     [IsoId("_kNBjxW7-EfC68Y4jZPNEug")]
     [DisplayName("Reconciliation Initiation")]
-    public record ReconciliationInitiation : RecordMessage2Choice_
+    public partial record ReconciliationInitiation : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RcncltnInitn")]

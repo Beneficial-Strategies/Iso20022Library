@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PtkDd0N8Ee-QZYT2pcGFZw")]
 [DisplayName("Tracker Payment Transaction14")]
-public record TrackerPaymentTransaction14
+public partial record TrackerPaymentTransaction14
 {
     /// <summary>
     /// Tracked Message Identification.

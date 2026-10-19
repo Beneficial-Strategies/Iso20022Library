@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jqWwgUj3Ee-KhcStGV4xTg")]
     [DisplayName("Currency Or Digital Token Amount2Choice")]
-    public abstract record CurrencyOrDigitalTokenAmount2Choice_ { }
+    public abstract partial record CurrencyOrDigitalTokenAmount2Choice_ { }
 }

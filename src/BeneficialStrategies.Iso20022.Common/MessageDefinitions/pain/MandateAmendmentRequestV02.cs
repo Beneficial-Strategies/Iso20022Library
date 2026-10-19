@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_rye_AFkyEeGeoaLUQk__nA_1884403542")]
 [DisplayName("Mandate Amendment Request V")]
-public record MandateAmendmentRequestV02 : IOuterRecord
+public partial record MandateAmendmentRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

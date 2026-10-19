@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yQlkAEeSEeODR7vDcYOqmg")]
 [DisplayName("Payment Terminal Parameters")]
-public record PaymentTerminalParameters1
+public partial record PaymentTerminalParameters1
 {
     /// <summary>
     /// Parameters to synchronise the real time clock of the POI (Point Of Interaction).

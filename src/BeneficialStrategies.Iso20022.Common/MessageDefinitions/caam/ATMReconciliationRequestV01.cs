@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_aI6GcKE-Ee-MRKYsaX6JDg")]
 [DisplayName("ATM Reconciliation Request V01")]
-public record ATMReconciliationRequestV01 : IOuterRecord
+public partial record ATMReconciliationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

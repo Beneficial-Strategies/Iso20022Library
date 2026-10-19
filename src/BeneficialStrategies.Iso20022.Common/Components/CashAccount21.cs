@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SOMT5dp-Ed-ak6NoX_4Aeg_-661044287")]
 [DisplayName("Cash Account")]
-public record CashAccount21
+public partial record CashAccount21
 {
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.

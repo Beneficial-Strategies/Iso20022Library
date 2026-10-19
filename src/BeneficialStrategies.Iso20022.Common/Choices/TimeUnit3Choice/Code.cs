@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeUnit3Choice
     /// </summary>
     [IsoId("_oTL_UeLaEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : TimeUnit3Choice_
+    public partial record Code : TimeUnit3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

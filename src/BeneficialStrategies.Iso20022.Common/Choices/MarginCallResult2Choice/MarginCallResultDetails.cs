@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice
     [IsoId("_9boCQKMPEeCojJW5vEuTEQ_1384684121")]
     [DisplayName("Margin Call Result Details")]
     [IsoXmlTag("MrgnCallRsltDtls")]
-    public record MarginCallResultDetails : MarginCallResult2Choice_
+    public partial record MarginCallResultDetails : MarginCallResult2Choice_
     {
         /// <summary>
         /// Provides the summation of the call amounts for the variation margin amount only.

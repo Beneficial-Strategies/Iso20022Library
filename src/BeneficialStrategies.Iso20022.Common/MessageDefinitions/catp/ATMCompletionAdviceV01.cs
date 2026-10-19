@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 )]
 [IsoId("_cohY4IqmEeS4a4abTJTSSw")]
 [DisplayName("ATM Completion Advice V")]
-public record ATMCompletionAdviceV01 : IOuterRecord
+public partial record ATMCompletionAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

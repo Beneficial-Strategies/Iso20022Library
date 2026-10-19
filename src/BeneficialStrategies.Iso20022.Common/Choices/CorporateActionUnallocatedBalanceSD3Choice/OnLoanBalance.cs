@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
     [IsoId("_ujGeWcSTEeeRJJtE9TSlkw")]
     [DisplayName("On Loan Balance")]
     [IsoXmlTag("OnLnBal")]
-    public record OnLoanBalance : CorporateActionUnallocatedBalanceSD3Choice_
+    public partial record OnLoanBalance : CorporateActionUnallocatedBalanceSD3Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

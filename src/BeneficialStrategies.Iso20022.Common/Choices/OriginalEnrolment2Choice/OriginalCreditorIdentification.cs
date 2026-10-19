@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice
     /// </summary>
     [IsoId("_UZbOIeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Original Creditor Identification")]
-    public record OriginalCreditorIdentification : OriginalEnrolment2Choice_
+    public partial record OriginalCreditorIdentification : OriginalEnrolment2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OrgnlCdtrId")]

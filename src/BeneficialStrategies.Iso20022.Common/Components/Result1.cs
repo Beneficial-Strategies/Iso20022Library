@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UlvaEtp-Ed-ak6NoX_4Aeg_1884281908")]
 [DisplayName("Result")]
-public record Result1
+public partial record Result1
 {
     /// <summary>
     /// Amount payable by party B to party A.

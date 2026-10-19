@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat2Choice
     [IsoId("_Eluss-atEeqCKaUycnDWEg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DocumentFormat2Choice_
+    public partial record Proprietary : DocumentFormat2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

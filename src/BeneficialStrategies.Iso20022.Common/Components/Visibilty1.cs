@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FnUAsEWOEempSe_3C1a9EQ")]
 [DisplayName("Visibilty")]
-public record Visibilty1
+public partial record Visibilty1
 {
     /// <summary>
     /// Start date when the information will be shown to the debtors.

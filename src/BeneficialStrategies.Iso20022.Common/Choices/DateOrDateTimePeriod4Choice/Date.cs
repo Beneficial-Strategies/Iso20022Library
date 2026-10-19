@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrDateTimePeriod4Choice
     /// <summary>Period expressed with dates.</summary>
     [IsoId("84312226-1543-4c3e-94f6-d8bbc30e9721")]
     [DisplayName("Date")]
-    public record Date : DateOrDateTimePeriod4Choice_
+    public partial record Date : DateOrDateTimePeriod4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dt")]

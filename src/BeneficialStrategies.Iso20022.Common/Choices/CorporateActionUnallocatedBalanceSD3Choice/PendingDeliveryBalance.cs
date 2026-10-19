@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
     [IsoId("_ujGeZ8STEeeRJJtE9TSlkw")]
     [DisplayName("Pending Delivery Balance")]
     [IsoXmlTag("PdgDlvryBal")]
-    public record PendingDeliveryBalance : CorporateActionUnallocatedBalanceSD3Choice_
+    public partial record PendingDeliveryBalance : CorporateActionUnallocatedBalanceSD3Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

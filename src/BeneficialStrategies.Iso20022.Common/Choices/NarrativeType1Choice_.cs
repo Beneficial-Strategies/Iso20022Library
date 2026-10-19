@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_93HE0nltEeG7BsjMvd1mEw_-1199542784")]
     [DisplayName("Narrative Type 1 Choice")]
-    public abstract record NarrativeType1Choice_ { }
+    public abstract partial record NarrativeType1Choice_ { }
 }

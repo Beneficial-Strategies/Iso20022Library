@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bLDjYDp0Eemk2e6qGBk8IQ")]
     [DisplayName("System Securities Account Type 1 Choice")]
-    public abstract record SystemSecuritiesAccountType1Choice_ { }
+    public abstract partial record SystemSecuritiesAccountType1Choice_ { }
 }

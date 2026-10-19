@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jWGXwFdGEeeIAMBcVOw01w")]
 [DisplayName("Settlement Totals")]
-public record SettlementTotals1
+public partial record SettlementTotals1
 {
     /// <summary>
     /// Settlement totals for the acquirer.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_4hKBoF8xEeicg40_9gK9vQ")]
     [DisplayName("Fund Payment Type 1 Choice")]
-    public abstract record FundPaymentType1Choice_ { }
+    public abstract partial record FundPaymentType1Choice_ { }
 }

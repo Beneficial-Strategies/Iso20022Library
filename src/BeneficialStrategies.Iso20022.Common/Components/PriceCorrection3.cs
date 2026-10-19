@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RLuxVdp-Ed-ak6NoX_4Aeg_993416543")]
 [DisplayName("Price Correction")]
-public record PriceCorrection3
+public partial record PriceCorrection3
 {
     /// <summary>
     /// Information related to the price valuation of a financial instrument sent in a previous price report.

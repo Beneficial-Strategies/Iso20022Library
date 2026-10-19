@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_whUBYU7TEeSGH6dwL1uJcg")]
 [DisplayName("Event")]
-public record Event2
+public partial record Event2
 {
     /// <summary>
     /// Proprietary code used to specify an event that occurred in a system.

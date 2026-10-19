@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RKPjkNp-Ed-ak6NoX_4Aeg_-688976051")]
 [DisplayName("UTC Offset")]
-public record UTCOffset1
+public partial record UTCOffset1
 {
     /// <summary>
     /// Indicates whether the offset is before or after 00: 00 hour UTC.

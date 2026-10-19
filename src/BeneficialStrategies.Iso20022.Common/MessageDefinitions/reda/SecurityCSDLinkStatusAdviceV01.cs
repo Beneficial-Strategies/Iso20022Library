@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_uMgRJS-1Ee-7Nrf72hv69A")]
 [DisplayName("Security CSD Link Status Advice V01")]
-public record SecurityCSDLinkStatusAdviceV01 : IOuterRecord
+public partial record SecurityCSDLinkStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

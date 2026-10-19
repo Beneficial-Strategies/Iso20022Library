@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Xf8qAYr9EeSvuOJS0mmL0g")]
 [DisplayName("ATM Security Configuration")]
-public record ATMSecurityConfiguration5
+public partial record ATMSecurityConfiguration5
 {
     /// <summary>
     /// PIN block format the security module is able to manage for online verification of the PIN.

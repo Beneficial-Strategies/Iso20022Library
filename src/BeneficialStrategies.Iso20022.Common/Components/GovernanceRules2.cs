@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjIy-AOSNFX-8224493")]
 [DisplayName("Governance Rules")]
-public record GovernanceRules2
+public partial record GovernanceRules2
 {
     /// <summary>
     /// Local identification to be used in IDREFs.

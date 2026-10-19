@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_58Yc4eLVEeWFtOV72FbX9w")]
 [DisplayName("Classification Type")]
-public record ClassificationType2
+public partial record ClassificationType2
 {
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q6TwEZb7Eee4htziCyV8eA")]
 [DisplayName("Resend Search Criteria")]
-public record ResendSearchCriteria2
+public partial record ResendSearchCriteria2
 {
     /// <summary>
     /// Date of the business day of the requested messages the resend function is used for.

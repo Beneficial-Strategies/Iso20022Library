@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_akmeMTqxEeWZFYSPlduMhw")]
 [DisplayName("Customer Payment Status Report V")]
-public record CustomerPaymentStatusReportV07 : IOuterRecord
+public partial record CustomerPaymentStatusReportV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

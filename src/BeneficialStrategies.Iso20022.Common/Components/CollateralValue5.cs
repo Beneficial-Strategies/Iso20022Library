@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1PMM0aX9EeynsLtPxJMJTQ")]
 [DisplayName("Collateral Value5")]
-public record CollateralValue5
+public partial record CollateralValue5
 {
     /// <summary>
     /// Identification of a security by an ISIN.

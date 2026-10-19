@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fZgLUU4LEeOHYs5EqIAeTw")]
 [DisplayName("Trading Side Transaction Reporting")]
-public record TradingSideTransactionReporting1
+public partial record TradingSideTransactionReporting1
 {
     /// <summary>
     /// Specifies the supervisory party to which the trade needs to be reported.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasis14Choice
     [IsoId("_jCqhQMRyEeij-rSPpvD-Tw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : StatementBasis14Choice_
+    public partial record Proprietary : StatementBasis14Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Li4wUaAiEea9x5aZm6UTkw")]
 [DisplayName("Split Trade Details")]
-public record SplitTradeDetails3
+public partial record SplitTradeDetails3
 {
     /// <summary>
     /// Provides information on the status of a foreign exchange trade in the system.

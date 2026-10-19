@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_xPt7gmjNEeiRg5NzP0jkQg")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
-    public record Restriction : UpdateLogPartyRecord1Choice_
+    public partial record Restriction : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Old value before the update.

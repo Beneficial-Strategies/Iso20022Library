@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZNGIbDEEe-g3p7goNrabg")]
 [DisplayName("Collateral Value Creation Request V01")]
-public record CollateralValueCreationRequestV01 : IOuterRecord
+public partial record CollateralValueCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

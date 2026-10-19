@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice
     /// Closing Date.
     /// </summary>
     [DisplayName("Closing Date")]
-    public record ClosingDate : UpdateLogPartyRecord2Choice_
+    public partial record ClosingDate : UpdateLogPartyRecord2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

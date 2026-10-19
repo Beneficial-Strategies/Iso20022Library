@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_Nd_okQgGEeSeS5xdjFfOTw")]
 [DisplayName("Baseline Amendment Request V")]
-public record BaselineAmendmentRequestV05 : IOuterRecord
+public partial record BaselineAmendmentRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

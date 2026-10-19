@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4FKwEIr6EeSvuOJS0mmL0g")]
 [DisplayName("ATM Security Configuration")]
-public record ATMSecurityConfiguration1
+public partial record ATMSecurityConfiguration1
 {
     /// <summary>
     /// Configuration of the cryptographic keys.

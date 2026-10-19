@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sH2tUYqpEeS4a4abTJTSSw")]
 [DisplayName("ATM Service")]
-public record ATMService3
+public partial record ATMService3
 {
     /// <summary>
     /// Unique identification of the service provided by the ATM inside the session.

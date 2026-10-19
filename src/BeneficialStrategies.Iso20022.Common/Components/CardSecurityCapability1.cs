@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XRvwk2zqEemD24gVaMSpeA")]
 [DisplayName("Card Security Capability")]
-public record CardSecurityCapability1
+public partial record CardSecurityCapability1
 {
     /// <summary>
     /// Defines the security capability.

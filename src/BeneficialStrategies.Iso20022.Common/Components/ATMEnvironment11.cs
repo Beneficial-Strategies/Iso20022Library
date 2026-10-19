@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_96Bd4a1xEeWMg5rOByfExw")]
 [DisplayName("ATM Environment")]
-public record ATMEnvironment11
+public partial record ATMEnvironment11
 {
     /// <summary>
     /// Acquirer of the transaction, in charge of the funds settlement with the issuer.

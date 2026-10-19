@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PostTradeEventType2Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : PostTradeEventType2Choice_
+    public partial record Code : PostTradeEventType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

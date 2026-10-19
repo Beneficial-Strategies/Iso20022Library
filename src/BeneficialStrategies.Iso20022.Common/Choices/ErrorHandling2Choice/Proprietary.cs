@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ErrorHandling2Choice
     /// </summary>
     [IsoId("_jwIVAxbvEeOy-PlRuFSUzQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ErrorHandling2Choice_
+    public partial record Proprietary : ErrorHandling2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

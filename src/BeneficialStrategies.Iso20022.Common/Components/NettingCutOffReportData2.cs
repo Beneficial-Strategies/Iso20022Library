@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BuNM0QN1Ee2-vqzwMUAewg")]
 [DisplayName("Netting Cut Off Report Data")]
-public record NettingCutOffReportData2
+public partial record NettingCutOffReportData2
 {
     /// <summary>
     /// Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.

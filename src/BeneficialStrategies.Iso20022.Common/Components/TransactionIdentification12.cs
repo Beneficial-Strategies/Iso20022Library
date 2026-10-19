@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yGEF8cWZEeiCfKAZkk6ZAQ")]
 [DisplayName("Transaction Identification")]
-public record TransactionIdentification12
+public partial record TransactionIdentification12
 {
     /// <summary>
     /// Number assigned by a transaction originator to assist in identifying a transaction uniquely. The trace number remains unchanged for all messages within a two-message exchange (for example, request/repeat and response)

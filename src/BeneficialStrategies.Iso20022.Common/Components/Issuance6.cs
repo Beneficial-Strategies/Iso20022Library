@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r6TOIWf2Eembv_9KtOEw8g")]
 [DisplayName("Issuance")]
-public record Issuance6
+public partial record Issuance6
 {
     /// <summary>
     /// Indicates where the financial instrument was issued.

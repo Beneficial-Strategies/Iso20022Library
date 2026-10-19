@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1VoBMOciEei5aPS232E3Mw")]
 [DisplayName("Tax Category")]
-public record TaxCategory2
+public partial record TaxCategory2
 {
     /// <summary>
     /// Xpath to the element that is being extended.

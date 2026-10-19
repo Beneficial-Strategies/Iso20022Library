@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_rLAcuNE8Ed-BzquC8wXy7w_2021244556")]
 [DisplayName("Mis Match Acceptance Notification V")]
-public record MisMatchAcceptanceNotificationV03 : IOuterRecord
+public partial record MisMatchAcceptanceNotificationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

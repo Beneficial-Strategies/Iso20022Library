@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceStatus1Choice
     /// </summary>
     [IsoId("_Zzxz8_F6EemQ7oqCO5NTQw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ServiceStatus1Choice_
+    public partial record Proprietary : ServiceStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

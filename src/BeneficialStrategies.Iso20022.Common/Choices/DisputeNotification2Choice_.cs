@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_KLqxkStOEeyOa655cLd-DQ")]
     [DisplayName("Dispute Notification 2 Choice")]
-    public abstract record DisputeNotification2Choice_ { }
+    public abstract partial record DisputeNotification2Choice_ { }
 }

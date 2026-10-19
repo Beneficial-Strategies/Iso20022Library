@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dUB4wVZjEeen1vB4iz5SyA")]
 [DisplayName("File Action Response")]
-public record FileActionResponse1
+public partial record FileActionResponse1
 {
     /// <summary>
     /// Environment of the file action transaction.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice
     /// Party Name.
     /// </summary>
     [DisplayName("Party Name")]
-    public record PartyName : SystemPartyModification3Choice_
+    public partial record PartyName : SystemPartyModification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

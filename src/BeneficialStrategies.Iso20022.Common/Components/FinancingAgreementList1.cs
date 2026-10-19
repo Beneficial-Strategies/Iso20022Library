@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_OTgzMTk1-AOSNFX-8224490")]
 [DisplayName("Financing Agreement List")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record FinancingAgreementList1
+public partial record FinancingAgreementList1
 {
     /// <summary>
     /// Identification assigned to unambiguously identify the agreement list.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-Gm5aHltEeG7BsjMvd1mEw_1246431564")]
 [DisplayName("Location")]
-public record Location1
+public partial record Location1
 {
     /// <summary>
     /// Country of jurisdiction.

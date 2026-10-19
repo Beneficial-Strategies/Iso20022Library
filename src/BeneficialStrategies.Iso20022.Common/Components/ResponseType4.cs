@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sqO24IqDEeS3NqNpgnMh2w")]
 [DisplayName("Response Type")]
-public record ResponseType4
+public partial record ResponseType4
 {
     /// <summary>
     /// Identification of the responder.

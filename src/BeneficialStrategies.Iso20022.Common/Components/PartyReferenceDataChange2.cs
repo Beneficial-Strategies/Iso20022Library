@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_70efBVhLEeih3fUfzR38Ig")]
 [DisplayName("Party Reference Data Change")]
-public record PartyReferenceDataChange2
+public partial record PartyReferenceDataChange2
 {
     /// <summary>
     /// Identifies the party for which the changes are listed in the advice.

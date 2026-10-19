@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProprietaryReason1Choice
     [IsoId("_u38ys1hFEeOMYfRGLS0NbA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : ProprietaryReason1Choice_
+    public partial record Reason : ProprietaryReason1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

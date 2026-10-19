@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties37Choice
     /// Receiving Settlement Parties.
     /// </summary>
     [DisplayName("Receiving Settlement Parties")]
-    public record ReceivingSettlementParties : SettlementParties37Choice_
+    public partial record ReceivingSettlementParties : SettlementParties37Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralCancellationType1Choic
     /// </summary>
     [IsoId("_QmxqINp-Ed-ak6NoX_4Aeg_-132072527")]
     [DisplayName("Code")]
-    public record Code : CollateralCancellationType1Choice_
+    public partial record Code : CollateralCancellationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

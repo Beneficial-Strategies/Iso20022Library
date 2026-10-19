@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJf8s9p-Ed-ak6NoX_4Aeg_1263580782")]
 [DisplayName("Element Identification")]
-public record ElementIdentification1
+public partial record ElementIdentification1
 {
     /// <summary>
     /// Refers to the identification number of the document in which the mismatch was found.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnExcessCash1Choice
     /// </summary>
     [IsoId("_UN9QYALpEeutW5-TpeYJhA")]
     [DisplayName("Code")]
-    public record Code : ReturnExcessCash1Choice_
+    public partial record Code : ReturnExcessCash1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

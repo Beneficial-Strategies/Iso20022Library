@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdjustedBalanceTypeSD4Choice
     [IsoId("_RnUrWcSTEeeRJJtE9TSlkw")]
     [DisplayName("Repo")]
     [IsoXmlTag("Repo")]
-    public record Repo : AdjustedBalanceTypeSD4Choice_
+    public partial record Repo : AdjustedBalanceTypeSD4Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

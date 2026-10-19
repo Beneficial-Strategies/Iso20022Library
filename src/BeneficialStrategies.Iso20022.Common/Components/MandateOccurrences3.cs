@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vVpaUSLzEeSizvrwx7oJNQ")]
 [DisplayName("Mandate Occurrences")]
-public record MandateOccurrences3
+public partial record MandateOccurrences3
 {
     /// <summary>
     /// Identifies the underlying transaction sequence as either recurring or one-off.

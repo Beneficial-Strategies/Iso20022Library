@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_NiVMf6MrEe-4O7NbwmwJkQ")]
 [DisplayName("DTCCCANO Eligible Balance SD1V12")]
-public record DTCCCANOEligibleBalanceSD1V12 : IOuterRecord
+public partial record DTCCCANOEligibleBalanceSD1V12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

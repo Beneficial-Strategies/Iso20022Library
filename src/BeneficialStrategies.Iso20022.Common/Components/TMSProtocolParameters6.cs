@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oSdigVFMEeyApZmLzm74zA")]
 [DisplayName("TMS Protocol Parameters")]
-public record TMSProtocolParameters6
+public partial record TMSProtocolParameters6
 {
     /// <summary>
     /// Type of action for the configuration parameters.

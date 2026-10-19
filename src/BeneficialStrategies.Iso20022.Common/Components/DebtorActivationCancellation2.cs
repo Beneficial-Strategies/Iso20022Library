@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UVRG6-H7Eeqbls7Gk4-ckA")]
 [DisplayName("Debtor Activation Cancellation")]
-public record DebtorActivationCancellation2
+public partial record DebtorActivationCancellation2
 {
     /// <summary>
     /// Unique identification of the original instruction.

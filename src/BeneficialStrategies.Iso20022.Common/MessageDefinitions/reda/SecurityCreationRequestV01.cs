@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_jTt_oR62Eeu31YsWNiv_cw")]
 [DisplayName("Security Creation Request V")]
-public record SecurityCreationRequestV01 : IOuterRecord
+public partial record SecurityCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

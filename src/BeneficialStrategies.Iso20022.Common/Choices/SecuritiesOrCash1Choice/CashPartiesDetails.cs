@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesOrCash1Choice
     [IsoId("_yNcsADchEeOA3chqL9a4Rw")]
     [DisplayName("Cash Parties Details")]
     [IsoXmlTag("CshPtiesDtls")]
-    public record CashPartiesDetails : SecuritiesOrCash1Choice_
+    public partial record CashPartiesDetails : SecuritiesOrCash1Choice_
     {
         /// <summary>
         /// Party to which the payment amount must be ultimately delivered. In some cases, this may be a fund.

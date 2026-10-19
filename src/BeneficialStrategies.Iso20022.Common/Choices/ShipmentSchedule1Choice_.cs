@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rb-Mytp-Ed-ak6NoX_4Aeg_-786797544")]
     [DisplayName("Shipment Schedule 1 Choice")]
-    public abstract record ShipmentSchedule1Choice_ { }
+    public abstract partial record ShipmentSchedule1Choice_ { }
 }

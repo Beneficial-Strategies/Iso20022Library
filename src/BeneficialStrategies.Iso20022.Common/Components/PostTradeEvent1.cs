@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YgrCIEj-Ee-KhcStGV4xTg")]
 [DisplayName("Post Trade Event1")]
-public record PostTradeEvent1
+public partial record PostTradeEvent1
 {
     /// <summary>
     /// Type.

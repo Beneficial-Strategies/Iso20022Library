@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_YThGLR77EeSxevWRRWxNAg")]
     [DisplayName("Original Mandate 3 Choice")]
-    public abstract record OriginalMandate3Choice_ { }
+    public abstract partial record OriginalMandate3Choice_ { }
 }

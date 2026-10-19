@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hXQrSWliEeGaMcKyqKNRfQ_-1281740246")]
 [DisplayName("Securities Return Criteria")]
-public record SecuritiesReturnCriteria1
+public partial record SecuritiesReturnCriteria1
 {
     /// <summary>
     /// Identification of a security.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TechnicalIdentification2Choice
     /// </summary>
     [IsoId("_YD53k711Eeiut6mmSKzDFQ")]
     [DisplayName("Technical Address")]
-    public record TechnicalAddress : TechnicalIdentification2Choice_
+    public partial record TechnicalAddress : TechnicalIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

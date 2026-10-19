@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mVydMVANEeedyPuM0kK2EQ")]
 [DisplayName("Transaction Totals")]
-public record TransactionTotals11
+public partial record TransactionTotals11
 {
     /// <summary>
     /// Date and identification of reconciliation.

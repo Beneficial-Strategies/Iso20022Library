@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_95ylYnltEeG7BsjMvd1mEw_522259600")]
 [DisplayName("Expiry Details")]
-public record ExpiryDetails1
+public partial record ExpiryDetails1
 {
     /// <summary>
     /// Terms defining when the undertaking will cease to be available.

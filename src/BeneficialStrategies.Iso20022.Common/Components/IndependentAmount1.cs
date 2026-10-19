@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UlI9KNp-Ed-ak6NoX_4Aeg_1173631516")]
 [DisplayName("Independent Amount")]
-public record IndependentAmount1
+public partial record IndependentAmount1
 {
     /// <summary>
     /// Provides the independant amount.

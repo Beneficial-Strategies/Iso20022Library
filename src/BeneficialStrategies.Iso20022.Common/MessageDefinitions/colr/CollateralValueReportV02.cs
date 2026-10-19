@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_R3GHRTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Collateral Value Report V02")]
-public record CollateralValueReportV02 : IOuterRecord
+public partial record CollateralValueReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

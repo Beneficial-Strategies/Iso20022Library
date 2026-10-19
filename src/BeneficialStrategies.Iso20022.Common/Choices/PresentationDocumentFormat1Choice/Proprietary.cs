@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PresentationDocumentFormat1Choic
     [IsoId("_94JmonltEeG7BsjMvd1mEw_-765479432")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PresentationDocumentFormat1Choice_
+    public partial record Proprietary : PresentationDocumentFormat1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

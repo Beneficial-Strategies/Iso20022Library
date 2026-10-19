@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QPfxleGBEeWCAvUNsZ5u6g")]
 [DisplayName("Securities Account Reference Data Change")]
-public record SecuritiesAccountReferenceDataChange2
+public partial record SecuritiesAccountReferenceDataChange2
 {
     /// <summary>
     /// Identifies the securities account for which the changes are listed in the advice.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
     [IsoId("_ujGeIcSTEeeRJJtE9TSlkw")]
     [DisplayName("Total Eligible Balance")]
     [IsoXmlTag("TtlElgblBal")]
-    public record TotalEligibleBalance : CorporateActionUnallocatedBalanceSD3Choice_
+    public partial record TotalEligibleBalance : CorporateActionUnallocatedBalanceSD3Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

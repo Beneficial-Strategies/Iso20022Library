@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceIdentification1Choice
     /// </summary>
     [IsoId("_929T0XltEeG7BsjMvd1mEw_-1110032848")]
     [DisplayName("Code")]
-    public record Code : GovernanceIdentification1Choice_
+    public partial record Code : GovernanceIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QvgRnb-8Eeeb2ZBoAlSG1Q")]
 [DisplayName("Corporate Action Unallocated Balance SD")]
-public record CorporateActionUnallocatedBalanceSD3
+public partial record CorporateActionUnallocatedBalanceSD3
 {
     /// <summary>
     /// Total quantity of financial instruments of the balance.

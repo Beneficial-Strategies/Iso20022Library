@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ub7vn-H7Eeqbls7Gk4-ckA")]
 [DisplayName("Creditor Enrolment Status Reason")]
-public record CreditorEnrolmentStatusReason2
+public partial record CreditorEnrolmentStatusReason2
 {
     /// <summary>
     /// Party that issues the cancellation request.

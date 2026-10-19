@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zIOnkHdiEeeKH6vrEwvLHA")]
 [DisplayName("Fraud Disposition Status")]
-public record FraudDispositionStatus1
+public partial record FraudDispositionStatus1
 {
     /// <summary>
     /// Indicates the action taken as a disposition of the previously fraud report message.

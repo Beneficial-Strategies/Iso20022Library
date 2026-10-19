@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice
     /// Bloomberg.
     /// </summary>
     [DisplayName("Bloomberg")]
-    public record Bloomberg : SecurityIdentification38Choice_
+    public partial record Bloomberg : SecurityIdentification38Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UmfA9tp-Ed-ak6NoX_4Aeg_1045581242")]
 [DisplayName("Collateral Balance")]
-public record CollateralBalance1
+public partial record CollateralBalance1
 {
     /// <summary>
     /// Collateral currently held by party A.

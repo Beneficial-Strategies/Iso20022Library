@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PresentationMedium1Choice
     [IsoId("_93_1pXltEeG7BsjMvd1mEw_-700765096")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PresentationMedium1Choice_
+    public partial record Proprietary : PresentationMedium1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

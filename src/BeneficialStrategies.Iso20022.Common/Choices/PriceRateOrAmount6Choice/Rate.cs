@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmount6Choice
     /// <summary>Specifies the price as a rate.</summary>
     [IsoId("_5hF8kWeiEeqY_MU7lK4HCA")]
     [DisplayName("Rate")]
-    public record Rate : PriceRateOrAmount6Choice_
+    public partial record Rate : PriceRateOrAmount6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rate")]

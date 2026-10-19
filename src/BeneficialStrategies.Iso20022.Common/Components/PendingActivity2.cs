@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RaowBtp-Ed-ak6NoX_4Aeg_-888447978")]
 [DisplayName("Pending Activity")]
-public record PendingActivity2
+public partial record PendingActivity2
 {
     /// <summary>
     /// Code which specifies the next course of action that the receiver of the message must take.

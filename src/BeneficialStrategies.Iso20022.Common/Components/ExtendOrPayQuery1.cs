@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-Des53ltEeG7BsjMvd1mEw_2002292702")]
 [DisplayName("Extend Or Pay Query")]
-public record ExtendOrPayQuery1
+public partial record ExtendOrPayQuery1
 {
     /// <summary>
     /// Details related to the identification of the undertaking.

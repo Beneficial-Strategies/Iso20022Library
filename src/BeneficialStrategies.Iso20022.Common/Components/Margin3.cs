@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-eMvBKMOEeCojJW5vEuTEQ_631064077")]
 [DisplayName("Margin")]
-public record Margin3
+public partial record Margin3
 {
     /// <summary>
     /// Margin required for absorbing future market price fluctuations (market risks) occurring between the default of a member and close-out of unsettled securities positions by the central counterparty.

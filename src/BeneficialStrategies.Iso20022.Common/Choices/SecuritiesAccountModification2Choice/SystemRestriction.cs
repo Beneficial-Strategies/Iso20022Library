@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
     [IsoId("_8IwTgzp0Eemk2e6qGBk8IQ")]
     [DisplayName("System Restriction")]
     [IsoXmlTag("SysRstrctn")]
-    public record SystemRestriction : SecuritiesAccountModification2Choice_
+    public partial record SystemRestriction : SecuritiesAccountModification2Choice_
     {
         /// <summary>
         /// Specifies the date from which the restriction is valid.

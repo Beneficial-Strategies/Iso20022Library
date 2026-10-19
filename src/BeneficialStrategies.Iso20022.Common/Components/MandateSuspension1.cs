@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IgCRoH5oEea7cqFPsAF3tQ")]
 [DisplayName("Mandate Suspension")]
-public record MandateSuspension1
+public partial record MandateSuspension1
 {
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the suspension request.

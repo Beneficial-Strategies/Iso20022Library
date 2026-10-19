@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics1Choice
     [IsoId("_TnJq7Np-Ed-ak6NoX_4Aeg_815222693")]
     [DisplayName("Weight")]
     [IsoXmlTag("Wght")]
-    public record Weight : CertifiedCharacteristics1Choice_
+    public partial record Weight : CertifiedCharacteristics1Choice_
     {
         /// <summary>
         /// Specifies the unit of measurement. For example, kilo, tons.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vPux4DcWEeidBoT_PugKiA")]
 [DisplayName("Risk Tolerance")]
-public record RiskTolerance1
+public partial record RiskTolerance1
 {
     /// <summary>
     /// Specifies the Summary Risk Indicator (SRI). When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 04010.

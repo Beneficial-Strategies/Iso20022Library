@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NarrativeType1Choice
     /// </summary>
     [IsoId("_93HE03ltEeG7BsjMvd1mEw_2098352159")]
     [DisplayName("Code")]
-    public record Code : NarrativeType1Choice_
+    public partial record Code : NarrativeType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

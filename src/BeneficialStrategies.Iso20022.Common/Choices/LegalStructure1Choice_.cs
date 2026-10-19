@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_kfzX0DQeEeifw8iDiyZLmQ")]
     [DisplayName("Legal Structure 1 Choice")]
-    public abstract record LegalStructure1Choice_ { }
+    public abstract partial record LegalStructure1Choice_ { }
 }

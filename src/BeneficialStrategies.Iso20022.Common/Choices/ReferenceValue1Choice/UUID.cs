@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice
     /// </summary>
     [IsoId("_lTDZIMePEeysUoBKYz1Ytw")]
     [DisplayName("UUID")]
-    public record UUID : ReferenceValue1Choice_
+    public partial record UUID : ReferenceValue1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(GlobalNote2Choice.Proprietary), nameof(GlobalNote2Choice.Proprietary))]
     [IsoId("_TiBdgeLaEeWFtOV72FbX9w")]
     [DisplayName("Global Note 2 Choice")]
-    public abstract record GlobalNote2Choice_ { }
+    public abstract partial record GlobalNote2Choice_ { }
 }

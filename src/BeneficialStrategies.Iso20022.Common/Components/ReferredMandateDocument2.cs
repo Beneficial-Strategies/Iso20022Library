@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O661sTE0Ee62xuUQ2zyZww")]
 [DisplayName("Referred Mandate Document2")]
-public record ReferredMandateDocument2
+public partial record ReferredMandateDocument2
 {
     /// <summary>
     /// Type.

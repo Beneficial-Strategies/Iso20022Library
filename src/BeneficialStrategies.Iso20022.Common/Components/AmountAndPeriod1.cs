@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzgw-AOSNFX-8224502")]
 [DisplayName("Amount And Period")]
-public record AmountAndPeriod1
+public partial record AmountAndPeriod1
 {
     /// <summary>
     /// Amount of this period.

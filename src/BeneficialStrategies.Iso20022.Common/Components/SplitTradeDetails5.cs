@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_j_ONR0j3Ee-KhcStGV4xTg")]
 [DisplayName("Split Trade Details5")]
-public record SplitTradeDetails5
+public partial record SplitTradeDetails5
 {
     /// <summary>
     /// Status Details.

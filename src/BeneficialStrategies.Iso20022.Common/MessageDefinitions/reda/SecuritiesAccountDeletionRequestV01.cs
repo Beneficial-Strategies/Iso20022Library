@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_KAu-m52fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Deletion Request V")]
-public record SecuritiesAccountDeletionRequestV01 : IOuterRecord
+public partial record SecuritiesAccountDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

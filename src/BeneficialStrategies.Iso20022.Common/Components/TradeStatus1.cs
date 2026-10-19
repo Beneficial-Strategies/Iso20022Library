@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q7Ma8dp-Ed-ak6NoX_4Aeg_-931990425")]
 [DisplayName("Trade Status")]
-public record TradeStatus1
+public partial record TradeStatus1
 {
     /// <summary>
     /// Specifies whether a trade is alleged or not.

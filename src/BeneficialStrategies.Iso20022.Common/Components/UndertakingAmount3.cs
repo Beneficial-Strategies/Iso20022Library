@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_95MIcHltEeG7BsjMvd1mEw_-289979186")]
 [DisplayName("Undertaking Amount")]
-public record UndertakingAmount3
+public partial record UndertakingAmount3
 {
     /// <summary>
     /// Amount and currency of the demand.

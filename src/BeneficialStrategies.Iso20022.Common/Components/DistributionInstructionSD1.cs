@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N_uCcFB8Ee2KGNXAcFL5RA")]
 [DisplayName("Distribution Instruction SD")]
-public record DistributionInstructionSD1
+public partial record DistributionInstructionSD1
 {
     /// <summary>
     /// Tax category number assigned on the announcement to provide a breakdown at a category level on the inbound instruction to determine tax treatment as required by issuers, their agents, or tax authorities.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QllXWNp-Ed-ak6NoX_4Aeg_530575505")]
 [DisplayName("Statement")]
-public record Statement31
+public partial record Statement31
 {
     /// <summary>
     /// Identification that is common to all pages of a statement.

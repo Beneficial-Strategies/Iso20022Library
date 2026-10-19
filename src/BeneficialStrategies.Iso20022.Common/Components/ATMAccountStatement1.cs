@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1dwnkIq7EeSHjtO_wHA7PQ")]
 [DisplayName("ATM Account Statement")]
-public record ATMAccountStatement1
+public partial record ATMAccountStatement1
 {
     /// <summary>
     /// Unique identifier of the account, as assigned by the account servicer.
