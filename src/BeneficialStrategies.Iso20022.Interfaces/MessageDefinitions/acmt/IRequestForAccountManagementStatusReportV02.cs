@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The RequestForAccountManagementStatusReport message is used to request the processing status of a previously sent AccountOpeningInstruction message or AccountModificationInstruction message for which a AccountDetailsConfirmation message has not yet been received.
 /// </summary>
 [IsoId("_043Mq9E9Ed-BzquC8wXy7w_2127190710")]
+[IsoMessage(
+    "acmt.005.001.02",
+    "ReqForAcctMgmtStsRptV02",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.005.001.02"
+)]
 public interface IRequestForAccountManagementStatusReportV02 : IOuterRecord
 {
     /// <summary>

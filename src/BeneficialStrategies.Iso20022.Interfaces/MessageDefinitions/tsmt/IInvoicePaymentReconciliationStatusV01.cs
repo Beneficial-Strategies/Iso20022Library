@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The message can carry digital signatures if required by context.
 /// </summary>
 [IsoId("_OTgzNTA1-AOSNFX-8224507")]
+[IsoMessage(
+    "tsmt.054.001.01",
+    "InvcPmtRcncltnSts",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.054.001.01"
+)]
 public interface IInvoicePaymentReconciliationStatusV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// The ReceiptAcknowledgement message is sent by the transaction administrator to a member of the system and vice versa. It is sent to acknowledge the receipt of one or multiple messages sent previously. The Acknowledgement message is 1) an application receipt acknowledgement and 2) conveys information about the processing of the original message(s). In case of 2) the ReceiptAcknowledgement can be used as a Generic error message, which provides information about the status (e.g. rejection, acceptance) of an instruction.
 /// </summary>
 [IsoId("_4MJ7oZb3Eee4htziCyV8eA")]
+[IsoMessage("admi.007.001.01", "RctAck", "urn:iso:std:iso:20022:tech:xsd:admi.007.001.01")]
 public interface IReceiptAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

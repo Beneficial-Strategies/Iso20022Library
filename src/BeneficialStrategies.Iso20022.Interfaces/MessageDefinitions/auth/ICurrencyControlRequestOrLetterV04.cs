@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3HVUTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage(
+    "auth.026.001.04",
+    "CcyCtrlReqOrLttr",
+    "urn:iso:std:iso:20022:tech:xsd:auth.026.001.04"
+)]
 public interface ICurrencyControlRequestOrLetterV04 : IOuterRecord
 {
     /// <summary>

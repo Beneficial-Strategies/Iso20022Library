@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritiesFinancingReportingTransactionQuery message is sent by the authority to the trade repositories, to query data based on the search criteria for the  transactions as defined by the system user.
 /// </summary>
 [IsoId("_2zvMFQuAEeqVvtu9Ny8FDA")]
+[IsoMessage(
+    "auth.094.001.01",
+    "SctiesFincgRptgTxQry",
+    "urn:iso:std:iso:20022:tech:xsd:auth.094.001.01"
+)]
 public interface ISecuritiesFinancingReportingTransactionQueryV01 : IOuterRecord
 {
     /// <summary>

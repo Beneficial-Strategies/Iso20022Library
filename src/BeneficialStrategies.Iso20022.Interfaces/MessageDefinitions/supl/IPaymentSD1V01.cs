@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// Supplementary data for payment message definitions.
 /// </summary>
 [IsoId("_ZAIu0PwLEeGHDMP28rpT3g_-1117810318")]
+[IsoMessage("supl.017.001.01", "PmtSD1", "urn:iso:std:iso:20022:tech:xsd:supl.017.001.01")]
 public interface IPaymentSD1V01 : IOuterRecord
 {
     /// <summary>

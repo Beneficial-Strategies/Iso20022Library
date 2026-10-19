@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// - a decline from the acquirer for technical reasons (for instance, a timeout).
 /// </summary>
 [IsoId("_fvUitaMVEeCJ6YNENx4h-w_-1631980984")]
+[IsoMessage(
+    "caaa.002.001.01",
+    "AccptrAuthstnRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.002.001.01"
+)]
 public interface IAcceptorAuthorisationResponseV01 : IOuterRecord
 {
     /// <summary>

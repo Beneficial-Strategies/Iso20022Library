@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The PreTradeInputMarketDataReport message is sent by the Trading Venue to the Consolidated Tape Provider. The message contains pre-trade transparency data for financial instruments, including information such as bid and ask prices, order sizes, type of auction, and time of submission.
 /// </summary>
 [IsoId("_VLEloGF8EfC07JR6e2JJ-w")]
+[IsoMessage(
+    "auth.122.001.01",
+    "PreTradInptMktDataRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.122.001.01"
+)]
 public interface IPreTradeInputMarketDataReportV01 : IOuterRecord
 {
     /// <summary>

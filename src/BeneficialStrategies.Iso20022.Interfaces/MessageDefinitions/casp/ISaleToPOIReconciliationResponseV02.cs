@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIReconciliationResponse message is sent by a POI to provide the result of reconciliation process between sale and POI systems.
 /// </summary>
 [IsoId("_2r5z8Q1UEeqjM-rxn3HuXQ")]
+[IsoMessage(
+    "casp.004.001.02",
+    "SaleToPOIRcncltnRspn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.004.001.02"
+)]
 public interface ISaleToPOIReconciliationResponseV02 : IOuterRecord
 {
     /// <summary>

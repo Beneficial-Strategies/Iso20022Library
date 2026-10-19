@@ -22,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// using the relevant elements in the Business Application Header.
 /// </summary>
 [IsoId("_dqh-UYotEe-efPejSUAtLw")]
+[IsoMessage("sese.037.001.08", "PrtflTrfNtfctn", "urn:iso:std:iso:20022:tech:xsd:sese.037.001.08")]
 public interface IPortfolioTransferNotificationV08 : IOuterRecord
 {
     /// <summary>

@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The matching application will pass on the request by sending a StatusExtensionRequestNotification message to the counterparty which can accept or reject the status extension request by sending a StatusExtensionAcceptance or StatusExtensionRejection message.
 /// </summary>
 [IsoId("_0MRo6NE8Ed-BzquC8wXy7w_2103710287")]
+[IsoMessage("tsmt.035.001.03", "StsXtnsnReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.035.001.03")]
 public interface IStatusExtensionRequestV03 : IOuterRecord
 {
     /// <summary>

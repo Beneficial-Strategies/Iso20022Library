@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided.
 /// </summary>
 [IsoId("_2czxMS9GEeOlZIh7PImd0A")]
+[IsoMessage(
+    "caaa.001.001.03",
+    "AccptrAuthstnReq",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.001.001.03"
+)]
 public interface IAcceptorAuthorisationRequestV03 : IOuterRecord
 {
     /// <summary>

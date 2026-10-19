@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3GHRTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("colr.002.001.02", "CollValRpt", "urn:iso:std:iso:20022:tech:xsd:colr.002.001.02")]
 public interface ICollateralValueReportV02 : IOuterRecord
 {
     /// <summary>

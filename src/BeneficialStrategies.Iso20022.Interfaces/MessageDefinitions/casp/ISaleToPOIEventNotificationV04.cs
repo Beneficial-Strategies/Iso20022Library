@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIEventNotification message is sent by a POI or a sale terminal to inform the other about the happening of an event.
 /// </summary>
 [IsoId("_5LB2YU7AEeyGi9JAv6wq7Q")]
+[IsoMessage(
+    "casp.012.001.04",
+    "SaleToPOIEvtNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.012.001.04"
+)]
 public interface ISaleToPOIEventNotificationV04 : IOuterRecord
 {
     /// <summary>

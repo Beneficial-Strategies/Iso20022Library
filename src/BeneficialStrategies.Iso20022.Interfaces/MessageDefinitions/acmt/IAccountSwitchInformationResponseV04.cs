@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer if the account may be switched. Confirmation of the balance transfer window is permitted by the old account servicer.
 /// </summary>
 [IsoId("_KOk_v9cDEeq_l4BJLVUF2Q")]
+[IsoMessage(
+    "acmt.028.001.04",
+    "AcctSwtchInfRspn",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.028.001.04"
+)]
 public interface IAccountSwitchInformationResponseV04 : IOuterRecord
 {
     /// <summary>

@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The NotificationToReceiveCancellationAdvice message is used to advise the account servicing institution that the funds are no longer expected. The message can be used in either a direct or a relay scenario.
 /// </summary>
 [IsoId("_sZiMG2tdEeCY4-KZ9JEyUQ_-574500560")]
+[IsoMessage(
+    "camt.058.001.02",
+    "NtfctnToRcvCxlAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:camt.058.001.02"
+)]
 public interface INotificationToReceiveCancellationAdviceV02 : IOuterRecord
 {
     /// <summary>

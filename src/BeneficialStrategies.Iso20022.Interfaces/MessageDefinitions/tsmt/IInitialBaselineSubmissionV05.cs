@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The InitialBaselineSubmission message consists of data which relates to the purchasing agreement covered by the transaction, for example line item details, shipping details.
 /// </summary>
 [IsoId("_a0GHAQgGEeSeS5xdjFfOTw")]
+[IsoMessage(
+    "tsmt.019.001.05",
+    "InitlBaselnSubmissn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.019.001.05"
+)]
 public interface IInitialBaselineSubmissionV05 : IOuterRecord
 {
     /// <summary>

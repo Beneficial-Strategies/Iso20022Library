@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// If the acceptor or the acquirer notices a difference in totals, the discrepancy will be resolved by other means, outside the scope of the protocol.
 /// </summary>
 [IsoId("__lZ7cS4_EeunNvJlR_vCbg")]
+[IsoMessage(
+    "caaa.010.001.08",
+    "AccptrRcncltnRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.010.001.08"
+)]
 public interface IAcceptorReconciliationResponseV08 : IOuterRecord
 {
     /// <summary>

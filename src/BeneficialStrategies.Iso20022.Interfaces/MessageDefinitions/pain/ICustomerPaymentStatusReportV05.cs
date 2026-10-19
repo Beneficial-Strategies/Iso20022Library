@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_WuhXASGmEeKjd4jizyIDGA")]
+[IsoMessage("pain.002.001.05", "CstmrPmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:pain.002.001.05")]
 public interface ICustomerPaymentStatusReportV05 : IOuterRecord
 {
     /// <summary>

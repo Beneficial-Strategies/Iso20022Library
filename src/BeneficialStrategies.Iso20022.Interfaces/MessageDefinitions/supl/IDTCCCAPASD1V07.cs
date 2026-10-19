@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCAPASD1 message extends ISO corporate action movement preliminary advice message with DTCC corporate action elements not covered in the standard message.
 /// </summary>
 [IsoId("_I5L_8e2QEeiWtrflKsFqHg")]
+[IsoMessage("supl.009.001.07", "DTCCCAPASD1", "urn:iso:std:iso:20022:tech:xsd:supl.009.001.07")]
 public interface IDTCCCAPASD1V07 : IOuterRecord
 {
     /// <summary>

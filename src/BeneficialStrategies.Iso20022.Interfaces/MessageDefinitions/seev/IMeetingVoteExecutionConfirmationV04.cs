@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This messages is sent if the Sender of the MeetingInstruction message has requested such a confirmation or if market practice or regulation stipulates the need for a full audit trail.
 /// </summary>
 [IsoId("_TuPGudEwEd-BzquC8wXy7w_-1013615131")]
+[IsoMessage(
+    "seev.007.001.04",
+    "MtgVoteExctnConf",
+    "urn:iso:std:iso:20022:tech:xsd:seev.007.001.04"
+)]
 public interface IMeetingVoteExecutionConfirmationV04 : IOuterRecord
 {
     /// <summary>

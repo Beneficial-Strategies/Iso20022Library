@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// - the merchant parameters needed for the retailer protocol settings of the POI system.
 /// </summary>
 [IsoId("_AgFfYOQXEeCGktPI9k4Dlw_1733626146")]
+[IsoMessage("catm.003.001.01", "AccptrCfgtnUpd", "urn:iso:std:iso:20022:tech:xsd:catm.003.001.01")]
 public interface IAcceptorConfigurationUpdateV01 : IOuterRecord
 {
     /// <summary>

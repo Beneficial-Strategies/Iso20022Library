@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_BKsckLknEe68nbz8Nl_hLQ")]
+[IsoMessage("admi.024.001.01", "NtfctnOfCrspdc", "urn:iso:std:iso:20022:tech:xsd:admi.024.001.01")]
 public interface INotificationOfCorrespondenceV01 : IOuterRecord
 {
     /// <summary>

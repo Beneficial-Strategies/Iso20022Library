@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIAdministrativeRequest message is sent by a sale system to POI System to request for an Administrative service.
 /// </summary>
 [IsoId("_cgK60XPAEe2pK6udhxEaHA")]
+[IsoMessage(
+    "casp.007.001.05",
+    "SaleToPOIAdmstvReq",
+    "urn:iso:std:iso:20022:tech:xsd:casp.007.001.05"
+)]
 public interface ISaleToPOIAdministrativeRequestV05 : IOuterRecord
 {
     /// <summary>

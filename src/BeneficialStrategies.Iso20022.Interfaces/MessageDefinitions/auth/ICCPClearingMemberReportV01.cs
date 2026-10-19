@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPClearingMemberReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the central counterparties clearing members and their clients, and the related account structures.
 /// </summary>
 [IsoId("_yw5rkeUTEem3X-64-NKdqg")]
+[IsoMessage("auth.054.001.01", "CCPClrMmbRpt", "urn:iso:std:iso:20022:tech:xsd:auth.054.001.01")]
 public interface ICCPClearingMemberReportV01 : IOuterRecord
 {
     /// <summary>

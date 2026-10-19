@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - must be used exclusively between the account owner and the account servicing institution. It must not be used in place of a Resolution Of Investigation message between subsequent agents.
 /// </summary>
 [IsoId("_eYI_H22PEei3KuUgpx7Xcw")]
+[IsoMessage("camt.036.001.05", "DbtAuthstnRspn", "urn:iso:std:iso:20022:tech:xsd:camt.036.001.05")]
 public interface IDebitAuthorisationResponseV05 : IOuterRecord
 {
     /// <summary>

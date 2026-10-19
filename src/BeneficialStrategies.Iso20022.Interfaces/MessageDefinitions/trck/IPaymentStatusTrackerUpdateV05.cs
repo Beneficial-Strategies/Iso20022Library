@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.trck;
 /// Multiple business transaction statuses may be reported in a single message, and each status may include all relevant information of a single transaction or multiple transactions of the tracked payment(s) exchanged.
 /// </summary>
 [IsoId("bfeb7dc1-7509-4665-9e03-a7726d28da33")]
+[IsoMessage("trck.001.001.05", "PmtStsTrckrUpd", "urn:iso:std:iso:20022:tech:xsd:trck.001.001.05")]
 public interface IPaymentStatusTrackerUpdateV05 : IOuterRecord
 {
     /// <summary>

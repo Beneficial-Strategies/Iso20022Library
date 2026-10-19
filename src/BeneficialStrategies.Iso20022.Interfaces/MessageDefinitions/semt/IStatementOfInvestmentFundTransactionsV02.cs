@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// This message must not be used in place of confirmation messages.
 /// </summary>
 [IsoId("_MccbotFSEd-BzquC8wXy7w_1866614208")]
+[IsoMessage(
+    "semt.006.001.02",
+    "StmtOfInvstmtFndTxsV02",
+    "urn:iso:std:iso:20022:tech:xsd:semt.006.001.02"
+)]
 public interface IStatementOfInvestmentFundTransactionsV02 : IOuterRecord
 {
     /// <summary>

@@ -177,4 +177,23 @@ public class InterfacesTests
         }
         Assert.True(problems.Count == 0, string.Join(Environment.NewLine, problems.Take(20)));
     }
+
+    [Fact]
+    public void EveryMessageInterface_SaysHowItsMessageIsReadAndWritten()
+    {
+        var problems = new List<string>();
+        foreach (var record in RecordsAssembly.GetExportedTypes().Where(t => t.IsClass && typeof(IOuterRecord).IsAssignableFrom(t)))
+        {
+            var iface = Interfaces.First(i => i.Name == "I" + record.Name && i.Namespace == record.Namespace);
+            var attribute = iface.GetCustomAttribute<IsoMessageAttribute>();
+            string Constant(string name) => (string)record.GetField(name)!.GetValue(null)!;
+            if (attribute is null) { problems.Add($"{iface.Name}: no [IsoMessage]"); continue; }
+            if (attribute.IsoIdentifier != Constant("IsoIdentifier")
+                || attribute.XmlTag != Constant("XmlTag")
+                || attribute.DocumentNamespace != Constant("DocumentNamespace")
+                || attribute.DocumentElementName != Constant("DocumentElementName"))
+                problems.Add($"{iface.Name}: [IsoMessage] differs from the constants of {record.Name}");
+        }
+        Assert.True(problems.Count == 0, string.Join(Environment.NewLine, problems.Take(20)));
+    }
 }

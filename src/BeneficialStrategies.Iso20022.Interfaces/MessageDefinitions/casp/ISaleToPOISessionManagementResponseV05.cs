@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOISessionManagementResponse message is sent by a POI to provide the result of an administrative service related to session management.
 /// </summary>
 [IsoId("_2hkSEXO-Ee2pK6udhxEaHA")]
+[IsoMessage(
+    "casp.006.001.05",
+    "SaleToPOISsnMgmtRspn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.006.001.05"
+)]
 public interface ISaleToPOISessionManagementResponseV05 : IOuterRecord
 {
     /// <summary>

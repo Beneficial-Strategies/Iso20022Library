@@ -26,6 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// The InvoiceFinancingRequestStatus message refers to the original request(s) by means of references and a set of data elements included into the original request.
 /// </summary>
 [IsoId("_BUZXMH1LEeCF8NjrBemJWQ_1543411923")]
+[IsoMessage("tsin.002.001.01", "InvcFincgReqSts", "urn:iso:std:iso:20022:tech:xsd:tsin.002.001.01")]
 public interface IInvoiceFinancingRequestStatusV01 : IOuterRecord
 {
     /// <summary>

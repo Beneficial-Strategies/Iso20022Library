@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCurrencyConversionAdviceResponse message is sent by the service provider to acknowledge the acceptor about the notification of the reception of the currency conversion advice.
 /// </summary>
 [IsoId("_kxp7QS1yEeuZtpnZJ4v-5Q")]
+[IsoMessage(
+    "caaa.019.001.04",
+    "AccptrCcyConvsAdvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.019.001.04"
+)]
 public interface IAcceptorCurrencyConversionAdviceResponseV04 : IOuterRecord
 {
     /// <summary>

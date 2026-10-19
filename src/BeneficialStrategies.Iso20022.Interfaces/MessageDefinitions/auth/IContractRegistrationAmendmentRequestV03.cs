@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The ContractRegistrationAmendmentRequest message is sent by the reporting party to the registration agent to amend the registered contract subject to currency control.
 /// </summary>
 [IsoId("_Nz8agR3pEeuiRvbpCaJe6A")]
+[IsoMessage(
+    "auth.021.001.03",
+    "CtrctRegnAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:auth.021.001.03"
+)]
 public interface IContractRegistrationAmendmentRequestV03 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The MoneyMarketUnsecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant unsecured money market transactions.
 /// </summary>
 [IsoId("_IdsB0cEPEea7jLfvGi1PDw")]
+[IsoMessage(
+    "auth.013.001.02",
+    "MnyMktUscrdMktSttstclRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.013.001.02"
+)]
 public interface IMoneyMarketUnsecuredMarketStatisticalReportV02 : IOuterRecord
 {
     /// <summary>

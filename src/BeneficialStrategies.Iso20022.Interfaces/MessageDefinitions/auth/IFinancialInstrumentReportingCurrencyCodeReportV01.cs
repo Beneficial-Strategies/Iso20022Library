@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The MiFIRCurrencyCodeReport message provides the details the ISO 4217 currency codes and is created by ESMA for distribution to National Competent Authorities.
 /// </summary>
 [IsoId("_4LK8N0RNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.048.001.01",
+    "FinInstrmRptgCcyCdRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.048.001.01"
+)]
 public interface IFinancialInstrumentReportingCurrencyCodeReportV01 : IOuterRecord
 {
     /// <summary>

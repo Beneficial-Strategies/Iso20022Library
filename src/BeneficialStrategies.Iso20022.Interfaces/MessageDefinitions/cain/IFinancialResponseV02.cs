@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The FinancialResponse message is sent by an issuer or an agent to an acquirer in response to a FinancialInitiation message.
 /// </summary>
 [IsoId("_aga5FVTsEeeeIYOiLZFQGg")]
+[IsoMessage("cain.004.001.02", "FinRspn", "urn:iso:std:iso:20022:tech:xsd:cain.004.001.02")]
 public interface IFinancialResponseV02 : IOuterRecord
 {
     /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// A factoring client combines a set of financial documents with same characteristics and assigns them to a factoring service. The client can send several assignments in one message and combine them according to different criteria for example for different clients or different currencies.
 /// </summary>
 [IsoId("_OTgzNDQy-AOSNFX-8224505")]
+[IsoMessage("tsin.006.001.01", "InvcAssgnmtReq", "urn:iso:std:iso:20022:tech:xsd:tsin.006.001.01")]
 public interface IInvoiceAssignmentRequestV01 : IOuterRecord
 {
     /// <summary>

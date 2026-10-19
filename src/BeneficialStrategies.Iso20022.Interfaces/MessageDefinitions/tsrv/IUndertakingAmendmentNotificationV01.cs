@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingAmendmentNotification message is sent by the party that issued the undertaking to the applicant to notify it of the contents of a proposed amendment to the undertaking (issued electronically or on paper). The undertaking could be a demand guarantee, standby letter of credit, counter-undertaking (counter-guarantee or counter-standby), or suretyship undertaking. In addition to providing the proposed terms of the amendment and details on proposed changes to the undertaking, the message may provide other supporting information from the sender. It may also be used to notify the proposed termination or cancellation of the undertaking.
 /// </summary>
 [IsoId("_9g6LUnltEeG7BsjMvd1mEw_1297611038")]
+[IsoMessage(
+    "tsrv.007.001.01",
+    "UdrtkgAmdmntNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsrv.007.001.01"
+)]
 public interface IUndertakingAmendmentNotificationV01 : IOuterRecord
 {
     /// <summary>

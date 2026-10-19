@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingInstrumentClassificationReport message is sent by ESMA to all national competent authorities and provides all valid combinations for classification of financial instruments (CFI) as per ISO 10962.
 /// </summary>
 [IsoId("_4LK8VURNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.050.001.01",
+    "FinInstrmRptgInstrmClssfctnRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.050.001.01"
+)]
 public interface IFinancialInstrumentReportingInstrumentClassificationReportV01 : IOuterRecord
 {
     /// <summary>

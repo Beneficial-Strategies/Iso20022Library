@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// - report prices that are used for other purposes than the execution of investment funds orders.
 /// </summary>
 [IsoId("_ZtUJstEvEd-BzquC8wXy7w_-1004257172")]
+[IsoMessage("reda.001.001.02", "reda.001.001.02", "urn:iso:std:iso:20022:tech:xsd:reda.001.001.02")]
 public interface IPriceReportV02 : IOuterRecord
 {
     /// <summary>

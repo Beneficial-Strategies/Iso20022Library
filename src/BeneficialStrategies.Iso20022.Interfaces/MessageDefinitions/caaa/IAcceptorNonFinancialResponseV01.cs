@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorNonFinancialResponse message is sent by the Acquirer (or its Agent) to the POI to provide addintional information.
 /// </summary>
 [IsoId("_Zf-nIC_tEeugIJ3Gvoevmg")]
+[IsoMessage(
+    "caaa.023.001.01",
+    "AccptrNonFinRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.023.001.01"
+)]
 public interface IAcceptorNonFinancialResponseV01 : IOuterRecord
 {
     /// <summary>

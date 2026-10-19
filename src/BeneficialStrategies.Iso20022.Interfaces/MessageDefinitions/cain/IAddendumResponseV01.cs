@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The AddendumResponse message is sent by an issuer or an agent to an acquirer in response to an AddendumInitiation message.
 /// </summary>
 [IsoId("_XWt78f5kEeiLerArw36g0w")]
+[IsoMessage("cain.026.001.01", "AdddmRspn", "urn:iso:std:iso:20022:tech:xsd:cain.026.001.01")]
 public interface IAddendumResponseV01 : IOuterRecord
 {
     /// <summary>

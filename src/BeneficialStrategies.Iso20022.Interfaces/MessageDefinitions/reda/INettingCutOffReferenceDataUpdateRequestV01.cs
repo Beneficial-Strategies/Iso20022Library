@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The Netting Cut Off Reference Data Update Request message is sent to a central system by a participant to request an update to a participant&apos;s netting cut off held at the central system.
 /// </summary>
 [IsoId("_CYWUEJVFEeaYkf5FCqYMeA")]
+[IsoMessage(
+    "reda.060.001.01",
+    "NetgCutOffRefDataUpdReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.060.001.01"
+)]
 public interface INettingCutOffReferenceDataUpdateRequestV01 : IOuterRecord
 {
     /// <summary>

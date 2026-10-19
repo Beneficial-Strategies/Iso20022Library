@@ -28,6 +28,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// For a switch order, this message provides the status of the whole order, ie, it is not possible to accept one leg and to reject the other leg, the entire switch order has to be rejected. In order to identify which leg within the switch is causing a problem, the redemption or subscription leg identification is used.
 /// </summary>
 [IsoId("_jH1s-NE7Ed-BzquC8wXy7w_1853868190")]
+[IsoMessage("setr.016.001.02", "setr.016.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.016.001.02")]
 public interface IOrderInstructionStatusReportV02 : IOuterRecord
 {
     /// <summary>

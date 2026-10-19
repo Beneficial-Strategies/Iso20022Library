@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// It is used as an envelope for a non standard message and provides means to manage an exception or investigation which falls outside the scope or capability of any other formatted message.
 /// </summary>
 [IsoId("_OT9RiNE_Ed-BzquC8wXy7w_-1238871994")]
+[IsoMessage(
+    "camt.035.001.02",
+    "PrtryFrmtInvstgtn",
+    "urn:iso:std:iso:20022:tech:xsd:camt.035.001.02"
+)]
 public interface IProprietaryFormatInvestigationV02 : IOuterRecord
 {
     /// <summary>

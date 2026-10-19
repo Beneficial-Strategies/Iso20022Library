@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// - a rejection from the acquirer for technical reasons.
 /// </summary>
 [IsoId("_bXUntaMVEeCJ6YNENx4h-w_-227867844")]
+[IsoMessage("caaa.006.001.01", "AccptrCxlRspn", "urn:iso:std:iso:20022:tech:xsd:caaa.006.001.01")]
 public interface IAcceptorCancellationResponseV01 : IOuterRecord
 {
     /// <summary>

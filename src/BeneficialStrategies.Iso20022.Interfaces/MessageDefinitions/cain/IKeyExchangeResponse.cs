@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The KeyExchangeResponse message is sent by an acquirer, an issuer or an agent to answer to a KeyExchangeInitiation message and complete a cryptographic key exchange.
 /// </summary>
 [IsoId("_UPyNIHvQEeS2PZh7wUMQog")]
+[IsoMessage("cain.012.001.01", "KeyXchgRspn", "urn:iso:std:iso:20022:tech:xsd:cain.012.001.01")]
 public interface IKeyExchangeResponse : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPMemberRequirementsReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the collateral requirements that a central counterparty obligates a clearing member post at the central counterparty.
 /// </summary>
 [IsoId("_daMXQeUUEem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.055.001.01",
+    "CCPMmbRqrmntsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.055.001.01"
+)]
 public interface ICCPMemberRequirementsReportV01 : IOuterRecord
 {
     /// <summary>

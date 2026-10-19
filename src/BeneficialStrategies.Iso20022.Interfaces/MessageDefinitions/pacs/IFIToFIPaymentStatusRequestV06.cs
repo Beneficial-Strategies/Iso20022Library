@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3Lm2zEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("pacs.028.001.06", "FIToFIPmtStsReq", "urn:iso:std:iso:20022:tech:xsd:pacs.028.001.06")]
 public interface IFIToFIPaymentStatusRequestV06 : IOuterRecord
 {
     /// <summary>

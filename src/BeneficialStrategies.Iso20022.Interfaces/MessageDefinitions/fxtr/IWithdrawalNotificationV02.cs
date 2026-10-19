@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_1Eb9wtEtEd-BzquC8wXy7w_693848369")]
+[IsoMessage("fxtr.013.001.02", "WdrwlNtfctnV02", "urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.02")]
 public interface IWithdrawalNotificationV02 : IOuterRecord
 {
     /// <summary>

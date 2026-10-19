@@ -23,6 +23,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.|.
 /// </summary>
 [IsoId("_1MtSiNE5Ed-BzquC8wXy7w_985101267")]
+[IsoMessage(
+    "sese.031.001.01",
+    "SctiesSttlmCondModStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:sese.031.001.01"
+)]
 public interface ISecuritiesSettlementConditionModificationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

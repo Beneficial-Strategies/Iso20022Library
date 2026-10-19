@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// This financial service is a response of the POI system to the Sale System after a service request.
 /// </summary>
 [IsoId("_Qjrp8YYAEemxIqbaFEE8-w")]
+[IsoMessage(
+    "casp.002.001.01",
+    "SaleToPOISvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.002.001.01"
+)]
 public interface ISaleToPOIServiceResponseV01 : IOuterRecord
 {
     /// <summary>

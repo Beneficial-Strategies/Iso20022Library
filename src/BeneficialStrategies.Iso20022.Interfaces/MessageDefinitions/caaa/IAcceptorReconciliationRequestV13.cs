@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_hf5QMaFAEe-MRKYsaX6JDg")]
+[IsoMessage(
+    "caaa.009.001.13",
+    "AccptrRcncltnReq",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.009.001.13"
+)]
 public interface IAcceptorReconciliationRequestV13 : IOuterRecord
 {
     /// <summary>

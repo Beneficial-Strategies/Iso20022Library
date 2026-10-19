@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountReport message is sent from a financial institution to an organisation for reporting purposes. It can be sent unsolicited as part of opening, maintenance, or closing process, or it can be sent as response to an AccountReportRequest message.
 /// </summary>
 [IsoId("_fBFHUQ1TEeKGXqvMN6jpiw")]
+[IsoMessage("acmt.014.001.02", "AcctRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.014.001.02")]
 public interface IAccountReportV02 : IOuterRecord
 {
     /// <summary>

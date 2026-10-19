@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The RequestForOrderStatusReport message may not be used to request the status of an investment account, a transfer or the status of a financial instrument.
 /// </summary>
 [IsoId("_wWrFyNE7Ed-BzquC8wXy7w_-1373686594")]
+[IsoMessage("setr.018.001.02", "setr.018.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.018.001.02")]
 public interface IRequestForOrderStatusReportV02 : IOuterRecord
 {
     /// <summary>

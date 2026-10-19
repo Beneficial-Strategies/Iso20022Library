@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The Netting Cut Off Reference Data Report message is sent to a participant by a central system to provide details of scheduled, changed, existing and previous netting cut off data held at a central system.
 /// </summary>
 [IsoId("_kBNoCQM-Ee2nqoJcXIhTdw")]
+[IsoMessage(
+    "reda.061.001.02",
+    "NetgCutOffRefDataRpt",
+    "urn:iso:std:iso:20022:tech:xsd:reda.061.001.02"
+)]
 public interface INettingCutOffReferenceDataReportV02 : IOuterRecord
 {
     /// <summary>

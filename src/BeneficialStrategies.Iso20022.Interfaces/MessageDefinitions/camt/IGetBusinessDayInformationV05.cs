@@ -24,6 +24,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// This message will be replied to by a ReturnBusinessDayInformation message. Additional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.
 /// </summary>
 [IsoId("_jwlbbxbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.018.001.05", "GetBizDayInf", "urn:iso:std:iso:20022:tech:xsd:camt.018.001.05")]
 public interface IGetBusinessDayInformationV05 : IOuterRecord
 {
     /// <summary>

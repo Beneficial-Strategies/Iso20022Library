@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The ContractRegistrationConfirmation message is sent by the registration agent to the reporting party to register the contract subject to currency control.
 /// </summary>
 [IsoId("_bf9RvW2PEei3KuUgpx7Xcw")]
+[IsoMessage("auth.019.001.02", "CtrctRegnConf", "urn:iso:std:iso:20022:tech:xsd:auth.019.001.02")]
 public interface IContractRegistrationConfirmationV02 : IOuterRecord
 {
     /// <summary>

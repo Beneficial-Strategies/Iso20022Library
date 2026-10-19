@@ -26,6 +26,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// using the relevant elements in the Business Application Header.
 /// </summary>
 [IsoId("_jJPNoyAZEeu4a6pNulzZ4Q")]
+[IsoMessage(
+    "semt.013.002.05",
+    "IntraPosMvmntInstr",
+    "urn:iso:std:iso:20022:tech:xsd:semt.013.002.05"
+)]
 public interface IIntraPositionMovementInstruction002V05 : IOuterRecord
 {
     /// <summary>

@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// This message is sent in response to an closing request message from the organisation, if the business content is valid, but additional information is required.
 /// </summary>
 [IsoId("_nIplFtE9Ed-BzquC8wXy7w_877834733")]
+[IsoMessage(
+    "acmt.021.001.01",
+    "AcctClsgAddtlInfReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.021.001.01"
+)]
 public interface IAccountClosingAdditionalInformationRequestV01 : IOuterRecord
 {
     /// <summary>

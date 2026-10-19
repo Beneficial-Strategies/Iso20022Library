@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 ///
 /// </summary>
 [IsoId("_rUYOLdcBEeq_l4BJLVUF2Q")]
+[IsoMessage("pain.018.001.03", "MndtSspnsnReq", "urn:iso:std:iso:20022:tech:xsd:pain.018.001.03")]
 public interface IMandateSuspensionRequestV03 : IOuterRecord
 {
     /// <summary>

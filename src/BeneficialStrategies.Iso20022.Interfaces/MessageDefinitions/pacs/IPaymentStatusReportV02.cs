@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The PaymentStatusReport message exchanged between agents is identified in the schema as follows: |urn:iso:std:iso:20022:tech:xsd:pacs.002.001.02|.
 /// </summary>
 [IsoId("_esBU4dEuEd-BzquC8wXy7w_-2138292511")]
+[IsoMessage("pacs.002.001.02", "pacs.002.001.02", "urn:iso:std:iso:20022:tech:xsd:pacs.002.001.02")]
 public interface IPaymentStatusReportV02 : IOuterRecord
 {
     /// <summary>

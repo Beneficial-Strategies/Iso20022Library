@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeMarginDataTransactionStateReport message is sent by the trade repository (TR) to the competent authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the margins exchanged in relation to the derivatives transactions.
 /// </summary>
 [IsoId("_pVVvgWmFEe2DRvVJM2Qy-g")]
+[IsoMessage(
+    "auth.109.001.01",
+    "DerivsTradMrgnDataTxStatRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.109.001.01"
+)]
 public interface IDerivativesTradeMarginDataTransactionStateReportV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingTransactionReport message is sent by the reporting agent to the competent authority to report on the securities transactions or by the competent authority to another competent authority when the transaction needs to be exchanged between the competent authorities.
 /// </summary>
 [IsoId("_4LUGT0RNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.016.001.01",
+    "FinInstrmRptgTxRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.016.001.01"
+)]
 public interface IFinancialInstrumentReportingTransactionReportV01 : IOuterRecord
 {
     /// <summary>

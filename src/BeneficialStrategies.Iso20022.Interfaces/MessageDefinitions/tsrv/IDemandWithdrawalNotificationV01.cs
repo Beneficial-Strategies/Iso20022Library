@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The DemandWithdrawalNotification message is sent by the beneficiary to the party that issued the undertaking, either directly or via a presenting or nominated party, to inform the issuer or nominated party that it has elected to withdraw its demand under the demand guarantee or standby letter of credit.
 /// </summary>
 [IsoId("_9hWQMnltEeG7BsjMvd1mEw_1943951405")]
+[IsoMessage("tsrv.017.001.01", "DmndWdrwlNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsrv.017.001.01")]
 public interface IDemandWithdrawalNotificationV01 : IOuterRecord
 {
     /// <summary>

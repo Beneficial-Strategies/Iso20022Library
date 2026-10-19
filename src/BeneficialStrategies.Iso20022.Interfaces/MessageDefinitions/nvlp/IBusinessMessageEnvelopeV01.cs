@@ -11,6 +11,12 @@ namespace BeneficialStrategies.Iso20022.nvlp;
 /// The BusinessMessageEnvelope is a technical message container used to bundle a business application header with a message definition, typically to support processing or transport. It may contain and define additional data elements that apply to the message instance container.
 /// </summary>
 [IsoId("_C7O-UQJ9Ee2MF-ort1OTzA")]
+[IsoMessage(
+    "nvlp.001.001.01",
+    "BizMsgEnvlp",
+    "urn:iso:std:iso:20022:tech:xsd:nvlp.001.001.01",
+    DocumentElementName = "BizMsgEnvlp"
+)]
 public interface IBusinessMessageEnvelopeV01 : IOuterRecord
 {
     /// <summary>

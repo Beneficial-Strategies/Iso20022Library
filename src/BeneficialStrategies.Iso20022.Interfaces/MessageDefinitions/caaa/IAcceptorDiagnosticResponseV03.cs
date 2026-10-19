@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorDiagnosticResponse message is sent by the acquirer (or its agent) to provide to the acceptor the result of the diagnostic request.
 /// </summary>
 [IsoId("_Rt4lYTTcEeO5e9wx3yvd8g")]
+[IsoMessage(
+    "caaa.014.001.03",
+    "AccptrDgnstcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.014.001.03"
+)]
 public interface IAcceptorDiagnosticResponseV03 : IOuterRecord
 {
     /// <summary>

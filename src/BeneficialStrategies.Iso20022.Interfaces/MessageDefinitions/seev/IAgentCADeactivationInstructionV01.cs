@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The amendment of a deactivation is effected by cancel/replace mechanism.
 /// </summary>
 [IsoId("_TMHRHdEwEd-BzquC8wXy7w_1150162088")]
+[IsoMessage(
+    "seev.028.001.01",
+    "AgtCADeactvtnInstr",
+    "urn:iso:std:iso:20022:tech:xsd:seev.028.001.01"
+)]
 public interface IAgentCADeactivationInstructionV01 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The message identification of the PortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PortfolioTransferInstruction by just quoting its message identification in PreviousReference.
 /// </summary>
 [IsoId("_-zqTYQgLEeSFYfyUKDXKaw")]
+[IsoMessage("sese.014.001.06", "PrtflTrfCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.014.001.06")]
 public interface IPortfolioTransferCancellationRequestV06 : IOuterRecord
 {
     /// <summary>

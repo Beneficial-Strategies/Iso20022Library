@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// Note: The amendment of a corporate action notification is done through a replacement mechanism in line with both the ISO 15022 messages used in the flow between the CSD and its clients, and the ISO 20022 proxy voting messages.
 /// </summary>
 [IsoId("_TRBmS9EwEd-BzquC8wXy7w_-1004018302")]
+[IsoMessage("seev.009.001.01", "AgtCANtfctnAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.009.001.01")]
 public interface IAgentCANotificationAdviceV01 : IOuterRecord
 {
     /// <summary>

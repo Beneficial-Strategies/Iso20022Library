@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The reference of each product transfer confirmation is identified in TransferConfirmationIdentification. The reference of the original product transfer is specified in TransferInstructionReference. The message identification of the PEPOrISAPOrPortfolioTransferInstruction message in which the product transfers were conveyed may also be quoted in RelatedReference.
 /// </summary>
 [IsoId("_kezKy9E5Ed-BzquC8wXy7w_-1426890235")]
+[IsoMessage(
+    "sese.013.001.02",
+    "PEPOrISAOrPrtflTrfConfV02",
+    "urn:iso:std:iso:20022:tech:xsd:sese.013.001.02"
+)]
 public interface IPEPOrISAOrPortfolioTransferConfirmationV02 : IOuterRecord
 {
     /// <summary>

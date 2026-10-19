@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// The ATMInquiryRequest message is sent by an ATM to an ATM manager to request information about a customer (for example card, account).
 /// </summary>
 [IsoId("_NsmBsa4VEeW_TaP-ygI0SQ")]
+[IsoMessage("catp.006.001.02", "ATMNqryReq", "urn:iso:std:iso:20022:tech:xsd:catp.006.001.02")]
 public interface IATMInquiryRequestV02 : IOuterRecord
 {
     /// <summary>

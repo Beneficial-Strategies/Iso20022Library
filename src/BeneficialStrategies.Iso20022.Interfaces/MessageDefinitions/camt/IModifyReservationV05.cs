@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Scope|The ModifyReservation message is used to request modifications in the details of one particular reservation set by the member and managed by the transaction administrator.|Usage|After the receipt of a ModifyReservation message the transaction administrator checks whether the amount of liquidity on the member account is sufficient to set the reservation.|If there is enough liquidity available, the requested amount will be reserved. In case the requested amount exceeds the available liquidity, only the available liquidity will be reserved. The difference will not be blocked at a later point, even if the account balance of the member reaches the level of the initial reservation request.|The reservation can be effected directly by the member, who has the possibility to: |- reset the reserved liquidity to zero|- change the reservation amount during the day with immediate effect|- input a default reservation amount for the following day(s); valid until a new reservation amount is requested|After the receipt of a ModifyReservation message the transaction administrator checks whether the amount of liquidity on the member account is sufficient to set the reservation.
 /// </summary>
 [IsoId("_jwlb0xbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.048.001.05", "ModfyRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.048.001.05")]
 public interface IModifyReservationV05 : IOuterRecord
 {
     /// <summary>

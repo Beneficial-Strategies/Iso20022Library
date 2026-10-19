@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_2_GxgaFFEe-MRKYsaX6JDg")]
+[IsoMessage("catp.016.001.02", "ATMTrfReq", "urn:iso:std:iso:20022:tech:xsd:catp.016.001.02")]
 public interface IATMTransferRequestV02 : IOuterRecord
 {
     /// <summary>

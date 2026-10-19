@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 ///
 /// </summary>
 [IsoId("_efpsyNEuEd-BzquC8wXy7w_-942514611")]
+[IsoMessage("pacs.009.001.01", "pacs.009.001.01", "urn:iso:std:iso:20022:tech:xsd:pacs.009.001.01")]
 public interface IFinancialInstitutionCreditTransferV01 : IOuterRecord
 {
     /// <summary>

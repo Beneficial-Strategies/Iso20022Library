@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// Note that a confirmation request could be cancelled or amended.
 /// </summary>
 [IsoId("_2qmO4ESCEeStEe_B2dcrqg")]
+[IsoMessage("fxtr.034.001.01", "FXTradConfReq", "urn:iso:std:iso:20022:tech:xsd:fxtr.034.001.01")]
 public interface IForeignExchangeTradeConfirmationRequestV01 : IOuterRecord
 {
     /// <summary>

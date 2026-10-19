@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingNonWorkingDayReport message is sent by the reporting entity to the competent authority to report on non-working days.
 /// </summary>
 [IsoId("_4LUGIURNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.039.001.01",
+    "FinInstrmRptgNonWorkgDayRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.039.001.01"
+)]
 public interface IFinancialInstrumentReportingNonWorkingDayReportV01 : IOuterRecord
 {
     /// <summary>

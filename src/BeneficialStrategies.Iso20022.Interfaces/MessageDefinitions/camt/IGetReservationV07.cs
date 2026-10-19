@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// This message will be replied to by a ReturnReservation message.
 /// </summary>
 [IsoId("_4DhGEQy9Ee2Wmf2RrXviyA")]
+[IsoMessage("camt.046.001.07", "GetRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.046.001.07")]
 public interface IGetReservationV07 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_CZOUU7DEEe-g3p7goNrabg")]
+[IsoMessage(
+    "reda.075.001.01",
+    "ElgblSctiesDeltnReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.075.001.01"
+)]
 public interface IEligibleSecuritiesDeletionRequestV01 : IOuterRecord
 {
     /// <summary>

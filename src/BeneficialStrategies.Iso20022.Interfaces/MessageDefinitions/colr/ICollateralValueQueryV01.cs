@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The CollateralValueQuery message is sent by a system member (such as a directly connected party) to the system transaction administrator to query the current available value of securities for auto collateralisation for one specific or several cash accounts.
 /// </summary>
 [IsoId("_5SjM8TooEemaN9GkhmGkfg")]
+[IsoMessage("colr.001.001.01", "CollValQry", "urn:iso:std:iso:20022:tech:xsd:colr.001.001.01")]
 public interface ICollateralValueQueryV01 : IOuterRecord
 {
     /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.cafc;
 ///
 /// </summary>
 [IsoId("_q5bNFFaHEeeFltjJxERUxw")]
+[IsoMessage("cafc.001.001.01", "FeeColltnInitn", "urn:iso:std:iso:20022:tech:xsd:cafc.001.001.01")]
 public interface IFeeCollectionInitiationV01 : IOuterRecord
 {
     /// <summary>

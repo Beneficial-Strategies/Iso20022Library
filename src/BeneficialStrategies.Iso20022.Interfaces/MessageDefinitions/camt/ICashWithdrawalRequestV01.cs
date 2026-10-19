@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The CashWithdrawalRequest message is sent by a cash receiver to a a cash sender to request that cash is withdrawn from an account.
 /// </summary>
 [IsoId("_24xMkOR7Ee-NFYIkYc90gw")]
+[IsoMessage("camt.114.001.01", "CshWdrwlReq", "urn:iso:std:iso:20022:tech:xsd:camt.114.001.01")]
 public interface ICashWithdrawalRequestV01 : IOuterRecord
 {
     /// <summary>

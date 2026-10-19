@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCAICSD1 message extends ISO corporate action Instruction Cancellation Request (CAIC) message with DTCC corporate action elements not covered in the standard message.
 /// </summary>
 [IsoId("_b_h_beaHEei5aPS232E3Mw")]
+[IsoMessage("supl.032.001.02", "DTCCCAICSD1", "urn:iso:std:iso:20022:tech:xsd:supl.032.001.02")]
 public interface IDTCCCAICSD1V02 : IOuterRecord
 {
     /// <summary>

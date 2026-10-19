@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3H8YTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("pain.007.001.12", "CstmrPmtRvsl", "urn:iso:std:iso:20022:tech:xsd:pain.007.001.12")]
 public interface ICustomerPaymentReversalV12 : IOuterRecord
 {
     /// <summary>

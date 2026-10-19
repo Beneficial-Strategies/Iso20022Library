@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The RoleAndBaselineAcceptanceNotification message is used to inform that a secondary bank has accepted the role and baseline. No response is expected.
 /// </summary>
 [IsoId("_s3o9qNE8Ed-BzquC8wXy7w_1220286611")]
+[IsoMessage(
+    "tsmt.051.001.01",
+    "RoleAndBaselnAccptncNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.051.001.01"
+)]
 public interface IRoleAndBaselineAcceptanceNotificationV01 : IOuterRecord
 {
     /// <summary>

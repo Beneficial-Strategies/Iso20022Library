@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_UbvJIX_5Ee-h086v0qPiyQ")]
+[IsoMessage("seev.008.001.10", "MtgRsltDssmntn", "urn:iso:std:iso:20022:tech:xsd:seev.008.001.10")]
 public interface IMeetingResultDisseminationV10 : IOuterRecord
 {
     /// <summary>

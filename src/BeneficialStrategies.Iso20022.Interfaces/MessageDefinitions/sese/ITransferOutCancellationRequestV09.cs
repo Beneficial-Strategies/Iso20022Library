@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The rejection or acceptance of a TransferOutCancellationRequest is made using a TransferCancellationStatusReport message.
 /// </summary>
 [IsoId("_LctLkZDhEem7fvtoGpNpow")]
+[IsoMessage("sese.002.001.09", "TrfOutCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.002.001.09")]
 public interface ITransferOutCancellationRequestV09 : IOuterRecord
 {
     /// <summary>

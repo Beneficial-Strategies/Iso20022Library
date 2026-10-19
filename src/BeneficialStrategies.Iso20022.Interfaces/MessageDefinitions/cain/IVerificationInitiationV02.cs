@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// Examples of usages are: authentication of certificates, assurance levels of tokens, certificate management, address verification, account verification and cheque verification. It is also used to inform the receiver of a verification that has been completed on its behalf.
 /// </summary>
 [IsoId("_3L3tMYELEeu6D49Gi-ZPwQ")]
+[IsoMessage("cain.018.001.02", "VrfctnInitn", "urn:iso:std:iso:20022:tech:xsd:cain.018.001.02")]
 public interface IVerificationInitiationV02 : IOuterRecord
 {
     /// <summary>

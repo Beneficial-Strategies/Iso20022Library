@@ -21,6 +21,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// The AccountingStatementOfHoldings message should not be used for trading purposes.
 /// </summary>
 [IsoId("_MbQI2NFSEd-BzquC8wXy7w_1168130771")]
+[IsoMessage(
+    "semt.003.001.02",
+    "AcctgStmtOfHldgsV02",
+    "urn:iso:std:iso:20022:tech:xsd:semt.003.001.02"
+)]
 public interface IAccountingStatementOfHoldingsV02 : IOuterRecord
 {
     /// <summary>

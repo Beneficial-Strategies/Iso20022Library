@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The ForeignExchangeTradeInstruction message is sent from a participant to a central settlement system to advise of the creation of a foreign exchange trade.
 /// </summary>
 [IsoId("_xXa2kTJ5EeOd1OidA-8_VQ")]
+[IsoMessage("fxtr.014.001.03", "FXTradInstr", "urn:iso:std:iso:20022:tech:xsd:fxtr.014.001.03")]
 public interface IForeignExchangeTradeInstructionV03 : IOuterRecord
 {
     /// <summary>

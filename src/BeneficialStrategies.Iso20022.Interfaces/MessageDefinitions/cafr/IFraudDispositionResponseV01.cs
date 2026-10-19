@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 ///
 /// </summary>
 [IsoId("_u1LEsXdnEeeKH6vrEwvLHA")]
+[IsoMessage("cafr.004.001.01", "FrdDspstnRspn", "urn:iso:std:iso:20022:tech:xsd:cafr.004.001.01")]
 public interface IFraudDispositionResponseV01 : IOuterRecord
 {
     /// <summary>

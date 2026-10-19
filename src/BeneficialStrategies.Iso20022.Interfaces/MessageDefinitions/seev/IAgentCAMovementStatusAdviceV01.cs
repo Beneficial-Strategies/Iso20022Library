@@ -24,6 +24,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message should not be used to provide the confirmation of the settlement; the Agent Corporate Action Movement Confirmation message should be used instead.
 /// </summary>
 [IsoId("_TQurWdEwEd-BzquC8wXy7w_-1045499600")]
+[IsoMessage(
+    "seev.022.001.01",
+    "AgtCAMvmntStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.022.001.01"
+)]
 public interface IAgentCAMovementStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// When the cancellation is rejected, the reason for the rejection must be specified.
 /// </summary>
 [IsoId("3ad5426e-854c-4d30-b7e5-aff0785a43ab")]
+[IsoMessage("setr.017.001.05", "OrdrCxlStsRpt", "urn:iso:std:iso:20022:tech:xsd:setr.017.001.05")]
 public interface IOrderCancellationStatusReportV05 : IOuterRecord
 {
     /// <summary>

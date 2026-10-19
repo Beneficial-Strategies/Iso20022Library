@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIAbort message is sent by a sale system to abort process on POI.
 /// </summary>
 [IsoId("_BckBgQ1SEeqjM-rxn3HuXQ")]
+[IsoMessage("casp.011.001.02", "SaleToPOIAbrt", "urn:iso:std:iso:20022:tech:xsd:casp.011.001.02")]
 public interface ISaleToPOIAbortV02 : IOuterRecord
 {
     /// <summary>

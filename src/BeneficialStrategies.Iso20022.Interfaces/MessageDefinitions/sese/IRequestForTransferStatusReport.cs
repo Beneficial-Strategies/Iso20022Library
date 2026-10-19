@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// - the status of one or several transfer cancellation instructions.
 /// </summary>
 [IsoId("_nnEjSNE5Ed-BzquC8wXy7w_-788060154")]
+[IsoMessage("sese.009.001.01", "sese.009.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.009.001.01")]
 public interface IRequestForTransferStatusReport : IOuterRecord
 {
     /// <summary>

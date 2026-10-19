@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("__Bjk8Z_xEfC4Q_xhaK1hdQ")]
+[IsoMessage(
+    "caaa.018.001.10",
+    "AccptrCcyConvsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.018.001.10"
+)]
 public interface IAcceptorCurrencyConversionAdviceV10 : IOuterRecord
 {
     /// <summary>

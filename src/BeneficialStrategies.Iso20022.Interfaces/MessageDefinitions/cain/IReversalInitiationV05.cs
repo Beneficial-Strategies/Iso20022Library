@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_n_fC4ROIEfC1ZfCQz0xB3g")]
+[IsoMessage("cain.005.001.05", "RvslInitn", "urn:iso:std:iso:20022:tech:xsd:cain.005.001.05")]
 public interface IReversalInitiationV05 : IOuterRecord
 {
     /// <summary>

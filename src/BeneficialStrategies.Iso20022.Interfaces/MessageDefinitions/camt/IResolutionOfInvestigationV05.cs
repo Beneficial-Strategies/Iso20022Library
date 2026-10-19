@@ -32,6 +32,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Resolution Of Investigation message should be the sole message to respond to a cancellation request. Details of the underlying transactions and the related statuses for which the cancellation request has been issued may be provided in the Cancellation Details component.
 /// </summary>
 [IsoId("_wQzazRPeEeSVo-TFVwFHvA")]
+[IsoMessage("camt.029.001.05", "RsltnOfInvstgtn", "urn:iso:std:iso:20022:tech:xsd:camt.029.001.05")]
 public interface IResolutionOfInvestigationV05 : IOuterRecord
 {
     /// <summary>

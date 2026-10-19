@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// This message must contain the reference of the message to be cancelled.This message may also contain details of the message to be cancelled, but this is not recommended.
 /// </summary>
 [IsoId("_ZstsytEvEd-BzquC8wXy7w_-609818463")]
+[IsoMessage("reda.002.001.03", "PricRptCxlV03", "urn:iso:std:iso:20022:tech:xsd:reda.002.001.03")]
 public interface IPriceReportCancellationV03 : IOuterRecord
 {
     /// <summary>

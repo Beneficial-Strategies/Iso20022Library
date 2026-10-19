@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CreditorPaymentActivationRequest message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents. It is used by a Creditor to request movement of funds from the debtor account to a creditor.
 /// </summary>
 [IsoId("_XXWvgQLFEe2X55dNQNVKfg")]
+[IsoMessage(
+    "pain.013.001.10",
+    "CdtrPmtActvtnReq",
+    "urn:iso:std:iso:20022:tech:xsd:pain.013.001.10"
+)]
 public interface ICreditorPaymentActivationRequestV10 : IOuterRecord
 {
     /// <summary>

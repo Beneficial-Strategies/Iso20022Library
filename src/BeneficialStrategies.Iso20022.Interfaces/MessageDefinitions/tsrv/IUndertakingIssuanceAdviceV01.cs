@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingIssuanceAdvice message is sent by an advising party to the beneficiary, either directly or via one or more other advising parties in the transaction chain, to advise the issuance of an undertaking. Other interested parties may also be informed of the advice. The undertaking advised could be a demand guarantee, standby letter of credit, or counter-undertaking (counter-guarantee or counter-standby). In addition to providing details on the applicable rules, expiry date, the amount, required documents, and terms and conditions of the undertaking, the advice may provide information from the sender such as confirmation details.
 /// </summary>
 [IsoId("_9fkHg3ltEeG7BsjMvd1mEw_-135389308")]
+[IsoMessage("tsrv.002.001.01", "UdrtkgIssncAdvc", "urn:iso:std:iso:20022:tech:xsd:tsrv.002.001.01")]
 public interface IUndertakingIssuanceAdviceV01 : IOuterRecord
 {
     /// <summary>

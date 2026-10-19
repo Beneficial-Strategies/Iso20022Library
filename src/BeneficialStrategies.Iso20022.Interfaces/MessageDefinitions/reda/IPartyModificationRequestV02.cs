@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3RGqTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("reda.022.001.02", "PtyModReq", "urn:iso:std:iso:20022:tech:xsd:reda.022.001.02")]
 public interface IPartyModificationRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The acceptance of a request to change the status of a transaction can be achieved by sending a StatusChangeRequestAcceptance message.
 /// </summary>
 [IsoId("_xILlyNE8Ed-BzquC8wXy7w_-544947479")]
+[IsoMessage("tsmt.029.001.02", "StsChngReqRjctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.029.001.02")]
 public interface IStatusChangeRequestRejectionV02 : IOuterRecord
 {
     /// <summary>

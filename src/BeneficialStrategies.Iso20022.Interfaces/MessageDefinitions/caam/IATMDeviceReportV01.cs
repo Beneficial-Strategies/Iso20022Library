@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// - The status of the ATM components.
 /// </summary>
 [IsoId("_it_dUIrdEeSvuOJS0mmL0g")]
+[IsoMessage("caam.001.001.01", "ATMDvcRpt", "urn:iso:std:iso:20022:tech:xsd:caam.001.001.01")]
 public interface IATMDeviceReportV01 : IOuterRecord
 {
     /// <summary>

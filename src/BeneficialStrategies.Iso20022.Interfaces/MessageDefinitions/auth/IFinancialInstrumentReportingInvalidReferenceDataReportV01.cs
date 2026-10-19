@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingInvalidReferenceDataReport message is sent by the trading venue to the national competent authority to report on all records that have become invalid based on updates that have been received or that have passed the termination date original set for the instrument.
 /// </summary>
 [IsoId("_4LK8W0RNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.042.001.01",
+    "FinInstrmRptgInvldRefDataRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.042.001.01"
+)]
 public interface IFinancialInstrumentReportingInvalidReferenceDataReportV01 : IOuterRecord
 {
     /// <summary>

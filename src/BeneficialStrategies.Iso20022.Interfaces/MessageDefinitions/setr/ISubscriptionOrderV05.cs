@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// If there are subscription orders for the same financial instrument but for different accounts that are to be communicated in a single message, then the SubscriptionBulkOrder message must be used.
 /// </summary>
 [IsoId("a3ddcee2-f5ce-4235-a3b1-443f1a1318c1")]
+[IsoMessage("setr.010.001.05", "SbcptOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.010.001.05")]
 public interface ISubscriptionOrderV05 : IOuterRecord
 {
     /// <summary>

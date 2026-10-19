@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// The SecuritiesMessageRejection message must not be used to reject an instruction message that cannot be processed for business reasons, for example, if information is missing in an instruction message or because securities are not available for settlement.
 /// </summary>
 [IsoId("_MaWw_NFSEd-BzquC8wXy7w_-365444555")]
+[IsoMessage(
+    "semt.001.001.02",
+    "SctiesMsgRjctnV02",
+    "urn:iso:std:iso:20022:tech:xsd:semt.001.001.02"
+)]
 public interface ISecuritiesMessageRejectionV02 : IOuterRecord
 {
     /// <summary>

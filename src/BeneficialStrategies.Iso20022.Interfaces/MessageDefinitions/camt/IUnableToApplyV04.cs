@@ -29,6 +29,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Unable To Apply Justification element allows the assigner to indicate whether a specific element causes the unable to apply situation (incorrect element and/or mismatched element can be listed) or whether any supplementary information needs to be forwarded.
 /// </summary>
 [IsoId("_sMkS8FkyEeGeoaLUQk__nA_-161761575")]
+[IsoMessage("camt.026.001.04", "UblToApply", "urn:iso:std:iso:20022:tech:xsd:camt.026.001.04")]
 public interface IUnableToApplyV04 : IOuterRecord
 {
     /// <summary>

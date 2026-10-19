@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// Requests are underpinned by specific legal texts.
 /// </summary>
 [IsoId("_ixVXwztbEeGg8InIPRjKog")]
+[IsoMessage("auth.001.001.01", "InfReqOpng", "urn:iso:std:iso:20022:tech:xsd:auth.001.001.01")]
 public interface IInformationRequestOpeningV01 : IOuterRecord
 {
     /// <summary>

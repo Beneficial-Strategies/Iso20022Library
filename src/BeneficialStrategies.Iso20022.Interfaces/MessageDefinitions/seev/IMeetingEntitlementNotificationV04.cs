@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The message is also used to amend a previously sent MeetingEntitlementNotification. To notify an update, the RelatedReference must be included in the message.
 /// </summary>
 [IsoId("_Tme46dEwEd-BzquC8wXy7w_-1564035735")]
+[IsoMessage(
+    "seev.003.001.04",
+    "MtgEntitlmntNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:seev.003.001.04"
+)]
 public interface IMeetingEntitlementNotificationV04 : IOuterRecord
 {
     /// <summary>

@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// |The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.||
 /// </summary>
 [IsoId("_azR0wYZFEe-6cOl7zMpJaA")]
+[IsoMessage("sese.041.001.02", "BuyInRgltryAdvc", "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02")]
 public interface IBuyInRegulatoryAdviceV02 : IOuterRecord
 {
     /// <summary>

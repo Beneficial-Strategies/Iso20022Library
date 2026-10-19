@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// The message is sent from a participant to a central settlement system to advise of the update of a previously sent notification and it contains a &quot;Related Reference&quot; to link it to the previous notification.
 /// </summary>
 [IsoId("_JB5pZNE8Ed-BzquC8wXy7w_1482836315")]
+[IsoMessage("trea.002.001.02", "AmdNDFOpngV02", "urn:iso:std:iso:20022:tech:xsd:trea.002.001.02")]
 public interface IAmendNonDeliverableForwardOpeningV02 : IOuterRecord
 {
     /// <summary>

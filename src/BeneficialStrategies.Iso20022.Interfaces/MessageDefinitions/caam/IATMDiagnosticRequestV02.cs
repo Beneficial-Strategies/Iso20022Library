@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The ATMDiagnosticRequest message is sent from an ATM to an acquirer to verify the availability of the acquirer. The acquirer will also validate that this ATM is a valid ATM for its particular network.
 /// </summary>
 [IsoId("_Vfn5Ua46EeWRfYPBaeOY8w")]
+[IsoMessage("caam.005.001.02", "ATMDgnstcReq", "urn:iso:std:iso:20022:tech:xsd:caam.005.001.02")]
 public interface IATMDiagnosticRequestV02 : IOuterRecord
 {
     /// <summary>

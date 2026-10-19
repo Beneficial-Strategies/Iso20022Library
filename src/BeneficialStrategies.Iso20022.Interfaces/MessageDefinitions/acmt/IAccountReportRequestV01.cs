@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// This message can be sent at any time outside of account opening, maintenance or closing processes.
 /// </summary>
 [IsoId("_vMh7-NE9Ed-BzquC8wXy7w_-1349901231")]
+[IsoMessage("acmt.013.001.01", "AcctRptReq", "urn:iso:std:iso:20022:tech:xsd:acmt.013.001.01")]
 public interface IAccountReportRequestV01 : IOuterRecord
 {
     /// <summary>

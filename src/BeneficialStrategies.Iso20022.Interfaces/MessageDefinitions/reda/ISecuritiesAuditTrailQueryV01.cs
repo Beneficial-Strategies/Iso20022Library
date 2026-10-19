@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The SecuritiesAuditTrailQuery message is sent by an instructing party to the executing party to query for the securities audit trail recorded in the system.
 /// </summary>
 [IsoId("_jTsKcR62Eeu31YsWNiv_cw")]
+[IsoMessage(
+    "reda.033.001.01",
+    "SctiesAudtTrlQry",
+    "urn:iso:std:iso:20022:tech:xsd:reda.033.001.01"
+)]
 public interface ISecuritiesAuditTrailQueryV01 : IOuterRecord
 {
     /// <summary>

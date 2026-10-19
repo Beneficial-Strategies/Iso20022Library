@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 ///
 /// </summary>
 [IsoId("_V-l6VVW1EeeiG_nL4vgKnQ")]
+[IsoMessage("cain.020.001.01", "Amdmnt", "urn:iso:std:iso:20022:tech:xsd:cain.020.001.01")]
 public interface IAmendmentV01 : IOuterRecord
 {
     /// <summary>

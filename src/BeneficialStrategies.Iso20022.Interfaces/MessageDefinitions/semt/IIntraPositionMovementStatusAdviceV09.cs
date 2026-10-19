@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("226879b2-0028-4b62-8394-d2e515de0ef7")]
+[IsoMessage(
+    "semt.014.001.09",
+    "IntraPosMvmntStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:semt.014.001.09"
+)]
 public interface IIntraPositionMovementStatusAdviceV09 : IOuterRecord
 {
     /// <summary>

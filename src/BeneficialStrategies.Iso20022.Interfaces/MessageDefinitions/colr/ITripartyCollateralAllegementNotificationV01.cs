@@ -22,6 +22,11 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// - a custodian acting on behalf of an investment management institution or a broker/dealer.
 /// </summary>
 [IsoId("_xMpNYSs7EeySlt9bF77XfA")]
+[IsoMessage(
+    "colr.021.001.01",
+    "TrptyCollAllgmtNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:colr.021.001.01"
+)]
 public interface ITripartyCollateralAllegementNotificationV01 : IOuterRecord
 {
     /// <summary>

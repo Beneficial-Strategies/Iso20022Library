@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// If the instructing party does not have enough information to instruct the portfolio transfer, then it must first send an AccountHoldingInformationRequest message to the executing party in order to receive an AccountHoldingInformation message.
 /// </summary>
 [IsoId("_Xnv9AekzEeu9cf4XM82AQQ")]
+[IsoMessage("sese.012.001.11", "PrtflTrfInstr", "urn:iso:std:iso:20022:tech:xsd:sese.012.001.11")]
 public interface IPortfolioTransferInstructionV11 : IOuterRecord
 {
     /// <summary>

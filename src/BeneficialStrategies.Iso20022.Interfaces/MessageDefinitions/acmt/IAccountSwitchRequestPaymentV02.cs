@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchRequestPayment message is sent by the old account servicer to the new account servicer after the completion of the account switch to request the transfer of funds for a payment that the previous account servicer has had to make from the old account (for example: the settlement of a card transaction that was authorised offline).
 /// </summary>
 [IsoId("_7HT_d242EeiU9cctagi5ow")]
+[IsoMessage("acmt.034.001.02", "AcctSwtchReqPmt", "urn:iso:std:iso:20022:tech:xsd:acmt.034.001.02")]
 public interface IAccountSwitchRequestPaymentV02 : IOuterRecord
 {
     /// <summary>

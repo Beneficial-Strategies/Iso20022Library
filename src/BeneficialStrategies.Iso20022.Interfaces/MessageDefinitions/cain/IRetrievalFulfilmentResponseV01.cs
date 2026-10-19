@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The RetrievalFulfilmentResponse message is sent by an issuer or acquirer to an agent (processor, agent) in response to a RetrievalFulfilmentInitiation message.
 /// </summary>
 [IsoId("_XckoseE1EeeV6-yubHrZaQ")]
+[IsoMessage("cain.015.001.01", "RtrvlFlfmtRspn", "urn:iso:std:iso:20022:tech:xsd:cain.015.001.01")]
 public interface IRetrievalFulfilmentResponseV01 : IOuterRecord
 {
     /// <summary>

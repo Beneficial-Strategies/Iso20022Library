@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// The ATMWithdrawalResponse message is sent by an acquirer or its agent to an ATM in response to the ATMWithdrawalRequest to inform the ATM of the approval or decline of the withdrawal transaction.
 /// </summary>
 [IsoId("_q6Vxsa16EeWMg5rOByfExw")]
+[IsoMessage("catp.002.001.02", "ATMWdrwlRspn", "urn:iso:std:iso:20022:tech:xsd:catp.002.001.02")]
 public interface IATMWithdrawalResponseV02 : IOuterRecord
 {
     /// <summary>

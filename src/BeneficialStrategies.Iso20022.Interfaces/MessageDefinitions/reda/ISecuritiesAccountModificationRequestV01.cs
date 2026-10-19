@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Processing and confirmation of the securities account creation request message are provided via a SecuritiesAccountStatusAdvice message.
 /// </summary>
 [IsoId("_KAu-rZ2fEem_Be8NuxvF7Q")]
+[IsoMessage(
+    "reda.023.001.01",
+    "SctiesAcctModReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.023.001.01"
+)]
 public interface ISecuritiesAccountModificationRequestV01 : IOuterRecord
 {
     /// <summary>

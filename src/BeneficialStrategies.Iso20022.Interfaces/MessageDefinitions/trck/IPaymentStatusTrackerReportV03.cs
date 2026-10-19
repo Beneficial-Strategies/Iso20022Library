@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.trck;
 /// The PaymentStatusTrackerReport message is sent by a tracking facility to relevant parties involved in the business transaction to report on the progress of one or more business transaction(s) and obtain transparency on the status.
 /// </summary>
 [IsoId("_9-O68UN7Ee-QZYT2pcGFZw")]
+[IsoMessage("trck.002.001.03", "PmtStsTrckrRpt", "urn:iso:std:iso:20022:tech:xsd:trck.002.001.03")]
 public interface IPaymentStatusTrackerReportV03 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3MONzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("camt.069.001.05", "GetStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.069.001.05")]
 public interface IGetStandingOrderV05 : IOuterRecord
 {
     /// <summary>

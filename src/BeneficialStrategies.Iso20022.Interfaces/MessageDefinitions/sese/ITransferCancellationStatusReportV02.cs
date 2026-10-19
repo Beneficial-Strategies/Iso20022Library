@@ -22,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// - the transfer cancellation is rejected and the reason for the status.
 /// </summary>
 [IsoId("_HnZFINE6Ed-BzquC8wXy7w_1645958483")]
+[IsoMessage("sese.010.001.02", "TrfCxlStsRptV02", "urn:iso:std:iso:20022:tech:xsd:sese.010.001.02")]
 public interface ITransferCancellationStatusReportV02 : IOuterRecord
 {
     /// <summary>

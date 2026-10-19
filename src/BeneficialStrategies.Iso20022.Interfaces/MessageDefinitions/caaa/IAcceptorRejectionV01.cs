@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorRejection message is used to indicate that the received message could not be processed by the acquirer (for example, unable to read or process the message, security error, duplicate message).
 /// </summary>
 [IsoId("_NR9PhaMVEeCJ6YNENx4h-w_449190071")]
+[IsoMessage("caaa.015.001.01", "AccptrRjctn", "urn:iso:std:iso:20022:tech:xsd:caaa.015.001.01")]
 public interface IAcceptorRejectionV01 : IOuterRecord
 {
     /// <summary>

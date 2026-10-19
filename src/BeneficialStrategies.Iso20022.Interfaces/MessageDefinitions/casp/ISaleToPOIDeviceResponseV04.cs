@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIDeviceResponse message is sent by a POI System to sale system to provide result of a device request.
 /// </summary>
 [IsoId("_8NC34U6qEeyGi9JAv6wq7Q")]
+[IsoMessage(
+    "casp.017.001.04",
+    "SaleToPOIDvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.017.001.04"
+)]
 public interface ISaleToPOIDeviceResponseV04 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("d2b0673a-1f10-4086-ad39-b4f95fef2cb5")]
+[IsoMessage(
+    "pain.013.001.12",
+    "CdtrPmtActvtnReq",
+    "urn:iso:std:iso:20022:tech:xsd:pain.013.001.12"
+)]
 public interface ICreditorPaymentActivationRequestV12 : IOuterRecord
 {
     /// <summary>

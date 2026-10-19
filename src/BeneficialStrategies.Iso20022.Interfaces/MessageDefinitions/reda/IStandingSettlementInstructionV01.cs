@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Scope|An instructing party sends the StandingSettlementInstruction (SSI) message to the receiver to create or update a standing cash or securities settlement instruction. The message can also be used to notify a counterparty of an SSI.||Usage|The instructing party (initiator) is:|• An account servicer, for example, a global custodian or prime broker|• A counterparty in a transaction, for example:|- an investment manager (executing broker),|- a global custodian (executing broker, prime broker)|• A vendor’s application communicating on behalf of an account servicer or counterparty|The receiver is:|• An account owner, for example, an investment manager, hedge fund administrator or a party to which SSI operations have been outsourced|• A counterparty, for example:|- an investment manager (executing broker)|- a global custodian (executing broker, prime broker)|• A vendor’s application communicating on behalf of the account owner or counterparty.
 /// </summary>
 [IsoId("_UWnqsNQPEeKSSosHwGnjNw")]
+[IsoMessage("reda.056.001.01", "StgSttlmInstr", "urn:iso:std:iso:20022:tech:xsd:reda.056.001.01")]
 public interface IStandingSettlementInstructionV01 : IOuterRecord
 {
     /// <summary>

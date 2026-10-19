@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_xxOE4EQSEe-2k_vYsOPbHA")]
+[IsoMessage(
+    "auth.059.001.02",
+    "CCPIncmStmtAndCptlAdqcyRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.059.001.02"
+)]
 public interface ICCPIncomeStatementAndCapitalAdequacyReportV02 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - on demand. The message requests a report on all transactions that the requester is involved in and for which an activity has taken place within a time span specified by the requester.
 /// </summary>
 [IsoId("_iE0UQNE8Ed-BzquC8wXy7w_1228841128")]
+[IsoMessage("tsmt.003.001.03", "ActvtyReqRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.003.001.03")]
 public interface IActivityReportRequestV03 : IOuterRecord
 {
     /// <summary>

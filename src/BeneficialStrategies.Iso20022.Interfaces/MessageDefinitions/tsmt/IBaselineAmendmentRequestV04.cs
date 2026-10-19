@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The matching application amends the baseline according to the BaselineAmendmentRequest message and confirms the execution of the request by sending a DeltaReport and calculated BaselineReport message to the requester of the amendment.
 /// </summary>
 [IsoId("_glyJkdM7EeK-v49t1oWkNA")]
+[IsoMessage("tsmt.009.001.04", "BaselnAmdmntReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.009.001.04")]
 public interface IBaselineAmendmentRequestV04 : IOuterRecord
 {
     /// <summary>

@@ -23,6 +23,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// If the report provider wishes to give detailed information related to cash movements, then the FundDetailedConfirmedCashForecastReport message must be used.
 /// </summary>
 [IsoId("_GJQg4QasEeSrXeb3pHPmbg")]
+[IsoMessage(
+    "camt.041.001.04",
+    "FndConfdCshFcstRpt",
+    "urn:iso:std:iso:20022:tech:xsd:camt.041.001.04"
+)]
 public interface IFundConfirmedCashForecastReportV04 : IOuterRecord
 {
     /// <summary>

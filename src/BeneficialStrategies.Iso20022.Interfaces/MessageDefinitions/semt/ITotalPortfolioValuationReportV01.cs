@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// - re-send to a third party a copy of a message for information (the CopyDuplicate value is CODU).
 /// </summary>
 [IsoId("_Fyx0CdHWEd-BzquC8wXy7w_-475830186")]
+[IsoMessage(
+    "semt.024.001.01",
+    "TtlPrtflValtnRpt",
+    "urn:iso:std:iso:20022:tech:xsd:semt.024.001.01"
+)]
 public interface ITotalPortfolioValuationReportV01 : IOuterRecord
 {
     /// <summary>

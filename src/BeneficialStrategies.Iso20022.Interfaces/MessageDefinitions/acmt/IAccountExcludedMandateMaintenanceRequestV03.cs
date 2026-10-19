@@ -13,6 +13,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// If modification codes are used (in that case, they must be used everywhere): the organisation will specify under the “Account” and “Organisation” tags which elements must be added, deleted, modified, or if they are unchanged.
 /// </summary>
 [IsoId("_bfzgl22PEei3KuUgpx7Xcw")]
+[IsoMessage(
+    "acmt.015.001.03",
+    "AcctExcldMndtMntncReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.015.001.03"
+)]
 public interface IAccountExcludedMandateMaintenanceRequestV03 : IOuterRecord
 {
     /// <summary>

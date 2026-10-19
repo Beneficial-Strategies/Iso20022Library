@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The CardManagementResponse message is sent by an issuer or an agent to an acquirer in response to a CardManagementInitiation message.
 /// </summary>
 [IsoId("_sGL-NVgTEeedJb6VxsnkPg")]
+[IsoMessage("cain.024.001.01", "CardMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:cain.024.001.01")]
 public interface ICardManagementResponseV01 : IOuterRecord
 {
     /// <summary>

@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - potentially, a status code and an explanation.
 /// </summary>
 [IsoId("_jx5UwwKxEe2rHs6fbn9-0A")]
+[IsoMessage("camt.025.001.06", "Rct", "urn:iso:std:iso:20022:tech:xsd:camt.025.001.06")]
 public interface IReceiptV06 : IOuterRecord
 {
     /// <summary>

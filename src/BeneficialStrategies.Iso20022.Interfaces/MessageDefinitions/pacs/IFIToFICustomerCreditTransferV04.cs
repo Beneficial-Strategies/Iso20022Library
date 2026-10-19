@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FIToFICustomerCreditTransfer message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_ZLmoASGnEeKjd4jizyIDGA")]
+[IsoMessage(
+    "pacs.008.001.04",
+    "FIToFICstmrCdtTrf",
+    "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.04"
+)]
 public interface IFIToFICustomerCreditTransferV04 : IOuterRecord
 {
     /// <summary>

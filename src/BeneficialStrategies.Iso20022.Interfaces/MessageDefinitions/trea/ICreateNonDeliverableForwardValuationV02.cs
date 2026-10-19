@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// The two trading parties will both send similar notifications to the central settlement system and the central settlement system will send notifications to both.
 /// </summary>
 [IsoId("_PNYUONE8Ed-BzquC8wXy7w_1806193871")]
+[IsoMessage("trea.004.001.02", "CretNDFValtnV02", "urn:iso:std:iso:20022:tech:xsd:trea.004.001.02")]
 public interface ICreateNonDeliverableForwardValuationV02 : IOuterRecord
 {
     /// <summary>

@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - the details of a BaselineAmendmentRequest message that it has obtained.
 /// </summary>
 [IsoId("_eIi6UQgGEeSeS5xdjFfOTw")]
+[IsoMessage(
+    "tsmt.018.001.05",
+    "FullPushThrghRpt",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.018.001.05"
+)]
 public interface IFullPushThroughReportV05 : IOuterRecord
 {
     /// <summary>

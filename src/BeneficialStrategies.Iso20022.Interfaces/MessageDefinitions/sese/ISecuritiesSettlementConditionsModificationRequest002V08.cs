@@ -31,6 +31,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The use of AdditionalInformation and its fields must be pre-agreed between account servicer and account owner. The fields in that sequence cannot be used to amend a trade or event detail unless authorised by country market practice.
 /// </summary>
 [IsoId("_OMbE8_fXEeiNZp_PtLohLw")]
+[IsoMessage(
+    "sese.030.002.08",
+    "SctiesSttlmCondsModReq",
+    "urn:iso:std:iso:20022:tech:xsd:sese.030.002.08"
+)]
 public interface ISecuritiesSettlementConditionsModificationRequest002V08 : IOuterRecord
 {
     /// <summary>

@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// Further information about repair, unmatched, rejected or pending settlement statuses must be specified using either codes or unstructured information.
 /// </summary>
 [IsoId("_K0uj29E6Ed-BzquC8wXy7w_569643185")]
+[IsoMessage("sese.011.001.01", "sese.011.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.011.001.01")]
 public interface ITransferInstructionStatusReport : IOuterRecord
 {
     /// <summary>

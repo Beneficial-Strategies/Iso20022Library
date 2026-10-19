@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 ///
 /// </summary>
 [IsoId("_ehb1cNEuEd-BzquC8wXy7w_-1298261091")]
+[IsoMessage("pacs.008.001.01", "pacs.008.001.01", "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.01")]
 public interface IFIToFICustomerCreditTransferV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOISessionManagementRequest message is sent by a sale system to select an administrative service related to session management.
 /// </summary>
 [IsoId("_-hNt4Q1VEeqjM-rxn3HuXQ")]
+[IsoMessage(
+    "casp.005.001.02",
+    "SaleToPOISsnMgmtReq",
+    "urn:iso:std:iso:20022:tech:xsd:casp.005.001.02"
+)]
 public interface ISaleToPOISessionManagementRequestV02 : IOuterRecord
 {
     /// <summary>

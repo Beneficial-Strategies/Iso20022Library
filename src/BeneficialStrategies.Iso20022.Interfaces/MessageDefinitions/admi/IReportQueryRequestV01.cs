@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// The ReportQueryRequest message is exchanged between system member and system transaction administrator.|It aims at querying the latest available report data of a specific report type. A report is stored and available for query until the event occurs again report is replaced.
 /// </summary>
 [IsoId("_5Ql0IZb3Eee4htziCyV8eA")]
+[IsoMessage("admi.005.001.01", "RptQryReq", "urn:iso:std:iso:20022:tech:xsd:admi.005.001.01")]
 public interface IReportQueryRequestV01 : IOuterRecord
 {
     /// <summary>

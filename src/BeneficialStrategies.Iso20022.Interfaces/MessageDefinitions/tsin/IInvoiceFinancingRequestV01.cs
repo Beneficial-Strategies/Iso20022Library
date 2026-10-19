@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// - In a relay scenario, the message is sent to an Intermediary Agent. The Intermediary Agent acts as an access point that will forward the InvoiceFinancingRequest message to the First Agent.
 /// </summary>
 [IsoId("_BU2DIH1LEeCF8NjrBemJWQ_-1652041162")]
+[IsoMessage("tsin.001.001.01", "InvcFincgReq", "urn:iso:std:iso:20022:tech:xsd:tsin.001.001.01")]
 public interface IInvoiceFinancingRequestV01 : IOuterRecord
 {
     /// <summary>

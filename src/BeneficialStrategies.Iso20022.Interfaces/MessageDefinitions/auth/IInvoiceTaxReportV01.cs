@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The InvoiceTaxReport message is sent by tax responsible to tax authority. Tax authorities require corporates to report their sales based value added tax (VAT). This message is targeted to this reporting based on information in sales invoices and card transactions.
 /// </summary>
 [IsoId("_B5eQoFmrEeOQYsoJizpkVw")]
+[IsoMessage("auth.034.001.01", "InvcTaxRpt", "urn:iso:std:iso:20022:tech:xsd:auth.034.001.01")]
 public interface IInvoiceTaxReportV01 : IOuterRecord
 {
     /// <summary>

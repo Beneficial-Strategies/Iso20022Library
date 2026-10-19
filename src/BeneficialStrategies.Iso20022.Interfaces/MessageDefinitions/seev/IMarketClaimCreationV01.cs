@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message definition is intended for use with the Business Application Header (BAH).
 /// </summary>
 [IsoId("_PT1lANsDEeqmdMJWobugpw")]
+[IsoMessage("seev.050.001.01", "MktClmCre", "urn:iso:std:iso:20022:tech:xsd:seev.050.001.01")]
 public interface IMarketClaimCreationV01 : IOuterRecord
 {
     /// <summary>

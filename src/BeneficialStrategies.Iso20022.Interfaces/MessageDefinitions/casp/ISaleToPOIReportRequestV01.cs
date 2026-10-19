@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// This message is a request for several kind of Report services that the Sale System (Merchant I.S.) can request to the POI system (Card Acceptor system).
 /// </summary>
 [IsoId("_I1wqEYYCEemxIqbaFEE8-w")]
+[IsoMessage("casp.009.001.01", "SaleToPOIRptReq", "urn:iso:std:iso:20022:tech:xsd:casp.009.001.01")]
 public interface ISaleToPOIReportRequestV01 : IOuterRecord
 {
     /// <summary>

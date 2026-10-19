@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// When the AccountDetailsConfirmation is used to reply to a GetAccountDetails message, it returns the selected subsets of account details that were specified in the GetAccountDetails message.
 /// </summary>
 [IsoId("_5QOrURGyEeKVqeHljBM1MQ")]
+[IsoMessage("acmt.002.001.03", "AcctDtlsConf", "urn:iso:std:iso:20022:tech:xsd:acmt.002.001.03")]
 public interface IAccountDetailsConfirmationV03 : IOuterRecord
 {
     /// <summary>

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The AccountReportingRequest message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.
 /// </summary>
 [IsoId("_XlRbQV1rEeehlLdFiIrRgQ")]
+[IsoMessage("camt.060.001.04", "AcctRptgReq", "urn:iso:std:iso:20022:tech:xsd:camt.060.001.04")]
 public interface IAccountReportingRequestV04 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// It could be sent together with other related documents.
 /// </summary>
 [IsoId("_oA-7SNE9Ed-BzquC8wXy7w_-1394534356")]
+[IsoMessage("acmt.019.001.01", "AcctClsgReq", "urn:iso:std:iso:20022:tech:xsd:acmt.019.001.01")]
 public interface IAccountClosingRequestV01 : IOuterRecord
 {
     /// <summary>

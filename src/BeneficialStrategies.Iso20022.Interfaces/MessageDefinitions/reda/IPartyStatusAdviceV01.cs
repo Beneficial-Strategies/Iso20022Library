@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// When processing is successfully performed, the message includes the related party identification.
 /// </summary>
 [IsoId("_5jHEEZeSEeen_cyMrluY4w")]
+[IsoMessage("reda.016.001.01", "PtyStsAdvc", "urn:iso:std:iso:20022:tech:xsd:reda.016.001.01")]
 public interface IPartyStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The CalendarQuery message is sent by the system member to the system administrator to request information on the the system status for specific calendar days.
 /// </summary>
 [IsoId("_DRJNKFuDEe29lKnE5APnfA")]
+[IsoMessage("reda.064.001.02", "CalQry", "urn:iso:std:iso:20022:tech:xsd:reda.064.001.02")]
 public interface ICalendarQueryV02 : IOuterRecord
 {
     /// <summary>

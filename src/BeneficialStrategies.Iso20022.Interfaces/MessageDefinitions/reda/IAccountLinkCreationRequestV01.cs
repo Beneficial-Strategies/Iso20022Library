@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_uMfpsS-1Ee-7Nrf72hv69A")]
+[IsoMessage("reda.049.001.01", "AcctLkCreReq", "urn:iso:std:iso:20022:tech:xsd:reda.049.001.01")]
 public interface IAccountLinkCreationRequestV01 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// The central counterparty (CCP) nets all the positions per clearing account and sends the Net Position report message to the Clearing member.
 /// </summary>
 [IsoId("_9C7fsS0lEeSRe9rElPHBfg")]
+[IsoMessage("secl.004.001.03", "NetPos", "urn:iso:std:iso:20022:tech:xsd:secl.004.001.03")]
 public interface INetPositionV03 : IOuterRecord
 {
     /// <summary>

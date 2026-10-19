@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The MandateAcceptanceReport message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_rwGZYFkyEeGeoaLUQk__nA_1820631680")]
+[IsoMessage("pain.012.001.02", "MndtAccptncRpt", "urn:iso:std:iso:20022:tech:xsd:pain.012.001.02")]
 public interface IMandateAcceptanceReportV02 : IOuterRecord
 {
     /// <summary>

@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The rejection or acceptance of a RedemptionOrderCancellationRequest is made using an OrderCancellationStatusReport message.
 /// </summary>
 [IsoId("_Aab6MTbLEead9bDRE_1DAQ")]
+[IsoMessage("setr.005.001.04", "RedOrdrCxlReq", "urn:iso:std:iso:20022:tech:xsd:setr.005.001.04")]
 public interface IRedemptionOrderCancellationRequestV04 : IOuterRecord
 {
     /// <summary>

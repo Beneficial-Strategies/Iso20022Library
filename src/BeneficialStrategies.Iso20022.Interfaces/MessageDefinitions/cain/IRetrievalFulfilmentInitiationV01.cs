@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The RetrievaFulfilmentInitiation message is the activity initiated by the acceptor, the acquirer or the relevant agent to support the issuer who has determined that a transaction information document needs to be examined before a potential chargeback is sent or to satisfy another need of the issuer or the cardholder. Only an issuer or its agent can initiate a retrieval request.
 /// </summary>
 [IsoId("_I-6FQeE1EeeV6-yubHrZaQ")]
+[IsoMessage("cain.014.001.01", "RtrvlFlfmtInitn", "urn:iso:std:iso:20022:tech:xsd:cain.014.001.01")]
 public interface IRetrievalFulfilmentInitiationV01 : IOuterRecord
 {
     /// <summary>

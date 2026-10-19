@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIReportRequest message is sent by sale system to request a report service.
 /// </summary>
 [IsoId("_GAgmcQ1VEeqjM-rxn3HuXQ")]
+[IsoMessage("casp.009.001.02", "SaleToPOIRptReq", "urn:iso:std:iso:20022:tech:xsd:casp.009.001.02")]
 public interface ISaleToPOIReportRequestV02 : IOuterRecord
 {
     /// <summary>

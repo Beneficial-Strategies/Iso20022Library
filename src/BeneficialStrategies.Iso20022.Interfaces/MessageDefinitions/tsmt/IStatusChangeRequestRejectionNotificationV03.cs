@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// In order to pass on information about the acceptance of a request to change the status of a transaction the matching application sends a StatusChangeNotification message.
 /// </summary>
 [IsoId("_wtWq8tE8Ed-BzquC8wXy7w_233635590")]
+[IsoMessage(
+    "tsmt.030.001.03",
+    "StsChngReqRjctnNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.030.001.03"
+)]
 public interface IStatusChangeRequestRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>

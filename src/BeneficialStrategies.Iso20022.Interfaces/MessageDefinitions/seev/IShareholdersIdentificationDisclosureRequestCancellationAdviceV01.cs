@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The ShareholdersIdentificationDisclosureCancellationAdvice message is sent by an issuer or by a third party nominated by the issuer (such as an issuer&apos;s agent) to the first intermediaries in a custody chain or is sent by any intermediaries in  a custody chain to the next intermediary down the chain of intermediaries (towards the investor side of the chain) in order to withdraw/cancel the disclosure request of shareholders identity previously sent.
 /// </summary>
 [IsoId("_mKzuYDnYEemL_ewJY9QP1g")]
+[IsoMessage(
+    "seev.046.001.01",
+    "ShrhldrsIdDsclsrReqCxlAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.046.001.01"
+)]
 public interface IShareholdersIdentificationDisclosureRequestCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>

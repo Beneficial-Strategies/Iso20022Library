@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_iPj3reShEe-qVZLXW4RRBw")]
+[IsoMessage(
+    "semt.030.001.01",
+    "SctiesSttlmCondsModReqQry",
+    "urn:iso:std:iso:20022:tech:xsd:semt.030.001.01"
+)]
 public interface ISecuritiesSettlementConditionsModificationRequestQueryV01 : IOuterRecord
 {
     /// <summary>

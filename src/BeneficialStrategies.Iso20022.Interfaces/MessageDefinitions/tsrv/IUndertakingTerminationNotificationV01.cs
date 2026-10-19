@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingTerminationNotification message is sent to the applicant by the party that issued the undertaking to give notification of the termination or cancelation of the referenced undertaking.
 /// </summary>
 [IsoId("_9gdfZXltEeG7BsjMvd1mEw_-1901363318")]
+[IsoMessage(
+    "tsrv.012.001.01",
+    "UdrtkgTermntnNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsrv.012.001.01"
+)]
 public interface IUndertakingTerminationNotificationV01 : IOuterRecord
 {
     /// <summary>

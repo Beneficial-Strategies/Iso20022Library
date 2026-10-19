@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The ForeignExchangeTradeInstructionAmendement message is sent from a participant to a central settlement system to advise of the update of a previously sent notification. The &quot;Related Reference&quot; must be used to link it to the previous notification.
 /// </summary>
 [IsoId("_4M7IQRnWEeKKXqHkeUjBbw")]
+[IsoMessage(
+    "fxtr.015.001.02",
+    "FXTradInstrAmdmnt",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.015.001.02"
+)]
 public interface IForeignExchangeTradeInstructionAmendmentV02 : IOuterRecord
 {
     /// <summary>

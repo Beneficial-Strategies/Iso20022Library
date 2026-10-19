@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// The notification is sent by a central settlement system to the two trading parties after it has received create, amend or cancel messages from both. The message may also contain information on the settlement of the trade.
 /// </summary>
 [IsoId("_URegMNE8Ed-BzquC8wXy7w_1248981968")]
+[IsoMessage("trea.007.001.02", "NDFNtfctnV02", "urn:iso:std:iso:20022:tech:xsd:trea.007.001.02")]
 public interface INonDeliverableForwardNotificationV02 : IOuterRecord
 {
     /// <summary>

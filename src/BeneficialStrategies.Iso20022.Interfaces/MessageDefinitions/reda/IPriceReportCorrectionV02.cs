@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The PriceReportCorrection message is used to correct information in a PriceReport message that was previously sent by the fund accountant. If an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport message is sent.
 /// </summary>
 [IsoId("_Zs3dytEvEd-BzquC8wXy7w_-233980086")]
+[IsoMessage("reda.003.001.02", "reda.003.001.02", "urn:iso:std:iso:20022:tech:xsd:reda.003.001.02")]
 public interface IPriceReportCorrectionV02 : IOuterRecord
 {
     /// <summary>

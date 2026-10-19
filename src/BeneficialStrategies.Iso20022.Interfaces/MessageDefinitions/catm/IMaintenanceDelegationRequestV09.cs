@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// The MaintenanceDelegationRequest message is sent by a terminal manager to the master terminal manager to request delegation of maintenance functions or maintenance operation on the terminal estate managed by the master terminal manager.
 /// </summary>
 [IsoId("_FWjj0XPUEe2pK6udhxEaHA")]
+[IsoMessage("catm.005.001.09", "MntncDlgtnReq", "urn:iso:std:iso:20022:tech:xsd:catm.005.001.09")]
 public interface IMaintenanceDelegationRequestV09 : IOuterRecord
 {
     /// <summary>

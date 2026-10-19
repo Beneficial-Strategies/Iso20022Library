@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCompletionAdviceResponse message is used to acknowledge the data capture process performed by the acquirer based on the data required to carry out the financial clearing and settlement of the transaction.
 /// </summary>
 [IsoId("_X7-iNaMVEeCJ6YNENx4h-w_1511843266")]
+[IsoMessage(
+    "caaa.004.001.01",
+    "AccptrCmpltnAdvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.004.001.01"
+)]
 public interface IAcceptorCompletionAdviceResponseV01 : IOuterRecord
 {
     /// <summary>

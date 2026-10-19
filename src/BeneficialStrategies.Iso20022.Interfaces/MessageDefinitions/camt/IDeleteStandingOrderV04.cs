@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The DeleteStandingOrder message is sent by the system member to delete one or more standing orders within the static data held by the system transaction administrator.
 /// </summary>
 [IsoId("_ThNX09b6Eeq_l4BJLVUF2Q")]
+[IsoMessage("camt.071.001.04", "DelStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.071.001.04")]
 public interface IDeleteStandingOrderV04 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The ATMExceptionAdvice message is sent by an ATM to an acquirer or its agent to inform of that an exception occurred outside a service.
 /// </summary>
 [IsoId("_i58PwK5CEeWCgYcWSNgX5g")]
+[IsoMessage("caam.011.001.01", "ATMXcptnAdvc", "urn:iso:std:iso:20022:tech:xsd:caam.011.001.01")]
 public interface IATMExceptionAdviceV01 : IOuterRecord
 {
     /// <summary>

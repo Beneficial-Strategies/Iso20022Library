@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritiesFinancingReportingReusedCollateralDataTransactionStateReport message is sent by the trade repository (TR) to the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the collateral reuse.
 /// </summary>
 [IsoId("_2zvMCQuAEeqVvtu9Ny8FDA")]
+[IsoMessage(
+    "auth.086.001.01",
+    "SctiesFincgRptgReusdCollDataTxStatRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.086.001.01"
+)]
 public interface ISecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV01
     : IOuterRecord
 {

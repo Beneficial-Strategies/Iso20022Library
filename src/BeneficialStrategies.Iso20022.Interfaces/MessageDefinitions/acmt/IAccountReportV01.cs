@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// It can be sent unsolicited as part of opening, maintenance, or closing process, or it can be sent as response to an AccountReportRequest message.
 /// </summary>
 [IsoId("_vtUU2NE9Ed-BzquC8wXy7w_446669337")]
+[IsoMessage("acmt.014.001.01", "AcctRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.014.001.01")]
 public interface IAccountReportV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// This FinancialInstrumentReportingReferenceDataReport message is sent by the trading venue to the national competent authority to report on the reference data used in the securities transactions.
 /// </summary>
 [IsoId("_JRfSUSX6EeigZbhgJcrASA")]
+[IsoMessage(
+    "auth.017.001.02",
+    "FinInstrmRptgRefDataRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.017.001.02"
+)]
 public interface IFinancialInstrumentReportingReferenceDataReportV02 : IOuterRecord
 {
     /// <summary>

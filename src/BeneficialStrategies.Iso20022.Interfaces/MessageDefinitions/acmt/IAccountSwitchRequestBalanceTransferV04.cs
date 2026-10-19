@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchRequestBalanceTransfer message is sent by the new account servicer to the account servicer which previously held the account to request the transfer of the closing balance. This may be addressed to the new account or an alternate account nominated by the new account servicer.
 /// </summary>
 [IsoId("_KOlm29cDEeq_l4BJLVUF2Q")]
+[IsoMessage(
+    "acmt.031.001.04",
+    "AcctSwtchReqBalTrf",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.031.001.04"
+)]
 public interface IAccountSwitchRequestBalanceTransferV04 : IOuterRecord
 {
     /// <summary>

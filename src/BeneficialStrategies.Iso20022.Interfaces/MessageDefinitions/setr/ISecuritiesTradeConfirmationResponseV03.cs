@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// Respondent: Executing party does not need to respond if an affirmation. Executing party may respond with modification or cancellation of the rejected SecuritiesTradeConfirmation message.
 /// </summary>
 [IsoId("_cjJlAYZHEe-6cOl7zMpJaA")]
+[IsoMessage(
+    "setr.030.001.03",
+    "SctiesTradConfRspn",
+    "urn:iso:std:iso:20022:tech:xsd:setr.030.001.03"
+)]
 public interface ISecuritiesTradeConfirmationResponseV03 : IOuterRecord
 {
     /// <summary>

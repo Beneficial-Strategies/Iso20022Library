@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// Respondent: no response is needed by the recipient of the message.
 /// </summary>
 [IsoId("_fr3pcYZHEe-6cOl7zMpJaA")]
+[IsoMessage(
+    "setr.044.001.04",
+    "SctiesTradConfStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:setr.044.001.04"
+)]
 public interface ISecuritiesTradeConfirmationStatusAdviceV04 : IOuterRecord
 {
     /// <summary>

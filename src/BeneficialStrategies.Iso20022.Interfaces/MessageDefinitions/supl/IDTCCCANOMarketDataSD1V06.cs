@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCANOMarketDataSD1 message extends ISO corporate action notification (CANO) market data message (Market Data type) with data elements that are not covered by the standard message, and additionally, with DTC values where issuer/offeror/market corresponding values are mapped to CANO. For example issuer/offeror/market declared cash rate will be mapped to the CANO and DTC announced cash rate will be extended in this message.
 /// </summary>
 [IsoId("_eaasH12lEeOb__BffbPEig")]
+[IsoMessage(
+    "supl.002.001.06",
+    "DTCCCANOMktDataSD1",
+    "urn:iso:std:iso:20022:tech:xsd:supl.002.001.06"
+)]
 public interface IDTCCCANOMarketDataSD1V06 : IOuterRecord
 {
     /// <summary>

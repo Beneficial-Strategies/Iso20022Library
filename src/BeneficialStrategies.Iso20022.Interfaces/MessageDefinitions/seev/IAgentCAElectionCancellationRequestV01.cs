@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message must contain the identification of the Agent Corporate Action Election Advice to be cancelled, the agent identification and the corporate action references. This message may also contain details of the election advice to be cancelled, but this is not recommended.
 /// </summary>
 [IsoId("_TNTj4NEwEd-BzquC8wXy7w_-1473498229")]
+[IsoMessage(
+    "seev.014.001.01",
+    "AgtCAElctnCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.014.001.01"
+)]
 public interface IAgentCAElectionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

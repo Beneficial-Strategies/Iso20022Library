@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The InterestPaymentResponse message is sent in response to the InterestPaymentRequest in order to accept or reject the amount of interest requested or advised. A rejection reason and information can be provide if the InterestPaymentRequest is being rejected.
 /// </summary>
 [IsoId("_J4YkyygrEeyB747fKu7_rw")]
+[IsoMessage("colr.014.001.05", "IntrstPmtRspn", "urn:iso:std:iso:20022:tech:xsd:colr.014.001.05")]
 public interface IInterestPaymentResponseV05 : IOuterRecord
 {
     /// <summary>

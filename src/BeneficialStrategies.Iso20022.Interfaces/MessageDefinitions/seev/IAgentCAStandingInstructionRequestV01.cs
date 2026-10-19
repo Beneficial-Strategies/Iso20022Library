@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The amendment of a standing instruction is done through a cancel-and-replace mechanism. First a standing instruction cancellation request is sent followed by a new standing instruction request.
 /// </summary>
 [IsoId("_TR6-KdEwEd-BzquC8wXy7w_1831735017")]
+[IsoMessage(
+    "seev.025.001.01",
+    "AgtCAStgInstrReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.025.001.01"
+)]
 public interface IAgentCAStandingInstructionRequestV01 : IOuterRecord
 {
     /// <summary>

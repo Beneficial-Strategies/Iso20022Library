@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.
 /// </summary>
 [IsoId("_JuZN4tE6Ed-BzquC8wXy7w_13196644")]
+[IsoMessage("sese.007.001.02", "TrfInConfV02", "urn:iso:std:iso:20022:tech:xsd:sese.007.001.02")]
 public interface ITransferInConfirmationV02 : IOuterRecord
 {
     /// <summary>

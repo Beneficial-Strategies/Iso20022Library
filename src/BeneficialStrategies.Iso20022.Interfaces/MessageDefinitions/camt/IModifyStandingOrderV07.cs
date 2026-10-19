@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The transaction administrator may send a Receipt message as a reply to the Modify Standing Order request. To verify the outcome of the request, the member may submit a GetStandingOrder message with the appropriate search criteria.
 /// </summary>
 [IsoId("_ThUsj9b6Eeq_l4BJLVUF2Q")]
+[IsoMessage("camt.024.001.07", "ModfyStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.024.001.07")]
 public interface IModifyStandingOrderV07 : IOuterRecord
 {
     /// <summary>

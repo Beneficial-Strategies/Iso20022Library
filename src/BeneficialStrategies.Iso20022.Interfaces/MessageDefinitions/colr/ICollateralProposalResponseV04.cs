@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The CollateralProposalResponse message can be sent in response to a previously received CollateralProposal message in order to accept or reject the collateral that has been proposed to cover the margin call.
 /// </summary>
 [IsoId("_fkI0oYFrEeWtPe6Crjmeug")]
+[IsoMessage("colr.008.001.04", "CollPrpslRspn", "urn:iso:std:iso:20022:tech:xsd:colr.008.001.04")]
 public interface ICollateralProposalResponseV04 : IOuterRecord
 {
     /// <summary>

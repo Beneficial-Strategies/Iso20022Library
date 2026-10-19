@@ -30,6 +30,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// - a cancellation pending status and the reason for the status.
 /// </summary>
 [IsoId("_kFCMMZDhEem7fvtoGpNpow")]
+[IsoMessage("sese.011.001.08", "TrfInstrStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.011.001.08")]
 public interface ITransferInstructionStatusReportV08 : IOuterRecord
 {
     /// <summary>

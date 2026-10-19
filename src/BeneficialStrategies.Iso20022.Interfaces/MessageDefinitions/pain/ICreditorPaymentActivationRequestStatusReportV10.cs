@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).
 /// </summary>
 [IsoId("_qzYDUQLFEe2X55dNQNVKfg")]
+[IsoMessage(
+    "pain.014.001.10",
+    "CdtrPmtActvtnReqStsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:pain.014.001.10"
+)]
 public interface ICreditorPaymentActivationRequestStatusReportV10 : IOuterRecord
 {
     /// <summary>

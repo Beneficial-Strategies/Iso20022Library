@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The FundReferenceDataReport message may be used to provide data concerning product governance, such as target market data, and a breakdown of the costs and fees in the context of MiFID II, with respect to the European MiFID Template (EMT) versions 1 and 2.
 /// </summary>
 [IsoId("_A7DpwTQaEeifw8iDiyZLmQ")]
+[IsoMessage("reda.004.001.03", "FndRefDataRpt", "urn:iso:std:iso:20022:tech:xsd:reda.004.001.03")]
 public interface IFundReferenceDataReportV03 : IOuterRecord
 {
     /// <summary>

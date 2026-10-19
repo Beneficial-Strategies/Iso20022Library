@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// In both cases, the reason must be specified using either a code or unstructured information.
 /// </summary>
 [IsoId("_HFtUYNE6Ed-BzquC8wXy7w_1729523466")]
+[IsoMessage("sese.010.001.01", "sese.010.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.010.001.01")]
 public interface ITransferCancellationStatusReport : IOuterRecord
 {
     /// <summary>

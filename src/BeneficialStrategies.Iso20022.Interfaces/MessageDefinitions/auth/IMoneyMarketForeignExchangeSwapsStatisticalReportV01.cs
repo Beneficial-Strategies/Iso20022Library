@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all daily Foreign Exchange Swaps (FX Swaps) transactions.
 /// </summary>
 [IsoId("_wXy2MZ2SEeW_58xcYxhewg")]
+[IsoMessage(
+    "auth.014.001.01",
+    "MnyMktFXSwpsSttstclRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.014.001.01"
+)]
 public interface IMoneyMarketForeignExchangeSwapsStatisticalReportV01 : IOuterRecord
 {
     /// <summary>

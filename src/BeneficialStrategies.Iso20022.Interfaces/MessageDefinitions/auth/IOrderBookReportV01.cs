@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_M1g7wUHEEe69jJri8QCRYw")]
+[IsoMessage("auth.113.001.01", "OrdrBookRpt", "urn:iso:std:iso:20022:tech:xsd:auth.113.001.01")]
 public interface IOrderBookReportV01 : IOuterRecord
 {
     /// <summary>

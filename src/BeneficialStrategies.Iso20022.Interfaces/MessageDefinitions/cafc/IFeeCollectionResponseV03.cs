@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cafc;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_1jSlcZByEe6TWIDarRgYow")]
+[IsoMessage("cafc.002.001.03", "FeeColltnRspn", "urn:iso:std:iso:20022:tech:xsd:cafc.002.001.03")]
 public interface IFeeCollectionResponseV03 : IOuterRecord
 {
     /// <summary>

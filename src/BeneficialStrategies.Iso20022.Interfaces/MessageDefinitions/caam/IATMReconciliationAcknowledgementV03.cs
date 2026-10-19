@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_udcZ0aFCEe-MRKYsaX6JDg")]
+[IsoMessage("caam.010.001.03", "ATMRcncltnAck", "urn:iso:std:iso:20022:tech:xsd:caam.010.001.03")]
 public interface IATMReconciliationAcknowledgementV03 : IOuterRecord
 {
     /// <summary>

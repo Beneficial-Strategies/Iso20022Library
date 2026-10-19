@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// The Buy In Confirmation message is sent by the central counterparty (CCP) to confirm the details of the buy in transaction.
 /// </summary>
 [IsoId("_xpFSkS0lEeSRe9rElPHBfg")]
+[IsoMessage("secl.009.001.03", "BuyInConf", "urn:iso:std:iso:20022:tech:xsd:secl.009.001.03")]
 public interface IBuyInConfirmationV03 : IOuterRecord
 {
     /// <summary>

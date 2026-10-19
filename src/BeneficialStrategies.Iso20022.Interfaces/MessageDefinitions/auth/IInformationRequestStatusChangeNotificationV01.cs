@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to inform the financial institution that the confidentiality status of the investigation has changed.
 /// </summary>
 [IsoId("_fQEyMzz1EeGl7N0Cd54dlw")]
+[IsoMessage(
+    "auth.003.001.01",
+    "InfReqStsChngNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:auth.003.001.01"
+)]
 public interface IInformationRequestStatusChangeNotificationV01 : IOuterRecord
 {
     /// <summary>

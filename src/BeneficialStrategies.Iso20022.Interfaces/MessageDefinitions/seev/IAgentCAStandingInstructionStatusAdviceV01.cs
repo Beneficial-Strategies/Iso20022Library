@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// When this message is used to report the status of a standing instruction cancellation request, the building block Standing Instruction Cancellation Request Identification must be present.
 /// </summary>
 [IsoId("_TSEvKdEwEd-BzquC8wXy7w_486290785")]
+[IsoMessage(
+    "seev.027.001.01",
+    "AgtCAStgInstrStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.027.001.01"
+)]
 public interface IAgentCAStandingInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3S7qTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage(
+    "reda.071.001.02",
+    "ReqToPayDbtrActvtnAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.071.001.02"
+)]
 public interface IRequestToPayDebtorActivationAmendmentRequestV02 : IOuterRecord
 {
     /// <summary>

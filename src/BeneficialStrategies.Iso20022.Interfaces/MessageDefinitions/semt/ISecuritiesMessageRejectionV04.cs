@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// The message should be used with the business Application Header.
 /// </summary>
 [IsoId("_wsZu0TWfEe2OzdGcZrUAEQ")]
+[IsoMessage("semt.001.001.04", "SctiesMsgRjctn", "urn:iso:std:iso:20022:tech:xsd:semt.001.001.04")]
 public interface ISecuritiesMessageRejectionV04 : IOuterRecord
 {
     /// <summary>

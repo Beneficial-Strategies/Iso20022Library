@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPPortfolioStressTestingResultReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the results of the stress testing carried out by the central counterparty on clearing member positions.
 /// </summary>
 [IsoId("_YI3SceUSEem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.058.001.01",
+    "CCPPrtflStrssTstgRsltRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.058.001.01"
+)]
 public interface ICCPPortfolioStressTestingResultReportV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SettlementFailsAnnualReport is sent by a central securities depository or by a central bank operating a securities settlement system to the CSD competent authority to provide annual aggregated data on the number and the nature of settlement instructions which failed to settle on their intended settlement day. The report contains annual statistical information on the number and value of overall settlement instructions, settled instructions, and settlement fails that occurred during a specified period and within a given securities settlement system.
 /// </summary>
 [IsoId("_pq7TsUEXEeqXB_DgAcRqgw")]
+[IsoMessage("auth.101.001.01", "SttlmFlsAnlRpt", "urn:iso:std:iso:20022:tech:xsd:auth.101.001.01")]
 public interface ISettlementFailsAnnualReportV01 : IOuterRecord
 {
     /// <summary>

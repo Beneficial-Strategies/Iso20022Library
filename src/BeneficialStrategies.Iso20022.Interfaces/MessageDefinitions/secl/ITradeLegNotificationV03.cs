@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// The CCP reports both sides of the trade from the clearing member perspective. The CCP sends a message to the global clearing member of the seller and a message to the global clearing member of the buyer. Note: An individual clearing member only clear its own trades.
 /// </summary>
 [IsoId("_BjjyQS0mEeSRe9rElPHBfg")]
+[IsoMessage("secl.001.001.03", "TradLegNtfctn", "urn:iso:std:iso:20022:tech:xsd:secl.001.001.03")]
 public interface ITradeLegNotificationV03 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The SwitchOrder message is used when the instructing party, ie, an investor, wants to change its investments within the same fund family, according to the terms of the prospectus.
 /// </summary>
 [IsoId("_8JIAINE7Ed-BzquC8wXy7w_-1831529909")]
+[IsoMessage("setr.013.001.02", "setr.013.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.013.001.02")]
 public interface ISwitchOrderV02 : IOuterRecord
 {
     /// <summary>

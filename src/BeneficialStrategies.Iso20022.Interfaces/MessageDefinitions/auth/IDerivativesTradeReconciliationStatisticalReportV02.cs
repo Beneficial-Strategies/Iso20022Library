@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeReportReconciliationStatisticalReport message is sent by the trade repositories to the reporting counterparty, to report cumulative information within the reference period for the reconciliation status of the reported and outstanding derivatives.
 /// </summary>
 [IsoId("_pVVviWmFEe2DRvVJM2Qy-g")]
+[IsoMessage(
+    "auth.091.001.02",
+    "DerivsTradRcncltnSttstclRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.091.001.02"
+)]
 public interface IDerivativesTradeReconciliationStatisticalReportV02 : IOuterRecord
 {
     /// <summary>

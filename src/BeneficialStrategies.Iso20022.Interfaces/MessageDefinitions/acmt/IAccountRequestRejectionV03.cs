@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.
 /// </summary>
 [IsoId("_bfzgV22PEei3KuUgpx7Xcw")]
+[IsoMessage("acmt.011.001.03", "AcctReqRjctn", "urn:iso:std:iso:20022:tech:xsd:acmt.011.001.03")]
 public interface IAccountRequestRejectionV03 : IOuterRecord
 {
     /// <summary>

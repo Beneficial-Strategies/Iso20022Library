@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The NetworkManagementResponse message is sent by an acquirer, an issuer or an agent to answer to an NetworkManagementInitiation message.
 /// </summary>
 [IsoId("_Goob8HvFEeSKFIcWw3l4Yw")]
+[IsoMessage("cain.010.001.01", "NtwkMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:cain.010.001.01")]
 public interface INetworkManagementResponse : IOuterRecord
 {
     /// <summary>

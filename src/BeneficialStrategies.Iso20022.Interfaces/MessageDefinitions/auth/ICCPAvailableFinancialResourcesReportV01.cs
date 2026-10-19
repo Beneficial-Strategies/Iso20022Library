@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPAvailableFinancialResourcesReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the aggregate quantum of resources available in each default waterfall to absorb losses resulting from the failure of one or more clearing member(s).
 /// </summary>
 [IsoId("_omGWYeUREem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.064.001.01",
+    "CCPAvlblFinRsrcsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.064.001.01"
+)]
 public interface ICCPAvailableFinancialResourcesReportV01 : IOuterRecord
 {
     /// <summary>

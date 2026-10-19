@@ -22,6 +22,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The use of AdditionalInformation and its fields must be pre-agreed between account servicer and account owner. The fields in that sequence cannot be used to amend a trade or event detail unless authorised by country market practice.|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.
 /// </summary>
 [IsoId("_YAYA8dtaEd-RF5yaMAVhAw")]
+[IsoMessage(
+    "sese.030.001.02",
+    "SctiesSttlmCondsModReq",
+    "urn:iso:std:iso:20022:tech:xsd:sese.030.001.02"
+)]
 public interface ISecuritiesSettlementConditionsModificationRequestV02 : IOuterRecord
 {
     /// <summary>

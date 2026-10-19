@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// This message must contain the reference of the message to be cancelled. The message may also contain all the details of the message to be cancelled, but this is not recommended.
 /// </summary>
 [IsoId("_K1LPztE6Ed-BzquC8wXy7w_-1400319754")]
+[IsoMessage("sese.002.001.01", "sese.002.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.002.001.01")]
 public interface ITransferOutCancellationInstruction : IOuterRecord
 {
     /// <summary>

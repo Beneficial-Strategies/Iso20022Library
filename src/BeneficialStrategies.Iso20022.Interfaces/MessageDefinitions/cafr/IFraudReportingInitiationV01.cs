@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// A FraudReportingInitiation message is usually sent by a financial institution acting as an acquirer or as an issuer to an agent (processor, agent)  to inform about a confirmed fraudulent transaction.
 /// </summary>
 [IsoId("_tme-4Xa1Eeef9c2nwgY9Xw")]
+[IsoMessage("cafr.001.001.01", "FrdRptgInitn", "urn:iso:std:iso:20022:tech:xsd:cafr.001.001.01")]
 public interface IFraudReportingInitiationV01 : IOuterRecord
 {
     /// <summary>

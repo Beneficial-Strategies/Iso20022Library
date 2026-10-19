@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIServiceResponse message is sent by a POI to provide the outcome of a financial service.
 /// </summary>
 [IsoId("_Hpr9IHNdEe2stM_kHP4m6A")]
+[IsoMessage(
+    "casp.002.001.05",
+    "SaleToPOISvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.002.001.05"
+)]
 public interface ISaleToPOIServiceResponseV05 : IOuterRecord
 {
     /// <summary>

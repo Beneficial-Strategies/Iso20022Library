@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.canm;
 ///
 /// </summary>
 [IsoId("_NYnwlVWVEeeiG_nL4vgKnQ")]
+[IsoMessage("canm.002.001.02", "NtwkMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:canm.002.001.02")]
 public interface INetworkManagementResponseV02 : IOuterRecord
 {
     /// <summary>

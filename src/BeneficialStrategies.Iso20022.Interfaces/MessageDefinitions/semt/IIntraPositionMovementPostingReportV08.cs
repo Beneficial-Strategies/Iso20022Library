@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information |using the relevant elements in the Business Application Header.
 /// </summary>
 [IsoId("__5H8IemfEemm4qhb2yFPOw")]
+[IsoMessage(
+    "semt.016.001.08",
+    "IntraPosMvmntPstngRpt",
+    "urn:iso:std:iso:20022:tech:xsd:semt.016.001.08"
+)]
 public interface IIntraPositionMovementPostingReportV08 : IOuterRecord
 {
     /// <summary>

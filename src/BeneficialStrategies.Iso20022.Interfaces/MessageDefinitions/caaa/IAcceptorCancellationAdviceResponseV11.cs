@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCancellationAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) about the notification of the payment cancellation.
 /// </summary>
 [IsoId("_3J_FkXMREe2vXY6MoVq19w")]
+[IsoMessage(
+    "caaa.008.001.11",
+    "AccptrCxlAdvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.008.001.11"
+)]
 public interface IAcceptorCancellationAdviceResponseV11 : IOuterRecord
 {
     /// <summary>

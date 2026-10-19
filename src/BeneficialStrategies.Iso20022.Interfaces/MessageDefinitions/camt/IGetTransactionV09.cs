@@ -35,6 +35,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - entry debit/credit indicator (if absent, all entries should be reported).
 /// </summary>
 [IsoId("_ThPM_db6Eeq_l4BJLVUF2Q")]
+[IsoMessage("camt.005.001.09", "GetTx", "urn:iso:std:iso:20022:tech:xsd:camt.005.001.09")]
 public interface IGetTransactionV09 : IOuterRecord
 {
     /// <summary>

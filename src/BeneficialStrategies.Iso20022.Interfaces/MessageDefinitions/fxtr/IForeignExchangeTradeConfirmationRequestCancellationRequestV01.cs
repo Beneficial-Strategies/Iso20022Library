@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The request is sent by the market participants to the CMU after the confirmation is requested.
 /// </summary>
 [IsoId("_NXUBUoHiEeSY3ulMDfpmvA")]
+[IsoMessage(
+    "fxtr.036.001.01",
+    "FXTradConfReqCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.036.001.01"
+)]
 public interface IForeignExchangeTradeConfirmationRequestCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

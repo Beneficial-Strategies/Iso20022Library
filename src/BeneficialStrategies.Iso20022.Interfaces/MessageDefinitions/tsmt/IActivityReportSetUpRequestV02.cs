@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// This message is sent to the matching application by a bank, in order to set the UTC offset specifying the hour when the matching application will generate every day an activity report covering the last 24 hours and send it. By default, this offset is equal to 0.
 /// </summary>
 [IsoId("_ihSN2NE8Ed-BzquC8wXy7w_-1378853261")]
+[IsoMessage(
+    "tsmt.004.001.02",
+    "ActvtyRptSetUpReq",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.004.001.02"
+)]
 public interface IActivityReportSetUpRequestV02 : IOuterRecord
 {
     /// <summary>

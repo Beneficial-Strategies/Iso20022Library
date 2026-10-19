@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleTOPOIDeviceRequest message is sent by the sale system to POI system to request a device service.
 /// </summary>
 [IsoId("_A_43IQ1TEeqjM-rxn3HuXQ")]
+[IsoMessage("casp.016.001.02", "SaleToPOIDvcReq", "urn:iso:std:iso:20022:tech:xsd:casp.016.001.02")]
 public interface ISaleToPOIDeviceRequestV02 : IOuterRecord
 {
     /// <summary>

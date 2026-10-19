@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The AcquirerReversalInitiation message is sent by an acquirer or an agent to an issuer or an agent, to request, advice or notify the reversal of a card transaction.
 /// </summary>
 [IsoId("_6T_xoHuwEeS2Z_kGi7H1VQ")]
+[IsoMessage("cain.005.001.01", "AcqrrRvslInitn", "urn:iso:std:iso:20022:tech:xsd:cain.005.001.01")]
 public interface IAcquirerReversalInitiation : IOuterRecord
 {
     /// <summary>

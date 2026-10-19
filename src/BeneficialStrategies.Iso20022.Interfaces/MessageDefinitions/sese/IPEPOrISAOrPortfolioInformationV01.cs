@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The PEPOrISAOrPortfolioInformation message is used to provide information about one or more PEP or ISA or portfolio products held in a client&apos;s account.
 /// </summary>
 [IsoId("_jbALcNE5Ed-BzquC8wXy7w_1754705295")]
+[IsoMessage(
+    "sese.018.001.01",
+    "PEPOrISAOrPrtflInfV01",
+    "urn:iso:std:iso:20022:tech:xsd:sese.018.001.01"
+)]
 public interface IPEPOrISAOrPortfolioInformationV01 : IOuterRecord
 {
     /// <summary>

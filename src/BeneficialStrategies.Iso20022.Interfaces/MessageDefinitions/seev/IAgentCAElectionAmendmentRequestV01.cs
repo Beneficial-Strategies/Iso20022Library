@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message is used when the terms and conditions of the corporate action event allow amendments.
 /// </summary>
 [IsoId("_TNAo_tEwEd-BzquC8wXy7w_1507742806")]
+[IsoMessage(
+    "seev.013.001.01",
+    "AgtCAElctnAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.013.001.01"
+)]
 public interface IAgentCAElectionAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>

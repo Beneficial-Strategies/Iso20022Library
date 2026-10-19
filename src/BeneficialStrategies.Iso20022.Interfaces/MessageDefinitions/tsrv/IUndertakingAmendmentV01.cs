@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingAmendment message is sent (and is thus issued) by the party that issued the undertaking. The message may be sent either directly to the beneficiary or via an advising party. The proposed undertaking amendment could be to a demand guarantee, standby letter of credit, or counter-undertaking (counter-guarantee or counter-standby). The message provides details on proposed changes to the undertaking, for example, to the expiry date, the amount, and terms and conditions of the undertaking. It may also be used to propose the termination or cancellation of the undertaking. Under practice and law, this communication binds the party issuing it. The message constitutes an operative financial instrument.
 /// </summary>
 [IsoId("_9gAzdnltEeG7BsjMvd1mEw_-1766556993")]
+[IsoMessage("tsrv.005.001.01", "UdrtkgAmdmnt", "urn:iso:std:iso:20022:tech:xsd:tsrv.005.001.01")]
 public interface IUndertakingAmendmentV01 : IOuterRecord
 {
     /// <summary>

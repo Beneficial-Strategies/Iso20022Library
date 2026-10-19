@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The application will respond to the request by sending a StatusReport message.
 /// </summary>
 [IsoId("_0n_7mNE8Ed-BzquC8wXy7w_-619721878")]
+[IsoMessage("tsmt.038.001.03", "StsRptReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.038.001.03")]
 public interface IStatusReportRequestV03 : IOuterRecord
 {
     /// <summary>

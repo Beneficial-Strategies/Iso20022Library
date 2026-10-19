@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message must contain the identification of the Agent Corporate Action Movement Instruction containing the movement(s) to be cancelled, the agent identification and the corporate action references. This message must also contain details of the movement(s) to be cancelled.
 /// </summary>
 [IsoId("_TOWFvNEwEd-BzquC8wXy7w_1509391155")]
+[IsoMessage(
+    "seev.020.001.01",
+    "AgtCAMvmntCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.020.001.01"
+)]
 public interface IAgentCAMovementCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

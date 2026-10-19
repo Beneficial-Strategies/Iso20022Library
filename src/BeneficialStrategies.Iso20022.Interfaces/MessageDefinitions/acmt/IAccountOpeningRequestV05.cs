@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R2-yjzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("acmt.007.001.05", "AcctOpngReq", "urn:iso:std:iso:20022:tech:xsd:acmt.007.001.05")]
 public interface IAccountOpeningRequestV05 : IOuterRecord
 {
     /// <summary>

@@ -13,6 +13,11 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// This message can be used each time a bundle is put in the ATM safe and/or at the end of a multi bundle deposit.
 /// </summary>
 [IsoId("_-6CQgK4NEeWZgJQOa6iKCQ")]
+[IsoMessage(
+    "catp.014.001.01",
+    "ATMDpstCmpltnAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:catp.014.001.01"
+)]
 public interface IATMDepositCompletionAdviceV01 : IOuterRecord
 {
     /// <summary>

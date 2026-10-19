@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The RequestForPEPOrISAOrPortfolioInformation message is used to request information about one or more PEP or ISA or portfolio products held in a client&apos;s account for which it intends to instruct a transfer at a later time.
 /// </summary>
 [IsoId("_nGJAc9E5Ed-BzquC8wXy7w_2026218979")]
+[IsoMessage(
+    "sese.019.001.01",
+    "ReqForPEPOrISAOrPrtflInfV01",
+    "urn:iso:std:iso:20022:tech:xsd:sese.019.001.01"
+)]
 public interface IRequestForPEPOrISAOrPortfolioInformationV01 : IOuterRecord
 {
     /// <summary>

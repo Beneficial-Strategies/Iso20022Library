@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// This FinancialInstrumentReportingCancellationReport message is sent by the trading venue to the national competent authority to cancel reference data previously reported by mistake.
 /// </summary>
 [IsoId("_u2C60GOfEeqrzPlWMq8k6Q")]
+[IsoMessage(
+    "auth.102.001.01",
+    "FinInstrmRptgCxlRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.102.001.01"
+)]
 public interface IFinancialInstrumentReportingCancellationReportV01 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3P4XzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("pain.011.001.08", "MndtCxlReq", "urn:iso:std:iso:20022:tech:xsd:pain.011.001.08")]
 public interface IMandateCancellationRequestV08 : IOuterRecord
 {
     /// <summary>

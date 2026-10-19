@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCompletionAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) of the outcome of the payment transaction, and the transfer the financial data of the transaction contained in the completion advice.
 /// </summary>
 [IsoId("_HrQV4U7SEeyGi9JAv6wq7Q")]
+[IsoMessage(
+    "caaa.004.001.10",
+    "AccptrCmpltnAdvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.004.001.10"
+)]
 public interface IAcceptorCompletionAdviceResponseV10 : IOuterRecord
 {
     /// <summary>

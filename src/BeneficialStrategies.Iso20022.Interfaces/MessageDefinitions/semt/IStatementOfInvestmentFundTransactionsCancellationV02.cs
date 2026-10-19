@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// This message may also contain all the details of the message to be cancelled, but this is not recommended.
 /// </summary>
 [IsoId("_McvWkNFSEd-BzquC8wXy7w_476717601")]
+[IsoMessage(
+    "semt.007.001.02",
+    "StmtOfInvstmtFndTxsCxlV02",
+    "urn:iso:std:iso:20022:tech:xsd:semt.007.001.02"
+)]
 public interface IStatementOfInvestmentFundTransactionsCancellationV02 : IOuterRecord
 {
     /// <summary>

@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// To request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original SwitchOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the SwitchOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the switch order confirmation cancellation is to be followed by an amendment An amendment of a switch order confirmation is carried out by sending a SwitchOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’.
 /// </summary>
 [IsoId("_Aab8CzbLEead9bDRE_1DAQ")]
+[IsoMessage(
+    "setr.055.001.02",
+    "SwtchOrdrConfCxlInstr",
+    "urn:iso:std:iso:20022:tech:xsd:setr.055.001.02"
+)]
 public interface ISwitchOrderConfirmationCancellationInstructionV02 : IOuterRecord
 {
     /// <summary>

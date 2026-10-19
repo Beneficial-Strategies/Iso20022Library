@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.remt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("d78077f1-7096-427a-a55a-111e09368b44")]
+[IsoMessage("remt.001.001.07", "RmtAdvc", "urn:iso:std:iso:20022:tech:xsd:remt.001.001.07")]
 public interface IRemittanceAdviceV07 : IOuterRecord
 {
     /// <summary>

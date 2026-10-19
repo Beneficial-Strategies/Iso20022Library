@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The CollateralValueReport message is sent by the system transaction administrator to a system member (such as a directly connected party) to provide further information the current available value of securities for auto collateralisation for one specific or several cash accounts.
 /// </summary>
 [IsoId("_5SjM_zooEemaN9GkhmGkfg")]
+[IsoMessage("colr.002.001.01", "CollValRpt", "urn:iso:std:iso:20022:tech:xsd:colr.002.001.01")]
 public interface ICollateralValueReportV01 : IOuterRecord
 {
     /// <summary>

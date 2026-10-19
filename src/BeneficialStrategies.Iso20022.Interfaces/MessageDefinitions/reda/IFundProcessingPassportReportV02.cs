@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// - in a reference data vendor environment, for example, market infrastructure and reference data providers may collate and store all fund processing passport information centrally for access via database or regular distribution information. A reference data vendor may assume the role of both report provider and report user.
 /// </summary>
 [IsoId("_ZsRA2NEvEd-BzquC8wXy7w_2012426718")]
+[IsoMessage("reda.004.001.02", "FndPrcgPsptRpt", "urn:iso:std:iso:20022:tech:xsd:reda.004.001.02")]
 public interface IFundProcessingPassportReportV02 : IOuterRecord
 {
     /// <summary>

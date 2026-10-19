@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// It is possible that the receiver of the message is not the account owner, but a party entitled through arrangement with the account owner to receive the account information (also known as recipient).
 /// </summary>
 [IsoId("_DS9m0StuEeysar7zFstVmw")]
+[IsoMessage("camt.053.001.10", "BkToCstmrStmt", "urn:iso:std:iso:20022:tech:xsd:camt.053.001.10")]
 public interface IBankToCustomerStatementV10 : IOuterRecord
 {
     /// <summary>

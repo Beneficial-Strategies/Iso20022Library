@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPCollateralReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the collateral posted by clearing members at the central counterparty.
 /// </summary>
 [IsoId("_5aP-IeUTEem3X-64-NKdqg")]
+[IsoMessage("auth.067.001.01", "CCPCollRpt", "urn:iso:std:iso:20022:tech:xsd:auth.067.001.01")]
 public interface ICCPCollateralReportV01 : IOuterRecord
 {
     /// <summary>

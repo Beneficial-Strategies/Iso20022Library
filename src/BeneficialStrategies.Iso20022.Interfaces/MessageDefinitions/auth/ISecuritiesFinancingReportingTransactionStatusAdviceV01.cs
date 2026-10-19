@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritiesFinancingReportingTransactionStatusAdvice message is sent by the trade repository (TR) to the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, identifying the transactions rejected and the reasons for a rejection.
 /// </summary>
 [IsoId("_2zvMLwuAEeqVvtu9Ny8FDA")]
+[IsoMessage(
+    "auth.084.001.01",
+    "SctiesFincgRptgTxStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:auth.084.001.01"
+)]
 public interface ISecuritiesFinancingReportingTransactionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

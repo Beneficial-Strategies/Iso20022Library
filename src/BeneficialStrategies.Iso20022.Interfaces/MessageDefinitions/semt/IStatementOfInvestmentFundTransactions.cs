@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// Since a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.
 /// </summary>
 [IsoId("_MXrQa9FSEd-BzquC8wXy7w_1518243761")]
+[IsoMessage("semt.006.001.01", "semt.006.001.01", "urn:iso:std:iso:20022:tech:xsd:semt.006.001.01")]
 public interface IStatementOfInvestmentFundTransactions : IOuterRecord
 {
     /// <summary>

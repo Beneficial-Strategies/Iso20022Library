@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The MoneyMarketStatisticalReportStatusAdvice message is sent by the relevant competent authority to the reporting agents to provide the status on the reported transactions.
 /// </summary>
 [IsoId("_1P-hEaieEeWHO_l3hf2rlA")]
+[IsoMessage(
+    "auth.028.001.01",
+    "MnyMktSttstclRptStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:auth.028.001.01"
+)]
 public interface IMoneyMarketStatisticalReportStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

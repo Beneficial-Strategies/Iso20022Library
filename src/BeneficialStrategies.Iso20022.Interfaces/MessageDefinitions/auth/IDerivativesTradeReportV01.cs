@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeReport is sent by the trade repositories (TRs) to the users as a response to a query to provide transaction data.
 /// </summary>
 [IsoId("_z7fHERLAEeqctpBfTmLJnw")]
+[IsoMessage("auth.030.001.01", "DerivsTradRpt", "urn:iso:std:iso:20022:tech:xsd:auth.030.001.01")]
 public interface IDerivativesTradeReportV01 : IOuterRecord
 {
     /// <summary>

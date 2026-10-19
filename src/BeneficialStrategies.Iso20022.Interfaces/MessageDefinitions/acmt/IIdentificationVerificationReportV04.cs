@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3M1AzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("acmt.024.001.04", "IdVrfctnRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.024.001.04")]
 public interface IIdentificationVerificationReportV04 : IOuterRecord
 {
     /// <summary>

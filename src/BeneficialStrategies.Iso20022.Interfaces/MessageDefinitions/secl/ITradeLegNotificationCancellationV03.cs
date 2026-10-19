@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// The previously sent message must be the Trade Leg Notification message.
 /// </summary>
 [IsoId("__kMikS0lEeSRe9rElPHBfg")]
+[IsoMessage(
+    "secl.002.001.03",
+    "TradLegNtfctnCxl",
+    "urn:iso:std:iso:20022:tech:xsd:secl.002.001.03"
+)]
 public interface ITradeLegNotificationCancellationV03 : IOuterRecord
 {
     /// <summary>

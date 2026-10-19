@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_46x7YaFCEe-MRKYsaX6JDg")]
+[IsoMessage("caam.012.001.02", "ATMXcptnAck", "urn:iso:std:iso:20022:tech:xsd:caam.012.001.02")]
 public interface IATMExceptionAcknowledgementV02 : IOuterRecord
 {
     /// <summary>

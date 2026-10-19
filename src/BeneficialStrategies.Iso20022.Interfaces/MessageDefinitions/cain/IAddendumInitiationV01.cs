@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The supplemental data is associated with an authorization or financial message.
 /// </summary>
 [IsoId("_RHEuodkcEeizh_fAW7LywQ")]
+[IsoMessage("cain.025.001.01", "AdddmInitn", "urn:iso:std:iso:20022:tech:xsd:cain.025.001.01")]
 public interface IAddendumInitiationV01 : IOuterRecord
 {
     /// <summary>

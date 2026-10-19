@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// The ManagementPlanReplacement message may embed the information required by the acceptor system for the planning of the TMS actions to be performed by the POI including the trigger, time conditions and TMS addresses.
 /// </summary>
 [IsoId("_-jWs8OQWEeCGktPI9k4Dlw_-1818503267")]
+[IsoMessage("catm.002.001.01", "MgmtPlanRplcmnt", "urn:iso:std:iso:20022:tech:xsd:catm.002.001.01")]
 public interface IManagementPlanReplacementV01 : IOuterRecord
 {
     /// <summary>

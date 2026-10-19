@@ -26,6 +26,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Reject Investigation message must be forwarded by all subsequent case assignee(s) until it reaches the case assigner and must not be used in place of a Resolution Of Investigation or Case Status Report message.
 /// </summary>
 [IsoId("_nNMjZ6qDEeeMmtkfa8-zPg")]
+[IsoMessage("camt.031.001.05", "RjctInvstgtn", "urn:iso:std:iso:20022:tech:xsd:camt.031.001.05")]
 public interface IRejectInvestigationV05 : IOuterRecord
 {
     /// <summary>

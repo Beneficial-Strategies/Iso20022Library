@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_eH-LMROIEfC1ZfCQz0xB3g")]
+[IsoMessage("caad.005.001.05", "RcncltnInitn", "urn:iso:std:iso:20022:tech:xsd:caad.005.001.05")]
 public interface IReconciliationInitiationV05 : IOuterRecord
 {
     /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 ///
 /// </summary>
 [IsoId("_I39HQdpnEeearpaEPXv9UA")]
+[IsoMessage("caaa.005.001.07", "AccptrCxlReq", "urn:iso:std:iso:20022:tech:xsd:caaa.005.001.07")]
 public interface IAcceptorCancellationRequestV07 : IOuterRecord
 {
     /// <summary>

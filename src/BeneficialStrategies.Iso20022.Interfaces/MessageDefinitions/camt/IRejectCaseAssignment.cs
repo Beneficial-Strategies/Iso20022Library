@@ -22,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Reject Case Assignment message must not be used in place of a Resolution Of Investigation or Case Status Report message.
 /// </summary>
 [IsoId("_PxiCwtE_Ed-BzquC8wXy7w_-313128527")]
+[IsoMessage("camt.031.001.01", "camt.031.001.01", "urn:iso:std:iso:20022:tech:xsd:camt.031.001.01")]
 public interface IRejectCaseAssignment : IOuterRecord
 {
     /// <summary>

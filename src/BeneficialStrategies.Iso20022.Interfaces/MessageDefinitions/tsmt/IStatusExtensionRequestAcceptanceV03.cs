@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The rejection of a request to extend the status of a transaction can be achieved by sending a StatusExtensionRequestRejection message.
 /// </summary>
 [IsoId("_y25KUNE8Ed-BzquC8wXy7w_844950216")]
+[IsoMessage(
+    "tsmt.031.001.03",
+    "StsXtnsnReqAccptnc",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.031.001.03"
+)]
 public interface IStatusExtensionRequestAcceptanceV03 : IOuterRecord
 {
     /// <summary>

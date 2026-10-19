@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCancellationResponse message is sent by the acquirer (or its agent) to an acceptor (or its agent), to return the outcome of the cancellation request. If the response is positive, the acquirer has voided the financial data from the captured transaction.
 /// </summary>
 [IsoId("_FsTYMap6EeanIZ10Ka8PnA")]
+[IsoMessage("caaa.006.001.06", "AccptrCxlRspn", "urn:iso:std:iso:20022:tech:xsd:caaa.006.001.06")]
 public interface IAcceptorCancellationResponseV06 : IOuterRecord
 {
     /// <summary>

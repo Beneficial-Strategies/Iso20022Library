@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// The AcceptorConfigurationUpdate message is sent by a TM to a POI to update configurations.
 /// </summary>
 [IsoId("_6QnekS1vEeuZtpnZJ4v-5Q")]
+[IsoMessage("catm.003.001.10", "AccptrCfgtnUpd", "urn:iso:std:iso:20022:tech:xsd:catm.003.001.10")]
 public interface IAcceptorConfigurationUpdateV10 : IOuterRecord
 {
     /// <summary>

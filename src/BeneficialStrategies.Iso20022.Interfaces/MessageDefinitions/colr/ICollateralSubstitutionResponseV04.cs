@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// This is a response to the CollateralSubstitutionRequest message and the collateral proposed in the substitution request can be accepted or rejected.
 /// </summary>
 [IsoId("_5bGyoYFrEeWtPe6Crjmeug")]
+[IsoMessage("colr.011.001.04", "CollSbstitnRspn", "urn:iso:std:iso:20022:tech:xsd:colr.011.001.04")]
 public interface ICollateralSubstitutionResponseV04 : IOuterRecord
 {
     /// <summary>

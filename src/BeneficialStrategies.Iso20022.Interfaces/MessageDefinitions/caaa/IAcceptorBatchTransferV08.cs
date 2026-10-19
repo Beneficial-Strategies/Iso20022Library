@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorBatchTransfer is sent by an acceptor (or its agent) to transfer the financial data of a collection of transactions to the acquirer (or its agent).
 /// </summary>
 [IsoId("_hUUmMdekEeiJyp_aycJaTw")]
+[IsoMessage("caaa.011.001.08", "AccptrBtchTrf", "urn:iso:std:iso:20022:tech:xsd:caaa.011.001.08")]
 public interface IAcceptorBatchTransferV08 : IOuterRecord
 {
     /// <summary>

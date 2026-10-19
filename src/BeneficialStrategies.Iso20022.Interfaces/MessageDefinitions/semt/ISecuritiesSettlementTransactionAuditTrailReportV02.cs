@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// Scope||This message is sent by the Market Infrastructure to the CSD to advise of the history of all the statuses, modifications, replacement and cancellation of a specific transaction during its whole life cycle when the instructing party is a direct participant to the Settlement Infrastructure.|||Usage||The message may also be used to: ||- re-send a message sent by the market infrastructure to the direct participant,||- provide a third party with a copy of a message being sent by the market infrastructure for information,||- re-send to a third party a copy of a message being sent by the market infrastructure for information|using the relevant elements in the Business Application Header.||ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.
 /// </summary>
 [IsoId("_ZpI-IVXWEeSTstivKW60Lg")]
+[IsoMessage(
+    "semt.022.001.02",
+    "SctiesSttlmTxAudtTrlRpt",
+    "urn:iso:std:iso:20022:tech:xsd:semt.022.001.02"
+)]
 public interface ISecuritiesSettlementTransactionAuditTrailReportV02 : IOuterRecord
 {
     /// <summary>

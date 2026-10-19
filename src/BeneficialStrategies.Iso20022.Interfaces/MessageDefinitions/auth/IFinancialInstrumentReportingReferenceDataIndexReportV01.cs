@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// This FinancialInstrumentReportingReferenceDataIndexReport message is sent by National Competent Authorities to express an interest in receiving data on European indices.
 /// </summary>
 [IsoId("_4LUGMURNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.043.001.01",
+    "FinInstrmRptgRefDataIndxRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.043.001.01"
+)]
 public interface IFinancialInstrumentReportingReferenceDataIndexReportV01 : IOuterRecord
 {
     /// <summary>

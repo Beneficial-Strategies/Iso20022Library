@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - must be used exclusively between the case assignee and its case creator/case assigner.
 /// </summary>
 [IsoId("_eX_OpW2PEei3KuUgpx7Xcw")]
+[IsoMessage("camt.033.001.06", "ReqForDplct", "urn:iso:std:iso:20022:tech:xsd:camt.033.001.06")]
 public interface IRequestForDuplicateV06 : IOuterRecord
 {
     /// <summary>

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// This ForeignExchangeTradeStatusNotification message will be sent at specific times agreed upon by the central settlement system and a participant in a central settlement system.
 /// </summary>
 [IsoId("_t2x7Iew0EeG4a9QeNHA19w")]
+[IsoMessage("fxtr.008.001.04", "FXTradStsNtfctn", "urn:iso:std:iso:20022:tech:xsd:fxtr.008.001.04")]
 public interface IForeignExchangeTradeStatusNotificationV04 : IOuterRecord
 {
     /// <summary>

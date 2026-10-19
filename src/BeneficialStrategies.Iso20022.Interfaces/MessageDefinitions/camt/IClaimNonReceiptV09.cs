@@ -29,6 +29,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - CoverCorrection: The CoverCorrection element allows the case assigner to provide corrected cover information, when these are incorrect in the underlying payment instruction for which the cover is issued.
 /// </summary>
 [IsoId("_IBiyZ9cBEeq_l4BJLVUF2Q")]
+[IsoMessage("camt.027.001.09", "ClmNonRct", "urn:iso:std:iso:20022:tech:xsd:camt.027.001.09")]
 public interface IClaimNonReceiptV09 : IOuterRecord
 {
     /// <summary>

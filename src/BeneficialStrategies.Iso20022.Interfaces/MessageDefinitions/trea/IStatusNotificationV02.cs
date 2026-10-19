@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// This message is obsolete please use ForeignExchangeAndDerivativeTradeStatusNotificationV03 - fxtr.008.001.03
 /// </summary>
 [IsoId("_VgTq09E8Ed-BzquC8wXy7w_1259743081")]
+[IsoMessage("trea.008.001.02", "trea.008.001.02", "urn:iso:std:iso:20022:tech:xsd:trea.008.001.02")]
 public interface IStatusNotificationV02 : IOuterRecord
 {
     /// <summary>

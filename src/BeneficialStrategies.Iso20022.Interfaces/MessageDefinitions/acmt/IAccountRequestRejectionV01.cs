@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// Usage.
 /// </summary>
 [IsoId("_woeVgNE9Ed-BzquC8wXy7w_-218865244")]
+[IsoMessage("acmt.011.001.01", "AcctReqRjctn", "urn:iso:std:iso:20022:tech:xsd:acmt.011.001.01")]
 public interface IAccountRequestRejectionV01 : IOuterRecord
 {
     /// <summary>

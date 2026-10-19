@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// Before starting to use these services, the three parties will first sign a contract in which they stipulate the rules of the agreement.
 /// </summary>
 [IsoId("_2uaNLSs7EeySlt9bF77XfA")]
+[IsoMessage(
+    "colr.019.001.01",
+    "TrptyCollTxInstr",
+    "urn:iso:std:iso:20022:tech:xsd:colr.019.001.01"
+)]
 public interface ITripartyCollateralTransactionInstructionV01 : IOuterRecord
 {
     /// <summary>

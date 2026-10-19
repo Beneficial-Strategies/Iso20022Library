@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// An agent may suspense an investigation by classifying it as overdue if he, after sending the request for status, does not receive any response after a long time. Agents may set their individual threshold wait-time.
 /// </summary>
 [IsoId("_OXDeQNE-Ed-BzquC8wXy7w_1889207264")]
+[IsoMessage("camt.038.001.01", "camt.038.001.01", "urn:iso:std:iso:20022:tech:xsd:camt.038.001.01")]
 public interface ICaseStatusReportRequest : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Based on the criteria defined in the CreateLimit message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.
 /// </summary>
 [IsoId("_P8tBcckHEem3UrxZgQhVAw")]
+[IsoMessage("camt.101.001.01", "CretLmt", "urn:iso:std:iso:20022:tech:xsd:camt.101.001.01")]
 public interface ICreateLimitV01 : IOuterRecord
 {
     /// <summary>

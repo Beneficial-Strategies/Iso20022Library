@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The ATMKeyDownloadResponse message is sent from an acquirer to an ATM in response to an ATMKeyDownloadRequest message, to download of one or several cryptographic keys.
 /// </summary>
 [IsoId("_doLoYItREeST3ocKVc8_qA")]
+[IsoMessage("caam.004.001.01", "ATMKeyDwnldRspn", "urn:iso:std:iso:20022:tech:xsd:caam.004.001.01")]
 public interface IATMKeyDownloadResponseV01 : IOuterRecord
 {
     /// <summary>

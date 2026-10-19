@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// Note that one capture acknowledgement responds to one capture report.
 /// </summary>
 [IsoId("_5_POYHO0EeSG-OV0nXMl5w")]
+[IsoMessage(
+    "fxtr.033.001.01",
+    "FXTradCaptrRptAck",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.033.001.01"
+)]
 public interface IForeignExchangeTradeCaptureReportAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

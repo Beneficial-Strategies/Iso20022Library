@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// When the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s.
 /// </summary>
 [IsoId("2e3c05a2-4810-427d-82b6-98d7ef5ee9a9")]
+[IsoMessage(
+    "setr.009.001.05",
+    "SbcptBlkOrdrConf",
+    "urn:iso:std:iso:20022:tech:xsd:setr.009.001.05"
+)]
 public interface ISubscriptionBulkOrderConfirmationV05 : IOuterRecord
 {
     /// <summary>

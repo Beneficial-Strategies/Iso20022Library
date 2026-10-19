@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.head;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_W9-JMexMEe6M4Kz-BKMIbA")]
+[IsoMessage("head.002.001.01", "BizFileHdr", "urn:iso:std:iso:20022:tech:xsd:head.002.001.01")]
 public interface IBusinessFileHeaderV01 : IOuterRecord
 {
     /// <summary>

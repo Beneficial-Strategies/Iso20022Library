@@ -27,6 +27,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.
 /// </summary>
 [IsoId("_nuu_m9E7Ed-BzquC8wXy7w_-424280902")]
+[IsoMessage(
+    "setr.002.001.03",
+    "RedBlkOrdrCxlReqV03",
+    "urn:iso:std:iso:20022:tech:xsd:setr.002.001.03"
+)]
 public interface IRedemptionBulkOrderCancellationRequestV03 : IOuterRecord
 {
     /// <summary>

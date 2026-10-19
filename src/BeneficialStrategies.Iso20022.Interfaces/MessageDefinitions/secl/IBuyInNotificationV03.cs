@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// The buy in process is a process by which the CCP buys in stocks to cover failed transactions; the clearing member is notified that this process has started. Depending on each CCP internal rules, this message can also be sent, as a warning, by the central counterparty to the clearing member some days before the buy in process starts.
 /// </summary>
 [IsoId("_1K820S0lEeSRe9rElPHBfg")]
+[IsoMessage("secl.007.001.03", "BuyInNtfctn", "urn:iso:std:iso:20022:tech:xsd:secl.007.001.03")]
 public interface IBuyInNotificationV03 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCompletionAdvice message may also embed the information required for transferring to the acquirer all data needed to perform the financial settlement of the transaction (capture). Should the acquirer not receive a correct response to an AcceptorCompletionAdvice message; the card acceptor sends back an AcceptorCompletionAdvice message to the acquirer.
 /// </summary>
 [IsoId("_W92GBaMVEeCJ6YNENx4h-w_871403476")]
+[IsoMessage(
+    "caaa.003.001.01",
+    "AccptrCmpltnAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.003.001.01"
+)]
 public interface IAcceptorCompletionAdviceV01 : IOuterRecord
 {
     /// <summary>

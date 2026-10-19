@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountClosingAmendmentRequest message is sent from an organisation to a financial institution as part of the account closing process. It is sent in response to a request from the financial institution to send additional information.
 /// </summary>
 [IsoId("_SCcGoQ1TEeKGXqvMN6jpiw")]
+[IsoMessage(
+    "acmt.020.001.02",
+    "AcctClsgAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.020.001.02"
+)]
 public interface IAccountClosingAmendmentRequestV02 : IOuterRecord
 {
     /// <summary>

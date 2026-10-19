@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingNonEquityTransparencyDataReport message is sent by the trading venue to the national competent authority to submit non equity specific details as part of classifying and applying necessary transparency non equity computations.
 /// </summary>
 [IsoId("_4LK8e0RNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.033.001.01",
+    "FinInstrmRptgNonEqtyTrnsprncyDataRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.033.001.01"
+)]
 public interface IFinancialInstrumentReportingNonEquityTransparencyDataReportV01 : IOuterRecord
 {
     /// <summary>

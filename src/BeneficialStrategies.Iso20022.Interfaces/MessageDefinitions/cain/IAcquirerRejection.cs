@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The AcquirerRejection message is sent by any party, to reject an Acquirer to Issuer message.
 /// </summary>
 [IsoId("_ohEDEHvSEeS2PZh7wUMQog")]
+[IsoMessage("cain.013.001.01", "AcqrrRjctn", "urn:iso:std:iso:20022:tech:xsd:cain.013.001.01")]
 public interface IAcquirerRejection : IOuterRecord
 {
     /// <summary>

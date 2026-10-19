@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_4oi1IY0PEe65bovx6QuVaA")]
+[IsoMessage(
+    "auth.107.001.02",
+    "DerivsTradStatRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.107.001.02"
+)]
 public interface IDerivativesTradeStateReportV02 : IOuterRecord
 {
     /// <summary>

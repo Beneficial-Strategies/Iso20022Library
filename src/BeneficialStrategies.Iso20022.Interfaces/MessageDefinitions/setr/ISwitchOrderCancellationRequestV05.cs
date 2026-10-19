@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The rejection or acceptance of a SwitchOrderCancellationRequest is made using an OrderCancellationStatusReport message.
 /// </summary>
 [IsoId("4b0d2eb6-ede3-40c0-95cb-5ff5ded53ed0")]
+[IsoMessage("setr.014.001.05", "SwtchOrdrCxlReq", "urn:iso:std:iso:20022:tech:xsd:setr.014.001.05")]
 public interface ISwitchOrderCancellationRequestV05 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCAINSD1 message extends ISO corporate action instruction message with DTCC corporate action elements not covered in the standard message.
 /// </summary>
 [IsoId("_Vk6qUzDmEey2N-DB7H7A5A")]
+[IsoMessage("supl.008.001.07", "DTCCCAINSD1", "urn:iso:std:iso:20022:tech:xsd:supl.008.001.07")]
 public interface IDTCCCAINSD1V07 : IOuterRecord
 {
     /// <summary>

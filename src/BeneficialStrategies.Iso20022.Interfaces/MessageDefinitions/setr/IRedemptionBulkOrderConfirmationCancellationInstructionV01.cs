@@ -27,6 +27,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The message identification of the RedemptionBulkOrderConfirmation message in which the individual order confirmation was conveyed may also be quoted in PreviousReference.
 /// </summary>
 [IsoId("_olRmCNE7Ed-BzquC8wXy7w_-462737877")]
+[IsoMessage(
+    "setr.053.001.01",
+    "RedBlkOrdrConfCxlInstrV01",
+    "urn:iso:std:iso:20022:tech:xsd:setr.053.001.01"
+)]
 public interface IRedemptionBulkOrderConfirmationCancellationInstructionV01 : IOuterRecord
 {
     /// <summary>

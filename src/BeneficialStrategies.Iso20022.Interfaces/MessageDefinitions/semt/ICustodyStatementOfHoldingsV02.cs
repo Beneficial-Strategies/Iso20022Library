@@ -21,6 +21,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// - the sub-account level.
 /// </summary>
 [IsoId("_Magh_dFSEd-BzquC8wXy7w_1153922186")]
+[IsoMessage(
+    "semt.002.001.02",
+    "CtdyStmtOfHldgsV02",
+    "urn:iso:std:iso:20022:tech:xsd:semt.002.001.02"
+)]
 public interface ICustodyStatementOfHoldingsV02 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_ybZZQYJBEe6dZ_jHhjXHQg")]
+[IsoMessage("cain.016.001.03", "NqryInitn", "urn:iso:std:iso:20022:tech:xsd:cain.016.001.03")]
 public interface IInquiryInitiationV03 : IOuterRecord
 {
     /// <summary>

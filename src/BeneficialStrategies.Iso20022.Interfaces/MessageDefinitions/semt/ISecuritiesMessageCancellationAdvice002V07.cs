@@ -32,6 +32,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// using the relevant elements in the Business Application Header.
 /// </summary>
 [IsoId("_dgY8Uzi8Eeydid5dcNPKvg")]
+[IsoMessage(
+    "semt.020.002.07",
+    "SctiesMsgCxlAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:semt.020.002.07"
+)]
 public interface ISecuritiesMessageCancellationAdvice002V07 : IOuterRecord
 {
     /// <summary>

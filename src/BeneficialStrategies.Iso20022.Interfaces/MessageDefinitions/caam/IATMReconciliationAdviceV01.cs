@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The ATMReconciliationAdvice message is sent by an ATM to an acquirer or its agent to send all the counters of the ATM. It can be sent by an operator function or as a response of a command sent by an agent or a server.
 /// </summary>
 [IsoId("_Gvo5oIttEeSLQutgI1Ulfw")]
+[IsoMessage("caam.009.001.01", "ATMRcncltnAdvc", "urn:iso:std:iso:20022:tech:xsd:caam.009.001.01")]
 public interface IATMReconciliationAdviceV01 : IOuterRecord
 {
     /// <summary>

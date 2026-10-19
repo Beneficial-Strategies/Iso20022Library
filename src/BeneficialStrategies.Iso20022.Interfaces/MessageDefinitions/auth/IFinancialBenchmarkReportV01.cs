@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// This FinancialBenchmarkReport message is sent by the competent institution to report benchmarks used for the purpose of the local regulation.
 /// </summary>
 [IsoId("_EqCsoPKJEeaz_YGUGLjP6A")]
+[IsoMessage("auth.077.001.01", "FinBchmkRpt", "urn:iso:std:iso:20022:tech:xsd:auth.077.001.01")]
 public interface IFinancialBenchmarkReportV01 : IOuterRecord
 {
     /// <summary>

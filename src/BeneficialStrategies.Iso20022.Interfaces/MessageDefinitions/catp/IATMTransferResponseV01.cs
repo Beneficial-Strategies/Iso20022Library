@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// The ATMTransferResponse message is sent by an acquirer or its agent to inform the ATM of the approval or decline of the transfer transaction.
 /// </summary>
 [IsoId("_jHLDMK4xEeWpsoxRhdX-8A")]
+[IsoMessage("catp.017.001.01", "ATMTrfRspn", "urn:iso:std:iso:20022:tech:xsd:catp.017.001.01")]
 public interface IATMTransferResponseV01 : IOuterRecord
 {
     /// <summary>

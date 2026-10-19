@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_DFckwLbdEe-NMoTZ6Byg6A")]
+[IsoMessage(
+    "seev.061.001.01",
+    "BuyrPrtcnInstrStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.061.001.01"
+)]
 public interface IBuyerProtectionInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

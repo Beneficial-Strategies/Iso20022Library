@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPBackTestingResultReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the results of the back test carried out by the central counterparty.
 /// </summary>
 [IsoId("_mLRn0eUTEem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.066.001.01",
+    "CCPBckTstgRsltRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.066.001.01"
+)]
 public interface ICCPBackTestingResultReportV01 : IOuterRecord
 {
     /// <summary>

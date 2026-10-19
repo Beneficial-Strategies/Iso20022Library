@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_GDIJIWXkEeap-P22vGV91g")]
+[IsoMessage("pacs.007.001.07", "FIToFIPmtRvsl", "urn:iso:std:iso:20022:tech:xsd:pacs.007.001.07")]
 public interface IFIToFIPaymentReversalV07 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Scope|The ModifyLimit message is sent by a member to the transaction administrator.|It is used to request modifications in the details of one particular, several or all limits set by the member and managed by the transaction administrator.|Each ModifyLimit message can alter only one type of limit (current or default).|Usage|At any time during the operating hours of the system, the member can request modifications in the limits it has set. For example, the reason may be to unlock the payments queue regarding a particular member, or following a risk management decision issued after an exceptional event has occurred.|The member will submit a message requesting modifications in one or more of the following criteria: |- type of limit (current/default)|- identification of the system|- identification of the counterparty|- value of the limit(s) (default and/or current limit(s))|- point in time when the limit becomes effective|Based on the criteria received within the ModifyLimit message, the transaction administrator will execute or reject the requested modification. The transaction administrator may send a Receipt message as a reply to the ModifyLimit request. To verify the outcome of the request, the member may submit a GetLimit message with the appropriate search criteria.
 /// </summary>
 [IsoId("_jwlbvxbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.011.001.07", "ModfyLmt", "urn:iso:std:iso:20022:tech:xsd:camt.011.001.07")]
 public interface IModifyLimitV07 : IOuterRecord
 {
     /// <summary>

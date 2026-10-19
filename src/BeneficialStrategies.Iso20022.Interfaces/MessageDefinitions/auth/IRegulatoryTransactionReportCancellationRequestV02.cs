@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The message definition can be used to cancel an entire RegulatoryTransactionReport or to cancel one or more individual transactions in a previously sent RegulatoryTransactionReport.
 /// </summary>
 [IsoId("_gJOkFMIFEeGllrOKQRUTYA_-2116922160")]
+[IsoMessage(
+    "auth.009.001.02",
+    "RgltryTxRptCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:auth.009.001.02"
+)]
 public interface IRegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
 {
     /// <summary>

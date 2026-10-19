@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 ///
 /// </summary>
 [IsoId("_XX0eARnXEeKKXqHkeUjBbw")]
+[IsoMessage("admi.009.001.02", "StatcDataReq", "urn:iso:std:iso:20022:tech:xsd:admi.009.001.02")]
 public interface IStaticDataRequestV02 : IOuterRecord
 {
     /// <summary>

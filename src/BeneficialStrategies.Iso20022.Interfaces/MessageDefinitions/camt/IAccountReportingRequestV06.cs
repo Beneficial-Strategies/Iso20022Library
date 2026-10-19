@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The AccountReportingRequest message is sent by the account owner, either directly or through a forwarding agent, to one of its account servicing institutions. It is used to ask the account servicing institution to send a report on the account owner&apos;s account in a BankToCustomerAccountReport (camt.052), a BankToCustomerStatement (camt.053) or a BankToCustomerDebitCreditNotification (camt.054).
 /// </summary>
 [IsoId("_7wrvkdb-Eeq_l4BJLVUF2Q")]
+[IsoMessage("camt.060.001.06", "AcctRptgReq", "urn:iso:std:iso:20022:tech:xsd:camt.060.001.06")]
 public interface IAccountReportingRequestV06 : IOuterRecord
 {
     /// <summary>

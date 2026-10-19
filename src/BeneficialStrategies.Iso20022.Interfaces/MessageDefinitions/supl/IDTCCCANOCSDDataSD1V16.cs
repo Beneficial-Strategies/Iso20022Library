@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCANOCSDDataSD1 message extends ISO corporate action notification (CANO) asset servicer data message (CSD type) with data elements that are not covered by the standard message, and additionally, with issuer/offeror/market values where DTC corresponding values are mapped to CANO. For example DTCC announced cash rate will be mapped to the CANO and issuer/offeror/market declared cash rate will be extended in this DTCCCANOCSDDataSD1 message.
 /// </summary>
 [IsoId("_Xt5vl3GxEe6S2Llv74R19w")]
+[IsoMessage(
+    "supl.001.001.16",
+    "DTCCCANOCSDDataSD1",
+    "urn:iso:std:iso:20022:tech:xsd:supl.001.001.16"
+)]
 public interface IDTCCCANOCSDDataSD1V16 : IOuterRecord
 {
     /// <summary>

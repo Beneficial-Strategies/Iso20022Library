@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeStateReport is sent by the trade repository (TR) to the other trade repository (TR) or the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the transaction.
 /// </summary>
 [IsoId("_pVW9p2mFEe2DRvVJM2Qy-g")]
+[IsoMessage(
+    "auth.107.001.01",
+    "DerivsTradStatRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.107.001.01"
+)]
 public interface IDerivativesTradeStateReportV01 : IOuterRecord
 {
     /// <summary>

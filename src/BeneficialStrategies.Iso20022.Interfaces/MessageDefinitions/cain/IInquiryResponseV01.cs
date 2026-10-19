@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The InquiryResponse message is sent by an issuer or an agent to an acquirer in response to an  InquiryInitiation message.
 /// </summary>
 [IsoId("_J4V1pVfjEeeg8PDQoAs78Q")]
+[IsoMessage("cain.017.001.01", "NqryRspn", "urn:iso:std:iso:20022:tech:xsd:cain.017.001.01")]
 public interface IInquiryResponseV01 : IOuterRecord
 {
     /// <summary>

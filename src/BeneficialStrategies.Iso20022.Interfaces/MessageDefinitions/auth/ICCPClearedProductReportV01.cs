@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPClearedProductReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the financial instruments cleared by the central counterparty.
 /// </summary>
 [IsoId("_sNWfAeUTEem3X-64-NKdqg")]
+[IsoMessage("auth.069.001.01", "CCPClrdPdctRpt", "urn:iso:std:iso:20022:tech:xsd:auth.069.001.01")]
 public interface ICCPClearedProductReportV01 : IOuterRecord
 {
     /// <summary>

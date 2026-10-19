@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIReconciliationRequest message is sent by a sale system to request for reconciliation between sale and POI systems.
 /// </summary>
 [IsoId("_ryZTwQ1UEeqjM-rxn3HuXQ")]
+[IsoMessage(
+    "casp.003.001.02",
+    "SaleToPOIRcncltnReq",
+    "urn:iso:std:iso:20022:tech:xsd:casp.003.001.02"
+)]
 public interface ISaleToPOIReconciliationRequestV02 : IOuterRecord
 {
     /// <summary>

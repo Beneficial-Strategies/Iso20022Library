@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// A system member or any parties authorised by them send a ResendRequest message to the Central System (such as the T2S platform). The purpose of this request is, that the requesting party wants to receive the “original” message once again. This might be caused through technical problems on the receiving side (message could not be received or processed or is missing in the message sequencing) or for archiving purposes.
 /// </summary>
 [IsoId("_5xUioZb3Eee4htziCyV8eA")]
+[IsoMessage("admi.006.001.01", "RsndReq", "urn:iso:std:iso:20022:tech:xsd:admi.006.001.01")]
 public interface IResendRequestV01 : IOuterRecord
 {
     /// <summary>

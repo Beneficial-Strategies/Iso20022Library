@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// In order to pass on information about the acceptance of a request to extend the status of a transaction the matching application sends a StatusExtensionNotification message.
 /// </summary>
 [IsoId("_yZ1a6NE8Ed-BzquC8wXy7w_474408796")]
+[IsoMessage(
+    "tsmt.034.001.03",
+    "StsXtnsnRjctnNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.034.001.03"
+)]
 public interface IStatusExtensionRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>

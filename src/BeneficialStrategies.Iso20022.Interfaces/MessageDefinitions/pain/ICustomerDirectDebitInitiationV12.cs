@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CustomerDirectDebitInitiation message must not be used by the creditor agent to execute the direct debit instruction(s). The FIToFICustomerDirectDebit message must be used instead.
 /// </remarks>
 [IsoId("7869e710-db06-4132-848e-539312ac3db9")]
+[IsoMessage(
+    "pain.008.001.12",
+    "CstmrDrctDbtInitn",
+    "urn:iso:std:iso:20022:tech:xsd:pain.008.001.12"
+)]
 public interface ICustomerDirectDebitInitiationV12 : IOuterRecord
 {
     /// <summary>

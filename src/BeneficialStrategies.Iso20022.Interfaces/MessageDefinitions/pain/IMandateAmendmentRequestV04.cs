@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// If all elements in the existing Mandate need to be amended or the underlying contract is different, then the MandateAmendmentRequest message should not be used. The existing Mandate has to be cancelled and a new Mandate has to be initiated.
 /// </summary>
 [IsoId("_Ie2ISxPeEeSVo-TFVwFHvA")]
+[IsoMessage("pain.010.001.04", "MndtAmdmntReq", "urn:iso:std:iso:20022:tech:xsd:pain.010.001.04")]
 public interface IMandateAmendmentRequestV04 : IOuterRecord
 {
     /// <summary>

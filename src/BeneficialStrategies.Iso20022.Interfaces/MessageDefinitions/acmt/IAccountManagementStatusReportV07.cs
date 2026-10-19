@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountManagementStatusReport message is also used to reject an AccountOpeningInstruction, AccountModificationInstruction or GetAccountDetails message when the message is not compliant with the agreed SLA or when the account cannot be uniquely identified.
 /// </summary>
 [IsoId("_tmYxMZDiEem7fvtoGpNpow")]
+[IsoMessage("acmt.006.001.07", "AcctMgmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.006.001.07")]
 public interface IAccountManagementStatusReportV07 : IOuterRecord
 {
     /// <summary>

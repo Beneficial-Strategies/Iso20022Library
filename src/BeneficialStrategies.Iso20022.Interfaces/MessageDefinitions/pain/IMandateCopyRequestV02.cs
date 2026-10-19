@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 ///
 /// </summary>
 [IsoId("_bf9SO22PEei3KuUgpx7Xcw")]
+[IsoMessage("pain.017.001.02", "MndtCpyReq", "urn:iso:std:iso:20022:tech:xsd:pain.017.001.02")]
 public interface IMandateCopyRequestV02 : IOuterRecord
 {
     /// <summary>

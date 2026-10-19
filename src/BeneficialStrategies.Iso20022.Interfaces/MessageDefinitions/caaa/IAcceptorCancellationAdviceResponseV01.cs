@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCancellationAdviceResponse message should be accepted by the card acceptor unless the message received was invalid.
 /// </summary>
 [IsoId("_dy5SQqMVEeCJ6YNENx4h-w_-1253418701")]
+[IsoMessage(
+    "caaa.008.001.01",
+    "AccptrCxlAdvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.008.001.01"
+)]
 public interface IAcceptorCancellationAdviceResponseV01 : IOuterRecord
 {
     /// <summary>

@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The DataSetMatchReport message can be sent by the matching application to the party requesting a data set match or pre-match for a transaction established in the lodge mode. In the outlined scenario, the DataSetMatchReport will either inform about the successful match or list the mis-matches between the data set(s) conveyed with the DataSetSubmission message and the related baseline.
 /// </summary>
 [IsoId("_m1ZuaNE8Ed-BzquC8wXy7w_-439674056")]
+[IsoMessage("tsmt.013.001.03", "DataSetMtchRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.013.001.03")]
 public interface IDataSetMatchReportV03 : IOuterRecord
 {
     /// <summary>

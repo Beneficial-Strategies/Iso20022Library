@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The ChargesPaymentNotification message is sent by the account servicing institution to the account owner to advise charges, interest or other adjustments to the owner&apos;s account.  It provides details of charges which are previously unknown to the Receiver.
 /// </summary>
 [IsoId("_rZb4ILR_Eeq3lpO-mRtrig")]
+[IsoMessage("camt.105.001.01", "ChrgsPmtNtfctn", "urn:iso:std:iso:20022:tech:xsd:camt.105.001.01")]
 public interface IChargesPaymentNotificationV01 : IOuterRecord
 {
     /// <summary>

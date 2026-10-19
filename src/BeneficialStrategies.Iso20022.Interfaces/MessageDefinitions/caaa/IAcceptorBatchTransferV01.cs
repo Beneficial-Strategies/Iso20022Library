@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorBatchTransfer message embeds the information required for transferring to the acquirer the data needed to perform the financial settlement of these transactions (capture).
 /// </summary>
 [IsoId("_edEQpaMVEeCJ6YNENx4h-w_1105979751")]
+[IsoMessage("caaa.011.001.01", "AccptrBtchTrf", "urn:iso:std:iso:20022:tech:xsd:caaa.011.001.01")]
 public interface IAcceptorBatchTransferV01 : IOuterRecord
 {
     /// <summary>

@@ -22,6 +22,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
 [IsoId("_G4Bd8SAdEeuyDZ-ukt4YRg")]
+[IsoMessage(
+    "sese.032.002.10",
+    "SctiesSttlmTxGnrtnNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:sese.032.002.10"
+)]
 public interface ISecuritiesSettlementTransactionGenerationNotification002V10 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The ForwardDataSetSubmission message can be sent by the matching application to forward the details of a DataSetSubmission message that it has obtained.
 /// </summary>
 [IsoId("_2hJwodQrEeK0PPbKncCqzA")]
+[IsoMessage(
+    "tsmt.017.001.04",
+    "FwdDataSetSubmissnRpt",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.017.001.04"
+)]
 public interface IForwardDataSetSubmissionReportV04 : IOuterRecord
 {
     /// <summary>

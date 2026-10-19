@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// Note: this information can be also sent separately in the Agent Corporate Action Information advice message.
 /// </summary>
 [IsoId("_TMtG-tEwEd-BzquC8wXy7w_1166385439")]
+[IsoMessage("seev.012.001.01", "AgtCAElctnAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.012.001.01")]
 public interface IAgentCAElectionAdviceV01 : IOuterRecord
 {
     /// <summary>

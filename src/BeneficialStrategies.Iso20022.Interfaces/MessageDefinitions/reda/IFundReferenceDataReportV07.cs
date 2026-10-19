@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_7l6XgcQUEe2pvZQ_33Qz1Q")]
+[IsoMessage("reda.004.001.07", "FndRefDataRpt", "urn:iso:std:iso:20022:tech:xsd:reda.004.001.07")]
 public interface IFundReferenceDataReportV07 : IOuterRecord
 {
     /// <summary>

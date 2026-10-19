@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The NotificationToReceiveStatusReport message is sent in response to a NotificationToReceive message and can be used in either a direct or a relay scenario. It is used to advise the account owner of receipt of the funds as expected. It is also used to notify the account owner of non-receipt of funds or of discrepancies in the funds received.
 /// </summary>
 [IsoId("_sRLtMFkyEeGeoaLUQk__nA_-2102986069")]
+[IsoMessage(
+    "camt.059.001.03",
+    "NtfctnToRcvStsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:camt.059.001.03"
+)]
 public interface INotificationToReceiveStatusReportV03 : IOuterRecord
 {
     /// <summary>

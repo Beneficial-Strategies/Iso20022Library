@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// The BatchManagementResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a BatchManagementInitiation message.
 /// </summary>
 [IsoId("_O_nm9VW-EeeiG_nL4vgKnQ")]
+[IsoMessage("caad.002.001.01", "BtchMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:caad.002.001.01")]
 public interface IBatchManagementResponseV01 : IOuterRecord
 {
     /// <summary>

@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Initiator: executing/servicing party.
 /// </summary>
 [IsoId("_jTv05R62Eeu31YsWNiv_cw")]
+[IsoMessage("reda.012.001.01", "SctyRpt", "urn:iso:std:iso:20022:tech:xsd:reda.012.001.01")]
 public interface ISecurityReportV01 : IOuterRecord
 {
     /// <summary>

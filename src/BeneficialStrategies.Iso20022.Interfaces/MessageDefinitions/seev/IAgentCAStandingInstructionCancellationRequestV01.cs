@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message must contain the identification of the standing instruction to be cancelled. It may also contain details of the standing instruction to be cancelled, but this is not recommended.
 /// </summary>
 [IsoId("_TRx0NdEwEd-BzquC8wXy7w_608970881")]
+[IsoMessage(
+    "seev.026.001.01",
+    "AgtCAStgInstrCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.026.001.01"
+)]
 public interface IAgentCAStandingInstructionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// If the ATM is configured to only send negative completion, a generic completion message should be used instead of ATMCompletionAdvice.
 /// </summary>
 [IsoId("_-VAgcIqMEeSRT5rEzcAHEw")]
+[IsoMessage(
+    "catp.003.001.01",
+    "ATMWdrwlCmpltnAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:catp.003.001.01"
+)]
 public interface IATMWithdrawalCompletionAdviceV01 : IOuterRecord
 {
     /// <summary>

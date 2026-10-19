@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// If there are redemption orders for the same financial instrument but for different accounts that are to be communicated in a single message, then the RedemptionBulkOrder message must be used.
 /// </summary>
 [IsoId("_Aab6GzbLEead9bDRE_1DAQ")]
+[IsoMessage("setr.004.001.04", "RedOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.004.001.04")]
 public interface IRedemptionOrderV04 : IOuterRecord
 {
     /// <summary>

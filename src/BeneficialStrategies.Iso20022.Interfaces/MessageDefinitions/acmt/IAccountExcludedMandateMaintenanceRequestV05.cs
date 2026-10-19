@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("08234ebe-bb5d-487f-b042-2fe459be526e")]
+[IsoMessage(
+    "acmt.015.001.05",
+    "AcctExcldMndtMntncReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.015.001.05"
+)]
 public interface IAccountExcludedMandateMaintenanceRequestV05 : IOuterRecord
 {
     /// <summary>

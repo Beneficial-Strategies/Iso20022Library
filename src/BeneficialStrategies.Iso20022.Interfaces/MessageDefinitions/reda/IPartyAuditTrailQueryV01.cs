@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The PartyAuditTrailQuery message is sent by an instructing party to the executing party to query for the party audit trail recorded in the system.
 /// </summary>
 [IsoId("_-fQN8ZeSEeen_cyMrluY4w")]
+[IsoMessage("reda.042.001.01", "PtyAudtTrlQry", "urn:iso:std:iso:20022:tech:xsd:reda.042.001.01")]
 public interface IPartyAuditTrailQueryV01 : IOuterRecord
 {
     /// <summary>

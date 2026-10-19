@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorBatchTransferResponse is sent by the acquirer (or its agent) to inform the acceptor (or its agent) of the transfer in a previous AcceptorBatchTransfer of a collection of transactions.
 /// </summary>
 [IsoId("_dV1G0XMYEe2vXY6MoVq19w")]
+[IsoMessage(
+    "caaa.012.001.11",
+    "AccptrBtchTrfRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.012.001.11"
+)]
 public interface IAcceptorBatchTransferResponseV11 : IOuterRecord
 {
     /// <summary>

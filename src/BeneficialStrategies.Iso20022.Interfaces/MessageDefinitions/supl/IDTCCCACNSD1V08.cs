@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCACNSD1 message extends ISO corporate action cancellation advise (CACN) message with DTCC corporate action elements not covered in the standard message.
 /// </summary>
 [IsoId("_b_Y1SeaHEei5aPS232E3Mw")]
+[IsoMessage("supl.006.001.08", "DTCCCACNSD1", "urn:iso:std:iso:20022:tech:xsd:supl.006.001.08")]
 public interface IDTCCCACNSD1V08 : IOuterRecord
 {
     /// <summary>

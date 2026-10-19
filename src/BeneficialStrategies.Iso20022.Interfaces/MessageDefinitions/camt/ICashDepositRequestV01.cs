@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The CashDepositRequest message is sent by a cash sender to a cash receiver to request that cash can be delivered for deposit into an account.
 /// </summary>
 [IsoId("_NKdVwLe1Ee-Dk_aQVAan8Q")]
+[IsoMessage("camt.113.001.01", "CshDpstReq", "urn:iso:std:iso:20022:tech:xsd:camt.113.001.01")]
 public interface ICashDepositRequestV01 : IOuterRecord
 {
     /// <summary>

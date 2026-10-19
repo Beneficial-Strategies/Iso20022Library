@@ -13,6 +13,11 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// It is used to initiate a creditor payment activation request.
 /// </summary>
 [IsoId("_sApW0FkyEeGeoaLUQk__nA_-1182493164")]
+[IsoMessage(
+    "pain.013.001.02",
+    "CdtrPmtActvtnReq",
+    "urn:iso:std:iso:20022:tech:xsd:pain.013.001.02"
+)]
 public interface ICreditorPaymentActivationRequestV02 : IOuterRecord
 {
     /// <summary>

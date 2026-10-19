@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.casr;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_wn-isROIEfC1ZfCQz0xB3g")]
+[IsoMessage("casr.002.001.04", "SttlmRptgRspn", "urn:iso:std:iso:20022:tech:xsd:casr.002.001.04")]
 public interface ISettlementReportingResponseV04 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// This message is only suitable for Simple (i.e. not Barrier) Vanilla (i.e. not Binary, Digital, Notouch) Foreign Exchange Options.
 /// </summary>
 [IsoId("_KP1cKNE8Ed-BzquC8wXy7w_-352671200")]
+[IsoMessage("trea.011.001.02", "CclFXOptnV02", "urn:iso:std:iso:20022:tech:xsd:trea.011.001.02")]
 public interface ICancelForeignExchangeOptionV02 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountAdditionalInformationRequest message is sent from a financial institution to an organisation as part of maintenance process. This message is sent in response to a maintenance request message from the organisation, if the business content is valid, but additional information is required.
 /// </summary>
 [IsoId("_bfzgZ22PEei3KuUgpx7Xcw")]
+[IsoMessage("acmt.012.001.03", "AcctAddtlInfReq", "urn:iso:std:iso:20022:tech:xsd:acmt.012.001.03")]
 public interface IAccountAdditionalInformationRequestV03 : IOuterRecord
 {
     /// <summary>

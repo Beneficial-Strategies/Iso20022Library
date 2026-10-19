@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The status of this request is provided with the reda.028 , the CollateralDataStatusAdvice.
 /// </summary>
 [IsoId("_2uaNRys7EeySlt9bF77XfA")]
+[IsoMessage(
+    "reda.074.001.01",
+    "TrptyCollUnltrlRmvlReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.074.001.01"
+)]
 public interface ITripartyCollateralUnilateralRemovalRequestV01 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The acceptance of an amendment request can be achieved by sending an AmendmentAcceptance message.
 /// </summary>
 [IsoId("_krHoKNE8Ed-BzquC8wXy7w_-1775142973")]
+[IsoMessage("tsmt.007.001.02", "AmdmntRjctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.007.001.02")]
 public interface IAmendmentRejectionV02 : IOuterRecord
 {
     /// <summary>

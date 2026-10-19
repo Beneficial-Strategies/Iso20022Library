@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCancellationAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the cancellation of a successfully completed transaction. The transaction has been completed without financial transfer, or the acceptor is aware that the transaction was not cleared by the acquirer.
 /// </summary>
 [IsoId("_0QlGUS5BEeunNvJlR_vCbg")]
+[IsoMessage("caaa.007.001.10", "AccptrCxlAdvc", "urn:iso:std:iso:20022:tech:xsd:caaa.007.001.10")]
 public interface IAcceptorCancellationAdviceV10 : IOuterRecord
 {
     /// <summary>

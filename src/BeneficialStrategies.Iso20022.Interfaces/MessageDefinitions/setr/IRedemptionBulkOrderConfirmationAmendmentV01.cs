@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The message identification of the RedemptionBulkOrder message in which the orders were conveyed may also be quoted in RelatedReference. The message identification of the RedemptionBulkOrderConfirmation message in which the original order confirmations were conveyed may also be quoted in PreviousReference.
 /// </summary>
 [IsoId("_oK5XINE7Ed-BzquC8wXy7w_-352837634")]
+[IsoMessage(
+    "setr.054.001.01",
+    "RedBlkOrdrConfAmdmntV01",
+    "urn:iso:std:iso:20022:tech:xsd:setr.054.001.01"
+)]
 public interface IRedemptionBulkOrderConfirmationAmendmentV01 : IOuterRecord
 {
     /// <summary>

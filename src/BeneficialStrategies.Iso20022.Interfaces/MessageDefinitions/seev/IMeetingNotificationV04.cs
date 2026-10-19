@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// To update the resolutions of the agenda, the complete list of resolutions must be repeated in the amendment message. The resolutions that are deleted should be assigned the status Withdrawn.
 /// </summary>
 [IsoId("_TsTNC9EwEd-BzquC8wXy7w_1709112715")]
+[IsoMessage("seev.001.001.04", "MtgNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.001.001.04")]
 public interface IMeetingNotificationV04 : IOuterRecord
 {
     /// <summary>

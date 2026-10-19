@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3SU5TEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("camt.087.001.09", "ReqToModfyPmt", "urn:iso:std:iso:20022:tech:xsd:camt.087.001.09")]
 public interface IRequestToModifyPaymentV09 : IOuterRecord
 {
     /// <summary>

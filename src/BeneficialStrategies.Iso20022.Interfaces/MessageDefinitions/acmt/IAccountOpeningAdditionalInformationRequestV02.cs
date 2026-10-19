@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountOpeningAdditionalInformationRequest message is sent from a financial institution to an organisation as part of the account opening process. This message is sent in response to an opening request message from the organisation, if the business content is valid, but additional information is required.
 /// </summary>
 [IsoId("_ZzIbwQ1TEeKGXqvMN6jpiw")]
+[IsoMessage(
+    "acmt.009.001.02",
+    "AcctOpngAddtlInfReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.009.001.02"
+)]
 public interface IAccountOpeningAdditionalInformationRequestV02 : IOuterRecord
 {
     /// <summary>

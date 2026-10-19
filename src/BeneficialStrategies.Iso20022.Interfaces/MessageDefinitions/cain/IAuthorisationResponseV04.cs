@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_KABtoXeAEe6YlIMyoxWMJA")]
+[IsoMessage("cain.002.001.04", "AuthstnRspn", "urn:iso:std:iso:20022:tech:xsd:cain.002.001.04")]
 public interface IAuthorisationResponseV04 : IOuterRecord
 {
     /// <summary>

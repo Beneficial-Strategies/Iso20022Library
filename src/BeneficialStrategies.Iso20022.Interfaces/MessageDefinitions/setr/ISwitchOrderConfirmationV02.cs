@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The SwitchOrderConfirmation message is sent to confirm that all the legs of the switch have been executed.
 /// </summary>
 [IsoId("_7TxshtE7Ed-BzquC8wXy7w_-1591679635")]
+[IsoMessage("setr.015.001.02", "setr.015.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.015.001.02")]
 public interface ISwitchOrderConfirmationV02 : IOuterRecord
 {
     /// <summary>

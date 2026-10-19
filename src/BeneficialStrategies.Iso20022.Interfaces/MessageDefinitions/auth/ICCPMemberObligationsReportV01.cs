@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPInvestmentsReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about how the central counterparty invests the cash balances deposited with it as collateral by its clearing members. Details the source and size of the liquidity requirements CCPs are placing on clearing members as a result of their membership of the CCP.
 /// </summary>
 [IsoId("_YdmhceUUEem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.056.001.01",
+    "CCPMmbOblgtnsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.056.001.01"
+)]
 public interface ICCPMemberObligationsReportV01 : IOuterRecord
 {
     /// <summary>

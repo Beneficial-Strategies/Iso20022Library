@@ -22,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// To verify the outcome of the request, the member may submit a GetLimit message with the appropriate search criteria.
 /// </summary>
 [IsoId("_jwlbTxbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.012.001.07", "DelLmt", "urn:iso:std:iso:20022:tech:xsd:camt.012.001.07")]
 public interface IDeleteLimitV07 : IOuterRecord
 {
     /// <summary>

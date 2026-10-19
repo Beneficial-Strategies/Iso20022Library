@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// CCPs require participants to post assets in a clearing fund that can be used in the event of a default by a participant, to compensate non-defaulting participants for losses they suffer due to this default. The CCP evaluates each participant risk level based on their positions (monthly or daily) and calculate the excess of deficit of the default fund contribution. The DefaultFundContributionReport is usually sent on a monthly basis.
 /// </summary>
 [IsoId("_-hesiaMOEeCojJW5vEuTEQ_-1558125935")]
+[IsoMessage(
+    "secl.006.001.02",
+    "DfltFndCntrbtnRpt",
+    "urn:iso:std:iso:20022:tech:xsd:secl.006.001.02"
+)]
 public interface IDefaultFundContributionReportV02 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The ChargeBackResponse message is sent by an acquirer or an agent to an issuer in response to an ChargeBackInitiation message.
 /// </summary>
 [IsoId("_yC2YlFZgEeen1vB4iz5SyA")]
+[IsoMessage("cain.028.001.01", "ChrgBckRspn", "urn:iso:std:iso:20022:tech:xsd:cain.028.001.01")]
 public interface IChargeBackResponseV01 : IOuterRecord
 {
     /// <summary>

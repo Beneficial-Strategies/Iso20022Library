@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// It is assumed that when an account servicing institution sends out an Additional Payment Information message, the institution is fairly confident that this will resolve the case. Therefore it does not need to wait for a Resolution Of Investigation message. Neither does the account owner, or whoever receives the additional information, need to send back a Resolution Of Investigation message. Positive resolution in this case is implicit. Both parties are expected to close the case. In the event that the problem does not go away, a party can re-open the case.
 /// </summary>
 [IsoId("_FNvJVtE-Ed-BzquC8wXy7w_-95467495")]
+[IsoMessage("camt.028.001.01", "camt.028.001.01", "urn:iso:std:iso:20022:tech:xsd:camt.028.001.01")]
 public interface IAdditionalPaymentInformation : IOuterRecord
 {
     /// <summary>

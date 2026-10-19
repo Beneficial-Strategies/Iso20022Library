@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// If the InvestmentFundReportRequest message is used to request a fund reference data report then the request can specify the financial instrument for which the report is requested. Other appropriate parameters can also be included. It is also possible to indicate that the request is an open request, that is, there is no specific criteria for the report requested. For example, a request for a fund reference data report that is specified as &quot;no criteria&quot; means that the request is a request for a reference data report messages for all funds.
 /// </summary>
 [IsoId("_qIk6YWolEeipaMTLlhaKMQ")]
+[IsoMessage(
+    "reda.005.001.03",
+    "InvstmtFndRptReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.005.001.03"
+)]
 public interface IInvestmentFundReportRequestV03 : IOuterRecord
 {
     /// <summary>

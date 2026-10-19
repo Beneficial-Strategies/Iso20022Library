@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The MoneyMarketOvernightIndexSwapsStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report the daily overnight index swaps (OIS) transactions.
 /// </summary>
 [IsoId("_HeIa8aicEeWHO_l3hf2rlA")]
+[IsoMessage(
+    "auth.015.001.01",
+    "MnyMktOvrnghtIndxSwpsSttstclRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.015.001.01"
+)]
 public interface IMoneyMarketOvernightIndexSwapsStatisticalReportV01 : IOuterRecord
 {
     /// <summary>

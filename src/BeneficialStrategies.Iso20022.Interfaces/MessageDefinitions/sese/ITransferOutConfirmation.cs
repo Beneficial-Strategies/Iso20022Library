@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The TransferOutConfirmation message is used by an executing party to confirm to the instructing party that the withdrawal of a financial instrument from the owner&apos;s account and its delivery to another own account, or to a third party, has taken place.
 /// </summary>
 [IsoId("_K1n7vNE6Ed-BzquC8wXy7w_1755875491")]
+[IsoMessage("sese.003.001.01", "sese.003.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.003.001.01")]
 public interface ITransferOutConfirmation : IOuterRecord
 {
     /// <summary>

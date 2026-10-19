@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The ATMReconciliationAcknowledgement message is sent by an acquirer or its agent to an ATM to acknowledge the receipt of an ATMReconciliationAdvice message.
 /// </summary>
 [IsoId("_LTFLcIt0EeSLQutgI1Ulfw")]
+[IsoMessage("caam.010.001.01", "ATMRcncltnAck", "urn:iso:std:iso:20022:tech:xsd:caam.010.001.01")]
 public interface IATMReconciliationAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

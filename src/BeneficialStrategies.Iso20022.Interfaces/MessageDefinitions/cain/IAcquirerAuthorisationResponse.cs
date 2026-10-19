@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The AcquirerAuthorisationResponse message is sent by an issuer or an agent to answer to an AcquirerAuthorisationInitiation message.
 /// </summary>
 [IsoId("_YO8QUHuOEeSVeNXcmBQ4hQ")]
+[IsoMessage(
+    "cain.002.001.01",
+    "AcqrrAuthstnRspn",
+    "urn:iso:std:iso:20022:tech:xsd:cain.002.001.01"
+)]
 public interface IAcquirerAuthorisationResponse : IOuterRecord
 {
     /// <summary>

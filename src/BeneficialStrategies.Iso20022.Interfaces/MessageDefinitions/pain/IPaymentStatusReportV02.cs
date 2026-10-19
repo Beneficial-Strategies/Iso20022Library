@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The PaymentStatusReport message exchanged between agents and non-financial institution customers is identified in the schema as follows: urn:iso:std:iso:20022:tech:xsd:pain.002.001.02.
 /// </summary>
 [IsoId("_GZkBENEvEd-BzquC8wXy7w_-408419624")]
+[IsoMessage("pain.002.001.02", "pain.002.001.02", "urn:iso:std:iso:20022:tech:xsd:pain.002.001.02")]
 public interface IPaymentStatusReportV02 : IOuterRecord
 {
     /// <summary>

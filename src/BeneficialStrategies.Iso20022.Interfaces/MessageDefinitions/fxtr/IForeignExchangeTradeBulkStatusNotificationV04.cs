@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades.
 /// </summary>
 [IsoId("_sZyzIZR1Eeak6e8_Fc5fQg")]
+[IsoMessage(
+    "fxtr.030.001.04",
+    "FXTradBlkStsNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.030.001.04"
+)]
 public interface IForeignExchangeTradeBulkStatusNotificationV04 : IOuterRecord
 {
     /// <summary>

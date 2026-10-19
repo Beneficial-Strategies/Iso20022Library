@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The HostToATMAcknowledgement message is sent by an ATM to a host to acknowledge the receipt of a HostToATMRequest message.
 /// </summary>
 [IsoId("_uoX0IItrEeSDLd7nI4Quzw")]
+[IsoMessage("caam.008.001.01", "HstToATMAck", "urn:iso:std:iso:20022:tech:xsd:caam.008.001.01")]
 public interface IHostToATMAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

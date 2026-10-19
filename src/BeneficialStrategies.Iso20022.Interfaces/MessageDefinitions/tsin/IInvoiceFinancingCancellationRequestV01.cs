@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// - In a relay scenario, the message is sent to an Intermediary Agent. The Intermediary Agent forwards the InvoiceFinancingCancellingRequest message to the First Agent.
 /// </summary>
 [IsoId("_BUjIPn1LEeCF8NjrBemJWQ_-1871971623")]
+[IsoMessage("tsin.003.001.01", "InvcFincgCxlReq", "urn:iso:std:iso:20022:tech:xsd:tsin.003.001.01")]
 public interface IInvoiceFinancingCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

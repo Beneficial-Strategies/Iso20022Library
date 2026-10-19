@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// When the CollateralManagementCancellationRequest message is used to cancel a collateral message the reference of the original message must be specified. The rejection or acceptance of a CollateralManagementCancellationRequest message is made using a CollateralManagementCancellationStatus message.
 /// </summary>
 [IsoId("_yXxLsSW0EeyT3chuyX0PgA")]
+[IsoMessage("colr.005.001.06", "CollMgmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:colr.005.001.06")]
 public interface ICollateralManagementCancellationRequestV06 : IOuterRecord
 {
     /// <summary>

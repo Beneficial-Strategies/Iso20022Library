@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The CalendarReport message is sent by the system administrator to the system member is to return information on the system status for specific calendar days.
 /// </summary>
 [IsoId("_DRJNLFuDEe29lKnE5APnfA")]
+[IsoMessage("reda.065.001.02", "CalRpt", "urn:iso:std:iso:20022:tech:xsd:reda.065.001.02")]
 public interface ICalendarReportV02 : IOuterRecord
 {
     /// <summary>

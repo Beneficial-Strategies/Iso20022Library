@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// This report may be used by settlement internalisers to provide aggregated information (volume and value) on internalised settlement instructions (settled and failed) to their competent authorities.
 /// </summary>
 [IsoId("_m9MVgO3jEeaWjpoyrnG6Rw")]
+[IsoMessage("auth.072.001.01", "SttlmIntlrRpt", "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01")]
 public interface ISettlementInternaliserReportV01 : IOuterRecord
 {
     /// <summary>

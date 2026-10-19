@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// To verify the outcome of the request, the member may submit a GetTransaction message with the appropriate search criteria.
 /// </summary>
 [IsoId("_jx5UsQKxEe2rHs6fbn9-0A")]
+[IsoMessage("camt.008.001.10", "CclTx", "urn:iso:std:iso:20022:tech:xsd:camt.008.001.10")]
 public interface ICancelTransactionV10 : IOuterRecord
 {
     /// <summary>

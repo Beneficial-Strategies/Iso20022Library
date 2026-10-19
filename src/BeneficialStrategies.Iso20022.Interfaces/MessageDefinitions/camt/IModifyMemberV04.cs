@@ -22,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// In principle, the transaction administrator may send a Receipt message as a reply to the ModifyMember request. To verify the outcome of the request, the member may submit a GetMember message with the appropriate search criteria.
 /// </summary>
 [IsoId("_jwlbxxbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.015.001.04", "ModfyMmb", "urn:iso:std:iso:20022:tech:xsd:camt.015.001.04")]
 public interface IModifyMemberV04 : IOuterRecord
 {
     /// <summary>

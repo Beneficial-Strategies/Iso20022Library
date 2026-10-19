@@ -29,6 +29,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - No case used in cancellation request message: The cancellation of a payment instruction can be initiated by either the debtor/creditor or any subsequent agent in the payment instruction processing chain.
 /// </summary>
 [IsoId("_IBiye9cBEeq_l4BJLVUF2Q")]
+[IsoMessage("camt.055.001.10", "CstmrPmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:camt.055.001.10")]
 public interface ICustomerPaymentCancellationRequestV10 : IOuterRecord
 {
     /// <summary>

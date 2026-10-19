@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// This financial service is a request by the Sale system of a service to execute on POI system.
 /// </summary>
 [IsoId("_dTGYUYX_EemxIqbaFEE8-w")]
+[IsoMessage("casp.001.001.01", "SaleToPOISvcReq", "urn:iso:std:iso:20022:tech:xsd:casp.001.001.01")]
 public interface ISaleToPOIServiceRequestV01 : IOuterRecord
 {
     /// <summary>

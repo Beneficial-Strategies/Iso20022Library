@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingIssuanceNotification message is sent by the party that issued the undertaking to the applicant to notify it of the contents of an undertaking issued electronically or on paper. The undertaking that is notified could be a demand guarantee, standby letter of credit, counter-undertaking (counter-guarantee or counter-standby), or suretyship undertaking. In addition to containing details on the applicable rules, expiry date, the amount, required documents, and terms and conditions of the undertaking, the message may provide information from the sender such as confirmation details.
 /// </summary>
 [IsoId("_9ft4hnltEeG7BsjMvd1mEw_-1741086320")]
+[IsoMessage(
+    "tsrv.003.001.01",
+    "UdrtkgIssncNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsrv.003.001.01"
+)]
 public interface IUndertakingIssuanceNotificationV01 : IOuterRecord
 {
     /// <summary>

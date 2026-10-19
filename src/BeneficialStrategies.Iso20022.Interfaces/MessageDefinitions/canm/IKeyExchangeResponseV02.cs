@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.canm;
 ///
 /// </summary>
 [IsoId("_mpuu1lWdEeeiG_nL4vgKnQ")]
+[IsoMessage("canm.004.001.02", "KeyXchgRspn", "urn:iso:std:iso:20022:tech:xsd:canm.004.001.02")]
 public interface IKeyExchangeResponseV02 : IOuterRecord
 {
     /// <summary>

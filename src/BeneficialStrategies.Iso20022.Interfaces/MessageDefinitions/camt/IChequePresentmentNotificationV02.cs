@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3E5OTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage(
+    "camt.107.001.02",
+    "ChqPresntmntNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:camt.107.001.02"
+)]
 public interface IChequePresentmentNotificationV02 : IOuterRecord
 {
     /// <summary>

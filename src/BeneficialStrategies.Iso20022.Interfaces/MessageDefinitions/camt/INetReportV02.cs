@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Net Report message is sent to a participant by a central system to provide details of the of the bi-lateral payment obligations, calculated by the central system per currency.
 /// </summary>
 [IsoId("_kBNA9QM-Ee2nqoJcXIhTdw")]
+[IsoMessage("camt.088.001.02", "NetRpt", "urn:iso:std:iso:20022:tech:xsd:camt.088.001.02")]
 public interface INetReportV02 : IOuterRecord
 {
     /// <summary>

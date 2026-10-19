@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// Respondent: Custodian or an affirming party does not need to respond.
 /// </summary>
 [IsoId("_j5E4gQNmEe2P7e2qGFFOGg")]
+[IsoMessage(
+    "semt.023.001.02",
+    "SctiesEndOfPrcRpt",
+    "urn:iso:std:iso:20022:tech:xsd:semt.023.001.02"
+)]
 public interface ISecuritiesEndOfProcessReportV02 : IOuterRecord
 {
     /// <summary>

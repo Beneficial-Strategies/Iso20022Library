@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The InterestPaymentRequest message is used to advise the interest amount calculated for a specific period or request payment for an interest amount for a specific period.
 /// </summary>
 [IsoId("_2wqKwWNnEeSIWbZ6by9dnA")]
+[IsoMessage("colr.013.001.03", "IntrstPmtReq", "urn:iso:std:iso:20022:tech:xsd:colr.013.001.03")]
 public interface IInterestPaymentRequestV03 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingAmendmentAdvice message is sent by an advising party to the beneficiary, either directly or via one or more other advising parties in the transaction chain, to advise the content of a proposed amendment to an undertaking. Information about the message may also be sent to other interested parties. The proposed undertaking amendment could be to a demand guarantee, standby letter of credit, or counter-undertaking (counter-guarantee or counter-standby). In addition to providing the terms of the proposed amendment and relevant details on proposed changes to the undertaking, the message may provide information from the sender such as confirmation details. It may also be used to advise the proposed termination or cancellation of the undertaking.
 /// </summary>
 [IsoId("_9gJ9ZnltEeG7BsjMvd1mEw_1371399250")]
+[IsoMessage(
+    "tsrv.006.001.01",
+    "UdrtkgAmdmntAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:tsrv.006.001.01"
+)]
 public interface IUndertakingAmendmentAdviceV01 : IOuterRecord
 {
     /// <summary>
