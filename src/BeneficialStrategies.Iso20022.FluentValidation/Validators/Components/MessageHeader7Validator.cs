@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class MessageHeader7Validator : AbstractValidator<MessageHeader7>
+public class MessageHeader7Validator : AbstractValidator<IMessageHeader7>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -44,8 +44,8 @@ public class MessageHeader7Validator : AbstractValidator<MessageHeader7>
     /// (OriginalBusinessQuery1, 0..1) — only invoked when present.
     /// </param>
     public MessageHeader7Validator(
-        IValidator<RequestType4Choice_> requestTypeValidator,
-        IValidator<OriginalBusinessQuery1> originalBusinessQueryValidator
+        IValidator<IRequestType4Choice> requestTypeValidator,
+        IValidator<IOriginalBusinessQuery1> originalBusinessQueryValidator
     )
     {
         // QueryName: optional scalar, length enforced by the struct constructor — no rule needed.

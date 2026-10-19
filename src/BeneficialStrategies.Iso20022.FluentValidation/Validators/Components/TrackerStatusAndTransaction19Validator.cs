@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Transaction</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class TrackerStatusAndTransaction19Validator : AbstractValidator<TrackerStatusAndTransaction19>
+public class TrackerStatusAndTransaction19Validator : AbstractValidator<ITrackerStatusAndTransaction19>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TrackerStatusAndTransaction19"/>.

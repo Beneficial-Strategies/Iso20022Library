@@ -23,14 +23,14 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>ReturnReasonInformation</c> (each item) is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class OriginalGroupHeader19Validator : AbstractValidator<OriginalGroupHeader19>
+public class OriginalGroupHeader19Validator : AbstractValidator<IOriginalGroupHeader19>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
     /// for <c>ReturnReasonInformation</c> — e.g. resolved from a DI container — instead of this
     /// type constructing its own.
     /// </summary>
-    public OriginalGroupHeader19Validator(IValidator<PaymentReturnReason7> returnReasonInformationValidator)
+    public OriginalGroupHeader19Validator(IValidator<IPaymentReturnReason7> returnReasonInformationValidator)
     {
         RuleForEach(x => x.ReturnReasonInformation).SetValidator(returnReasonInformationValidator!);
     }

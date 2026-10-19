@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// against <c>Cancellation(*)/CashAccountServicer</c>, the obviously-intended field, not the
 /// literal (nonexistent) text.
 /// </remarks>
-public class IntraBalanceCancellation7Validator : AbstractValidator<IntraBalanceCancellation7>
+public class IntraBalanceCancellation7Validator : AbstractValidator<IIntraBalanceCancellation7>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="IntraBalanceCancellation7"/>.

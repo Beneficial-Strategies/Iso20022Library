@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SaleSoftware</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class LoginRequest5Validator : AbstractValidator<LoginRequest5>
+public class LoginRequest5Validator : AbstractValidator<ILoginRequest5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="LoginRequest5"/>.

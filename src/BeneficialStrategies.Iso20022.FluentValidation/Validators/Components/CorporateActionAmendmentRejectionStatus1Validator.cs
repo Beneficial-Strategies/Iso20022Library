@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Reason</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CorporateActionAmendmentRejectionStatus1Validator : AbstractValidator<CorporateActionAmendmentRejectionStatus1>
+public class CorporateActionAmendmentRejectionStatus1Validator : AbstractValidator<ICorporateActionAmendmentRejectionStatus1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CorporateActionAmendmentRejectionStatus1"/>.

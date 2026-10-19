@@ -47,7 +47,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// automatically, with no manual per-type registration required from consumers.
 /// </remarks>
 public class FIToFIPaymentCancellationRequestV10Validator
-    : AbstractValidator<FIToFIPaymentCancellationRequestV10>
+    : AbstractValidator<IFIToFIPaymentCancellationRequestV10>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -69,10 +69,10 @@ public class FIToFIPaymentCancellationRequestV10Validator
     /// Validator for the optional <c>ControlData</c> building block (ControlData1, 0..1) — only invoked when present.
     /// </param>
     public FIToFIPaymentCancellationRequestV10Validator(
-        IValidator<CaseAssignment5> caseAssignmentValidator,
-        IValidator<UnderlyingTransaction28> underlyingTransactionValidator,
-        IValidator<Case5> caseValidator,
-        IValidator<ControlData1> controlDataValidator
+        IValidator<ICaseAssignment5> caseAssignmentValidator,
+        IValidator<IUnderlyingTransaction28> underlyingTransactionValidator,
+        IValidator<ICase5> caseValidator,
+        IValidator<IControlData1> controlDataValidator
     )
     {
         // ── Required building blocks ─────────────────────────────────────────────────
@@ -134,7 +134,7 @@ public class FIToFIPaymentCancellationRequestV10Validator
             new ControlData1Validator()
         ) { }
 
-    private static bool NoCaseDuplication(FIToFIPaymentCancellationRequestV10 msg)
+    private static bool NoCaseDuplication(IFIToFIPaymentCancellationRequestV10 msg)
     {
         int count = 0;
         if (msg.Case is not null)

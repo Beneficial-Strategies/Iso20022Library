@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component.
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class StatementGroup1Validator : AbstractValidator<StatementGroup1>
+public class StatementGroup1Validator : AbstractValidator<IStatementGroup1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="StatementGroup1"/>.
@@ -34,11 +34,11 @@ public class StatementGroup1Validator : AbstractValidator<StatementGroup1>
             .WithMessage("StatementGroup1.BillingStatement must contain at least one element (1..*).");
 
         RuleFor(x => x.SenderIndividualContact)
-            .Must(list => list.Count <= 2)
+            .Must(list => list.Count() <= 2)
             .WithMessage("StatementGroup1.SenderIndividualContact must not contain more than 2 element(s) (0..2).");
 
         RuleFor(x => x.ReceiverIndividualContact)
-            .Must(list => list.Count <= 2)
+            .Must(list => list.Count() <= 2)
             .WithMessage("StatementGroup1.ReceiverIndividualContact must not contain more than 2 element(s) (0..2).");
     }
 }

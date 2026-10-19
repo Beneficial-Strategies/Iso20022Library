@@ -24,16 +24,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see
 /// the two constructors below.
 /// </remarks>
-public class ReferredDocumentInformation8Validator : AbstractValidator<ReferredDocumentInformation8>
+public class ReferredDocumentInformation8Validator : AbstractValidator<IReferredDocumentInformation8>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public ReferredDocumentInformation8Validator(
-        IValidator<DocumentLineInformation2> lineDetailsValidator,
-        IValidator<DateAndType1> relatedDateValidator,
-        IValidator<DocumentType1> typeValidator
+        IValidator<IDocumentLineInformation2> lineDetailsValidator,
+        IValidator<IDateAndType1> relatedDateValidator,
+        IValidator<IDocumentType1> typeValidator
     )
     {
         RuleForEach(x => x.LineDetails).SetValidator(lineDetailsValidator!);

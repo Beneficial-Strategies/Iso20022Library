@@ -26,16 +26,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
-public class PaymentTypeInformation27Validator : AbstractValidator<PaymentTypeInformation27>
+public class PaymentTypeInformation27Validator : AbstractValidator<IPaymentTypeInformation27>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public PaymentTypeInformation27Validator(
-        IValidator<ServiceLevel8Choice_> serviceLevelValidator,
-        IValidator<LocalInstrument2Choice_> localInstrumentValidator,
-        IValidator<CategoryPurpose1Choice_> categoryPurposeValidator
+        IValidator<IServiceLevel8Choice> serviceLevelValidator,
+        IValidator<ILocalInstrument2Choice> localInstrumentValidator,
+        IValidator<ICategoryPurpose1Choice> categoryPurposeValidator
     )
     {
         RuleForEach(x => x.ServiceLevel).SetValidator(serviceLevelValidator!);

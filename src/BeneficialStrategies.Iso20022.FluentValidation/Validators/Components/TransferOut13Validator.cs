@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class TransferOut13Validator : AbstractValidator<TransferOut13>
+public class TransferOut13Validator : AbstractValidator<ITransferOut13>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TransferOut13"/>.

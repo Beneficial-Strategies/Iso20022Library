@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// convention (see <c>PaymentTransaction137Validator</c>): ISO 4217 three-letter currency pattern,
 /// amount greater than zero.
 /// </remarks>
-public class AmountAndDirection5Validator : AbstractValidator<AmountAndDirection5>
+public class AmountAndDirection5Validator : AbstractValidator<IAmountAndDirection5>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);

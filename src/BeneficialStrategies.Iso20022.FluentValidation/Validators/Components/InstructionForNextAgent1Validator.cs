@@ -24,4 +24,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// coverage-scoping policy ("reviewed and confirmed to need nothing"), same convention as
 /// <c>AddressType3Choice_Validator</c>.
 /// </remarks>
-public class InstructionForNextAgent1Validator : AbstractValidator<InstructionForNextAgent1> { }
+public class InstructionForNextAgent1Validator : AbstractValidator<IInstructionForNextAgent1> { }

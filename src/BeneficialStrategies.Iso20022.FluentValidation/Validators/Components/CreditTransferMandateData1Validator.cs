@@ -30,16 +30,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class CreditTransferMandateData1Validator : AbstractValidator<CreditTransferMandateData1>
+public class CreditTransferMandateData1Validator : AbstractValidator<ICreditTransferMandateData1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public CreditTransferMandateData1Validator(
-        IValidator<MandateTypeInformation2> typeValidator,
-        IValidator<Frequency36Choice_> frequencyValidator,
-        IValidator<MandateSetupReason1Choice_> reasonValidator
+        IValidator<IMandateTypeInformation2> typeValidator,
+        IValidator<IFrequency36Choice> frequencyValidator,
+        IValidator<IMandateSetupReason1Choice> reasonValidator
     )
     {
         When(x => x.Type is not null, () => RuleFor(x => x.Type).SetValidator(typeValidator!));

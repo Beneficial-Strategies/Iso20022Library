@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// constructors below.
 /// </remarks>
 public class GeneralBusinessInformationSearchCriteria1Validator
-    : AbstractValidator<GeneralBusinessInformationSearchCriteria1>
+    : AbstractValidator<IGeneralBusinessInformationSearchCriteria1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -39,8 +39,8 @@ public class GeneralBusinessInformationSearchCriteria1Validator
     /// Validator for each item of the <c>Qualifier</c> collection (InformationQualifierType1, 0..∞).
     /// </param>
     public GeneralBusinessInformationSearchCriteria1Validator(
-        IValidator<CharacterSearch1Choice_> subjectValidator,
-        IValidator<InformationQualifierType1> qualifierValidator
+        IValidator<ICharacterSearch1Choice> subjectValidator,
+        IValidator<IInformationQualifierType1> qualifierValidator
     )
     {
         RuleForEach(x => x.Subject).SetValidator(subjectValidator);

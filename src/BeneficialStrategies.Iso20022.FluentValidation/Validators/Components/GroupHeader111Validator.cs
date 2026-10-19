@@ -27,15 +27,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// than a hardcoded <c>new</c> — the same <see cref="BranchAndFinancialInstitutionIdentification8"/>
 /// validator instance is reused across all three agent fields — see the two constructors below.
 /// </remarks>
-public class GroupHeader111Validator : AbstractValidator<GroupHeader111>
+public class GroupHeader111Validator : AbstractValidator<IGroupHeader111>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public GroupHeader111Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<PartyIdentification272> initiatingPartyValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<IPartyIdentification272> initiatingPartyValidator
     )
     {
         When(x => x.CreditorAgent is not null, () => RuleFor(x => x.CreditorAgent).SetValidator(agentValidator!));

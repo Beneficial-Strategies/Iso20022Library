@@ -24,15 +24,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Signature</term><description>Max70Text — collection (0..n)</description></item>
 /// </list>
 /// </remarks>
-public class Cheque19Validator : AbstractValidator<Cheque19>
+public class Cheque19Validator : AbstractValidator<ICheque19>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public Cheque19Validator(
-        IValidator<NameAndAddress18> nameAndAddress18Validator,
-        IValidator<ChequeDeliveryMethod1Choice_> chequeDeliveryMethod1ChoiceValidator
+        IValidator<INameAndAddress18> nameAndAddress18Validator,
+        IValidator<IChequeDeliveryMethod1Choice> chequeDeliveryMethod1ChoiceValidator
     )
     {
         When(

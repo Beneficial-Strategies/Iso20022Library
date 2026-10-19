@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
-public class TransactionAllocation2Validator : AbstractValidator<TransactionAllocation2>
+public class TransactionAllocation2Validator : AbstractValidator<ITransactionAllocation2>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -46,9 +46,9 @@ public class TransactionAllocation2Validator : AbstractValidator<TransactionAllo
     /// instead of this type constructing its own.
     /// </summary>
     public TransactionAllocation2Validator(
-        IValidator<CashAccount40> accountValidator,
-        IValidator<Purpose2Choice_> purposeValidator,
-        IValidator<References80Choice_> relatedReferencesValidator
+        IValidator<ICashAccount40> accountValidator,
+        IValidator<IPurpose2Choice> purposeValidator,
+        IValidator<IReferences80Choice> relatedReferencesValidator
     )
     {
         // ── Amount (ActiveOrHistoricCurrencyAndAmount, required 1..1) ────────────────

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ActionResult</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ErrorAction2Validator : AbstractValidator<ErrorAction2>
+public class ErrorAction2Validator : AbstractValidator<IErrorAction2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ErrorAction2"/>.

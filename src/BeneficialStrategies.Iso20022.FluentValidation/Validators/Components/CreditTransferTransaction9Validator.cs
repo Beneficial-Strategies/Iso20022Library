@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DirectDebitTransactionInformation</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CreditTransferTransaction9Validator : AbstractValidator<CreditTransferTransaction9>
+public class CreditTransferTransaction9Validator : AbstractValidator<ICreditTransferTransaction9>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CreditTransferTransaction9"/>.

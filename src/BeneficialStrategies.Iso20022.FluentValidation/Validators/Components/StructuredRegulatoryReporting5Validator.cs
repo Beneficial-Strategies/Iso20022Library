@@ -32,14 +32,14 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// value — so neither <c>SetValidator</c> call below is proven wired at this level. A future
 /// pass should add a case with a populated registry to close this gap.
 /// </remarks>
-public class StructuredRegulatoryReporting5Validator : AbstractValidator<StructuredRegulatoryReporting5>
+public class StructuredRegulatoryReporting5Validator : AbstractValidator<IStructuredRegulatoryReporting5>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public StructuredRegulatoryReporting5Validator(
-        IValidator<RegulatoryReportingType1Choice_> typeValidator,
+        IValidator<IRegulatoryReportingType1Choice> typeValidator,
         IValidator<CountryCode> countryValidator
     )
     {

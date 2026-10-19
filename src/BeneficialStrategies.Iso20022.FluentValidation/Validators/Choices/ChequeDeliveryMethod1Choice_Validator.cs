@@ -16,4 +16,4 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// exists so the coverage-scoping policy (see the project's <c>CLAUDE.md</c>) records the type as
 /// reviewed, and so a message that reaches it is validated end to end.
 /// </remarks>
-public class ChequeDeliveryMethod1Choice_Validator : AbstractValidator<ChequeDeliveryMethod1Choice_> { }
+public class ChequeDeliveryMethod1Choice_Validator : AbstractValidator<IChequeDeliveryMethod1Choice> { }

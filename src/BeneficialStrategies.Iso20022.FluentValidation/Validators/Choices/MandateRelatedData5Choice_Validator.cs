@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class MandateRelatedData5Choice_Validator : AbstractValidator<MandateRelatedData5Choice_>
+public class MandateRelatedData5Choice_Validator : AbstractValidator<IMandateRelatedData5Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
@@ -37,18 +37,17 @@ public class MandateRelatedData5Choice_Validator : AbstractValidator<MandateRela
     /// <c>Value</c> (CreditTransferMandateData1, 1..1).
     /// </param>
     public MandateRelatedData5Choice_Validator(
-        IValidator<MandateRelatedInformation16> directDebitMandateValueValidator,
-        IValidator<CreditTransferMandateData1> creditTransferMandateValueValidator
+        IValidator<IMandateRelatedInformation16> directDebitMandateValueValidator,
+        IValidator<ICreditTransferMandateData1> creditTransferMandateValueValidator
     )
     {
-        var directDebitMandateVariantValidator = new InlineValidator<Choices.MandateRelatedData5Choice.DirectDebitMandate>();
+        var directDebitMandateVariantValidator = new InlineValidator<Choices.MandateRelatedData5Choice.IDirectDebitMandate>();
         directDebitMandateVariantValidator.RuleFor(x => x.Value).SetValidator(directDebitMandateValueValidator!);
 
-        var creditTransferMandateVariantValidator = new InlineValidator<Choices.MandateRelatedData5Choice.CreditTransferMandate>();
+        var creditTransferMandateVariantValidator = new InlineValidator<Choices.MandateRelatedData5Choice.ICreditTransferMandate>();
         creditTransferMandateVariantValidator.RuleFor(x => x.Value).SetValidator(creditTransferMandateValueValidator!);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(directDebitMandateVariantValidator);
                 v.Add(creditTransferMandateVariantValidator);

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
 /// </remarks>
-public class IntraBalancePosting5Validator : AbstractValidator<IntraBalancePosting5>
+public class IntraBalancePosting5Validator : AbstractValidator<IIntraBalancePosting5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="IntraBalancePosting5"/>.

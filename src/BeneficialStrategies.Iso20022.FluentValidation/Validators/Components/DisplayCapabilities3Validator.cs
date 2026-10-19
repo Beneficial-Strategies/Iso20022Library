@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>AvailableFormat</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class DisplayCapabilities3Validator : AbstractValidator<DisplayCapabilities3>
+public class DisplayCapabilities3Validator : AbstractValidator<IDisplayCapabilities3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="DisplayCapabilities3"/>.

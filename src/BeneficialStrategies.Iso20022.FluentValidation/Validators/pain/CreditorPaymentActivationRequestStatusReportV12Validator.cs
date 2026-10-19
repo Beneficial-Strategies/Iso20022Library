@@ -75,7 +75,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 /// constructors below.
 /// </remarks>
 public class CreditorPaymentActivationRequestStatusReportV12Validator
-    : AbstractValidator<CreditorPaymentActivationRequestStatusReportV12>
+    : AbstractValidator<ICreditorPaymentActivationRequestStatusReportV12>
 {
     private static readonly ExternalPaymentGroupStatus1Code[] AcceptedStatuses =
     [
@@ -91,10 +91,10 @@ public class CreditorPaymentActivationRequestStatusReportV12Validator
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public CreditorPaymentActivationRequestStatusReportV12Validator(
-        IValidator<GroupHeader111> groupHeaderValidator,
-        IValidator<OriginalGroupInformation32> originalGroupInformationAndStatusValidator,
-        IValidator<OriginalPaymentInstruction52> originalPaymentInformationAndStatusValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader111> groupHeaderValidator,
+        IValidator<IOriginalGroupInformation32> originalGroupInformationAndStatusValidator,
+        IValidator<IOriginalPaymentInstruction52> originalPaymentInformationAndStatusValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);

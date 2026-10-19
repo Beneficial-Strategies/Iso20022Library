@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
 public class FinancialInstitutionIdentification23Validator
-    : AbstractValidator<FinancialInstitutionIdentification23>
+    : AbstractValidator<IFinancialInstitutionIdentification23>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -48,9 +48,9 @@ public class FinancialInstitutionIdentification23Validator
     /// only invoked when present.
     /// </param>
     public FinancialInstitutionIdentification23Validator(
-        IValidator<ClearingSystemMemberIdentification2> clearingSystemMemberIdentificationValidator,
-        IValidator<GenericFinancialIdentification1> otherValidator,
-        IValidator<PostalAddress27> postalAddressValidator
+        IValidator<IClearingSystemMemberIdentification2> clearingSystemMemberIdentificationValidator,
+        IValidator<IGenericFinancialIdentification1> otherValidator,
+        IValidator<IPostalAddress27> postalAddressValidator
     )
     {
         // BICFI, LEI, Name: optional scalars, length/pattern enforced by struct constructors —

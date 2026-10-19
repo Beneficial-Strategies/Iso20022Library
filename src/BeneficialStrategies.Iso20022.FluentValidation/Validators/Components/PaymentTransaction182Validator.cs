@@ -54,7 +54,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class PaymentTransaction182Validator : AbstractValidator<PaymentTransaction182>
+public class PaymentTransaction182Validator : AbstractValidator<IPaymentTransaction182>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -65,14 +65,14 @@ public class PaymentTransaction182Validator : AbstractValidator<PaymentTransacti
     /// type constructing its own.
     /// </summary>
     public PaymentTransaction182Validator(
-        IValidator<OriginalGroupInformation33> originalGroupInformationValidator,
-        IValidator<SettlementDateTimeIndication1> settlementTimeIndicationValidator,
-        IValidator<Charges16> chargesInformationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
-        IValidator<PaymentReversalReason10> reversalReasonInformationValidator,
-        IValidator<OriginalTransactionReference47> originalTransactionReferenceValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IOriginalGroupInformation33> originalGroupInformationValidator,
+        IValidator<ISettlementDateTimeIndication1> settlementTimeIndicationValidator,
+        IValidator<ICharges16> chargesInformationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
+        IValidator<IPaymentReversalReason10> reversalReasonInformationValidator,
+        IValidator<IOriginalTransactionReference47> originalTransactionReferenceValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         // ── ReversedInterbankSettlementAmount (ActiveCurrencyAndAmount, required 1..1) ───

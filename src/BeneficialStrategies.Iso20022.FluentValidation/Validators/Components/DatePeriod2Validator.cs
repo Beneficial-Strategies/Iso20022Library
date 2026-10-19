@@ -24,4 +24,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// first-class type so the coverage-scoping policy (see the FluentValidation project's own
 /// <c>CLAUDE.md</c>) can record this type as reviewed rather than silently skipped.
 /// </remarks>
-public class DatePeriod2Validator : AbstractValidator<DatePeriod2> { }
+public class DatePeriod2Validator : AbstractValidator<IDatePeriod2> { }

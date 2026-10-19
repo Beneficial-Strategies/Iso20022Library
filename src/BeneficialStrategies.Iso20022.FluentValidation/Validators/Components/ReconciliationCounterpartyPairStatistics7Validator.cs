@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ReconciliationReport</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ReconciliationCounterpartyPairStatistics7Validator : AbstractValidator<ReconciliationCounterpartyPairStatistics7>
+public class ReconciliationCounterpartyPairStatistics7Validator : AbstractValidator<IReconciliationCounterpartyPairStatistics7>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ReconciliationCounterpartyPairStatistics7"/>.

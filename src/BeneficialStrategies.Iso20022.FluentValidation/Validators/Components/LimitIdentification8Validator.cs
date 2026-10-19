@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// (<c>AccountOwner</c>, <c>BilateralLimitCounterpartyIdentification</c>) — one injected
 /// validator serves both.
 /// </remarks>
-public class LimitIdentification8Validator : AbstractValidator<LimitIdentification8>
+public class LimitIdentification8Validator : AbstractValidator<ILimitIdentification8>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -49,10 +49,10 @@ public class LimitIdentification8Validator : AbstractValidator<LimitIdentificati
     /// Validator for the required <c>Type</c> building block (LimitType1Choice_, 1..1).
     /// </param>
     public LimitIdentification8Validator(
-        IValidator<AccountIdentification4Choice_> accountIdentificationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<SystemIdentification2Choice_> systemIdentificationValidator,
-        IValidator<LimitType1Choice_> typeValidator
+        IValidator<IAccountIdentification4Choice> accountIdentificationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ISystemIdentification2Choice> systemIdentificationValidator,
+        IValidator<ILimitType1Choice> typeValidator
     )
     {
         RuleFor(x => x.Type).SetValidator(typeValidator);

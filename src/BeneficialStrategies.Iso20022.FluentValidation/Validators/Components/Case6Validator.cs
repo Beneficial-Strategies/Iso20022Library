@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Creator</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class Case6Validator : AbstractValidator<Case6>
+public class Case6Validator : AbstractValidator<ICase6>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -32,7 +32,7 @@ public class Case6Validator : AbstractValidator<Case6>
     /// <param name="creatorValidator">
     /// Validator for the required <c>Creator</c> building block (Party50Choice_, 1..1).
     /// </param>
-    public Case6Validator(IValidator<Party50Choice_> creatorValidator)
+    public Case6Validator(IValidator<IParty50Choice> creatorValidator)
     {
         // Identification: Max35Text, required (1..1) and already `required` C# property — length
         // [1..35] enforced by struct constructor.

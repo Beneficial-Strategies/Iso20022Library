@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>PaymentInstructionStatus</c> value. Left unimplemented rather than guessing which list
 /// entry or field the spec author intended.
 /// </remarks>
-public class Transactions11Validator : AbstractValidator<Transactions11>
+public class Transactions11Validator : AbstractValidator<ITransactions11>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Transactions11"/>.
@@ -51,7 +51,7 @@ public class Transactions11Validator : AbstractValidator<Transactions11>
                 x.PaymentCommonInformation?.RequestedExecutionDate is null
                 || !x
                     .TransactionReport.Select(t => t.TransactionOrError)
-                    .OfType<Choices.TransactionOrError6Choice.Transaction>()
+                    .OfType<Choices.TransactionOrError6Choice.ITransaction>()
                     .Any(t => t.Value.Payment?.RequestedExecutionDate is not null)
             )
             .WithName("TransferValueDateRule")
@@ -66,7 +66,7 @@ public class Transactions11Validator : AbstractValidator<Transactions11>
                 x.PaymentCommonInformation?.CreditDebitIndicator is null
                 || !x
                     .TransactionReport.Select(t => t.TransactionOrError)
-                    .OfType<Choices.TransactionOrError6Choice.Transaction>()
+                    .OfType<Choices.TransactionOrError6Choice.ITransaction>()
                     .Any(t => t.Value.CreditDebitIndicator is not null)
             )
             .WithName("CreditDebitIndicator1Rule")

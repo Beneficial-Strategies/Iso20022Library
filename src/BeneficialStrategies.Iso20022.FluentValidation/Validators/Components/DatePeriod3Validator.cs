@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// its ISO dictionary entry) — in particular, there is no rule requiring ToDate to be on/after
 /// FromDate in the spec's own dictionary entry for this component, so none is added here.
 /// </remarks>
-public class DatePeriod3Validator : AbstractValidator<DatePeriod3>
+public class DatePeriod3Validator : AbstractValidator<IDatePeriod3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="DatePeriod3"/>.

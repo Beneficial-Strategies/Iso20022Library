@@ -22,13 +22,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class AdviceType1Validator : AbstractValidator<AdviceType1>
+public class AdviceType1Validator : AbstractValidator<IAdviceType1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public AdviceType1Validator(IValidator<AdviceType1Choice_> adviceTypeValidator)
+    public AdviceType1Validator(IValidator<IAdviceType1Choice> adviceTypeValidator)
     {
         When(x => x.CreditAdvice is not null, () => RuleFor(x => x.CreditAdvice).SetValidator(adviceTypeValidator!));
         When(x => x.DebitAdvice is not null, () => RuleFor(x => x.DebitAdvice).SetValidator(adviceTypeValidator!));

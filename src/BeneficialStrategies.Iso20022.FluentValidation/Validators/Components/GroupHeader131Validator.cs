@@ -46,7 +46,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class GroupHeader131Validator : AbstractValidator<GroupHeader131>
+public class GroupHeader131Validator : AbstractValidator<IGroupHeader131>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -58,10 +58,10 @@ public class GroupHeader131Validator : AbstractValidator<GroupHeader131>
     /// own.
     /// </summary>
     public GroupHeader131Validator(
-        IValidator<SettlementInstruction15> settlementInformationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<PaymentTypeInformation28> paymentTypeInformationValidator
+        IValidator<ISettlementInstruction15> settlementInformationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IPaymentTypeInformation28> paymentTypeInformationValidator
     )
     {
         RuleFor(x => x.SettlementInformation).SetValidator(settlementInformationValidator!);

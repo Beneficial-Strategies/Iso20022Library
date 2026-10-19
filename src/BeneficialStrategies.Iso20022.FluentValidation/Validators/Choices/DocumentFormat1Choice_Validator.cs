@@ -21,4 +21,4 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// FluentValidation project's own <c>CLAUDE.md</c>) can record this type as reviewed rather than
 /// silently skipped.
 /// </remarks>
-public class DocumentFormat1Choice_Validator : AbstractValidator<DocumentFormat1Choice_> { }
+public class DocumentFormat1Choice_Validator : AbstractValidator<IDocumentFormat1Choice> { }

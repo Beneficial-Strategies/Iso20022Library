@@ -27,13 +27,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class OriginalGroupHeader20Validator : AbstractValidator<OriginalGroupHeader20>
+public class OriginalGroupHeader20Validator : AbstractValidator<IOriginalGroupHeader20>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public OriginalGroupHeader20Validator(IValidator<PaymentReversalReason10> reversalReasonInformationValidator)
+    public OriginalGroupHeader20Validator(IValidator<IPaymentReversalReason10> reversalReasonInformationValidator)
     {
         RuleForEach(x => x.ReversalReasonInformation).SetValidator(reversalReasonInformationValidator!);
     }

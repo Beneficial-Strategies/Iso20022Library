@@ -16,4 +16,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ContractIdentification</term><description>Max35Text — optional (0..1)</description></item>
 /// </list>
 /// </remarks>
-public class ExchangeRate1Validator : AbstractValidator<ExchangeRate1> { }
+public class ExchangeRate1Validator : AbstractValidator<IExchangeRate1> { }

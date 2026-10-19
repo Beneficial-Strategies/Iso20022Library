@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class BusinessLetter1Validator : AbstractValidator<BusinessLetter1>
+public class BusinessLetter1Validator : AbstractValidator<IBusinessLetter1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="BusinessLetter1"/>.

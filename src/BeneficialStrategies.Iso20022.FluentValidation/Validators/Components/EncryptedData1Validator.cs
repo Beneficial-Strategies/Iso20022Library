@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>EncryptedDataElement</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class EncryptedData1Validator : AbstractValidator<EncryptedData1>
+public class EncryptedData1Validator : AbstractValidator<IEncryptedData1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="EncryptedData1"/>.

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RemoteParty</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CommunicationCharacteristics2Validator : AbstractValidator<CommunicationCharacteristics2>
+public class CommunicationCharacteristics2Validator : AbstractValidator<ICommunicationCharacteristics2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CommunicationCharacteristics2"/>.

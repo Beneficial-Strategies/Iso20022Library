@@ -31,15 +31,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// rejection is proven independently in its own test file). A future pass should add a case
 /// wiring a populated registry through to this level.
 /// </remarks>
-public class RegulatoryReporting10Validator : AbstractValidator<RegulatoryReporting10>
+public class RegulatoryReporting10Validator : AbstractValidator<IRegulatoryReporting10>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public RegulatoryReporting10Validator(
-        IValidator<RegulatoryAuthority2> authorityValidator,
-        IValidator<StructuredRegulatoryReporting5> detailsValidator
+        IValidator<IRegulatoryAuthority2> authorityValidator,
+        IValidator<IStructuredRegulatoryReporting5> detailsValidator
     )
     {
         When(x => x.Authority is not null, () => RuleFor(x => x.Authority).SetValidator(authorityValidator!));

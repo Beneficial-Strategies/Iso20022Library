@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Structured</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..4</description></item>
 /// </list>
 /// </remarks>
-public class ConditionallyAcceptedStatusReason1Validator : AbstractValidator<ConditionallyAcceptedStatusReason1>
+public class ConditionallyAcceptedStatusReason1Validator : AbstractValidator<IConditionallyAcceptedStatusReason1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ConditionallyAcceptedStatusReason1"/>.

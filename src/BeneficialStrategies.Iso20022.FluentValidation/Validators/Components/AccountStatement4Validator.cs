@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// MCP children table).
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public class AccountStatement4Validator : AbstractValidator<AccountStatement4>
+public class AccountStatement4Validator : AbstractValidator<IAccountStatement4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AccountStatement4"/>.
@@ -45,8 +45,8 @@ public class AccountStatement4Validator : AbstractValidator<AccountStatement4>
         // Variant Code wraps an external code enum — cannot be "empty", no rule applicable.
         // Variant Proprietary wraps Max35Text — NotEmpty() guards against a default struct.
         When(
-            x => x.ReportingSource is RptgSrc1.Proprietary,
-            () => RuleFor(x => ((RptgSrc1.Proprietary)x.ReportingSource!).Value).NotEmpty()
+            x => x.ReportingSource is RptgSrc1.IProprietary,
+            () => RuleFor(x => ((RptgSrc1.IProprietary)x.ReportingSource!).Value).NotEmpty()
         );
     }
 }

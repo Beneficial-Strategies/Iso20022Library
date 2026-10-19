@@ -50,21 +50,21 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// regardless of wiring. See <see cref="CreditTransferTransaction74Validator"/>'s own remarks for
 /// the same gap one level down.
 /// </remarks>
-public class PaymentInstruction48Validator : AbstractValidator<PaymentInstruction48>
+public class PaymentInstruction48Validator : AbstractValidator<IPaymentInstruction48>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public PaymentInstruction48Validator(
-        IValidator<AdviceType1> requestedAdviceTypeValidator,
-        IValidator<PaymentTypeInformation29> paymentTypeInformationValidator,
-        IValidator<DateAndDateTime2Choice_> dateValidator,
-        IValidator<PaymentCondition2> paymentConditionValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CreditTransferTransaction74> creditTransferTransactionValidator
+        IValidator<IAdviceType1> requestedAdviceTypeValidator,
+        IValidator<IPaymentTypeInformation29> paymentTypeInformationValidator,
+        IValidator<IDateAndDateTime2Choice> dateValidator,
+        IValidator<IPaymentCondition2> paymentConditionValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICreditTransferTransaction74> creditTransferTransactionValidator
     )
     {
         When(

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SystemIdentification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class BusinessDay6Validator : AbstractValidator<BusinessDay6>
+public class BusinessDay6Validator : AbstractValidator<IBusinessDay6>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="BusinessDay6"/>.

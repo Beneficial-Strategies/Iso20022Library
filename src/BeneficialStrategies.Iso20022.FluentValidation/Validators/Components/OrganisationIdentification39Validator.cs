@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Other</c> collection is validated per-item by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class OrganisationIdentification39Validator : AbstractValidator<OrganisationIdentification39>
+public class OrganisationIdentification39Validator : AbstractValidator<IOrganisationIdentification39>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class OrganisationIdentification39Validator : AbstractValidator<Organisat
     /// 0..∞).
     /// </param>
     public OrganisationIdentification39Validator(
-        IValidator<GenericOrganisationIdentification3> otherValidator
+        IValidator<IGenericOrganisationIdentification3> otherValidator
     )
     {
         // AnyBIC, LEI: optional scalars, format/length enforced by struct constructors — no rule

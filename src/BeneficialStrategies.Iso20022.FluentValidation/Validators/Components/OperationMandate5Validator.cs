@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>BankOperation</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class OperationMandate5Validator : AbstractValidator<OperationMandate5>
+public class OperationMandate5Validator : AbstractValidator<IOperationMandate5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="OperationMandate5"/>.

@@ -24,4 +24,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// a first-class type per the coverage-scoping policy ("reviewed and confirmed to need nothing"),
 /// same convention as <c>AddressType3Choice_Validator</c>.
 /// </remarks>
-public class SettlementTimeRequest2Validator : AbstractValidator<SettlementTimeRequest2> { }
+public class SettlementTimeRequest2Validator : AbstractValidator<ISettlementTimeRequest2> { }

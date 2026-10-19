@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Data</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class StoredValueRequest4Validator : AbstractValidator<StoredValueRequest4>
+public class StoredValueRequest4Validator : AbstractValidator<IStoredValueRequest4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="StoredValueRequest4"/>.

@@ -22,4 +22,4 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// first-class type so the coverage-scoping policy (see the FluentValidation project's own
 /// <c>CLAUDE.md</c>) can record this type as reviewed rather than silently skipped.
 /// </remarks>
-public class AuthenticationChannel1Choice_Validator : AbstractValidator<AuthenticationChannel1Choice_> { }
+public class AuthenticationChannel1Choice_Validator : AbstractValidator<IAuthenticationChannel1Choice> { }

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TradingVenueRelatedAttributes</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SecuritiesReferenceDataReport6Validator : AbstractValidator<SecuritiesReferenceDataReport6>
+public class SecuritiesReferenceDataReport6Validator : AbstractValidator<ISecuritiesReferenceDataReport6>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SecuritiesReferenceDataReport6"/>.

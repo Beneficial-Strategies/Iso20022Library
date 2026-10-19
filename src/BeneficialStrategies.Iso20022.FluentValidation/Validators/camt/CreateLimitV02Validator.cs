@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class CreateLimitV02Validator : AbstractValidator<CreateLimitV02>
+public class CreateLimitV02Validator : AbstractValidator<ICreateLimitV02>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -51,9 +51,9 @@ public class CreateLimitV02Validator : AbstractValidator<CreateLimitV02>
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public CreateLimitV02Validator(
-        IValidator<MessageHeader1> messageHeaderValidator,
-        IValidator<LimitStructure6> limitDataValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IMessageHeader1> messageHeaderValidator,
+        IValidator<ILimitStructure6> limitDataValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.MessageHeader).SetValidator(messageHeaderValidator);

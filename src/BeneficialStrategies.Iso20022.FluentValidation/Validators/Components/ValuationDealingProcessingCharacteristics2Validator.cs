@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PriceCurrency</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ValuationDealingProcessingCharacteristics2Validator : AbstractValidator<ValuationDealingProcessingCharacteristics2>
+public class ValuationDealingProcessingCharacteristics2Validator : AbstractValidator<IValuationDealingProcessingCharacteristics2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ValuationDealingProcessingCharacteristics2"/>.

@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// building block are each validated by an injected <see cref="IValidator{T}"/> rather than a
 /// hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class PayInEventAcknowledgementV02Validator : AbstractValidator<PayInEventAcknowledgementV02>
+public class PayInEventAcknowledgementV02Validator : AbstractValidator<IPayInEventAcknowledgementV02>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -45,8 +45,8 @@ public class PayInEventAcknowledgementV02Validator : AbstractValidator<PayInEven
     /// 0..1) — only invoked when present.
     /// </param>
     public PayInEventAcknowledgementV02Validator(
-        IValidator<AcknowledgementDetails1Choice_> acknowledgementDetailsValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IAcknowledgementDetails1Choice> acknowledgementDetailsValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         // MessageIdentification: required (1..1) and already a `required` C# property — format

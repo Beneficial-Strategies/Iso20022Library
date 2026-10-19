@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Location</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..5</description></item>
 /// </list>
 /// </remarks>
-public class Meeting3Validator : AbstractValidator<Meeting3>
+public class Meeting3Validator : AbstractValidator<IMeeting3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Meeting3"/>.

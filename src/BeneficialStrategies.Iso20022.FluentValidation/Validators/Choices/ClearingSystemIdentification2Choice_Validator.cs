@@ -23,4 +23,4 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// reviewed rather than silently skipped.
 /// </remarks>
 public class ClearingSystemIdentification2Choice_Validator
-    : AbstractValidator<ClearingSystemIdentification2Choice_> { }
+    : AbstractValidator<IClearingSystemIdentification2Choice> { }

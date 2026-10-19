@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Action</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ManagementPlanContent5Validator : AbstractValidator<ManagementPlanContent5>
+public class ManagementPlanContent5Validator : AbstractValidator<IManagementPlanContent5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ManagementPlanContent5"/>.

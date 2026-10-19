@@ -23,4 +23,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// FluentValidation project's own <c>CLAUDE.md</c>) can record this type as reviewed rather than
 /// silently skipped.
 /// </remarks>
-public class NumberOfTransactionsPerStatus5Validator : AbstractValidator<NumberOfTransactionsPerStatus5> { }
+public class NumberOfTransactionsPerStatus5Validator : AbstractValidator<INumberOfTransactionsPerStatus5> { }

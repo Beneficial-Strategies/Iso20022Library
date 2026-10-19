@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>NonWorkingDay</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SecuritiesNonTradingDayReport1Validator : AbstractValidator<SecuritiesNonTradingDayReport1>
+public class SecuritiesNonTradingDayReport1Validator : AbstractValidator<ISecuritiesNonTradingDayReport1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SecuritiesNonTradingDayReport1"/>.

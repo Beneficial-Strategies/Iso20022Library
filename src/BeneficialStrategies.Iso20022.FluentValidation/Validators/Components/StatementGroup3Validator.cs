@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// See docs/multiplicity-audit-2026-08.md.
 /// No cross-field constraints found for this component.
 /// </remarks>
-public class StatementGroup3Validator : AbstractValidator<StatementGroup3>
+public class StatementGroup3Validator : AbstractValidator<IStatementGroup3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="StatementGroup3"/>.
@@ -33,11 +33,11 @@ public class StatementGroup3Validator : AbstractValidator<StatementGroup3>
             .WithMessage("StatementGroup3.BillingStatement must contain at least one element (1..*).");
 
         RuleFor(x => x.SenderIndividualContact)
-            .Must(list => list.Count <= 2)
+            .Must(list => list.Count() <= 2)
             .WithMessage("StatementGroup3.SenderIndividualContact must not contain more than 2 element(s) (0..2).");
 
         RuleFor(x => x.ReceiverIndividualContact)
-            .Must(list => list.Count <= 2)
+            .Must(list => list.Count() <= 2)
             .WithMessage("StatementGroup3.ReceiverIndividualContact must not contain more than 2 element(s) (0..2).");
     }
 }

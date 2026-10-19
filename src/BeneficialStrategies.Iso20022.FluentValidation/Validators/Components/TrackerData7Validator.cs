@@ -30,15 +30,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// enforced the multiplicity gap above — <see cref="TrackerRecord5Validator"/> did not exist yet
 /// at that time.)
 /// </remarks>
-public class TrackerData7Validator : AbstractValidator<TrackerData7>
+public class TrackerData7Validator : AbstractValidator<ITrackerData7>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public TrackerData7Validator(
-        IValidator<DateAndDateTime2Choice_> confirmedDateValidator,
-        IValidator<TrackerRecord5> trackerRecordValidator
+        IValidator<IDateAndDateTime2Choice> confirmedDateValidator,
+        IValidator<ITrackerRecord5> trackerRecordValidator
     )
     {
         RuleFor(x => x.ConfirmedDate).SetValidator(confirmedDateValidator!);

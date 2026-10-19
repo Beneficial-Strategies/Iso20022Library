@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// injected <see cref="IValidator{T}"/> instance, per the pattern established in
 /// <c>OriginalTransactionReference47Validator</c> — see the two constructors below.
 /// </remarks>
-public class PaymentTransaction168Validator : AbstractValidator<PaymentTransaction168>
+public class PaymentTransaction168Validator : AbstractValidator<IPaymentTransaction168>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -63,17 +63,17 @@ public class PaymentTransaction168Validator : AbstractValidator<PaymentTransacti
     /// type constructing its own.
     /// </summary>
     public PaymentTransaction168Validator(
-        IValidator<OriginalGroupInformation33> originalGroupInformationValidator,
-        IValidator<PaymentTypeInformation28> paymentTypeInformationValidator,
-        IValidator<SettlementDateTimeIndication1> settlementTimeIndicationValidator,
-        IValidator<SettlementTimeRequest2> settlementTimeRequestValidator,
-        IValidator<CurrencyExchange26> agreedRateValidator,
-        IValidator<Charges16> chargesInformationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<TransactionParties11> returnChainValidator,
-        IValidator<PaymentReturnReason7> returnReasonInformationValidator,
-        IValidator<OriginalTransactionReference45> originalTransactionReferenceValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IOriginalGroupInformation33> originalGroupInformationValidator,
+        IValidator<IPaymentTypeInformation28> paymentTypeInformationValidator,
+        IValidator<ISettlementDateTimeIndication1> settlementTimeIndicationValidator,
+        IValidator<ISettlementTimeRequest2> settlementTimeRequestValidator,
+        IValidator<ICurrencyExchange26> agreedRateValidator,
+        IValidator<ICharges16> chargesInformationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ITransactionParties11> returnChainValidator,
+        IValidator<IPaymentReturnReason7> returnReasonInformationValidator,
+        IValidator<IOriginalTransactionReference45> originalTransactionReferenceValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => (string)x.ReturnedInterbankSettlementAmount.Currency)

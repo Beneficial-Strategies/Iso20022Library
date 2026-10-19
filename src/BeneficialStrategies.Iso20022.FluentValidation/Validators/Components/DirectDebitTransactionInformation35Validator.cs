@@ -69,7 +69,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// all 7 agent fields, one <c>CashAccount40</c> validator across all 6 account fields — see the
 /// two constructors below.
 /// </remarks>
-public class DirectDebitTransactionInformation35Validator : AbstractValidator<DirectDebitTransactionInformation35>
+public class DirectDebitTransactionInformation35Validator : AbstractValidator<IDirectDebitTransactionInformation35>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -81,19 +81,19 @@ public class DirectDebitTransactionInformation35Validator : AbstractValidator<Di
     /// block — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public DirectDebitTransactionInformation35Validator(
-        IValidator<PaymentIdentification13> paymentIdentificationValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<PaymentTypeInformation27> paymentTypeInformationValidator,
-        IValidator<SettlementDateTimeIndication1> settlementTimeIndicationValidator,
-        IValidator<Charges16> chargesInformationValidator,
-        IValidator<DirectDebitTransaction12> directDebitTransactionValidator,
-        IValidator<Purpose2Choice_> purposeValidator,
-        IValidator<RegulatoryReporting10> regulatoryReportingValidator,
-        IValidator<RemittanceLocation8> relatedRemittanceInformationValidator,
-        IValidator<RemittanceInformation26> remittanceInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IPaymentIdentification13> paymentIdentificationValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IPaymentTypeInformation27> paymentTypeInformationValidator,
+        IValidator<ISettlementDateTimeIndication1> settlementTimeIndicationValidator,
+        IValidator<ICharges16> chargesInformationValidator,
+        IValidator<IDirectDebitTransaction12> directDebitTransactionValidator,
+        IValidator<IPurpose2Choice> purposeValidator,
+        IValidator<IRegulatoryReporting10> regulatoryReportingValidator,
+        IValidator<IRemittanceLocation8> relatedRemittanceInformationValidator,
+        IValidator<IRemittanceInformation26> remittanceInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.PaymentIdentification).SetValidator(paymentIdentificationValidator!);

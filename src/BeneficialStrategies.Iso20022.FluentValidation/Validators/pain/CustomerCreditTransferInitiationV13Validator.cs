@@ -42,16 +42,16 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 /// <c>SupplementaryData</c> are each validated by an injected <see cref="IValidator{T}"/> rather
 /// than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class CustomerCreditTransferInitiationV13Validator : AbstractValidator<CustomerCreditTransferInitiationV13>
+public class CustomerCreditTransferInitiationV13Validator : AbstractValidator<ICustomerCreditTransferInitiationV13>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public CustomerCreditTransferInitiationV13Validator(
-        IValidator<GroupHeader114> groupHeaderValidator,
-        IValidator<PaymentInstruction51> paymentInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader114> groupHeaderValidator,
+        IValidator<IPaymentInstruction51> paymentInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);

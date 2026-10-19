@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> for the external code set <c>ActiveOrHistoricCurrencyCode</c> — one
 /// injected validator serves both properties.
 /// </remarks>
-public class CurrencyExchangeSearchCriteria1Validator : AbstractValidator<CurrencyExchangeSearchCriteria1>
+public class CurrencyExchangeSearchCriteria1Validator : AbstractValidator<ICurrencyExchangeSearchCriteria1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator

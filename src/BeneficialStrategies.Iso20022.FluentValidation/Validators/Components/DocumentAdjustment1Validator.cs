@@ -27,4 +27,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// policy (see the FluentValidation project's own <c>CLAUDE.md</c>) can record this type as
 /// reviewed rather than silently skipped.
 /// </remarks>
-public class DocumentAdjustment1Validator : AbstractValidator<DocumentAdjustment1> { }
+public class DocumentAdjustment1Validator : AbstractValidator<IDocumentAdjustment1> { }

@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// <see cref="IExternalCodeRegistry{TCode}"/> (via <see cref="CountryCodeValidator"/>) rather than
 /// a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class SystemIdentification2Choice_Validator : AbstractValidator<SystemIdentification2Choice_>
+public class SystemIdentification2Choice_Validator : AbstractValidator<ISystemIdentification2Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -40,11 +40,10 @@ public class SystemIdentification2Choice_Validator : AbstractValidator<SystemIde
     /// </param>
     public SystemIdentification2Choice_Validator(IValidator<CountryCode> countryValueValidator)
     {
-        var countryVariantValidator = new InlineValidator<Choices.SystemIdentification2Choice.Country>();
+        var countryVariantValidator = new InlineValidator<Choices.SystemIdentification2Choice.ICountry>();
         countryVariantValidator.RuleFor(x => x.Value).SetValidator(countryValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(countryVariantValidator);
             });

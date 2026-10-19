@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class SettlementInstruction14Validator : AbstractValidator<SettlementInstruction14>
+public class SettlementInstruction14Validator : AbstractValidator<ISettlementInstruction14>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
@@ -39,8 +39,8 @@ public class SettlementInstruction14Validator : AbstractValidator<SettlementInst
     /// (ClearingSystemIdentification3Choice_, 0..1) — only invoked when present.
     /// </param>
     public SettlementInstruction14Validator(
-        IValidator<CashAccount40> settlementAccountValidator,
-        IValidator<ClearingSystemIdentification3Choice_> clearingSystemValidator
+        IValidator<ICashAccount40> settlementAccountValidator,
+        IValidator<IClearingSystemIdentification3Choice> clearingSystemValidator
     )
     {
         // SettlementMethod: closed SettlementMethod2Code enum, required — no rule needed.

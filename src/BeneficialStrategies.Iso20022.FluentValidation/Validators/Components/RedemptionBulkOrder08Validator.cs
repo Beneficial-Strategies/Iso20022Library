@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>IndividualOrderDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class RedemptionBulkOrder08Validator : AbstractValidator<RedemptionBulkOrder08>
+public class RedemptionBulkOrder08Validator : AbstractValidator<IRedemptionBulkOrder08>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="RedemptionBulkOrder08"/>.

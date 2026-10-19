@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Entry</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SupportingDocument3Validator : AbstractValidator<SupportingDocument3>
+public class SupportingDocument3Validator : AbstractValidator<ISupportingDocument3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SupportingDocument3"/>.

@@ -24,15 +24,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class TrackerRecord5Validator : AbstractValidator<TrackerRecord5>
+public class TrackerRecord5Validator : AbstractValidator<ITrackerRecord5>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public TrackerRecord5Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CurrencyExchange13> exchangeRateDataValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICurrencyExchange13> exchangeRateDataValidator
     )
     {
         RuleFor(x => x.Agent).SetValidator(agentValidator!);

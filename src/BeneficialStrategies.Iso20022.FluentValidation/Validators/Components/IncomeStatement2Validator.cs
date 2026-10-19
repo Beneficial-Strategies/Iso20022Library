@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ClearingMemberFee</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class IncomeStatement2Validator : AbstractValidator<IncomeStatement2>
+public class IncomeStatement2Validator : AbstractValidator<IIncomeStatement2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="IncomeStatement2"/>.

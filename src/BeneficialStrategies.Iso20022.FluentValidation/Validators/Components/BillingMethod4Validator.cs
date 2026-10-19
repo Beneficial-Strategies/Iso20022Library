@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>TaxCalculation</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class BillingMethod4Validator : AbstractValidator<BillingMethod4>
+public class BillingMethod4Validator : AbstractValidator<IBillingMethod4>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -31,7 +31,7 @@ public class BillingMethod4Validator : AbstractValidator<BillingMethod4>
     /// <param name="taxCalculationValidator">
     /// Validator for the required <c>TaxCalculation</c> building block (TaxCalculation1, 1..1).
     /// </param>
-    public BillingMethod4Validator(IValidator<TaxCalculation1> taxCalculationValidator)
+    public BillingMethod4Validator(IValidator<ITaxCalculation1> taxCalculationValidator)
     {
         // TaxCalculation (TaxCalculation1): required (1..1) and already `required` C# property.
         // Now that TaxCalculation1Validator exists, wire it in — this comment previously said "no

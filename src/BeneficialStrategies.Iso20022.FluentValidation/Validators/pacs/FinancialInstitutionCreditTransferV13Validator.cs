@@ -78,16 +78,16 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 /// below.
 /// </remarks>
 public class FinancialInstitutionCreditTransferV13Validator
-    : AbstractValidator<FinancialInstitutionCreditTransferV13>
+    : AbstractValidator<IFinancialInstitutionCreditTransferV13>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public FinancialInstitutionCreditTransferV13Validator(
-        IValidator<GroupHeader131> groupHeaderValidator,
-        IValidator<CreditTransferTransaction79> creditTransferTransactionInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader131> groupHeaderValidator,
+        IValidator<ICreditTransferTransaction79> creditTransferTransactionInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);

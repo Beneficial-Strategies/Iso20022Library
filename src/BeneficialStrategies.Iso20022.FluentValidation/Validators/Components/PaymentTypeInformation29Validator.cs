@@ -33,16 +33,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// grow a real rule, revisit this validator's tests to confirm the <c>SetValidator</c>/
 /// <c>RuleForEach</c> wiring here actually surfaces it.
 /// </remarks>
-public class PaymentTypeInformation29Validator : AbstractValidator<PaymentTypeInformation29>
+public class PaymentTypeInformation29Validator : AbstractValidator<IPaymentTypeInformation29>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public PaymentTypeInformation29Validator(
-        IValidator<ServiceLevel8Choice_> serviceLevelValidator,
-        IValidator<LocalInstrument2Choice_> localInstrumentValidator,
-        IValidator<CategoryPurpose1Choice_> categoryPurposeValidator
+        IValidator<IServiceLevel8Choice> serviceLevelValidator,
+        IValidator<ILocalInstrument2Choice> localInstrumentValidator,
+        IValidator<ICategoryPurpose1Choice> categoryPurposeValidator
     )
     {
         RuleForEach(x => x.ServiceLevel).SetValidator(serviceLevelValidator!);

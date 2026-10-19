@@ -31,16 +31,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// and <c>SupplementaryData</c> are each validated by an injected <see cref="IValidator{T}"/>
 /// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class PaymentTransaction174Validator : AbstractValidator<PaymentTransaction174>
+public class PaymentTransaction174Validator : AbstractValidator<IPaymentTransaction174>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public PaymentTransaction174Validator(
-        IValidator<PaymentReversalReason10> reversalReasonInformationValidator,
-        IValidator<OriginalTransactionReference47> originalTransactionReferenceValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IPaymentReversalReason10> reversalReasonInformationValidator,
+        IValidator<IOriginalTransactionReference47> originalTransactionReferenceValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleForEach(x => x.ReversalReasonInformation).SetValidator(reversalReasonInformationValidator!);

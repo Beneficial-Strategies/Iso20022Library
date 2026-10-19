@@ -219,15 +219,24 @@ project silently starts resolving to the wrong namespace and fails to compile. C
 hitting this exact break when the namespace was first introduced (2026-08-19) — `ChoiceValidators`
 avoids the collision entirely since no model sub-namespace shares that name.
 
-Validating a choice type is validating *which concrete variant is present and what it carries* —
-FluentValidation's `SetInheritanceValidator` (`RuleFor(x => x).SetInheritanceValidator(v => v.Add(...))`)
-is the idiomatic tool: build one small `InlineValidator<TVariant>` per variant (DI-injected with
-the validator for that variant's nested `Value`, where it has one), and register each with
-`v.Add(variantValidator)` — type inference picks the right variant type from the `InlineValidator<TVariant>`
-argument. See `Party50Choice_Validator` for the reference example (both variants wrap a real,
-fully-validated component).
+## Validators are written for the interfaces (#28)
 
-**Not every choice type needs full `SetInheritanceValidator` dispatch.** When every variant's
+Every validator is an `AbstractValidator<I…>` (`GroupHeader131Validator : AbstractValidator<IGroupHeader131>`, a choice
+`Foo_Validator : AbstractValidator<IFoo>`), and every injected child is an `IValidator<IChild>`. A record of ours
+implements its interface, and so does any class an implementer writes, so both are validated by the same rules and give the
+same failures. Never test or cast to a record in a rule (`x is Choices.Foo.Bar`); use the variant interface
+(`Choices.Foo.IBar`). `tools/validation/convert_validators.py` does the mechanical move for a validator written against records.
+The message roots also resolve as `IValidator<TheRecord>`, through `MessageValidatorAdapter`, so the envelope validators and
+call sites that hold the record keep working.
+
+Validating a choice type is validating *which concrete variant is present and what it carries*. Use
+`this.SetVariantValidators(v => v.Add(variantValidator))` (in `Extensions/VariantValidatorExtensions.cs`): build one small
+`InlineValidator<IVariant>` per variant (DI-injected with the validator for that variant's nested `Value`, where it has one)
+and register each with `v.Add(...)`. **Do not use FluentValidation's `SetInheritanceValidator`**: it looks up the validator of
+the exact runtime type, so a validator written for a variant *interface* is never found and the choice silently validates
+nothing. See `Party50Choice_Validator` for the reference example (both variants wrap a real, fully-validated component).
+
+**Not every choice type needs full `SetVariantValidators` dispatch.** When every variant's
 payload is either a closed codeset enum, an `IIsoExternalCode` struct, or a scalar
 `IIsoSimpleValue<string>` field — i.e. already fully enforced at the struct level with nothing left
 for FluentValidation to add — the validator can be an empty `AbstractValidator<T>` with no rules
@@ -382,7 +391,7 @@ Two shapes, matching where the external code actually appears in the model:
   `RuleFor(x => x.Country!.Value).SetValidator(countryValidator)` inside the usual
   `When(x => x.Country is not null, ...)`.
 - **Inside a Choice's `Code` variant** (e.g. `MandateSetupReason1Choice.Code.Value : ExternalMandateSetupReason1Code`)
-  — the containing Choice validator needs real `SetInheritanceValidator` dispatch (not an empty
+  — the containing Choice validator needs real `SetVariantValidators` dispatch (not an empty
   shell, even if the `Proprietary` variant has nothing to check) — see
   `MandateSetupReason1Choice_Validator` for the reference example, same `InlineValidator<TVariant>`
   pattern as `Party50Choice_Validator`.

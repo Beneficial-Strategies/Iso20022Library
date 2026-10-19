@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TransactionStatistics</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class TradeData29Validator : AbstractValidator<TradeData29>
+public class TradeData29Validator : AbstractValidator<ITradeData29>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TradeData29"/>.

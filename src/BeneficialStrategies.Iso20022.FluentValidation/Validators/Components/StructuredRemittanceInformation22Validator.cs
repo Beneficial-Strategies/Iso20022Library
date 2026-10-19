@@ -32,20 +32,20 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="PartyIdentification272"/> validator instance is reused across <c>Invoicer</c> and
 /// <c>Invoicee</c> — see the two constructors below.
 /// </remarks>
-public class StructuredRemittanceInformation22Validator : AbstractValidator<StructuredRemittanceInformation22>
+public class StructuredRemittanceInformation22Validator : AbstractValidator<IStructuredRemittanceInformation22>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public StructuredRemittanceInformation22Validator(
-        IValidator<ReferredDocumentInformation8> referredDocumentInformationValidator,
-        IValidator<RemittanceAmount4> referredDocumentAmountValidator,
-        IValidator<CreditorReferenceInformation3> creditorReferenceInformationValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<TaxData1> taxRemittanceValidator,
-        IValidator<Garnishment4> garnishmentRemittanceValidator,
-        IValidator<SecuritiesAttributes1> securitiesDataValidator
+        IValidator<IReferredDocumentInformation8> referredDocumentInformationValidator,
+        IValidator<IRemittanceAmount4> referredDocumentAmountValidator,
+        IValidator<ICreditorReferenceInformation3> creditorReferenceInformationValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<ITaxData1> taxRemittanceValidator,
+        IValidator<IGarnishment4> garnishmentRemittanceValidator,
+        IValidator<ISecuritiesAttributes1> securitiesDataValidator
     )
     {
         RuleForEach(x => x.ReferredDocumentInformation).SetValidator(referredDocumentInformationValidator!);

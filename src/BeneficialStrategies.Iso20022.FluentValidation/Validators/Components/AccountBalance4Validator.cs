@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Balance</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class AccountBalance4Validator : AbstractValidator<AccountBalance4>
+public class AccountBalance4Validator : AbstractValidator<IAccountBalance4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AccountBalance4"/>.

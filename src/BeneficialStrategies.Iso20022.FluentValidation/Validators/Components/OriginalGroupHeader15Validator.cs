@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// collection are each validated by an injected <see cref="IValidator{T}"/> rather than a
 /// hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class OriginalGroupHeader15Validator : AbstractValidator<OriginalGroupHeader15>
+public class OriginalGroupHeader15Validator : AbstractValidator<IOriginalGroupHeader15>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -42,8 +42,8 @@ public class OriginalGroupHeader15Validator : AbstractValidator<OriginalGroupHea
     /// (PaymentCancellationReason5, 0..∞).
     /// </param>
     public OriginalGroupHeader15Validator(
-        IValidator<Case5> caseValidator,
-        IValidator<PaymentCancellationReason5> cancellationReasonInformationValidator
+        IValidator<ICase5> caseValidator,
+        IValidator<IPaymentCancellationReason5> cancellationReasonInformationValidator
     )
     {
         // Length [1..35] enforced by Max35Text constructor for all three Max35Text fields.

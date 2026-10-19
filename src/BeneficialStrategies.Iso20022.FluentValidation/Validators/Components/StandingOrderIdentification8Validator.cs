@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class StandingOrderIdentification8Validator : AbstractValidator<StandingOrderIdentification8>
+public class StandingOrderIdentification8Validator : AbstractValidator<IStandingOrderIdentification8>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -38,8 +38,8 @@ public class StandingOrderIdentification8Validator : AbstractValidator<StandingO
     /// (BranchAndFinancialInstitutionIdentification8, 0..1) — only invoked when present.
     /// </param>
     public StandingOrderIdentification8Validator(
-        IValidator<CashAccount40> accountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator
+        IValidator<ICashAccount40> accountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator
     )
     {
         // Identification: optional scalar, length enforced by the struct constructor — no rule

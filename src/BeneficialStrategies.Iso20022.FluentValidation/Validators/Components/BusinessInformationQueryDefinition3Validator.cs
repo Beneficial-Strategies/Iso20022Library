@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class BusinessInformationQueryDefinition3Validator : AbstractValidator<BusinessInformationQueryDefinition3>
+public class BusinessInformationQueryDefinition3Validator : AbstractValidator<IBusinessInformationQueryDefinition3>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class BusinessInformationQueryDefinition3Validator : AbstractValidator<Bu
     /// (GeneralBusinessInformationCriteriaDefinition1Choice_, 0..1) — only invoked when present.
     /// </param>
     public BusinessInformationQueryDefinition3Validator(
-        IValidator<GeneralBusinessInformationCriteriaDefinition1Choice_> generalBusinessInformationCriteriaValidator
+        IValidator<IGeneralBusinessInformationCriteriaDefinition1Choice> generalBusinessInformationCriteriaValidator
     )
     {
         When(

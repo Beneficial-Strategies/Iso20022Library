@@ -34,16 +34,16 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 /// minimal and does not exercise either nested validator's failure modes. See those types' own
 /// remarks for the same gap propagating further down the graph.
 /// </remarks>
-public class CreditorPaymentActivationRequestV12Validator : AbstractValidator<CreditorPaymentActivationRequestV12>
+public class CreditorPaymentActivationRequestV12Validator : AbstractValidator<ICreditorPaymentActivationRequestV12>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public CreditorPaymentActivationRequestV12Validator(
-        IValidator<GroupHeader112> groupHeaderValidator,
-        IValidator<PaymentInstruction48> paymentInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader112> groupHeaderValidator,
+        IValidator<IPaymentInstruction48> paymentInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);

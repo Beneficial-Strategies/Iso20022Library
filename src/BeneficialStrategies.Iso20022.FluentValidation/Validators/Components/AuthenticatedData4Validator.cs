@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Recipient</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class AuthenticatedData4Validator : AbstractValidator<AuthenticatedData4>
+public class AuthenticatedData4Validator : AbstractValidator<IAuthenticatedData4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AuthenticatedData4"/>.

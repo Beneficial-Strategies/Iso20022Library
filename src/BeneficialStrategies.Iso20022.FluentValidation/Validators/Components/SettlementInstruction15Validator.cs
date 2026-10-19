@@ -31,16 +31,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// all three agent fields and the same <see cref="CashAccount40"/> validator instance across all
 /// four account fields — see the two constructors below.
 /// </remarks>
-public class SettlementInstruction15Validator : AbstractValidator<SettlementInstruction15>
+public class SettlementInstruction15Validator : AbstractValidator<ISettlementInstruction15>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public SettlementInstruction15Validator(
-        IValidator<ClearingSystemIdentification3Choice_> clearingSystemValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator
+        IValidator<IClearingSystemIdentification3Choice> clearingSystemValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator
     )
     {
         When(

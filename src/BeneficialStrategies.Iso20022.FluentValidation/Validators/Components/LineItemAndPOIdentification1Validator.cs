@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>LineItemIdentification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class LineItemAndPOIdentification1Validator : AbstractValidator<LineItemAndPOIdentification1>
+public class LineItemAndPOIdentification1Validator : AbstractValidator<ILineItemAndPOIdentification1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="LineItemAndPOIdentification1"/>.

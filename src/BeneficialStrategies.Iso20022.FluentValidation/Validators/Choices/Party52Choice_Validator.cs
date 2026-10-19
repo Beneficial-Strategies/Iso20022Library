@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Dependency injection: each variant's nested <c>Value</c> is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class Party52Choice_Validator : AbstractValidator<Party52Choice_>
+public class Party52Choice_Validator : AbstractValidator<IParty52Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -37,21 +37,20 @@ public class Party52Choice_Validator : AbstractValidator<Party52Choice_>
     /// (PersonIdentification18).
     /// </param>
     public Party52Choice_Validator(
-        IValidator<OrganisationIdentification39> organisationIdentificationValueValidator,
-        IValidator<PersonIdentification18> privateIdentificationValueValidator
+        IValidator<IOrganisationIdentification39> organisationIdentificationValueValidator,
+        IValidator<IPersonIdentification18> privateIdentificationValueValidator
     )
     {
         var organisationVariantValidator =
-            new InlineValidator<Choices.Party52Choice.OrganisationIdentification>();
+            new InlineValidator<Choices.Party52Choice.IOrganisationIdentification>();
         organisationVariantValidator
             .RuleFor(x => x.Value)
             .SetValidator(organisationIdentificationValueValidator);
 
-        var privateVariantValidator = new InlineValidator<Choices.Party52Choice.PrivateIdentification>();
+        var privateVariantValidator = new InlineValidator<Choices.Party52Choice.IPrivateIdentification>();
         privateVariantValidator.RuleFor(x => x.Value).SetValidator(privateIdentificationValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(organisationVariantValidator);
                 v.Add(privateVariantValidator);

@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class DeleteStandingOrderV05Validator : AbstractValidator<DeleteStandingOrderV05>
+public class DeleteStandingOrderV05Validator : AbstractValidator<IDeleteStandingOrderV05>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -47,9 +47,9 @@ public class DeleteStandingOrderV05Validator : AbstractValidator<DeleteStandingO
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public DeleteStandingOrderV05Validator(
-        IValidator<MessageHeader1> messageHeaderValidator,
-        IValidator<StandingOrderOrAll4Choice_> standingOrderDetailsValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IMessageHeader1> messageHeaderValidator,
+        IValidator<IStandingOrderOrAll4Choice> standingOrderDetailsValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.MessageHeader).SetValidator(messageHeaderValidator);

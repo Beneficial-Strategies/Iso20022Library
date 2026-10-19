@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Constraints: *(none defined in spec)*
 /// </remarks>
 public class DistributionRejectionStatus1Validator
-    : AbstractValidator<DistributionRejectionStatus1>
+    : AbstractValidator<IDistributionRejectionStatus1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="DistributionRejectionStatus1"/>.

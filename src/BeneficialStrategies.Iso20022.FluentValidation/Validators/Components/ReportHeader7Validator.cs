@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> for <c>Party50Choice_</c> — one injected validator serves both
 /// properties.
 /// </remarks>
-public class ReportHeader7Validator : AbstractValidator<ReportHeader7>
+public class ReportHeader7Validator : AbstractValidator<IReportHeader7>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -31,7 +31,7 @@ public class ReportHeader7Validator : AbstractValidator<ReportHeader7>
     /// instead of this type constructing its own.
     /// </summary>
     /// <param name="partyValidator">Validator for the <c>From</c> and <c>To</c> building blocks (both Party50Choice_).</param>
-    public ReportHeader7Validator(IValidator<Party50Choice_> partyValidator)
+    public ReportHeader7Validator(IValidator<IParty50Choice> partyValidator)
     {
         // Identification, CreationDateTime: required (1..1) and already `required` C# properties
         // — format enforced by struct constructors.

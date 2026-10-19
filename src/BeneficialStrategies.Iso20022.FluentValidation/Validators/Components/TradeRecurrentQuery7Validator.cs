@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Frequency</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class TradeRecurrentQuery7Validator : AbstractValidator<TradeRecurrentQuery7>
+public class TradeRecurrentQuery7Validator : AbstractValidator<ITradeRecurrentQuery7>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TradeRecurrentQuery7"/>.

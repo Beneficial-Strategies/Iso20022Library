@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class AcceptanceResult6Validator : AbstractValidator<AcceptanceResult6>
+public class AcceptanceResult6Validator : AbstractValidator<IAcceptanceResult6>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -35,7 +35,7 @@ public class AcceptanceResult6Validator : AbstractValidator<AcceptanceResult6>
     /// Validator for the optional <c>RejectReason</c> building block (MandateReason1Choice_, 0..1)
     /// — only invoked when present.
     /// </param>
-    public AcceptanceResult6Validator(IValidator<MandateReason1Choice_> rejectReasonValidator)
+    public AcceptanceResult6Validator(IValidator<IMandateReason1Choice> rejectReasonValidator)
     {
         When(
             x => x.RejectReason is not null,

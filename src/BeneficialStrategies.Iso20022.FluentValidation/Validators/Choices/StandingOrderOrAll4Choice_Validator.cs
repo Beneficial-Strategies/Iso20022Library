@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Dependency injection: each variant's nested <c>Value</c> is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class StandingOrderOrAll4Choice_Validator : AbstractValidator<StandingOrderOrAll4Choice_>
+public class StandingOrderOrAll4Choice_Validator : AbstractValidator<IStandingOrderOrAll4Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -39,19 +39,18 @@ public class StandingOrderOrAll4Choice_Validator : AbstractValidator<StandingOrd
     /// (StandingOrderIdentification8).
     /// </param>
     public StandingOrderOrAll4Choice_Validator(
-        IValidator<StandingOrderIdentification9> allStandingOrdersValueValidator,
-        IValidator<StandingOrderIdentification8> standingOrderValueValidator
+        IValidator<IStandingOrderIdentification9> allStandingOrdersValueValidator,
+        IValidator<IStandingOrderIdentification8> standingOrderValueValidator
     )
     {
         var allStandingOrdersVariantValidator =
-            new InlineValidator<Choices.StandingOrderOrAll4Choice.AllStandingOrders>();
+            new InlineValidator<Choices.StandingOrderOrAll4Choice.IAllStandingOrders>();
         allStandingOrdersVariantValidator.RuleFor(x => x.Value).SetValidator(allStandingOrdersValueValidator);
 
-        var standingOrderVariantValidator = new InlineValidator<Choices.StandingOrderOrAll4Choice.StandingOrder>();
+        var standingOrderVariantValidator = new InlineValidator<Choices.StandingOrderOrAll4Choice.IStandingOrder>();
         standingOrderVariantValidator.RuleFor(x => x.Value).SetValidator(standingOrderValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(allStandingOrdersVariantValidator);
                 v.Add(standingOrderVariantValidator);

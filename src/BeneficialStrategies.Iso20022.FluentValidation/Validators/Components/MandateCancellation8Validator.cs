@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class MandateCancellation8Validator : AbstractValidator<MandateCancellation8>
+public class MandateCancellation8Validator : AbstractValidator<IMandateCancellation8>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -48,10 +48,10 @@ public class MandateCancellation8Validator : AbstractValidator<MandateCancellati
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public MandateCancellation8Validator(
-        IValidator<OriginalMessageInformation1> originalMessageInformationValidator,
-        IValidator<OriginalMandate10Choice_> originalMandateValidator,
-        IValidator<MandateCancellationReason2> cancellationReasonValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IOriginalMessageInformation1> originalMessageInformationValidator,
+        IValidator<IOriginalMandate10Choice> originalMandateValidator,
+        IValidator<IMandateCancellationReason2> cancellationReasonValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.OriginalMandate).SetValidator(originalMandateValidator);

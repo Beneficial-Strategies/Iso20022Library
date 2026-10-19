@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SettlementRateSource</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..2</description></item>
 /// </list>
 /// </remarks>
-public class OpeningConditions1Validator : AbstractValidator<OpeningConditions1>
+public class OpeningConditions1Validator : AbstractValidator<IOpeningConditions1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="OpeningConditions1"/>.

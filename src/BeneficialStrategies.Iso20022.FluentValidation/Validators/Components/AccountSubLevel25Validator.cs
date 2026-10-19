@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ShareholdingBalance</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class AccountSubLevel25Validator : AbstractValidator<AccountSubLevel25>
+public class AccountSubLevel25Validator : AbstractValidator<IAccountSubLevel25>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AccountSubLevel25"/>.

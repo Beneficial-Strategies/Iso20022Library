@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>RelatedDate</c> and <c>Type</c> are each validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class ReferredMandateDocument2Validator : AbstractValidator<ReferredMandateDocument2>
+public class ReferredMandateDocument2Validator : AbstractValidator<IReferredMandateDocument2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -39,8 +39,8 @@ public class ReferredMandateDocument2Validator : AbstractValidator<ReferredManda
     /// invoked when present.
     /// </param>
     public ReferredMandateDocument2Validator(
-        IValidator<DateAndType1> relatedDateValidator,
-        IValidator<DocumentType1> typeValidator
+        IValidator<IDateAndType1> relatedDateValidator,
+        IValidator<IDocumentType1> typeValidator
     )
     {
         // Number, CreditorReference: optional scalars, length enforced by struct constructors —

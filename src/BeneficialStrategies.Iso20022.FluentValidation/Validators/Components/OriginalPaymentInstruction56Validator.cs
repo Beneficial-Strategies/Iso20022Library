@@ -29,16 +29,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class OriginalPaymentInstruction56Validator : AbstractValidator<OriginalPaymentInstruction56>
+public class OriginalPaymentInstruction56Validator : AbstractValidator<IOriginalPaymentInstruction56>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public OriginalPaymentInstruction56Validator(
-        IValidator<StatusReasonInformation14> statusReasonInformationValidator,
-        IValidator<NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatusValidator,
-        IValidator<PaymentTransaction178> transactionInformationAndStatusValidator
+        IValidator<IStatusReasonInformation14> statusReasonInformationValidator,
+        IValidator<INumberOfTransactionsPerStatus5> numberOfTransactionsPerStatusValidator,
+        IValidator<IPaymentTransaction178> transactionInformationAndStatusValidator
     )
     {
         RuleForEach(x => x.StatusReasonInformation).SetValidator(statusReasonInformationValidator!);

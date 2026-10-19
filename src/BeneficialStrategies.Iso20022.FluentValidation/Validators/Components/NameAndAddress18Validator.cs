@@ -32,13 +32,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// should add a case that populates <c>Address.Country</c> with a value rejected by a populated
 /// <see cref="IExternalCodeRegistry{TCode}"/> to close this gap.
 /// </remarks>
-public class NameAndAddress18Validator : AbstractValidator<NameAndAddress18>
+public class NameAndAddress18Validator : AbstractValidator<INameAndAddress18>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public NameAndAddress18Validator(IValidator<PostalAddress27> addressValidator)
+    public NameAndAddress18Validator(IValidator<IPostalAddress27> addressValidator)
     {
         RuleFor(x => x.Address).SetValidator(addressValidator!);
     }

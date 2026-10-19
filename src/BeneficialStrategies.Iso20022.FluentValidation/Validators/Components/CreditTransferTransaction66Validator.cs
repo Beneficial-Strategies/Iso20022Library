@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: every Component-typed field is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class CreditTransferTransaction66Validator : AbstractValidator<CreditTransferTransaction66>
+public class CreditTransferTransaction66Validator : AbstractValidator<ICreditTransferTransaction66>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -64,24 +64,24 @@ public class CreditTransferTransaction66Validator : AbstractValidator<CreditTran
     /// this type constructing its own.
     /// </summary>
     public CreditTransferTransaction66Validator(
-        IValidator<PaymentTypeInformation28> paymentTypeInformationValidator,
-        IValidator<SettlementDateTimeIndication1> settlementTimeIndicationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> intermediaryAgent1Validator,
-        IValidator<CashAccount40> intermediaryAgent1AccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> intermediaryAgent2Validator,
-        IValidator<CashAccount40> intermediaryAgent2AccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> intermediaryAgent3Validator,
-        IValidator<CashAccount40> intermediaryAgent3AccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> creditorAgentValidator,
-        IValidator<CashAccount40> creditorAgentAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> creditorValidator,
-        IValidator<CashAccount40> creditorAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> ultimateCreditorValidator,
-        IValidator<InstructionForCreditorAgent3> instructionForCreditorAgentValidator,
-        IValidator<DirectDebitTransactionInformation33> directDebitTransactionInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IPaymentTypeInformation28> paymentTypeInformationValidator,
+        IValidator<ISettlementDateTimeIndication1> settlementTimeIndicationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> intermediaryAgent1Validator,
+        IValidator<ICashAccount40> intermediaryAgent1AccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> intermediaryAgent2Validator,
+        IValidator<ICashAccount40> intermediaryAgent2AccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> intermediaryAgent3Validator,
+        IValidator<ICashAccount40> intermediaryAgent3AccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> creditorAgentValidator,
+        IValidator<ICashAccount40> creditorAgentAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> creditorValidator,
+        IValidator<ICashAccount40> creditorAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> ultimateCreditorValidator,
+        IValidator<IInstructionForCreditorAgent3> instructionForCreditorAgentValidator,
+        IValidator<IDirectDebitTransactionInformation33> directDebitTransactionInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.Creditor).SetValidator(creditorValidator!);

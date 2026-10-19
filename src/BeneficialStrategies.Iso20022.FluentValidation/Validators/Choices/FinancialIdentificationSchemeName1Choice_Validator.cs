@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
 public class FinancialIdentificationSchemeName1Choice_Validator
-    : AbstractValidator<FinancialIdentificationSchemeName1Choice_>
+    : AbstractValidator<IFinancialIdentificationSchemeName1Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -44,11 +44,10 @@ public class FinancialIdentificationSchemeName1Choice_Validator
         // variant type as always-valid by design (see Party50Choice_Validator's own remarks).
 
         var codeVariantValidator =
-            new InlineValidator<Choices.FinancialIdentificationSchemeName1Choice.Code>();
+            new InlineValidator<Choices.FinancialIdentificationSchemeName1Choice.ICode>();
         codeVariantValidator.RuleFor(x => x.Value).SetValidator(codeValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(codeVariantValidator);
             });

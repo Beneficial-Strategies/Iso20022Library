@@ -32,16 +32,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
-public class GroupHeader118Validator : AbstractValidator<GroupHeader118>
+public class GroupHeader118Validator : AbstractValidator<IGroupHeader118>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public GroupHeader118Validator(
-        IValidator<Authorisation1Choice_> authorisationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> forwardingAgentValidator,
-        IValidator<PartyIdentification272> initiatingPartyValidator
+        IValidator<IAuthorisation1Choice> authorisationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> forwardingAgentValidator,
+        IValidator<IPartyIdentification272> initiatingPartyValidator
     )
     {
         RuleForEach(x => x.Authorisation).SetValidator(authorisationValidator!);

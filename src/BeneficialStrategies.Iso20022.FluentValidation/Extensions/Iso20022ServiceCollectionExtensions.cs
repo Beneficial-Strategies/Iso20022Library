@@ -66,9 +66,17 @@ public static class Iso20022ServiceCollectionExtensions
     {
         services.AddExternalCodeRegistryDefault();
 
-        return services.AddValidatorsFromAssemblyContaining<AssemblyMarker>(
+        services.AddValidatorsFromAssemblyContaining<AssemblyMarker>(
             lifetime,
             filter is null ? null : scanResult => filter(scanResult.ValidatorType)
+        );
+
+        return services.AddMessageValidatorAdapters(
+            lifetime,
+            AssemblyScanner
+                .FindValidatorsInAssemblyContaining<AssemblyMarker>()
+                .Where(result => filter is null || filter(result.ValidatorType))
+                .Select(result => result.InterfaceType.GetGenericArguments()[0])
         );
     }
 
@@ -170,7 +178,7 @@ public static class Iso20022ServiceCollectionExtensions
                 result => (ValidatorType: result.ValidatorType, InterfaceType: result.InterfaceType)
             );
 
-        var roots = rootTypes.ToList();
+        var roots = rootTypes.Select(MessageValidatorAdapters.ToInterface).ToList();
         foreach (var root in roots)
         {
             if (!byValidatedType.ContainsKey(root))
@@ -207,7 +215,7 @@ public static class Iso20022ServiceCollectionExtensions
             services.Add(new ServiceDescriptor(interfaceType, validatorType, lifetime));
         }
 
-        return services;
+        return services.AddMessageValidatorAdapters(lifetime, reachable);
     }
 
     /// <summary>
@@ -267,7 +275,7 @@ public static class Iso20022ServiceCollectionExtensions
         var messageTypes = services
             .Where(sd => sd.ServiceType.IsGenericType && sd.ServiceType.GetGenericTypeDefinition() == typeof(IValidator<>))
             .Select(sd => sd.ServiceType.GetGenericArguments()[0])
-            .Where(t => typeof(IOuterRecord).IsAssignableFrom(t))
+            .Where(t => t.IsClass && typeof(IOuterRecord).IsAssignableFrom(t))
             .Distinct()
             .ToList();
 

@@ -22,4 +22,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// type per the coverage-scoping policy ("reviewed and confirmed to need nothing"), same
 /// convention as <c>AddressType3Choice_Validator</c>.
 /// </remarks>
-public class SettlementDateTimeIndication1Validator : AbstractValidator<SettlementDateTimeIndication1> { }
+public class SettlementDateTimeIndication1Validator : AbstractValidator<ISettlementDateTimeIndication1> { }

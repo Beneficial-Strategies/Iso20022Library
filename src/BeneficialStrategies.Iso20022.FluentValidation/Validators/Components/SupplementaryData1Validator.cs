@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// ultimately carries, per the SupplementaryDataRule above. There is nothing to validate on it
 /// today; <c>required</c> already enforces its presence.
 /// </remarks>
-public class SupplementaryData1Validator : AbstractValidator<SupplementaryData1>
+public class SupplementaryData1Validator : AbstractValidator<ISupplementaryData1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SupplementaryData1"/>.

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DestinationAirport</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class TransportByAir5Validator : AbstractValidator<TransportByAir5>
+public class TransportByAir5Validator : AbstractValidator<ITransportByAir5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TransportByAir5"/>.

@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class ProprietaryData7Validator : AbstractValidator<ProprietaryData7>
+public class ProprietaryData7Validator : AbstractValidator<IProprietaryData7>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -31,7 +31,7 @@ public class ProprietaryData7Validator : AbstractValidator<ProprietaryData7>
     /// <param name="dataValidator">
     /// Validator for the required <c>Data</c> building block (ProprietaryData6, 1..1).
     /// </param>
-    public ProprietaryData7Validator(IValidator<ProprietaryData6> dataValidator)
+    public ProprietaryData7Validator(IValidator<IProprietaryData6> dataValidator)
     {
         // Type: required (1..1) and already a `required` C# property — format enforced by the
         // struct constructor.

@@ -22,15 +22,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class RemittanceAmount4Validator : AbstractValidator<RemittanceAmount4>
+public class RemittanceAmount4Validator : AbstractValidator<IRemittanceAmount4>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public RemittanceAmount4Validator(
-        IValidator<DocumentAdjustment1> adjustmentAmountAndReasonValidator,
-        IValidator<DocumentAmount1> remittanceAmountAndTypeValidator
+        IValidator<IDocumentAdjustment1> adjustmentAmountAndReasonValidator,
+        IValidator<IDocumentAmount1> remittanceAmountAndTypeValidator
     )
     {
         RuleForEach(x => x.AdjustmentAmountAndReason).SetValidator(adjustmentAmountAndReasonValidator!);

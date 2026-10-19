@@ -21,13 +21,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>Period</c> is validated by an injected <see cref="IValidator{T}"/>
 /// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class TaxRecordDetails3Validator : AbstractValidator<TaxRecordDetails3>
+public class TaxRecordDetails3Validator : AbstractValidator<ITaxRecordDetails3>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public TaxRecordDetails3Validator(IValidator<TaxPeriod3> periodValidator)
+    public TaxRecordDetails3Validator(IValidator<ITaxPeriod3> periodValidator)
     {
         When(x => x.Period is not null, () => RuleFor(x => x.Period).SetValidator(periodValidator!));
     }

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class MandateSuspensionReason3Validator : AbstractValidator<MandateSuspensionReason3>
+public class MandateSuspensionReason3Validator : AbstractValidator<IMandateSuspensionReason3>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -39,8 +39,8 @@ public class MandateSuspensionReason3Validator : AbstractValidator<MandateSuspen
     /// (MandateSuspensionReason1Choice_, 1..1).
     /// </param>
     public MandateSuspensionReason3Validator(
-        IValidator<PartyIdentification272> originatorValidator,
-        IValidator<MandateSuspensionReason1Choice_> reasonValidator
+        IValidator<IPartyIdentification272> originatorValidator,
+        IValidator<IMandateSuspensionReason1Choice> reasonValidator
     )
     {
         RuleFor(x => x.Reason).SetValidator(reasonValidator);

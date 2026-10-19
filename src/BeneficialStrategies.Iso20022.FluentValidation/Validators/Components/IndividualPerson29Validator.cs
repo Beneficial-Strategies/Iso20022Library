@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PostalAddress</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..5</description></item>
 /// </list>
 /// </remarks>
-public class IndividualPerson29Validator : AbstractValidator<IndividualPerson29>
+public class IndividualPerson29Validator : AbstractValidator<IIndividualPerson29>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="IndividualPerson29"/>.

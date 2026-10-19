@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see
 /// the two constructors below.
 /// </remarks>
-public class GroupHeader125Validator : AbstractValidator<GroupHeader125>
+public class GroupHeader125Validator : AbstractValidator<IGroupHeader125>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -64,11 +64,11 @@ public class GroupHeader125Validator : AbstractValidator<GroupHeader125>
     /// own.
     /// </summary>
     public GroupHeader125Validator(
-        IValidator<SettlementInstruction14> settlementInformationValidator,
-        IValidator<Authorisation1Choice_> authorisationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<PaymentTypeInformation27> paymentTypeInformationValidator
+        IValidator<ISettlementInstruction14> settlementInformationValidator,
+        IValidator<IAuthorisation1Choice> authorisationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IPaymentTypeInformation27> paymentTypeInformationValidator
     )
     {
         RuleFor(x => x.SettlementInformation).SetValidator(settlementInformationValidator!);
@@ -79,7 +79,7 @@ public class GroupHeader125Validator : AbstractValidator<GroupHeader125>
         // BatchBooking, ControlSum: optional scalars — no rule needed.
 
         RuleFor(x => x.Authorisation)
-            .Must(list => list.Count <= 2)
+            .Must(list => list.Count() <= 2)
             .WithMessage("GroupHeader125.Authorisation must not contain more than 2 element(s) (0..2).");
         RuleForEach(x => x.Authorisation).SetValidator(authorisationValidator!);
 

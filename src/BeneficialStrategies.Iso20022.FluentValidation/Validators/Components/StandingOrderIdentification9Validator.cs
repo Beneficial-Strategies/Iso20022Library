@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class StandingOrderIdentification9Validator : AbstractValidator<StandingOrderIdentification9>
+public class StandingOrderIdentification9Validator : AbstractValidator<IStandingOrderIdentification9>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -37,8 +37,8 @@ public class StandingOrderIdentification9Validator : AbstractValidator<StandingO
     /// (BranchAndFinancialInstitutionIdentification8, 0..1) — only invoked when present.
     /// </param>
     public StandingOrderIdentification9Validator(
-        IValidator<CashAccount40> accountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator
+        IValidator<ICashAccount40> accountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator
     )
     {
         RuleFor(x => x.Account).SetValidator(accountValidator);

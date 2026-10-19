@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Country</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class LocalMarketAnnex6Validator : AbstractValidator<LocalMarketAnnex6>
+public class LocalMarketAnnex6Validator : AbstractValidator<ILocalMarketAnnex6>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="LocalMarketAnnex6"/>.

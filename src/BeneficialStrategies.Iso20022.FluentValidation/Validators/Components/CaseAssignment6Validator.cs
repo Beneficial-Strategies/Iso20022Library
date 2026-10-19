@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below. Both properties share the same validated type, so one injected validator serves both.
 /// </remarks>
-public class CaseAssignment6Validator : AbstractValidator<CaseAssignment6>
+public class CaseAssignment6Validator : AbstractValidator<ICaseAssignment6>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -35,7 +35,7 @@ public class CaseAssignment6Validator : AbstractValidator<CaseAssignment6>
     /// Validator for the required <c>Assigner</c> and <c>Assignee</c> building blocks (both
     /// Party50Choice_, 1..1).
     /// </param>
-    public CaseAssignment6Validator(IValidator<Party50Choice_> partyValidator)
+    public CaseAssignment6Validator(IValidator<IParty50Choice> partyValidator)
     {
         // Identification, CreationDateTime: required (1..1) and already `required` C#
         // properties — length/format enforced by struct constructors.

@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class CreateReservationV03Validator : AbstractValidator<CreateReservationV03>
+public class CreateReservationV03Validator : AbstractValidator<ICreateReservationV03>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -56,10 +56,10 @@ public class CreateReservationV03Validator : AbstractValidator<CreateReservation
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public CreateReservationV03Validator(
-        IValidator<MessageHeader1> messageHeaderValidator,
-        IValidator<ReservationIdentification4> reservationIdentificationValidator,
-        IValidator<Reservation4> valueSetValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IMessageHeader1> messageHeaderValidator,
+        IValidator<IReservationIdentification4> reservationIdentificationValidator,
+        IValidator<IReservation4> valueSetValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.MessageHeader).SetValidator(messageHeaderValidator);

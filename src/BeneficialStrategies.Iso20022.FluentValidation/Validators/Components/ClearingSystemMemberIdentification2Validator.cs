@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// constructors below.
 /// </remarks>
 public class ClearingSystemMemberIdentification2Validator
-    : AbstractValidator<ClearingSystemMemberIdentification2>
+    : AbstractValidator<IClearingSystemMemberIdentification2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -36,7 +36,7 @@ public class ClearingSystemMemberIdentification2Validator
     /// (ClearingSystemIdentification2Choice_, 0..1) — only invoked when present.
     /// </param>
     public ClearingSystemMemberIdentification2Validator(
-        IValidator<ClearingSystemIdentification2Choice_> clearingSystemIdentificationValidator
+        IValidator<IClearingSystemIdentification2Choice> clearingSystemIdentificationValidator
     )
     {
         // MemberIdentification: Max35Text, required (1..1) and already `required` C# property —

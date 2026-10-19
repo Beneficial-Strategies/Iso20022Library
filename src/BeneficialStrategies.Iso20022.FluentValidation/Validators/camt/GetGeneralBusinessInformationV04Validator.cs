@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class GetGeneralBusinessInformationV04Validator : AbstractValidator<GetGeneralBusinessInformationV04>
+public class GetGeneralBusinessInformationV04Validator : AbstractValidator<IGetGeneralBusinessInformationV04>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -61,9 +61,9 @@ public class GetGeneralBusinessInformationV04Validator : AbstractValidator<GetGe
     /// 0..1) — only invoked when present.
     /// </param>
     public GetGeneralBusinessInformationV04Validator(
-        IValidator<MessageHeader1> messageHeaderValidator,
-        IValidator<BusinessInformationQueryDefinition3> generalBusinessInformationQueryDefinitionValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IMessageHeader1> messageHeaderValidator,
+        IValidator<IBusinessInformationQueryDefinition3> generalBusinessInformationQueryDefinitionValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.MessageHeader).SetValidator(messageHeaderValidator);

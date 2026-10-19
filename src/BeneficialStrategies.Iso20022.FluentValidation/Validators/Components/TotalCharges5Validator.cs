@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ChargeDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..4</description></item>
 /// </list>
 /// </remarks>
-public class TotalCharges5Validator : AbstractValidator<TotalCharges5>
+public class TotalCharges5Validator : AbstractValidator<ITotalCharges5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TotalCharges5"/>.

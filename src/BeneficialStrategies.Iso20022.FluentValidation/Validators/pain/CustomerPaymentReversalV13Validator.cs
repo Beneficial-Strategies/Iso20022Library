@@ -77,17 +77,17 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 /// by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class CustomerPaymentReversalV13Validator : AbstractValidator<CustomerPaymentReversalV13>
+public class CustomerPaymentReversalV13Validator : AbstractValidator<ICustomerPaymentReversalV13>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public CustomerPaymentReversalV13Validator(
-        IValidator<GroupHeader124> groupHeaderValidator,
-        IValidator<OriginalGroupHeader20> originalGroupInformationValidator,
-        IValidator<OriginalPaymentInstruction53> originalPaymentInformationAndReversalValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader124> groupHeaderValidator,
+        IValidator<IOriginalGroupHeader20> originalGroupInformationValidator,
+        IValidator<IOriginalPaymentInstruction53> originalPaymentInformationAndReversalValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);
@@ -99,7 +99,7 @@ public class CustomerPaymentReversalV13Validator : AbstractValidator<CustomerPay
         RuleFor(x => x)
             .Must(x =>
                 x.GroupHeader.GroupReversal is not { BoolValue: true }
-                || x.OriginalPaymentInformationAndReversal.Count == 0
+                || x.OriginalPaymentInformationAndReversal.Count() == 0
             )
             .WithName("GroupReversalAndPaymentInformationNotPresentRule")
             .WithMessage(
@@ -119,7 +119,7 @@ public class CustomerPaymentReversalV13Validator : AbstractValidator<CustomerPay
         RuleFor(x => x)
             .Must(x =>
                 x.GroupHeader.GroupReversal is { BoolValue: true }
-                || x.OriginalPaymentInformationAndReversal.Count > 0
+                || x.OriginalPaymentInformationAndReversal.Count() > 0
             )
             .WithName("GroupReversalAndPaymentInformationPresentRule")
             .WithMessage(
@@ -131,7 +131,7 @@ public class CustomerPaymentReversalV13Validator : AbstractValidator<CustomerPay
                 x.GroupHeader.GroupReversal is { BoolValue: true }
                 || x.OriginalPaymentInformationAndReversal.Any(p => p.PaymentInformationReversal is { BoolValue: true })
                 || int.Parse(x.GroupHeader.NumberOfTransactions.ToString())
-                    == x.OriginalPaymentInformationAndReversal.Sum(p => p.TransactionInformation.Count)
+                    == x.OriginalPaymentInformationAndReversal.Sum(p => p.TransactionInformation.Count())
             )
             .WithName("GroupReversalAndNumberOfTransactionsGuideline")
             .WithMessage(

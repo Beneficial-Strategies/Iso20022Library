@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>Code</c> is validated by an injected <see cref="IValidator{T}"/>
 /// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class InstructionForDebtorAgent1Validator : AbstractValidator<InstructionForDebtorAgent1>
+public class InstructionForDebtorAgent1Validator : AbstractValidator<IInstructionForDebtorAgent1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —

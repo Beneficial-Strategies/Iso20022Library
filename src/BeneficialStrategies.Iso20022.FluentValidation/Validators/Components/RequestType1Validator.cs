@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Type</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class RequestType1Validator : AbstractValidator<RequestType1>
+public class RequestType1Validator : AbstractValidator<IRequestType1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="RequestType1"/>.

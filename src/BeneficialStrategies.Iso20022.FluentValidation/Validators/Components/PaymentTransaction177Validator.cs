@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see
 /// the two constructors below.
 /// </remarks>
-public class PaymentTransaction177Validator : AbstractValidator<PaymentTransaction177>
+public class PaymentTransaction177Validator : AbstractValidator<IPaymentTransaction177>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
@@ -51,15 +51,15 @@ public class PaymentTransaction177Validator : AbstractValidator<PaymentTransacti
     /// type constructing its own.
     /// </summary>
     public PaymentTransaction177Validator(
-        IValidator<OriginalGroupInformation33> originalGroupInformationValidator,
-        IValidator<StatusReasonInformation14> statusReasonInformationValidator,
-        IValidator<Charges16> chargesInformationValidator,
-        IValidator<DateAndDateTime2Choice_> processingDateValidator,
-        IValidator<DateAndDateTime2Choice_> effectiveInterbankSettlementDateValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
-        IValidator<OriginalTransactionReference47> originalTransactionReferenceValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IOriginalGroupInformation33> originalGroupInformationValidator,
+        IValidator<IStatusReasonInformation14> statusReasonInformationValidator,
+        IValidator<ICharges16> chargesInformationValidator,
+        IValidator<IDateAndDateTime2Choice> processingDateValidator,
+        IValidator<IDateAndDateTime2Choice> effectiveInterbankSettlementDateValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
+        IValidator<IOriginalTransactionReference47> originalTransactionReferenceValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         When(

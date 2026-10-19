@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RejectionReason</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class References6Validator : AbstractValidator<References6>
+public class References6Validator : AbstractValidator<IReferences6>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="References6"/>.

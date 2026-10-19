@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// all share the same injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> —
 /// see the two constructors below.
 /// </remarks>
-public class CurrencyExchange13Validator : AbstractValidator<CurrencyExchange13>
+public class CurrencyExchange13Validator : AbstractValidator<ICurrencyExchange13>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —

@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RelatedAccountRule</term><description>Either RelatedAccount or Item/RelatedAccount may be present but not both.</description></item>
 /// </list>
 /// </remarks>
-public class AccountNotification16Validator : AbstractValidator<AccountNotification16>
+public class AccountNotification16Validator : AbstractValidator<IAccountNotification16>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AccountNotification16"/>.
@@ -59,7 +59,7 @@ public class AccountNotification16Validator : AbstractValidator<AccountNotificat
             );
 
         RuleFor(x => x)
-            .Must(x => x.Debtor is not null || (x.Item.Count > 0 && x.Item.All(i => i.Debtor is not null)))
+            .Must(x => x.Debtor is not null || (x.Item.Count() > 0 && x.Item.All(i => i.Debtor is not null)))
             .WithName("MandatoryDebtorRule")
             .WithMessage("Either Debtor must be present or Item/Debtor must be present (MandatoryDebtorRule).");
 

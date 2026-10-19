@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CollateralComponent</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ReuseDataReportNew3Validator : AbstractValidator<ReuseDataReportNew3>
+public class ReuseDataReportNew3Validator : AbstractValidator<IReuseDataReportNew3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ReuseDataReportNew3"/>.

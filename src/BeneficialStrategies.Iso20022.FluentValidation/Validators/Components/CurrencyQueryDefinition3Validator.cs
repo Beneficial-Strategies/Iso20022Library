@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class CurrencyQueryDefinition3Validator : AbstractValidator<CurrencyQueryDefinition3>
+public class CurrencyQueryDefinition3Validator : AbstractValidator<ICurrencyQueryDefinition3>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -33,7 +33,7 @@ public class CurrencyQueryDefinition3Validator : AbstractValidator<CurrencyQuery
     /// Validator for the optional <c>CurrencyCriteria</c> building block
     /// (CurrencyCriteriaDefinition1Choice_, 0..1) — only invoked when present.
     /// </param>
-    public CurrencyQueryDefinition3Validator(IValidator<CurrencyCriteriaDefinition1Choice_> currencyCriteriaValidator)
+    public CurrencyQueryDefinition3Validator(IValidator<ICurrencyCriteriaDefinition1Choice> currencyCriteriaValidator)
     {
         When(
             x => x.CurrencyCriteria is not null,

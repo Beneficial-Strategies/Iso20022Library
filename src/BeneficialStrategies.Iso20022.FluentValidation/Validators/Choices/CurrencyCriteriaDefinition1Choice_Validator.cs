@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class CurrencyCriteriaDefinition1Choice_Validator : AbstractValidator<CurrencyCriteriaDefinition1Choice_>
+public class CurrencyCriteriaDefinition1Choice_Validator : AbstractValidator<ICurrencyCriteriaDefinition1Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -40,16 +40,15 @@ public class CurrencyCriteriaDefinition1Choice_Validator : AbstractValidator<Cur
     /// <c>SearchCriteria</c> collection (CurrencyExchangeSearchCriteria1, 0..∞).
     /// </param>
     public CurrencyCriteriaDefinition1Choice_Validator(
-        IValidator<CurrencyExchangeSearchCriteria1> searchCriteriaValidator
+        IValidator<ICurrencyExchangeSearchCriteria1> searchCriteriaValidator
     )
     {
-        var newCriteriaVariantValidator = new InlineValidator<Choices.CurrencyCriteriaDefinition1Choice.NewCriteria>();
+        var newCriteriaVariantValidator = new InlineValidator<Choices.CurrencyCriteriaDefinition1Choice.INewCriteria>();
         newCriteriaVariantValidator
             .RuleForEach(x => x.SearchCriteria)
             .SetValidator(searchCriteriaValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(newCriteriaVariantValidator);
             });

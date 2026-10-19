@@ -31,13 +31,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// (e.g. postal address country) with a value a populated <see cref="IExternalCodeRegistry{TCode}"/>
 /// would reject, to close this gap.
 /// </remarks>
-public class PartyAndSignature4Validator : AbstractValidator<PartyAndSignature4>
+public class PartyAndSignature4Validator : AbstractValidator<IPartyAndSignature4>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public PartyAndSignature4Validator(IValidator<PartyIdentification272> partyValidator)
+    public PartyAndSignature4Validator(IValidator<IPartyIdentification272> partyValidator)
     {
         RuleFor(x => x.Party).SetValidator(partyValidator!);
         // Signature: SkipPayload — nothing further to validate structurally.

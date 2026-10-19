@@ -36,19 +36,19 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="PartyIdentification272"/> validator instance is reused across <c>Invoicee</c> and
 /// <c>Invoicer</c> — see the two constructors below.
 /// </remarks>
-public class StructuredRemittanceInformation18Validator : AbstractValidator<StructuredRemittanceInformation18>
+public class StructuredRemittanceInformation18Validator : AbstractValidator<IStructuredRemittanceInformation18>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public StructuredRemittanceInformation18Validator(
-        IValidator<CreditorReferenceInformation3> creditorReferenceInformationValidator,
-        IValidator<Garnishment4> garnishmentRemittanceValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<RemittanceAmount4> referredDocumentAmountValidator,
-        IValidator<ReferredDocumentInformation8> referredDocumentInformationValidator,
-        IValidator<TaxData1> taxRemittanceValidator
+        IValidator<ICreditorReferenceInformation3> creditorReferenceInformationValidator,
+        IValidator<IGarnishment4> garnishmentRemittanceValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<IRemittanceAmount4> referredDocumentAmountValidator,
+        IValidator<IReferredDocumentInformation8> referredDocumentInformationValidator,
+        IValidator<ITaxData1> taxRemittanceValidator
     )
     {
         When(

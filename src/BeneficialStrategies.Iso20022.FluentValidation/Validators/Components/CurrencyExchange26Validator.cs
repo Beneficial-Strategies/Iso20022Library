@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>UnitCurrency</c> are each validated by an injected <see cref="IValidator{T}"/> rather than
 /// a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class CurrencyExchange26Validator : AbstractValidator<CurrencyExchange26>
+public class CurrencyExchange26Validator : AbstractValidator<ICurrencyExchange26>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -35,7 +35,7 @@ public class CurrencyExchange26Validator : AbstractValidator<CurrencyExchange26>
     /// type constructing its own.
     /// </summary>
     public CurrencyExchange26Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> foreignExchangeAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> foreignExchangeAgentValidator,
         IValidator<ActiveOrHistoricCurrencyCode> quotedCurrencyValidator,
         IValidator<ActiveOrHistoricCurrencyCode> unitCurrencyValidator
     )

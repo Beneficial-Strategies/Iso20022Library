@@ -24,4 +24,4 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// reviewed rather than silently skipped.
 /// </remarks>
 public class OrganisationIdentificationSchemeName1Choice_Validator
-    : AbstractValidator<OrganisationIdentificationSchemeName1Choice_> { }
+    : AbstractValidator<IOrganisationIdentificationSchemeName1Choice> { }
