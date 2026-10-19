@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ta5foLJQEeaYqc4G3TTwhA")]
 [DisplayName("Liquid Resources")]
-public record LiquidResources1
+public partial record LiquidResources1
 {
     /// <summary>
     /// Cash expected to be available to the CCP on each day in order to meet liquid requirements.

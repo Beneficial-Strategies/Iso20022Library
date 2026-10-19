@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ihx5AWkvEeaLAKoEUNsD9g")]
 [DisplayName("Transparency Data Report")]
-public record TransparencyDataReport10
+public partial record TransparencyDataReport10
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice messages.

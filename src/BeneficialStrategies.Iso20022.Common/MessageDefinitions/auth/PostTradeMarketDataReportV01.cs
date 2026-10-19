@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_mIhoMGIfEfCeoPFCHQnhvA")]
 [DisplayName("Post Trade Market Data Report V01")]
-public record PostTradeMarketDataReportV01 : IOuterRecord
+public partial record PostTradeMarketDataReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

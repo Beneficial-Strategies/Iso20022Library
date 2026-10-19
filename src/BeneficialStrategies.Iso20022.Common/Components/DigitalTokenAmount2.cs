@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c10zYZivEe2f7NHvXATP5g")]
 [DisplayName("Digital Token Amount")]
-public record DigitalTokenAmount2
+public partial record DigitalTokenAmount2
 {
     /// <summary>
     /// Specifies the digital token identifier (DTI).

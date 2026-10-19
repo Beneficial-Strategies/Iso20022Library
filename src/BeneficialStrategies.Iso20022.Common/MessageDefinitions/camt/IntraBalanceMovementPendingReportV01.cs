@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_DLtLGzncEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movement Pending Report V")]
-public record IntraBalanceMovementPendingReportV01 : IOuterRecord
+public partial record IntraBalanceMovementPendingReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3E5JTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Cheque Cancellation Or Stop Request V02")]
-public record ChequeCancellationOrStopRequestV02 : IOuterRecord
+public partial record ChequeCancellationOrStopRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

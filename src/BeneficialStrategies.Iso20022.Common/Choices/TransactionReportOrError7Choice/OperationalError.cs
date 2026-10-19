@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError7Choice
     /// Operational Error.
     /// </summary>
     [DisplayName("Operational Error")]
-    public record OperationalError : TransactionReportOrError7Choice_
+    public partial record OperationalError : TransactionReportOrError7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

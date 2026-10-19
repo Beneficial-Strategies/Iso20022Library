@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice
     /// </summary>
     [IsoId("_LMT0IQKzEe2X55dNQNVKfg")]
     [DisplayName("UETR")]
-    public record UETR : PaymentIdentification7Choice_
+    public partial record UETR : PaymentIdentification7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TXFdkbb1Eeu9Cp6InX88Vw")]
     [DisplayName("Payment Schedule Type 2 Choice")]
-    public abstract record PaymentScheduleType2Choice_ { }
+    public abstract partial record PaymentScheduleType2Choice_ { }
 }

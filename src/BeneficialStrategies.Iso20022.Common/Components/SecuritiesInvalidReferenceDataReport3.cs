@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IEREBX5aEea2k7EBUopqxw")]
 [DisplayName("Securities Invalid Reference Data Report")]
-public record SecuritiesInvalidReferenceDataReport3
+public partial record SecuritiesInvalidReferenceDataReport3
 {
     /// <summary>
     /// Instrument details at the time this specific details on the financial instrument was invalidated.

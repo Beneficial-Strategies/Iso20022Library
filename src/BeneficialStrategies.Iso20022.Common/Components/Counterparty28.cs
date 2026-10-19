@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fXcpwZQMEeiILOjNP8ro1w")]
 [DisplayName("Counterparty")]
-public record Counterparty28
+public partial record Counterparty28
 {
     /// <summary>
     /// Unique code identifying the other counterparty of the contract.

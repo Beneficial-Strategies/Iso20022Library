@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction3Choice
     [IsoId("_9GWT466UEeexrtTFgmVD3Q")]
     [DisplayName("Interbank")]
     [IsoXmlTag("IntrBk")]
-    public record Interbank : CorrectiveTransaction3Choice_
+    public partial record Interbank : CorrectiveTransaction3Choice_
     {
         /// <summary>
         /// Set of elements used to provide corrective information for the group header of the message under investigation.

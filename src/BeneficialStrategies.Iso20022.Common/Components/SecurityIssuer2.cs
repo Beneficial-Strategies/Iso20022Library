@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cD9apbQ0EemI67HK7aviyg")]
 [DisplayName("Security Issuer")]
-public record SecurityIssuer2
+public partial record SecurityIssuer2
 {
     /// <summary>
     /// Legal entity identification of the issuer of the security.

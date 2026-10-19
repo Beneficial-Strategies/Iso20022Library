@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SUuMwFfVEeqqKf65rDYWYw")]
 [DisplayName("Pre Post Haircut")]
-public record PrePostHaircut1
+public partial record PrePostHaircut1
 {
     /// <summary>
     /// Indicates the amount of collateral calculated pre-haircut.

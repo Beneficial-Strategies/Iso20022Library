@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice
     /// </summary>
     [IsoId("_RIwV1tp-Ed-ak6NoX_4Aeg_1991862466")]
     [DisplayName("XML Message Name")]
-    public record XMLMessageName : PaymentOrigin1Choice_
+    public partial record XMLMessageName : PaymentOrigin1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

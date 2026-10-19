@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yRdvERZZEe2QNcZTDeoKnQ")]
     [DisplayName("Asset Class Commodity Polypropylene 4 Choice")]
-    public abstract record AssetClassCommodityPolypropylene4Choice_ { }
+    public abstract partial record AssetClassCommodityPolypropylene4Choice_ { }
 }

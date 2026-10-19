@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty2Choice
     /// Person.
     /// </summary>
     [DisplayName("Person")]
-    public record Person : ExecutingParty2Choice_
+    public partial record Person : ExecutingParty2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

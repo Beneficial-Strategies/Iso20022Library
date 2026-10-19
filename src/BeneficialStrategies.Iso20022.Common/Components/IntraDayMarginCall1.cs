@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dC8lAEG6EemxGPEh9hU2Xg")]
 [DisplayName("Intra Day Margin Call")]
-public record IntraDayMarginCall1
+public partial record IntraDayMarginCall1
 {
     /// <summary>
     /// Identification of the margin account against which the intraday margin call is being made.

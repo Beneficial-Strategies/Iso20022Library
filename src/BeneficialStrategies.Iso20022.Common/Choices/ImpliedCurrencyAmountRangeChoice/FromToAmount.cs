@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice
     [IsoId("_PVH1ANp-Ed-ak6NoX_4Aeg_-1220232112")]
     [DisplayName("From To Amount")]
     [IsoXmlTag("FrToAmt")]
-    public record FromToAmount : ImpliedCurrencyAmountRangeChoice_
+    public partial record FromToAmount : ImpliedCurrencyAmountRangeChoice_
     {
         /// <summary>
         /// Lower boundary of a range of amount values.

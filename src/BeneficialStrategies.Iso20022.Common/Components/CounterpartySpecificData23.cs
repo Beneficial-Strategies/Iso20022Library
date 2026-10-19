@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fkwfQZQHEeiILOjNP8ro1w")]
 [DisplayName("Counterparty Specific Data")]
-public record CounterpartySpecificData23
+public partial record CounterpartySpecificData23
 {
     /// <summary>
     /// Counterparty data details.

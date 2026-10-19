@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
     [IsoId("_bWl_hRLBEeqctpBfTmLJnw")]
     [DisplayName("Correction")]
     [IsoXmlTag("Crrctn")]
-    public record Correction : TradePositionReport7Choice_
+    public partial record Correction : TradePositionReport7Choice_
     {
         /// <summary>
         /// Counterparty data details.

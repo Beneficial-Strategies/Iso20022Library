@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RUOmCNp-Ed-ak6NoX_4Aeg_2134128505")]
 [DisplayName("Proprietary Agent")]
-public record ProprietaryAgent1
+public partial record ProprietaryAgent1
 {
     /// <summary>
     /// Identifies the type of proprietary agent reported.

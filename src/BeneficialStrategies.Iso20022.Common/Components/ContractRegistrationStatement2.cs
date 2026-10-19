@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TYk8IW49EeiU9cctagi5ow")]
 [DisplayName("Contract Registration Statement")]
-public record ContractRegistrationStatement2
+public partial record ContractRegistrationStatement2
 {
     /// <summary>
     /// Unique identification, as assigned by the account servicer, to unambiguously identify the contract registration statement.

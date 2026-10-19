@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate23Choice
     [IsoId("_6ao5k1fREeqqKf65rDYWYw")]
     [DisplayName("Floating")]
     [IsoXmlTag("Fltg")]
-    public record Floating : InterestRate23Choice_
+    public partial record Floating : InterestRate23Choice_
     {
         /// <summary>
         /// Indication of the floating rate used.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification9Choic
     /// </summary>
     [IsoId("_ML-TY5QMEeiILOjNP8ro1w")]
     [DisplayName("Client Identification")]
-    public record ClientIdentification : OrganisationIdentification9Choice_
+    public partial record ClientIdentification : OrganisationIdentification9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

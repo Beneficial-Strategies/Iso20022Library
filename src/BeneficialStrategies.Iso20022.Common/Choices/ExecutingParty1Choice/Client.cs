@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty1Choice
     /// </summary>
     [IsoId("_OtKNoFiJEea-d4CsgzjlAw")]
     [DisplayName("Client")]
-    public record Client : ExecutingParty1Choice_
+    public partial record Client : ExecutingParty1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitStructure2Choice
     [IsoId("__vDiY249EeiU9cctagi5ow")]
     [DisplayName("Current Limit Identification")]
     [IsoXmlTag("CurLmtId")]
-    public record CurrentLimitIdentification : LimitStructure2Choice_
+    public partial record CurrentLimitIdentification : LimitStructure2Choice_
     {
         /// <summary>
         /// Identification of a particular cash clearing system.

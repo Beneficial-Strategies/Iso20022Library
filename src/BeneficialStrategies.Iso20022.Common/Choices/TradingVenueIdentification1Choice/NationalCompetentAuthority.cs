@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choic
     /// </summary>
     [IsoId("_-PXYoAkWEeWGouz230Xp5Q")]
     [DisplayName("National Competent Authority")]
-    public record NationalCompetentAuthority : TradingVenueIdentification1Choice_
+    public partial record NationalCompetentAuthority : TradingVenueIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

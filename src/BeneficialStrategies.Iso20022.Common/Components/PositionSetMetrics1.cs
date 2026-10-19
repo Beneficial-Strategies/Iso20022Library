@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t0oSlcWEEeiRga8tPu1L4Q")]
 [DisplayName("Position Set Metrics")]
-public record PositionSetMetrics1
+public partial record PositionSetMetrics1
 {
     /// <summary>
     /// Refers to the total number of trades contained in the position set.

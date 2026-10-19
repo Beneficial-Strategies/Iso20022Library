@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PHYIYZNeEeytjZlcgApf6A")]
     [DisplayName("Security Identification Query 4 Choice")]
-    public abstract record SecurityIdentificationQuery4Choice_ { }
+    public abstract partial record SecurityIdentificationQuery4Choice_ { }
 }

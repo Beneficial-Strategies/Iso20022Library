@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice
     /// Valuation Update.
     /// </summary>
     [DisplayName("Valuation Update")]
-    public record ValuationUpdate : TradeReport33Choice_
+    public partial record ValuationUpdate : TradeReport33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

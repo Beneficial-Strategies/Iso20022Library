@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YX0RITneEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movement")]
-public record IntraBalanceMovement6
+public partial record IntraBalanceMovement6
 {
     /// <summary>
     /// Balance from which the amount of money is moved.

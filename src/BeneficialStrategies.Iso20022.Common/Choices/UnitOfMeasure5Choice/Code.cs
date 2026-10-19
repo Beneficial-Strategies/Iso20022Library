@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure5Choice
     /// </summary>
     [IsoId("_wR_yAPp2EeaQh_7a05rSJQ")]
     [DisplayName("Code")]
-    public record Code : UnitOfMeasure5Choice_
+    public partial record Code : UnitOfMeasure5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

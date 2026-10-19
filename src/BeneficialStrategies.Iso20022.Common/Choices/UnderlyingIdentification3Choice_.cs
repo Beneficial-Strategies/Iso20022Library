@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1tAh1Z3DEeuwmdq0KtnICg")]
     [DisplayName("Underlying Identification 3 Choice")]
-    public abstract record UnderlyingIdentification3Choice_ { }
+    public abstract partial record UnderlyingIdentification3Choice_ { }
 }

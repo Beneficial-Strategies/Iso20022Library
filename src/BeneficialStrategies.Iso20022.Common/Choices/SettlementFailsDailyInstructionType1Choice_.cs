@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_-9n1xTOkEeqX8uoQQ3KffQ")]
     [DisplayName("Settlement Fails Daily Instruction Type 1 Choice")]
-    public abstract record SettlementFailsDailyInstructionType1Choice_ { }
+    public abstract partial record SettlementFailsDailyInstructionType1Choice_ { }
 }

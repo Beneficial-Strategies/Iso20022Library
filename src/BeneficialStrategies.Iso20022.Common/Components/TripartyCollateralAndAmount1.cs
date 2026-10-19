@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HHKmAChKEe2H2s7qerne1w")]
 [DisplayName("Triparty Collateral And Amount1")]
-public record TripartyCollateralAndAmount1
+public partial record TripartyCollateralAndAmount1
 {
     /// <summary>
     /// Triparty.

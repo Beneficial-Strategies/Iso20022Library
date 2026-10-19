@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice
     /// Position Component.
     /// </summary>
     [DisplayName("Position Component")]
-    public record PositionComponent : TradeReport33Choice_
+    public partial record PositionComponent : TradeReport33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

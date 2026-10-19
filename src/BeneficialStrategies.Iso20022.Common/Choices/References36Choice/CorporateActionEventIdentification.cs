@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References36Choice
     /// </summary>
     [IsoId("_jyCqVO5NEeCisYr99QEiWA_740193032")]
     [DisplayName("Corporate Action Event Identification")]
-    public record CorporateActionEventIdentification : References36Choice_
+    public partial record CorporateActionEventIdentification : References36Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

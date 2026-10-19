@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingExceptionOrExemption3Cho
     /// </summary>
     [IsoId("_AjSxcZPuEey0rJ3Gl6WZVA")]
     [DisplayName("Reason")]
-    public record Reason : ClearingExceptionOrExemption3Choice_
+    public partial record Reason : ClearingExceptionOrExemption3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

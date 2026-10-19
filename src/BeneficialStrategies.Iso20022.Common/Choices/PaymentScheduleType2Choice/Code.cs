@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentScheduleType2Choice
     /// </summary>
     [IsoId("_TYa6Ubb1Eeu9Cp6InX88Vw")]
     [DisplayName("Code")]
-    public record Code : PaymentScheduleType2Choice_
+    public partial record Code : PaymentScheduleType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
     [IsoId("_bWl_iRLBEeqctpBfTmLJnw")]
     [DisplayName("Valuation Update")]
     [IsoXmlTag("ValtnUpd")]
-    public record ValuationUpdate : TradePositionReport7Choice_
+    public partial record ValuationUpdate : TradePositionReport7Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbvxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Modify Limit V")]
-public record ModifyLimitV07 : IOuterRecord
+public partial record ModifyLimitV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

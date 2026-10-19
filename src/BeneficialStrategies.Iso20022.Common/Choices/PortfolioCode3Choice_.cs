@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_WMQcEVzGEeyTL-yEabFeNg")]
     [DisplayName("Portfolio Code 3 Choice")]
-    public abstract record PortfolioCode3Choice_ { }
+    public abstract partial record PortfolioCode3Choice_ { }
 }

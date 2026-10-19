@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TechnicalInputChannel1Choice
     /// </summary>
     [IsoId("_Rpr4otp-Ed-ak6NoX_4Aeg_-968156368")]
     [DisplayName("Code")]
-    public record Code : TechnicalInputChannel1Choice_
+    public partial record Code : TechnicalInputChannel1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

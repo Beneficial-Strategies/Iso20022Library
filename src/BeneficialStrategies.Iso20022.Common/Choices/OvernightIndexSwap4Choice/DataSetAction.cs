@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap4Choice
     /// </summary>
     [IsoId("_G1Uq8cEREea7jLfvGi1PDw")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : OvernightIndexSwap4Choice_
+    public partial record DataSetAction : OvernightIndexSwap4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice
     /// </summary>
     [IsoId("_QWOzudEdEei798TPbKJMuw")]
     [DisplayName("Pending Settlement")]
-    public record PendingSettlement : PaymentStatusReason1Choice_
+    public partial record PendingSettlement : PaymentStatusReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

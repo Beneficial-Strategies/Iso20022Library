@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZCu2lzneEem7JZMuWtwtsg")]
 [DisplayName("Request Details")]
-public record RequestDetails22
+public partial record RequestDetails22
 {
     /// <summary>
     /// References of the transaction for which the intra-balance modification is requested.

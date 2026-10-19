@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dG4aQTd4Ee62mtJT34z25w")]
 [DisplayName("Return Indicator2")]
-public record ReturnIndicator2
+public partial record ReturnIndicator2
 {
     /// <summary>
     /// Response Period.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyCSD1Choice
     [IsoId("_Umrp4zOaEeqBfed1bmSPqg")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public record Data : SettlementFailsDailyCSD1Choice_
+    public partial record Data : SettlementFailsDailyCSD1Choice_
     {
         /// <summary>
         /// Intra-CSD settlement instructions data.

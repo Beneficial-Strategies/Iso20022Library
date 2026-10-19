@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Polypropylene.
     /// </summary>
     [DisplayName("Polypropylene")]
-    public record Polypropylene : AssetClassCommodity7Choice_
+    public partial record Polypropylene : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

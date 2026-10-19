@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rJ-pkO3kEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Report Header")]
-public record SettlementInternaliserReportHeader1
+public partial record SettlementInternaliserReportHeader1
 {
     /// <summary>
     /// Provides the reporting timestamp, when the report was submitted from the Settlement Internaliser to the Competent Authority.

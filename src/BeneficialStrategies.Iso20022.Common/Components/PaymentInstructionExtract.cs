@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VQgOUtp-Ed-ak6NoX_4Aeg_-769020295")]
 [DisplayName("Payment Instruction Extract")]
-public record PaymentInstructionExtract
+public partial record PaymentInstructionExtract
 {
     /// <summary>
     /// Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assigner.

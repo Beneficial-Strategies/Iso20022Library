@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlb0xbvEeiyVv5j1vf1VQ")]
 [DisplayName("Modify Reservation V")]
-public record ModifyReservationV05 : IOuterRecord
+public partial record ModifyReservationV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

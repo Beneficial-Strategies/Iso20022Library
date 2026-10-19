@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(QuantityOrTerm1Choice.Term), nameof(QuantityOrTerm1Choice.Term))]
     [IsoId("_VVI-wCJDEe2zWP9pqvmqdw")]
     [DisplayName("Quantity Or Term 1 Choice")]
-    public abstract record QuantityOrTerm1Choice_ { }
+    public abstract partial record QuantityOrTerm1Choice_ { }
 }

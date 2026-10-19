@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-zhqwZjCEe6BApM7bIoABA")]
 [DisplayName("Trade Recurrent Query7")]
-public record TradeRecurrentQuery7
+public partial record TradeRecurrentQuery7
 {
     /// <summary>
     /// Query Type.

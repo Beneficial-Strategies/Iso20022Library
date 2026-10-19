@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2AnwzTEyEe6g-ffJsqGiSA")]
 [DisplayName("Long Payment Identification4")]
-public record LongPaymentIdentification4
+public partial record LongPaymentIdentification4
 {
     /// <summary>
     /// Transaction Identification.

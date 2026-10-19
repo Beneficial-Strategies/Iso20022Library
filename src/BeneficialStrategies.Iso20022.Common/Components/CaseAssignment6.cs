@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_voTj0DEyEe6g-ffJsqGiSA")]
 [DisplayName("Case Assignment6")]
-public record CaseAssignment6
+public partial record CaseAssignment6
 {
     /// <summary>
     /// Identification.

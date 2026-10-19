@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TVRQu9p-Ed-ak6NoX_4Aeg_1515822708")]
 [DisplayName("Bank Transaction Code Structure")]
-public record BankTransactionCodeStructure6
+public partial record BankTransactionCodeStructure6
 {
     /// <summary>
     /// Specifies the family within a domain.

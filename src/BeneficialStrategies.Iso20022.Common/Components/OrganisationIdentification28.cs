@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IV_5UEkJEeaOe8w0NJ11wQ")]
 [DisplayName("Organisation Identification")]
-public record OrganisationIdentification28
+public partial record OrganisationIdentification28
 {
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.

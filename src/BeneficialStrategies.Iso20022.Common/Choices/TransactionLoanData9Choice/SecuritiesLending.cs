@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData9Choice
     [IsoId("_lm1dcKoMEemdLtwzt4CWxg")]
     [DisplayName("Securities Lending")]
     [IsoXmlTag("SctiesLndg")]
-    public record SecuritiesLending : TransactionLoanData9Choice_
+    public partial record SecuritiesLending : TransactionLoanData9Choice_
     {
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.

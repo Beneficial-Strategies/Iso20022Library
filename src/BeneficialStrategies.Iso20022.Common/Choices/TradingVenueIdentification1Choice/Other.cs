@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choic
     [IsoId("_IkBp4Dd7EeWebbGLlGzH3g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : TradingVenueIdentification1Choice_
+    public partial record Other : TradingVenueIdentification1Choice_
     {
         /// <summary>
         /// Identification field of the submitting entity.

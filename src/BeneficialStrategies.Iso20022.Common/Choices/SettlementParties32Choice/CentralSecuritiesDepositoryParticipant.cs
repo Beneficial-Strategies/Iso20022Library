@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties32Choice
     /// </summary>
     [IsoId("_Az7-8bQ0EemI67HK7aviyg")]
     [DisplayName("Central Securities Depository Participant")]
-    public record CentralSecuritiesDepositoryParticipant : SettlementParties32Choice_
+    public partial record CentralSecuritiesDepositoryParticipant : SettlementParties32Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CntrlSctiesDpstryPtcpt")]

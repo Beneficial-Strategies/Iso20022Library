@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_L6EzwQ26EeWmAKKPnqYEVQ")]
     [DisplayName("Trade Confirmation 1 Choice")]
-    public abstract record TradeConfirmation1Choice_ { }
+    public abstract partial record TradeConfirmation1Choice_ { }
 }

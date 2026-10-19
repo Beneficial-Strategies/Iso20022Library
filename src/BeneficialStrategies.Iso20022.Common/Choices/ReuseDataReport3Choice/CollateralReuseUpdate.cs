@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice
     [IsoId("_0mq3t64bEemB_csI4yyKLA")]
     [DisplayName("Collateral Reuse Update")]
     [IsoXmlTag("CollReuseUpd")]
-    public record CollateralReuseUpdate : ReuseDataReport3Choice_
+    public partial record CollateralReuseUpdate : ReuseDataReport3Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9hwsYTAoEe2Ne600gC45nw")]
 [DisplayName("Compare Commodity Asset Class")]
-public record CompareCommodityAssetClass4
+public partial record CompareCommodityAssetClass4
 {
     /// <summary>
     /// Information for the first side of the transaction.

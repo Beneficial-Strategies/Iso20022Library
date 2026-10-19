@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rpr4odp-Ed-ak6NoX_4Aeg_-1373581543")]
     [DisplayName("Technical Input Channel 1 Choice")]
-    public abstract record TechnicalInputChannel1Choice_ { }
+    public abstract partial record TechnicalInputChannel1Choice_ { }
 }

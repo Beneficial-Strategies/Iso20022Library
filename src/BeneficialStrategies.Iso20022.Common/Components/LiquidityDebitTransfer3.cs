@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cUs1kdcZEeqRFcf2R4bPBw")]
 [DisplayName("Liquidity Debit Transfer")]
-public record LiquidityDebitTransfer3
+public partial record LiquidityDebitTransfer3
 {
     /// <summary>
     /// Used to uniquely identify the liquidity transfer.

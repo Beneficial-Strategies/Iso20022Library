@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency2Choice
     [IsoId("_mNON4fOFEeaS7fYULSI4_Q")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
-    public record Term : InterestRateFrequency2Choice_
+    public partial record Term : InterestRateFrequency2Choice_
     {
         /// <summary>
         /// Unit for the rate basis.

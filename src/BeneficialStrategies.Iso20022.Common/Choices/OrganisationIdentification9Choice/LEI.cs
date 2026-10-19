@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification9Choic
     /// </summary>
     [IsoId("_ML-TYZQMEeiILOjNP8ro1w")]
     [DisplayName("LEI")]
-    public record LEI : OrganisationIdentification9Choice_
+    public partial record LEI : OrganisationIdentification9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

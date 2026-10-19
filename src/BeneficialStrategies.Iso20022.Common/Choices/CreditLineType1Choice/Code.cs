@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditLineType1Choice
     /// </summary>
     [IsoId("_2T3LxYZ5Eee8r9VKRbnJSg")]
     [DisplayName("Code")]
-    public record Code : CreditLineType1Choice_
+    public partial record Code : CreditLineType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

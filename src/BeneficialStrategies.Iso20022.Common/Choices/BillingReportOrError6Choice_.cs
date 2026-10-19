@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(BillingReportOrError6Choice.OperationalError), nameof(BillingReportOrError6Choice.OperationalError))]
     [IsoId("_2hOjcTEyEe6g-ffJsqGiSA")]
     [DisplayName("BillingReportOrError6Choice")]
-    public abstract record BillingReportOrError6Choice_ { }
+    public abstract partial record BillingReportOrError6Choice_ { }
 }

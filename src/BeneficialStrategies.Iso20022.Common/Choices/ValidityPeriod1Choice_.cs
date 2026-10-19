@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_SDXf4GscEe25qph5Y8_eYQ")]
     [DisplayName("Validity Period1Choice")]
-    public abstract record ValidityPeriod1Choice_ { }
+    public abstract partial record ValidityPeriod1Choice_ { }
 }

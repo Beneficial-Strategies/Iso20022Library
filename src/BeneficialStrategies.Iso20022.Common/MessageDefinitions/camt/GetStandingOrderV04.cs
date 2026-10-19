@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_ThPM8db6Eeq_l4BJLVUF2Q")]
 [DisplayName("Get Standing Order V")]
-public record GetStandingOrderV04 : IOuterRecord
+public partial record GetStandingOrderV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_Nz8atx3pEeuiRvbpCaJe6A")]
 [DisplayName("Currency Control Request Or Letter V")]
-public record CurrencyControlRequestOrLetterV03 : IOuterRecord
+public partial record CurrencyControlRequestOrLetterV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HB6hseU9Ee-5RJhU69CFvQ")]
 [DisplayName("Security Identification49")]
-public record SecurityIdentification49
+public partial record SecurityIdentification49
 {
     /// <summary>
     /// ISIN.

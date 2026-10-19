@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RGEOMNp-Ed-ak6NoX_4Aeg_396814061")]
     [DisplayName("Payment Status Code Search 2 Choice")]
-    public abstract record PaymentStatusCodeSearch2Choice_ { }
+    public abstract partial record PaymentStatusCodeSearch2Choice_ { }
 }

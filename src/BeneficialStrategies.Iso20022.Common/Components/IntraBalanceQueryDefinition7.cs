@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r9cTwTp6EemwKdP955WBJQ")]
 [DisplayName("Intra Balance Query Definition")]
-public record IntraBalanceQueryDefinition7
+public partial record IntraBalanceQueryDefinition7
 {
     /// <summary>
     /// Defines the type of query.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQDQptp-Ed-ak6NoX_4Aeg_1416516304")]
 [DisplayName("Breakdown By Country")]
-public record BreakdownByCountry1
+public partial record BreakdownByCountry1
 {
     /// <summary>
     /// Country for which the cash flow is being reported.

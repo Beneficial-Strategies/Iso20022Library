@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yNYGiZlcEeeE1Ya-LgRsuQ")]
 [DisplayName("Business Day Search Criteria")]
-public record BusinessDaySearchCriteria2
+public partial record BusinessDaySearchCriteria2
 {
     /// <summary>
     /// Date for which the availability information is provided.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_nfQOQPbfEeyInphUKJZxtQ")]
     [DisplayName("Event Identifier 1 Choice")]
-    public abstract record EventIdentifier1Choice_ { }
+    public abstract partial record EventIdentifier1Choice_ { }
 }

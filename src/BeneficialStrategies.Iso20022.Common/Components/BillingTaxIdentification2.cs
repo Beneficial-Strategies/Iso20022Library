@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uEG5seDzEeim_fWj9imBTA")]
 [DisplayName("Billing Tax Identification")]
-public record BillingTaxIdentification2
+public partial record BillingTaxIdentification2
 {
     /// <summary>
     /// Value added tax (VAT) registration number as provided by the region’s local taxing authority.

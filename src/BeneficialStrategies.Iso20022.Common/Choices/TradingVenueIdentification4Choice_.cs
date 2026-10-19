@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TradingVenueIdentification4Choice.SystematicInternaliser))]
     [JsonDerivedType(typeof(TradingVenueIdentification4Choice.MarketIdentificationCode))]
     [JsonDerivedType(typeof(TradingVenueIdentification4Choice.SystematicInternaliser))]
-    public abstract record TradingVenueIdentification4Choice_
+    public abstract partial record TradingVenueIdentification4Choice_
     {
     }
 }

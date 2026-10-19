@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3BkQazEyEe6g-ffJsqGiSA")]
 [DisplayName("Currency Control Record Status3")]
-public record CurrencyControlRecordStatus3
+public partial record CurrencyControlRecordStatus3
 {
     /// <summary>
     /// Record Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CdhEoGIcEfCeoPFCHQnhvA")]
 [DisplayName("Offer Data1")]
-public record OfferData1
+public partial record OfferData1
 {
     /// <summary>
     /// Best offer in continuous order books.

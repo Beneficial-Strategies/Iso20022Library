@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice
     /// Debit Authorisation.
     /// </summary>
     [DisplayName("Debit Authorisation")]
-    public record DebitAuthorisation : InvestigationDataRecord7Choice_
+    public partial record DebitAuthorisation : InvestigationDataRecord7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

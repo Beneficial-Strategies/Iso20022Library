@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L1v_MRlbEe2Do_UtrNmb2g")]
 [DisplayName("Resolution Data")]
-public record ResolutionData4
+public partial record ResolutionData4
 {
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.

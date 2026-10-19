@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vW5JAY0SEemUAO64Q252gQ")]
 [DisplayName("Settlement Data Rate")]
-public record SettlementDataRate2
+public partial record SettlementDataRate2
 {
     /// <summary>
     /// Specifies the rate, in terms of volume, of the failed settlement instructions compared to the total volume, of settlement instructions performed (settled and failed) during the period covered by the report.

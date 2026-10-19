@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_EVNOIW4-EeiU9cctagi5ow")]
     [DisplayName("Claim Non Receipt 2 Choice")]
-    public abstract record ClaimNonReceipt2Choice_ { }
+    public abstract partial record ClaimNonReceipt2Choice_ { }
 }

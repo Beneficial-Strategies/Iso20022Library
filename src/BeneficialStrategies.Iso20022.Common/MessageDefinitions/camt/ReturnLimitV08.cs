@@ -36,7 +36,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlcGRbvEeiyVv5j1vf1VQ")]
 [DisplayName("Return Limit V")]
-public record ReturnLimitV08 : IOuterRecord
+public partial record ReturnLimitV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R8SRQZifEe2f7NHvXATP5g")]
 [DisplayName("Securities Transaction")]
-public record SecuritiesTransaction3
+public partial record SecuritiesTransaction3
 {
     /// <summary>
     /// Specifies the date/time on which the trade was executed.

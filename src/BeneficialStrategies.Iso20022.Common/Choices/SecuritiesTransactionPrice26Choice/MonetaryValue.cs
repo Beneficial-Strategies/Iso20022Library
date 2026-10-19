@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
     /// <summary>Price expressed as a monetary value.</summary>
     [IsoId("_HT_WEa2kEfCfRtNoJv1jFQ")]
     [DisplayName("Monetary Value")]
-    public record MonetaryValue : SecuritiesTransactionPrice26Choice_
+    public partial record MonetaryValue : SecuritiesTransactionPrice26Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("MntryVal")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AaVMgRA3Ee6N57R8Wekj-w")]
 [DisplayName("Order Data4")]
-public record OrderData4
+public partial record OrderData4
 {
     /// <summary>
     /// Submitting Entity.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice
     /// Other Investments.
     /// </summary>
     [DisplayName("Other Investments")]
-    public record OtherInvestments : Investment2Choice_
+    public partial record OtherInvestments : Investment2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

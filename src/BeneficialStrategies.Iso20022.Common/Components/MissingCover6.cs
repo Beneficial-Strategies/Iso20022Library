@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x9c2QTEyEe6g-ffJsqGiSA")]
 [DisplayName("Missing Cover6")]
-public record MissingCover6
+public partial record MissingCover6
 {
     /// <summary>
     /// Missing Cover Indicator.

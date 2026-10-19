@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bk-o0dcZEeqRFcf2R4bPBw")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction132
+public partial record PaymentTransaction132
 {
     /// <summary>
     /// Unique and unambiguous identifier of a modification request status, as assigned by the assigner.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yUPGYRbpEeOy-PlRuFSUzQ")]
     [DisplayName("System Status 2 Choice")]
-    public abstract record SystemStatus2Choice_ { }
+    public abstract partial record SystemStatus2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus5Choice
     [IsoId("_NRkhp249EeiU9cctagi5ow")]
     [DisplayName("Duplicate Of")]
     [IsoXmlTag("DplctOf")]
-    public record DuplicateOf : InvestigationStatus5Choice_
+    public partial record DuplicateOf : InvestigationStatus5Choice_
     {
         /// <summary>
         /// Uniquely identifies the case.

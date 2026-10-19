@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7l1ydjm6EeWDb47rJ6ki4Q")]
 [DisplayName("Currency Control Header")]
-public record CurrencyControlHeader3
+public partial record CurrencyControlHeader3
 {
     /// <summary>
     /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.|Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.

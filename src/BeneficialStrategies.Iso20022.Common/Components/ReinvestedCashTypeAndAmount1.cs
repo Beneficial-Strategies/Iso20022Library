@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_08jc8JLiEeelrYORFsXWZg")]
 [DisplayName("Reinvested Cash Type And Amount")]
-public record ReinvestedCashTypeAndAmount1
+public partial record ReinvestedCashTypeAndAmount1
 {
     /// <summary>
     /// Provides details on the type of the cash reinvestment in a given currency.

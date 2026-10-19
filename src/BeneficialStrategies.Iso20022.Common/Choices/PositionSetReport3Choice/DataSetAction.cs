@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetReport3Choice
     /// </summary>
     [IsoId("_0nw0gcKwEeuM4pgP8Vixbg")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : PositionSetReport3Choice_
+    public partial record DataSetAction : PositionSetReport3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

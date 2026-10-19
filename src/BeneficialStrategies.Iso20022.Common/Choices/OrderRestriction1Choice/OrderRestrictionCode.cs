@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderRestriction1Choice
     /// Order Restriction Code.
     /// </summary>
     [DisplayName("Order Restriction Code")]
-    public record OrderRestrictionCode : OrderRestriction1Choice_
+    public partial record OrderRestrictionCode : OrderRestriction1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

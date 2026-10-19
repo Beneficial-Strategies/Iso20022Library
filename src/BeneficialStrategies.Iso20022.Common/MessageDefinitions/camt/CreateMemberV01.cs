@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_P8togckHEem3UrxZgQhVAw")]
 [DisplayName("Create Member V")]
-public record CreateMemberV01 : IOuterRecord
+public partial record CreateMemberV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

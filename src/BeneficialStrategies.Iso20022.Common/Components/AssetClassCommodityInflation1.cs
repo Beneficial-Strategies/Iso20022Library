@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aYNJwFr0EeWN79Bl6BUd3g")]
 [DisplayName("Asset Class Commodity Inflation")]
-public record AssetClassCommodityInflation1
+public partial record AssetClassCommodityInflation1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

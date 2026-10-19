@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A2yHacK3EeuFNp8LZAnorg")]
 [DisplayName("Security")]
-public record Security48
+public partial record Security48
 {
     /// <summary>
     /// Specifies whether the values defined as ISIN (International Securities Identification Number-ISO 6166) identifier are matching or not.

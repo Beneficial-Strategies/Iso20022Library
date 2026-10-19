@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
     /// </summary>
     [IsoId("_T-i3Ntp-Ed-ak6NoX_4Aeg_1279007626")]
     [DisplayName("Possible Duplicate Instruction")]
-    public record PossibleDuplicateInstruction : UnableToApplyJustification2Choice_
+    public partial record PossibleDuplicateInstruction : UnableToApplyJustification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

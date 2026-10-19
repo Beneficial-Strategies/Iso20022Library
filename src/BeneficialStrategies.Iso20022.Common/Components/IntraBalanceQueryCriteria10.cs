@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5NYApTEyEe6g-ffJsqGiSA")]
 [DisplayName("Intra Balance Query Criteria10")]
-public record IntraBalanceQueryCriteria10
+public partial record IntraBalanceQueryCriteria10
 {
     /// <summary>
     /// Cancellation Request Identification.

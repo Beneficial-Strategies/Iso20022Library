@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CX1PMFnFEe21_Ij7nUB3IA")]
 [DisplayName("Interoperability CCP1")]
-public record InteroperabilityCCP1
+public partial record InteroperabilityCCP1
 {
     /// <summary>
     /// Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingMethod1Choice
     [IsoId("_6P9DtJqlEeGSON8vddiWzQ_1766081075")]
     [DisplayName("Method D")]
     [IsoXmlTag("MtdD")]
-    public record MethodD : BillingMethod1Choice_
+    public partial record MethodD : BillingMethod1Choice_
     {
         /// <summary>
         /// Equivalent amount to the service tax host amount but allows the sender to optionally express the value in the pricing currency.

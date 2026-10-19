@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData11Choice
     [IsoId("_BO3n864UEemB_csI4yyKLA")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : TradeData11Choice_
+    public partial record Report : TradeData11Choice_
     {
         /// <summary>
         /// Information about accepted and rejected reports and the reasons of rejection.

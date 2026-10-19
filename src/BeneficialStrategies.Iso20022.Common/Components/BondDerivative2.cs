@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s736gWlJEeaLAKoEUNsD9g")]
 [DisplayName("Bond Derivative")]
-public record BondDerivative2
+public partial record BondDerivative2
 {
     /// <summary>
     /// Legal Entity Identifier (LEI) code of the issuer of the direct or ultimate underlying bond.

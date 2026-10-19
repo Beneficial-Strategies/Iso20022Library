@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_z6GJJTEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order11")]
-public record StandingOrder11
+public partial record StandingOrder11
 {
     /// <summary>
     /// Amount.

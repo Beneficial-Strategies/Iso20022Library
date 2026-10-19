@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria4Choice
     /// </summary>
     [IsoId("_gdi6QdcZEeqRFcf2R4bPBw")]
     [DisplayName("Query Name")]
-    public record QueryName : StandingOrderCriteria4Choice_
+    public partial record QueryName : StandingOrderCriteria4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

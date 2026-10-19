@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode6Choice
     /// Portfolio.
     /// </summary>
     [DisplayName("Portfolio")]
-    public record Portfolio : CollateralPortfolioCode6Choice_
+    public partial record Portfolio : CollateralPortfolioCode6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

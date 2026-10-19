@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderEventType1Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : OrderEventType1Choice_
+    public partial record Proprietary : OrderEventType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

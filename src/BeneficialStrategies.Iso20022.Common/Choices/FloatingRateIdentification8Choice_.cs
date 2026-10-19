@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_IrIB4TNoEe2UWZuK9pqFtg")]
     [DisplayName("Floating Rate Identification 8 Choice")]
-    public abstract record FloatingRateIdentification8Choice_ { }
+    public abstract partial record FloatingRateIdentification8Choice_ { }
 }

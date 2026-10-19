@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DzJ80ND0EfCCRJ-TKQa7sQ")]
 [DisplayName("Margin Rate Portfolio1")]
-public record MarginRatePortfolio1
+public partial record MarginRatePortfolio1
 {
     /// <summary>
     /// Margin charged on a portfolio where the value of the contract increases when the value of the underlying increases.

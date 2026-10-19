@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iaQV0GFSEfC91ZUW7iS7ww")]
 [DisplayName("Instrument Report1")]
-public record InstrumentReport1
+public partial record InstrumentReport1
 {
     /// <summary>
     /// Identification of the report.

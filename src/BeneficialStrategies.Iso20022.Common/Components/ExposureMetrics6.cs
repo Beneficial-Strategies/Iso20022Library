@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zg_J065QEeuo-IflVgGqiA")]
 [DisplayName("Exposure Metrics")]
-public record ExposureMetrics6
+public partial record ExposureMetrics6
 {
     /// <summary>
     /// Information on posted collateral and margin.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice
     /// Repurchase Agreement.
     /// </summary>
     [DisplayName("Repurchase Agreement")]
-    public record RepurchaseAgreement : Investment2Choice_
+    public partial record RepurchaseAgreement : Investment2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError10
     /// Operational Error.
     /// </summary>
     [DisplayName("Operational Error")]
-    public record OperationalError : IntraBalanceOrOperationalError10Choice_
+    public partial record OperationalError : IntraBalanceOrOperationalError10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

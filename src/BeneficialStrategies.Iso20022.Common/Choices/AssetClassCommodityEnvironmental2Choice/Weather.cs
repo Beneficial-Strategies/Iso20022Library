@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
     [IsoId("_g7vTs7vwEeiLRYqS-r-R-A")]
     [DisplayName("Weather")]
     [IsoXmlTag("Wthr")]
-    public record Weather : AssetClassCommodityEnvironmental2Choice_
+    public partial record Weather : AssetClassCommodityEnvironmental2Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

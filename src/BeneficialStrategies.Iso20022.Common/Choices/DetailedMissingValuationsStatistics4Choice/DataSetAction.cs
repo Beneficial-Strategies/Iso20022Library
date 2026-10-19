@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
     /// </summary>
     [IsoId("_x1GY4VyGEe24CqbZJK5XxA")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : DetailedMissingValuationsStatistics4Choice_
+    public partial record DataSetAction : DetailedMissingValuationsStatistics4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rp-zl9p-Ed-ak6NoX_4Aeg_1074004060")]
 [DisplayName("Proprietary Party")]
-public record ProprietaryParty2
+public partial record ProprietaryParty2
 {
     /// <summary>
     /// Specifies the type of proprietary party.

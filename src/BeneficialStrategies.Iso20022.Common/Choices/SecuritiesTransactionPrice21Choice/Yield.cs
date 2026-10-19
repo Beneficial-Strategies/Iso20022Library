@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
     /// Yield.
     /// </summary>
     [DisplayName("Yield")]
-    public record Yield : SecuritiesTransactionPrice21Choice_
+    public partial record Yield : SecuritiesTransactionPrice21Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

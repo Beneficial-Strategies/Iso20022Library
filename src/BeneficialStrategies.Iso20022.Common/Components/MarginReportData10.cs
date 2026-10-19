@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hoWZccEkEe66laxnCpxfpw")]
 [DisplayName("Margin Report Data10")]
-public record MarginReportData10
+public partial record MarginReportData10
 {
     /// <summary>
     /// Reporting Time Stamp.

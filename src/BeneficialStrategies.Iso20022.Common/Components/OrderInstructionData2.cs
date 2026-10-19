@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Wj4oIRA4Ee6N57R8Wekj-w")]
 [DisplayName("Order Instruction Data2")]
-public record OrderInstructionData2
+public partial record OrderInstructionData2
 {
     /// <summary>
     /// Buy Sell Indicator.

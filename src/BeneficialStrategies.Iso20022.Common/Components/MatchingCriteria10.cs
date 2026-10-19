@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ays4p8K3EeuFNp8LZAnorg")]
 [DisplayName("Matching Criteria")]
-public record MatchingCriteria10
+public partial record MatchingCriteria10
 {
     /// <summary>
     /// Compares information related to both sides of a loan.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
     [IsoId("_fbqi0SJDEe2zWP9pqvmqdw")]
     [DisplayName("Schedule Period")]
     [IsoXmlTag("SchdlPrd")]
-    public record SchedulePeriod : QuantityOrTerm1Choice_
+    public partial record SchedulePeriod : QuantityOrTerm1Choice_
     {
         /// <summary>
         /// Number of units of the financial instrument, that is, the nominal value.

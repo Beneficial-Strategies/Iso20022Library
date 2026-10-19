@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M00DgDXHEemdWfjs3tykFQ")]
 [DisplayName("Product Classification")]
-public record ProductClassification1
+public partial record ProductClassification1
 {
     /// <summary>
     /// Asset class of the underlying of the derivative (e.g. Interest Rate, Commodity, Equity).

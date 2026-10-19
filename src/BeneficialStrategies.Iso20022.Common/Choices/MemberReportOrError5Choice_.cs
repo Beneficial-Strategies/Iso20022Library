@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jUbLIXSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Member Report Or Error 5 Choice")]
-    public abstract record MemberReportOrError5Choice_ { }
+    public abstract partial record MemberReportOrError5Choice_ { }
 }

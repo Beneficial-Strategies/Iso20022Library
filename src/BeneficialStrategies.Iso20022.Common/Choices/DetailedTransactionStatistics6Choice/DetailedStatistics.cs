@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics6Ch
     [IsoId("_x_mYs1yGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Statistics")]
     [IsoXmlTag("DtldSttstcs")]
-    public record DetailedStatistics : DetailedTransactionStatistics6Choice_
+    public partial record DetailedStatistics : DetailedTransactionStatistics6Choice_
     {
         /// <summary>
         /// Total number of reports sent or received.

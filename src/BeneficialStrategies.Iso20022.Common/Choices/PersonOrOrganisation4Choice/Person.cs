@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice
     /// Person.
     /// </summary>
     [DisplayName("Person")]
-    public record Person : PersonOrOrganisation4Choice_
+    public partial record Person : PersonOrOrganisation4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

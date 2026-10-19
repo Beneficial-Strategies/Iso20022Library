@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vzEGEHYDEee_qcLXasnA4g")]
 [DisplayName("Margin Account")]
-public record MarginAccount1
+public partial record MarginAccount1
 {
     /// <summary>
     /// Unique identifier of the margin account.

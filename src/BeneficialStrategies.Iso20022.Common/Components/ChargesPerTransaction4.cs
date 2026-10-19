@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6FpFYTEyEe6g-ffJsqGiSA")]
 [DisplayName("Charges Per Transaction4")]
-public record ChargesPerTransaction4
+public partial record ChargesPerTransaction4
 {
     /// <summary>
     /// Charges Identification.

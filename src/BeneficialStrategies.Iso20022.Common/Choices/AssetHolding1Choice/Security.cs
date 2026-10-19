@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     [IsoId("_GHPngK_7EeaE9YROwd69hA")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public record Security : AssetHolding1Choice_
+    public partial record Security : AssetHolding1Choice_
     {
         /// <summary>
         /// ISIN of the outright investment.

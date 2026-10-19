@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_lP69QcKvEeuzU9S_IANlog")]
 [DisplayName("Securities Financing Reporting Reused Collateral Data Transaction State Report V")]
-public record SecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02
+public partial record SecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02
     : IOuterRecord
 {
     /// <summary>

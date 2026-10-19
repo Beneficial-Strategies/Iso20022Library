@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QLp0Ytp-Ed-ak6NoX_4Aeg_-1204184302")]
 [DisplayName("Exchange Rate Information")]
-public record ExchangeRateInformation1
+public partial record ExchangeRateInformation1
 {
     /// <summary>
     /// The factor used for conversion of an amount from one currency to another. This reflects the price at which one currency was bought with another currency.

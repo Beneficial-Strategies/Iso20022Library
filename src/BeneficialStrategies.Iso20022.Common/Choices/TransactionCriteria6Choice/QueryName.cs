@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria6Choice
     /// </summary>
     [IsoId("_gUfE4dcZEeqRFcf2R4bPBw")]
     [DisplayName("Query Name")]
-    public record QueryName : TransactionCriteria6Choice_
+    public partial record QueryName : TransactionCriteria6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

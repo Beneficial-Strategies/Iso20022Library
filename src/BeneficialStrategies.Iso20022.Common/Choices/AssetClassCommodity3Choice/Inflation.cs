@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice
     [IsoId("_lThddXvyEeanCNPcMT7sSg")]
     [DisplayName("Inflation")]
     [IsoXmlTag("Infltn")]
-    public record Inflation : AssetClassCommodity3Choice_
+    public partial record Inflation : AssetClassCommodity3Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

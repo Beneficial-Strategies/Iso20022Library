@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MyNrMUmXEeqmSrLQiFB8FA")]
 [DisplayName("Trading Venue Attributes")]
-public record TradingVenueAttributes2
+public partial record TradingVenueAttributes2
 {
     /// <summary>
     /// Segment MIC for the trading venue or systematic internaliser, where applicable, otherwise the operating MIC.

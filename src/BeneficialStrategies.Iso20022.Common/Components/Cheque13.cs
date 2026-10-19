@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2YR7EQF9EeuDW9bNZAE8VA")]
 [DisplayName("Cheque")]
-public record Cheque13
+public partial record Cheque13
 {
     /// <summary>
     /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the instruction.

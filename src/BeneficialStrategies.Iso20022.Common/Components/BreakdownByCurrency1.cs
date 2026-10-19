@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQDQodp-Ed-ak6NoX_4Aeg_1062807624")]
 [DisplayName("Breakdown By Currency")]
-public record BreakdownByCurrency1
+public partial record BreakdownByCurrency1
 {
     /// <summary>
     /// Currency for which the cash flow is being reported.

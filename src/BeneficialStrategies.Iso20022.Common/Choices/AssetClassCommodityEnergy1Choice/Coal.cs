@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy1Choice
     [IsoId("_FWT_8FrWEeWN79Bl6BUd3g")]
     [DisplayName("Coal")]
     [IsoXmlTag("Coal")]
-    public record Coal : AssetClassCommodityEnergy1Choice_
+    public partial record Coal : AssetClassCommodityEnergy1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

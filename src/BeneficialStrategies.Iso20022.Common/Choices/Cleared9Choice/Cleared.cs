@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared9Choice
     [IsoId("_4paV4ZQPEeiok48Eh9lW9Q")]
     [DisplayName("Cleared")]
     [IsoXmlTag("Clrd")]
-    public record Cleared : Cleared9Choice_
+    public partial record Cleared : Cleared9Choice_
     {
         /// <summary>
         /// In the case of a contract that has been cleared, the unique code for the CCP that has cleared the contract.

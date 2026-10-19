@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlcARbvEeiyVv5j1vf1VQ")]
 [DisplayName("Return Business Day Information V")]
-public record ReturnBusinessDayInformationV07 : IOuterRecord
+public partial record ReturnBusinessDayInformationV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

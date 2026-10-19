@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingMarginInformation
     /// </summary>
     [IsoId("_rsDiwVowEe23K4GXSpBSeg")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : DetailedMissingMarginInformationStatistics4Choice_
+    public partial record DataSetAction : DetailedMissingMarginInformationStatistics4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

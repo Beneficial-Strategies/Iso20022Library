@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification2Choic
     [IsoId("_Qveap3vSEeWrWYBng3OpVw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : CounterpartyIdentification2Choice_
+    public partial record Other : CounterpartyIdentification2Choice_
     {
         /// <summary>
         /// Name or sector of the counterparty of the reporting agent used by the reporting agent.

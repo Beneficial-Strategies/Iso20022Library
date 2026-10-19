@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RwPMkdp-Ed-ak6NoX_4Aeg_-913228615")]
 [DisplayName("Tax Charges")]
-public record TaxCharges2
+public partial record TaxCharges2
 {
     /// <summary>
     /// Unique reference to unambiguously identify the nature of the tax levied, such as Value Added Tax (VAT).

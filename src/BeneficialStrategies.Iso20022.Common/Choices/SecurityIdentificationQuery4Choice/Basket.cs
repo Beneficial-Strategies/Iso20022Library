@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choi
     [IsoId("_S7jvMJNfEeytjZlcgApf6A")]
     [DisplayName("Basket")]
     [IsoXmlTag("Bskt")]
-    public record Basket : SecurityIdentificationQuery4Choice_
+    public partial record Basket : SecurityIdentificationQuery4Choice_
     {
         /// <summary>
         /// Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.

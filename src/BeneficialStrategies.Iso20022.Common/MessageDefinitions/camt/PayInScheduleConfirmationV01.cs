@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_sYfqSWtdEeCY4-KZ9JEyUQ_1049190902")]
 [DisplayName("Pay In Schedule Confirmation V01")]
-public record PayInScheduleConfirmationV01 : IOuterRecord
+public partial record PayInScheduleConfirmationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

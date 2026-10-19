@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ah8Gl5PuEey0rJ3Gl6WZVA")]
     [DisplayName("Clearing Exception Or Exemption 3 Choice")]
-    public abstract record ClearingExceptionOrExemption3Choice_ { }
+    public abstract partial record ClearingExceptionOrExemption3Choice_ { }
 }

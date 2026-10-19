@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-UBWoRaIEe27wrM4RUjLog")]
 [DisplayName("Technical Attributes")]
-public record TechnicalAttributes5
+public partial record TechnicalAttributes5
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

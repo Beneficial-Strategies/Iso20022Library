@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6PphwJqlEeGSON8vddiWzQ_1042088657")]
     [DisplayName("Billing Sub Service Qualifier 1 Choice")]
-    public abstract record BillingSubServiceQualifier1Choice_ { }
+    public abstract partial record BillingSubServiceQualifier1Choice_ { }
 }

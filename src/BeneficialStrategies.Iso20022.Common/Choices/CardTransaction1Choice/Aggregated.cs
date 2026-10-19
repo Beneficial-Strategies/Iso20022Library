@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction1Choice
     [IsoId("_t6ZGs1kyEeGeoaLUQk__nA_-974180878")]
     [DisplayName("Aggregated")]
     [IsoXmlTag("Aggtd")]
-    public record Aggregated : CardTransaction1Choice_
+    public partial record Aggregated : CardTransaction1Choice_
     {
         /// <summary>
         /// Service in addition to the main service.

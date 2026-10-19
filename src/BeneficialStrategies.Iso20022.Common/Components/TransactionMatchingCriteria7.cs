@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BWq7d5BIEe6Ojt1b3tfu9Q")]
 [DisplayName("Transaction Matching Criteria7")]
-public record TransactionMatchingCriteria7
+public partial record TransactionMatchingCriteria7
 {
     /// <summary>
     /// Report Tracking Number.

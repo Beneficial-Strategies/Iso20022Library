@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice
     [IsoId("_UuYYtdp-Ed-ak6NoX_4Aeg_1934789984")]
     [DisplayName("Rejected Cancellation")]
     [IsoXmlTag("RjctdCxl")]
-    public record RejectedCancellation : InvestigationStatusChoice_
+    public partial record RejectedCancellation : InvestigationStatusChoice_
     {
         /// <summary>
         /// Justification for the rejection of the cancellation.

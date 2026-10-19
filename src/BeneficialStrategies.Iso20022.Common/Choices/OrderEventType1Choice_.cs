@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_7ag5EGveEe2Re-GccwOX8g")]
     [DisplayName("Order Event Type1Choice")]
-    public abstract record OrderEventType1Choice_ { }
+    public abstract partial record OrderEventType1Choice_ { }
 }

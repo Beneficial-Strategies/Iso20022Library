@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_u3eqcUwoEfCw8OkvsmFlbQ")]
 [DisplayName("Billing Report Request V01")]
-public record BillingReportRequestV01 : IOuterRecord
+public partial record BillingReportRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

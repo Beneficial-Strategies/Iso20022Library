@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FLgd4dR6EemZdYGWu384Zw")]
 [DisplayName("Compare ISIN Identifier")]
-public record CompareISINIdentifier2
+public partial record CompareISINIdentifier2
 {
     /// <summary>
     /// Information for the first side of the transaction.

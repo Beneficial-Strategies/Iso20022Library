@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VwtkgdSZEemZdYGWu384Zw")]
 [DisplayName("Compare MIC Identifier")]
-public record CompareMICIdentifier2
+public partial record CompareMICIdentifier2
 {
     /// <summary>
     /// Information for the first side of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingMarginInformation
     [IsoId("_rsDiw1owEe23K4GXSpBSeg")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : DetailedMissingMarginInformationStatistics4Choice_
+    public partial record Report : DetailedMissingMarginInformationStatistics4Choice_
     {
         /// <summary>
         /// Number of outstanding derivatives.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1NvnkZlZEeeE1Ya-LgRsuQ")]
 [DisplayName("Business Information Query Definition")]
-public record BusinessInformationQueryDefinition3
+public partial record BusinessInformationQueryDefinition3
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

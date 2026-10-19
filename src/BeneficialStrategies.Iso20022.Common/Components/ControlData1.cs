@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RqlQiNp-Ed-ak6NoX_4Aeg_518525040")]
 [DisplayName("Control Data")]
-public record ControlData1
+public partial record ControlData1
 {
     /// <summary>
     /// Number of individual transactions contained in the message.

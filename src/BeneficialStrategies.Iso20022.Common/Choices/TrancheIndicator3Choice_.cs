@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_mq05QQ06EeuJ1fOEB4bQXA")]
     [DisplayName("Tranche Indicator 3 Choice")]
-    public abstract record TrancheIndicator3Choice_ { }
+    public abstract partial record TrancheIndicator3Choice_ { }
 }

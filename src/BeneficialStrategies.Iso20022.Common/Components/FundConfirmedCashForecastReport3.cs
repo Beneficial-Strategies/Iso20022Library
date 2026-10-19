@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q8jO0QdxEeSPHJIdUs1USg")]
 [DisplayName("Fund Confirmed Cash Forecast Report")]
-public record FundConfirmedCashForecastReport3
+public partial record FundConfirmedCashForecastReport3
 {
     /// <summary>
     /// Information about the fund/sub fund when the report either specifies cash flow for the fund/sub fund or for a share class of the fund/sub fund.

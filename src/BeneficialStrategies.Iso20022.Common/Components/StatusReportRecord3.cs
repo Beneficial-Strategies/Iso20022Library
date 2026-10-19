@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YZkjQdHEEeaokquJJ-K6uA")]
 [DisplayName("Status Report Record")]
-public record StatusReportRecord3
+public partial record StatusReportRecord3
 {
     /// <summary>
     /// Unique and unambiguous technical identification of the original data for which the status is provided.

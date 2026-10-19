@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
     /// Any BIC.
     /// </summary>
     [DisplayName("Any BIC")]
-    public record AnyBIC : TransactionAmendment1Choice_
+    public partial record AnyBIC : TransactionAmendment1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

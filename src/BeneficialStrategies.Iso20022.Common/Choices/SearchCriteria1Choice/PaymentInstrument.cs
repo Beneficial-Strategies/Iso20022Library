@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     [IsoId("_FACTBkJ-EeGuetKibuqsKw")]
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
-    public record PaymentInstrument : SearchCriteria1Choice_
+    public partial record PaymentInstrument : SearchCriteria1Choice_
     {
         /// <summary>
         /// Provides the card number.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FF_rwdR6EemZdYGWu384Zw")]
 [DisplayName("Security")]
-public record Security17
+public partial record Security17
 {
     /// <summary>
     /// Specifies whether the values defined as ISIN identifier are matching or not.

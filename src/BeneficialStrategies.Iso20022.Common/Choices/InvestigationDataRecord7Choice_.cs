@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_oax_8zrQEe-thIfLZ94a1w")]
     [DisplayName("Investigation Data Record7Choice")]
-    public abstract record InvestigationDataRecord7Choice_ { }
+    public abstract partial record InvestigationDataRecord7Choice_ { }
 }

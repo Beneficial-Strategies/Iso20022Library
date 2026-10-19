@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3sV2tNNDEeSDLevdaFPXHw")]
 [DisplayName("Loan Contract Tranche")]
-public record LoanContractTranche1
+public partial record LoanContractTranche1
 {
     /// <summary>
     /// Unique sequence number of the tranche.

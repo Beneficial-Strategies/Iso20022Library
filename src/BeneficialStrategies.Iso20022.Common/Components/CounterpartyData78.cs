@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IKxnMc2HEeqFGLkKbAvCGg")]
 [DisplayName("Counterparty Data")]
-public record CounterpartyData78
+public partial record CounterpartyData78
 {
     /// <summary>
     /// Unique code identifying the entity which submits the report. In the case where submission of the report has been delegated to a third party or to the other counterparty, a unique code identifying that entity.

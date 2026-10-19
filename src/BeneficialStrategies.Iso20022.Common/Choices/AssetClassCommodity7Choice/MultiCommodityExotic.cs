@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Multi Commodity Exotic.
     /// </summary>
     [DisplayName("Multi Commodity Exotic")]
-    public record MultiCommodityExotic : AssetClassCommodity7Choice_
+    public partial record MultiCommodityExotic : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

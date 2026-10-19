@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZgWEUOFIEeStTblywAGIyA")]
 [DisplayName("Contract Registration Statement Criteria")]
-public record ContractRegistrationStatementCriteria1
+public partial record ContractRegistrationStatementCriteria1
 {
     /// <summary>
     /// Indicates whether the journal of the transactions recorded under the registered currency control contract must be returned or not.

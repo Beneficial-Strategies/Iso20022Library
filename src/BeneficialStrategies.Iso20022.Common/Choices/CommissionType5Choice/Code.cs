@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommissionType5Choice
     /// </summary>
     [IsoId("_ssJ7k2W6EeSHcOWXSsMhqw")]
     [DisplayName("Code")]
-    public record Code : CommissionType5Choice_
+    public partial record Code : CommissionType5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

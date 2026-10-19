@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ypcOkaicEeWHO_l3hf2rlA")]
     [DisplayName("Overnight Index Swap 3 Choice")]
-    public abstract record OvernightIndexSwap3Choice_ { }
+    public abstract partial record OvernightIndexSwap3Choice_ { }
 }

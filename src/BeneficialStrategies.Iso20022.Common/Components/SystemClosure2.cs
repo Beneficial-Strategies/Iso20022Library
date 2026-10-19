@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xkRfK5lcEeeE1Ya-LgRsuQ")]
 [DisplayName("System Closure")]
-public record SystemClosure2
+public partial record SystemClosure2
 {
     /// <summary>
     /// Period of time when the system is closed/not operating.

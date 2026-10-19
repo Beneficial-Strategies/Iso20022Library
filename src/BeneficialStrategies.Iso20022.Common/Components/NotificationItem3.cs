@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VrhFcBJDEd-BHKZLjFvsWA")]
 [DisplayName("Notification Item")]
-public record NotificationItem3
+public partial record NotificationItem3
 {
     /// <summary>
     /// Unique identification, as assigned by the account owner, to unambiguously identify the expected credit entry.

@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PU-ECtp-Ed-ak6NoX_4Aeg_847262836")]
     [DisplayName("Implied Currency Amount Range Choice")]
-    public abstract record ImpliedCurrencyAmountRangeChoice_ { }
+    public abstract partial record ImpliedCurrencyAmountRangeChoice_ { }
 }

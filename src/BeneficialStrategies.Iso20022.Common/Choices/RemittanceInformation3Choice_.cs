@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rb1C1tp-Ed-ak6NoX_4Aeg_-609212220")]
     [DisplayName("Remittance Information 3 Choice")]
-    public abstract record RemittanceInformation3Choice_ { }
+    public abstract partial record RemittanceInformation3Choice_ { }
 }

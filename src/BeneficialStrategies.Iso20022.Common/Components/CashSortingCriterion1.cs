@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Uw6IQtp-Ed-ak6NoX_4Aeg_1294908608")]
 [DisplayName("Cash Sorting Criterion")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record CashSortingCriterion1
+public partial record CashSortingCriterion1
 {
     /// <summary>
     /// Type of criterion by which the estimated cash flow is being broken down, ie, country, institution, currency code or a user defined type, such as a region or distribution channel.

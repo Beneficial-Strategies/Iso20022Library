@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iIa_kQzwEe2YoLD-1vFj0g")]
 [DisplayName("Energy Delivery Attribute")]
-public record EnergyDeliveryAttribute10
+public partial record EnergyDeliveryAttribute10
 {
     /// <summary>
     /// Time interval for each block or shape.

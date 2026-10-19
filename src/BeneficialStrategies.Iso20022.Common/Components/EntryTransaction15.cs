@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EE7IRT3dEe-thIfLZ94a1w")]
 [DisplayName("Entry Transaction15")]
-public record EntryTransaction15
+public partial record EntryTransaction15
 {
     /// <summary>
     /// References.

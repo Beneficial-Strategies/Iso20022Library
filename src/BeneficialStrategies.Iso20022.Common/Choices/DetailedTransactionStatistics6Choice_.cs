@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_x-ovZ1yGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Transaction Statistics 6 Choice")]
-    public abstract record DetailedTransactionStatistics6Choice_ { }
+    public abstract partial record DetailedTransactionStatistics6Choice_ { }
 }

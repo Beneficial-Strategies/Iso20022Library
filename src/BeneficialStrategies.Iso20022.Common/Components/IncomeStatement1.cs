@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l_mSELIdEeaYqc4G3TTwhA")]
 [DisplayName("Income Statement")]
-public record IncomeStatement1
+public partial record IncomeStatement1
 {
     /// <summary>
     /// Specifies the clearing fees recorded in month-end management reporting for the financial year-to-date.

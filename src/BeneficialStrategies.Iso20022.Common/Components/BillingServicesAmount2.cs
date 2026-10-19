@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QP-p5qlEeGSON8vddiWzQ_460369359")]
 [DisplayName("Billing Services Amount")]
-public record BillingServicesAmount2
+public partial record BillingServicesAmount2
 {
     /// <summary>
     /// Sum of the original charge host amount and the service tax host amount values. It represents the total charge for a service (including taxes) expressed in the host currency.

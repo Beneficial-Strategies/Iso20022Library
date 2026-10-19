@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData13Choice
     [IsoId("_x460U__mEemm3skPVSMJQg")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
-    public record State : TradeData13Choice_
+    public partial record State : TradeData13Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

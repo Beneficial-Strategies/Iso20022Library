@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice
     [IsoId("_MzHkQ8K8EeuMhqg3CsEu6Q")]
     [DisplayName("Error")]
     [IsoXmlTag("Err")]
-    public record Error : ReuseDataReport6Choice_
+    public partial record Error : ReuseDataReport6Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

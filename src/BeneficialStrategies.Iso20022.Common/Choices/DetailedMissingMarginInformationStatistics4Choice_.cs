@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_rqy-iVowEe23K4GXSpBSeg")]
     [DisplayName("Detailed Missing Margin Information Statistics 4 Choice")]
-    public abstract record DetailedMissingMarginInformationStatistics4Choice_ { }
+    public abstract partial record DetailedMissingMarginInformationStatistics4Choice_ { }
 }

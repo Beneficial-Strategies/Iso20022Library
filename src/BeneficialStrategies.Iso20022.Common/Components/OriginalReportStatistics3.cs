@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4h_4QdHEEeaokquJJ-K6uA")]
 [DisplayName("Original Report Statistics")]
-public record OriginalReportStatistics3
+public partial record OriginalReportStatistics3
 {
     /// <summary>
     /// Total numbers of records included in the original file.

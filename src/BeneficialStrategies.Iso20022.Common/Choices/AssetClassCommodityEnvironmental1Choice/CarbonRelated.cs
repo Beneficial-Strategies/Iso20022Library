@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
     [IsoId("_QbLRA1rVEeWN79Bl6BUd3g")]
     [DisplayName("Carbon Related")]
     [IsoXmlTag("CrbnRltd")]
-    public record CarbonRelated : AssetClassCommodityEnvironmental1Choice_
+    public partial record CarbonRelated : AssetClassCommodityEnvironmental1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

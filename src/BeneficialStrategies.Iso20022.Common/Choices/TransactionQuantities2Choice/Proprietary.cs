@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities2Choice
     [IsoId("_tqS1MVkyEeGeoaLUQk__nA_2026377494")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TransactionQuantities2Choice_
+    public partial record Proprietary : TransactionQuantities2Choice_
     {
         /// <summary>
         /// Identifies the type of proprietary quantity reported.

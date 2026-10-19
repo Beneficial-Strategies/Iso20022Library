@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DVBgwI-TEe6Ojt1b3tfu9Q")]
 [DisplayName("Trade Confirmation5")]
-public record TradeConfirmation5
+public partial record TradeConfirmation5
 {
     /// <summary>
     /// Type.

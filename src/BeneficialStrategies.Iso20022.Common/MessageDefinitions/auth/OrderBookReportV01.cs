@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_M1g7wUHEEe69jJri8QCRYw")]
 [DisplayName("Order Book Report V01")]
-public record OrderBookReportV01 : IOuterRecord
+public partial record OrderBookReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

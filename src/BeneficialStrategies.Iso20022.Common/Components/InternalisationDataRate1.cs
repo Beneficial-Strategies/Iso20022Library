@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3T-LI-3tEeaWjpoyrnG6Rw")]
 [DisplayName("Internalisation Data Rate")]
-public record InternalisationDataRate1
+public partial record InternalisationDataRate1
 {
     /// <summary>
     /// Specifies the rate, in terms of volume, of the failed internalised settlement instructions compared to the total volume, of internalised settlement instructions performed (settled and failed) during the period covered by the report.

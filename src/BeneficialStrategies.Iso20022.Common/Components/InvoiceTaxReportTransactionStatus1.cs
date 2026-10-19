@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8pkzYU53Eeaine-lsNAGsA")]
 [DisplayName("Invoice Tax Report Transaction Status")]
-public record InvoiceTaxReportTransactionStatus1
+public partial record InvoiceTaxReportTransactionStatus1
 {
     /// <summary>
     /// Report identification, for example invoice number or report number from point of sales system.

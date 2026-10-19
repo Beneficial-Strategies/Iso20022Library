@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Rates1Choice
     /// </summary>
     [IsoId("_OvhyoHg2EeuXJdYjLmnO3w")]
     [DisplayName("Fixed")]
-    public record Fixed : Rates1Choice_
+    public partial record Fixed : Rates1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

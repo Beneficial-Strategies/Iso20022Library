@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxExemptionReasonFormat1Choice
     /// </summary>
     [IsoId("_4julQe5oEemXBpiFxCCWFQ")]
     [DisplayName("Unstructured")]
-    public record Unstructured : TaxExemptionReasonFormat1Choice_
+    public partial record Unstructured : TaxExemptionReasonFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

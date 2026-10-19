@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bBKr1Tq2EeWZFYSPlduMhw")]
 [DisplayName("Billing Service Identification")]
-public record BillingServiceIdentification3
+public partial record BillingServiceIdentification3
 {
     /// <summary>
     /// Financial institution&apos;s own, internal service identification code, different from the common code.|Usage: The financial institution own code is used to uniquely identify the service within the financial institution.

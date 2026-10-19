@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount4Choice
     /// Increase Amount.
     /// </summary>
     [DisplayName("Increase Amount")]
-    public record IncreaseAmount : Amount4Choice_
+    public partial record IncreaseAmount : Amount4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

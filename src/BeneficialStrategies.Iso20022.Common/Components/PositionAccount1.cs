@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oiOLIHYCEee_qcLXasnA4g")]
 [DisplayName("Position Account")]
-public record PositionAccount1
+public partial record PositionAccount1
 {
     /// <summary>
     /// Unique identifier of the position account.

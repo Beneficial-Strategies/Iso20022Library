@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b29F0ZR0Eeeymf3kpbtgrA")]
 [DisplayName("Option Event")]
-public record OptionEvent2
+public partial record OptionEvent2
 {
     /// <summary>
     /// Type of event in the life of the option.

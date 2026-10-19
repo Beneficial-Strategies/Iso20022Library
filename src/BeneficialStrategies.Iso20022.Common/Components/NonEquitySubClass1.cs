@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_POi7M6aTEeqZmriXpMtonA")]
 [DisplayName("Non Equity Sub Class")]
-public record NonEquitySubClass1
+public partial record NonEquitySubClass1
 {
     /// <summary>
     /// Description of the derivative sub-class.

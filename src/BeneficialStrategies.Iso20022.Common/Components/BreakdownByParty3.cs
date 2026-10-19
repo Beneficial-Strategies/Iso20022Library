@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LVijGQatEeS3lpTattq7hg")]
 [DisplayName("Breakdown By Party")]
-public record BreakdownByParty3
+public partial record BreakdownByParty3
 {
     /// <summary>
     /// Party, for example, fund management company, for which the cash flow is being reported.

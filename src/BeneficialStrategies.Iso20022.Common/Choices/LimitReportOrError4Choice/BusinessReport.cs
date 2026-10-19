@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError4Choice
     [IsoId("_C3LJ4W4-EeiU9cctagi5ow")]
     [DisplayName("Business Report")]
     [IsoXmlTag("BizRpt")]
-    public record BusinessReport : LimitReportOrError4Choice_
+    public partial record BusinessReport : LimitReportOrError4Choice_
     {
         /// <summary>
         /// Report is given for a current risk management type limit.

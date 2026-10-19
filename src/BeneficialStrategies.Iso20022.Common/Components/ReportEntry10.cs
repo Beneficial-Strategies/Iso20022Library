@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-IPyH248EeiU9cctagi5ow")]
 [DisplayName("Report Entry")]
-public record ReportEntry10
+public partial record ReportEntry10
 {
     /// <summary>
     /// Unique reference for the entry.

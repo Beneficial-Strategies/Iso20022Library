@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityNominalValue1Choice
     [IsoId("_xcCRUHaiEeavseMKyTsJEA")]
     [DisplayName("Nominal Value")]
     [IsoXmlTag("NmnlVal")]
-    public record NominalValue : QuantityNominalValue1Choice_
+    public partial record NominalValue : QuantityNominalValue1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

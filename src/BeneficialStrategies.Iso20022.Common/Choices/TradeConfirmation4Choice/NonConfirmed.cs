@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation4Choice
     /// Non Confirmed.
     /// </summary>
     [DisplayName("Non Confirmed")]
-    public record NonConfirmed : TradeConfirmation4Choice_
+    public partial record NonConfirmed : TradeConfirmation4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

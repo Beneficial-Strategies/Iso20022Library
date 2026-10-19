@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError8Choice
     [IsoId("_Q2Ivw3hdEeidzqjNEfehPg")]
     [DisplayName("General Business")]
     [IsoXmlTag("GnlBiz")]
-    public record GeneralBusiness : GeneralBusinessOrError8Choice_
+    public partial record GeneralBusiness : GeneralBusinessOrError8Choice_
     {
         /// <summary>
         /// Further information about the criticality or importance of a general business information system.

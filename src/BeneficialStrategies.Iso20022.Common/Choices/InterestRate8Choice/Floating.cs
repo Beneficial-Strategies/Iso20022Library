@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate8Choice
     [IsoId("_IEREA35aEea2k7EBUopqxw")]
     [DisplayName("Floating")]
     [IsoXmlTag("Fltg")]
-    public record Floating : InterestRate8Choice_
+    public partial record Floating : InterestRate8Choice_
     {
         /// <summary>
         /// Identifies the reference index for the instrument.

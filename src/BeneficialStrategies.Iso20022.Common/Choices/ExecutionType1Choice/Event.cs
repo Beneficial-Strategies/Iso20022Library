@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice
     /// </summary>
     [IsoId("_750BgaMgEeCJ6YNENx4h-w_989331050")]
     [DisplayName("Event")]
-    public record Event : ExecutionType1Choice_
+    public partial record Event : ExecutionType1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Evt")]

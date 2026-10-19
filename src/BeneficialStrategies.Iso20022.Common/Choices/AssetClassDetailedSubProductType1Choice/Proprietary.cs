@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassDetailedSubProductType
     [IsoId("_b5b0oI16Eeet3cKIYK84nw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AssetClassDetailedSubProductType1Choice_
+    public partial record Proprietary : AssetClassDetailedSubProductType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

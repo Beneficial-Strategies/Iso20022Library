@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cVL34YaoEeeUws0ZryHQ2w")]
 [DisplayName("Transaction Type")]
-public record TransactionType2
+public partial record TransactionType2
 {
     /// <summary>
     /// Specifies the status on the books of the account servicer of the transactions to be reported.

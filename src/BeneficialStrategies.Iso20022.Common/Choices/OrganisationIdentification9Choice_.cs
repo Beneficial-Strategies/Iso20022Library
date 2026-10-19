@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_L_GVAZQMEeiILOjNP8ro1w")]
     [DisplayName("Organisation Identification 9 Choice")]
-    public abstract record OrganisationIdentification9Choice_ { }
+    public abstract partial record OrganisationIdentification9Choice_ { }
 }

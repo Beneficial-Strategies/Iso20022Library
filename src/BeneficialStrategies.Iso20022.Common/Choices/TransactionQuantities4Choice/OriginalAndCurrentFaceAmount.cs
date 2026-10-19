@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities4Choice
     /// Original And Current Face Amount.
     /// </summary>
     [DisplayName("Original And Current Face Amount")]
-    public record OriginalAndCurrentFaceAmount : TransactionQuantities4Choice_
+    public partial record OriginalAndCurrentFaceAmount : TransactionQuantities4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

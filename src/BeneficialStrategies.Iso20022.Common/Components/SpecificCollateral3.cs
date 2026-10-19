@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0j25sZh8EeyJwbhKOp9Ehg")]
 [DisplayName("Specific Collateral3")]
-public record SpecificCollateral3
+public partial record SpecificCollateral3
 {
     /// <summary>
     /// Financial Instrument Identification.

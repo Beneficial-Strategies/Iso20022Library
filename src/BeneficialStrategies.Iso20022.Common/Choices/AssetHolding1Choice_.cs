@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AssetHolding1Choice.Commodity), nameof(AssetHolding1Choice.Commodity))]
     [IsoId("_A8xYoK_5EeaE9YROwd69hA")]
     [DisplayName("Asset Holding 1 Choice")]
-    public abstract record AssetHolding1Choice_ { }
+    public abstract partial record AssetHolding1Choice_ { }
 }

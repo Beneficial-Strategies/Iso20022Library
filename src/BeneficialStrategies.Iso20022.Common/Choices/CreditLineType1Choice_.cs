@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_2T3LxIZ5Eee8r9VKRbnJSg")]
     [DisplayName("Credit Line Type 1 Choice")]
-    public abstract record CreditLineType1Choice_ { }
+    public abstract partial record CreditLineType1Choice_ { }
 }

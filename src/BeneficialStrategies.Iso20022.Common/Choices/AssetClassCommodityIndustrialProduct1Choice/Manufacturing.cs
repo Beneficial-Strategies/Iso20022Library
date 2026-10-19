@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityIndustrialPro
     [IsoId("_YRDnIFrgEeWN79Bl6BUd3g")]
     [DisplayName("Manufacturing")]
     [IsoXmlTag("Manfctg")]
-    public record Manufacturing : AssetClassCommodityIndustrialProduct1Choice_
+    public partial record Manufacturing : AssetClassCommodityIndustrialProduct1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

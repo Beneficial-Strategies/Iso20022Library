@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     [IsoId("_yMukYK_7EeaE9YROwd69hA")]
     [DisplayName("Guarantee")]
     [IsoXmlTag("Grnt")]
-    public record Guarantee : AssetHolding1Choice_
+    public partial record Guarantee : AssetHolding1Choice_
     {
         /// <summary>
         /// Identification of guarantee provider.

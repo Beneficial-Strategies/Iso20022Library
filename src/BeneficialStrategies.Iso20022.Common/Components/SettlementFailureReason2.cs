@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QHUzx76YEemHTLTzJg7M-A")]
 [DisplayName("Settlement Failure Reason")]
-public record SettlementFailureReason2
+public partial record SettlementFailureReason2
 {
     /// <summary>
     /// Main reasons for settlement fails during the reporting period.

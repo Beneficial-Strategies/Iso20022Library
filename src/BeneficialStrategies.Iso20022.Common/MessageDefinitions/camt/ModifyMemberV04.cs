@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbxxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Modify Member V")]
-public record ModifyMemberV04 : IOuterRecord
+public partial record ModifyMemberV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

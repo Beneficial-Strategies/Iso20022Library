@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P1IeoQtKEeWkxvNyFrBT8Q")]
 [DisplayName("Contract Balance")]
-public record ContractBalance1
+public partial record ContractBalance1
 {
     /// <summary>
     /// Specifies the type of the contract balance.

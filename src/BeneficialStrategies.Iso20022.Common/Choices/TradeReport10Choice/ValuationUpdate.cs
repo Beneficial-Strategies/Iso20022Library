@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice
     [IsoId("_38nfX__qEemm3skPVSMJQg")]
     [DisplayName("Valuation Update")]
     [IsoXmlTag("ValtnUpd")]
-    public record ValuationUpdate : TradeReport10Choice_
+    public partial record ValuationUpdate : TradeReport10Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTimeSearch3Choice
     /// </summary>
     [IsoId("_x03f45lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Date Search")]
-    public record DateSearch : DateAndDateTimeSearch3Choice_
+    public partial record DateSearch : DateAndDateTimeSearch3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DtSch")]

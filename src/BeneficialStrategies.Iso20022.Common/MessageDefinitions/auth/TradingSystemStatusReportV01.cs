@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_PqPn4GFcEfC-1NkZ9TkdKA")]
 [DisplayName("Trading System Status Report V01")]
-public record TradingSystemStatusReportV01 : IOuterRecord
+public partial record TradingSystemStatusReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

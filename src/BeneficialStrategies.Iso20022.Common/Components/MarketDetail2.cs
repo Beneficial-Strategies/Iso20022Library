@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1Jjy4X5sEeasY4u9QTizPQ")]
 [DisplayName("Market Detail")]
-public record MarketDetail2
+public partial record MarketDetail2
 {
     /// <summary>
     /// Most relevant market in terms of liquidity as defined in the local regulation.

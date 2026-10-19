@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
     /// </summary>
     [IsoId("_gSTIi5jcEeqkLZLH6DK3UQ")]
     [DisplayName("Pending Price")]
-    public record PendingPrice : SecuritiesTransactionPrice17Choice_
+    public partial record PendingPrice : SecuritiesTransactionPrice17Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

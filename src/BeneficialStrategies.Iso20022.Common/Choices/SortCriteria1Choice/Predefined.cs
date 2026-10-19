@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SortCriteria1Choice
     /// </summary>
     [IsoId("_U1-1hdp-Ed-ak6NoX_4Aeg_1036248630")]
     [DisplayName("Predefined")]
-    public record Predefined : SortCriteria1Choice_
+    public partial record Predefined : SortCriteria1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification2Choice
     [IsoId("_BIwgRW4-EeiU9cctagi5ow")]
     [DisplayName("All Current")]
     [IsoXmlTag("AllCur")]
-    public record AllCurrent : LimitIdentification2Choice_
+    public partial record AllCurrent : LimitIdentification2Choice_
     {
         /// <summary>
         /// Identification of a particular cash clearing system.

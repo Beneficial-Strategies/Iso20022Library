@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1uJfwPG1EeGldvY3i8Fbvw")]
 [DisplayName("Authority Request Type")]
-public record AuthorityRequestType1
+public partial record AuthorityRequestType1
 {
     /// <summary>
     /// Specifies the requested message name identifier.

@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_nNMjZ6qDEeeMmtkfa8-zPg")]
 [DisplayName("Reject Investigation V")]
-public record RejectInvestigationV05 : IOuterRecord
+public partial record RejectInvestigationV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

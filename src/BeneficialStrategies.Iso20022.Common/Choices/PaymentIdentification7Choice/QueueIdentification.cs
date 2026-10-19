@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice
     [IsoId("_5uqG8wKxEe2rHs6fbn9-0A")]
     [DisplayName("Queue Identification")]
     [IsoXmlTag("QId")]
-    public record QueueIdentification : PaymentIdentification7Choice_
+    public partial record QueueIdentification : PaymentIdentification7Choice_
     {
         /// <summary>
         /// Identification of the payment queue where the payment instruction resides.

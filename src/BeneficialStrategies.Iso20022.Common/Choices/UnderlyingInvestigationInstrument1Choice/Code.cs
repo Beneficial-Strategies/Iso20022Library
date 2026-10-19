@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingInvestigationInstrumen
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : UnderlyingInvestigationInstrument1Choice_
+    public partial record Code : UnderlyingInvestigationInstrument1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

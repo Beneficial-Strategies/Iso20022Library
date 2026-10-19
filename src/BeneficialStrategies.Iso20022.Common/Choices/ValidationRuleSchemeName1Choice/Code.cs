@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ValidationRuleSchemeName1Choice
     /// </summary>
     [IsoId("_kAjWZNjGEeSD0e0ybx5L5Q")]
     [DisplayName("Code")]
-    public record Code : ValidationRuleSchemeName1Choice_
+    public partial record Code : ValidationRuleSchemeName1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginType2Choice
     /// </summary>
     [IsoId("_7-1ooI1rEeet3cKIYK84nw")]
     [DisplayName("Code")]
-    public record Code : MarginType2Choice_
+    public partial record Code : MarginType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

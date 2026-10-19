@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice
     /// Transaction Data.
     /// </summary>
     [DisplayName("Transaction Data")]
-    public record TransactionData : InvestigationDataRecord7Choice_
+    public partial record TransactionData : InvestigationDataRecord7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

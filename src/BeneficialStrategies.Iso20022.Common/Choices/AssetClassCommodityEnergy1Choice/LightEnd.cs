@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy1Choice
     [IsoId("_GHehsFrXEeWN79Bl6BUd3g")]
     [DisplayName("Light End")]
     [IsoXmlTag("LghtEnd")]
-    public record LightEnd : AssetClassCommodityEnergy1Choice_
+    public partial record LightEnd : AssetClassCommodityEnergy1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

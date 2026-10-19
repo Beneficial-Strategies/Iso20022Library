@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity2Choice
     [IsoId("__aOTka5OEeuo-IflVgGqiA")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
-    public record Period : TimeToMaturity2Choice_
+    public partial record Period : TimeToMaturity2Choice_
     {
         /// <summary>
         /// Specifies the start of the maturity period.

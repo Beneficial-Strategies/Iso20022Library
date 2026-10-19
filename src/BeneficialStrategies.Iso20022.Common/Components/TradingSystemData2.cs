@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xHmvsWGBEfCFsvrouDJO7g")]
 [DisplayName("Trading System Data2")]
-public record TradingSystemData2
+public partial record TradingSystemData2
 {
     /// <summary>
     /// Type of trading system on which the instrument is traded.

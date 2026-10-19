@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError10
     /// Cancellations.
     /// </summary>
     [DisplayName("Cancellations")]
-    public record Cancellations : IntraBalanceOrOperationalError10Choice_
+    public partial record Cancellations : IntraBalanceOrOperationalError10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_2XCW1Hv0EeanCNPcMT7sSg")]
     [DisplayName("Securities Reference Delta Status Report 2 Choice")]
-    public abstract record SecuritiesReferenceDeltaStatusReport2Choice_ { }
+    public abstract partial record SecuritiesReferenceDeltaStatusReport2Choice_ { }
 }

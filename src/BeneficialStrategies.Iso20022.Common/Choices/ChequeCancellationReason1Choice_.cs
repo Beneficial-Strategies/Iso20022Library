@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_kwwc-7tvEeq_cfXrH83Rcw")]
     [DisplayName("Cheque Cancellation Reason 1 Choice")]
-    public abstract record ChequeCancellationReason1Choice_ { }
+    public abstract partial record ChequeCancellationReason1Choice_ { }
 }

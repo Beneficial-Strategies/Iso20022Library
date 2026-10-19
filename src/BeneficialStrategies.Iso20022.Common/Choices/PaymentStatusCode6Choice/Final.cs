@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCode6Choice
     /// </summary>
     [IsoId("_phD1BRbzEeOy-PlRuFSUzQ")]
     [DisplayName("Final")]
-    public record Final : PaymentStatusCode6Choice_
+    public partial record Final : PaymentStatusCode6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

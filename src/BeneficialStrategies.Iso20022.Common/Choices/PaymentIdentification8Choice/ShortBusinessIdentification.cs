@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice
     /// Short Business Identification.
     /// </summary>
     [DisplayName("Short Business Identification")]
-    public record ShortBusinessIdentification : PaymentIdentification8Choice_
+    public partial record ShortBusinessIdentification : PaymentIdentification8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

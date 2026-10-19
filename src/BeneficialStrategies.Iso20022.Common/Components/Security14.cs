@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wBMu18peEem6kd3Y9uIDqg")]
 [DisplayName("Security")]
-public record Security14
+public partial record Security14
 {
     /// <summary>
     /// Identification of a financial instrument used as a collateral.

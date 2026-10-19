@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YBEVoU2LEe-TXNruDFfwPA")]
 [DisplayName("Available Financial Resources Amount2")]
-public record AvailableFinancialResourcesAmount2
+public partial record AvailableFinancialResourcesAmount2
 {
     /// <summary>
     /// Total Initial Margin.

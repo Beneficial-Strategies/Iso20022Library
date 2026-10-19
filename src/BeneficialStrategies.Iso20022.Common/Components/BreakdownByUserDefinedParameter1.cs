@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RPwVtdp-Ed-ak6NoX_4Aeg_-1574438434")]
 [DisplayName("Breakdown By User Defined Parameter")]
-public record BreakdownByUserDefinedParameter1
+public partial record BreakdownByUserDefinedParameter1
 {
     /// <summary>
     /// Party for which the cash flow is being reported.

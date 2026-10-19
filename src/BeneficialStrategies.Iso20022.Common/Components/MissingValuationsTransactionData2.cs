@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x29aEVyGEe24CqbZJK5XxA")]
 [DisplayName("Missing Valuations Transaction Data")]
-public record MissingValuationsTransactionData2
+public partial record MissingValuationsTransactionData2
 {
     /// <summary>
     /// Identification of a transaction.

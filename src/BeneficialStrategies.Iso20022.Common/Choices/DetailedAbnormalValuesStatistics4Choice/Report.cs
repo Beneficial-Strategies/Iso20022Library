@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
     [IsoId("_x4ww41yGEe24CqbZJK5XxA")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : DetailedAbnormalValuesStatistics4Choice_
+    public partial record Report : DetailedAbnormalValuesStatistics4Choice_
     {
         /// <summary>
         /// Number of reported derivatives.

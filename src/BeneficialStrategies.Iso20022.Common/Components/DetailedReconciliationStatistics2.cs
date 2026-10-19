@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6PTLRVfcEeqZr5K1Woax-g")]
 [DisplayName("Detailed Reconciliation Statistics")]
-public record DetailedReconciliationStatistics2
+public partial record DetailedReconciliationStatistics2
 {
     /// <summary>
     /// Detailed statistics on derivatives accepted by trade repository since the beginning of reporting.

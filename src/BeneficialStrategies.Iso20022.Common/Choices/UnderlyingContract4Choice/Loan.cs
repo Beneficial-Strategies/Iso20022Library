@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract4Choice
     /// Loan.
     /// </summary>
     [DisplayName("Loan")]
-    public record Loan : UnderlyingContract4Choice_
+    public partial record Loan : UnderlyingContract4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

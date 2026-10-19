@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0jlHEGIgEfCeoPFCHQnhvA")]
 [DisplayName("Post Trade Report1")]
-public record PostTradeReport1
+public partial record PostTradeReport1
 {
     /// <summary>
     /// Identification of the report.

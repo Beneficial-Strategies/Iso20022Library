@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
     [IsoId("_gSTIgZjcEeqkLZLH6DK3UQ")]
     [DisplayName("Monetary Value")]
     [IsoXmlTag("MntryVal")]
-    public record MonetaryValue : SecuritiesTransactionPrice17Choice_
+    public partial record MonetaryValue : SecuritiesTransactionPrice17Choice_
     {
         /// <summary>
         /// Amount of money in the cash entry.

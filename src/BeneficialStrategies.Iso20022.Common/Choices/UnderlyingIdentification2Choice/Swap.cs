@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingIdentification2Choice
     [IsoId("_Ky7eQYG-EeaalK9UbuVGFw")]
     [DisplayName("Swap")]
     [IsoXmlTag("Swp")]
-    public record Swap : UnderlyingIdentification2Choice_
+    public partial record Swap : UnderlyingIdentification2Choice_
     {
         /// <summary>
         /// Instrument received by the buyer.

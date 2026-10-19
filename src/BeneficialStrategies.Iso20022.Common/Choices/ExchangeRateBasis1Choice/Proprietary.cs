@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateBasis1Choice
     /// </summary>
     [IsoId("_SG4LkLpqEea_jI1vMH_RbA")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ExchangeRateBasis1Choice_
+    public partial record Proprietary : ExchangeRateBasis1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

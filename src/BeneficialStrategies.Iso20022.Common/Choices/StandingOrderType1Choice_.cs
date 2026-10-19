@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_73bb4KMgEeCJ6YNENx4h-w_-1191465666")]
     [DisplayName("Standing Order Type 1 Choice")]
-    public abstract record StandingOrderType1Choice_ { }
+    public abstract partial record StandingOrderType1Choice_ { }
 }

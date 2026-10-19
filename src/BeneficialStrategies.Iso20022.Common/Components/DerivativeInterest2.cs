@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pMapccnYEeWpf-ImB_F2gQ")]
 [DisplayName("Derivative Interest")]
-public record DerivativeInterest2
+public partial record DerivativeInterest2
 {
     /// <summary>
     /// Currency in which leg 2 of the contract is denominated, in case of multi-currency or cross-currency swaps.

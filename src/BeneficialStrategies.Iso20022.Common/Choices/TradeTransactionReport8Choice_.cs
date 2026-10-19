@@ -56,5 +56,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bQpIhRLBEeqctpBfTmLJnw")]
     [DisplayName("Trade Transaction Report 8 Choice")]
-    public abstract record TradeTransactionReport8Choice_ { }
+    public abstract partial record TradeTransactionReport8Choice_ { }
 }

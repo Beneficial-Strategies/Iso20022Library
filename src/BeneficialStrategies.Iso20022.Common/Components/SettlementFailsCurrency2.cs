@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_antbaR2lEeqF2P5v-Rtejg")]
 [DisplayName("Settlement Fails Currency")]
-public record SettlementFailsCurrency2
+public partial record SettlementFailsCurrency2
 {
     /// <summary>
     /// Currency of the cash counter value specified in a settlement instruction.

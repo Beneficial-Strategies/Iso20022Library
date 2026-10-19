@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QmCKwXvSEeWrWYBng3OpVw")]
     [DisplayName("Counterparty Identification 2 Choice")]
-    public abstract record CounterpartyIdentification2Choice_ { }
+    public abstract partial record CounterpartyIdentification2Choice_ { }
 }

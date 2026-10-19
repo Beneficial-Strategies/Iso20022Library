@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     [IsoId("_PWk1NmHcEeGrBqfAqyy96Q")]
     [DisplayName("Original Transaction Number")]
     [IsoXmlTag("OrgnlTxNb")]
-    public record OriginalTransactionNumber : SearchCriteria1Choice_
+    public partial record OriginalTransactionNumber : SearchCriteria1Choice_
     {
         /// <summary>
         /// Idetifies the transaction number.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
     [IsoId("_NxHXEbveEeiLRYqS-r-R-A")]
     [DisplayName("Grain Oil Seed")]
     [IsoXmlTag("GrnOilSeed")]
-    public record GrainOilSeed : AssetClassCommodityAgricultural5Choice_
+    public partial record GrainOilSeed : AssetClassCommodityAgricultural5Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

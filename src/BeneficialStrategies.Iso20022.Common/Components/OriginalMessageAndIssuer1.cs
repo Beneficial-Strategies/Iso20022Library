@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_76syVKMgEeCJ6YNENx4h-w_830778529")]
 [DisplayName("Original Message And Issuer")]
-public record OriginalMessageAndIssuer1
+public partial record OriginalMessageAndIssuer1
 {
     /// <summary>
     /// Unambiguous identification of the original message to which the message refers.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bPhuNxLBEeqctpBfTmLJnw")]
     [DisplayName("Trade Report 12 Choice")]
-    public abstract record TradeReport12Choice_ { }
+    public abstract partial record TradeReport12Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateDerivative2Choice
     /// </summary>
     [IsoId("_xbbEcWlIEeaLAKoEUNsD9g")]
     [DisplayName("Swap Related")]
-    public record SwapRelated : InterestRateDerivative2Choice_
+    public partial record SwapRelated : InterestRateDerivative2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

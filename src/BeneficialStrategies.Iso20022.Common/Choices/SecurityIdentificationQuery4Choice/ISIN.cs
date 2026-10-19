@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choi
     /// </summary>
     [IsoId("_PJPwoZNeEeytjZlcgApf6A")]
     [DisplayName("ISIN")]
-    public record ISIN : SecurityIdentificationQuery4Choice_
+    public partial record ISIN : SecurityIdentificationQuery4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

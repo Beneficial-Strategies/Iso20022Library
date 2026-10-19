@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbMRbvEeiyVv5j1vf1VQ")]
 [DisplayName("Backup Payment V")]
-public record BackupPaymentV07 : IOuterRecord
+public partial record BackupPaymentV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tmqQAZEhEe-Goq1fIU72qA")]
 [DisplayName("Limit Journal Report4")]
-public record LimitJournalReport4
+public partial record LimitJournalReport4
 {
     /// <summary>
     /// Limit Identification.

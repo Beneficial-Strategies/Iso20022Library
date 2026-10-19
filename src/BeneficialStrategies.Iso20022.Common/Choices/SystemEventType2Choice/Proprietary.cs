@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemEventType2Choice
     [IsoId("_72FYEaMgEeCJ6YNENx4h-w_-439835553")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SystemEventType2Choice_
+    public partial record Proprietary : SystemEventType2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

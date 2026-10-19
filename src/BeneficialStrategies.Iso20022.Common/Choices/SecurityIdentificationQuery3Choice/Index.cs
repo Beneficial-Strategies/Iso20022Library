@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery3Choi
     /// </summary>
     [IsoId("_P-19CdGgEeaQk737TH1Fzw")]
     [DisplayName("Index")]
-    public record Index : SecurityIdentificationQuery3Choice_
+    public partial record Index : SecurityIdentificationQuery3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Indx")]

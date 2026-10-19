@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
     [IsoId("_NxHXF7veEeiLRYqS-r-R-A")]
     [DisplayName("Olive Oil")]
     [IsoXmlTag("OlvOil")]
-    public record OliveOil : AssetClassCommodityAgricultural5Choice_
+    public partial record OliveOil : AssetClassCommodityAgricultural5Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

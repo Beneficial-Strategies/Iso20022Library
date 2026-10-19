@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Charges5Choice
     /// Single.
     /// </summary>
     [DisplayName("Single")]
-    public record Single : Charges5Choice_
+    public partial record Single : Charges5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

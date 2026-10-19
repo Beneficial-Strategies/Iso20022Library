@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TradeData19Choice.State), nameof(TradeData19Choice.State))]
     [IsoId("_mijCQXg-Eeu3kecHd7QKUQ")]
     [DisplayName("Trade Data 19 Choice")]
-    public abstract record TradeData19Choice_ { }
+    public abstract partial record TradeData19Choice_ { }
 }

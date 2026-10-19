@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VUPx9Tp9EemwKdP955WBJQ")]
 [DisplayName("Intra Balance Query Criteria")]
-public record IntraBalanceQueryCriteria9
+public partial record IntraBalanceQueryCriteria9
 {
     /// <summary>
     /// Collective reference identifying a set of messages.

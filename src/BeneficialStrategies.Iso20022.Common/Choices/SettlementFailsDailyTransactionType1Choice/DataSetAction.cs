@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyTransactionT
     /// </summary>
     [IsoId("_9tfhFDOYEeqBfed1bmSPqg")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : SettlementFailsDailyTransactionType1Choice_
+    public partial record DataSetAction : SettlementFailsDailyTransactionType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__p1KALC8EeaSl6vJk5Bd8w")]
 [DisplayName("End Of Day Requirement")]
-public record EndOfDayRequirement1
+public partial record EndOfDayRequirement1
 {
     /// <summary>
     /// Specifies the initial margin requirement for position.

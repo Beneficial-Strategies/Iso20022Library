@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
     /// Agent.
     /// </summary>
     [DisplayName("Agent")]
-    public record Agent : TransactionAmendment1Choice_
+    public partial record Agent : TransactionAmendment1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

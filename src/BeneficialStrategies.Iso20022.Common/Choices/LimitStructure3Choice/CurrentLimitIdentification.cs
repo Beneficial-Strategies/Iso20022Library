@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitStructure3Choice
     /// Current Limit Identification.
     /// </summary>
     [DisplayName("Current Limit Identification")]
-    public record CurrentLimitIdentification : LimitStructure3Choice_
+    public partial record CurrentLimitIdentification : LimitStructure3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

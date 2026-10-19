@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yM5zQenQEeSsIMG7XCyDQw")]
     [DisplayName("Investment Party 1 Choice")]
-    public abstract record InvestmentParty1Choice_ { }
+    public abstract partial record InvestmentParty1Choice_ { }
 }

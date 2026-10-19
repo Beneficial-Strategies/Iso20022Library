@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_yaKCCW42EeiU9cctagi5ow")]
 [DisplayName("Notification To Receive Status Report V")]
-public record NotificationToReceiveStatusReportV06 : IOuterRecord
+public partial record NotificationToReceiveStatusReportV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

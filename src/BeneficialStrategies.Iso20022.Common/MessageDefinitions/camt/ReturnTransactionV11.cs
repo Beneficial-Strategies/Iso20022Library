@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3UJvTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Return Transaction V11")]
-public record ReturnTransactionV11 : IOuterRecord
+public partial record ReturnTransactionV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

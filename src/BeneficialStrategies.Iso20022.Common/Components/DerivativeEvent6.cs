@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lk8TIfbeEeyInphUKJZxtQ")]
 [DisplayName("Derivative Event")]
-public record DerivativeEvent6
+public partial record DerivativeEvent6
 {
     /// <summary>
     /// Classification of derivative event type.

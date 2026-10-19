@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0T7ldTEyEe6g-ffJsqGiSA")]
     [DisplayName("Limit Identification3Choice")]
-    public abstract record LimitIdentification3Choice_ { }
+    public abstract partial record LimitIdentification3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Bnkxd40bEemUAO64Q252gQ")]
 [DisplayName("Settlement Fails Securities")]
-public record SettlementFailsSecurities1
+public partial record SettlementFailsSecurities1
 {
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

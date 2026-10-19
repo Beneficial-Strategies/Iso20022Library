@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_26nT0TEyEe6g-ffJsqGiSA")]
 [DisplayName("Cheque18")]
-public record Cheque18
+public partial record Cheque18
 {
     /// <summary>
     /// Instruction Identification.

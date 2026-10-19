@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yxi7seJJEe-5wchdE0oJYw")]
 [DisplayName("Organisation Identification49")]
-public record OrganisationIdentification49
+public partial record OrganisationIdentification49
 {
     /// <summary>
     /// LEI.

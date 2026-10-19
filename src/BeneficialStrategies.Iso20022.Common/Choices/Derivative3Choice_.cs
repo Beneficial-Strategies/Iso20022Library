@@ -37,5 +37,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_w9mvYSe0Eei12pGEsJIAeQ")]
     [DisplayName("Derivative 3 Choice")]
-    public abstract record Derivative3Choice_ { }
+    public abstract partial record Derivative3Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncorrectData1Choice
     /// </summary>
     [IsoId("_DfjHsNjLEeq5MfBBxQig1Q")]
     [DisplayName("Code")]
-    public record Code : IncorrectData1Choice_
+    public partial record Code : IncorrectData1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

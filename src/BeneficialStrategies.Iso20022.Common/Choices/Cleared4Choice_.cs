@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Cleared4Choice.NonCleared), nameof(Cleared4Choice.NonCleared))]
     [IsoId("_UM6SwCUMEeeDvf1E8-5blA")]
     [DisplayName("Cleared 4 Choice")]
-    public abstract record Cleared4Choice_ { }
+    public abstract partial record Cleared4Choice_ { }
 }

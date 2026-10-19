@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportParameter2Choice
     /// </summary>
     [IsoId("_U1-1gNp-Ed-ak6NoX_4Aeg_-922147102")]
     [DisplayName("Party")]
-    public record Party : ReportParameter2Choice_
+    public partial record Party : ReportParameter2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pty")]

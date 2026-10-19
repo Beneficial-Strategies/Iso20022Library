@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Dfigo9jLEeq5MfBBxQig1Q")]
     [DisplayName("Incorrect Data 1 Choice")]
-    public abstract record IncorrectData1Choice_ { }
+    public abstract partial record IncorrectData1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zV-IYTEyEe6g-ffJsqGiSA")]
 [DisplayName("Limit Criteria7")]
-public record LimitCriteria7
+public partial record LimitCriteria7
 {
     /// <summary>
     /// New Query Name.

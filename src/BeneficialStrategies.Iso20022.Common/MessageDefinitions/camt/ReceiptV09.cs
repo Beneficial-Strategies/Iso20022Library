@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_0fdSoVP-Ee-Fk_N0FBjY0Q")]
 [DisplayName("Receipt V09")]
-public record ReceiptV09 : IOuterRecord
+public partial record ReceiptV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

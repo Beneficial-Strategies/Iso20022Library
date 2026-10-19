@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Dhvyga5jEeuo-IflVgGqiA")]
 [DisplayName("Compare Interest Computation Method")]
-public record CompareInterestComputationMethod3
+public partial record CompareInterestComputationMethod3
 {
     /// <summary>
     /// Information for the first side of the transaction.

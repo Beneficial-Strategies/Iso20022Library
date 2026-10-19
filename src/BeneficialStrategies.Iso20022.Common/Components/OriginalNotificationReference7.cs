@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_03T4gTq4EeWZFYSPlduMhw")]
 [DisplayName("Original Notification Reference")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record OriginalNotificationReference7
+public partial record OriginalNotificationReference7
 {
     /// <summary>
     /// Identifies the account to be credited with the incoming amount of money.

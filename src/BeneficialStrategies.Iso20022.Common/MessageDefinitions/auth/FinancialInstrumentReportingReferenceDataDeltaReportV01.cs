@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_4LUGKURNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Reference Data Delta Report V")]
-public record FinancialInstrumentReportingReferenceDataDeltaReportV01 : IOuterRecord
+public partial record FinancialInstrumentReportingReferenceDataDeltaReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

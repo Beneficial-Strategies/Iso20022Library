@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType1Choice
     [IsoId("_Prd4cNp-Ed-ak6NoX_4Aeg_1273347022")]
     [DisplayName("Equivalent Amount")]
     [IsoXmlTag("EqvtAmt")]
-    public record EquivalentAmount : AmountType1Choice_
+    public partial record EquivalentAmount : AmountType1Choice_
     {
         /// <summary>
         /// Amount of money to be transferred between debtor and creditor, before deduction of charges, expressed in the currency of the debtor&apos;s account, and to be transferred in a different currency. ||Usage: Currency of the amount is expressed in the currency of the debtor&apos;s account, but the amount to be transferred is in another currency. The first agent will convert the amount and currency to the to be transferred amount and currency, eg, &apos;pay equivalent of 100000 EUR in JPY&apos;(and account is in EUR).

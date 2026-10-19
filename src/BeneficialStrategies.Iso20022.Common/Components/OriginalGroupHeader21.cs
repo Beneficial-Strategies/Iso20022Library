@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zPOAITEyEe6g-ffJsqGiSA")]
 [DisplayName("Original Group Header21")]
-public record OriginalGroupHeader21
+public partial record OriginalGroupHeader21
 {
     /// <summary>
     /// Group Cancellation Identification.

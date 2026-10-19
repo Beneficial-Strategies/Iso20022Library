@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_txJrIFkyEeGeoaLUQk__nA_-921369458")]
 [DisplayName("Transaction Interest")]
-public record TransactionInterest3
+public partial record TransactionInterest3
 {
     /// <summary>
     /// Total amount of interests and taxes included in the entry amount.

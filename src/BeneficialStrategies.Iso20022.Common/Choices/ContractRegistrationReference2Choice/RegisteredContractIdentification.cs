@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference2Ch
     /// </summary>
     [IsoId("_KVgWYbMmEeueudaIbClZbQ")]
     [DisplayName("Registered Contract Identification")]
-    public record RegisteredContractIdentification : ContractRegistrationReference2Choice_
+    public partial record RegisteredContractIdentification : ContractRegistrationReference2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

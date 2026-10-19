@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3NcXTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Intra Balance Movement Confirmation V02")]
-public record IntraBalanceMovementConfirmationV02 : IOuterRecord
+public partial record IntraBalanceMovementConfirmationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

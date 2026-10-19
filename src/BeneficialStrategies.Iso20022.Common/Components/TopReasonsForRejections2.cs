@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NeaEeVfdEeqZr5K1Woax-g")]
 [DisplayName("Top Reasons For Rejections")]
-public record TopReasonsForRejections2
+public partial record TopReasonsForRejections2
 {
     /// <summary>
     /// Identification of the most common data field that has not passed the validation rule for all derivatives.

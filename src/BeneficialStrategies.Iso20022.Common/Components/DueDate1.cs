@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AeNGMEcWEeGlWcsEChp7QA")]
 [DisplayName("Due Date")]
-public record DueDate1
+public partial record DueDate1
 {
     /// <summary>
     /// Specifies the date when the authority needs the response in situations where the response or part of it will not be given electronically but on paper in manual process.

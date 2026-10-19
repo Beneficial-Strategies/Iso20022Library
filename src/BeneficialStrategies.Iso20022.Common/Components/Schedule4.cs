@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HC008A0zEeuJ1fOEB4bQXA")]
 [DisplayName("Schedule")]
-public record Schedule4
+public partial record Schedule4
 {
     /// <summary>
     /// Indicates the unadjusted date at which obligations under the  derivative transaction come into effect, as included in the confirmation.

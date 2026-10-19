@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_fDmr0dcZEeqRFcf2R4bPBw")]
     [DisplayName("Account Or Business Error 5 Choice")]
-    public abstract record AccountOrBusinessError5Choice_ { }
+    public abstract partial record AccountOrBusinessError5Choice_ { }
 }

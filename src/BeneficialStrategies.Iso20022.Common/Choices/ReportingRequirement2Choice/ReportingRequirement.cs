@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement2Choice
     [IsoId("_IVUQMV55Ee2a_-MvhEjKmA")]
     [DisplayName("Reporting Requirement")]
     [IsoXmlTag("RptgRqrmnt")]
-    public record ReportingRequirement : ReportingRequirement2Choice_
+    public partial record ReportingRequirement : ReportingRequirement2Choice_
     {
         /// <summary>
         /// Indicator of receiving only one side or both sides of the derivatives.

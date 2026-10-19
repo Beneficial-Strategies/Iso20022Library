@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification3Choice
     /// Default.
     /// </summary>
     [DisplayName("Default")]
-    public record Default : LimitIdentification3Choice_
+    public partial record Default : LimitIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

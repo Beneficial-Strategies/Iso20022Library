@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xfbL2X5eEea2k7EBUopqxw")]
 [DisplayName("Credit Default Swap Index")]
-public record CreditDefaultSwapIndex2
+public partial record CreditDefaultSwapIndex2
 {
     /// <summary>
     /// Series number of the composition of the index if applicable.

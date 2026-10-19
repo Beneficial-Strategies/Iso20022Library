@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("97cd2d16-d844-46d8-8996-23ce5c14b883")]
 [DisplayName("Investigation Request51")]
-public record InvestigationRequest51
+public partial record InvestigationRequest51
 {
     /// <summary>
     /// Point to point reference, as assigned by the requestor, and sent to the responder to unambiguously identify the message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iNuUgFr0EeWN79Bl6BUd3g")]
 [DisplayName("Asset Class Commodity Multi Commodity Exotic")]
-public record AssetClassCommodityMultiCommodityExotic1
+public partial record AssetClassCommodityMultiCommodityExotic1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

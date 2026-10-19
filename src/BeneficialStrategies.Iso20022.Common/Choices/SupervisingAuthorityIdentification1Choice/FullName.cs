@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SupervisingAuthorityIdentificati
     /// </summary>
     [IsoId("_aLmH0fIAEeaz_YGUGLjP6A")]
     [DisplayName("Full Name")]
-    public record FullName : SupervisingAuthorityIdentification1Choice_
+    public partial record FullName : SupervisingAuthorityIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

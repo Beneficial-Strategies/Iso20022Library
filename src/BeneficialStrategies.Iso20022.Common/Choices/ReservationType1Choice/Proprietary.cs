@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationType1Choice
     /// </summary>
     [IsoId("_8JKFEqMgEeCJ6YNENx4h-w_7151524")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReservationType1Choice_
+    public partial record Proprietary : ReservationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

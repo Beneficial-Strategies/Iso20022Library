@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party43Choice
     [IsoId("_Bp2Qk249EeiU9cctagi5ow")]
     [DisplayName("Financial Institution Identification")]
     [IsoXmlTag("FIId")]
-    public record FinancialInstitutionIdentification : Party43Choice_
+    public partial record FinancialInstitutionIdentification : Party43Choice_
     {
         /// <summary>
         /// Business identification code of the financial institution.

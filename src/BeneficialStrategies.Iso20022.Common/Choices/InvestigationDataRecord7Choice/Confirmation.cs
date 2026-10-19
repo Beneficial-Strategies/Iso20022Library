@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice
     /// Confirmation.
     /// </summary>
     [DisplayName("Confirmation")]
-    public record Confirmation : InvestigationDataRecord7Choice_
+    public partial record Confirmation : InvestigationDataRecord7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

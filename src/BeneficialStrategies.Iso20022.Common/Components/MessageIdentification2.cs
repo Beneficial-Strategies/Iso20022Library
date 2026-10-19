@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RUE1Bdp-Ed-ak6NoX_4Aeg_-806411710")]
 [DisplayName("Message Identification")]
-public record MessageIdentification2
+public partial record MessageIdentification2
 {
     /// <summary>
     /// Specifies the message name identifier of the message that will be used to provide additional details.

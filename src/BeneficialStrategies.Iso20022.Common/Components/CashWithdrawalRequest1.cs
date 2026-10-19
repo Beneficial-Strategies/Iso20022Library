@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VCI-cOR9Ee-NFYIkYc90gw")]
 [DisplayName("Cash Withdrawal Request1")]
-public record CashWithdrawalRequest1
+public partial record CashWithdrawalRequest1
 {
     /// <summary>
     /// Unique identification for the order.

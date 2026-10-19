@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError11
     /// Movements.
     /// </summary>
     [DisplayName("Movements")]
-    public record Movements : IntraBalanceOrOperationalError11Choice_
+    public partial record Movements : IntraBalanceOrOperationalError11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

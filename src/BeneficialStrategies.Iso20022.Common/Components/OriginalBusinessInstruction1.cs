@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Au3KEK0qEeijn5WVKzFWUw")]
 [DisplayName("Original Business Instruction")]
-public record OriginalBusinessInstruction1
+public partial record OriginalBusinessInstruction1
 {
     /// <summary>
     /// Point to point reference, as assigned by the original initiating party, to unambiguously identify the original instruction message.

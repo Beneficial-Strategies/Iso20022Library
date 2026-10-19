@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v9vRcUw0EfCpsI1b9uv5FQ")]
 [DisplayName("Invoice Totals7")]
-public record InvoiceTotals7
+public partial record InvoiceTotals7
 {
     /// <summary>
     /// Detailed information on tax applied.

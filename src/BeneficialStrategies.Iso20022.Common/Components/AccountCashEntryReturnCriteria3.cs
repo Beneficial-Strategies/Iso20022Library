@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hUXR--0gEeWGZ8O9Moj6Zw")]
 [DisplayName("Account Cash Entry Return Criteria")]
-public record AccountCashEntryReturnCriteria3
+public partial record AccountCashEntryReturnCriteria3
 {
     /// <summary>
     /// Indicates whether the entry reference is requested.

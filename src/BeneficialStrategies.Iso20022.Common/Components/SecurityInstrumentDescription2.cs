@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S07jzNp-Ed-ak6NoX_4Aeg_1287302982")]
 [DisplayName("Security Instrument Description")]
-public record SecurityInstrumentDescription2
+public partial record SecurityInstrumentDescription2
 {
     /// <summary>
     /// Description of the security.

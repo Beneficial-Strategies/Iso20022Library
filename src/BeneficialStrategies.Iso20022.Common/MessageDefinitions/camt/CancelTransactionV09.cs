@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_ThK7gdb6Eeq_l4BJLVUF2Q")]
 [DisplayName("Cancel Transaction V")]
-public record CancelTransactionV09 : IOuterRecord
+public partial record CancelTransactionV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

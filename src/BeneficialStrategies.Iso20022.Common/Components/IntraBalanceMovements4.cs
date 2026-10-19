@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3syXoTEyEe6g-ffJsqGiSA")]
 [DisplayName("Intra Balance Movements4")]
-public record IntraBalanceMovements4
+public partial record IntraBalanceMovements4
 {
     /// <summary>
     /// Cash Account.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetReport3Choice
     [IsoId("_0nw0g8KwEeuM4pgP8Vixbg")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : PositionSetReport3Choice_
+    public partial record Report : PositionSetReport3Choice_
     {
         /// <summary>
         /// Reference date for statistics collection.

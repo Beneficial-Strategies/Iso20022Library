@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice
     /// Newsprint.
     /// </summary>
     [DisplayName("Newsprint")]
-    public record Newsprint : AssetClassCommodityPaper5Choice_
+    public partial record Newsprint : AssetClassCommodityPaper5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

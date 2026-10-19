@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SYLWU9p-Ed-ak6NoX_4Aeg_-1921961120")]
 [DisplayName("Cash Balance")]
-public record CashBalance1
+public partial record CashBalance1
 {
     /// <summary>
     /// Specifies the nature of a balance, eg, opening booked balance.

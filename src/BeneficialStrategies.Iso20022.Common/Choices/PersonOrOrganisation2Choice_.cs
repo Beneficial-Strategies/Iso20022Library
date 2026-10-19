@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9-fNkQkiEeWGouz230Xp5Q")]
     [DisplayName("Person Or Organisation 2 Choice")]
-    public abstract record PersonOrOrganisation2Choice_ { }
+    public abstract partial record PersonOrOrganisation2Choice_ { }
 }

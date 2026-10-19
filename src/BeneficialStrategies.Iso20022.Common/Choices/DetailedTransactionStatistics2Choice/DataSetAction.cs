@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics2Ch
     /// </summary>
     [IsoId("_hUsuwcK4EeuFNp8LZAnorg")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : DetailedTransactionStatistics2Choice_
+    public partial record DataSetAction : DetailedTransactionStatistics2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

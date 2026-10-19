@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError5Choice
     [IsoId("_fFDdUdcZEeqRFcf2R4bPBw")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public record Account : AccountOrBusinessError5Choice_
+    public partial record Account : AccountOrBusinessError5Choice_
     {
         /// <summary>
         /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.

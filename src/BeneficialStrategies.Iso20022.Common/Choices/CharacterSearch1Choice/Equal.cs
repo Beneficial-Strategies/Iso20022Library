@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice
     /// </summary>
     [IsoId("_GDljUZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("Equal")]
-    public record Equal : CharacterSearch1Choice_
+    public partial record Equal : CharacterSearch1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

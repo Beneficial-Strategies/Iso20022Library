@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t0kyllkyEeGeoaLUQk__nA_-1150554853")]
 [DisplayName("Cash Deposit")]
-public record CashDeposit1
+public partial record CashDeposit1
 {
     /// <summary>
     /// Specifies the note or coin denomination, including the currency, such as a 50 euro note.

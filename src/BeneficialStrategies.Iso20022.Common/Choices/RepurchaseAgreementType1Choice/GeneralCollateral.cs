@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType1Choice
     [IsoId("_EbIM8LbrEeaqL_M7XFD7PQ")]
     [DisplayName("General Collateral")]
     [IsoXmlTag("GnlColl")]
-    public record GeneralCollateral : RepurchaseAgreementType1Choice_
+    public partial record GeneralCollateral : RepurchaseAgreementType1Choice_
     {
         /// <summary>
         /// List of the identifiers of the securities eligible for a general collateral repurchase agreement.

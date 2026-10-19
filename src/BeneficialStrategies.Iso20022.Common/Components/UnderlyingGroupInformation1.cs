@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RrBVYtp-Ed-ak6NoX_4Aeg_884871107")]
 [DisplayName("Underlying Group Information")]
-public record UnderlyingGroupInformation1
+public partial record UnderlyingGroupInformation1
 {
     /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.

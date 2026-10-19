@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction8Choice
     /// Interbank.
     /// </summary>
     [DisplayName("Interbank")]
-    public record Interbank : UnderlyingTransaction8Choice_
+    public partial record Interbank : UnderlyingTransaction8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

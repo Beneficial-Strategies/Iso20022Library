@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_51l8cZlZEeeE1Ya-LgRsuQ")]
 [DisplayName("General Business Information Search Criteria")]
-public record GeneralBusinessInformationSearchCriteria1
+public partial record GeneralBusinessInformationSearchCriteria1
 {
     /// <summary>
     /// Unique and unambiguous reference assigned to a general business information system.

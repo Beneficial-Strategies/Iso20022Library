@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice
     [IsoId("_HizTYDbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public record Cancellation : PartyReport1Choice_
+    public partial record Cancellation : PartyReport1Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice messages.

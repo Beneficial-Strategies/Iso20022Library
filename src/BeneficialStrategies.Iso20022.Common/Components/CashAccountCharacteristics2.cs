@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E2cgoTq3EeWZFYSPlduMhw")]
 [DisplayName("Cash Account Characteristics")]
-public record CashAccountCharacteristics2
+public partial record CashAccountCharacteristics2
 {
     /// <summary>
     /// Defines the account level within an account hierarchy.

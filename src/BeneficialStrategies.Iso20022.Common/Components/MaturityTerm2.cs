@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_USvwUMVbEeiYpLQka876sg")]
 [DisplayName("Maturity Term")]
-public record MaturityTerm2
+public partial record MaturityTerm2
 {
     /// <summary>
     /// Unit for the rate basis.

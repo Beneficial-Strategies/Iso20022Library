@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError11Choice
     /// Business Report.
     /// </summary>
     [DisplayName("Business Report")]
-    public record BusinessReport : ReservationOrError11Choice_
+    public partial record BusinessReport : ReservationOrError11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

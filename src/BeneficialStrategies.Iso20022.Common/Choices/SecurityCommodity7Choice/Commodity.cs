@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityCommodity7Choice
     [IsoId("_Ul6y88gyEeuGrNSsxk3B0A")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
-    public record Commodity : SecurityCommodity7Choice_
+    public partial record Commodity : SecurityCommodity7Choice_
     {
         /// <summary>
         /// Specifies whether the values defined asset class commodity are matching or not.

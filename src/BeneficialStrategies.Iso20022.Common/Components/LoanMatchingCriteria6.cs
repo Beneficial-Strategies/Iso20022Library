@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DBFZsf_oEemm3skPVSMJQg")]
 [DisplayName("Loan Matching Criteria")]
-public record LoanMatchingCriteria6
+public partial record LoanMatchingCriteria6
 {
     /// <summary>
     /// Specifies whether the values for the Unique Trade Identifier (UTI) are matching or not.

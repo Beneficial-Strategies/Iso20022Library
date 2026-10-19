@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HPOrga5QEeuo-IflVgGqiA")]
 [DisplayName("Volume Metrics")]
-public record VolumeMetrics6
+public partial record VolumeMetrics6
 {
     /// <summary>
     /// Aggregations of all positive values of the derivative for all derivatives pertaining to a position set.

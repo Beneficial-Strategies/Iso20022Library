@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
     [IsoId("_xG_Lo08SEe2PGo0mhYCh1g")]
     [DisplayName("Soft")]
     [IsoXmlTag("Soft")]
-    public record Soft : AssetClassCommodityAgricultural6Choice_
+    public partial record Soft : AssetClassCommodityAgricultural6Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

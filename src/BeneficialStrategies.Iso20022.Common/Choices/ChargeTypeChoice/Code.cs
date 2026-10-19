@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTypeChoice
     /// </summary>
     [IsoId("_RIcz1dp-Ed-ak6NoX_4Aeg_-1267403816")]
     [DisplayName("Code")]
-    public record Code : ChargeTypeChoice_
+    public partial record Code : ChargeTypeChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

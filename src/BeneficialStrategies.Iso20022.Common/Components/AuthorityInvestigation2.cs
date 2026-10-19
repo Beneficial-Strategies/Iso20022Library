@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zIYkA01JEeGAs6v-iSb2RQ")]
 [DisplayName("Authority Investigation")]
-public record AuthorityInvestigation2
+public partial record AuthorityInvestigation2
 {
     /// <summary>
     /// Identifies the type requested information as a code.

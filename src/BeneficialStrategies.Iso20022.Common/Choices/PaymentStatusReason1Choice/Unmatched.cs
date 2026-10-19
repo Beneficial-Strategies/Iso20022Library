@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice
     /// </summary>
     [IsoId("_QWOzsdEdEei798TPbKJMuw")]
     [DisplayName("Unmatched")]
-    public record Unmatched : PaymentStatusReason1Choice_
+    public partial record Unmatched : PaymentStatusReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate8Choice
     /// </summary>
     [IsoId("_IEREAX5aEea2k7EBUopqxw")]
     [DisplayName("Fixed")]
-    public record Fixed : InterestRate8Choice_
+    public partial record Fixed : InterestRate8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

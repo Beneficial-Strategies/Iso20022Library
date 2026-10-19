@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_mLRn0eUTEem3X-64-NKdqg")]
 [DisplayName("CCP Back Testing Result Report V")]
-public record CCPBackTestingResultReportV01 : IOuterRecord
+public partial record CCPBackTestingResultReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

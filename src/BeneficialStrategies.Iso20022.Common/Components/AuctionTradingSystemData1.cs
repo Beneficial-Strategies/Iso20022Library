@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kyABgGIcEfCeoPFCHQnhvA")]
 [DisplayName("Auction Trading System Data1")]
-public record AuctionTradingSystemData1
+public partial record AuctionTradingSystemData1
 {
     /// <summary>
     /// Most recent dates and times of the prices that participate in the Consolidated Tape Provider (CTP)’s indicative auction price as reported by the data contributors.

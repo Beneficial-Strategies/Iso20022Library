@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g8XmYTguEe60j93i-cxu5Q")]
 [DisplayName("Securities Market Report Header3")]
-public record SecuritiesMarketReportHeader3
+public partial record SecuritiesMarketReportHeader3
 {
     /// <summary>
     /// Reporting Entity.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation4Choi
     /// Default.
     /// </summary>
     [DisplayName("Default")]
-    public record Default : CurrentOrDefaultReservation4Choice_
+    public partial record Default : CurrentOrDefaultReservation4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

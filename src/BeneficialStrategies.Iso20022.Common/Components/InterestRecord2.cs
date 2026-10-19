@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uDYn166QEeexrtTFgmVD3Q")]
 [DisplayName("Interest Record")]
-public record InterestRecord2
+public partial record InterestRecord2
 {
     /// <summary>
     /// Amount of interest included in the entry amount.

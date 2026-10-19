@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tb1HSZlVEeeE1Ya-LgRsuQ")]
 [DisplayName("Member Return Criteria")]
-public record MemberReturnCriteria1
+public partial record MemberReturnCriteria1
 {
     /// <summary>
     /// Indicates whether the member name is requested.

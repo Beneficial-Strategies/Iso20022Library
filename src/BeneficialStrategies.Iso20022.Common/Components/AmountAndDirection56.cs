@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d7cE4eaqEeW1iL_FRZt8bg")]
 [DisplayName("Amount And Direction")]
-public record AmountAndDirection56
+public partial record AmountAndDirection56
 {
     /// <summary>
     /// Amount of money that results in an increase (positively signed) or decrease (negatively signed), with specification of the currency.

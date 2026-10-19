@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nh43Ya5MEeuo-IflVgGqiA")]
 [DisplayName("Exposure Metrics")]
-public record ExposureMetrics4
+public partial record ExposureMetrics4
 {
     /// <summary>
     /// Amount of money to be settled as of the start date and maturity date of the transaction.

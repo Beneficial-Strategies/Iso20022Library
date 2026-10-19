@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionDateOrPeriod1Choice
     /// </summary>
     [IsoId("_FBT62TU7EeWITbq5W8H-2w")]
     [DisplayName("Notice Period")]
-    public record NoticePeriod : OptionDateOrPeriod1Choice_
+    public partial record NoticePeriod : OptionDateOrPeriod1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

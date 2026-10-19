@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L7E1YZNnEeytjZlcgApf6A")]
 [DisplayName("Corporate Sector Criteria")]
-public record CorporateSectorCriteria6
+public partial record CorporateSectorCriteria6
 {
     /// <summary>
     /// Indicates that reporting counterparty is a financial institution.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument46Choice
     /// </summary>
     [IsoId("_X1A7Ub38EeWvRsMSLyTf-A")]
     [DisplayName("ISIN")]
-    public record ISIN : FinancialInstrument46Choice_
+    public partial record ISIN : FinancialInstrument46Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

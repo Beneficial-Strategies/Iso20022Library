@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8H0BRqMgEeCJ6YNENx4h-w_-1462773614")]
 [DisplayName("Balance Restriction Type")]
-public record BalanceRestrictionType1
+public partial record BalanceRestrictionType1
 {
     /// <summary>
     /// Type of the restriction, for example, selling restriction, buying restriction, placing restriction.

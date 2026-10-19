@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_tNTsINizEeq5MfBBxQig1Q")]
     [DisplayName("Corrective Transaction 5 Choice")]
-    public abstract record CorrectiveTransaction5Choice_ { }
+    public abstract partial record CorrectiveTransaction5Choice_ { }
 }

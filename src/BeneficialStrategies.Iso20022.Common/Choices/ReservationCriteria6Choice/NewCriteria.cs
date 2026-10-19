@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria6Choice
     /// New Criteria.
     /// </summary>
     [DisplayName("New Criteria")]
-    public record NewCriteria : ReservationCriteria6Choice_
+    public partial record NewCriteria : ReservationCriteria6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

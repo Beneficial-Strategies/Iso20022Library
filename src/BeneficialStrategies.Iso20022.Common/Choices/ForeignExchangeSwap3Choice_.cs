@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_E2DFYcESEea7jLfvGi1PDw")]
     [DisplayName("Foreign Exchange Swap 3 Choice")]
-    public abstract record ForeignExchangeSwap3Choice_ { }
+    public abstract partial record ForeignExchangeSwap3Choice_ { }
 }

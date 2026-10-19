@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
     [IsoId("_lKkAEE7JEe2PGo0mhYCh1g")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
-    public record Index : AssetClassCommodity6Choice_
+    public partial record Index : AssetClassCommodity6Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

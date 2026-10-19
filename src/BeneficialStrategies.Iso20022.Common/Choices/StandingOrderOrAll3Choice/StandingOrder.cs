@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll3Choice
     [IsoId("_ex1mYdcZEeqRFcf2R4bPBw")]
     [DisplayName("Standing Order")]
     [IsoXmlTag("StgOrdr")]
-    public record StandingOrder : StandingOrderOrAll3Choice_
+    public partial record StandingOrder : StandingOrderOrAll3Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.

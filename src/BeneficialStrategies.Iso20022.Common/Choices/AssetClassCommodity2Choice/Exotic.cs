@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice
     /// </summary>
     [IsoId("_BzEmPSYyEeWHeosc_5RQEw")]
     [DisplayName("Exotic")]
-    public record Exotic : AssetClassCommodity2Choice_
+    public partial record Exotic : AssetClassCommodity2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

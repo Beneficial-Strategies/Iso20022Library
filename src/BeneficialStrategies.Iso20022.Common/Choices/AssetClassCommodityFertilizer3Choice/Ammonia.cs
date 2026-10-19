@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Ch
     [IsoId("_K_pO0bv7EeiLRYqS-r-R-A")]
     [DisplayName("Ammonia")]
     [IsoXmlTag("Ammn")]
-    public record Ammonia : AssetClassCommodityFertilizer3Choice_
+    public partial record Ammonia : AssetClassCommodityFertilizer3Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

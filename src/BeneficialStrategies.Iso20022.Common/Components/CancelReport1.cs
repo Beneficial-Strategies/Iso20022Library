@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DE9U0GF8EfC07JR6e2JJ-w")]
 [DisplayName("Cancel Report1")]
-public record CancelReport1
+public partial record CancelReport1
 {
     /// <summary>
     /// Identification of the report.

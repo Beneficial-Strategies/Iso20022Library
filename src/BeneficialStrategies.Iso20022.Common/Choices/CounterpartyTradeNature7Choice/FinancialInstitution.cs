@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature7Choice
     [IsoId("_-UtqQan9EemdLtwzt4CWxg")]
     [DisplayName("Financial Institution")]
     [IsoXmlTag("FI")]
-    public record FinancialInstitution : CounterpartyTradeNature7Choice_
+    public partial record FinancialInstitution : CounterpartyTradeNature7Choice_
     {
         /// <summary>
         /// Classification of the business activities of the reporting counterparty.

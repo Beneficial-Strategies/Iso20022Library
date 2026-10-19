@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_VFn0Dtp-Ed-ak6NoX_4Aeg_811633564")]
     [DisplayName("Unable To Apply Justification Choice")]
-    public abstract record UnableToApplyJustificationChoice_ { }
+    public abstract partial record UnableToApplyJustificationChoice_ { }
 }

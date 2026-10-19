@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport34Choice
     /// Correction.
     /// </summary>
     [DisplayName("Correction")]
-    public record Correction : TradeReport34Choice_
+    public partial record Correction : TradeReport34Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tFpIAW8mEe6_0L6gLGEkbA")]
 [DisplayName("Transparency Data Report21")]
-public record TransparencyDataReport21
+public partial record TransparencyDataReport21
 {
     /// <summary>
     /// Technical Record Identification.

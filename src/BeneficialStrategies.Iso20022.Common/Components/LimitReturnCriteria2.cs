@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_76joYqMgEeCJ6YNENx4h-w_915944242")]
 [DisplayName("Limit Return Criteria")]
-public record LimitReturnCriteria2
+public partial record LimitReturnCriteria2
 {
     /// <summary>
     /// Indicates whether the limit start date time is requested.

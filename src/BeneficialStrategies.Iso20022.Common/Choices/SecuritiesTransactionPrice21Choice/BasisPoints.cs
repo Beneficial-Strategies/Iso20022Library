@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
     /// Basis Points.
     /// </summary>
     [DisplayName("Basis Points")]
-    public record BasisPoints : SecuritiesTransactionPrice21Choice_
+    public partial record BasisPoints : SecuritiesTransactionPrice21Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

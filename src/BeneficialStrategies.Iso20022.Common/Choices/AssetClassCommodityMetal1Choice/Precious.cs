@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityMetal1Choice
     [IsoId("_D1rdVQ2rEeW72qLtWESimw")]
     [DisplayName("Precious")]
     [IsoXmlTag("Prcs")]
-    public record Precious : AssetClassCommodityMetal1Choice_
+    public partial record Precious : AssetClassCommodityMetal1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

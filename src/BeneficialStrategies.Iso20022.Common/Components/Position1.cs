@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hpBo0LC8EeaSl6vJk5Bd8w")]
 [DisplayName("Position")]
-public record Position1
+public partial record Position1
 {
     /// <summary>
     /// CCP’s unique internal identifier for product.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_RNxXSNE_Ed-BzquC8wXy7w_-694421225")]
 [DisplayName("Request For Duplicate Instruction")]
-public record RequestForDuplicateInstruction : IOuterRecord
+public partial record RequestForDuplicateInstruction : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

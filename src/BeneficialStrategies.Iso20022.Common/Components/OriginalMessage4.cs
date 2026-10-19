@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LdpF-W49EeiU9cctagi5ow")]
 [DisplayName("Original Message")]
-public record OriginalMessage4
+public partial record OriginalMessage4
 {
     /// <summary>
     /// Original message sender used to identify the message.

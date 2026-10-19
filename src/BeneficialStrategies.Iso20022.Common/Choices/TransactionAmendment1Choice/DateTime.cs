@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
     /// Date Time.
     /// </summary>
     [DisplayName("Date Time")]
-    public record DateTime : TransactionAmendment1Choice_
+    public partial record DateTime : TransactionAmendment1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

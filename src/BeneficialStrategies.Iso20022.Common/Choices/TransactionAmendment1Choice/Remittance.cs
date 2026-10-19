@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
     /// Remittance.
     /// </summary>
     [DisplayName("Remittance")]
-    public record Remittance : TransactionAmendment1Choice_
+    public partial record Remittance : TransactionAmendment1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

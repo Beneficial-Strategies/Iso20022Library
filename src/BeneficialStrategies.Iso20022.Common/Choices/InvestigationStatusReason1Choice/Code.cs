@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusReason1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : InvestigationStatusReason1Choice_
+    public partial record Code : InvestigationStatusReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

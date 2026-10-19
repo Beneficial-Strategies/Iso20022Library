@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     [IsoId("_MRa04LLnEeavNMum-T1eEA")]
     [DisplayName("Other Investments")]
     [IsoXmlTag("OthrInvstmts")]
-    public record OtherInvestments : Investment1Choice_
+    public partial record OtherInvestments : Investment1Choice_
     {
         /// <summary>
         /// Text description of the investment.

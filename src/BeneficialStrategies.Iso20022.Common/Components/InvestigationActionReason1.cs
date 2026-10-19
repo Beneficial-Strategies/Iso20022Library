@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nj6woSU_Ee6EvsLBQ6cYtA")]
 [DisplayName("Investigation Action Reason1")]
-public record InvestigationActionReason1
+public partial record InvestigationActionReason1
 {
     /// <summary>
     /// Originator.

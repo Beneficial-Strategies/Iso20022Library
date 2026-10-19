@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P6R6gQz4Ee2YoLD-1vFj0g")]
 [DisplayName("Counterparty")]
-public record Counterparty46
+public partial record Counterparty46
 {
     /// <summary>
     /// Indicates if the counterparty is a legal entity or a natural person.

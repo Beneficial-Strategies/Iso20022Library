@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N6obcNIDEeiG-o-KpBT4-g")]
 [DisplayName("Reconciliation Flag")]
-public record ReconciliationFlag1
+public partial record ReconciliationFlag1
 {
     /// <summary>
     /// Indicates whether both counterparties to the transaction have reported to the same Trade Repository

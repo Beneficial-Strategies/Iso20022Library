@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria6Choice
     [IsoId("_FMyWZW4-EeiU9cctagi5ow")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : LimitCriteria6Choice_
+    public partial record NewCriteria : LimitCriteria6Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

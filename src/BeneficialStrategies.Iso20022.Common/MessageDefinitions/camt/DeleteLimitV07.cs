@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbTxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Delete Limit V")]
-public record DeleteLimitV07 : IOuterRecord
+public partial record DeleteLimitV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

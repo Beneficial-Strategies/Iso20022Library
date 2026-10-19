@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3hWjwzEyEe6g-ffJsqGiSA")]
 [DisplayName("Intra Balance Cancellation8")]
-public record IntraBalanceCancellation8
+public partial record IntraBalanceCancellation8
 {
     /// <summary>
     /// Cash Account.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
     [IsoId("_o0KFYVosEe23K4GXSpBSeg")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
-    public record New : TradeReport31Choice_
+    public partial record New : TradeReport31Choice_
     {
         /// <summary>
         /// Date and time of submission of the report to the trade repository.

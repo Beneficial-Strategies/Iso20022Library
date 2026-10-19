@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_DLtLSzncEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movement Query Response V")]
-public record IntraBalanceMovementQueryResponseV01 : IOuterRecord
+public partial record IntraBalanceMovementQueryResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

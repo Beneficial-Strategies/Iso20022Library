@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice
     /// Security.
     /// </summary>
     [DisplayName("Security")]
-    public record Security : AssetHolding3Choice_
+    public partial record Security : AssetHolding3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

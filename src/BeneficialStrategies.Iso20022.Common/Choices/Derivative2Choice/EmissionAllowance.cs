@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     /// </summary>
     [IsoId("_8Z6RoGlQEeaLAKoEUNsD9g")]
     [DisplayName("Emission Allowance")]
-    public record EmissionAllowance : Derivative2Choice_
+    public partial record EmissionAllowance : Derivative2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

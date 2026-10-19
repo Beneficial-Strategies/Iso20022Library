@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatusReason3Choice
     /// </summary>
     [IsoId("_sx1XRYlrEeePr-EGJjGYzQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CancellationStatusReason3Choice_
+    public partial record Proprietary : CancellationStatusReason3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

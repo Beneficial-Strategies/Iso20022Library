@@ -16,7 +16,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Direction4Choice
     [IsoId("_HmpucC0YEe2ZUuvBHegNNg")]
     [DisplayName("Direction")]
     [IsoXmlTag("Drctn")]
-    public record Direction : Direction4Choice_
+    public partial record Direction : Direction4Choice_
     {
         /// <summary>
         /// Identifies whether the reporting counterparty is the payer (Taker) or the receiver (Maker) of the first leg as determined at the time of transaction.

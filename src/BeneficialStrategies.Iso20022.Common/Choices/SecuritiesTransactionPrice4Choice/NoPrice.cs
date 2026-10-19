@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice4Choic
     [IsoId("_8RdkgOI-EeWWKb0jFHxViQ")]
     [DisplayName("No Price")]
     [IsoXmlTag("NoPric")]
-    public record NoPrice : SecuritiesTransactionPrice4Choice_
+    public partial record NoPrice : SecuritiesTransactionPrice4Choice_
     {
         /// <summary>
         /// Price is currently not available, but pending.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IGnwMTN0Ee2gE4h-lpiUxQ")]
 [DisplayName("Price Data")]
-public record PriceData2
+public partial record PriceData2
 {
     /// <summary>
     /// Indicates the price per derivative excluding, where applicable: fees, taxes or commissions.

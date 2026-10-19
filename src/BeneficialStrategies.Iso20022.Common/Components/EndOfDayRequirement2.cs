@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RUSFwKprEeamNLogr5TkIQ")]
 [DisplayName("End Of Day Requirement")]
-public record EndOfDayRequirement2
+public partial record EndOfDayRequirement2
 {
     /// <summary>
     /// Liability and assets that arise for a clearing member with respect to a central counterparty.

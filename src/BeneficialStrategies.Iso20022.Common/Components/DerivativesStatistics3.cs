@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NHlf5VfdEeqZr5K1Woax-g")]
 [DisplayName("Derivatives Statistics")]
-public record DerivativesStatistics3
+public partial record DerivativesStatistics3
 {
     /// <summary>
     /// Total number of derivatives submitted by the report submitting entity for the reporting counterparty.

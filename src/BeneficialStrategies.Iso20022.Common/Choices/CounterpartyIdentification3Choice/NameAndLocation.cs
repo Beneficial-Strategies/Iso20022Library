@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
     [IsoId("_mcwKscEcEea7jLfvGi1PDw")]
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
-    public record NameAndLocation : CounterpartyIdentification3Choice_
+    public partial record NameAndLocation : CounterpartyIdentification3Choice_
     {
         /// <summary>
         /// Internal name of the counterparty of the reporting agent used by the reporting agent.

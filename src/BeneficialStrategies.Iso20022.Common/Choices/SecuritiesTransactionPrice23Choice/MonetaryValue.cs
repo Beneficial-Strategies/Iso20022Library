@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
     /// Monetary Value.
     /// </summary>
     [DisplayName("Monetary Value")]
-    public record MonetaryValue : SecuritiesTransactionPrice23Choice_
+    public partial record MonetaryValue : SecuritiesTransactionPrice23Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

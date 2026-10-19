@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction7Choice
     [IsoId("_ehZ9tdcZEeqRFcf2R4bPBw")]
     [DisplayName("Statement Entry")]
     [IsoXmlTag("StmtNtry")]
-    public record StatementEntry : UnderlyingTransaction7Choice_
+    public partial record StatementEntry : UnderlyingTransaction7Choice_
     {
         /// <summary>
         /// Set of elements used to provide information on the original message.

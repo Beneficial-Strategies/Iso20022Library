@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PmW3IExUEeywvc16MwOPfw")]
 [DisplayName("Compare Valuation Type")]
-public record CompareValuationType1
+public partial record CompareValuationType1
 {
     /// <summary>
     /// Information for the first side of the transaction.

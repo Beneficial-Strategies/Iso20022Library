@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0mLzETEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order Query5")]
-public record StandingOrderQuery5
+public partial record StandingOrderQuery5
 {
     /// <summary>
     /// Query Type.

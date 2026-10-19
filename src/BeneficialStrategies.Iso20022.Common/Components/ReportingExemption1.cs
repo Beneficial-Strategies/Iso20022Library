@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F10woBaIEe27wrM4RUjLog")]
 [DisplayName("Reporting Exemption")]
-public record ReportingExemption1
+public partial record ReportingExemption1
 {
     /// <summary>
     /// Code specifying exemption applicable to a counterparty.

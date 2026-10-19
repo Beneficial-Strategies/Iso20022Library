@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hxrf4RZ6Ee27wrM4RUjLog")]
 [DisplayName("Trade Report Header")]
-public record TradeReportHeader4
+public partial record TradeReportHeader4
 {
     /// <summary>
     /// Indicates the as-at day for which the report was produced.

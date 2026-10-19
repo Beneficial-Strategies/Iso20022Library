@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTotalData1Choice
     [IsoId("_hwwPwB2nEeqF2P5v-Rtejg")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public record Data : SettlementTotalData1Choice_
+    public partial record Data : SettlementTotalData1Choice_
     {
         /// <summary>
         /// Aggregated volume and value of settlement instructions settled during the period covered by the report, for financial Instruments, types of transactions, types of clients and cash transfers.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AkuzscnZEeWpf-ImB_F2gQ")]
 [DisplayName("Derivative Foreign Exchange")]
-public record DerivativeForeignExchange2
+public partial record DerivativeForeignExchange2
 {
     /// <summary>
     /// Underlying currency 2 of the currency pair (the currency 1 will be populated in the notional currency).

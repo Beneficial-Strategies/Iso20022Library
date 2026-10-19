@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_MN6wk9jMEeq5MfBBxQig1Q")]
     [DisplayName("Missing Data 1 Choice")]
-    public abstract record MissingData1Choice_ { }
+    public abstract partial record MissingData1Choice_ { }
 }

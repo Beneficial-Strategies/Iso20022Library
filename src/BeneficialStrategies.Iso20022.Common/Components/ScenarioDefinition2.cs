@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lf5NMTqlEe6GiucvqhDlFQ")]
 [DisplayName("Scenario Definition2")]
-public record ScenarioDefinition2
+public partial record ScenarioDefinition2
 {
     /// <summary>
     /// Identification.

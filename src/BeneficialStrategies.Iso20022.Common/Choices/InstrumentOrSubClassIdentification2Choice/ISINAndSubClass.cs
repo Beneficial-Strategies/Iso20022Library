@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentOrSubClassIdentificati
     [IsoId("_BSnWYaaUEeqZmriXpMtonA")]
     [DisplayName("ISIN And Sub Class")]
     [IsoXmlTag("ISINAndSubClss")]
-    public record ISINAndSubClass : InstrumentOrSubClassIdentification2Choice_
+    public partial record ISINAndSubClass : InstrumentOrSubClassIdentification2Choice_
     {
         /// <summary>
         /// Identifies the financial instrument using an ISIN.

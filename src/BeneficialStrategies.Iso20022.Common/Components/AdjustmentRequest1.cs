@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hWdscRc0Ee6CaqQSK5g6qw")]
 [DisplayName("Adjustment Request1")]
-public record AdjustmentRequest1
+public partial record AdjustmentRequest1
 {
     /// <summary>
     /// Period.

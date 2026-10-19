@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification8Choice
     [IsoId("_Q7pG4Np-Ed-ak6NoX_4Aeg_1657637865")]
     [DisplayName("BIC Or BEI")]
     [IsoXmlTag("BICOrBEI")]
-    public record BICOrBEI : PartyIdentification8Choice_
+    public partial record BICOrBEI : PartyIdentification8Choice_
     {
         /// <summary>
         /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

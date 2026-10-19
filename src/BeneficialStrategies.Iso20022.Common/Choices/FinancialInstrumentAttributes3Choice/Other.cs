@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes3Ch
     [IsoId("_KUIpc4G-EeaalK9UbuVGFw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : FinancialInstrumentAttributes3Choice_
+    public partial record Other : FinancialInstrumentAttributes3Choice_
     {
         /// <summary>
         /// Attributes and characteristics of the financial instrument.

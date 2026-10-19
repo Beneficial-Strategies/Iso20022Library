@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType4Choice
     [IsoId("_i375pZIhEeect698_YsnIA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RequestType4Choice_
+    public partial record Proprietary : RequestType4Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

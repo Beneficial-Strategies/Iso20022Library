@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice
     [IsoId("_iZO6B6idEeWHO_l3hf2rlA")]
     [DisplayName("Other Collateral")]
     [IsoXmlTag("OthrColl")]
-    public record OtherCollateral : SecuredCollateral2Choice_
+    public partial record OtherCollateral : SecuredCollateral2Choice_
     {
         /// <summary>
         /// Specifies whether the collateral is a pool collateral or not.

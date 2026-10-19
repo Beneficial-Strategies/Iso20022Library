@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hzT7oKp5EeamNLogr5TkIQ")]
 [DisplayName("Settlement Account")]
-public record SettlementAccount1
+public partial record SettlementAccount1
 {
     /// <summary>
     /// Identification of the settlement account.

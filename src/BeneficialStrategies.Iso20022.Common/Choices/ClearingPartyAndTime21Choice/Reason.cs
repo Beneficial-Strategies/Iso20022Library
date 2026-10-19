@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingPartyAndTime21Choice
     /// </summary>
     [IsoId("_91accwtuEe2eQ-C-GTDpFA")]
     [DisplayName("Reason")]
-    public record Reason : ClearingPartyAndTime21Choice_
+    public partial record Reason : ClearingPartyAndTime21Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

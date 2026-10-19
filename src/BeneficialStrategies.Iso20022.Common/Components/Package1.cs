@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6GXWkAFJEeqUa4noT3P56A")]
 [DisplayName("Package")]
-public record Package1
+public partial record Package1
 {
     /// <summary>
     /// Specifies the identifier determined by the reporting counterparty to connect:|- two or more transactions that are reported separately but that are negotiated together as the product of a single economic agreement,|- or two or more reports pertaining to the same transaction whenever jurisdictional reporting requirement does not allow the transaction to be reported with a single report to TRs.||Usage:|Where the package identifier is not known when a new transaction is reported, the package identifier is updated as it becomes available.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigatedParties1Choice
     /// </summary>
     [IsoId("_dCh4RjwTEeGKuZXNQxGH3g")]
     [DisplayName("Code")]
-    public record Code : InvestigatedParties1Choice_
+    public partial record Code : InvestigatedParties1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

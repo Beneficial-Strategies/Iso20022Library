@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7Zfv4RA2Ee6N57R8Wekj-w")]
 [DisplayName("Auction Data2")]
-public record AuctionData2
+public partial record AuctionData2
 {
     /// <summary>
     /// Trading Phase.

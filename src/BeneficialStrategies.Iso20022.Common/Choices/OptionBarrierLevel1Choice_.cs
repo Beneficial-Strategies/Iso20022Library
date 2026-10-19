@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pVNJcNyZEe6BHYBNhkieQQ")]
     [DisplayName("Option Barrier Level1Choice")]
-    public abstract record OptionBarrierLevel1Choice_ { }
+    public abstract partial record OptionBarrierLevel1Choice_ { }
 }

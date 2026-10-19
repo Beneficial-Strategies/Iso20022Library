@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2XduYSVIEe6EvsLBQ6cYtA")]
 [DisplayName("Date Period5")]
-public record DatePeriod5
+public partial record DatePeriod5
 {
     /// <summary>
     /// Current Value Date.

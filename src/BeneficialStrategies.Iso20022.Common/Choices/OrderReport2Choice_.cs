@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(OrderReport2Choice.New), nameof(OrderReport2Choice.New))]
     [IsoId("_nyySARAVEe6N57R8Wekj-w")]
     [DisplayName("Order Report2Choice")]
-    public abstract record OrderReport2Choice_ { }
+    public abstract partial record OrderReport2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice
     [IsoId("_rwZwcKs1Eeayv9XxdmMwKQ")]
     [DisplayName("Absolute")]
     [IsoXmlTag("Abs")]
-    public record Absolute : StressSize1Choice_
+    public partial record Absolute : StressSize1Choice_
     {
         /// <summary>
         /// Unit of measure for the absolute stress.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6l3dlTEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order Identification9")]
-public record StandingOrderIdentification9
+public partial record StandingOrderIdentification9
 {
     /// <summary>
     /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.

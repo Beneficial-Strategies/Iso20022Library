@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice
     [IsoId("_TXut0IxnEeap1-whlAlpOw")]
     [DisplayName("Estimated")]
     [IsoXmlTag("Estmtd")]
-    public record Estimated : ReuseValue1Choice_
+    public partial record Estimated : ReuseValue1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_apzGIx2lEeqF2P5v-Rtejg")]
 [DisplayName("Settlement Fails Transaction Type")]
-public record SettlementFailsTransactionType2
+public partial record SettlementFailsTransactionType2
 {
     /// <summary>
     /// Purchase or sale of securities.

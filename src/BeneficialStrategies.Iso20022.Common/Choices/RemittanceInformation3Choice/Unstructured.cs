@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemittanceInformation3Choice
     /// </summary>
     [IsoId("_Rb1C19p-Ed-ak6NoX_4Aeg_975277681")]
     [DisplayName("Unstructured")]
-    public record Unstructured : RemittanceInformation3Choice_
+    public partial record Unstructured : RemittanceInformation3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

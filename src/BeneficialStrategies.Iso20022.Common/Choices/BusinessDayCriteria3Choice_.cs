@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_x84MZ5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Business Day Criteria 3 Choice")]
-    public abstract record BusinessDayCriteria3Choice_ { }
+    public abstract partial record BusinessDayCriteria3Choice_ { }
 }

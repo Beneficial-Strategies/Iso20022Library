@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ys-BmzneEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Pending")]
-public record IntraBalancePending5
+public partial record IntraBalancePending5
 {
     /// <summary>
     /// Status and status reason of the transaction.

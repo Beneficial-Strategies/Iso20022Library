@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CLY7kdGdEeaQk737TH1Fzw")]
 [DisplayName("Message Report Header")]
-public record MessageReportHeader4
+public partial record MessageReportHeader4
 {
     /// <summary>
     /// Provide detail on previously received message reports that are being reported as part of this status advice.

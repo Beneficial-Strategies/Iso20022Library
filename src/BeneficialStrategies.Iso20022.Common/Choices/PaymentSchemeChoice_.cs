@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QHyBDtp-Ed-ak6NoX_4Aeg_-1186600108")]
     [DisplayName("Payment Scheme Choice")]
-    public abstract record PaymentSchemeChoice_ { }
+    public abstract partial record PaymentSchemeChoice_ { }
 }

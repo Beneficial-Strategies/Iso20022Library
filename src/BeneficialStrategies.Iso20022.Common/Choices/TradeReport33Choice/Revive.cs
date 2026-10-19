@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice
     /// Revive.
     /// </summary>
     [DisplayName("Revive")]
-    public record Revive : TradeReport33Choice_
+    public partial record Revive : TradeReport33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

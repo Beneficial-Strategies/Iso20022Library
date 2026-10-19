@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivative2Choice
     [IsoId("_njM5UU-nEeiVsYLJl6hleg")]
     [DisplayName("Freight")]
     [IsoXmlTag("Frght")]
-    public record Freight : CommodityDerivative2Choice_
+    public partial record Freight : CommodityDerivative2Choice_
     {
         /// <summary>
         /// Specification of the size related to the freight sub type. Field to be populated when the base product field is equal to freight.

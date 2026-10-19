@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery18Choice
     /// Recurrent Query.
     /// </summary>
     [DisplayName("Recurrent Query")]
-    public record RecurrentQuery : TradeReportQuery18Choice_
+    public partial record RecurrentQuery : TradeReportQuery18Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_OgdYwaidEeWHO_l3hf2rlA")]
 [DisplayName("Money Market Secured Market Statistical Report V")]
-public record MoneyMarketSecuredMarketStatisticalReportV01 : IOuterRecord
+public partial record MoneyMarketSecuredMarketStatisticalReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

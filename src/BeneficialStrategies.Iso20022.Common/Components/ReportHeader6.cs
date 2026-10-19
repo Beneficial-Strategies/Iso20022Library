@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IXU44Xk4Eei6JsZKrqN0hQ")]
 [DisplayName("Report Header")]
-public record ReportHeader6
+public partial record ReportHeader6
 {
     /// <summary>
     /// Identification of a report billing statement.

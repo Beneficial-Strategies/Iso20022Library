@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3D4kmzEyEe6g-ffJsqGiSA")]
 [DisplayName("Validation Status Reason3")]
-public record ValidationStatusReason3
+public partial record ValidationStatusReason3
 {
     /// <summary>
     /// Originator.

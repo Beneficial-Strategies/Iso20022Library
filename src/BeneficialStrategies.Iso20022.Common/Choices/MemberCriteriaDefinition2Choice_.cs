@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_igVbx3SbEeiH1ZOt2UD8vQ")]
     [DisplayName("Member Criteria Definition 2 Choice")]
-    public abstract record MemberCriteriaDefinition2Choice_ { }
+    public abstract partial record MemberCriteriaDefinition2Choice_ { }
 }

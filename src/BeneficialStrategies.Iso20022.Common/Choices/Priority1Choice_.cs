@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Priority1Choice.Proprietary), nameof(Priority1Choice.Proprietary))]
     [IsoId("_SEJYAX_REeiik6YN_dzlEA")]
     [DisplayName("Priority 1 Choice")]
-    public abstract record Priority1Choice_ { }
+    public abstract partial record Priority1Choice_ { }
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError5Choice
     /// Operational Error.
     /// </summary>
     [DisplayName("Operational Error")]
-    public record OperationalError : LimitReportOrError5Choice_
+    public partial record OperationalError : LimitReportOrError5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

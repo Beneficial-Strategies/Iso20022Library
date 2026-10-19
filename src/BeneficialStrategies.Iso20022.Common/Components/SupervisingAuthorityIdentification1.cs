@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YwcnkImiEeeS2PYASHZxtw")]
 [DisplayName("Supervising Authority Identification")]
-public record SupervisingAuthorityIdentification1
+public partial record SupervisingAuthorityIdentification1
 {
     /// <summary>
     /// Unique identification of the institution.

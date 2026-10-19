@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__B6gAVo3Ee23K4GXSpBSeg")]
 [DisplayName("Compare Post Trade Risk Reduction")]
-public record ComparePostTradeRiskReduction2
+public partial record ComparePostTradeRiskReduction2
 {
     /// <summary>
     /// Information for the first side of the transaction.

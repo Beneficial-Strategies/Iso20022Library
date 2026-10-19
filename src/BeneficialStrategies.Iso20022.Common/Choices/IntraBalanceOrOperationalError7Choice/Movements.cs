@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError7C
     [IsoId("_YDGlITneEem7JZMuWtwtsg")]
     [DisplayName("Movements")]
     [IsoXmlTag("Mvmnts")]
-    public record Movements : IntraBalanceOrOperationalError7Choice_
+    public partial record Movements : IntraBalanceOrOperationalError7Choice_
     {
         /// <summary>
         /// Account to or from which an entry is made.

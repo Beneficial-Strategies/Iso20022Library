@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QnNBUHSHEe2bKJC9xIuWQw")]
     [DisplayName("Additional Request Data1Choice")]
-    public abstract record AdditionalRequestData1Choice_ { }
+    public abstract partial record AdditionalRequestData1Choice_ { }
 }

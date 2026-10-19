@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KJgQUSyuEe6J0v6OMXVc7g")]
 [DisplayName("Credit Derivative7")]
-public record CreditDerivative7
+public partial record CreditDerivative7
 {
     /// <summary>
     /// Seniority.

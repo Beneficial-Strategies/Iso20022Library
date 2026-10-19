@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
     [IsoId("_x4yAdbvsEeiLRYqS-r-R-A")]
     [DisplayName("Oil")]
     [IsoXmlTag("Oil")]
-    public record Oil : AssetClassCommodityEnergy2Choice_
+    public partial record Oil : AssetClassCommodityEnergy2Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

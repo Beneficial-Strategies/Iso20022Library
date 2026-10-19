@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CRJNUcgtEeuGrNSsxk3B0A")]
 [DisplayName("Counterparty Data")]
-public record CounterpartyData86
+public partial record CounterpartyData86
 {
     /// <summary>
     /// Set of information identifying the reporting counterparty.

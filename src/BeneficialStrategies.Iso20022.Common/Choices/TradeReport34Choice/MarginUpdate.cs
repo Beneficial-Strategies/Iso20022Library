@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport34Choice
     /// Margin Update.
     /// </summary>
     [DisplayName("Margin Update")]
-    public record MarginUpdate : TradeReport34Choice_
+    public partial record MarginUpdate : TradeReport34Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

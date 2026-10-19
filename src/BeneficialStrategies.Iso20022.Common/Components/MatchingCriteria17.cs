@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BVxjlZBIEe6Ojt1b3tfu9Q")]
 [DisplayName("Matching Criteria17")]
-public record MatchingCriteria17
+public partial record MatchingCriteria17
 {
     /// <summary>
     /// Counterparty Matching Criteria.

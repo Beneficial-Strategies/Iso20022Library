@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xCzJx5lcEeeE1Ya-LgRsuQ")]
 [DisplayName("System Status")]
-public record SystemStatus3
+public partial record SystemStatus3
 {
     /// <summary>
     /// Current status of a system.

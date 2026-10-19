@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceiptRejectReason1Choi
     /// </summary>
     [IsoId("_LafiFItuEee-OJ-wXSj3YQ")]
     [DisplayName("Code")]
-    public record Code : ClaimNonReceiptRejectReason1Choice_
+    public partial record Code : ClaimNonReceiptRejectReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

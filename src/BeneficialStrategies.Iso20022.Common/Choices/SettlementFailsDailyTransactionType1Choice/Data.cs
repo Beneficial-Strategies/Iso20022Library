@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyTransactionT
     [IsoId("_9tfhFTOYEeqBfed1bmSPqg")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public record Data : SettlementFailsDailyTransactionType1Choice_
+    public partial record Data : SettlementFailsDailyTransactionType1Choice_
     {
         /// <summary>
         /// Purchase or sale of securities.

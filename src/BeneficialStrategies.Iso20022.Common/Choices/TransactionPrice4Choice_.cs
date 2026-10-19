@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_-KxXQbTUEee_k7HqaUKERA")]
     [DisplayName("Transaction Price 4 Choice")]
-    public abstract record TransactionPrice4Choice_ { }
+    public abstract partial record TransactionPrice4Choice_ { }
 }

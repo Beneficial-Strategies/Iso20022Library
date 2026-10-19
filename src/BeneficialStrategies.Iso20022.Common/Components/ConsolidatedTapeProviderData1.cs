@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gBfUUGImEfCeoPFCHQnhvA")]
 [DisplayName("Consolidated Tape Provider Data1")]
-public record ConsolidatedTapeProviderData1
+public partial record ConsolidatedTapeProviderData1
 {
     /// <summary>
     /// Date and time when the transaction was received by the Consolidated Tape Provider (CTP).

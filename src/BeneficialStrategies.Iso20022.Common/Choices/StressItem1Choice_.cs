@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(StressItem1Choice.RiskFactor), nameof(StressItem1Choice.RiskFactor))]
     [IsoId("_fCpTIKsvEeayv9XxdmMwKQ")]
     [DisplayName("Stress Item 1 Choice")]
-    public abstract record StressItem1Choice_ { }
+    public abstract partial record StressItem1Choice_ { }
 }

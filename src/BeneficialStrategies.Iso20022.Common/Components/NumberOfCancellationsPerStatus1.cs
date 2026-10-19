@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rquaddp-Ed-ak6NoX_4Aeg_847606645")]
 [DisplayName("Number Of Cancellations Per Status")]
-public record NumberOfCancellationsPerStatus1
+public partial record NumberOfCancellationsPerStatus1
 {
     /// <summary>
     /// Number of individual cancellation requests contained in the message, detailed per status.

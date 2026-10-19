@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__pEK0IxmEeap1-whlAlpOw")]
 [DisplayName("Security Reuse Data")]
-public record SecurityReuseData1
+public partial record SecurityReuseData1
 {
     /// <summary>
     /// Identifier of the security used as collateral.

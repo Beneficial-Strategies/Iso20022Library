@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice
     [IsoId("__fyLY2EUEe2P-L9DBerEgA")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public record Modification : TradeReport32Choice_
+    public partial record Modification : TradeReport32Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

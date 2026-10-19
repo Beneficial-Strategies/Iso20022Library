@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_388OoXz2EeurrJrNxcsszQ")]
     [DisplayName("Transaction Loan Data 26 Choice")]
-    public abstract record TransactionLoanData26Choice_ { }
+    public abstract partial record TransactionLoanData26Choice_ { }
 }

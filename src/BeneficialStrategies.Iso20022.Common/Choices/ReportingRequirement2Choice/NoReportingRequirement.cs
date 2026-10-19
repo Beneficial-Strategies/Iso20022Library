@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement2Choice
     [IsoId("_IVUQM155Ee2a_-MvhEjKmA")]
     [DisplayName("No Reporting Requirement")]
     [IsoXmlTag("NoRptgRqrmnt")]
-    public record NoReportingRequirement : ReportingRequirement2Choice_
+    public partial record NoReportingRequirement : ReportingRequirement2Choice_
     {
         /// <summary>
         /// Indicator of derivative reopening, terminated or cancelled by mistake.

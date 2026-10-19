@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper3Choice
     [IsoId("__n-Wg7v7EeiLRYqS-r-R-A")]
     [DisplayName("Newsprint")]
     [IsoXmlTag("Nwsprnt")]
-    public record Newsprint : AssetClassCommodityPaper3Choice_
+    public partial record Newsprint : AssetClassCommodityPaper3Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

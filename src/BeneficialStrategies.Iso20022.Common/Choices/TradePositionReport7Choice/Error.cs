@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
     [IsoId("_bWl_ixLBEeqctpBfTmLJnw")]
     [DisplayName("Error")]
     [IsoXmlTag("Err")]
-    public record Error : TradePositionReport7Choice_
+    public partial record Error : TradePositionReport7Choice_
     {
         /// <summary>
         /// Counterparty data details.

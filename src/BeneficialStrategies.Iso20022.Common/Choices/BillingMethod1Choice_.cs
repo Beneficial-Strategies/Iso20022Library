@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(BillingMethod1Choice.MethodD), nameof(BillingMethod1Choice.MethodD))]
     [IsoId("_6P9DsZqlEeGSON8vddiWzQ_-904396180")]
     [DisplayName("Billing Method 1 Choice")]
-    public abstract record BillingMethod1Choice_ { }
+    public abstract partial record BillingMethod1Choice_ { }
 }

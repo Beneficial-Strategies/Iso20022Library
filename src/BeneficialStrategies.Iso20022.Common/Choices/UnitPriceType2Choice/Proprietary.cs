@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitPriceType2Choice
     [IsoId("_ORWfkwc_EeSyIPzOZ6VzBQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UnitPriceType2Choice_
+    public partial record Proprietary : UnitPriceType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

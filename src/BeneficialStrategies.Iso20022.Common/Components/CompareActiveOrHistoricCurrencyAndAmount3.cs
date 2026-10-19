@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZJ600a5jEeuo-IflVgGqiA")]
 [DisplayName("Compare Active Or Historic Currency And Amount")]
-public record CompareActiveOrHistoricCurrencyAndAmount3
+public partial record CompareActiveOrHistoricCurrencyAndAmount3
 {
     /// <summary>
     /// Information for the first side of the transaction.

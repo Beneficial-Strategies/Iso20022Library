@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingPartyAndTime21Choice
     [IsoId("_zeYEkBZNEe2QNcZTDeoKnQ")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
-    public record Details : ClearingPartyAndTime21Choice_
+    public partial record Details : ClearingPartyAndTime21Choice_
     {
         /// <summary>
         /// Identifies the central counterparty (CCP) that cleared the transaction.

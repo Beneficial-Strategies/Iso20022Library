@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T9Dpetp-Ed-ak6NoX_4Aeg_588710247")]
 [DisplayName("Case Assignment")]
-public record CaseAssignment
+public partial record CaseAssignment
 {
     /// <summary>
     /// Identification of an assignment within a case.

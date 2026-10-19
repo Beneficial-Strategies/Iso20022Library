@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hI5IpAtOEeWkxvNyFrBT8Q")]
 [DisplayName("Currency Control Record Status")]
-public record CurrencyControlRecordStatus1
+public partial record CurrencyControlRecordStatus1
 {
     /// <summary>
     /// Unique and unambiguous identification of each entry/record within the package of transactions.

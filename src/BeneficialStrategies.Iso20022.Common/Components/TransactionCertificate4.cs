@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bKeVEbGJEeuSTr8k0UEM8A")]
 [DisplayName("Transaction Certificate")]
-public record TransactionCertificate4
+public partial record TransactionCertificate4
 {
     /// <summary>
     /// Unique and unambiguous identification of the transaction.

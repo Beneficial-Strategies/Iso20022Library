@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Branch6Choice
     /// </summary>
     [IsoId("_qhzzwcg4Eeu4ecZgAYuz5w")]
     [DisplayName("Identification")]
-    public record Identification : Branch6Choice_
+    public partial record Identification : Branch6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Id")]

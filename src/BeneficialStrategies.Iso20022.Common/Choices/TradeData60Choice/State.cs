@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData60Choice
     /// State.
     /// </summary>
     [DisplayName("State")]
-    public record State : TradeData60Choice_
+    public partial record State : TradeData60Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

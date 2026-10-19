@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification1Choice
     /// </summary>
     [IsoId("_uVOw8wbSEeqrW7Meu5r3kQ")]
     [DisplayName("Alternative Instrument Identification")]
-    public record AlternativeInstrumentIdentification : InstrumentIdentification1Choice_
+    public partial record AlternativeInstrumentIdentification : InstrumentIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

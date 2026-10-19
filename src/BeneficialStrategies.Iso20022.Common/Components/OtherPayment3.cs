@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R72T8XhSEeu3kecHd7QKUQ")]
 [DisplayName("Other Payment")]
-public record OtherPayment3
+public partial record OtherPayment3
 {
     /// <summary>
     /// Amount of money of any payment the reporting counterparty made or received.

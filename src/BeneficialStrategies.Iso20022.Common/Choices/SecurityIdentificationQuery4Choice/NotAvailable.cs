@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choi
     /// </summary>
     [IsoId("_PJPwpZNeEeytjZlcgApf6A")]
     [DisplayName("Not Available")]
-    public record NotAvailable : SecurityIdentificationQuery4Choice_
+    public partial record NotAvailable : SecurityIdentificationQuery4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

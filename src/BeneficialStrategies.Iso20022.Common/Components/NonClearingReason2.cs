@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ak0bdZPuEey0rJ3Gl6WZVA")]
 [DisplayName("Non Clearing Reason")]
-public record NonClearingReason2
+public partial record NonClearingReason2
 {
     /// <summary>
     /// Specifies the reason for a clearing exemption or exception.

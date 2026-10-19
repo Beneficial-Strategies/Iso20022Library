@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
     [IsoId("_x4yAe7vsEeiLRYqS-r-R-A")]
     [DisplayName("Renewable Energy")]
     [IsoXmlTag("RnwblNrgy")]
-    public record RenewableEnergy : AssetClassCommodityEnergy2Choice_
+    public partial record RenewableEnergy : AssetClassCommodityEnergy2Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

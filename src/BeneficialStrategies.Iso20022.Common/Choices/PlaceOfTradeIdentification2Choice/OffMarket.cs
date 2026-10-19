@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification2Choic
     /// </summary>
     [IsoId("_TCfeptp-Ed-ak6NoX_4Aeg_-1421688662")]
     [DisplayName("Off Market")]
-    public record OffMarket : PlaceOfTradeIdentification2Choice_
+    public partial record OffMarket : PlaceOfTradeIdentification2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OffMkt")]

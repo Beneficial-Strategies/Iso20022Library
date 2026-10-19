@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError4Choice
     [IsoId("_C3LJ424-EeiU9cctagi5ow")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : LimitReportOrError4Choice_
+    public partial record OperationalError : LimitReportOrError4Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

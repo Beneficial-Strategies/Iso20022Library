@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jODlAIAuEeirUu_C8Wn_0Q")]
 [DisplayName("Competent Authority")]
-public record CompetentAuthority1
+public partial record CompetentAuthority1
 {
     /// <summary>
     /// Identification field for the competent authority.

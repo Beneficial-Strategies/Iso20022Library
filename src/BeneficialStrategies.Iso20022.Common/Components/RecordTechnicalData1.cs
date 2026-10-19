@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NUoVYB5REeWc9bJOIIhUUw")]
 [DisplayName("Record Technical Data")]
-public record RecordTechnicalData1
+public partial record RecordTechnicalData1
 {
     /// <summary>
     /// Defines the date and time when the report was originally received by the national competent authority.

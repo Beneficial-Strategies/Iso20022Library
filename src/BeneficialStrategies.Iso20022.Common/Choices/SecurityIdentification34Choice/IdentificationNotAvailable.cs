@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification34Choice
     /// </summary>
     [IsoId("_Zlr-qw1HEeqV4s5SpzR1dQ")]
     [DisplayName("Identification Not Available")]
-    public record IdentificationNotAvailable : SecurityIdentification34Choice_
+    public partial record IdentificationNotAvailable : SecurityIdentification34Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

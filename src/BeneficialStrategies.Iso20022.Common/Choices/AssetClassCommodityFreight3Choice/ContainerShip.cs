@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight3Choic
     [IsoId("_VcEcVbv5EeiLRYqS-r-R-A")]
     [DisplayName("Container Ship")]
     [IsoXmlTag("CntnrShip")]
-    public record ContainerShip : AssetClassCommodityFreight3Choice_
+    public partial record ContainerShip : AssetClassCommodityFreight3Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

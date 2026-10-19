@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice
     /// Request Narrative.
     /// </summary>
     [DisplayName("Request Narrative")]
-    public record RequestNarrative : AdditionalRequestData1Choice_
+    public partial record RequestNarrative : AdditionalRequestData1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

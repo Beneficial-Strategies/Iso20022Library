@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RA_79XhdEeidzqjNEfehPg")]
     [DisplayName("Error Handling 3 Choice")]
-    public abstract record ErrorHandling3Choice_ { }
+    public abstract partial record ErrorHandling3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1HrfsQzAEe2Wmf2RrXviyA")]
 [DisplayName("Reservation Search Criteria")]
-public record ReservationSearchCriteria5
+public partial record ReservationSearchCriteria5
 {
     /// <summary>
     /// Patterns to search a date time.

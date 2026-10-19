@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Dqby124-EeiU9cctagi5ow")]
 [DisplayName("Reservation Query")]
-public record ReservationQuery3
+public partial record ReservationQuery3
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

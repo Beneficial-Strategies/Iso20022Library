@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cIJQQMOVEeWiEtRBUJSIaA")]
 [DisplayName("Currency Code And Name")]
-public record CurrencyCodeAndName1
+public partial record CurrencyCodeAndName1
 {
     /// <summary>
     /// Currency is specified by its code.

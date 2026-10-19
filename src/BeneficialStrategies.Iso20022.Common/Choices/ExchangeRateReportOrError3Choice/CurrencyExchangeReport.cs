@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError3Choice
     [IsoId("_MmlkkdfiEeqoweZZxm4TPQ")]
     [DisplayName("Currency Exchange Report")]
     [IsoXmlTag("CcyXchgRpt")]
-    public record CurrencyExchangeReport : ExchangeRateReportOrError3Choice_
+    public partial record CurrencyExchangeReport : ExchangeRateReportOrError3Choice_
     {
         /// <summary>
         /// Source and target currencies for which information is request.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YR3eIVo0Ee23K4GXSpBSeg")]
 [DisplayName("Compare Energy Delivery Attribute")]
-public record CompareEnergyDeliveryAttribute1
+public partial record CompareEnergyDeliveryAttribute1
 {
     /// <summary>
     /// Specifies whether the information on the delivery intervals are matching or not.

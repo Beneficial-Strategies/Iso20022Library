@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TVRQtdp-Ed-ak6NoX_4Aeg_1519549154")]
 [DisplayName("Proprietary Bank Transaction Code Structure")]
-public record ProprietaryBankTransactionCodeStructure1
+public partial record ProprietaryBankTransactionCodeStructure1
 {
     /// <summary>
     /// Proprietary bank transaction code to identify the underlying transaction.

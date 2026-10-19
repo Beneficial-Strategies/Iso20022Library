@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashType1Choice
     /// <summary>Cash type, in a proprietary form.</summary>
     [IsoId("_R9pcZFDeEfCRhs5qxCujTw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CashType1Choice_
+    public partial record Proprietary : CashType1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

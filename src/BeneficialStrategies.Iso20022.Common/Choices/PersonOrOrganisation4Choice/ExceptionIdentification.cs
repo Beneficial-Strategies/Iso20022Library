@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice
     /// Exception Identification.
     /// </summary>
     [DisplayName("Exception Identification")]
-    public record ExceptionIdentification : PersonOrOrganisation4Choice_
+    public partial record ExceptionIdentification : PersonOrOrganisation4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

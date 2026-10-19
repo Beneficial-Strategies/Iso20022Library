@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QJROwtp-Ed-ak6NoX_4Aeg_-626239009")]
 [DisplayName("Settlement Information")]
-public record SettlementInformation15
+public partial record SettlementInformation15
 {
     /// <summary>
     /// Agent through which the instructing agent will reimburse the instructed agent.|Usage: If InstructingAgent and InstructedAgent have the same reimbursement agent, then only InstructingReimbursementAgent must be used.

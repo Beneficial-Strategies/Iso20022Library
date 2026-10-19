@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData18Choic
     [IsoId("_C6xiscg5Eeu4ecZgAYuz5w")]
     [DisplayName("Repurchase Trade")]
     [IsoXmlTag("RpTrad")]
-    public record RepurchaseTrade : TransactionCollateralData18Choice_
+    public partial record RepurchaseTrade : TransactionCollateralData18Choice_
     {
         /// <summary>
         /// Date on which the counterparties contractually agree the exchange of cash, securities, or commodities versus collateral for the opening leg (spot leg) of the transaction.

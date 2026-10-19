@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4TLUQLC2EeaSl6vJk5Bd8w")]
 [DisplayName("Back Testing Methodology")]
-public record BackTestingMethodology1
+public partial record BackTestingMethodology1
 {
     /// <summary>
     /// Specifies the core model type, excluding any modifications for pro-cyclicality.

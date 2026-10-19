@@ -61,5 +61,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Nm1ZsbveEeiLRYqS-r-R-A")]
     [DisplayName("Asset Class Commodity Agricultural 5 Choice")]
-    public abstract record AssetClassCommodityAgricultural5Choice_ { }
+    public abstract partial record AssetClassCommodityAgricultural5Choice_ { }
 }

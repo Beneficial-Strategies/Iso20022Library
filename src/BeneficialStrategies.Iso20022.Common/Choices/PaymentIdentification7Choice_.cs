@@ -41,5 +41,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5F42wAKxEe2rHs6fbn9-0A")]
     [DisplayName("Payment Identification 7 Choice")]
-    public abstract record PaymentIdentification7Choice_ { }
+    public abstract partial record PaymentIdentification7Choice_ { }
 }

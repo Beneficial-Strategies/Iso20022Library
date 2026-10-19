@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode6Choice
     /// Margin Portfolio Code.
     /// </summary>
     [DisplayName("Margin Portfolio Code")]
-    public record MarginPortfolioCode : CollateralPortfolioCode6Choice_
+    public partial record MarginPortfolioCode : CollateralPortfolioCode6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

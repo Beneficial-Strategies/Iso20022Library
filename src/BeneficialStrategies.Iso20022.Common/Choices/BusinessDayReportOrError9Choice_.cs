@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_N58csXXyEei3jO6riKEVXg")]
     [DisplayName("Business Day Report Or Error 9 Choice")]
-    public abstract record BusinessDayReportOrError9Choice_ { }
+    public abstract partial record BusinessDayReportOrError9Choice_ { }
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Vf2nGTqwEeWZFYSPlduMhw")]
     [DisplayName("Cash Availability Date 1 Choice")]
-    public abstract record CashAvailabilityDate1Choice_ { }
+    public abstract partial record CashAvailabilityDate1Choice_ { }
 }

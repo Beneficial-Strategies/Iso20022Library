@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xtnDcTEyEe6g-ffJsqGiSA")]
 [DisplayName("Statement Resolution Entry5")]
-public record StatementResolutionEntry5
+public partial record StatementResolutionEntry5
 {
     /// <summary>
     /// Original Group Information.

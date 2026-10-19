@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
     [IsoId("_SBzrA152Ee2a_-MvhEjKmA")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
-    public record State : TradeData56Choice_
+    public partial record State : TradeData56Choice_
     {
         /// <summary>
         /// Date and time of submission of the report to the trade repository.

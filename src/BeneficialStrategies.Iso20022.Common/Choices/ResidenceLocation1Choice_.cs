@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ResidenceLocation1Choice.Area), nameof(ResidenceLocation1Choice.Area))]
     [IsoId("_6QsqkpqlEeGSON8vddiWzQ_1947299018")]
     [DisplayName("Residence Location 1 Choice")]
-    public abstract record ResidenceLocation1Choice_ { }
+    public abstract partial record ResidenceLocation1Choice_ { }
 }

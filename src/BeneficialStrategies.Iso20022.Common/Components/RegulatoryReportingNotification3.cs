@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o5oMsbGJEeuSTr8k0UEM8A")]
 [DisplayName("Regulatory Reporting Notification")]
-public record RegulatoryReportingNotification3
+public partial record RegulatoryReportingNotification3
 {
     /// <summary>
     /// Unique and unambiguous identification of the transaction notification.

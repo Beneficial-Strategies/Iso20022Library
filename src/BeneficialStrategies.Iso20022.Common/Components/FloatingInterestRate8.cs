@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HhTg5X5aEea2k7EBUopqxw")]
 [DisplayName("Floating Interest Rate")]
-public record FloatingInterestRate8
+public partial record FloatingInterestRate8
 {
     /// <summary>
     /// Identifies the reference index for the instrument.

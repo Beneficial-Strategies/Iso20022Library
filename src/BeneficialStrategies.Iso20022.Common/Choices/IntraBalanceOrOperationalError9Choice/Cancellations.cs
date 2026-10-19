@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError9C
     [IsoId("_p-rkcTnfEem7JZMuWtwtsg")]
     [DisplayName("Cancellations")]
     [IsoXmlTag("Cxls")]
-    public record Cancellations : IntraBalanceOrOperationalError9Choice_
+    public partial record Cancellations : IntraBalanceOrOperationalError9Choice_
     {
         /// <summary>
         /// Account to or from which a cash entry is made.

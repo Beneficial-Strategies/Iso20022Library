@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError8Choice
     [IsoId("_fSe1U9cZEeqRFcf2R4bPBw")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : MemberReportOrError8Choice_
+    public partial record BusinessError : MemberReportOrError8Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice
     [IsoId("_xH-zZSe0Eei12pGEsJIAeQ")]
     [DisplayName("Foreign Exchange")]
     [IsoXmlTag("FX")]
-    public record ForeignExchange : Derivative3Choice_
+    public partial record ForeignExchange : Derivative3Choice_
     {
         /// <summary>
         /// Type of deliverable and non-deliverable forwards, options and swaps contract.	.

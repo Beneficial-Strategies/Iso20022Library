@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_pmmdcTqxEeWZFYSPlduMhw")]
 [DisplayName("Notification To Receive Cancellation Advice V")]
-public record NotificationToReceiveCancellationAdviceV05 : IOuterRecord
+public partial record NotificationToReceiveCancellationAdviceV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

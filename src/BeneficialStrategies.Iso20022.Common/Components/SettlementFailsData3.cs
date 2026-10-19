@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_afLKcR2lEeqF2P5v-Rtejg")]
 [DisplayName("Settlement Fails Data")]
-public record SettlementFailsData3
+public partial record SettlementFailsData3
 {
     /// <summary>
     /// Total of all types of settlement transactions.

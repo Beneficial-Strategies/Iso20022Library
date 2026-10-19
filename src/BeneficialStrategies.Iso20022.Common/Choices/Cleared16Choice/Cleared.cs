@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared16Choice
     [IsoId("_gKmIUcg4Eeu4ecZgAYuz5w")]
     [DisplayName("Cleared")]
     [IsoXmlTag("Clrd")]
-    public record Cleared : Cleared16Choice_
+    public partial record Cleared : Cleared16Choice_
     {
         /// <summary>
         /// In the case of a contract that has been cleared, the unique code for the clearing counterparty that has cleared the contract.

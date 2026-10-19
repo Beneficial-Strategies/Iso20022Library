@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BIv4sexYEemioJdkOVFBdw")]
 [DisplayName("Trade Clearing")]
-public record TradeClearing5
+public partial record TradeClearing5
 {
     /// <summary>
     /// Indicates, whether the reported contract belongs to a class of OTC derivatives that has been declared subject to the clearing obligation and both counterparties to the contract are subject to the clearing obligation, as of the time of execution of the contract.

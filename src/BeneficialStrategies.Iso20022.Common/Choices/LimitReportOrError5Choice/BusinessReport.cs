@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError5Choice
     /// Business Report.
     /// </summary>
     [DisplayName("Business Report")]
-    public record BusinessReport : LimitReportOrError5Choice_
+    public partial record BusinessReport : LimitReportOrError5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

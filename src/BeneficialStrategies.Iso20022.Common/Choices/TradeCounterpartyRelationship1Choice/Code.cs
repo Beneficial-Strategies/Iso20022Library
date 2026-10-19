@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeCounterpartyRelationship1Ch
     /// </summary>
     [IsoId("_uWGXECb_Ee2BYL6XeAmCWw")]
     [DisplayName("Code")]
-    public record Code : TradeCounterpartyRelationship1Choice_
+    public partial record Code : TradeCounterpartyRelationship1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fRP9iwAFEeqefbt-QjTNnA")]
 [DisplayName("Collateral Type")]
-public record CollateralType16
+public partial record CollateralType16
 {
     /// <summary>
     /// Data specific to securities and related fields used as a collateral.

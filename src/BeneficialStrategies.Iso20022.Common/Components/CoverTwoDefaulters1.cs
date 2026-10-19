@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hs1wsLJPEeaYqc4G3TTwhA")]
 [DisplayName("Cover Two Defaulters")]
-public record CoverTwoDefaulters1
+public partial record CoverTwoDefaulters1
 {
     /// <summary>
     /// Identifies the member whose default would generate the largest liquidity exposure for the CCP under the scenario and for the relevant currency.

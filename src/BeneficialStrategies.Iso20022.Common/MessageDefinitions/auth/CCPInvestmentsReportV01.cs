@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_JJKuEeUUEem3X-64-NKdqg")]
 [DisplayName("CCP Investments Report V")]
-public record CCPInvestmentsReportV01 : IOuterRecord
+public partial record CCPInvestmentsReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q25Pk3hCEeu3kecHd7QKUQ")]
 [DisplayName("Leg Currency")]
-public record LegCurrency2
+public partial record LegCurrency2
 {
     /// <summary>
     /// Currency of the notional amount.

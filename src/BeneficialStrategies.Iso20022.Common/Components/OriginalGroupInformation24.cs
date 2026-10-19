@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Pl9GVdp-Ed-ak6NoX_4Aeg_-203686213")]
 [DisplayName("Original Group Information")]
-public record OriginalGroupInformation24
+public partial record OriginalGroupInformation24
 {
     /// <summary>
     /// Unique identification, as assigned by the original assigner, to unambiguously identify the original group cancellation request.

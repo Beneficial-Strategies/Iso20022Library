@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight4Choic
     [IsoId("_Rn91cU8REe2PGo0mhYCh1g")]
     [DisplayName("Dry")]
     [IsoXmlTag("Dry")]
-    public record Dry : AssetClassCommodityFreight4Choice_
+    public partial record Dry : AssetClassCommodityFreight4Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

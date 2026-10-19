@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5DtlUFCiEeWdp9NcseTlOw")]
 [DisplayName("Party Identification")]
-public record PartyIdentification79
+public partial record PartyIdentification79
 {
     /// <summary>
     /// Identifies the account which is used to acquire or sell financial instruments.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_36KFVzEyEe6g-ffJsqGiSA")]
 [DisplayName("Bilateral Limit4")]
-public record BilateralLimit4
+public partial record BilateralLimit4
 {
     /// <summary>
     /// Counterparty Identification.

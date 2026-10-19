@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_-N5Qman9EemdLtwzt4CWxg")]
     [DisplayName("Counterparty Trade Nature 7 Choice")]
-    public abstract record CounterpartyTradeNature7Choice_ { }
+    public abstract partial record CounterpartyTradeNature7Choice_ { }
 }

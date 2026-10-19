@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mkybkGFdEfC-1NkZ9TkdKA")]
 [DisplayName("Trading System Data1")]
-public record TradingSystemData1
+public partial record TradingSystemData1
 {
     /// <summary>
     /// Identification of the trading venue on which the instrument status is valid.

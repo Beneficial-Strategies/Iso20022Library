@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
     /// Other.
     /// </summary>
     [DisplayName("Other")]
-    public record Other : TransactionAmendment1Choice_
+    public partial record Other : TransactionAmendment1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

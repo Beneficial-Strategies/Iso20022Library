@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1uCzDzEyEe6g-ffJsqGiSA")]
 [DisplayName("System3")]
-public record System3
+public partial record System3
 {
     /// <summary>
     /// System Identification.

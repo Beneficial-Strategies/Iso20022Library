@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm3Choice
     [IsoId("_tKrKc69_EemF0ZVFnxVu4g")]
     [DisplayName("Fixed")]
     [IsoXmlTag("Fxd")]
-    public record Fixed : ContractTerm3Choice_
+    public partial record Fixed : ContractTerm3Choice_
     {
         /// <summary>
         /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the closing leg (forward leg) of the secured financing transaction. This information shall not be reported for open term agreements.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3PRnTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Liquidity Credit Transfer V07")]
-public record LiquidityCreditTransferV07 : IOuterRecord
+public partial record LiquidityCreditTransferV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

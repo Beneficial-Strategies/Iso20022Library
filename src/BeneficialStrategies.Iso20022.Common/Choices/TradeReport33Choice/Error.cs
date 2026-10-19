@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice
     /// Error.
     /// </summary>
     [DisplayName("Error")]
-    public record Error : TradeReport33Choice_
+    public partial record Error : TradeReport33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

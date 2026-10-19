@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_eZL10dcZEeqRFcf2R4bPBw")]
     [DisplayName("Standing Order Or Error 7 Choice")]
-    public abstract record StandingOrderOrError7Choice_ { }
+    public abstract partial record StandingOrderOrError7Choice_ { }
 }

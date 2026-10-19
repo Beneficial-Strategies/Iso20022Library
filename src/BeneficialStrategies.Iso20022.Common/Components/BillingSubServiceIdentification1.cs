@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Oww65qlEeGSON8vddiWzQ_-1562075356")]
 [DisplayName("Billing Sub Service Identification")]
-public record BillingSubServiceIdentification1
+public partial record BillingSubServiceIdentification1
 {
     /// <summary>
     /// Specifies the qualifier of the sub service.

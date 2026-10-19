@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EQv5d9L3EeSDLevdaFPXHw")]
 [DisplayName("Registered Contract Journal")]
-public record RegisteredContractJournal1
+public partial record RegisteredContractJournal1
 {
     /// <summary>
     /// Agent which registers the currency control contract.

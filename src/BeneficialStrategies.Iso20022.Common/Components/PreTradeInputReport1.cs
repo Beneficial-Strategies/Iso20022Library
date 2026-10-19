@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fOqVAGF9EfC07JR6e2JJ-w")]
 [DisplayName("Pre Trade Input Report1")]
-public record PreTradeInputReport1
+public partial record PreTradeInputReport1
 {
     /// <summary>
     /// Identification of the report.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ERnlwLDDEeaSl6vJk5Bd8w")]
 [DisplayName("Liquidity Stress Scenario Definition")]
-public record LiquidityStressScenarioDefinition1
+public partial record LiquidityStressScenarioDefinition1
 {
     /// <summary>
     /// CCP’s internal unique identifier of the stress scenario that generates the reported liquidity need.

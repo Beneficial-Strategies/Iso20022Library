@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError3Choice
     [IsoId("_Mmlkk9fiEeqoweZZxm4TPQ")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : ExchangeRateReportOrError3Choice_
+    public partial record OperationalError : ExchangeRateReportOrError3Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

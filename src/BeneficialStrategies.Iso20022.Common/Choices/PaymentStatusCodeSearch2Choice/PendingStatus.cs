@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCodeSearch2Choice
     /// </summary>
     [IsoId("_RGEOMdp-Ed-ak6NoX_4Aeg_396814105")]
     [DisplayName("Pending Status")]
-    public record PendingStatus : PaymentStatusCodeSearch2Choice_
+    public partial record PendingStatus : PaymentStatusCodeSearch2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

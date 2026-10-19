@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExerciseDate1Choice
     /// </summary>
     [IsoId("_Y7c_swbBEeqrW7Meu5r3kQ")]
     [DisplayName("Pending Date Applicable")]
-    public record PendingDateApplicable : ExerciseDate1Choice_
+    public partial record PendingDateApplicable : ExerciseDate1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

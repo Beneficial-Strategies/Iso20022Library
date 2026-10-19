@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T8KRltp-Ed-ak6NoX_4Aeg_-609394874")]
 [DisplayName("Entry Transaction")]
-public record EntryTransaction2
+public partial record EntryTransaction2
 {
     /// <summary>
     /// Set of elements used to provide the identification of the underlying transaction.

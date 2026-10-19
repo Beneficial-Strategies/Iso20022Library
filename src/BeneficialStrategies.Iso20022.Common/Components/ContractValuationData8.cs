@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UiQtgTOgEe2AEsHTM-bt1w")]
 [DisplayName("Contract Valuation Data")]
-public record ContractValuationData8
+public partial record ContractValuationData8
 {
     /// <summary>
     /// Specifies the current value of the outstanding contract.

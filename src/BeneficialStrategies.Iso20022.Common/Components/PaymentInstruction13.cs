@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Lss7yxbwEeOy-PlRuFSUzQ")]
 [DisplayName("Payment Instruction")]
-public record PaymentInstruction13
+public partial record PaymentInstruction13
 {
     /// <summary>
     /// Date at which the initiating party requests that the payment instruction be processed. |.

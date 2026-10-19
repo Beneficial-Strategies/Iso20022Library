@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice
     /// </summary>
     [IsoId("_owQIQbtIEeiLRYqS-r-R-A")]
     [DisplayName("Paper")]
-    public record Paper : AssetClassCommodity5Choice_
+    public partial record Paper : AssetClassCommodity5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Ppr")]

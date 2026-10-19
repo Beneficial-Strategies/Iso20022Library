@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d3DnkchsEeadgvwNGwK05w")]
 [DisplayName("Option")]
-public record Option14
+public partial record Option14
 {
     /// <summary>
     /// Expiration style of the option.

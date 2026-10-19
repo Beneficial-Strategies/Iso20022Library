@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b-a7sZjgEeqkLZLH6DK3UQ")]
 [DisplayName("Energy Specific Attribute")]
-public record EnergySpecificAttribute6
+public partial record EnergySpecificAttribute6
 {
     /// <summary>
     /// Indicates the delivery point(s) of market area(s) for energy derivative contracts.

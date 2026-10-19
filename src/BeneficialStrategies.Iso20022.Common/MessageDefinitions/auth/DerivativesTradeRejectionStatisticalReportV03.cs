@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_pVVvj2mFEe2DRvVJM2Qy-g")]
 [DisplayName("Derivatives Trade Rejection Statistical Report V")]
-public record DerivativesTradeRejectionStatisticalReportV03 : IOuterRecord
+public partial record DerivativesTradeRejectionStatisticalReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

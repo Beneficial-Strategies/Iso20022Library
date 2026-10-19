@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice1Choice
     [IsoId("_RUrR9tp-Ed-ak6NoX_4Aeg_969960515")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TransactionPrice1Choice_
+    public partial record Proprietary : TransactionPrice1Choice_
     {
         /// <summary>
         /// Identifies the type of price reported.

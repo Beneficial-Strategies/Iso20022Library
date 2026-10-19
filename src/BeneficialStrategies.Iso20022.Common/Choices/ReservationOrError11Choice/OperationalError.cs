@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError11Choice
     /// Operational Error.
     /// </summary>
     [DisplayName("Operational Error")]
-    public record OperationalError : ReservationOrError11Choice_
+    public partial record OperationalError : ReservationOrError11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

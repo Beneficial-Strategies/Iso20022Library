@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8LPcAXvyEeanCNPcMT7sSg")]
 [DisplayName("Derivative Foreign Exchange")]
-public record DerivativeForeignExchange3
+public partial record DerivativeForeignExchange3
 {
     /// <summary>
     /// Type of the underlying currency.

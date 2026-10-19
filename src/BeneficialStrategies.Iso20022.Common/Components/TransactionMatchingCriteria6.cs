@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v_bxkVoyEe23K4GXSpBSeg")]
 [DisplayName("Transaction Matching Criteria")]
-public record TransactionMatchingCriteria6
+public partial record TransactionMatchingCriteria6
 {
     /// <summary>
     /// Specifies whether the information on the reporting tracking numbers are matching or not.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LWX6EckIEem3UrxZgQhVAw")]
 [DisplayName("Limit Structure")]
-public record LimitStructure4
+public partial record LimitStructure4
 {
     /// <summary>
     /// Identification of the default limit.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lH52cyGxEeKjd4jizyIDGA")]
 [DisplayName("Number And Sum Of Transactions")]
-public record NumberAndSumOfTransactions4
+public partial record NumberAndSumOfTransactions4
 {
     /// <summary>
     /// Number of individual entries included in the report.

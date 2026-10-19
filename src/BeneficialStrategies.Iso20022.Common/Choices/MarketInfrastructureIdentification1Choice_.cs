@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_8BQtWKMgEeCJ6YNENx4h-w_739589116")]
     [DisplayName("Market Infrastructure Identification 1 Choice")]
-    public abstract record MarketInfrastructureIdentification1Choice_ { }
+    public abstract partial record MarketInfrastructureIdentification1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TyNBsNLiEeSdq5yU2aaSNw")]
 [DisplayName("Transaction Certificate Contract")]
-public record TransactionCertificateContract1
+public partial record TransactionCertificateContract1
 {
     /// <summary>
     /// Reference of the contract provided as through the date and identification of the contract or through the registered contract identification.

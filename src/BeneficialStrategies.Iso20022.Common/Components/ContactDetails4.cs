@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TVX6Ae3mEeaWjpoyrnG6Rw")]
 [DisplayName("Contact Details")]
-public record ContactDetails4
+public partial record ContactDetails4
 {
     /// <summary>
     /// Name of the liaison at the Settlement Internaliser.

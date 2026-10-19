@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus2Choice
     /// </summary>
     [IsoId("_T-P8Rtp-Ed-ak6NoX_4Aeg_523812729")]
     [DisplayName("Rejected Modification")]
-    public record RejectedModification : InvestigationStatus2Choice_
+    public partial record RejectedModification : InvestigationStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

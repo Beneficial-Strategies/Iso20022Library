@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria8Choice
     /// Query Name.
     /// </summary>
     [DisplayName("Query Name")]
-    public record QueryName : TransactionCriteria8Choice_
+    public partial record QueryName : TransactionCriteria8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

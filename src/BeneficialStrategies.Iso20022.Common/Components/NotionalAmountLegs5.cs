@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k1n04WEfEe2P-L9DBerEgA")]
 [DisplayName("Notional Amount Legs")]
-public record NotionalAmountLegs5
+public partial record NotionalAmountLegs5
 {
     /// <summary>
     /// Notional amount of leg 1 which indicates monetary or converted amount for the derivatives transaction.

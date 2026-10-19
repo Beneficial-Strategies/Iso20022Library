@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification34Choice
     /// </summary>
     [IsoId("_Zlr-pQ1HEeqV4s5SpzR1dQ")]
     [DisplayName("Unique Product Identifier")]
-    public record UniqueProductIdentifier : SecurityIdentification34Choice_
+    public partial record UniqueProductIdentifier : SecurityIdentification34Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

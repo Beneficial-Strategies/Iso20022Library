@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria4Choice
     /// Query Name.
     /// </summary>
     [DisplayName("Query Name")]
-    public record QueryName : AccountCriteria4Choice_
+    public partial record QueryName : AccountCriteria4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

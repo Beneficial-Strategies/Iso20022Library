@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w_FwIVnLEeOQYsoJizpkVw")]
 [DisplayName("Group Header")]
-public record GroupHeader69
+public partial record GroupHeader69
 {
     /// <summary>
     /// Report identification, for example invoice number or report number from point of sales system.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T57c9dp-Ed-ak6NoX_4Aeg_566244316")]
 [DisplayName("Reporting Period")]
-public record ReportingPeriod1
+public partial record ReportingPeriod1
 {
     /// <summary>
     /// Specifies a date range.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice
     [IsoId("_owQIR7tIEeiLRYqS-r-R-A")]
     [DisplayName("Multi Commodity Exotic")]
     [IsoXmlTag("MultiCmmdtyExtc")]
-    public record MultiCommodityExotic : AssetClassCommodity5Choice_
+    public partial record MultiCommodityExotic : AssetClassCommodity5Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

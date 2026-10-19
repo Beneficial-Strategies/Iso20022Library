@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Charges5Choice.Single), nameof(Charges5Choice.Single))]
     [IsoId("_ZFLpUT0JEe-thIfLZ94a1w")]
     [DisplayName("Charges5Choice")]
-    public abstract record Charges5Choice_ { }
+    public abstract partial record Charges5Choice_ { }
 }

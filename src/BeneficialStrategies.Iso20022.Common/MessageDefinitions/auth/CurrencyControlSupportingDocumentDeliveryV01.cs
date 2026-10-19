@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_5RUDUNLpEeSDLevdaFPXHw")]
 [DisplayName("Currency Control Supporting Document Delivery V")]
-public record CurrencyControlSupportingDocumentDeliveryV01 : IOuterRecord
+public partial record CurrencyControlSupportingDocumentDeliveryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

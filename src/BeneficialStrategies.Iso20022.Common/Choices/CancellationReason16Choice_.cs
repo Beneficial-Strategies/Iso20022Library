@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CancellationReason16Choice.Proprietary), nameof(CancellationReason16Choice.Proprietary))]
     [IsoId("_jG0jFu5NEeCisYr99QEiWA_-267474018")]
     [DisplayName("CancellationReason16Choice")]
-    public abstract record CancellationReason16Choice_ { }
+    public abstract partial record CancellationReason16Choice_ { }
 }

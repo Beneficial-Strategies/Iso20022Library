@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_G-P9i8EREea7jLfvGi1PDw")]
     [DisplayName("Unsecured Market Report 4 Choice")]
-    public abstract record UnsecuredMarketReport4Choice_ { }
+    public abstract partial record UnsecuredMarketReport4Choice_ { }
 }

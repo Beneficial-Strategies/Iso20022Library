@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_daMXQeUUEem3X-64-NKdqg")]
 [DisplayName("CCP Member Requirements Report V")]
-public record CCPMemberRequirementsReportV01 : IOuterRecord
+public partial record CCPMemberRequirementsReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

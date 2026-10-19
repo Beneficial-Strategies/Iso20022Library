@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice2Choic
     /// </summary>
     [IsoId("_0ng5oIbCEeWW6qdkesUKSQ")]
     [DisplayName("Basis Points")]
-    public record BasisPoints : SecuritiesTransactionPrice2Choice_
+    public partial record BasisPoints : SecuritiesTransactionPrice2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

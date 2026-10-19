@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x5wPZ1yGEe24CqbZJK5XxA")]
 [DisplayName("Abnormal Values Data")]
-public record AbnormalValuesData4
+public partial record AbnormalValuesData4
 {
     /// <summary>
     /// Data specific to counterparties and related fields.

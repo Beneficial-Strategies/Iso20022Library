@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice22Choi
     [IsoId("_fc2HMKOrEe2UDKy7o9_HIg")]
     [DisplayName("Digital Token Price")]
     [IsoXmlTag("DgtlTknPric")]
-    public record DigitalTokenPrice : SecuritiesTransactionPrice22Choice_
+    public partial record DigitalTokenPrice : SecuritiesTransactionPrice22Choice_
     {
         /// <summary>
         /// Price expressed as a monetary value.

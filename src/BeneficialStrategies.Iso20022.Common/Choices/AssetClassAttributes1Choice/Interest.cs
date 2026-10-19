@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice
     [IsoId("_id4oJe94EeW7gabYEJmWIA")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public record Interest : AssetClassAttributes1Choice_
+    public partial record Interest : AssetClassAttributes1Choice_
     {
         /// <summary>
         /// Currency in which leg 2 of the contract is denominated, in case of multi-currency or cross-currency swaps.

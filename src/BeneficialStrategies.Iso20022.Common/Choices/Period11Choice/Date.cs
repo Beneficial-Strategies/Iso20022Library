@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period11Choice
     /// Date.
     /// </summary>
     [DisplayName("Date")]
-    public record Date : Period11Choice_
+    public partial record Date : Period11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

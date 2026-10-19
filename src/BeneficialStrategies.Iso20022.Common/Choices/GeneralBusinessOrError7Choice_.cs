@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QOIUkXhdEeidzqjNEfehPg")]
     [DisplayName("General Business Or Error 7 Choice")]
-    public abstract record GeneralBusinessOrError7Choice_ { }
+    public abstract partial record GeneralBusinessOrError7Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityOtherC102Choi
     [IsoId("_lcXQUXvyEeanCNPcMT7sSg")]
     [DisplayName("Deliverable")]
     [IsoXmlTag("Dlvrbl")]
-    public record Deliverable : AssetClassCommodityOtherC102Choice_
+    public partial record Deliverable : AssetClassCommodityOtherC102Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

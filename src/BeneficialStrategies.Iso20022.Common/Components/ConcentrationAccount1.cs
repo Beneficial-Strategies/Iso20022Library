@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tnsvELIhEeaYqc4G3TTwhA")]
 [DisplayName("Concentration Account")]
-public record ConcentrationAccount1
+public partial record ConcentrationAccount1
 {
     /// <summary>
     /// Indicates inflows into the account.

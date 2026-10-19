@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_KtIUxdE_Ed-BzquC8wXy7w_-2097745661")]
 [DisplayName("Notification Of Case Assignment V")]
-public record NotificationOfCaseAssignmentV03 : IOuterRecord
+public partial record NotificationOfCaseAssignmentV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xmnquTEyEe6g-ffJsqGiSA")]
 [DisplayName("Proprietary Agent5")]
-public record ProprietaryAgent5
+public partial record ProprietaryAgent5
 {
     /// <summary>
     /// Type.

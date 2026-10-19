@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_x0O2MVyGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Missing Valuations Statistics 4 Choice")]
-    public abstract record DetailedMissingValuationsStatistics4Choice_ { }
+    public abstract partial record DetailedMissingValuationsStatistics4Choice_ { }
 }

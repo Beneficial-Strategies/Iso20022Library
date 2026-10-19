@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData58Choice
     [IsoId("_CA8442EbEe2P-L9DBerEgA")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
-    public record State : TradeData58Choice_
+    public partial record State : TradeData58Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_z1rjNTEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order Report3")]
-public record StandingOrderReport3
+public partial record StandingOrderReport3
 {
     /// <summary>
     /// Standing Order Identification.

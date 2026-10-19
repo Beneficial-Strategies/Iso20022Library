@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ph5wQBXrEeejf-cbr8l5qw")]
 [DisplayName("Concentration Agent")]
-public record ConcentrationAgent1
+public partial record ConcentrationAgent1
 {
     /// <summary>
     /// Identifies the concentration agent.

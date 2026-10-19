@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P8J_09p-Ed-ak6NoX_4Aeg_-1232488366")]
 [DisplayName("Payment Transaction Information")]
-public record PaymentTransactionInformation31
+public partial record PaymentTransactionInformation31
 {
     /// <summary>
     /// Unique and unambiguous identifier of a cancellation request, as assigned by the assigner.||Usage: The cancellation request identification can be used for reconciliation or to link tasks relating to the cancellation request.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionReport8Choice
     [IsoId("_bRuGlxLBEeqctpBfTmLJnw")]
     [DisplayName("Early Termination")]
     [IsoXmlTag("EarlyTermntn")]
-    public record EarlyTermination : TradeTransactionReport8Choice_
+    public partial record EarlyTermination : TradeTransactionReport8Choice_
     {
         /// <summary>
         /// Counterparty data details.

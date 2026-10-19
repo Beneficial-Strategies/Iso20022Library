@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice
     [IsoId("_Aghbl24-EeiU9cctagi5ow")]
     [DisplayName("Short Business Identification")]
     [IsoXmlTag("ShrtBizId")]
-    public record ShortBusinessIdentification : PaymentIdentification6Choice_
+    public partial record ShortBusinessIdentification : PaymentIdentification6Choice_
     {
         /// <summary>
         /// Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.|Usage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.|Usage: this is the former PaymentInstructionReference element.

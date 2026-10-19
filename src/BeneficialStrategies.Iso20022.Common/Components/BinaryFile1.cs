@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuAjOgEcEeCQm6a_G2yO_w_2121992872")]
 [DisplayName("Binary File")]
-public record BinaryFile1
+public partial record BinaryFile1
 {
     /// <summary>
     /// Code specifying the Multipurpose Internet Mail Extensions (MIME) type for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - MIME Media Types (www.iana.org/assignments/media-types).

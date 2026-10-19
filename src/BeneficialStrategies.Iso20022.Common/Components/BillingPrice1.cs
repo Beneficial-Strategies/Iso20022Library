@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6TrGHJqlEeGSON8vddiWzQ_-1572616191")]
 [DisplayName("Billing Price")]
-public record BillingPrice1
+public partial record BillingPrice1
 {
     /// <summary>
     /// Currency code in which the unit price and original charge price are expressed.

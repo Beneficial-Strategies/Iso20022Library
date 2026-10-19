@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
     [IsoId("_o0KFZ1osEe23K4GXSpBSeg")]
     [DisplayName("Correction")]
     [IsoXmlTag("Crrctn")]
-    public record Correction : TradeReport31Choice_
+    public partial record Correction : TradeReport31Choice_
     {
         /// <summary>
         /// Date and time of submission of the report to the trade repository.

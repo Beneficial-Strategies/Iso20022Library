@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CEeXwQN1Ee2-vqzwMUAewg")]
     [DisplayName("Netting Identification 2 Choice")]
-    public abstract record NettingIdentification2Choice_ { }
+    public abstract partial record NettingIdentification2Choice_ { }
 }

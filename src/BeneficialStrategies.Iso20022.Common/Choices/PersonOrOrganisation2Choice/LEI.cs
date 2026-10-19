@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
     /// </summary>
     [IsoId("_-GX-QQkiEeWGouz230Xp5Q")]
     [DisplayName("LEI")]
-    public record LEI : PersonOrOrganisation2Choice_
+    public partial record LEI : PersonOrOrganisation2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

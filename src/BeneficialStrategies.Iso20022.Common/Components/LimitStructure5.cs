@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0RkN8TEyEe6g-ffJsqGiSA")]
 [DisplayName("Limit Structure5")]
-public record LimitStructure5
+public partial record LimitStructure5
 {
     /// <summary>
     /// Limit Identification.

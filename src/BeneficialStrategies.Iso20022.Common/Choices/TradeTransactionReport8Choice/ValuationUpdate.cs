@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionReport8Choice
     [IsoId("_bRuGmxLBEeqctpBfTmLJnw")]
     [DisplayName("Valuation Update")]
     [IsoXmlTag("ValtnUpd")]
-    public record ValuationUpdate : TradeTransactionReport8Choice_
+    public partial record ValuationUpdate : TradeTransactionReport8Choice_
     {
         /// <summary>
         /// Trade transaction data details.

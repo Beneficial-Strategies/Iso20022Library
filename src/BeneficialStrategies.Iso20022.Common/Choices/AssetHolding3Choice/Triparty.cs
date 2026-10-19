@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice
     /// Triparty.
     /// </summary>
     [DisplayName("Triparty")]
-    public record Triparty : AssetHolding3Choice_
+    public partial record Triparty : AssetHolding3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

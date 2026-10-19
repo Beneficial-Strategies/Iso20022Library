@@ -28,5 +28,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_8U6MN248EeiU9cctagi5ow")]
     [DisplayName("Search Criteria2Choice")]
-    public abstract record SearchCriteria2Choice_ { }
+    public abstract partial record SearchCriteria2Choice_ { }
 }

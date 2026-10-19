@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChequeCancellationStatus1Choice
     /// </summary>
     [IsoId("_PJJT_LtyEeq_cfXrH83Rcw")]
     [DisplayName("Code")]
-    public record Code : ChequeCancellationStatus1Choice_
+    public partial record Code : ChequeCancellationStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

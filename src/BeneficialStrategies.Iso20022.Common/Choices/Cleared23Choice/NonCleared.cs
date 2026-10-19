@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared23Choice
     /// </summary>
     [IsoId("_zX2RZQtuEe2eQ-C-GTDpFA")]
     [DisplayName("Non Cleared")]
-    public record NonCleared : Cleared23Choice_
+    public partial record NonCleared : Cleared23Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NonClrd")]

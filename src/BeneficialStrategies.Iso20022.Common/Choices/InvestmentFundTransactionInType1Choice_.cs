@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_SMsrUQaxEeS3lpTattq7hg")]
     [DisplayName("Investment Fund Transaction In Type 1 Choice")]
-    public abstract record InvestmentFundTransactionInType1Choice_ { }
+    public abstract partial record InvestmentFundTransactionInType1Choice_ { }
 }

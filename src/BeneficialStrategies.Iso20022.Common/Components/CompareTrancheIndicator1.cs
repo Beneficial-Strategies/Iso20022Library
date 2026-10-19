@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KvKvcE6pEeyEpI66tm807w")]
 [DisplayName("Compare Tranche Indicator")]
-public record CompareTrancheIndicator1
+public partial record CompareTrancheIndicator1
 {
     /// <summary>
     /// Information for the first side of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8sHJ5A27EeWmAKKPnqYEVQ")]
 [DisplayName("Trade Non Confirmation")]
-public record TradeNonConfirmation1
+public partial record TradeNonConfirmation1
 {
     /// <summary>
     /// Specifies that the contract remains unconfirmed.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2C1-ZTEyEe6g-ffJsqGiSA")]
 [DisplayName("Short Payment Identification4")]
-public record ShortPaymentIdentification4
+public partial record ShortPaymentIdentification4
 {
     /// <summary>
     /// Transaction Identification.

@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_5LsDUTquEeWZFYSPlduMhw")]
 [DisplayName("Bank To Customer Account Report V")]
-public record BankToCustomerAccountReportV06 : IOuterRecord
+public partial record BankToCustomerAccountReportV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

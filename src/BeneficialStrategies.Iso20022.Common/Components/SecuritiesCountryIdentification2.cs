@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lv3_EYAMEeaYeOsLN4966A")]
 [DisplayName("Securities Country Identification")]
-public record SecuritiesCountryIdentification2
+public partial record SecuritiesCountryIdentification2
 {
     /// <summary>
     /// Two character country code and country name as per ISO 3166.

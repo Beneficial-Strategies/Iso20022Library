@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t-nrYXX4Eei3jO6riKEVXg")]
 [DisplayName("Cash Account Return Criteria")]
-public record CashAccountReturnCriteria5
+public partial record CashAccountReturnCriteria5
 {
     /// <summary>
     /// Indicates whether the account name is requested.

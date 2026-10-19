@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingIdentification2Choice
     /// </summary>
     [IsoId("_CKT6AwN1Ee2-vqzwMUAewg")]
     [DisplayName("Netting Group Identification")]
-    public record NettingGroupIdentification : NettingIdentification2Choice_
+    public partial record NettingGroupIdentification : NettingIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData13Choice
     /// <summary>Underlying data expressed as statement entry details.</summary>
     [IsoId("cee69114-e6ca-4fa5-8f7d-c42aac258938")]
     [DisplayName("Statement Entry")]
-    public record StatementEntry : UnderlyingData13Choice_
+    public partial record StatementEntry : UnderlyingData13Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("StmtNtry")]

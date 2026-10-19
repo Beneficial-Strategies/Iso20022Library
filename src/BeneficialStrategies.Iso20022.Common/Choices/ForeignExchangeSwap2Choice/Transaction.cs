@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap2Choice
     [IsoId("_qm-xU52WEeW_58xcYxhewg")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public record Transaction : ForeignExchangeSwap2Choice_
+    public partial record Transaction : ForeignExchangeSwap2Choice_
     {
         /// <summary>
         /// Defines the status of the reported transaction, that is details on whether the transaction is a new transaction, an amendment of a previously reported transaction, a cancellation of a previously reported transaction or a correction to a previously reported and rejected transaction.

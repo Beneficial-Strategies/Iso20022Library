@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PostTradeData1Choice.Bonds))]
     [JsonDerivedType(typeof(PostTradeData1Choice.Derivatives))]
     [JsonDerivedType(typeof(PostTradeData1Choice.Equities))]
-    public abstract record PostTradeData1Choice_
+    public abstract partial record PostTradeData1Choice_
     {
     }
 }

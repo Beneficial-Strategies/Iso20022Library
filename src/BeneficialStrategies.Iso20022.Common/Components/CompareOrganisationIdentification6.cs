@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2tACecgxEeuGrNSsxk3B0A")]
 [DisplayName("Compare Organisation Identification")]
-public record CompareOrganisationIdentification6
+public partial record CompareOrganisationIdentification6
 {
     /// <summary>
     /// Information for the first side of the transaction.

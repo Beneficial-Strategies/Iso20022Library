@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xUvgoUw0EfCpsI1b9uv5FQ")]
 [DisplayName("Service Item Totals10")]
-public record ServiceItemTotals10
+public partial record ServiceItemTotals10
 {
     /// <summary>
     /// Specifies a classification for the service items such as query, report, securities account, etc.

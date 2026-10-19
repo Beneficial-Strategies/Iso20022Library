@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_3qht0TEyEe6g-ffJsqGiSA")]
     [DisplayName("Intra Balance Or Operational Error11Choice")]
-    public abstract record IntraBalanceOrOperationalError11Choice_ { }
+    public abstract partial record IntraBalanceOrOperationalError11Choice_ { }
 }

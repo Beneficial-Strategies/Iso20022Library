@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cj1mAdA1EeeCAfThR1cp_Q")]
 [DisplayName("Instruction For Assignee")]
-public record InstructionForAssignee1
+public partial record InstructionForAssignee1
 {
     /// <summary>
     /// Coded information related to the processing of the investigation instruction, provided by the assigner, and intended for the assignee.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sgYm0FkyEeGeoaLUQk__nA_-1571947250")]
 [DisplayName("Underlying Transaction")]
-public record UnderlyingTransaction4
+public partial record UnderlyingTransaction4
 {
     /// <summary>
     /// Provides information on the original cancellation message, to which the resolution refers.

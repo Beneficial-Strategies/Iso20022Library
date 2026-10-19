@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kuH-C5laEeeE1Ya-LgRsuQ")]
 [DisplayName("Reservation Return Criteria")]
-public record ReservationReturnCriteria1
+public partial record ReservationReturnCriteria1
 {
     /// <summary>
     /// Indicates whether the reservation start date time is requested.

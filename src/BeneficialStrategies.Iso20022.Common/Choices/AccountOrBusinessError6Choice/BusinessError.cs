@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError6Choice
     /// Business Error.
     /// </summary>
     [DisplayName("Business Error")]
-    public record BusinessError : AccountOrBusinessError6Choice_
+    public partial record BusinessError : AccountOrBusinessError6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

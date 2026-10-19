@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityMetal1Choice
     [IsoId("_D1rdVA2rEeW72qLtWESimw")]
     [DisplayName("Non Precious")]
     [IsoXmlTag("NonPrcs")]
-    public record NonPrecious : AssetClassCommodityMetal1Choice_
+    public partial record NonPrecious : AssetClassCommodityMetal1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

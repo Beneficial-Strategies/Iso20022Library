@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice
     [IsoId("_vAX4UO94EeW7gabYEJmWIA")]
     [DisplayName("Both")]
     [IsoXmlTag("Both")]
-    public record Both : AssetClassAttributes1Choice_
+    public partial record Both : AssetClassAttributes1Choice_
     {
         /// <summary>
         /// Asset class is a non-financial instrument of type interest rate.

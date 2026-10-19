@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yg8nEbDnEfCbk9-eHc2eXw")]
 [DisplayName("Cash Withdrawal1")]
-public record CashWithdrawal1
+public partial record CashWithdrawal1
 {
     /// <summary>
     /// Indicates whether the denominations in the original cash withdrawal request have been amended.

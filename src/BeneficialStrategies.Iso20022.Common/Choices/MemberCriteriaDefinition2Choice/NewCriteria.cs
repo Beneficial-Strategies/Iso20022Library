@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberCriteriaDefinition2Choice
     [IsoId("_iwxEc3SbEeiH1ZOt2UD8vQ")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : MemberCriteriaDefinition2Choice_
+    public partial record NewCriteria : MemberCriteriaDefinition2Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

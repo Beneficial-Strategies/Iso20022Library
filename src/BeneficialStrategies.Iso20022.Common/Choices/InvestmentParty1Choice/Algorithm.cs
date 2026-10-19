@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentParty1Choice
     /// </summary>
     [IsoId("_AxaC4FyuEeWBopJHIRjb4g")]
     [DisplayName("Algorithm")]
-    public record Algorithm : InvestmentParty1Choice_
+    public partial record Algorithm : InvestmentParty1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_eX_OZ22PEei3KuUgpx7Xcw")]
 [DisplayName("Resolution Of Investigation V")]
-public record ResolutionOfInvestigationV09 : IOuterRecord
+public partial record ResolutionOfInvestigationV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation2Choi
     [IsoId("_Bxla024-EeiU9cctagi5ow")]
     [DisplayName("Default")]
     [IsoXmlTag("Dflt")]
-    public record Default : CurrentOrDefaultReservation2Choice_
+    public partial record Default : CurrentOrDefaultReservation2Choice_
     {
         /// <summary>
         /// Unique identification of the reservation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ttTVodyaEe6BHYBNhkieQQ")]
 [DisplayName("Option Multiple Barrier Levels1")]
-public record OptionMultipleBarrierLevels1
+public partial record OptionMultipleBarrierLevels1
 {
     /// <summary>
     /// Lower Level.

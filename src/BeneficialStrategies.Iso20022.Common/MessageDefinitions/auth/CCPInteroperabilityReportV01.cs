@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_Nz-pMJh0EeyJwbhKOp9Ehg")]
 [DisplayName("CCP Interoperability Report V01")]
-public record CCPInteroperabilityReportV01 : IOuterRecord
+public partial record CCPInteroperabilityReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

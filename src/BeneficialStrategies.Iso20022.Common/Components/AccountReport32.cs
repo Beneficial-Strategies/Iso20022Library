@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mxRFwQ5rEe2xs7BqO31w6w")]
 [DisplayName("Account Report")]
-public record AccountReport32
+public partial record AccountReport32
 {
     /// <summary>
     /// Unique identification, as assigned by the account servicer, to unambiguously identify the account report.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_lW_QMNfvEeqoweZZxm4TPQ")]
     [DisplayName("Exchange Rate Or Percentage 1 Choice")]
-    public abstract record ExchangeRateOrPercentage1Choice_ { }
+    public abstract partial record ExchangeRateOrPercentage1Choice_ { }
 }

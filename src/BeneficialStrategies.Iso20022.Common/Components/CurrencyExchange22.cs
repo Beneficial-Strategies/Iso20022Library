@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NdjME5V3Eey08b0sO6Qn3Q")]
 [DisplayName("Currency Exchange")]
-public record CurrencyExchange22
+public partial record CurrencyExchange22
 {
     /// <summary>
     /// Indicates the cross currency, if different from the currency of delivery.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XVpN0CR7Ee2VuKUpJ7HXPg")]
 [DisplayName("Trade Counterparty Relationship Record")]
-public record TradeCounterpartyRelationshipRecord1
+public partial record TradeCounterpartyRelationshipRecord1
 {
     /// <summary>
     /// Specifies type of counterparty at the start of a directional relationship.

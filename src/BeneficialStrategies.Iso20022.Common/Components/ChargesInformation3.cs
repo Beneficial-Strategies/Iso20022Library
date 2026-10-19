@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RudD6tp-Ed-ak6NoX_4Aeg_-1792074809")]
 [DisplayName("Charges Information")]
-public record ChargesInformation3
+public partial record ChargesInformation3
 {
     /// <summary>
     /// Total of all charges and taxes applied to the entry.

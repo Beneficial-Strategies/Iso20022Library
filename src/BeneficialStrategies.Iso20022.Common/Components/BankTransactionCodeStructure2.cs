@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TVHftdp-Ed-ak6NoX_4Aeg_749476994")]
 [DisplayName("Bank Transaction Code Structure")]
-public record BankTransactionCodeStructure2
+public partial record BankTransactionCodeStructure2
 {
     /// <summary>
     /// Specifies the business area of the underlying transaction.

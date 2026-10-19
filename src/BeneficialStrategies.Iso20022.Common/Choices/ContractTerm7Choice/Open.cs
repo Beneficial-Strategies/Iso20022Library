@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm7Choice
     [IsoId("_xsKXYa5qEeuo-IflVgGqiA")]
     [DisplayName("Open")]
     [IsoXmlTag("Opn")]
-    public record Open : ContractTerm7Choice_
+    public partial record Open : ContractTerm7Choice_
     {
         /// <summary>
         /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the closing leg (forward leg) of the secured financing transaction.

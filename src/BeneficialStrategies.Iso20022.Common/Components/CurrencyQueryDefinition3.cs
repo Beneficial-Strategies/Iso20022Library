@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ho80EZlZEeeE1Ya-LgRsuQ")]
 [DisplayName("Currency Query Definition")]
-public record CurrencyQueryDefinition3
+public partial record CurrencyQueryDefinition3
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

@@ -36,7 +36,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbjxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Get Member V")]
-public record GetMemberV04 : IOuterRecord
+public partial record GetMemberV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

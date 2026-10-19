@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice
     /// </summary>
     [IsoId("_QWOztdEdEei798TPbKJMuw")]
     [DisplayName("Suspended")]
-    public record Suspended : PaymentStatusReason1Choice_
+    public partial record Suspended : PaymentStatusReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

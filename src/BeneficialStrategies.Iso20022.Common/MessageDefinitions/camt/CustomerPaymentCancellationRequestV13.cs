@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("f1e9619e-523f-4042-a45d-aeaada857b2d")]
 [DisplayName("Customer Payment Cancellation Request V13")]
-public record CustomerPaymentCancellationRequestV13 : IOuterRecord
+public partial record CustomerPaymentCancellationRequestV13 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

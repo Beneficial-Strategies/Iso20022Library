@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gawsAdcZEeqRFcf2R4bPBw")]
 [DisplayName("Standing Order Query")]
-public record StandingOrderQuery4
+public partial record StandingOrderQuery4
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

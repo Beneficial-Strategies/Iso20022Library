@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HY688WE4Ee2S65ml6YCOtA")]
     [DisplayName("Date Time Or Blank Query 1 Choice")]
-    public abstract record DateTimeOrBlankQuery1Choice_ { }
+    public abstract partial record DateTimeOrBlankQuery1Choice_ { }
 }

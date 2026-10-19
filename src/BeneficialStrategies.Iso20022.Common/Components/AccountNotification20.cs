@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-zo_AStxEeysar7zFstVmw")]
 [DisplayName("Account Notification")]
-public record AccountNotification20
+public partial record AccountNotification20
 {
     /// <summary>
     /// Unique identification, as assigned by the account servicer, to unambiguously identify the account notification.

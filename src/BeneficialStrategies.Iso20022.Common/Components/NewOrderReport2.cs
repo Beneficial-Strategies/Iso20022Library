@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q72RsRA2Ee6N57R8Wekj-w")]
 [DisplayName("New Order Report2")]
-public record NewOrderReport2
+public partial record NewOrderReport2
 {
     /// <summary>
     /// Report Identification.

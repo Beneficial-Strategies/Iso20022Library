@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3E5OTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Cheque Presentment Notification V02")]
-public record ChequePresentmentNotificationV02 : IOuterRecord
+public partial record ChequePresentmentNotificationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice
     /// Central Bank Deposit.
     /// </summary>
     [DisplayName("Central Bank Deposit")]
-    public record CentralBankDeposit : Investment2Choice_
+    public partial record CentralBankDeposit : Investment2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

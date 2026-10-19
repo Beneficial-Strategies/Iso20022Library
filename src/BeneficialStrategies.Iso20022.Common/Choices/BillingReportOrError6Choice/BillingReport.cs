@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingReportOrError6Choice
     /// <summary>Report on billing data.</summary>
     [IsoId("_2jks0TEyEe6g-ffJsqGiSA")]
     [DisplayName("Billing Report")]
-    public record BillingReport : BillingReportOrError6Choice_
+    public partial record BillingReport : BillingReportOrError6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("BllgRpt")]

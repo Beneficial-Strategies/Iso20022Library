@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RD_KlNp-Ed-ak6NoX_4Aeg_5460592")]
 [DisplayName("System Return Criteria")]
-public record SystemReturnCriteria2
+public partial record SystemReturnCriteria2
 {
     /// <summary>
     /// Indicates whether the system identification is requested.

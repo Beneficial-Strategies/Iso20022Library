@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentParty1Choice
     [IsoId("__qnZ8FytEeWBopJHIRjb4g")]
     [DisplayName("Person")]
     [IsoXmlTag("Prsn")]
-    public record Person : InvestmentParty1Choice_
+    public partial record Person : InvestmentParty1Choice_
     {
         /// <summary>
         /// Branch where the trader is located.

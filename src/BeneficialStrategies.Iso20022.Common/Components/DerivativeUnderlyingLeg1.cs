@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zoVNcMhqEeadgvwNGwK05w")]
 [DisplayName("Derivative Underlying Leg")]
-public record DerivativeUnderlyingLeg1
+public partial record DerivativeUnderlyingLeg1
 {
     /// <summary>
     /// Attributes that relate to the financial instrument (contract) being traded that are common across derivatives.

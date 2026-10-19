@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CXmpVFRtEe23M4WgERMsYw")]
 [DisplayName("Investigation Location Data1")]
-public record InvestigationLocationData1
+public partial record InvestigationLocationData1
 {
     /// <summary>
     /// Method.

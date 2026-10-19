@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1LqeURfMEeyPHpqpKwtFdw")]
     [DisplayName("Trade Report Query 13 Choice")]
-    public abstract record TradeReportQuery13Choice_ { }
+    public abstract partial record TradeReportQuery13Choice_ { }
 }

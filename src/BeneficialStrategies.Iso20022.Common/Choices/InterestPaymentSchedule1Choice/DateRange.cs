@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice
     [IsoId("_u7i5ROFWEeSvv6t4Ka7B7A")]
     [DisplayName("Date Range")]
     [IsoXmlTag("DtRg")]
-    public record DateRange : InterestPaymentSchedule1Choice_
+    public partial record DateRange : InterestPaymentSchedule1Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of the interest payment schedule.

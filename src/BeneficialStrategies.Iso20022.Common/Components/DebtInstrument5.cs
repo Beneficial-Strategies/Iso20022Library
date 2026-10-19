@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PCM3wX5gEea2k7EBUopqxw")]
 [DisplayName("Debt Instrument")]
-public record DebtInstrument5
+public partial record DebtInstrument5
 {
     /// <summary>
     /// Specifies the type of bond type.

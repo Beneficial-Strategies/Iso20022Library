@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RUhg9tp-Ed-ak6NoX_4Aeg_-1425714284")]
 [DisplayName("Proprietary Quantity")]
-public record ProprietaryQuantity1
+public partial record ProprietaryQuantity1
 {
     /// <summary>
     /// Identifies the type of proprietary quantity reported.

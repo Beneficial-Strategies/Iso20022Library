@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_DzbYceUUEem3X-64-NKdqg")]
 [DisplayName("CCP Income Statement And Capital Adequacy Report V")]
-public record CCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
+public partial record CCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

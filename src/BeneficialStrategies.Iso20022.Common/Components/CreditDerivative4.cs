@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pAsKEZjeEeqkLZLH6DK3UQ")]
 [DisplayName("Credit Derivative")]
-public record CreditDerivative4
+public partial record CreditDerivative4
 {
     /// <summary>
     /// Classification of seniority in case of contract on index or on a single name entity.

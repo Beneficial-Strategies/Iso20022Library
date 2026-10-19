@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VJDig9p-Ed-ak6NoX_4Aeg_-1410536131")]
 [DisplayName("Case Assignment Rejection Justification")]
-public record CaseAssignmentRejectionJustification
+public partial record CaseAssignmentRejectionJustification
 {
     /// <summary>
     /// Reason for the rejection of a case assignment, in a coded form.

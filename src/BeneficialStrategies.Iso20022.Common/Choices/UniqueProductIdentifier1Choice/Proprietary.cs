@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueProductIdentifier1Choice
     [IsoId("_rUTngyyFEe2xAdY9t5fB3g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UniqueProductIdentifier1Choice_
+    public partial record Proprietary : UniqueProductIdentifier1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

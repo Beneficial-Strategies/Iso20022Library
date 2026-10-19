@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rpb5cc-nEeufOvGsyZiDWA")]
 [DisplayName("Price Metrics")]
-public record PriceMetrics3
+public partial record PriceMetrics3
 {
     /// <summary>
     /// Interest rate of the loan.

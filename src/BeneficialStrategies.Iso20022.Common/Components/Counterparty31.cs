@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-X1pgeXDEemhPvlMxbmo_g")]
 [DisplayName("Counterparty")]
-public record Counterparty31
+public partial record Counterparty31
 {
     /// <summary>
     /// The code of country where the registered office of the other counterparty is located or country of residence in case that the other counterparty is a natural person.

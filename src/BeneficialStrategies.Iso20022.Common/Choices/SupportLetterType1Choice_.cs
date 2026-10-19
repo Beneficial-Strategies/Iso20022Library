@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_l_Ug0LbxEeu9Cp6InX88Vw")]
     [DisplayName("Support Letter Type 1 Choice")]
-    public abstract record SupportLetterType1Choice_ { }
+    public abstract partial record SupportLetterType1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sotsttp-Ed-ak6NoX_4Aeg_975131994")]
 [DisplayName("Original And Current Quantities")]
-public record OriginalAndCurrentQuantities1
+public partial record OriginalAndCurrentQuantities1
 {
     /// <summary>
     /// Quantity expressed as an amount representing the face amount, that is, the principal of a debt instrument.

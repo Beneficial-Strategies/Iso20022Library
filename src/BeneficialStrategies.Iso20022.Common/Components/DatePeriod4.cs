@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3ZZIEVo6Ee23K4GXSpBSeg")]
 [DisplayName("Date Period")]
-public record DatePeriod4
+public partial record DatePeriod4
 {
     /// <summary>
     /// Start date of the range.

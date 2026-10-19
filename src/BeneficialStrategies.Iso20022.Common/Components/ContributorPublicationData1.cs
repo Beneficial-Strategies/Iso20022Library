@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Nf1zgGIlEfCeoPFCHQnhvA")]
 [DisplayName("Contributor Publication Data1")]
-public record ContributorPublicationData1
+public partial record ContributorPublicationData1
 {
     /// <summary>
     /// Date and time when the transaction report was received by an Approved Publication Arrangement (APA).

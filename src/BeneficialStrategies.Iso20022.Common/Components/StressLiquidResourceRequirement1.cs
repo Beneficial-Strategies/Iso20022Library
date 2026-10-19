@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yh7egLJPEeaYqc4G3TTwhA")]
 [DisplayName("Stress Liquid Resource Requirement")]
-public record StressLiquidResourceRequirement1
+public partial record StressLiquidResourceRequirement1
 {
     /// <summary>
     /// Liquidity needs arising from ‘operational’ procedures over the stress horizon. This includes (but is not necessarily limited to) repayment of excess cash collateral to members, cash to non‐cash collateral substitutions by members, reductions in margin requirements and related cash collateral and provision of liquidity to facilitate settlement / delivery for non‐defaulting members.

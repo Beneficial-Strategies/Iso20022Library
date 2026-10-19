@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FZ5lXW4-EeiU9cctagi5ow")]
 [DisplayName("Limit Search Criteria")]
-public record LimitSearchCriteria6
+public partial record LimitSearchCriteria6
 {
     /// <summary>
     /// Identification of a particular cash clearing system.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rkenUa6OEeexrtTFgmVD3Q")]
 [DisplayName("Transaction Dates")]
-public record TransactionDates3
+public partial record TransactionDates3
 {
     /// <summary>
     /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.

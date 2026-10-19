@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateBasis1Choice
     [IsoId("_PV2OYLpqEea_jI1vMH_RbA")]
     [DisplayName("Currency Pair")]
     [IsoXmlTag("CcyPair")]
-    public record CurrencyPair : ExchangeRateBasis1Choice_
+    public partial record CurrencyPair : ExchangeRateBasis1Choice_
     {
         /// <summary>
         /// Currency in which the rate of exchange is expressed in a currency exchange.

@@ -50,7 +50,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_F3nqcWXpEeap-P22vGV91g")]
 [DisplayName("Request To Modify Payment V")]
-public record RequestToModifyPaymentV04 : IOuterRecord
+public partial record RequestToModifyPaymentV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

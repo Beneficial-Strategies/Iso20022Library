@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-eV4AE6dEeyEpI66tm807w")]
 [DisplayName("Compare Duration Type")]
-public record CompareDurationType1
+public partial record CompareDurationType1
 {
     /// <summary>
     /// Information for the first side of the transaction.

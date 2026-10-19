@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5W_PoTEyEe6g-ffJsqGiSA")]
 [DisplayName("Limit Report8")]
-public record LimitReport8
+public partial record LimitReport8
 {
     /// <summary>
     /// Limit Identification.

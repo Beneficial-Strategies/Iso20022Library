@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport15Choice
     [IsoId("_oZRTV3g-Eeu3kecHd7QKUQ")]
     [DisplayName("Termination")]
     [IsoXmlTag("Termntn")]
-    public record Termination : TradeReport15Choice_
+    public partial record Termination : TradeReport15Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

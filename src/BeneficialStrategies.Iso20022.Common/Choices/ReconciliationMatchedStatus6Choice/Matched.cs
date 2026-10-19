@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationMatchedStatus6Choi
     /// </summary>
     [IsoId("_C44f8f_oEemm3skPVSMJQg")]
     [DisplayName("Matched")]
-    public record Matched : ReconciliationMatchedStatus6Choice_
+    public partial record Matched : ReconciliationMatchedStatus6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

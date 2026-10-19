@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LvNugVo3Ee23K4GXSpBSeg")]
 [DisplayName("Compare Trade Confirmation")]
-public record CompareTradeConfirmation2
+public partial record CompareTradeConfirmation2
 {
     /// <summary>
     /// Information for the first side of the transaction.

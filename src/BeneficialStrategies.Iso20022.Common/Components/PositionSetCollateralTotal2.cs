@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HkzsQRc0Ee6tpciIp9JEYw")]
 [DisplayName("Position Set Collateral Total2")]
-public record PositionSetCollateralTotal2
+public partial record PositionSetCollateralTotal2
 {
     /// <summary>
     /// Number Of Reports.

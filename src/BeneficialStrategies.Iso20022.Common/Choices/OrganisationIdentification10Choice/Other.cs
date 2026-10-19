@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification10Choi
     [IsoId("_IEZpg-9IEemVGdgB8P8uQQ")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : OrganisationIdentification10Choice_
+    public partial record Other : OrganisationIdentification10Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of the organisation.

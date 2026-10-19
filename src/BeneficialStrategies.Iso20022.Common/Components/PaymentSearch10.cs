@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3T9n8TEyEe6g-ffJsqGiSA")]
 [DisplayName("Payment Search10")]
-public record PaymentSearch10
+public partial record PaymentSearch10
 {
     /// <summary>
     /// Message Identification.

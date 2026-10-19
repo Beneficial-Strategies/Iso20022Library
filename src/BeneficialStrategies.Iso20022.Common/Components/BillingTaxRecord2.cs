@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DeEyifsYEemYNq6Sxm5nlg")]
 [DisplayName("Billing Tax Record2")]
-public record BillingTaxRecord2
+public partial record BillingTaxRecord2
 {
     /// <summary>
     /// Rate used to calculate the tax.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kq-10SysEe6J0v6OMXVc7g")]
 [DisplayName("Other Payment6")]
-public record OtherPayment6
+public partial record OtherPayment6
 {
     /// <summary>
     /// Payment Currency.

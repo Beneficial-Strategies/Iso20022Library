@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_77TPQaMgEeCJ6YNENx4h-w_315557702")]
     [DisplayName("Exchange Rate Report Or Error 2 Choice")]
-    public abstract record ExchangeRateReportOrError2Choice_ { }
+    public abstract partial record ExchangeRateReportOrError2Choice_ { }
 }

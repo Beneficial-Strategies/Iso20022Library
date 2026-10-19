@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_OS8SQRZZEe2QNcZTDeoKnQ")]
     [DisplayName("Asset Class Commodity Industrial Product 2 Choice")]
-    public abstract record AssetClassCommodityIndustrialProduct2Choice_ { }
+    public abstract partial record AssetClassCommodityIndustrialProduct2Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeChoice
     /// </summary>
     [IsoId("_Rbhg1tp-Ed-ak6NoX_4Aeg_1347829030")]
     [DisplayName("Proprietary")]
-    public record Proprietary : PurposeChoice_
+    public partial record Proprietary : PurposeChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

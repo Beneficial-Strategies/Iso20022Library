@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
     [IsoId("_9cj2oU8REe2PGo0mhYCh1g")]
     [DisplayName("Emissions")]
     [IsoXmlTag("Emssns")]
-    public record Emissions : AssetClassCommodityEnvironmental3Choice_
+    public partial record Emissions : AssetClassCommodityEnvironmental3Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice
     [IsoId("_27lowKswEeayv9XxdmMwKQ")]
     [DisplayName("Risk Factor")]
     [IsoXmlTag("RskFctr")]
-    public record RiskFactor : StressItem1Choice_
+    public partial record RiskFactor : StressItem1Choice_
     {
         /// <summary>
         /// Unique identifier for the risk factor.

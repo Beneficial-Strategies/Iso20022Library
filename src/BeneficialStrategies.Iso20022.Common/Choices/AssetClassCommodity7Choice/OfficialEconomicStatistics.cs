@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Official Economic Statistics.
     /// </summary>
     [DisplayName("Official Economic Statistics")]
-    public record OfficialEconomicStatistics : AssetClassCommodity7Choice_
+    public partial record OfficialEconomicStatistics : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

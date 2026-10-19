@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_-yhDUeUTEem3X-64-NKdqg")]
 [DisplayName("CCP Daily Cash Flows Report V")]
-public record CCPDailyCashFlowsReportV01 : IOuterRecord
+public partial record CCPDailyCashFlowsReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

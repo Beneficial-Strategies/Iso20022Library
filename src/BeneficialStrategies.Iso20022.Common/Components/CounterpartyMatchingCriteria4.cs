@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2rK2ccgxEeuGrNSsxk3B0A")]
 [DisplayName("Counterparty Matching Criteria")]
-public record CounterpartyMatchingCriteria4
+public partial record CounterpartyMatchingCriteria4
 {
     /// <summary>
     /// Specifies whether the information on the reporting counterparties are matching or not.

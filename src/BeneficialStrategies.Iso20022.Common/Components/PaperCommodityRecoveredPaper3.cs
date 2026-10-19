@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FE6GUeFeEe64Zfh-zMOIZQ")]
 [DisplayName("Paper Commodity Recovered Paper3")]
-public record PaperCommodityRecoveredPaper3
+public partial record PaperCommodityRecoveredPaper3
 {
     /// <summary>
     /// Base Product.

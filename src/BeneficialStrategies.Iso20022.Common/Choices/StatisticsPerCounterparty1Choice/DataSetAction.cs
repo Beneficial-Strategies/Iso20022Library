@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty1Choice
     /// </summary>
     [IsoId("_98o1tkwVEeqwfMIOLcNxbw")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : StatisticsPerCounterparty1Choice_
+    public partial record DataSetAction : StatisticsPerCounterparty1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

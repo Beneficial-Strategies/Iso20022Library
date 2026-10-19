@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_x7R5Ma-8Ee69JssYImngCA")]
     [DisplayName("Reporting Requirement3Choice")]
-    public abstract record ReportingRequirement3Choice_ { }
+    public abstract partial record ReportingRequirement3Choice_ { }
 }

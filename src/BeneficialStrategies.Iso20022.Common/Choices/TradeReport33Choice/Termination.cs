@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice
     /// Termination.
     /// </summary>
     [DisplayName("Termination")]
-    public record Termination : TradeReport33Choice_
+    public partial record Termination : TradeReport33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

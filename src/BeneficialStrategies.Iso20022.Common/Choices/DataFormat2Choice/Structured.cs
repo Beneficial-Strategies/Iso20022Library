@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat2Choice
     [IsoId("_Q6vvBtp-Ed-ak6NoX_4Aeg_-2132356123")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
-    public record Structured : DataFormat2Choice_
+    public partial record Structured : DataFormat2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

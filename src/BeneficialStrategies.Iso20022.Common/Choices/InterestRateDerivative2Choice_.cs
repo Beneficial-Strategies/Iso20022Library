@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xSfx_WlIEeaLAKoEUNsD9g")]
     [DisplayName("Interest Rate Derivative 2 Choice")]
-    public abstract record InterestRateDerivative2Choice_ { }
+    public abstract partial record InterestRateDerivative2Choice_ { }
 }

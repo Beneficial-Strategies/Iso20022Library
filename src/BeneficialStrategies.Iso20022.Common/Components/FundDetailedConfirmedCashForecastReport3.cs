@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_HSgygQatEeS3lpTattq7hg")]
 [DisplayName("Fund Detailed Confirmed Cash Forecast Report")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record FundDetailedConfirmedCashForecastReport3
+public partial record FundDetailedConfirmedCashForecastReport3
 {
     /// <summary>
     /// Information about the fund/sub fund when the report either specifies cash flow for the fund/sub fund or for a share class of the fund/sub fund.

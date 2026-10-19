@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CNlAofrfEe2mU4Wi2q3MzQ")]
 [DisplayName("Detailed Report Statistics7")]
-public record DetailedReportStatistics7
+public partial record DetailedReportStatistics7
 {
     /// <summary>
     /// Total Number Of Reports.

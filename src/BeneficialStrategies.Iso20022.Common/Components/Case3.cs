@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tijOcFkyEeGeoaLUQk__nA_-1838378407")]
 [DisplayName("Case")]
-public record Case3
+public partial record Case3
 {
     /// <summary>
     /// Uniquely identifies the case.

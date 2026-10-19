@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_FDP_524-EeiU9cctagi5ow")]
     [DisplayName("Limit Criteria 6 Choice")]
-    public abstract record LimitCriteria6Choice_ { }
+    public abstract partial record LimitCriteria6Choice_ { }
 }

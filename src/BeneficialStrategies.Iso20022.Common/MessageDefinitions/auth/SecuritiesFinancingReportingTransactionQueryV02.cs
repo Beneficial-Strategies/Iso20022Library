@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_vY6mgcKvEeuzU9S_IANlog")]
 [DisplayName("Securities Financing Reporting Transaction Query V")]
-public record SecuritiesFinancingReportingTransactionQueryV02 : IOuterRecord
+public partial record SecuritiesFinancingReportingTransactionQueryV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

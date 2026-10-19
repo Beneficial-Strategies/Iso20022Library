@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A5LGYa5mEeuo-IflVgGqiA")]
 [DisplayName("Compare CFI Identifier")]
-public record CompareCFIIdentifier3
+public partial record CompareCFIIdentifier3
 {
     /// <summary>
     /// Information for the first side of the transaction.

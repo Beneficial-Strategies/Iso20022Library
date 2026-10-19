@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_id4oJO94EeW7gabYEJmWIA")]
     [DisplayName("Asset Class Attributes 1 Choice")]
-    public abstract record AssetClassAttributes1Choice_ { }
+    public abstract partial record AssetClassAttributes1Choice_ { }
 }

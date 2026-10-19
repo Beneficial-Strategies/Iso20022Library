@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     [IsoId("_Bv9MR2kwEeaLAKoEUNsD9g")]
     [DisplayName("Equity")]
     [IsoXmlTag("Eqty")]
-    public record Equity : Derivative2Choice_
+    public partial record Equity : Derivative2Choice_
     {
         /// <summary>
         /// Underlying type of the equity derivative.

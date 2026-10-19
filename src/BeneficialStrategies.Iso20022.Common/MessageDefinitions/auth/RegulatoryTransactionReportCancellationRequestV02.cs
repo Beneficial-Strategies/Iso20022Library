@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_gJOkFMIFEeGllrOKQRUTYA_-2116922160")]
 [DisplayName("Regulatory Transaction Report Cancellation Request V")]
-public record RegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
+public partial record RegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

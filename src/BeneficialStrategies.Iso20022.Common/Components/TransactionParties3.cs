@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tXz-EFkyEeGeoaLUQk__nA_1460422523")]
 [DisplayName("Transaction Parties")]
-public record TransactionParties3
+public partial record TransactionParties3
 {
     /// <summary>
     /// Party that initiated the payment that is reported in the entry.

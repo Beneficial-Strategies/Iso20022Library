@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_T-P8RNp-Ed-ak6NoX_4Aeg_523812389")]
     [DisplayName("Investigation Status 2 Choice")]
-    public abstract record InvestigationStatus2Choice_ { }
+    public abstract partial record InvestigationStatus2Choice_ { }
 }

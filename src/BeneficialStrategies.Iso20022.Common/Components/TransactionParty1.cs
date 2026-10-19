@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PyUuZNp-Ed-ak6NoX_4Aeg_482028635")]
 [DisplayName("Transaction Party")]
-public record TransactionParty1
+public partial record TransactionParty1
 {
     /// <summary>
     /// Party initiating the payment to an agent. In the payment context, this can either be the debtor (in a credit transfer), the creditor (in a direct debit), or a party that initiates the payment on behalf of the debtor or creditor. In the context of treasury, the party that instructs the trading party to execute a treasury deal on its behalf.

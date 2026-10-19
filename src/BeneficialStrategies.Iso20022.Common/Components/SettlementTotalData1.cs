@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oVUHMI0TEemUAO64Q252gQ")]
 [DisplayName("Settlement Total Data")]
-public record SettlementTotalData1
+public partial record SettlementTotalData1
 {
     /// <summary>
     /// Aggregated volume and value of settlement instructions settled during the period covered by the report, for financial Instruments, types of transactions, types of clients and cash transfers.

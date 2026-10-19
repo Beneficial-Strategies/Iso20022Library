@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1Qaz8LIhEeaYqc4G3TTwhA")]
 [DisplayName("Flows")]
-public record Flows1
+public partial record Flows1
 {
     /// <summary>
     /// Gross value of flows between the concentration bank account and accounts held at payment banks.

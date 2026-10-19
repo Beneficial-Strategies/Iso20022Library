@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_C0Xzk-3rEeaWjpoyrnG6Rw")]
 [DisplayName("Issuer CSD Identification")]
-public record IssuerCSDIdentification1
+public partial record IssuerCSDIdentification1
 {
     /// <summary>
     /// Identification code of the Issuer CSD, using LEI; Legal Entity Identifier (LEI) is a code allocated to a party as described in ISO 17442 &apos;Financial Services - Legal Entity Identifier (LEI)&apos;.

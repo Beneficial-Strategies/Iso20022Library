@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4lkZwTEyEe6g-ffJsqGiSA")]
 [DisplayName("Registered Contract Journal3")]
-public record RegisteredContractJournal3
+public partial record RegisteredContractJournal3
 {
     /// <summary>
     /// Registration Agent.

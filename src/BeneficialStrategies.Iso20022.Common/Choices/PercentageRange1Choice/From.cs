@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
     [IsoId("_7_BRqaMgEeCJ6YNENx4h-w_-1383081859")]
     [DisplayName("From")]
     [IsoXmlTag("Fr")]
-    public record From : PercentageRange1Choice_
+    public partial record From : PercentageRange1Choice_
     {
         /// <summary>
         /// Percentage rate of the range limit.

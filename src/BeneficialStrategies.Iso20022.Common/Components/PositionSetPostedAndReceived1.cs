@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9h9p68WLEeiRga8tPu1L4Q")]
 [DisplayName("Position Set Posted And Received")]
-public record PositionSetPostedAndReceived1
+public partial record PositionSetPostedAndReceived1
 {
     /// <summary>
     /// Value posted by the reporting counterparty.

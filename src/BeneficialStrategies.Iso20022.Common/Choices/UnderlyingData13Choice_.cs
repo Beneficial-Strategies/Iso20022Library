@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UnderlyingData13Choice.StatementEntry))]
     [JsonDerivedType(typeof(UnderlyingData13Choice.Account))]
     [JsonDerivedType(typeof(UnderlyingData13Choice.Other))]
-    public abstract record UnderlyingData13Choice_
+    public abstract partial record UnderlyingData13Choice_
     {
     }
 }

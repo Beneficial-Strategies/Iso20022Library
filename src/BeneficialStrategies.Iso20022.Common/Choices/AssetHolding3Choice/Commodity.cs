@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice
     /// Commodity.
     /// </summary>
     [DisplayName("Commodity")]
-    public record Commodity : AssetHolding3Choice_
+    public partial record Commodity : AssetHolding3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

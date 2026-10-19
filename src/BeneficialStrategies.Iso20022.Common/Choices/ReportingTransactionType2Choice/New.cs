@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType2Choice
     [IsoId("_XM1TEZ26Eeuwmdq0KtnICg")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
-    public record New : ReportingTransactionType2Choice_
+    public partial record New : ReportingTransactionType2Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of the transaction.

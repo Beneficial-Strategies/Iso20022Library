@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LCAoYE6oEeyEpI66tm807w")]
 [DisplayName("Compare Reference Party")]
-public record CompareReferenceParty1
+public partial record CompareReferenceParty1
 {
     /// <summary>
     /// Information for the first side of the transaction.

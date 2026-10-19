@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cc1HsdGgEeaQk737TH1Fzw")]
     [DisplayName("Date Or Blank Query 2 Choice")]
-    public abstract record DateOrBlankQuery2Choice_ { }
+    public abstract partial record DateOrBlankQuery2Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice
     /// </summary>
     [IsoId("_8BZ3QqMgEeCJ6YNENx4h-w_-129556950")]
     [DisplayName("Market Infrastructure Identification")]
-    public record MarketInfrastructureIdentification : SystemIdentification2Choice_
+    public partial record MarketInfrastructureIdentification : SystemIdentification2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("MktInfrstrctrId")]

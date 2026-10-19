@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pqRrgdOCEeSQ_-lmj1tzfw")]
 [DisplayName("Special Condition")]
-public record SpecialCondition1
+public partial record SpecialCondition1
 {
     /// <summary>
     /// Incoming amount on special conditions.

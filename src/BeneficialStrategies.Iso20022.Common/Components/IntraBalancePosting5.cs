@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZMt4zTneEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Posting")]
-public record IntraBalancePosting5
+public partial record IntraBalancePosting5
 {
     /// <summary>
     /// Balance from which the amount of money is moved.

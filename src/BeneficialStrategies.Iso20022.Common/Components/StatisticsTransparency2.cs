@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D34tONSzEeWG96DaYzntbg")]
 [DisplayName("Statistics Transparency")]
-public record StatisticsTransparency2
+public partial record StatisticsTransparency2
 {
     /// <summary>
     /// Total number of transactions that have been performed on this market.

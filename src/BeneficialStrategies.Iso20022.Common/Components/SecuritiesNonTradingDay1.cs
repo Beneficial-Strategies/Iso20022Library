@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FHAXAGxNEeWD9e8QDBgUOw")]
 [DisplayName("Securities Non Trading Day")]
-public record SecuritiesNonTradingDay1
+public partial record SecuritiesNonTradingDay1
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice messages.

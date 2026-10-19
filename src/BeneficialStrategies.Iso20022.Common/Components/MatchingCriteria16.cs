@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cKa2VVovEe23K4GXSpBSeg")]
 [DisplayName("Matching Criteria")]
-public record MatchingCriteria16
+public partial record MatchingCriteria16
 {
     /// <summary>
     /// Compares information related to both sides of a counterparty.

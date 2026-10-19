@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E2br6W4-EeiU9cctagi5ow")]
 [DisplayName("Limit Query")]
-public record LimitQuery4
+public partial record LimitQuery4
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

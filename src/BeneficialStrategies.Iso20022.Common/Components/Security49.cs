@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F9siIcguEeuGrNSsxk3B0A")]
 [DisplayName("Security")]
-public record Security49
+public partial record Security49
 {
     /// <summary>
     /// Identifier of the security subject of the transaction.

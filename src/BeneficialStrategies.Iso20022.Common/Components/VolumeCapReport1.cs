@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AE700CohEeW8U9pZarPocw")]
 [DisplayName("Volume Cap Report")]
-public record VolumeCapReport1
+public partial record VolumeCapReport1
 {
     /// <summary>
     /// Date or date range the report relates to.

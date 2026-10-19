@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("aeb8d0a2-b685-444d-8a96-7df0af319a94")]
 [DisplayName("Original Payment Instruction54")]
-public record OriginalPaymentInstruction54
+public partial record OriginalPaymentInstruction54
 {
     /// <summary>
     /// Unique identification, as assigned by the original assigner, to unambiguously identify the original payment information cancellation request.

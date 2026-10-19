@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__YT0wJuKEeaPcol5ibnfBQ")]
 [DisplayName("Trading Under Waivers Percentage")]
-public record TradingUnderWaiversPercentage1
+public partial record TradingUnderWaiversPercentage1
 {
     /// <summary>
     /// Total percentage of trading under waiver of the instrument in this specific reporting period on this trading venue.

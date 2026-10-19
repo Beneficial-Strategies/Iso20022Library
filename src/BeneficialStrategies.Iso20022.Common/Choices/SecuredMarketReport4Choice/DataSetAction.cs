@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport4Choice
     /// </summary>
     [IsoId("_GZo0gcEREea7jLfvGi1PDw")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : SecuredMarketReport4Choice_
+    public partial record DataSetAction : SecuredMarketReport4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

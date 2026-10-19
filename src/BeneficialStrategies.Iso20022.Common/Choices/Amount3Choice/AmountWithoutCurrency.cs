@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount3Choice
     /// </summary>
     [IsoId("_750Bh6MgEeCJ6YNENx4h-w_-1970472994")]
     [DisplayName("Amount Without Currency")]
-    public record AmountWithoutCurrency : Amount3Choice_
+    public partial record AmountWithoutCurrency : Amount3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AmtWthtCcy")]

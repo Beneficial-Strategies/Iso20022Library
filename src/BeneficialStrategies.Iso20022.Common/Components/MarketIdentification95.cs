@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q8VpYS6mEeiLE6ldFr13hQ")]
 [DisplayName("Market Identification")]
-public record MarketIdentification95
+public partial record MarketIdentification95
 {
     /// <summary>
     /// Operating MIC of the venue.

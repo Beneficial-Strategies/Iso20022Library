@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier3Choi
     /// </summary>
     [IsoId("__pAKxU7qEe2PGo0mhYCh1g")]
     [DisplayName("Not Available")]
-    public record NotAvailable : UniqueTransactionIdentifier3Choice_
+    public partial record NotAvailable : UniqueTransactionIdentifier3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

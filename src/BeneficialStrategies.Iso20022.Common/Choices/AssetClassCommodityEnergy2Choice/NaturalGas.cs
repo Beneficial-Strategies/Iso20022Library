@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
     [IsoId("_x4yAc7vsEeiLRYqS-r-R-A")]
     [DisplayName("Natural Gas")]
     [IsoXmlTag("NtrlGas")]
-    public record NaturalGas : AssetClassCommodityEnergy2Choice_
+    public partial record NaturalGas : AssetClassCommodityEnergy2Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

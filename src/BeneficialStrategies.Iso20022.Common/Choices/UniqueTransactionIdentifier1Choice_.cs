@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_t08DgAxeEeuoAcnnpX2x_w")]
     [DisplayName("Unique Transaction Identifier 1 Choice")]
-    public abstract record UniqueTransactionIdentifier1Choice_ { }
+    public abstract partial record UniqueTransactionIdentifier1Choice_ { }
 }

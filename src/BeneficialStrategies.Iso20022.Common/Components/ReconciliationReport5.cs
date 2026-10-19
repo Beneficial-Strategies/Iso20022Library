@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CtHU1__oEemm3skPVSMJQg")]
 [DisplayName("Reconciliation Report")]
-public record ReconciliationReport5
+public partial record ReconciliationReport5
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

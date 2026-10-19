@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MwencVfdEeqZr5K1Woax-g")]
 [DisplayName("Rejection Statistics")]
-public record RejectionStatistics3
+public partial record RejectionStatistics3
 {
     /// <summary>
     /// Total number of derivatives submitted by the report submitting entity for the reporting counterparty which failed to pass technical schema validations.

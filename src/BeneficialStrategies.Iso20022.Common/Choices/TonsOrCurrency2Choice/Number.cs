@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TonsOrCurrency2Choice
     /// </summary>
     [IsoId("_aCdOYWlSEeaLAKoEUNsD9g")]
     [DisplayName("Number")]
-    public record Number : TonsOrCurrency2Choice_
+    public partial record Number : TonsOrCurrency2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

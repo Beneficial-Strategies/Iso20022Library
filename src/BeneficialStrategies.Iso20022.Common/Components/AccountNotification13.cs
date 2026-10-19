@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_1Wl1lzq4EeWZFYSPlduMhw")]
 [DisplayName("Account Notification")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record AccountNotification13
+public partial record AccountNotification13
 {
     /// <summary>
     /// Unique identification, as assigned by the account owner, to unambiguously identify the account notification.

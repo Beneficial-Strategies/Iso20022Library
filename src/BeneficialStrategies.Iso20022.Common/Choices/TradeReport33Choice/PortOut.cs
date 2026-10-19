@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice
     /// Port Out.
     /// </summary>
     [DisplayName("Port Out")]
-    public record PortOut : TradeReport33Choice_
+    public partial record PortOut : TradeReport33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

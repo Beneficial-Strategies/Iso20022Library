@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_z9WAAefHEeKNfc-Rw_dPYg")]
     [DisplayName("Shipment Schedule 2 Choice")]
-    public abstract record ShipmentSchedule2Choice_ { }
+    public abstract partial record ShipmentSchedule2Choice_ { }
 }

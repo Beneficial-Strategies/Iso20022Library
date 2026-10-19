@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kyJo0SGxEeKjd4jizyIDGA")]
 [DisplayName("Total Transactions")]
-public record TotalTransactions4
+public partial record TotalTransactions4
 {
     /// <summary>
     /// Specifies the total number and sum of debit and credit entries.

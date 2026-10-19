@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-hi44LJUEeaYqc4G3TTwhA")]
 [DisplayName("Deposit")]
-public record Deposit1
+public partial record Deposit1
 {
     /// <summary>
     /// Date on which the deposit matures.

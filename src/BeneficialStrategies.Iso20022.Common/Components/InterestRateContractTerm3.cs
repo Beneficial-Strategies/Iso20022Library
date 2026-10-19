@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sCwFwexREeakeva4q26Yqg")]
 [DisplayName("Interest Rate Contract Term")]
-public record InterestRateContractTerm3
+public partial record InterestRateContractTerm3
 {
     /// <summary>
     /// Unit for the rate basis.

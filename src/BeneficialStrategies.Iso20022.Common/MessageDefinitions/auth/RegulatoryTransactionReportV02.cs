@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_gKH798IFEeGllrOKQRUTYA_1289680586")]
 [DisplayName("Regulatory Transaction Report V")]
-public record RegulatoryTransactionReportV02 : IOuterRecord
+public partial record RegulatoryTransactionReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

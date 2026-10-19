@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XQwXoMgpEeuGrNSsxk3B0A")]
     [DisplayName("Securities Transaction Price 18 Choice")]
-    public abstract record SecuritiesTransactionPrice18Choice_ { }
+    public abstract partial record SecuritiesTransactionPrice18Choice_ { }
 }

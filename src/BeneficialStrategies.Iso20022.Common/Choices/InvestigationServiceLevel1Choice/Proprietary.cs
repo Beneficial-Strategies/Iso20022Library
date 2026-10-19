@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationServiceLevel1Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : InvestigationServiceLevel1Choice_
+    public partial record Proprietary : InvestigationServiceLevel1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

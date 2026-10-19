@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T854ctp-Ed-ak6NoX_4Aeg_-1096123728")]
 [DisplayName("Statement Resolution Entry")]
-public record StatementResolutionEntry1
+public partial record StatementResolutionEntry1
 {
     /// <summary>
     /// Set of elements used to provide information on the original messsage.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_13dNuzEyEe6g-ffJsqGiSA")]
 [DisplayName("Payment Instruction47")]
-public record PaymentInstruction47
+public partial record PaymentInstruction47
 {
     /// <summary>
     /// Message Identification.

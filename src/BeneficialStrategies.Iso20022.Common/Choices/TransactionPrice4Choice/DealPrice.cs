@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice4Choice
     [IsoId("_-XasI7TUEee_k7HqaUKERA")]
     [DisplayName("Deal Price")]
     [IsoXmlTag("DealPric")]
-    public record DealPrice : TransactionPrice4Choice_
+    public partial record DealPrice : TransactionPrice4Choice_
     {
         /// <summary>
         /// Specification of the price type.

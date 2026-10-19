@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c7l_wX58EeaUaa1DpZmwUw")]
 [DisplayName("Securities Currency Identification")]
-public record SecuritiesCurrencyIdentification2
+public partial record SecuritiesCurrencyIdentification2
 {
     /// <summary>
     /// Details the currency name and ISO 4217 currency code.

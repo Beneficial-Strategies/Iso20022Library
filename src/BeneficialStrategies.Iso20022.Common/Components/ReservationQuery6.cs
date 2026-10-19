@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zqcjkTEyEe6g-ffJsqGiSA")]
 [DisplayName("Reservation Query6")]
-public record ReservationQuery6
+public partial record ReservationQuery6
 {
     /// <summary>
     /// Query Type.

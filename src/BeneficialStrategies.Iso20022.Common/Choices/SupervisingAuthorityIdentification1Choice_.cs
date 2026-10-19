@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_4ZQrMPH-Eeaz_YGUGLjP6A")]
     [DisplayName("Supervising Authority Identification 1 Choice")]
-    public abstract record SupervisingAuthorityIdentification1Choice_ { }
+    public abstract partial record SupervisingAuthorityIdentification1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iWdMYRA6Ee6N57R8Wekj-w")]
 [DisplayName("Order Classification2")]
-public record OrderClassification2
+public partial record OrderClassification2
 {
     /// <summary>
     /// Order Type.

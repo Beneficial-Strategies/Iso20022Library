@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bPnyNaoxEemhJ7JnT2LsoQ")]
 [DisplayName("Collateral Matching Criteria")]
-public record CollateralMatchingCriteria3
+public partial record CollateralMatchingCriteria3
 {
     /// <summary>
     /// Specifies whether the values defined as true/false indicator are matching or not.

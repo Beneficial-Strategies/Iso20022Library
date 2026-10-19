@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrOperationalError5Choice
     [IsoId("_fCDzsdcZEeqRFcf2R4bPBw")]
     [DisplayName("Account Report")]
     [IsoXmlTag("AcctRpt")]
-    public record AccountReport : AccountOrOperationalError5Choice_
+    public partial record AccountReport : AccountOrOperationalError5Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.

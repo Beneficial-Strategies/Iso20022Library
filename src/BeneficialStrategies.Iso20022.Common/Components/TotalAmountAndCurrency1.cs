@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_73bb46MgEeCJ6YNENx4h-w_2011477148")]
 [DisplayName("Total Amount And Currency")]
-public record TotalAmountAndCurrency1
+public partial record TotalAmountAndCurrency1
 {
     /// <summary>
     /// Total net amount for all operations taken into account in the report.

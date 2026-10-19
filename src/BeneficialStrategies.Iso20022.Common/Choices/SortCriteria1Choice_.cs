@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_U1-1hNp-Ed-ak6NoX_4Aeg_1941564546")]
     [DisplayName("Sort Criteria 1 Choice")]
-    public abstract record SortCriteria1Choice_ { }
+    public abstract partial record SortCriteria1Choice_ { }
 }

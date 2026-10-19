@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria5Choice
     /// New Criteria.
     /// </summary>
     [DisplayName("New Criteria")]
-    public record NewCriteria : StandingOrderCriteria5Choice_
+    public partial record NewCriteria : StandingOrderCriteria5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

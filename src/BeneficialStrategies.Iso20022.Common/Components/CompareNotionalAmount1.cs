@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gxGaEWEgEe2P-L9DBerEgA")]
 [DisplayName("Compare Notional Amount")]
-public record CompareNotionalAmount1
+public partial record CompareNotionalAmount1
 {
     /// <summary>
     /// Information for the first side of the transaction.

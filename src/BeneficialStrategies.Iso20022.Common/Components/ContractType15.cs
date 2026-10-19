@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v8SdgbnvEe6Uq84qj-dV5Q")]
 [DisplayName("Contract Type15")]
-public record ContractType15
+public partial record ContractType15
 {
     /// <summary>
     /// Contract Type.

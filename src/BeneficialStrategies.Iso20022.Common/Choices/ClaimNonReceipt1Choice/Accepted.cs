@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt1Choice
     [IsoId("_vzbp0IjYEeeDW7_wB-eK_g")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
-    public record Accepted : ClaimNonReceipt1Choice_
+    public partial record Accepted : ClaimNonReceipt1Choice_
     {
         /// <summary>
         /// Specifies the date the original payment instruction was processed.

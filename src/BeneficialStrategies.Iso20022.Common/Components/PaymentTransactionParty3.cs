@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__cH_c249EeiU9cctagi5ow")]
 [DisplayName("Payment Transaction Party")]
-public record PaymentTransactionParty3
+public partial record PaymentTransactionParty3
 {
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

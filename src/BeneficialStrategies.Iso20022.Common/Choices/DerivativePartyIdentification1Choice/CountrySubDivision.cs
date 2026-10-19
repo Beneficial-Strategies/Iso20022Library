@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DerivativePartyIdentification1Ch
     /// </summary>
     [IsoId("_sN3rEEW8EeWaZZ6gWK8UVw")]
     [DisplayName("Country Sub Division")]
-    public record CountrySubDivision : DerivativePartyIdentification1Choice_
+    public partial record CountrySubDivision : DerivativePartyIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

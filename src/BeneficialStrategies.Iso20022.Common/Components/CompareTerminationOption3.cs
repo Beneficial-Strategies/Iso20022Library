@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9FbPUa5iEeuo-IflVgGqiA")]
 [DisplayName("Compare Termination Option")]
-public record CompareTerminationOption3
+public partial record CompareTerminationOption3
 {
     /// <summary>
     /// Information for the first side of the transaction.

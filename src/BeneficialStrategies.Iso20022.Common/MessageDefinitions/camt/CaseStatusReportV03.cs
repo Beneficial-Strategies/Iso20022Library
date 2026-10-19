@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_PzltuNE-Ed-BzquC8wXy7w_86849110")]
 [DisplayName("Case Status Report V")]
-public record CaseStatusReportV03 : IOuterRecord
+public partial record CaseStatusReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

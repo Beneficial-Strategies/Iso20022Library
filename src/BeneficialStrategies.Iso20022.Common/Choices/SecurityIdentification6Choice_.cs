@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TBKB79p-Ed-ak6NoX_4Aeg_-1421894985")]
     [DisplayName("Security Identification 6 Choice")]
-    public abstract record SecurityIdentification6Choice_ { }
+    public abstract partial record SecurityIdentification6Choice_ { }
 }

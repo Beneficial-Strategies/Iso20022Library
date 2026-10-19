@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c1FRUSHBEeK_0OuuIoS2mw")]
 [DisplayName("Charges Record")]
-public record ChargesRecord2
+public partial record ChargesRecord2
 {
     /// <summary>
     /// Transaction charges to be paid by the charge bearer.

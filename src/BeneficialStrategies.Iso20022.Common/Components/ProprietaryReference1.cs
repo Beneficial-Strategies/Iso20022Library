@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RUrR8dp-Ed-ak6NoX_4Aeg_-121377116")]
 [DisplayName("Proprietary Reference")]
-public record ProprietaryReference1
+public partial record ProprietaryReference1
 {
     /// <summary>
     /// Identifies the type of reference reported.

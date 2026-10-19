@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WeU5IGvpEe2Re-GccwOX8g")]
 [DisplayName("Minimum Executable1")]
-public record MinimumExecutable1
+public partial record MinimumExecutable1
 {
     /// <summary>
     /// Size.

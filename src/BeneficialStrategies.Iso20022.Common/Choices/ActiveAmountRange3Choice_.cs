@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_OnGKkZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Active Amount Range 3 Choice")]
-    public abstract record ActiveAmountRange3Choice_ { }
+    public abstract partial record ActiveAmountRange3Choice_ { }
 }

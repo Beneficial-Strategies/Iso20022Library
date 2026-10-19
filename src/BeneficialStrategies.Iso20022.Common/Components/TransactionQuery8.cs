@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3GZtETEyEe6g-ffJsqGiSA")]
 [DisplayName("Transaction Query8")]
-public record TransactionQuery8
+public partial record TransactionQuery8
 {
     /// <summary>
     /// Query Type.

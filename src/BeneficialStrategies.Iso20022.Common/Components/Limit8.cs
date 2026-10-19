@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OUj-4Z-YEee28J7y9KlTWg")]
 [DisplayName("Limit")]
-public record Limit8
+public partial record Limit8
 {
     /// <summary>
     /// Date and time at which the limit becomes effective.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FHEpEZQTEeiok48Eh9lW9Q")]
 [DisplayName("Trade Party Identification Query")]
-public record TradePartyIdentificationQuery8
+public partial record TradePartyIdentificationQuery8
 {
     /// <summary>
     /// Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.

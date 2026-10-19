@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Product1Choice.Security), nameof(Product1Choice.Security))]
     [IsoId("_AS4VYLVPEeadLcJesEbkTQ")]
     [DisplayName("Product 1 Choice")]
-    public abstract record Product1Choice_ { }
+    public abstract partial record Product1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9PyU4TEsEe6GxLzpkVnWYg")]
 [DisplayName("Underlying Transaction32")]
-public record UnderlyingTransaction32
+public partial record UnderlyingTransaction32
 {
     /// <summary>
     /// Original Group Information And Status.

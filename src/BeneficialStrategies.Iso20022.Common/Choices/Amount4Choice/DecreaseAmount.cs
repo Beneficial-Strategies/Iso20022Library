@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount4Choice
     /// Decrease Amount.
     /// </summary>
     [DisplayName("Decrease Amount")]
-    public record DecreaseAmount : Amount4Choice_
+    public partial record DecreaseAmount : Amount4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

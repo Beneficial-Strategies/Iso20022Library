@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice
     /// Container Board.
     /// </summary>
     [DisplayName("Container Board")]
-    public record ContainerBoard : AssetClassCommodityPaper5Choice_
+    public partial record ContainerBoard : AssetClassCommodityPaper5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

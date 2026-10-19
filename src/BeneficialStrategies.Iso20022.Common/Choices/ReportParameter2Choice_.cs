@@ -28,5 +28,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_U11EiNp-Ed-ak6NoX_4Aeg_-922147524")]
     [DisplayName("Report Parameter 2 Choice")]
-    public abstract record ReportParameter2Choice_ { }
+    public abstract partial record ReportParameter2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6qdpsTEyEe6g-ffJsqGiSA")]
 [DisplayName("Registered Contract19")]
-public record RegisteredContract19
+public partial record RegisteredContract19
 {
     /// <summary>
     /// Registered Contract Closure Identification.

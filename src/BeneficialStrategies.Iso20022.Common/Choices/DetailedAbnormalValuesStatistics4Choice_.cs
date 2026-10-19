@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_x32K4VyGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Abnormal Values Statistics 4 Choice")]
-    public abstract record DetailedAbnormalValuesStatistics4Choice_ { }
+    public abstract partial record DetailedAbnormalValuesStatistics4Choice_ { }
 }

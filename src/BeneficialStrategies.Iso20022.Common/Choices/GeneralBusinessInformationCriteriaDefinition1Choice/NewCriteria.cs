@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriter
     [IsoId("_1dxAk5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : GeneralBusinessInformationCriteriaDefinition1Choice_
+    public partial record NewCriteria : GeneralBusinessInformationCriteriaDefinition1Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

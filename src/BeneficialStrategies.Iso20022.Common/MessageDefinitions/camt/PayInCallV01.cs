@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_M2OIONE_Ed-BzquC8wXy7w_1304956917")]
 [DisplayName("Pay In Call V01")]
-public record PayInCallV01 : IOuterRecord
+public partial record PayInCallV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

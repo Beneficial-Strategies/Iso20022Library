@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_KUfpwbMmEeueudaIbClZbQ")]
     [DisplayName("Contract Registration Reference 2 Choice")]
-    public abstract record ContractRegistrationReference2Choice_ { }
+    public abstract partial record ContractRegistrationReference2Choice_ { }
 }

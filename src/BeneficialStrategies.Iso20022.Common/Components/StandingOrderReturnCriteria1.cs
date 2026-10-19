@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_72-v8aMgEeCJ6YNENx4h-w_1129668542")]
 [DisplayName("Standing Order Return Criteria")]
-public record StandingOrderReturnCriteria1
+public partial record StandingOrderReturnCriteria1
 {
     /// <summary>
     /// Defines the criteria used to report on a multilateral balance.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType5Choice
     /// </summary>
     [IsoId("_SYxMMdp-Ed-ak6NoX_4Aeg_1163104804")]
     [DisplayName("Code")]
-    public record Code : BalanceType5Choice_
+    public partial record Code : BalanceType5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

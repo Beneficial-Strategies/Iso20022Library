@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cu3rILV3EeeKi_hRJkOpmQ")]
 [DisplayName("Available Financial Resources Amount")]
-public record AvailableFinancialResourcesAmount1
+public partial record AvailableFinancialResourcesAmount1
 {
     /// <summary>
     /// Total value of the initial margin (IM) requirement for all members at the last business day of the month.

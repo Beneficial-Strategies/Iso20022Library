@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YfG9NXX1Eei3jO6riKEVXg")]
 [DisplayName("Payment Instruction")]
-public record PaymentInstruction33
+public partial record PaymentInstruction33
 {
     /// <summary>
     /// Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.|.

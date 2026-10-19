@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SqR5xAEcEeCQm6a_G2yO_w_383431093")]
 [DisplayName("Card Security Information")]
-public record CardSecurityInformation1
+public partial record CardSecurityInformation1
 {
     /// <summary>
     /// Card security code (CSC) management associated with the transaction.

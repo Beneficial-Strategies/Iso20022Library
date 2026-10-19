@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentificati
     /// </summary>
     [IsoId("_8BZ3QKMgEeCJ6YNENx4h-w_-1719940070")]
     [DisplayName("Proprietary")]
-    public record Proprietary : MarketInfrastructureIdentification1Choice_
+    public partial record Proprietary : MarketInfrastructureIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

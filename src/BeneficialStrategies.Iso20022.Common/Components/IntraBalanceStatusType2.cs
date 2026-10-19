@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S62MFeFWEeWIA4E9cYSxxQ")]
 [DisplayName("Intra Balance Status Type")]
-public record IntraBalanceStatusType2
+public partial record IntraBalanceStatusType2
 {
     /// <summary>
     /// Provides details on the processing status of the transaction.

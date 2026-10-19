@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderType1Choice
     /// </summary>
     [IsoId("_73bb4aMgEeCJ6YNENx4h-w_-1852211918")]
     [DisplayName("Code")]
-    public record Code : StandingOrderType1Choice_
+    public partial record Code : StandingOrderType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

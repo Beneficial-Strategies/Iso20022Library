@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9WQwazEsEe6GxLzpkVnWYg")]
 [DisplayName("Payment Transaction153")]
-public record PaymentTransaction153
+public partial record PaymentTransaction153
 {
     /// <summary>
     /// Cancellation Status Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity32Cho
     [IsoId("_Y7YBdZjgEeqkLZLH6DK3UQ")]
     [DisplayName("Nominal Value")]
     [IsoXmlTag("NmnlVal")]
-    public record NominalValue : FinancialInstrumentQuantity32Choice_
+    public partial record NominalValue : FinancialInstrumentQuantity32Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

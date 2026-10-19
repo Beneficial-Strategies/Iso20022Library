@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     [IsoId("_Dhy-5UDHEeGUr-Tp_ntVFg")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public record Account : SearchCriteria1Choice_
+    public partial record Account : SearchCriteria1Choice_
     {
         /// <summary>
         /// Specifies the account for the investigation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hRAnD_rgEe2mU4Wi2q3MzQ")]
 [DisplayName("Trade Party Query Criteria7")]
-public record TradePartyQueryCriteria7
+public partial record TradePartyQueryCriteria7
 {
     /// <summary>
     /// Operator.

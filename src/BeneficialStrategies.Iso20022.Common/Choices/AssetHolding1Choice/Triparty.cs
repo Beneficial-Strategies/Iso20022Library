@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     [IsoId("_0kAaQK_6EeaE9YROwd69hA")]
     [DisplayName("Triparty")]
     [IsoXmlTag("Trpty")]
-    public record Triparty : AssetHolding1Choice_
+    public partial record Triparty : AssetHolding1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_DLtLMzncEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movement Posting Report V")]
-public record IntraBalanceMovementPostingReportV01 : IOuterRecord
+public partial record IntraBalanceMovementPostingReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

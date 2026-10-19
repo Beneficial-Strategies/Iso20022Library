@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice
     /// Compression.
     /// </summary>
     [DisplayName("Compression")]
-    public record Compression : TradeReport33Choice_
+    public partial record Compression : TradeReport33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

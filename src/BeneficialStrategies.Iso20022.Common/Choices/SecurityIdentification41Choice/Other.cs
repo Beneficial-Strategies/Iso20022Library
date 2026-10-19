@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
     [IsoId("_idD061o2Ee23K4GXSpBSeg")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : SecurityIdentification41Choice_
+    public partial record Other : SecurityIdentification41Choice_
     {
         /// <summary>
         /// Indicates other identifier of an underlier.

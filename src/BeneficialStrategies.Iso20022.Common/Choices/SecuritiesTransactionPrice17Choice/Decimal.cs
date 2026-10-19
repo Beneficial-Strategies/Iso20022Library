@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
     /// </summary>
     [IsoId("_gSTIiZjcEeqkLZLH6DK3UQ")]
     [DisplayName("Decimal")]
-    public record Decimal : SecuritiesTransactionPrice17Choice_
+    public partial record Decimal : SecuritiesTransactionPrice17Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

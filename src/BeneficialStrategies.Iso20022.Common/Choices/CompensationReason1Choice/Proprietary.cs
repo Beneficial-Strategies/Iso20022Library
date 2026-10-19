@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CompensationReason1Choice
     /// </summary>
     [IsoId("_d3NU0IjYEeeDW7_wB-eK_g")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CompensationReason1Choice_
+    public partial record Proprietary : CompensationReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

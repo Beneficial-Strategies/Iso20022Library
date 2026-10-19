@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_Zbk1oHgyEfCdoODv2ypKfw")]
 [DisplayName("Cash Deposit Or Withdrawal Cancellation Request V01")]
-public record CashDepositOrWithdrawalCancellationRequestV01 : IOuterRecord
+public partial record CashDepositOrWithdrawalCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

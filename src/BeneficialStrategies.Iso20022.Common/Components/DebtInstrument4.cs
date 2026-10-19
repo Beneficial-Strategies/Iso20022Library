@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4kVygcnUEeWpf-ImB_F2gQ")]
 [DisplayName("Debt Instrument")]
-public record DebtInstrument4
+public partial record DebtInstrument4
 {
     /// <summary>
     /// Maturity date/time at which an interest bearing financial instrument becomes due, that is original date of expiry of the reported financial instrument.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gW374OqLEeSsk6KxwbYJ9w")]
 [DisplayName("Securities Transaction Transmission")]
-public record SecuritiesTransactionTransmission2
+public partial record SecuritiesTransactionTransmission2
 {
     /// <summary>
     /// Indication as to whether the transaction results from an order transmitted by the reporting of a client to a third party.

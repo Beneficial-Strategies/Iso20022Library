@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZHdRcSc1EeaCIe3n1Gx9ug")]
     [DisplayName("Benchmark Curve Name 6 Choice")]
-    public abstract record BenchmarkCurveName6Choice_ { }
+    public abstract partial record BenchmarkCurveName6Choice_ { }
 }

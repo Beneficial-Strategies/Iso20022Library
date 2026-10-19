@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_FsXYwS43EeK7-OZOLIksSw")]
 [DisplayName("Pay In Call V")]
-public record PayInCallV02 : IOuterRecord
+public partial record PayInCallV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

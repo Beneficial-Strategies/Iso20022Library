@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6Q_lgZqlEeGSON8vddiWzQ_2012916180")]
     [DisplayName("Billing Compensation Type 1 Choice")]
-    public abstract record BillingCompensationType1Choice_ { }
+    public abstract partial record BillingCompensationType1Choice_ { }
 }

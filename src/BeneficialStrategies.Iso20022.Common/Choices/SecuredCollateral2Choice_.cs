@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_h6SUN6idEeWHO_l3hf2rlA")]
     [DisplayName("Secured Collateral 2 Choice")]
-    public abstract record SecuredCollateral2Choice_ { }
+    public abstract partial record SecuredCollateral2Choice_ { }
 }

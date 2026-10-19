@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T9pfVdp-Ed-ak6NoX_4Aeg_-1701633190")]
 [DisplayName("Debit Authorisation Confirmation")]
-public record DebitAuthorisationConfirmation2
+public partial record DebitAuthorisationConfirmation2
 {
     /// <summary>
     /// Code expressing the decision taken by the account owner relative to the request for debit authorization.

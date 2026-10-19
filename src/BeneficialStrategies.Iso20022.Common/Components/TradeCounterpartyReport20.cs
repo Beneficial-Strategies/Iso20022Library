@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tqiloQz1Ee2YoLD-1vFj0g")]
 [DisplayName("Trade Counterparty Report")]
-public record TradeCounterpartyReport20
+public partial record TradeCounterpartyReport20
 {
     /// <summary>
     /// Identification of the counterparty to a derivative transaction who is fulfilling its reporting obligation in the present report.

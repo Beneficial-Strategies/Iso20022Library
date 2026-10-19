@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency3Choice
     /// </summary>
     [IsoId("_7KQYo1fREeqqKf65rDYWYw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : InterestRateFrequency3Choice_
+    public partial record Proprietary : InterestRateFrequency3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

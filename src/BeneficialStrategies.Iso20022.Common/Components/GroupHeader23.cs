@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PynpV9p-Ed-ak6NoX_4Aeg_-1593387431")]
 [DisplayName("Group Header")]
-public record GroupHeader23
+public partial record GroupHeader23
 {
     /// <summary>
     /// Point to point reference assigned by the account servicing institution and sent to the account owner to unambiguously identify the message.||Usage: The account servicing institution has to make sure that &apos;MessageIdentification&apos; is unique per instructed party for a pre-agreed period.

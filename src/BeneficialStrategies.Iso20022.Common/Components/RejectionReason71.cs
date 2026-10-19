@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yAw2W1yGEe24CqbZJK5XxA")]
 [DisplayName("Rejection Reason")]
-public record RejectionReason71
+public partial record RejectionReason71
 {
     /// <summary>
     /// Identification of a transaction.

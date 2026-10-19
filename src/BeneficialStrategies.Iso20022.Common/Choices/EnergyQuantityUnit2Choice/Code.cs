@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnergyQuantityUnit2Choice
     /// </summary>
     [IsoId("_sTr98Si_EeuKKc2MztSwPw")]
     [DisplayName("Code")]
-    public record Code : EnergyQuantityUnit2Choice_
+    public partial record Code : EnergyQuantityUnit2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

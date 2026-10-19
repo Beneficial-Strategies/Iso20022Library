@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b6SxjdcZEeqRFcf2R4bPBw")]
 [DisplayName("Original Notification Reference")]
-public record OriginalNotificationReference11
+public partial record OriginalNotificationReference11
 {
     /// <summary>
     /// Identifies the account to be credited with the incoming amount of money.

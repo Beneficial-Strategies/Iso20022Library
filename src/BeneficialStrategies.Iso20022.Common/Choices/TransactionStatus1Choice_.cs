@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_rTkjwRZNEe6d6Ip1Ob2kaQ")]
     [DisplayName("Transaction Status1Choice")]
-    public abstract record TransactionStatus1Choice_ { }
+    public abstract partial record TransactionStatus1Choice_ { }
 }

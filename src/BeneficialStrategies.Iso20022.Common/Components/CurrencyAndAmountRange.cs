@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PVH1Btp-Ed-ak6NoX_4Aeg_-819454093")]
 [DisplayName("Currency And Amount Range")]
-public record CurrencyAndAmountRange
+public partial record CurrencyAndAmountRange
 {
     /// <summary>
     /// Specified amount or amount range.

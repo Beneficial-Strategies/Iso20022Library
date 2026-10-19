@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError7Choice
     [IsoId("_QdJoAXhdEeidzqjNEfehPg")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : GeneralBusinessOrError7Choice_
+    public partial record OperationalError : GeneralBusinessOrError7Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

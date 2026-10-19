@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_n3siQbt7Eeq_cfXrH83Rcw")]
 [DisplayName("Charges Record")]
-public record ChargesRecord5
+public partial record ChargesRecord5
 {
     /// <summary>
     /// Unique and unambiguous identification of the charges record for reconciliation purpose.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_77AUVKMgEeCJ6YNENx4h-w_1376931885")]
 [DisplayName("Message Header")]
-public record MessageHeader4
+public partial record MessageHeader4
 {
     /// <summary>
     /// Point to point reference, as assigned by the sender, to unambiguously identify the message.|Usage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.

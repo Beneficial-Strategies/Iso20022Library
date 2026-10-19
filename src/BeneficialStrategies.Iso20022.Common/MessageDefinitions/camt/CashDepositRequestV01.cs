@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_NKdVwLe1Ee-Dk_aQVAan8Q")]
 [DisplayName("Cash Deposit Request V01")]
-public record CashDepositRequestV01 : IOuterRecord
+public partial record CashDepositRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

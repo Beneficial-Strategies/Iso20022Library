@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     [IsoId("_JXb7AWkwEeaLAKoEUNsD9g")]
     [DisplayName("Contract For Difference")]
     [IsoXmlTag("CtrctForDiff")]
-    public record ContractForDifference : Derivative2Choice_
+    public partial record ContractForDifference : Derivative2Choice_
     {
         /// <summary>
         /// Underlying type of the contract for difference.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G_iQo35aEea2k7EBUopqxw")]
 [DisplayName("Derivative Instrument")]
-public record DerivativeInstrument5
+public partial record DerivativeInstrument5
 {
     /// <summary>
     /// Expiry date of the financial instrument.

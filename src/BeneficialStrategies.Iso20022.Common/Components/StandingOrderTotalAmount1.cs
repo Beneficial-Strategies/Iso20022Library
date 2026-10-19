@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_73Rq5KMgEeCJ6YNENx4h-w_-307258227")]
 [DisplayName("Standing Order Total Amount")]
-public record StandingOrderTotalAmount1
+public partial record StandingOrderTotalAmount1
 {
     /// <summary>
     /// Total defined amount of predefined liquidity transfer orders.

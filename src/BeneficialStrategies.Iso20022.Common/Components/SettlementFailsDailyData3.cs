@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XevB0TOqEeqX8uoQQ3KffQ")]
 [DisplayName("Settlement Fails Daily Data")]
-public record SettlementFailsDailyData3
+public partial record SettlementFailsDailyData3
 {
     /// <summary>
     /// Date for each reporting day in the month.

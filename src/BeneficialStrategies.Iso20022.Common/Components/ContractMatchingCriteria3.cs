@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cL1LmVovEe23K4GXSpBSeg")]
 [DisplayName("Contract Matching Criteria")]
-public record ContractMatchingCriteria3
+public partial record ContractMatchingCriteria3
 {
     /// <summary>
     /// Specifies whether the information on the ISINs are matching or not.

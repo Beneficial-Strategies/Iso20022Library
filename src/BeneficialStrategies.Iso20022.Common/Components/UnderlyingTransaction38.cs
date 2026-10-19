@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ICIBEHgzEfCdoODv2ypKfw")]
 [DisplayName("Underlying Transaction38")]
-public record UnderlyingTransaction38
+public partial record UnderlyingTransaction38
 {
     /// <summary>
     /// Provides information on the original message.

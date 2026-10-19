@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3NIAKzEyEe6g-ffJsqGiSA")]
 [DisplayName("Transaction Search Criteria11")]
-public record TransactionSearchCriteria11
+public partial record TransactionSearchCriteria11
 {
     /// <summary>
     /// Payment To.

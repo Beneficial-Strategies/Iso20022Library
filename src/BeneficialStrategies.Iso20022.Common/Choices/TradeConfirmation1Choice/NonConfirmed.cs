@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation1Choice
     [IsoId("_SDySEA28EeWmAKKPnqYEVQ")]
     [DisplayName("Non Confirmed")]
     [IsoXmlTag("NonConfd")]
-    public record NonConfirmed : TradeConfirmation1Choice_
+    public partial record NonConfirmed : TradeConfirmation1Choice_
     {
         /// <summary>
         /// Specifies that the contract remains unconfirmed.

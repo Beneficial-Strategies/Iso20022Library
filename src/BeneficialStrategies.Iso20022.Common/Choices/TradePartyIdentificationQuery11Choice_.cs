@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_C53CYfrgEe2mU4Wi2q3MzQ")]
     [DisplayName("Trade Party Identification Query11Choice")]
-    public abstract record TradePartyIdentificationQuery11Choice_ { }
+    public abstract partial record TradePartyIdentificationQuery11Choice_ { }
 }

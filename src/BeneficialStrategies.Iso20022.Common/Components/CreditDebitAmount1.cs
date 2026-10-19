@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jO3r0e5NEeCisYr99QEiWA_1570893165")]
 [DisplayName("Credit Debit Amount")]
-public record CreditDebitAmount1
+public partial record CreditDebitAmount1
 {
     /// <summary>
     /// Amount of money expressed in an eligible currency.

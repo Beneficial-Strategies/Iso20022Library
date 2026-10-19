@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJCi4dLpEeSDLevdaFPXHw")]
 [DisplayName("Certificate Identification")]
-public record CertificateIdentification1
+public partial record CertificateIdentification1
 {
     /// <summary>
     /// Point to point reference, as assigned by the instructing party of the underlying message.

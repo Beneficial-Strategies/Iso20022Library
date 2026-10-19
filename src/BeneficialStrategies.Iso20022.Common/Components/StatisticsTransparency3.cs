@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L1E_AXvwEeanCNPcMT7sSg")]
 [DisplayName("Statistics Transparency")]
-public record StatisticsTransparency3
+public partial record StatisticsTransparency3
 {
     /// <summary>
     /// Average Daily Turnover for the instrument in Euros.

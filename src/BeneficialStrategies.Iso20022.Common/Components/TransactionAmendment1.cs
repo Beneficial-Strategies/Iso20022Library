@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q5EEoG8uEe2aW4iy-zispA")]
 [DisplayName("Transaction Amendment1")]
-public record TransactionAmendment1
+public partial record TransactionAmendment1
 {
     /// <summary>
     /// Path.

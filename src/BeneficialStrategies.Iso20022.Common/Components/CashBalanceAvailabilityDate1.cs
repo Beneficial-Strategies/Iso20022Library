@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TU0kytp-Ed-ak6NoX_4Aeg_1268888405")]
 [DisplayName("Cash Balance Availability Date")]
-public record CashBalanceAvailabilityDate1
+public partial record CashBalanceAvailabilityDate1
 {
     /// <summary>
     /// Indicates the number of float days attached to the balance.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1nF2cTEyEe6g-ffJsqGiSA")]
     [DisplayName("Transaction Report Or Error7Choice")]
-    public abstract record TransactionReportOrError7Choice_ { }
+    public abstract partial record TransactionReportOrError7Choice_ { }
 }

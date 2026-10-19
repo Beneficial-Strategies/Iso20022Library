@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria5Choice
     /// Query Name.
     /// </summary>
     [DisplayName("Query Name")]
-    public record QueryName : StandingOrderCriteria5Choice_
+    public partial record QueryName : StandingOrderCriteria5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

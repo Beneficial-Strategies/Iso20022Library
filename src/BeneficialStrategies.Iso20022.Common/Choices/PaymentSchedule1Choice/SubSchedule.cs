@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
     [IsoId("_Bhnbc9OAEeSQ_-lmj1tzfw")]
     [DisplayName("Sub Schedule")]
     [IsoXmlTag("SubSchdl")]
-    public record SubSchedule : PaymentSchedule1Choice_
+    public partial record SubSchedule : PaymentSchedule1Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of the payment schedule.

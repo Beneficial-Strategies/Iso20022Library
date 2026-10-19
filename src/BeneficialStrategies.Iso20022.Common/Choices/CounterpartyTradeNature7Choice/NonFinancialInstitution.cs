@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature7Choice
     [IsoId("_-UtqQ6n9EemdLtwzt4CWxg")]
     [DisplayName("Non Financial Institution")]
     [IsoXmlTag("NFI")]
-    public record NonFinancialInstitution : CounterpartyTradeNature7Choice_
+    public partial record NonFinancialInstitution : CounterpartyTradeNature7Choice_
     {
         /// <summary>
         /// Classification of the business activities of the reporting counterparty.

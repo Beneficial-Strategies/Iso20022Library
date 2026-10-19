@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice
     /// </summary>
     [IsoId("_lThdbXvyEeanCNPcMT7sSg")]
     [DisplayName("Metal")]
-    public record Metal : AssetClassCommodity3Choice_
+    public partial record Metal : AssetClassCommodity3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Metl")]

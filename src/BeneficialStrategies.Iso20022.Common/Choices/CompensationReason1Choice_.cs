@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UyHYkIjYEeeDW7_wB-eK_g")]
     [DisplayName("Compensation Reason 1 Choice")]
-    public abstract record CompensationReason1Choice_ { }
+    public abstract partial record CompensationReason1Choice_ { }
 }

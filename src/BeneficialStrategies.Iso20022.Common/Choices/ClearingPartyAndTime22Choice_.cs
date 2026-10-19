@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_mkgZsRZOEe2QNcZTDeoKnQ")]
     [DisplayName("Clearing Party And Time 22 Choice")]
-    public abstract record ClearingPartyAndTime22Choice_ { }
+    public abstract partial record ClearingPartyAndTime22Choice_ { }
 }

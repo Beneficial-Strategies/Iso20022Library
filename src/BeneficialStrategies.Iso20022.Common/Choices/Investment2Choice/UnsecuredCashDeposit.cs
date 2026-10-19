@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice
     /// Unsecured Cash Deposit.
     /// </summary>
     [DisplayName("Unsecured Cash Deposit")]
-    public record UnsecuredCashDeposit : Investment2Choice_
+    public partial record UnsecuredCashDeposit : Investment2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

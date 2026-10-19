@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zn6M8TEyEe6g-ffJsqGiSA")]
 [DisplayName("Cancellation Status Reason5")]
-public record CancellationStatusReason5
+public partial record CancellationStatusReason5
 {
     /// <summary>
     /// Originator.

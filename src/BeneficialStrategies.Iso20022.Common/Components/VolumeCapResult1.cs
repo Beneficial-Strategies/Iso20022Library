@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U7tWsJuJEeaPcol5ibnfBQ")]
 [DisplayName("Volume Cap Result")]
-public record VolumeCapResult1
+public partial record VolumeCapResult1
 {
     /// <summary>
     /// Identifies the financial instrument using an ISIN.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus6Choice
     /// Duplicate Of.
     /// </summary>
     [DisplayName("Duplicate Of")]
-    public record DuplicateOf : InvestigationStatus6Choice_
+    public partial record DuplicateOf : InvestigationStatus6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

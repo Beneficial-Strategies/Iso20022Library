@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTradeVenueCriteria1Cho
     /// </summary>
     [IsoId("_a5LOBR3ZEeWNp95x0ENf8w")]
     [DisplayName("MIC")]
-    public record MIC : SecuritiesTradeVenueCriteria1Choice_
+    public partial record MIC : SecuritiesTradeVenueCriteria1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

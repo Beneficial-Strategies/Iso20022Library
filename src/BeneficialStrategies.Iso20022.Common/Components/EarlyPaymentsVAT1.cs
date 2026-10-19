@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2ioGoVnKEeOQYsoJizpkVw")]
 [DisplayName("Early Payments VAT")]
-public record EarlyPaymentsVAT1
+public partial record EarlyPaymentsVAT1
 {
     /// <summary>
     /// Tax rate to be applied for early payment.

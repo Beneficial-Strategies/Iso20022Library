@@ -16,7 +16,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExerciseDate1Choice
     /// </summary>
     [IsoId("_Y7c_sgbBEeqrW7Meu5r3kQ")]
     [DisplayName("First Exercise Date")]
-    public record FirstExerciseDate : ExerciseDate1Choice_
+    public partial record FirstExerciseDate : ExerciseDate1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

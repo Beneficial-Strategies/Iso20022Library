@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
     [IsoId("_1z1A8wz1Ee2YoLD-1vFj0g")]
     [DisplayName("Non Financial Institution")]
     [IsoXmlTag("NFI")]
-    public record NonFinancialInstitution : CounterpartyTradeNature15Choice_
+    public partial record NonFinancialInstitution : CounterpartyTradeNature15Choice_
     {
         /// <summary>
         /// Taxonomy for non-financial counterparties. The categories correspond to the main sections of NACE classification as defined in the regulation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__QUJoZliEeeE1Ya-LgRsuQ")]
 [DisplayName("Time Period")]
-public record TimePeriod1
+public partial record TimePeriod1
 {
     /// <summary>
     /// Time at which the time span starts.

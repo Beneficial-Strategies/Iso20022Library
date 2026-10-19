@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_2zvL8QuAEeqVvtu9Ny8FDA")]
 [DisplayName("Securities Financing Reporting Margin Data Transaction State Report V")]
-public record SecuritiesFinancingReportingMarginDataTransactionStateReportV01 : IOuterRecord
+public partial record SecuritiesFinancingReportingMarginDataTransactionStateReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

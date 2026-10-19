@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : TransactionAmendment1Choice_
+    public partial record Code : TransactionAmendment1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingCompensationType1Choice
     /// </summary>
     [IsoId("_6Q_lg5qlEeGSON8vddiWzQ_1364627181")]
     [DisplayName("Proprietary")]
-    public record Proprietary : BillingCompensationType1Choice_
+    public partial record Proprietary : BillingCompensationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_ahM2QGFPEfC91ZUW7iS7ww")]
 [DisplayName("Financial Instrument Status Report V01")]
-public record FinancialInstrumentStatusReportV01 : IOuterRecord
+public partial record FinancialInstrumentStatusReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

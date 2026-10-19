@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyCSD1Choice
     /// </summary>
     [IsoId("_Umrp4jOaEeqBfed1bmSPqg")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : SettlementFailsDailyCSD1Choice_
+    public partial record DataSetAction : SettlementFailsDailyCSD1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

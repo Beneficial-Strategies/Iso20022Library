@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party13Choice
     [IsoId("_6Q10hZqlEeGSON8vddiWzQ_1922530449")]
     [DisplayName("Financial Institution Identification")]
     [IsoXmlTag("FIId")]
-    public record FinancialInstitutionIdentification : Party13Choice_
+    public partial record FinancialInstitutionIdentification : Party13Choice_
     {
         /// <summary>
         /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

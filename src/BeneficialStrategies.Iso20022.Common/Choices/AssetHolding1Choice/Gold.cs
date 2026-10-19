@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     [IsoId("_oaXu8K_6EeaE9YROwd69hA")]
     [DisplayName("Gold")]
     [IsoXmlTag("Gold")]
-    public record Gold : AssetHolding1Choice_
+    public partial record Gold : AssetHolding1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

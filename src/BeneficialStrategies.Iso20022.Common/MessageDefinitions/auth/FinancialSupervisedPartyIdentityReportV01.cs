@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_EUnq8PH0Eeaz_YGUGLjP6A")]
 [DisplayName("Financial Supervised Party Identity Report V")]
-public record FinancialSupervisedPartyIdentityReportV01 : IOuterRecord
+public partial record FinancialSupervisedPartyIdentityReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

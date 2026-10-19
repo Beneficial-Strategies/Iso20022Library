@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashBalanceType3Choice
     /// </summary>
     [IsoId("_NW5nQTqFEemJ3KLLPeYl6g")]
     [DisplayName("Code")]
-    public record Code : CashBalanceType3Choice_
+    public partial record Code : CashBalanceType3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

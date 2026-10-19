@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9jlatzEsEe6GxLzpkVnWYg")]
 [DisplayName("Underlying Transaction34")]
-public record UnderlyingTransaction34
+public partial record UnderlyingTransaction34
 {
     /// <summary>
     /// Original Group Information And Cancellation.

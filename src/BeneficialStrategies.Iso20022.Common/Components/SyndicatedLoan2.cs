@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JtldpW49EeiU9cctagi5ow")]
 [DisplayName("Syndicated Loan")]
-public record SyndicatedLoan2
+public partial record SyndicatedLoan2
 {
     /// <summary>
     /// Party which obtains the loan.

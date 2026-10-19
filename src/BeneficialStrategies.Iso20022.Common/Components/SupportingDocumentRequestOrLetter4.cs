@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_44LMsTEyEe6g-ffJsqGiSA")]
 [DisplayName("Supporting Document Request Or Letter4")]
-public record SupportingDocumentRequestOrLetter4
+public partial record SupportingDocumentRequestOrLetter4
 {
     /// <summary>
     /// Request Or Letter Identification.

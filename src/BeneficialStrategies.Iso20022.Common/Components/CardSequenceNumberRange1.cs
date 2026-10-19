@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t5o4wVkyEeGeoaLUQk__nA_-981636366")]
 [DisplayName("Card Sequence Number Range")]
-public record CardSequenceNumberRange1
+public partial record CardSequenceNumberRange1
 {
     /// <summary>
     /// CardSequenceNumberRange1: FirstTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.

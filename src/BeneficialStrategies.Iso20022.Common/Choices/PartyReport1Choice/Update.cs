@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice
     [IsoId("_GejBEDbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Update")]
     [IsoXmlTag("Upd")]
-    public record Update : PartyReport1Choice_
+    public partial record Update : PartyReport1Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice messages.

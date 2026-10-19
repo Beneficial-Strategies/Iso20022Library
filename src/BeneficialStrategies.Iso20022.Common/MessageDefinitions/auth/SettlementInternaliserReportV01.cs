@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_m9MVgO3jEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Report V")]
-public record SettlementInternaliserReportV01 : IOuterRecord
+public partial record SettlementInternaliserReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

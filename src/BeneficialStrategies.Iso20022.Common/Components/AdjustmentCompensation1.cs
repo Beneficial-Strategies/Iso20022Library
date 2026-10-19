@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-0qJAG8xEe2aW4iy-zispA")]
 [DisplayName("Adjustment Compensation1")]
-public record AdjustmentCompensation1
+public partial record AdjustmentCompensation1
 {
     /// <summary>
     /// Initial Amount.

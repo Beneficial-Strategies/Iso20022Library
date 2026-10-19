@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
     /// </summary>
     [IsoId("_7_LCoqMgEeCJ6YNENx4h-w_-1954279776")]
     [DisplayName("Not Equal")]
-    public record NotEqual : PercentageRange1Choice_
+    public partial record NotEqual : PercentageRange1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

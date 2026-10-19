@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yNepoZlbEeeE1Ya-LgRsuQ")]
 [DisplayName("Transaction Return Criteria")]
-public record TransactionReturnCriteria5
+public partial record TransactionReturnCriteria5
 {
     /// <summary>
     /// Destination of the payment (be it a member or a system or both).

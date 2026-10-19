@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice
     /// </summary>
     [IsoId("_6j9NN7sAEea-m5tPqiasmQ")]
     [DisplayName("Other")]
-    public record Other : CounterpartyTradeNature4Choice_
+    public partial record Other : CounterpartyTradeNature4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

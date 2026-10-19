@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_S3PXsAEcEeCQm6a_G2yO_w_-1038379529")]
 [DisplayName("Pay In Factors")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record PayInFactors1
+public partial record PayInFactors1
 {
     /// <summary>
     /// Maximum allowed sum of short positions in all currencies, converted to base currency, during settlement.

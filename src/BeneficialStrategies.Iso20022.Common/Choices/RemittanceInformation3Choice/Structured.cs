@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemittanceInformation3Choice
     [IsoId("_Rb-MwNp-Ed-ak6NoX_4Aeg_506340239")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
-    public record Structured : RemittanceInformation3Choice_
+    public partial record Structured : RemittanceInformation3Choice_
     {
         /// <summary>
         /// Specifies the nature of the referred document/transaction, eg, invoice or credit note.

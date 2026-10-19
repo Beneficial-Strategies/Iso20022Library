@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CiwJQaigEeWHO_l3hf2rlA")]
 [DisplayName("Money Market Transaction Status")]
-public record MoneyMarketTransactionStatus2
+public partial record MoneyMarketTransactionStatus2
 {
     /// <summary>
     /// Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.

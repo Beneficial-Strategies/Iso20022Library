@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(StressSize1Choice.Absolute), nameof(StressSize1Choice.Absolute))]
     [IsoId("_itPG0Ks1Eeayv9XxdmMwKQ")]
     [DisplayName("Stress Size 1 Choice")]
-    public abstract record StressSize1Choice_ { }
+    public abstract partial record StressSize1Choice_ { }
 }

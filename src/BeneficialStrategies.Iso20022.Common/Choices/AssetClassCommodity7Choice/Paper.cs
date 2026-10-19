@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Paper.
     /// </summary>
     [DisplayName("Paper")]
-    public record Paper : AssetClassCommodity7Choice_
+    public partial record Paper : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

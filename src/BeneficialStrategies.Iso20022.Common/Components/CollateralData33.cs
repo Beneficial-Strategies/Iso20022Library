@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QMn0QcguEeuGrNSsxk3B0A")]
 [DisplayName("Collateral Data")]
-public record CollateralData33
+public partial record CollateralData33
 {
     /// <summary>
     /// Indicates whether the collateral has been provided for a net exposure, rather than for a single transaction.

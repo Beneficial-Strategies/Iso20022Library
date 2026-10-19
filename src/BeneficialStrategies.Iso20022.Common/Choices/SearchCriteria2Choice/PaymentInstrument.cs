@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice
     /// Payment Instrument.
     /// </summary>
     [DisplayName("Payment Instrument")]
-    public record PaymentInstrument : SearchCriteria2Choice_
+    public partial record PaymentInstrument : SearchCriteria2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

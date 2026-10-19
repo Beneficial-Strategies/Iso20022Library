@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7xjgAS43EeK7-OZOLIksSw")]
 [DisplayName("Report Data")]
-public record ReportData4
+public partial record ReportData4
 {
     /// <summary>
     /// Identification of the report as assigned by the sender.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XO_0I249EeiU9cctagi5ow")]
 [DisplayName("Cash Account And Entry")]
-public record CashAccountAndEntry3
+public partial record CashAccountAndEntry3
 {
     /// <summary>
     /// Account to or from which a cash entry is made.
