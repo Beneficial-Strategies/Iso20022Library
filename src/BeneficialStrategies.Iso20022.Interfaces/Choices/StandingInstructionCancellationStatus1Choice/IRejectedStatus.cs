@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionCancellationS
 /// Provides information about the rejection status.
 /// </summary>
 [IsoId("_RirRtNp-Ed-ak6NoX_4Aeg_1204907770")]
+[IsoXmlTag("RjctdSts")]
 public interface IRejectedStatus : IStandingInstructionCancellationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

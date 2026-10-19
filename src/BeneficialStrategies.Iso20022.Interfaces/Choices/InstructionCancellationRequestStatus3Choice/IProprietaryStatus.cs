@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// Proprietary status related to an instruction cancellation request.
 /// </summary>
 [IsoId("_V4EH6-JxEd-Q6MzBzY5WkA")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus
     : IInstructionCancellationRequestStatus3Choice,
         IIsoChoiceVariant

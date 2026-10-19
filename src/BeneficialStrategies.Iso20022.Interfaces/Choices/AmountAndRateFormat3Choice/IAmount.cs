@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountAndRateFormat3Choice;
 /// Number of monetary units specified in a currency.
 /// </summary>
 [IsoId("_UIFNtNp-Ed-ak6NoX_4Aeg_896081910")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IAmountAndRateFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

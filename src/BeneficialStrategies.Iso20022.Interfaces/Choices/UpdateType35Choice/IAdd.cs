@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType35Choice;
 /// Set of data requested to enrich a security.
 /// </summary>
 [IsoId("_QOJ0MZJKEeuAlLVx8pyt3w")]
+[IsoXmlTag("Add")]
 public interface IAdd : IUpdateType35Choice, IIsoChoiceVariant
 {
     /// <summary>

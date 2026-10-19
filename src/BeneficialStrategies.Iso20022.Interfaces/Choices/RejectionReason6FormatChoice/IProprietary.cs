@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason6FormatChoice;
 /// Proprietary code to express the reason of a rejection of the notification advice.
 /// </summary>
 [IsoId("_Rofl19p-Ed-ak6NoX_4Aeg_234326717")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

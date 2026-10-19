@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure2Choice;
 /// Details of the account, account sub-levels and holdings.
 /// </summary>
 [IsoId("_MM9hY_NyEeqRfth943bvEA")]
+[IsoXmlTag("SfkpgAcctAndHldgs")]
 public interface ISafekeepingAccountAndHoldings : IDisclosure2Choice, IIsoChoiceVariant
 {
     /// <summary>

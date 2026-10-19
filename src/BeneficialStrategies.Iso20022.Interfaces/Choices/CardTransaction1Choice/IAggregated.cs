@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction1Choice;
 /// Card transaction details, based on card transaction aggregated data performed by the card acquirer.
 /// </summary>
 [IsoId("_t6ZGs1kyEeGeoaLUQk__nA_-974180878")]
+[IsoXmlTag("Aggtd")]
 public interface IAggregated : ICardTransaction1Choice, IIsoChoiceVariant
 {
     /// <summary>

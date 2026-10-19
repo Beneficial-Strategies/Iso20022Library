@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus2Choice;
 /// Specifies the status of the execution with a proprietary scheme.
 /// </summary>
 [IsoId("_V_TqcMX4EeiSF9q-coWegA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICollateralStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

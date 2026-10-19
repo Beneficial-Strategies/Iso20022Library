@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies the type classification of the party.
 /// </summary>
 [IsoId("_xPt7g2jNEeiRg5NzP0jkQg")]
+[IsoXmlTag("Tp")]
 public interface IType : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

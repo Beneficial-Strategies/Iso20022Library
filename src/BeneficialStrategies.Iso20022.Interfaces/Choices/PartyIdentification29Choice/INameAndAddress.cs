@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification29Choice;
 /// Identifies the name and address of a non-financial institution.
 /// </summary>
 [IsoId("_QFGgctp-Ed-ak6NoX_4Aeg_196915523")]
+[IsoXmlTag("NmAndAdr")]
 public interface INameAndAddress : IPartyIdentification29Choice, IIsoChoiceVariant
 {
     /// <summary>

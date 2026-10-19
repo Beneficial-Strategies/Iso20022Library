@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountUsageType2Choice;
 /// Type of account usage expressed as a proprietary code.
 /// </summary>
 [IsoId("_LXRys7-FEeWfsa741pI6WA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAccountUsageType2Choice, IIsoChoiceVariant
 {
     /// <summary>

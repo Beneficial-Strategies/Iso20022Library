@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient11Choice;
 /// Encryption key using previously distributed asymmetric public key.
 /// </summary>
 [IsoId("_6trNgVE0EeyApZmLzm74zA")]
+[IsoXmlTag("KeyTrnsprt")]
 public interface IKeyTransport : IRecipient11Choice, IIsoChoiceVariant
 {
     /// <summary>

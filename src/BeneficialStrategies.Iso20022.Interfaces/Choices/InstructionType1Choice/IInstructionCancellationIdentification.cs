@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice;
 /// Identifies the meeting instruction cancellation request message for which the status is provided.
 /// </summary>
 [IsoId("_RCWL1tp-Ed-ak6NoX_4Aeg_2114144001")]
+[IsoXmlTag("InstrCxlId")]
 public interface IInstructionCancellationIdentification : IInstructionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Standardisation3Choice;
 /// Standardisation expressed as a proprietary code.
 /// </summary>
 [IsoId("_Pnpgw2p7EemmaZLSPtWX5A")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStandardisation3Choice, IIsoChoiceVariant
 {
     /// <summary>

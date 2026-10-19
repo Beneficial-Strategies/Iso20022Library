@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// Security does not satisfy the eligibility criteria stipulated in the triparty agreement. However the bank has manually accepted this security.
 /// </summary>
 [IsoId("_jqUPcOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("MnlyAccptd")]
 public interface IManuallyAccepted : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

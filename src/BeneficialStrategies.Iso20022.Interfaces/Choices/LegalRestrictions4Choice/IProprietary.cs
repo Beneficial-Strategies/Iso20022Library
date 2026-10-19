@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalRestrictions4Choice;
 /// Legal restrictions expressed as a proprietary code.
 /// </summary>
 [IsoId("_KJxCw-LcEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILegalRestrictions4Choice, IIsoChoiceVariant
 {
     /// <summary>

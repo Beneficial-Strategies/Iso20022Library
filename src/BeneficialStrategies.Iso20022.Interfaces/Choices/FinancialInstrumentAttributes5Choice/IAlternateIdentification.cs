@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
 /// Identification of a financial instrument admitted to trading for which an alternate identification is available, such as a tokenized instrument identified by both an ISIN and a digital token identifier (DTI).
 /// </summary>
 [IsoId("_-6AlEJicEe2f7NHvXATP5g")]
+[IsoXmlTag("AltrnId")]
 public interface IAlternateIdentification : IFinancialInstrumentAttributes5Choice, IIsoChoiceVariant
 {
     /// <summary>

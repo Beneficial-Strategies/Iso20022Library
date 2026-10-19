@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseType23Choice;
 /// Type of securities financing transaction process expressed as a proprietary code.
 /// </summary>
 [IsoId("_AiJMCY-VEeaVK-2bgpxeYw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRepurchaseType23Choice, IIsoChoiceVariant
 {
     /// <summary>

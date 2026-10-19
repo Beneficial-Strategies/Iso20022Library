@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionFrequencyType1For
 /// Proprietary code to express the frequency of a CA event.
 /// </summary>
 [IsoId("_RmZ7Idp-Ed-ak6NoX_4Aeg_1510389852")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionFrequencyType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

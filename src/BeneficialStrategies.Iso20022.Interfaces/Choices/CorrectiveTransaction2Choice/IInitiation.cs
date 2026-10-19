@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction2Choice;
 /// Set of elements used to reference the details of the corrective payment initiation.
 /// </summary>
 [IsoId("_wZd04WXqEeap-P22vGV91g")]
+[IsoXmlTag("Initn")]
 public interface IInitiation : ICorrectiveTransaction2Choice, IIsoChoiceVariant
 {
     /// <summary>

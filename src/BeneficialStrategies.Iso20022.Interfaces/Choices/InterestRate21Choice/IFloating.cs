@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate21Choice;
 /// Attributes related specifically to floating rate of an interest rate contract.
 /// </summary>
 [IsoId("_GPqvsw1IEeqV4s5SpzR1dQ")]
+[IsoXmlTag("Fltg")]
 public interface IFloating : IInterestRate21Choice, IIsoChoiceVariant
 {
     /// <summary>

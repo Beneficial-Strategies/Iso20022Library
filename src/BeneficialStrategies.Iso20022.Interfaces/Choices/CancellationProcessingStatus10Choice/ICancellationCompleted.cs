@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus10Ch
 /// Cancellation is completed.
 /// </summary>
 [IsoId("_l0B_1Qd4Ee2fOITqoTnSLQ")]
+[IsoXmlTag("CxlCmpltd")]
 public interface ICancellationCompleted : ICancellationProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

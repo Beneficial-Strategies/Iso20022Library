@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason10FormatChoice;
 /// Proprietary code to express the reason of a rejection of a standing instruction cancellation request.
 /// </summary>
 [IsoId("_RoC549p-Ed-ak6NoX_4Aeg_299898877")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason10FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

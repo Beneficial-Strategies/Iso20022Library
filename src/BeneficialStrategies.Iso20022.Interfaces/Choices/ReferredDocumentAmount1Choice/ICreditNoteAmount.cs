@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// Amount specified for the referred document is the amount of a credit note.
 /// </summary>
 [IsoId("_QGJCRtp-Ed-ak6NoX_4Aeg_-888106456")]
+[IsoXmlTag("CdtNoteAmt")]
 public interface ICreditNoteAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

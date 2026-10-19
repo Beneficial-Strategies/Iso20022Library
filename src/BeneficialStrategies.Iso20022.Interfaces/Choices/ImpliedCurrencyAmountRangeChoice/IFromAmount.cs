@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice
 /// Lower boundary of a range of amount values.
 /// </summary>
 [IsoId("_PU-EC9p-Ed-ak6NoX_4Aeg_-1606264842")]
+[IsoXmlTag("FrAmt")]
 public interface IFromAmount : IImpliedCurrencyAmountRangeChoice, IIsoChoiceVariant
 {
     /// <summary>

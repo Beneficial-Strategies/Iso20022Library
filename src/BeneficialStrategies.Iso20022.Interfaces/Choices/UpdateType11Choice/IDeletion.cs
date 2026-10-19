@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType11Choice;
 /// Deletion of information in the securities transaction.
 /// </summary>
 [IsoId("_5_bQsyTwEeOSHvJr_wacAw")]
+[IsoXmlTag("Deltn")]
 public interface IDeletion : IUpdateType11Choice, IIsoChoiceVariant
 {
     /// <summary>

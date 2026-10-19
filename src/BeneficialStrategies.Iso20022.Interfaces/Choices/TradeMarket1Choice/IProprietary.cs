@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeMarket1Choice;
 /// Trade market expressed as proprietary identification.
 /// </summary>
 [IsoId("_NzE0NzQ5-AOSNFX-5096945")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITradeMarket1Choice, IIsoChoiceVariant
 {
     /// <summary>

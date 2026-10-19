@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trade is Done.
 /// </summary>
 [IsoId("_A42wFtokEeC60axPepSq7g_227762549")]
+[IsoXmlTag("Done")]
 public interface IDone : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

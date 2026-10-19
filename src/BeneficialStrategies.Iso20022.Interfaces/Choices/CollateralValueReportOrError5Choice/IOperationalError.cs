@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
 /// Indicates whether an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_-DiXczpvEemk2e6qGBk8IQ")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : ICollateralValueReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>

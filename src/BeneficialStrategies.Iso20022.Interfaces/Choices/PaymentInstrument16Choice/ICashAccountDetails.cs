@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument16Choice;
 /// Cash account to credit for the payment of the dividends or of the redeemed investments funds or of interest.
 /// </summary>
 [IsoId("_MgQvWxdKEeK5g-3oYI0_9Q")]
+[IsoXmlTag("CshAcctDtls")]
 public interface ICashAccountDetails : IPaymentInstrument16Choice, IIsoChoiceVariant
 {
     /// <summary>

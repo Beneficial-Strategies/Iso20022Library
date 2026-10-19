@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxEfficientProductType1Choice;
 /// Type of tax efficient product expressed as a proprietary code.
 /// </summary>
 [IsoId("_IzhQIE4LEeiQHa-q1Uephw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITaxEfficientProductType1Choice, IIsoChoiceVariant
 {
     /// <summary>

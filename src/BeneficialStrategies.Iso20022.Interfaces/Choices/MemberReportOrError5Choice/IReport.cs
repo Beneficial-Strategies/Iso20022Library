@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError5Choice;
 /// Provides the details on the requested member.
 /// </summary>
 [IsoId("_jmCfkXSbEeiH1ZOt2UD8vQ")]
+[IsoXmlTag("Rpt")]
 public interface IReport : IMemberReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// Checks on the amount of the securities have failed for at least one security.
 /// </summary>
 [IsoId("_TAzfgOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Amt")]
 public interface IAmount : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
 /// Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.
 /// </summary>
 [IsoId("_8IwTgzp0Eemk2e6qGBk8IQ")]
+[IsoXmlTag("SysRstrctn")]
 public interface ISystemRestriction : ISecuritiesAccountModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

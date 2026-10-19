@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes3Ch
 /// Description of the financial instrument, such as a a derivative, when the instrument is not admitted to trading on a trading venue.
 /// </summary>
 [IsoId("_KUIpc4G-EeaalK9UbuVGFw")]
+[IsoXmlTag("Othr")]
 public interface IOther : IFinancialInstrumentAttributes3Choice, IIsoChoiceVariant
 {
     /// <summary>

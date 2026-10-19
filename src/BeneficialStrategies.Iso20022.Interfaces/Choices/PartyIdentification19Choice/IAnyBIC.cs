@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification19Choice;
 /// Identification of the party expressed as a BIC and an alternative identifier.
 /// </summary>
 [IsoId("_Sp1N7AEcEeCQm6a_G2yO_w_-2022190925")]
+[IsoXmlTag("AnyBIC")]
 public interface IAnyBIC : IPartyIdentification19Choice, IIsoChoiceVariant
 {
     /// <summary>

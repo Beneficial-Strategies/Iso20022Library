@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRate1Choice;
 /// Value is expressed as an amount related to an underlying securities, eg, underlying security for which an interest is paid.
 /// </summary>
 [IsoId("_UPh5gtp-Ed-ak6NoX_4Aeg_-398759257")]
+[IsoXmlTag("RateTpAmt")]
 public interface IRateTypeAmount : INetDividendRate1Choice, IIsoChoiceVariant
 {
     /// <summary>

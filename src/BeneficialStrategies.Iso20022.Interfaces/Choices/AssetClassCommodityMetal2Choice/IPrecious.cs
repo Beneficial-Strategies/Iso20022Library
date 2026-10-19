@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityMetal2Choice;
 /// Precious metal commodity derivative.
 /// </summary>
 [IsoId("_Dn_6o08REe2PGo0mhYCh1g")]
+[IsoXmlTag("Prcs")]
 public interface IPrecious : IAssetClassCommodityMetal2Choice, IIsoChoiceVariant
 {
     /// <summary>

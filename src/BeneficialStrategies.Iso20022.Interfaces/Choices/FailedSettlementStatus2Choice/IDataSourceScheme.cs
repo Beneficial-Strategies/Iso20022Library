@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementStatus2Choice;
 /// Proprietary identification of the reason for the failed settlement status.
 /// </summary>
 [IsoId("_DqHjNSY5EeW_ZNn8gbfY7Q")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : IFailedSettlementStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

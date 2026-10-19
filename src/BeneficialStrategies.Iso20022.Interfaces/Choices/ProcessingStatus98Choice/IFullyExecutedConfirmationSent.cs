@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// The trade is fully executed and the confirmation is sent.
 /// </summary>
 [IsoId("_x4XDiwarEe2phaVG0lYKTw")]
+[IsoXmlTag("FullyExctdConfSnt")]
 public interface IFullyExecutedConfirmationSent : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

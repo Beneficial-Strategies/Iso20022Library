@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Counterparty13Choice;
 /// Party that sells goods or services, or a financial instrument.
 /// </summary>
 [IsoId("_9jKag9LCEeiN28wlpBQScw")]
+[IsoXmlTag("Sellr")]
 public interface ISeller : ICounterparty13Choice, IIsoChoiceVariant
 {
     /// <summary>

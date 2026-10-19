@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAggregateBala
 /// Balance of holdings.
 /// </summary>
 [IsoId("_oI2KMaCCEeOEyO7fCl8lLA")]
+[IsoXmlTag("HldgBal")]
 public interface IHoldingBalance : IFinancialInstrumentAggregateBalance1Choice, IIsoChoiceVariant
 {
     /// <summary>

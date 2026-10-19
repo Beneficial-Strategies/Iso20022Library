@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is ReceivedAtIntermediary.
 /// </summary>
 [IsoId("_x4XDmQarEe2phaVG0lYKTw")]
+[IsoXmlTag("RcvdAtIntrmy")]
 public interface IReceivedAtIntermediary : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

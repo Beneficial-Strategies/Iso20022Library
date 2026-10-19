@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Unique and unambiguous identification of a financial institution, through a combimation of globally recognised or proprietary identification scheme.
 /// </summary>
 [IsoId("_TFnrItp-Ed-ak6NoX_4Aeg_1781480692")]
+[IsoXmlTag("CmbndId")]
 public interface ICombinedIdentification
     : IFinancialInstitutionIdentification5Choice,
         IIsoChoiceVariant

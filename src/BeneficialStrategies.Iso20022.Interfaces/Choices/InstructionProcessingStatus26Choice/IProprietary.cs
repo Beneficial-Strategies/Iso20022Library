@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus26Cho
 /// Provides the status of an instruction.
 /// </summary>
 [IsoId("_8QcO45NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInstructionProcessingStatus26Choice, IIsoChoiceVariant
 {
     /// <summary>

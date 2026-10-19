@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarOrBusinessError1Choice;
 /// Requested information on the system calendar.
 /// </summary>
 [IsoId("_dVcQ2Ym7Eeipw6hHPgB4Sw")]
+[IsoXmlTag("CalData")]
 public interface ICalendarData : ICalendarOrBusinessError1Choice, IIsoChoiceVariant
 {
     /// <summary>

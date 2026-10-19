@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation12Choice;
 /// Reference of the transfer to be cancelled.
 /// </summary>
 [IsoId("_Aa4f4SPwEeWQjryFgN2ITg")]
+[IsoXmlTag("Refs")]
 public interface IReferences : ICancellation12Choice, IIsoChoiceVariant
 {
     /// <summary>

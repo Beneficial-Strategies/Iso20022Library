@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError4Choice;
 /// Reports on payment transactions.
 /// </summary>
 [IsoId("_WnqHQW49EeiU9cctagi5ow")]
+[IsoXmlTag("BizRpt")]
 public interface IBusinessReport : ITransactionReportOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

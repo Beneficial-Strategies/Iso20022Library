@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeOriginator4Choice;
 /// Trading party capacity expressed as a proprietary code.
 /// </summary>
 [IsoId("_5mtMkZNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITradeOriginator4Choice, IIsoChoiceVariant
 {
     /// <summary>

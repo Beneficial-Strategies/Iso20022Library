@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice4Choic
 /// Captures where no price is yet known.
 /// </summary>
 [IsoId("_8RdkgOI-EeWWKb0jFHxViQ")]
+[IsoXmlTag("NoPric")]
 public interface INoPrice : ISecuritiesTransactionPrice4Choice, IIsoChoiceVariant
 {
     /// <summary>

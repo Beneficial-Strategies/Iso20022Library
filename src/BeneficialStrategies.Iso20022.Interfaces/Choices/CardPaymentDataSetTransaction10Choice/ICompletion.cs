@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction10C
 /// Completed card payment transaction to be captured.
 /// </summary>
 [IsoId("_bgZKsU0ZEeybj420QgWBkA")]
+[IsoXmlTag("Cmpltn")]
 public interface ICompletion : ICardPaymentDataSetTransaction10Choice, IIsoChoiceVariant
 {
     /// <summary>

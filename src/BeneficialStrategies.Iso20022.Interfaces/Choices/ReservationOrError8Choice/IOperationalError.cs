@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError8Choice;
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_DXEK424-EeiU9cctagi5ow")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IReservationOrError8Choice, IIsoChoiceVariant
 {
     /// <summary>

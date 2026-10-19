@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// Promise to meet the obligations of a clearing member provided by a third party.
 /// </summary>
 [IsoId("_yMukYK_7EeaE9YROwd69hA")]
+[IsoXmlTag("Grnt")]
 public interface IGuarantee : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

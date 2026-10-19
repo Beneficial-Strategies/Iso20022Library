@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement1Choice;
 /// Identify the statement/report that was requested.
 /// </summary>
 [IsoId("_QqNYo9p-Ed-ak6NoX_4Aeg_-1264636374")]
+[IsoXmlTag("Stmt")]
 public interface IStatement : IStatusOrStatement1Choice, IIsoChoiceVariant
 {
     /// <summary>

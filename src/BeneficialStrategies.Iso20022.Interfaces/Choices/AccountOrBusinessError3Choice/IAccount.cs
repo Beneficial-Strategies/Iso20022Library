@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError3Choice;
 /// Requested information on the account.
 /// </summary>
 [IsoId("_fowVcZ-WEee28J7y9KlTWg")]
+[IsoXmlTag("Acct")]
 public interface IAccount : IAccountOrBusinessError3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform1Choice;
 /// Content of the Reversal Request message.
 /// </summary>
 [IsoId("_8caEINuREeiB5uLfkg9ZJA")]
+[IsoXmlTag("RvslReq")]
 public interface IReversalRequest : ITransactionToPerform1Choice, IIsoChoiceVariant
 {
     /// <summary>

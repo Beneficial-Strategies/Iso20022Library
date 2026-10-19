@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
 /// Olive oil agricultural commodity derivative.
 /// </summary>
 [IsoId("_VQFYYw2jEeW72qLtWESimw")]
+[IsoXmlTag("OlvOil")]
 public interface IOliveOil : IAssetClassCommodityAgricultural1Choice, IIsoChoiceVariant
 {
     /// <summary>

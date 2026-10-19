@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionType1Choice
 /// Securities transaction type expressed as a proprietary code.
 /// </summary>
 [IsoId("_AbWUtNokEeC60axPepSq7g_-1706864120")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError8C
 /// Further details of the intrabalance modification transactions.
 /// </summary>
 [IsoId("_Z496kTneEem7JZMuWtwtsg")]
+[IsoXmlTag("Mods")]
 public interface IModifications : IIntraBalanceOrOperationalError8Choice, IIsoChoiceVariant
 {
     /// <summary>

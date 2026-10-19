@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
 /// Additional attributes defined by a central security depositary for a party.
 /// </summary>
 [IsoId("_8IwThTp0Eemk2e6qGBk8IQ")]
+[IsoXmlTag("MktSpcfcAttr")]
 public interface IMarketSpecificAttribute : ISecuritiesAccountModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

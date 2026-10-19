@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag13Choice;
 /// Specifies the details of the collateralised securities.
 /// </summary>
 [IsoId("_J_aqIcg5Eeu4ecZgAYuz5w")]
+[IsoXmlTag("Collsd")]
 public interface ICollateralised : ICollateralFlag13Choice, IIsoChoiceVariant
 {
     /// <summary>

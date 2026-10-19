@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature2Choice;
 /// The data block for a TR31 or TR34 block, where the block does not contain a key (for example the TR34 unbind which contains the signed authorization data).
 /// </summary>
 [IsoId("_iFHDY7TwEeeQy4o2AayYHg")]
+[IsoXmlTag("TRRltdData")]
 public interface ITRRelatedData : IATMSignature2Choice, IIsoChoiceVariant
 {
     /// <summary>

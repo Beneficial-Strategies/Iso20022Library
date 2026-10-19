@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat20Choice;
 /// Specifies a date code and a time.
 /// </summary>
 [IsoId("_lH2aSfZFEd-2Jsl2KtUQCw")]
+[IsoXmlTag("DtCdAndTm")]
 public interface IDateCodeAndTime : IDateFormat20Choice, IIsoChoiceVariant
 {
     /// <summary>

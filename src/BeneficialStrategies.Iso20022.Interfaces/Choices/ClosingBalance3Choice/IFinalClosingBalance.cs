@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance3Choice;
 /// Closing balance of the financial instrument in the statement.
 /// </summary>
 [IsoId("_96S_QQgHEeSxsfb1OEDVsw")]
+[IsoXmlTag("FnlClsgBal")]
 public interface IFinalClosingBalance : IClosingBalance3Choice, IIsoChoiceVariant
 {
     /// <summary>

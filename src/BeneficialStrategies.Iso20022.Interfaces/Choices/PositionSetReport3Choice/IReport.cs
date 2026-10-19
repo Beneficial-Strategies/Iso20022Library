@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetReport3Choice;
 /// Detailed aggregated position set report between a pair of counterparties.
 /// </summary>
 [IsoId("_0nw0g8KwEeuM4pgP8Vixbg")]
+[IsoXmlTag("Rpt")]
 public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
 {
     /// <summary>

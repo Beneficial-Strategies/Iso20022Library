@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice;
 /// Source of a price quotation expressed with a propriety identification scheme.
 /// </summary>
 [IsoId("_RCDQ5tp-Ed-ak6NoX_4Aeg_1174932111")]
+[IsoXmlTag("PlcAsDSS")]
 public interface IPlaceAsDSS : IPriceSourceFormatChoice, IIsoChoiceVariant
 {
     /// <summary>

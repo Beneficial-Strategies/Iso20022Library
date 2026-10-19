@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType4Choice;
 /// Update type expressed as a proprietary code.
 /// </summary>
 [IsoId("_m_7ddPNBEeCuA5Tr22BnwA_778307461")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUpdateType4Choice, IIsoChoiceVariant
 {
     /// <summary>

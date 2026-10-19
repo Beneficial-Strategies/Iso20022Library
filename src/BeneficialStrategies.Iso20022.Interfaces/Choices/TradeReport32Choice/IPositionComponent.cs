@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 /// Indicates a derivative contract that is to be reported as a new trade and also included in a separate position report on the same day.
 /// </summary>
 [IsoId("__fyLaWEUEe2P-L9DBerEgA")]
+[IsoXmlTag("PosCmpnt")]
 public interface IPositionComponent : ITradeReport32Choice, IIsoChoiceVariant
 {
     /// <summary>

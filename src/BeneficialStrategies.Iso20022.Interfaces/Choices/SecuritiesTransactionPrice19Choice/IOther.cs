@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
 /// Price or quantity expressed in another notation.
 /// </summary>
 [IsoId("_8FGzwMgqEeuGrNSsxk3B0A")]
+[IsoXmlTag("Othr")]
 public interface IOther : ISecuritiesTransactionPrice19Choice, IIsoChoiceVariant
 {
     /// <summary>

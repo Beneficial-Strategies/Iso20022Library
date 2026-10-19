@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxBasis1Choice;
 /// Tax basis expressed as a proprietary code.
 /// </summary>
 [IsoId("_rxNZsBuIEeOqSdXzJ0oydA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITaxBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

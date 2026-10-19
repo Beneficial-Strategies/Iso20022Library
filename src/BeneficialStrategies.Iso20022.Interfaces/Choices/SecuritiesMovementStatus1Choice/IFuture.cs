@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// Security satisfies all validation checks and can therefore be accepted for the related transaction.
 /// </summary>
 [IsoId("_cwwWoOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Futr")]
 public interface IFuture : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

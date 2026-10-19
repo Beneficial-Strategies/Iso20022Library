@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOrUnderConfirmationChoice1;
 /// Party to which the presentation is to be made.
 /// </summary>
 [IsoId("_97kuE3ltEeG7BsjMvd1mEw_-1053470050")]
+[IsoXmlTag("PlcOfPresntn")]
 public interface IPlaceOfPresentation : IPlaceOrUnderConfirmationChoice1, IIsoChoiceVariant
 {
     /// <summary>

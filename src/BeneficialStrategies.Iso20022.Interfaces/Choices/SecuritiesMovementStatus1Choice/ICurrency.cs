@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// At least one security in the message does not have the same currency as the transaction and this is a requirement in the triparty agreement or in the eligibility sets of this transaction.
 /// </summary>
 [IsoId("_Xrr6QOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Ccy")]
 public interface ICurrency : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

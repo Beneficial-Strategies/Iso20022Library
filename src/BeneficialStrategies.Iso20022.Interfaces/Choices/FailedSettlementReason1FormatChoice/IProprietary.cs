@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementReason1FormatCho
 /// Proprietary code for specifying the reason of a settlement failure.
 /// </summary>
 [IsoId("_RmjsJNp-Ed-ak6NoX_4Aeg_1874576299")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFailedSettlementReason1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

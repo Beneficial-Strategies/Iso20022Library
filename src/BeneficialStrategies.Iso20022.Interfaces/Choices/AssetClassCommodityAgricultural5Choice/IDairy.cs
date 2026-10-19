@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
 /// Dairy agricultural commodity derivative.
 /// </summary>
 [IsoId("_NxHXGbveEeiLRYqS-r-R-A")]
+[IsoXmlTag("Dairy")]
 public interface IDairy : IAssetClassCommodityAgricultural5Choice, IIsoChoiceVariant
 {
     /// <summary>

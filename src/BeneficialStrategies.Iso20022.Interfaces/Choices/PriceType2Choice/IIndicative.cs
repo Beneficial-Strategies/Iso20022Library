@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType2Choice;
 /// Estimated price, for valuation purposes.
 /// </summary>
 [IsoId("_XLcRB9p-Ed-ak6NoX_4Aeg_-1042385228")]
+[IsoXmlTag("Indctv")]
 public interface IIndicative : IPriceType2Choice, IIsoChoiceVariant
 {
     /// <summary>

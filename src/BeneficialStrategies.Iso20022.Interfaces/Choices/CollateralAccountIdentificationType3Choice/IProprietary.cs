@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralAccountIdentificationT
 /// Specifies the collateral account expressed as a proprietary code.
 /// </summary>
 [IsoId("_1RhVc6_XEeaiqo1qOdNaWg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICollateralAccountIdentificationType3Choice, IIsoChoiceVariant
 {
     /// <summary>

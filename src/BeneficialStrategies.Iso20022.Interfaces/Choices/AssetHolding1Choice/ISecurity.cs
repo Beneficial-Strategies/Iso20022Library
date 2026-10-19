@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// Identification and value of the outright investment.
 /// </summary>
 [IsoId("_GHPngK_7EeaE9YROwd69hA")]
+[IsoXmlTag("Scty")]
 public interface ISecurity : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

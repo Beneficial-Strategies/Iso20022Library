@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport6Choice;
 /// Information on margin held as a part of a transaction.
 /// </summary>
 [IsoId("_WDTFx607EemojPqsRBB5Lg")]
+[IsoXmlTag("TradUpd")]
 public interface ITradeUpdate : ITradeReport6Choice, IIsoChoiceVariant
 {
     /// <summary>

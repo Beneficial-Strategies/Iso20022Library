@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DividendTypeFormat5Choice;
 /// Proprietary identification of the frequency of the corporate action event.
 /// </summary>
 [IsoId("_debt1SXfEeO4bIO_HtGo9Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDividendTypeFormat5Choice, IIsoChoiceVariant
 {
     /// <summary>

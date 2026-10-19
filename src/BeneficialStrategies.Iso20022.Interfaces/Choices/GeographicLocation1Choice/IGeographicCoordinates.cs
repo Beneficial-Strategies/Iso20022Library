@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeographicLocation1Choice;
 /// Location on the earth specified by two numbers representing vertical and horizontal position.
 /// </summary>
 [IsoId("_hutYMIn5EeShMpas3885ww")]
+[IsoXmlTag("GeogcCordints")]
 public interface IGeographicCoordinates : IGeographicLocation1Choice, IIsoChoiceVariant
 {
     /// <summary>

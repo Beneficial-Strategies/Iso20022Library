@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice;
 /// Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.
 /// </summary>
 [IsoId("_weKLGzbsEead9bDRE_1DAQ")]
+[IsoXmlTag("CdtTrfDtls")]
 public interface ICreditTransferDetails : IPaymentInstrument20Choice, IIsoChoiceVariant
 {
     /// <summary>

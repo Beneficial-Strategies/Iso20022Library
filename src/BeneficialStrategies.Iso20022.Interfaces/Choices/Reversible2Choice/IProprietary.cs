@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversible2Choice;
 /// Closing of the securities lending contract expressed as a proprietary code.
 /// </summary>
 [IsoId("_PUFSBZEkEeakHoV5BVecAQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IReversible2Choice, IIsoChoiceVariant
 {
     /// <summary>

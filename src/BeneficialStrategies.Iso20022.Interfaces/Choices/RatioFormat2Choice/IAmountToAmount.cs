@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat2Choice;
 /// The ratio is expressed as an amount per another amount.
 /// </summary>
 [IsoId("_Rj3khdp-Ed-ak6NoX_4Aeg_1125895712")]
+[IsoXmlTag("AmtToAmt")]
 public interface IAmountToAmount : IRatioFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice;
 /// Other identification of an underlier.
 /// </summary>
 [IsoId("_idD061o2Ee23K4GXSpBSeg")]
+[IsoXmlTag("Othr")]
 public interface IOther : ISecurityIdentification41Choice, IIsoChoiceVariant
 {
     /// <summary>

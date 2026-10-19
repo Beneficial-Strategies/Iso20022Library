@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrPercentage1Choice;
 /// Details related to an amount percentage.
 /// </summary>
 [IsoId("_986x6HltEeG7BsjMvd1mEw_-131852339")]
+[IsoXmlTag("PctgAmt")]
 public interface IPercentageAmount : IAmountOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>

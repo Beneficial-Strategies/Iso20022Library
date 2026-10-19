@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification6Choice;
 /// Other identification of a security assigned by an institution or organisation.
 /// </summary>
 [IsoId("_xzhRNyyGEe2xAdY9t5fB3g")]
+[IsoXmlTag("OthrId")]
 public interface IOtherIdentification : IInstrumentIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>

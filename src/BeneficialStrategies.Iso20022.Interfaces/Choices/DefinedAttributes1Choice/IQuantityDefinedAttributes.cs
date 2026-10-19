@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefinedAttributes1Choice;
 /// Shares or some other fixed amount of derivative (such an ERIS future or swaption), or a fixed quantity of commodities.
 /// </summary>
 [IsoId("__F7tMOPJEea7_eMQH225xA")]
+[IsoXmlTag("QtyDfndAttrbts")]
 public interface IQuantityDefinedAttributes : IDefinedAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

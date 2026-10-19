@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice;
 /// Statement is accepted with an exception/s.
 /// </summary>
 [IsoId("_TKSsQkitEeSlHoYg_EudVQ")]
+[IsoXmlTag("AccptdWthXcptn")]
 public interface IAcceptedWithException : IReportItemStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

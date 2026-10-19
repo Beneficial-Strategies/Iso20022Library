@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice;
 /// Specifies a frequency in terms of an exact point in time or moment within a specified period type.
 /// </summary>
 [IsoId("_6IxUQWk2Eeanu6HLe77Rkg")]
+[IsoXmlTag("PtInTm")]
 public interface IPointInTime : IFrequency36Choice, IIsoChoiceVariant
 {
     /// <summary>

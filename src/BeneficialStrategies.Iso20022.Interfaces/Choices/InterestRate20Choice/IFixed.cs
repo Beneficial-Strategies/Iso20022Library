@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate20Choice;
 /// Details of the fixed rate.
 /// </summary>
 [IsoId("_hFv8Eax2Eem81-uIvTF5rQ")]
+[IsoXmlTag("Fxd")]
 public interface IFixed : IInterestRate20Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trade is standing instruction.
 /// </summary>
 [IsoId("_A5JrA9okEeC60axPepSq7g_1018532153")]
+[IsoXmlTag("StgInstr")]
 public interface IStandingInstruction : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

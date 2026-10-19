@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownEventType1Choice;
 /// Type of event expressed as a proprietary code.
 /// </summary>
 [IsoId("_IjZiUFNiEeijdq8ilaxyOA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDrawdownEventType1Choice, IIsoChoiceVariant
 {
     /// <summary>

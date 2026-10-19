@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType2Choice;
 /// Request type is in proprietary format.
 /// </summary>
 [IsoId("_76G8daMgEeCJ6YNENx4h-w_943558681")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRequestType2Choice, IIsoChoiceVariant
 {
     /// <summary>

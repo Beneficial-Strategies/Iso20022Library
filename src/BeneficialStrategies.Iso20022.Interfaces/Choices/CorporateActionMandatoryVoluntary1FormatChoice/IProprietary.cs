@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMandatoryVoluntar
 /// Proprietary code to express whether the event is mandatory, mandatory with options or voluntary.
 /// </summary>
 [IsoId("_RmZ7JNp-Ed-ak6NoX_4Aeg_-1747006998")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionMandatoryVoluntary1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification8Choice;
 /// Identification of a party by a BIC and an Alternative Identifier.
 /// </summary>
 [IsoId("_Q7pG4Np-Ed-ak6NoX_4Aeg_1657637865")]
+[IsoXmlTag("BICOrBEI")]
 public interface IBICOrBEI : IPartyIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

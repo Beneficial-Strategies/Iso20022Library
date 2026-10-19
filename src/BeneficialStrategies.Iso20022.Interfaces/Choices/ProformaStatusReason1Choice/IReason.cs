@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProformaStatusReason1Choice;
 /// Reason for the proforma account status.
 /// </summary>
 [IsoId("_5BVa80zCEeafiMTDrtSnyw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IProformaStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

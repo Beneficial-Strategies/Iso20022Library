@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity48Choice;
 /// Proprietary quantity of security format.
 /// </summary>
 [IsoId("_KADDMxuyEeyhRdHRjakS2w")]
+[IsoXmlTag("PrtryQty")]
 public interface IProprietaryQuantity : IQuantity48Choice, IIsoChoiceVariant
 {
     /// <summary>

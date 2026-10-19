@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport6Choice;
 /// Indicates whether transaction is reported for the first time.
 /// </summary>
 [IsoId("_WDTFxK07EemojPqsRBB5Lg")]
+[IsoXmlTag("New")]
 public interface INew : ITradeReport6Choice, IIsoChoiceVariant
 {
     /// <summary>

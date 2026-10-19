@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkageType1Choice;
 /// Linkage type expressed as a proprietary code.
 /// </summary>
 [IsoId("_QtyRE9p-Ed-ak6NoX_4Aeg_-1801569952")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILinkageType1Choice, IIsoChoiceVariant
 {
     /// <summary>

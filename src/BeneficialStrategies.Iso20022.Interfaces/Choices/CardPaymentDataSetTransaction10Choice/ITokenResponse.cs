@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction10C
 /// Response to a token computation.
 /// </summary>
 [IsoId("_bgZKu00ZEeybj420QgWBkA")]
+[IsoXmlTag("TknRspn")]
 public interface ITokenResponse : ICardPaymentDataSetTransaction10Choice, IIsoChoiceVariant
 {
     /// <summary>

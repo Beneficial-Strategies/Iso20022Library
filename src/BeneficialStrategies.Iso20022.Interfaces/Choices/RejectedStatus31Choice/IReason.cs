@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus31Choice;
 /// Reason why the meeting instruction cancellation request message or the individual meeting instruction cancellation request is rejected.
 /// </summary>
 [IsoId("_g_hzS7KgEemux5trsZcCpw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IRejectedStatus31Choice, IIsoChoiceVariant
 {
     /// <summary>

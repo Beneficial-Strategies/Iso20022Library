@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport15Choice;
 /// Indicates a modification to the terms or details of a previously reported transaction, but not a correction.
 /// </summary>
 [IsoId("_oZRTU3g-Eeu3kecHd7QKUQ")]
+[IsoXmlTag("Mod")]
 public interface IModification : ITradeReport15Choice, IIsoChoiceVariant
 {
     /// <summary>

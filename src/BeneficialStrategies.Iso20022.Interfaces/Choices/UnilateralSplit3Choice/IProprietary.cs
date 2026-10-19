@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnilateralSplit3Choice;
 /// Unilateral split expressed as a proprietary code.
 /// </summary>
 [IsoId("_e2Y7yTt4EeW638lNyHKv7A")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUnilateralSplit3Choice, IIsoChoiceVariant
 {
     /// <summary>

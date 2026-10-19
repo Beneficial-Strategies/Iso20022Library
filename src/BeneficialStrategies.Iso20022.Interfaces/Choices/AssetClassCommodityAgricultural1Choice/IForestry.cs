@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
 /// Forestry agricultural commodity derivative.
 /// </summary>
 [IsoId("_bEnE8FrBEeWN79Bl6BUd3g")]
+[IsoXmlTag("Frstry")]
 public interface IForestry : IAssetClassCommodityAgricultural1Choice, IIsoChoiceVariant
 {
     /// <summary>

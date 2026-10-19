@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus72Choice;
 /// Instruction has been completed by the executing party.
 /// </summary>
 [IsoId("_a2nK1-LtEeWOD7aAy2fAcA")]
+[IsoXmlTag("Cmpltd")]
 public interface ICompleted : IProcessingStatus72Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity2Choice;
 /// Provides the period for the time to maturity.
 /// </summary>
 [IsoId("__aOTka5OEeuo-IflVgGqiA")]
+[IsoXmlTag("Prd")]
 public interface IPeriod : ITimeToMaturity2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice;
 /// Settlement instructions for a payment by card.
 /// </summary>
 [IsoId("_t7vvFhdHEeK5g-3oYI0_9Q")]
+[IsoXmlTag("PmtCardDtls")]
 public interface IPaymentCardDetails : IPaymentInstrument17Choice, IIsoChoiceVariant
 {
     /// <summary>

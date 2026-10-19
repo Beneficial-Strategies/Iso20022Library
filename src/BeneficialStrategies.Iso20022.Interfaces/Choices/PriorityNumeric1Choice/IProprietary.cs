@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityNumeric1Choice;
 /// Specifies the execution priority of the instruction with a proprietary scheme.
 /// </summary>
 [IsoId("_QuYG8tp-Ed-ak6NoX_4Aeg_1285631261")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPriorityNumeric1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingMarginInformation
 /// Detailed information on statistics per combination of counterparties.
 /// </summary>
 [IsoId("_rsDiw1owEe23K4GXSpBSeg")]
+[IsoXmlTag("Rpt")]
 public interface IReport : IDetailedMissingMarginInformationStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>

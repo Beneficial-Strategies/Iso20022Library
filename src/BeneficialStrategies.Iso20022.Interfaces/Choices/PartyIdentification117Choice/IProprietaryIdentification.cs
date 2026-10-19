@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification117Choice;
 /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 /// </summary>
 [IsoId("_bd3DG5ErEeakHoV5BVecAQ")]
+[IsoXmlTag("PrtryId")]
 public interface IProprietaryIdentification : IPartyIdentification117Choice, IIsoChoiceVariant
 {
     /// <summary>

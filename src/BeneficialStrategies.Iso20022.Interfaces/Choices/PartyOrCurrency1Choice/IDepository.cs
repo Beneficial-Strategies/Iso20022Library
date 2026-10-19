@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrCurrency1Choice;
 /// First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.
 /// </summary>
 [IsoId("_o-ev0lhDEeOMYfRGLS0NbA")]
+[IsoXmlTag("Dpstry")]
 public interface IDepository : IPartyOrCurrency1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType2Choice;
 /// Additional information that can not be captured in the structured fields and/or any other specific block.
 /// </summary>
 [IsoId("_XM1TFZ26Eeuwmdq0KtnICg")]
+[IsoXmlTag("SplmtryData")]
 public interface ISupplementaryData : IReportingTransactionType2Choice, IIsoChoiceVariant
 {
     /// <summary>

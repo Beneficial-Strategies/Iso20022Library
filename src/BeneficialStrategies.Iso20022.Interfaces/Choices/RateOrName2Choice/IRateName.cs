@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName2Choice;
 /// Pricing expressed as a rate name.
 /// </summary>
 [IsoId("_XO3YeNp-Ed-ak6NoX_4Aeg_-1288656582")]
+[IsoXmlTag("RateNm")]
 public interface IRateName : IRateOrName2Choice, IIsoChoiceVariant
 {
     /// <summary>

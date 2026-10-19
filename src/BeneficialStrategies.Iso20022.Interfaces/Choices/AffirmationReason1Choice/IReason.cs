@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationReason1Choice;
 /// Specifies the reason of the UnaffirmedStatus.
 /// </summary>
 [IsoId("_Azo44dokEeC60axPepSq7g_1768642737")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IAffirmationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

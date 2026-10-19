@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionType8Choice;
 /// Option type expressed as a proprietary code.
 /// </summary>
 [IsoId("_xzFoQ-LaEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOptionType8Choice, IIsoChoiceVariant
 {
     /// <summary>

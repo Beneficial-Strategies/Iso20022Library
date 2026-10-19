@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType40Choice;
 /// Proprietary identification of the type of gross dividend rate.
 /// </summary>
 [IsoId("_MvwIc0EIEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateType40Choice, IIsoChoiceVariant
 {
     /// <summary>

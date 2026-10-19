@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivative2Choice;
 /// Details specific to energy derivatives.
 /// </summary>
 [IsoId("_njM5U0-nEeiVsYLJl6hleg")]
+[IsoXmlTag("Nrgy")]
 public interface IEnergy : ICommodityDerivative2Choice, IIsoChoiceVariant
 {
     /// <summary>

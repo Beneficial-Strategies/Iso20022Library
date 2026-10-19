@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType1Choice;
 /// Transaction is a newly reported transaction.
 /// </summary>
 [IsoId("_J-kCEYG-EeaalK9UbuVGFw")]
+[IsoXmlTag("New")]
 public interface INew : IReportingTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

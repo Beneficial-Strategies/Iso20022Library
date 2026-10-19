@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument6Choice;
 /// Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.
 /// </summary>
 [IsoId("_VKiwQdp-Ed-ak6NoX_4Aeg_-620434535")]
+[IsoXmlTag("PmtCardDtls")]
 public interface IPaymentCardDetails : IPaymentInstrument6Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// Mark-to-market pre-haircut value of gold collateral.
 /// </summary>
 [IsoId("_oaXu8K_6EeaE9YROwd69hA")]
+[IsoXmlTag("Gold")]
 public interface IGold : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

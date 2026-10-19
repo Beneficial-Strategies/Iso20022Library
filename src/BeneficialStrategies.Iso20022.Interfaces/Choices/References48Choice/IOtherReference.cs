@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References48Choice;
 /// Reference to a linked message sent in a proprietary way or the reference of a system.
 /// </summary>
 [IsoId("_eJY_syYrEeW_ZNn8gbfY7Q")]
+[IsoXmlTag("OthrRef")]
 public interface IOtherReference : IReferences48Choice, IIsoChoiceVariant
 {
     /// <summary>

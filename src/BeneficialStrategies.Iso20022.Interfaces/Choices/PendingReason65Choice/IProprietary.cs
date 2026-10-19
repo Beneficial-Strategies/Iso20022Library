@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason65Choice;
 /// Specifies the reason why the instruction has a pending status.
 /// </summary>
 [IsoId("_f99MRzi8Eeydid5dcNPKvg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPendingReason65Choice, IIsoChoiceVariant
 {
     /// <summary>

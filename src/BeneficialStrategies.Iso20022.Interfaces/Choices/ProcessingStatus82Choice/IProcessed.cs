@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus82Choice;
 /// Transaction or instruction has been processed.
 /// </summary>
 [IsoId("_FjyNQRIwEeydmIVkS03esw")]
+[IsoXmlTag("Prcd")]
 public interface IProcessed : IProcessingStatus82Choice, IIsoChoiceVariant
 {
     /// <summary>

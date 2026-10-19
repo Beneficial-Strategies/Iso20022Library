@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure7Choice;
 /// Unit of measure expressed as a proprietary code.
 /// </summary>
 [IsoId("_rnXeg2p8EemmaZLSPtWX5A")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUnitOfMeasure7Choice, IIsoChoiceVariant
 {
     /// <summary>

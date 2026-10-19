@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification1Choice
 /// Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.
 /// </summary>
 [IsoId("_PdwzqNp-Ed-ak6NoX_4Aeg_2060839228")]
+[IsoXmlTag("DmstAcct")]
 public interface IDomesticAccount : ICashAccountIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

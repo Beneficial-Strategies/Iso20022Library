@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RenounceableEntitlementStatusTyp
 /// Proprietary identification of the renounceable status.
 /// </summary>
 [IsoId("_7EiSo0EBEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRenounceableEntitlementStatusTypeFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

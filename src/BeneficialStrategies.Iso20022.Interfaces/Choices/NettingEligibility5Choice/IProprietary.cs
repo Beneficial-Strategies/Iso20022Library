@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingEligibility5Choice;
 /// Netting eligibility expressed as a proprietary code.
 /// </summary>
 [IsoId("_5m6oG5NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : INettingEligibility5Choice, IIsoChoiceVariant
 {
     /// <summary>

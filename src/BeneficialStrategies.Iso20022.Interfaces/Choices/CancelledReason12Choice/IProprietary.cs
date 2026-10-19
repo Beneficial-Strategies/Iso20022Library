@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledReason12Choice;
 /// Cancelled reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_fBNm2UHTEeasdbKMiqizqA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICancelledReason12Choice, IIsoChoiceVariant
 {
     /// <summary>

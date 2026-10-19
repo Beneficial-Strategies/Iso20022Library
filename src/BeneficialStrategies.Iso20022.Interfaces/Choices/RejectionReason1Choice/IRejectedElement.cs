@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice;
 /// Specifies a rejection reason for each individual element of a report.
 /// </summary>
 [IsoId("_RJ8ootp-Ed-ak6NoX_4Aeg_1044987769")]
+[IsoXmlTag("RjctdElmt")]
 public interface IRejectedElement : IRejectionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

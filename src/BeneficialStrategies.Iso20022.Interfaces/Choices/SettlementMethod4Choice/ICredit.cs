@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod4Choice;
 /// Specifies details of the payment to be made by the old account servicer to the new account servicer in case of a positive closing balance.
 /// </summary>
 [IsoId("_dYSZgdcZEeqRFcf2R4bPBw")]
+[IsoXmlTag("Cdt")]
 public interface ICredit : ISettlementMethod4Choice, IIsoChoiceVariant
 {
     /// <summary>

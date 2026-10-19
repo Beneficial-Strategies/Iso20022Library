@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice;
 /// Assumed stress move for a set of financial instruments defined by a common trading strategy.
 /// </summary>
 [IsoId("_u_O2MKswEeayv9XxdmMwKQ")]
+[IsoXmlTag("Strtgy")]
 public interface IStrategy : IStressItem1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -24,9 +24,9 @@ namespace BeneficialStrategies.Iso20022.Framework
     /// <summary>
     /// Identifies the ISO-specified tag that should be applied while serializing this member.
     /// When applied to a class, identifies the XML wrapper element for a complex choice variant
-    /// (e.g. <c>[IsoXmlTag("Agt")]</c> on <c>Party40Choice.Agent</c>).
+    /// (e.g. <c>[IsoXmlTag("Agt")]</c> on <c>Party40Choice.Agent</c>), and the same on the variant's interface.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class | AttributeTargets.Interface)]
     public class IsoXmlTagAttribute : System.Attribute
     {
         /// <summary>

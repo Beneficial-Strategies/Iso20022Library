@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentSubStructureType2Choic
 /// Instrument sub-structure type expressed as a proprietary code.
 /// </summary>
 [IsoId("_QkVkY-LaEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInstrumentSubStructureType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType3Choice;
 /// Indicates that the repurchase agreement is where a single, pre defined, financial instrument is sold and repurchased.
 /// </summary>
 [IsoId("_BqvK8eoaEeadseq5W5YLvQ")]
+[IsoXmlTag("SpcfcColl")]
 public interface ISpecificCollateral : IRepurchaseAgreementType3Choice, IIsoChoiceVariant
 {
     /// <summary>

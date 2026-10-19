@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExPostCostCalculationBasis1Choic
 /// Ex post cost calculation basis expressed as a proprietary code.
 /// </summary>
 [IsoId("_enlDQJ9XEeqxTNfi5y7ywQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IExPostCostCalculationBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

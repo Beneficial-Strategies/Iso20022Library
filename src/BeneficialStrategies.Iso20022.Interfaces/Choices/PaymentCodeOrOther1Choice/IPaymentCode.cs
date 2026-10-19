@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther1Choice;
 /// Specifies the payment period in coded form and a number of days.
 /// </summary>
 [IsoId("_uoAOcNP8EeK0PPbKncCqzA")]
+[IsoXmlTag("PmtCd")]
 public interface IPaymentCode : IPaymentCodeOrOther1Choice, IIsoChoiceVariant
 {
     /// <summary>

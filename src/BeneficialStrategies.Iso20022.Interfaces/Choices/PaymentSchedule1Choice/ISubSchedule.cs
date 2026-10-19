@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice;
 /// Specifies a payment sub-schedule, that is the amount of money that must be paid no sooner than the expected date and no later than the latest shipment date.
 /// </summary>
 [IsoId("_Bhnbc9OAEeSQ_-lmj1tzfw")]
+[IsoXmlTag("SubSchdl")]
 public interface ISubSchedule : IPaymentSchedule1Choice, IIsoChoiceVariant
 {
     /// <summary>

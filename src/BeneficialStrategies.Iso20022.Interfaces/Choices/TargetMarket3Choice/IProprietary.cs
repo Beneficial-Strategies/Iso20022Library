@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TargetMarket3Choice;
 /// Specifies whether the product is aimed at the target expressed as a proprietary code.
 /// </summary>
 [IsoId("_krTtsDcSEeiIxKQErQxblg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITargetMarket3Choice, IIsoChoiceVariant
 {
     /// <summary>

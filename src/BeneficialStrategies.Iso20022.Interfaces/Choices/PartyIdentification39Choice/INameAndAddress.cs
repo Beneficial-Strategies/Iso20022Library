@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification39Choice;
 /// Unique and unambiguous way to identify an organisation.
 /// </summary>
 [IsoId("_1Y_BI_L9Ed-3lpUMQaXLjQ")]
+[IsoXmlTag("NmAndAdr")]
 public interface INameAndAddress : IPartyIdentification39Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus34Choice;
 /// Reason for the pending status.
 /// </summary>
 [IsoId("_UZJ7KVhbEeSewsfsZR0hxA")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IPendingStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>

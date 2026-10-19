@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus9Choice;
 /// Provides a proprietary status and a proprietary reason of the processing status of the trade.
 /// </summary>
 [IsoId("_A4aEJ9okEeC60axPepSq7g_1828723592")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus : IMatchingStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

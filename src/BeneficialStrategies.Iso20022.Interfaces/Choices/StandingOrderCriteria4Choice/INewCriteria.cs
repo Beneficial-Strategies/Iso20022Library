@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria4Choice;
 /// Explicitly defines the query criteria.
 /// </summary>
 [IsoId("_gdi6Q9cZEeqRFcf2R4bPBw")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : IStandingOrderCriteria4Choice, IIsoChoiceVariant
 {
     /// <summary>

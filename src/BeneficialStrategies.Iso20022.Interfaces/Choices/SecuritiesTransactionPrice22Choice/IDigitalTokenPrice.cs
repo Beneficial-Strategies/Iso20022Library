@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice22Choi
 /// Predetermined price at which the holder will have to buy or sell the underlying instrument, when the price is available in both monetary value and digital token amount.
 /// </summary>
 [IsoId("_fc2HMKOrEe2UDKy7o9_HIg")]
+[IsoXmlTag("DgtlTknPric")]
 public interface IDigitalTokenPrice : ISecuritiesTransactionPrice22Choice, IIsoChoiceVariant
 {
     /// <summary>

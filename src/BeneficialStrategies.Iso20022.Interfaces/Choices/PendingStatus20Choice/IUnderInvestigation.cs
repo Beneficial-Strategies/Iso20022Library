@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus20Choice;
 /// Allegement is under investigation.
 /// </summary>
 [IsoId("_0k3gxAlIEeGATtfOBToyew_1137213663")]
+[IsoXmlTag("UdrInvstgtn")]
 public interface IUnderInvestigation : IPendingStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>

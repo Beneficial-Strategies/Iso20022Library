@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport6Choice;
 /// Indicates that the report is correcting the erroneous data fields of a previously submitted position.
 /// </summary>
 [IsoId("_WDTFxq07EemojPqsRBB5Lg")]
+[IsoXmlTag("Crrctn")]
 public interface ICorrection : ITradeReport6Choice, IIsoChoiceVariant
 {
     /// <summary>

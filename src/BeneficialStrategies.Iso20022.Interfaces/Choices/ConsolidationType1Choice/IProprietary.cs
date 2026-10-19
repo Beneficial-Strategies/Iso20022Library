@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsolidationType1Choice;
 /// Consolidation type expressed as a proprietary code.
 /// </summary>
 [IsoId("_R2DXgCDVEeWCLu74WLgP4w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IConsolidationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

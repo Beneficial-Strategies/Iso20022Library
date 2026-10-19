@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss2Choice;
 /// Value of the negative amount.
 /// </summary>
 [IsoId("_Nd_nI2YDEeaJx-BUPcSWQA")]
+[IsoXmlTag("Loss")]
 public interface ILoss : IProfitAndLoss2Choice, IIsoChoiceVariant
 {
     /// <summary>

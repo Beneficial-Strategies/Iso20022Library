@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap3Choice;
 /// Provides the details of the foreign exchange transaction as reported by the reporting agent.
 /// </summary>
 [IsoId("_FAmvk8ESEea7jLfvGi1PDw")]
+[IsoXmlTag("Tx")]
 public interface ITransaction : IForeignExchangeSwap3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 /// Identifier issued to a person for which no specific identifier has been defined.
 /// </summary>
 [IsoId("_QEW5mdp-Ed-ak6NoX_4Aeg_-315280529")]
+[IsoXmlTag("OthrId")]
 public interface IOtherIdentification : IPersonIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

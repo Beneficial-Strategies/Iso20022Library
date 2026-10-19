@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceType5Choice;
 /// Reason a security is not available or additional information about the financial instrument for which the balance is given, for example, unregistered, registered in nominee name.
 /// </summary>
 [IsoId("_QYU-dtp-Ed-ak6NoX_4Aeg_-1583252155")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISubBalanceType5Choice, IIsoChoiceVariant
 {
     /// <summary>

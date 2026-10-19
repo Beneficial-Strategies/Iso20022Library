@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason21FormatChoice;
 /// Provides the interest rejection reason using a proprietary code.
 /// </summary>
 [IsoId("_Qki1g9p-Ed-ak6NoX_4Aeg_-446283214")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason21FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

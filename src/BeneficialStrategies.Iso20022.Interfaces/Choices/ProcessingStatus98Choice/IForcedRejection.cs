@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is in forced rejection.
 /// </summary>
 [IsoId("_x4XDiQarEe2phaVG0lYKTw")]
+[IsoXmlTag("ForcdRjctn")]
 public interface IForcedRejection : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

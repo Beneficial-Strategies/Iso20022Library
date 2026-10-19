@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalAmount1Choice;
 /// Amount of money that results from a switch-out, that is not reinvested in another investment fund, and is repaid to the investor.
 /// </summary>
 [IsoId("_wupB8UG_EeaNEqIb_fgRZg")]
+[IsoXmlTag("RsltgCshOut")]
 public interface IResultingCashOut : IAdditionalAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

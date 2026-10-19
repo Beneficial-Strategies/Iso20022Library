@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus8Choice;
 /// Provides the status of the repurchase agreement call request.
 /// </summary>
 [IsoId("_IRR7uTqqEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRepoCallRequestStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>

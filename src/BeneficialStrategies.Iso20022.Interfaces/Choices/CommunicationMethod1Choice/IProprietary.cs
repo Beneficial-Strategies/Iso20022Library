@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod1Choice;
 /// Communication channel method expressed as a proprietary code.
 /// </summary>
 [IsoId("_93Z_xXltEeG7BsjMvd1mEw_2012808209")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICommunicationMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>

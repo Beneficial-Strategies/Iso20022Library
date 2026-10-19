@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutomaticBorrowing5Choice;
 /// Condition for automatic borrowing expressed as a proprietary code.
 /// </summary>
 [IsoId("_AZHgENokEeC60axPepSq7g_394993137")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAutomaticBorrowing5Choice, IIsoChoiceVariant
 {
     /// <summary>

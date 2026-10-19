@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError8Choice;
 /// Requested business information.
 /// </summary>
 [IsoId("_Q2Ivw3hdEeidzqjNEfehPg")]
+[IsoXmlTag("GnlBiz")]
 public interface IGeneralBusiness : IGeneralBusinessOrError8Choice, IIsoChoiceVariant
 {
     /// <summary>

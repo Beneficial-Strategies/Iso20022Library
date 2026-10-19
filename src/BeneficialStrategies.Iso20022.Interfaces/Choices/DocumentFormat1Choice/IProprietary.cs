@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat1Choice;
 /// Document format expressed as a proprietary code.
 /// </summary>
 [IsoId("_932rtnltEeG7BsjMvd1mEw_-654250826")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDocumentFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate23Choice;
 /// Attributes related specifically to fixed rate of an interest rate contract.
 /// </summary>
 [IsoId("_6ao5kVfREeqqKf65rDYWYw")]
+[IsoXmlTag("Fxd")]
 public interface IFixed : IInterestRate23Choice, IIsoChoiceVariant
 {
     /// <summary>

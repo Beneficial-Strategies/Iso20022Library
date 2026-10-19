@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification3Choice;
 /// Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.
 /// </summary>
 [IsoId("_PdwzoNp-Ed-ak6NoX_4Aeg_-1485477198")]
+[IsoXmlTag("PrtryAcct")]
 public interface IProprietaryAccount : IAccountIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

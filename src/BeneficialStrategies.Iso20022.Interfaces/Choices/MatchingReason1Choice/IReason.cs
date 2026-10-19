@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason1Choice;
 /// Specifies the reason of the UnmatchStatus.
 /// </summary>
 [IsoId("_Az7z1NokEeC60axPepSq7g_-166563219")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IMatchingReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

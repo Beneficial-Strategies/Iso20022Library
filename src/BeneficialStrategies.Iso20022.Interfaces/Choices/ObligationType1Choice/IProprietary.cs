@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ObligationType1Choice;
 /// Indicates the type of the obligation using a proprietary format.
 /// </summary>
 [IsoId("_QmCDQdp-Ed-ak6NoX_4Aeg_1613021379")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IObligationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

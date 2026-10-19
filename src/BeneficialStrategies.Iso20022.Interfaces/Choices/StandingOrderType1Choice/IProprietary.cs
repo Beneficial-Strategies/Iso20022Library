@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderType1Choice;
 /// Liquidity transfer standing order type, in a free text form.
 /// </summary>
 [IsoId("_73bb4qMgEeCJ6YNENx4h-w_-591387142")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStandingOrderType1Choice, IIsoChoiceVariant
 {
     /// <summary>

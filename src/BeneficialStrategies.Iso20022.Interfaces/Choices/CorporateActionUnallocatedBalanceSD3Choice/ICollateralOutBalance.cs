@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// Quantity of securities in the sub-balance.
 /// </summary>
 [IsoId("_ujGeS8STEeeRJJtE9TSlkw")]
+[IsoXmlTag("CollOutBal")]
 public interface ICollateralOutBalance
     : ICorporateActionUnallocatedBalanceSD3Choice,
         IIsoChoiceVariant

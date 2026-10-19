@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStageFormat2
 /// Proprietary identification of the stage of the corporate action event.
 /// </summary>
 [IsoId("_c5V6LZKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionEventStageFormat20Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is in OpenOrder.
 /// </summary>
 [IsoId("_x4XDlQarEe2phaVG0lYKTw")]
+[IsoXmlTag("OpnOrdr")]
 public interface IOpenOrder : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

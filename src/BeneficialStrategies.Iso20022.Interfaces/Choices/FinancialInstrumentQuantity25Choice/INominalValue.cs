@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity25Cho
 /// TBC.
 /// </summary>
 [IsoId("_AqItcYIiEeW_KPkCyw2GUA")]
+[IsoXmlTag("NmnlVal")]
 public interface INominalValue : IFinancialInstrumentQuantity25Choice, IIsoChoiceVariant
 {
     /// <summary>

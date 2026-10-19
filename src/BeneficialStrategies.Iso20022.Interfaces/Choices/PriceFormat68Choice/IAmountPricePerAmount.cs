@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat68Choice;
 /// Price expressed as a ratio: amount price per amount.
 /// </summary>
 [IsoId("_plY1jzi7Eeydid5dcNPKvg")]
+[IsoXmlTag("AmtPricPerAmt")]
 public interface IAmountPricePerAmount : IPriceFormat68Choice, IIsoChoiceVariant
 {
     /// <summary>

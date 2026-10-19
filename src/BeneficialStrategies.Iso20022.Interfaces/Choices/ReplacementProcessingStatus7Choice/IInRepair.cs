@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
 /// Replacement of the trade is In repair.
 /// </summary>
 [IsoId("_A5TcBNokEeC60axPepSq7g_161099171")]
+[IsoXmlTag("InRpr")]
 public interface IInRepair : IReplacementProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError4Choice;
 /// Requested information on the payment transaction.
 /// </summary>
 [IsoId("_XFBYs249EeiU9cctagi5ow")]
+[IsoXmlTag("Tx")]
 public interface ITransaction : ITransactionOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

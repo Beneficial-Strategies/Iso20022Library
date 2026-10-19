@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is Done.
 /// </summary>
 [IsoId("_x4XDhwarEe2phaVG0lYKTw")]
+[IsoXmlTag("Done")]
 public interface IDone : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
 /// Provides the identification of a party.
 /// </summary>
 [IsoId("_w8OZgWc-EemvNLufWGIVOQ")]
+[IsoXmlTag("OrgId")]
 public interface IOrganisationIdentification : ISystemPartyIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus30Choice;
 /// Instruction is unsettled.
 /// </summary>
 [IsoId("_T_qoCRIwEeydmIVkS03esw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICancellationStatus30Choice, IIsoChoiceVariant
 {
     /// <summary>

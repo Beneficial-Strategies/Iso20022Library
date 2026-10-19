@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice;
 /// Business identification of the payment instruction given by the clearing agent.
 /// </summary>
 [IsoId("_5uqG9QKxEe2rHs6fbn9-0A")]
+[IsoXmlTag("LngBizId")]
 public interface ILongBusinessIdentification : IPaymentIdentification7Choice, IIsoChoiceVariant
 {
     /// <summary>

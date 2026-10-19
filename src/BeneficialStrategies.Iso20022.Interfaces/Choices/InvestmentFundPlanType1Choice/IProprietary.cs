@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundPlanType1Choice;
 /// Type of investment fund plan expressed as a proprietary code.
 /// </summary>
 [IsoId("_dVTEkF9CEeicg40_9gK9vQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestmentFundPlanType1Choice, IIsoChoiceVariant
 {
     /// <summary>

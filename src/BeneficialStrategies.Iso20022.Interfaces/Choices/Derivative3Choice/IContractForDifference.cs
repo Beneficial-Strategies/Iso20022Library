@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice;
 /// Details specific for Contract for difference (CFDs).
 /// </summary>
 [IsoId("_xH-zaSe0Eei12pGEsJIAeQ")]
+[IsoXmlTag("CtrctForDiff")]
 public interface IContractForDifference : IDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

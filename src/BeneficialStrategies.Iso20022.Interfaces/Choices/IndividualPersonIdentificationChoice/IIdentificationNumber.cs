@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentificationCh
 /// Information related to an identification, eg, party identification or account identification.
 /// </summary>
 [IsoId("_REuxfdp-Ed-ak6NoX_4Aeg_-1639846397")]
+[IsoXmlTag("IdNb")]
 public interface IIdentificationNumber : IIndividualPersonIdentificationChoice, IIsoChoiceVariant
 {
     /// <summary>

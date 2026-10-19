@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementSource1Choice;
 /// Report source expressed as a proprietary code.
 /// </summary>
 [IsoId("_m_xsdPNBEeCuA5Tr22BnwA_261285947")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStatementSource1Choice, IIsoChoiceVariant
 {
     /// <summary>

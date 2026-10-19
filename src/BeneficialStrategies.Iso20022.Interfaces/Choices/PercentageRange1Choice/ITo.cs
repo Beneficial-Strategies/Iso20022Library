@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice;
 /// Upper boundary of a range of percentage rates.
 /// </summary>
 [IsoId("_7_BRqqMgEeCJ6YNENx4h-w_-1593914623")]
+[IsoXmlTag("To")]
 public interface ITo : IPercentageRange1Choice, IIsoChoiceVariant
 {
     /// <summary>

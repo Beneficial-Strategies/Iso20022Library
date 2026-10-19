@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity32Cho
 /// Indicates that quantity is expressed as a nominal value.
 /// </summary>
 [IsoId("_Y7YBdZjgEeqkLZLH6DK3UQ")]
+[IsoXmlTag("NmnlVal")]
 public interface INominalValue : IFinancialInstrumentQuantity32Choice, IIsoChoiceVariant
 {
     /// <summary>

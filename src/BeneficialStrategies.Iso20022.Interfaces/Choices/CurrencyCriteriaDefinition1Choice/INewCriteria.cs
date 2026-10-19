@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
 /// Defines the criteria based on which the information is extracted.
 /// </summary>
 [IsoId("_H5cuM5lZEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : ICurrencyCriteriaDefinition1Choice, IIsoChoiceVariant
 {
     /// <summary>

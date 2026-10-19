@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentAccountOrFinancialInst
 /// Instrument that has intrinsic monetary value, and may transfer value, the price of which may be obtained from a financial market, eg, a bond or a cheque.
 /// </summary>
 [IsoId("_UuOntdp-Ed-ak6NoX_4Aeg_-1126591079")]
+[IsoXmlTag("FinInstrm")]
 public interface IFinancialInstrument
     : IInvestmentAccountOrFinancialInstrument1Choice,
         IIsoChoiceVariant

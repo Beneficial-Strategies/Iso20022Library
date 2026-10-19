@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party40Choice;
 /// Identification of a person or an organisation.
 /// </summary>
 [IsoId("_8U6MM248EeiU9cctagi5ow")]
+[IsoXmlTag("Pty")]
 public interface IParty : IParty40Choice, IIsoChoiceVariant
 {
     /// <summary>

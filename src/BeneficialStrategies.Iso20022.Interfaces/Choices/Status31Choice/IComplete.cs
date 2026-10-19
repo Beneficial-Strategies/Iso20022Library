@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status31Choice;
 /// Status of the transfer cancellation is complete. The cancellation instruction has been accepted and processed, the cancellation is complete.
 /// </summary>
 [IsoId("_ym2jxZM6EemKz5EOjv82iQ")]
+[IsoXmlTag("Cmplt")]
 public interface IComplete : IStatus31Choice, IIsoChoiceVariant
 {
     /// <summary>

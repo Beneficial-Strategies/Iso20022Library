@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateStatus3Choice;
 /// Proprietary identification of the status of the rate.
 /// </summary>
 [IsoId("_VJurJUEIEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

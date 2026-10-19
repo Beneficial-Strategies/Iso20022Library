@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingPartyAndTime22Choice;
 /// Indicates that the contract is intended to be cleared and provides detailes of such clearing.
 /// </summary>
 [IsoId("_mlkJoxZOEe2QNcZTDeoKnQ")]
+[IsoXmlTag("Dtls")]
 public interface IDetails : IClearingPartyAndTime22Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat30Choice;
 /// Number of monetary units specified in a currency.
 /// </summary>
 [IsoId("_AjCKM5b8Eee8S7xwGG7Veg")]
+[IsoXmlTag("Amt")]
 public interface IAmount : INetDividendRateFormat30Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
 /// Weather environmental commodity derivative.
 /// </summary>
 [IsoId("_aQGG2Q2pEeW72qLtWESimw")]
+[IsoXmlTag("Wthr")]
 public interface IWeather : IAssetClassCommodityEnvironmental1Choice, IIsoChoiceVariant
 {
     /// <summary>

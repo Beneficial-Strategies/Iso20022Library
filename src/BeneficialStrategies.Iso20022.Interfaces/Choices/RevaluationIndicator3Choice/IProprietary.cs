@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RevaluationIndicator3Choice;
 /// Revaluation information provided as a proprietary code.
 /// </summary>
 [IsoId("_CQyt6Tw0EeW3QqUkIQtIUA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRevaluationIndicator3Choice, IIsoChoiceVariant
 {
     /// <summary>

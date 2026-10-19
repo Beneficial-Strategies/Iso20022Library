@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice;
 /// Asset class is a non-financial instrument of type foreign exchange.
 /// </summary>
 [IsoId("_id4oJu94EeW7gabYEJmWIA")]
+[IsoXmlTag("FX")]
 public interface IForeignExchange : IAssetClassAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

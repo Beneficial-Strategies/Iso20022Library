@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndPeriod2Choice;
 /// Time span defined by a start date and an end date.
 /// </summary>
 [IsoId("_76Z3Z6MgEeCJ6YNENx4h-w_-1822732589")]
+[IsoXmlTag("Prd")]
 public interface IPeriod : IDateAndPeriod2Choice, IIsoChoiceVariant
 {
     /// <summary>

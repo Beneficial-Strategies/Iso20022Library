@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError3Choice;
 /// Operational error resulting from a rejection.
 /// </summary>
 [IsoId("_7fpeg1hLEeih3fUfzR38Ig")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IPartyOrOperationalError3Choice, IIsoChoiceVariant
 {
     /// <summary>

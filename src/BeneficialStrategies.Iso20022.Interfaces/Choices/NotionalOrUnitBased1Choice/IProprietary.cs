@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotionalOrUnitBased1Choice;
 /// Type of unit basis for a financial instrument expressed as a proprietary code.
 /// </summary>
 [IsoId("_Fop9AJ9WEeqxTNfi5y7ywQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : INotionalOrUnitBased1Choice, IIsoChoiceVariant
 {
     /// <summary>

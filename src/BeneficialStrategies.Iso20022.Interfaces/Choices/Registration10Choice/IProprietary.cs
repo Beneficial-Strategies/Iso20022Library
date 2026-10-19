@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Registration10Choice;
 /// Registration information expressed as a proprietary code.
 /// </summary>
 [IsoId("_z2Jf0zqfEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRegistration10Choice, IIsoChoiceVariant
 {
     /// <summary>

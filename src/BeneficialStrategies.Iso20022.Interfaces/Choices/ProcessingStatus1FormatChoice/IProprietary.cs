@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus1FormatChoice;
 /// Proprietary code to express the processing status.
 /// </summary>
 [IsoId("_Rnv-9dp-Ed-ak6NoX_4Aeg_-1777014661")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IProcessingStatus1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

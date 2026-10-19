@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateValueType6FormatChoice;
 /// Proprietary code to express the value of a rate.
 /// </summary>
 [IsoId("_RoC54Np-Ed-ak6NoX_4Aeg_-1089918487")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateValueType6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

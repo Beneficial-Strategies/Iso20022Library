@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties1Choice;
 /// Entity named by the beneficial owner to act on its behalf, often to facilitate dealing, or to conceal the identity of the beneficiary.
 /// </summary>
 [IsoId("_5n7toBdAEeK5g-3oYI0_9Q")]
+[IsoXmlTag("Nmnee")]
 public interface INominee : IAccountParties1Choice, IIsoChoiceVariant
 {
     /// <summary>

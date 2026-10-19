@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat24Choice;
 /// Specifies an amount and a rate status.
 /// </summary>
 [IsoId("_zCJUQWXGEeWht50_j0HXAQ")]
+[IsoXmlTag("AmtAndRateSts")]
 public interface IAmountAndRateStatus : INetDividendRateFormat24Choice, IIsoChoiceVariant
 {
     /// <summary>

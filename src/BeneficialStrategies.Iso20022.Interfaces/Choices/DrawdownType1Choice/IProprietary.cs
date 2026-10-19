@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownType1Choice;
 /// Type of drawdown expressed as a proprietary code.
 /// </summary>
 [IsoId("_Wmfb4FNdEeijdq8ilaxyOA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDrawdownType1Choice, IIsoChoiceVariant
 {
     /// <summary>

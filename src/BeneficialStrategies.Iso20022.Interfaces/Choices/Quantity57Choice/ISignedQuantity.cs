@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity57Choice;
 /// Signed quantity of security.
 /// </summary>
 [IsoId("_pf0YxTi7Eeydid5dcNPKvg")]
+[IsoXmlTag("SgndQty")]
 public interface ISignedQuantity : IQuantity57Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choic
 /// Reason for the closure pending status.
 /// </summary>
 [IsoId("_UwXSs2CLEeabZtzjEVWYCQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IClosurePendingStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

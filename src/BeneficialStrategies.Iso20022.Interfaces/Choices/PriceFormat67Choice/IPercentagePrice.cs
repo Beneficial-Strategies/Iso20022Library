@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat67Choice;
 /// Price expressed as a percentage.
 /// </summary>
 [IsoId("_pi0DAji7Eeydid5dcNPKvg")]
+[IsoXmlTag("PctgPric")]
 public interface IPercentagePrice : IPriceFormat67Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity6Choi
 /// Amount of money used to determine the quantity of investment fund units to be subscribed.
 /// </summary>
 [IsoId("_SoRAx9p-Ed-ak6NoX_4Aeg_-1931220988")]
+[IsoXmlTag("NetAmt")]
 public interface INetAmount : IFinancialInstrumentQuantity6Choice, IIsoChoiceVariant
 {
     /// <summary>

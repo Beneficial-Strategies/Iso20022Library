@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient4Choice;
 /// Key encryption key using previously distributed symmetric key.
 /// </summary>
 [IsoId("_N1aSo2i0EeS87LmvcA55sg")]
+[IsoXmlTag("KEK")]
 public interface IKEK : IRecipient4Choice, IIsoChoiceVariant
 {
     /// <summary>

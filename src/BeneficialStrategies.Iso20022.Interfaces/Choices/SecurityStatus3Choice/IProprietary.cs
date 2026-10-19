@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityStatus3Choice;
 /// Security status expressed as a proprietary code.
 /// </summary>
 [IsoId("_GHDbQ-LcEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecurityStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

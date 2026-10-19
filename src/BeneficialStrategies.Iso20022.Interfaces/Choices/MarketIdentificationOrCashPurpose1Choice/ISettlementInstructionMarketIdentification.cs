@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpos
 /// Identifies the market for the settlement. This consists of the country code and the asset class. For example, if the SSI is for equities in the DTCC, the country code is ‘US’ and the classification type is ‘equity’.
 /// </summary>
 [IsoId("_kz-v4EiNEeOdL6nMHefDgg")]
+[IsoXmlTag("SttlmInstrMktId")]
 public interface ISettlementInstructionMarketIdentification
     : IMarketIdentificationOrCashPurpose1Choice,
         IIsoChoiceVariant

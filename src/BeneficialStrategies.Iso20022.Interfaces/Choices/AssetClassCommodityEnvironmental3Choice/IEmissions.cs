@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
 /// Emissions environmental commodity derivative.
 /// </summary>
 [IsoId("_9cj2oU8REe2PGo0mhYCh1g")]
+[IsoXmlTag("Emssns")]
 public interface IEmissions : IAssetClassCommodityEnvironmental3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification3Choice;
 /// Identification of an organisation.
 /// </summary>
 [IsoId("_CKjZs5TREemC09f0MxYkRg")]
+[IsoXmlTag("OrgOwnrId")]
 public interface IOrganisationOwnerIdentification : IOwnerIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

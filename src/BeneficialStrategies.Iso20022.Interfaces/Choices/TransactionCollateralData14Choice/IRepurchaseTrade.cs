@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData14Choic
 /// Data on collateral used for the repurchase trade transaction.
 /// </summary>
 [IsoId("_kyCmMf_9Eemefbt-QjTNnA")]
+[IsoXmlTag("RpTrad")]
 public interface IRepurchaseTrade : ITransactionCollateralData14Choice, IIsoChoiceVariant
 {
     /// <summary>

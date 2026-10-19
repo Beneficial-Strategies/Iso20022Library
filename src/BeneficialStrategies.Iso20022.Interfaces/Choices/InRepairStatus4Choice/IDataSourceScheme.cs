@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatus4Choice;
 /// Proprietary identification of the reason for the in-repair status.
 /// </summary>
 [IsoId("_yOuqZSY4EeW_ZNn8gbfY7Q")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : IInRepairStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AwaitingCancellationReason2Choic
 /// Specifies the reason why the instruction has been alleged.
 /// </summary>
 [IsoId("_mqHTQwd4Ee2fOITqoTnSLQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAwaitingCancellationReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

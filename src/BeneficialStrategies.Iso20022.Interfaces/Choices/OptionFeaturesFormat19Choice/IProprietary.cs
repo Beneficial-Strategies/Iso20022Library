@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat19Choice;
 /// Proprietary identification of the features that may apply to a corporate action option.
 /// </summary>
 [IsoId("_cj7rL5KQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOptionFeaturesFormat19Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SourceOfCash1Choice;
 /// Source of cash expressed as a proprietary code.
 /// </summary>
 [IsoId("_p_XsEDlEEealR6-8aQ15BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISourceOfCash1Choice, IIsoChoiceVariant
 {
     /// <summary>

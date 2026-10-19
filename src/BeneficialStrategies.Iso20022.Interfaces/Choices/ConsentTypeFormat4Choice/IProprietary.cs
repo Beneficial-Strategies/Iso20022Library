@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentTypeFormat4Choice;
 /// Proprietary identification of the consent type.
 /// </summary>
 [IsoId("_d-eJI0EGEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IConsentTypeFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType3Choice;
 /// Amount of money to be moved between the debtor and creditor, expressed in the currency of the debtor&apos;s account, and the currency in which the amount is to be moved.
 /// </summary>
 [IsoId("_P57LMtp-Ed-ak6NoX_4Aeg_326235198")]
+[IsoXmlTag("EqvtAmt")]
 public interface IEquivalentAmount : IAmountType3Choice, IIsoChoiceVariant
 {
     /// <summary>

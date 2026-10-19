@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueProductIdentifier1Choice;
 /// Product identifier expressed in a proprietary notation.
 /// </summary>
 [IsoId("_rUTngyyFEe2xAdY9t5fB3g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUniqueProductIdentifier1Choice, IIsoChoiceVariant
 {
     /// <summary>

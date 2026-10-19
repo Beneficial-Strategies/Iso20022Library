@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice;
 /// Details specific for Foreign exchange.
 /// </summary>
 [IsoId("_xH-zZSe0Eei12pGEsJIAeQ")]
+[IsoXmlTag("FX")]
 public interface IForeignExchange : IDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

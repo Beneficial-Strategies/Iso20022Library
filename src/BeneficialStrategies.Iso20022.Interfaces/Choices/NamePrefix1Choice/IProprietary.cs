@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NamePrefix1Choice;
 /// Name prefix expressed as a proprietary code.
 /// </summary>
 [IsoId("_BUFAYCiFEeKVDZ5HKjI6bg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : INamePrefix1Choice, IIsoChoiceVariant
 {
     /// <summary>

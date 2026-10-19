@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice;
 /// acknowledged/accepted for further processing. The instruction has been received, is processable and has been validated for further processing.
 /// </summary>
 [IsoId("_fDHA8VhFEeOMYfRGLS0NbA")]
+[IsoXmlTag("Accptd")]
 public interface IAccepted : IProcessingStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>

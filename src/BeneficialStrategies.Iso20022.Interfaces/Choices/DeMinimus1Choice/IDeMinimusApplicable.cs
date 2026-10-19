@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice;
 /// Conditions applicable when the investor is covered by the &quot;de minimis&quot; exemption.
 /// </summary>
 [IsoId("_CgNiAggqEeSUG-8hqXsVMQ")]
+[IsoXmlTag("DeMnmsAplbl")]
 public interface IDeMinimusApplicable : IDeMinimus1Choice, IIsoChoiceVariant
 {
     /// <summary>

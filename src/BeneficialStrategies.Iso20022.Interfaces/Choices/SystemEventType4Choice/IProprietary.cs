@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemEventType4Choice;
 /// Type of system event that has occurred, expressed as free text or a bilaterally agreed code.|.
 /// </summary>
 [IsoId("_eFPKJXhkEeidzqjNEfehPg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISystemEventType4Choice, IIsoChoiceVariant
 {
     /// <summary>

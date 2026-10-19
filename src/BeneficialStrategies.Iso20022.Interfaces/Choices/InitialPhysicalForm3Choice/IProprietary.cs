@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialPhysicalForm3Choice;
 /// Initial physical form expressed as a proprietary code.
 /// </summary>
 [IsoId("_m9Igc-LcEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInitialPhysicalForm3Choice, IIsoChoiceVariant
 {
     /// <summary>

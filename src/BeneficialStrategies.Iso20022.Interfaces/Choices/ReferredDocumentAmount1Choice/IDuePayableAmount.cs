@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// Amount specified is the exact amount due and payable to the creditor.
 /// </summary>
 [IsoId("_QGJCQ9p-Ed-ak6NoX_4Aeg_-888106466")]
+[IsoXmlTag("DuePyblAmt")]
 public interface IDuePayableAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

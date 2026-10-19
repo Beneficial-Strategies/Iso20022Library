@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat22Choice;
 /// Cash amount.
 /// </summary>
 [IsoId("_uF0bEa8wEee2P-j6wtfM2A")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IRateFormat22Choice, IIsoChoiceVariant
 {
     /// <summary>

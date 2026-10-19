@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party9Choice;
 /// Identification of a person or an organisation.
 /// </summary>
 [IsoId("_PW59s9p-Ed-ak6NoX_4Aeg_-1623662466")]
+[IsoXmlTag("OrgId")]
 public interface IOrganisationIdentification : IParty9Choice, IIsoChoiceVariant
 {
     /// <summary>

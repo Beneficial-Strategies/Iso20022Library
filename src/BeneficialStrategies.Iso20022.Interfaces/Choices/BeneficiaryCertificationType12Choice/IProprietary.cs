@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType12Ch
 /// Beneficial owner certification type expressed in a proprietary form.
 /// </summary>
 [IsoId("_cta-SZKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBeneficiaryCertificationType12Choice, IIsoChoiceVariant
 {
     /// <summary>

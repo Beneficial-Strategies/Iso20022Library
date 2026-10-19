@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityIndustrialPro
 /// Construction related industrial product commodity derivative.
 /// </summary>
 [IsoId("_OTrSERZZEe2QNcZTDeoKnQ")]
+[IsoXmlTag("Cnstrctn")]
 public interface IConstruction : IAssetClassCommodityIndustrialProduct2Choice, IIsoChoiceVariant
 {
     /// <summary>

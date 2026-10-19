@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError3Choice;
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_i_MAQxbvEeOy-PlRuFSUzQ")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IStandingOrderOrError3Choice, IIsoChoiceVariant
 {
     /// <summary>

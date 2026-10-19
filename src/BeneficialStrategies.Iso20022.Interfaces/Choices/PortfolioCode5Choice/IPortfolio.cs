@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode5Choice;
 /// Unique code determined by the reporting counterparty to identify the portfolio if collateral is reported on a portfolio basis.
 /// </summary>
 [IsoId("_wnwasTICEe2fXedS_ucFOA")]
+[IsoXmlTag("Prtfl")]
 public interface IPortfolio : IPortfolioCode5Choice, IIsoChoiceVariant
 {
     /// <summary>

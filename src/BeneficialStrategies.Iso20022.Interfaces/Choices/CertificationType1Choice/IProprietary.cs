@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertificationType1Choice;
 /// Certificate type expressed as a proprietary code.
 /// </summary>
 [IsoId("_y4So4BdEEeK5g-3oYI0_9Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICertificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

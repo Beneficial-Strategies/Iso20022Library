@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseType1Choice;
 /// Provides a margin call response type using a proprietary code.
 /// </summary>
 [IsoId("_QnYHENp-Ed-ak6NoX_4Aeg_-1324860761")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IResponseType1Choice, IIsoChoiceVariant
 {
     /// <summary>

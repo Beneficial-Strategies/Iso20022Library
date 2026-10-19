@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
 /// Operational error resulting from a rejection.
 /// </summary>
 [IsoId("_Ptf-M5JKEeuAlLVx8pyt3w")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError
     : ISecuritiesAuditTrailOrOperationalError4Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
 /// Replacement of the trade is PartialReplacementAccepted.
 /// </summary>
 [IsoId("_Rhhu-QeDEe2fOITqoTnSLQ")]
+[IsoXmlTag("PrtlRplcmntAccptd")]
 public interface IPartialReplacementAccepted
     : IReplacementProcessingStatus10Choice,
         IIsoChoiceVariant

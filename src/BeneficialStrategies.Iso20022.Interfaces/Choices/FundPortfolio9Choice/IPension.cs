@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio9Choice;
 /// Portfolio is a pension policy, plan or scheme.
 /// </summary>
 [IsoId("_ZYn_xelqEeuvhrZwLF0fDg")]
+[IsoXmlTag("Pnsn")]
 public interface IPension : IFundPortfolio9Choice, IIsoChoiceVariant
 {
     /// <summary>

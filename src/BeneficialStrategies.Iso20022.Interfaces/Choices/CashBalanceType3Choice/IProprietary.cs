@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashBalanceType3Choice;
 /// Cash balance expressed in a proprietary form.
 /// </summary>
 [IsoId("_NW5nSTqFEemJ3KLLPeYl6g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICashBalanceType3Choice, IIsoChoiceVariant
 {
     /// <summary>

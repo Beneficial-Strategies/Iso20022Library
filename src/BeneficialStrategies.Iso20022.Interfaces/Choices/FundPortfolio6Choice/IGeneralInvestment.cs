@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio6Choice;
 /// Portfolio is a general investment.
 /// </summary>
 [IsoId("_1n3_k5NMEemQB_8XA98K0Q")]
+[IsoXmlTag("GnlInvstmt")]
 public interface IGeneralInvestment : IFundPortfolio6Choice, IIsoChoiceVariant
 {
     /// <summary>

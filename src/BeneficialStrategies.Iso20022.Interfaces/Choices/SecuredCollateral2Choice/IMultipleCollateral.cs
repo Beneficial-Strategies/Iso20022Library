@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice;
 /// In case of multi-collateral repo, the nominal amount of each collateralised security must be provided.
 /// </summary>
 [IsoId("_iZO6A6idEeWHO_l3hf2rlA")]
+[IsoXmlTag("MltplColl")]
 public interface IMultipleCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>

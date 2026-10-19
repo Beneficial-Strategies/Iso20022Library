@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatusType3Choice;
 /// Type of event expressed as a proprietary code.
 /// </summary>
 [IsoId("_SoQd09ydEeqzDbuoooxhdw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITransferStatusType3Choice, IIsoChoiceVariant
 {
     /// <summary>

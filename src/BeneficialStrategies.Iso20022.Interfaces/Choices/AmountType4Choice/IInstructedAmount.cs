@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType4Choice;
 /// Usage: This amount has to be transported unchanged through the transaction chain.
 /// </summary>
 [IsoId("__k-HA1kJEeSeLKjZh_lWZw")]
+[IsoXmlTag("InstdAmt")]
 public interface IInstructedAmount : IAmountType4Choice, IIsoChoiceVariant
 {
     /// <summary>

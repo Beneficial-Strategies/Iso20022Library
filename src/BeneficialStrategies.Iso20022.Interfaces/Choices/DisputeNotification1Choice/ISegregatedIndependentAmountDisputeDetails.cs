@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeNotification1Choice;
 /// Provides the dispute notification details for the segregated independent amount only.
 /// </summary>
 [IsoId("_QmU-NNp-Ed-ak6NoX_4Aeg_-640077576")]
+[IsoXmlTag("SgrtdIndpdntAmtDsptDtls")]
 public interface ISegregatedIndependentAmountDisputeDetails
     : IDisputeNotification1Choice,
         IIsoChoiceVariant

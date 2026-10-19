@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice;
 /// Status of all the orders in the order message is rejected. This status is used for orders that have not been accepted or entered in an order book.
 /// </summary>
 [IsoId("_vIDnZ0H7EeaV3ab_pHzFIQ")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IOrderStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

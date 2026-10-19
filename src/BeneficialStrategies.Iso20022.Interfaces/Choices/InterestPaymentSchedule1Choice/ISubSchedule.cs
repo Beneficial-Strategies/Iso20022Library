@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice;
 /// Specifies an interest payment schedule, that is an interest amount that must be paid no sooner than the expected payment date and no later than the due date.
 /// </summary>
 [IsoId("_u7i5ReFWEeSvv6t4Ka7B7A")]
+[IsoXmlTag("SubSchdl")]
 public interface ISubSchedule : IInterestPaymentSchedule1Choice, IIsoChoiceVariant
 {
     /// <summary>

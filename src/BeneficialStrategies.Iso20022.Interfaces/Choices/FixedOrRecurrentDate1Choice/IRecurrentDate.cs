@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedOrRecurrentDate1Choice;
 /// Details related to recurrent dates on which the variation is triggered.
 /// </summary>
 [IsoId("_98U8AXltEeG7BsjMvd1mEw_-1677013285")]
+[IsoXmlTag("RcrntDt")]
 public interface IRecurrentDate : IFixedOrRecurrentDate1Choice, IIsoChoiceVariant
 {
     /// <summary>

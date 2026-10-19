@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies the closing date of the party.
 /// </summary>
 [IsoId("_xPt7hmjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("ClsgDt")]
 public interface IClosingDate : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

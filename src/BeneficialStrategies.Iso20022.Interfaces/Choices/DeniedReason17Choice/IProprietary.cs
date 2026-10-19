@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason17Choice;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_ArzhiTw-EeW3QqUkIQtIUA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDeniedReason17Choice, IIsoChoiceVariant
 {
     /// <summary>

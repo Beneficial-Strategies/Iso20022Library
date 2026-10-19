@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferReason1Choice;
 /// Transfer reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_hvAgY651EeeMy7TnJ3e__g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITransferReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

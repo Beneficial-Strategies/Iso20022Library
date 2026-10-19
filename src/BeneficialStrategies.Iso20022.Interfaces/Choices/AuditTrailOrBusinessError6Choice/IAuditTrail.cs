@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AuditTrailOrBusinessError6Choice
 /// Details of the static data audit trail retrieved from the system.
 /// </summary>
 [IsoId("_bcWXkWc-EemvNLufWGIVOQ")]
+[IsoXmlTag("AudtTrl")]
 public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVariant
 {
     /// <summary>

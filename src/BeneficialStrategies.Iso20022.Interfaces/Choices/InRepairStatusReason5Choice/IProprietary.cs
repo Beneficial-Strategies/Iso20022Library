@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatusReason5Choice;
 /// In repair reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_P8Qic0HqEea8I67lh6qdSQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInRepairStatusReason5Choice, IIsoChoiceVariant
 {
     /// <summary>

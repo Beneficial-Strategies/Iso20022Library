@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError6Cho
 /// Reason the requested business information is not given.
 /// </summary>
 [IsoId("_EP0ooTpyEemk2e6qGBk8IQ")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : ICollateralValueReportOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>

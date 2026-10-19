@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity3Choi
 /// Amount of money used to derive the quantity of investment fund units to be sold.
 /// </summary>
 [IsoId("_VO3Pkdp-Ed-ak6NoX_4Aeg_1922478152")]
+[IsoXmlTag("NetAmt")]
 public interface INetAmount : IFinancialInstrumentQuantity3Choice, IIsoChoiceVariant
 {
     /// <summary>

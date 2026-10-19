@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
 /// Provides information about the rejection status.
 /// </summary>
 [IsoId("_RiPM2Np-Ed-ak6NoX_4Aeg_-1502312147")]
+[IsoXmlTag("RjctdSts")]
 public interface IRejectedStatus : ICorporateActionMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

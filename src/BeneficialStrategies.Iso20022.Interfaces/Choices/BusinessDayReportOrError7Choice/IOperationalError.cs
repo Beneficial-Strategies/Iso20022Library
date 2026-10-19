@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError7Choice;
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_wq9Rg5lcEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IBusinessDayReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError7C
 /// Identifies the transactions.
 /// </summary>
 [IsoId("_YDGlITneEem7JZMuWtwtsg")]
+[IsoXmlTag("Mvmnts")]
 public interface IMovements : IIntraBalanceOrOperationalError7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References2Choice;
 /// Reference to a transaction that cannot be identified using a standard reference element present in the message.
 /// </summary>
 [IsoId("_US9oDdp-Ed-ak6NoX_4Aeg_1139340685")]
+[IsoXmlTag("OthrTxId")]
 public interface IOtherTransactionIdentification : IReferences2Choice, IIsoChoiceVariant
 {
     /// <summary>

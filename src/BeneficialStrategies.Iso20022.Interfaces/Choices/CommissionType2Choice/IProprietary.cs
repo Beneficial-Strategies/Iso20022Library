@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommissionType2Choice;
 /// Commission type expressed as a proprietary code.
 /// </summary>
 [IsoId("_Ac_TdNokEeC60axPepSq7g_220675124")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICommissionType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementSystemMethod3Choice;
 /// Settlement system expressed as a proprietary code.
 /// </summary>
 [IsoId("_AZQqA9okEeC60axPepSq7g_838489651")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementSystemMethod3Choice, IIsoChoiceVariant
 {
     /// <summary>

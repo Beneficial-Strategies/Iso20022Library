@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExpectedCollateral2Choice;
 /// Provides the expected collateral type and direction for the segregated independent amount.
 /// </summary>
 [IsoId("_-sdWM4LZEeWrrO9HojbPQA")]
+[IsoXmlTag("SgrtdIndpdntAmt")]
 public interface ISegregatedIndependentAmount : IExpectedCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>

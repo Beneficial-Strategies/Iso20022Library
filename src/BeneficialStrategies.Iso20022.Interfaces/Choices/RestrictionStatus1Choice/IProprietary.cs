@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RestrictionStatus1Choice;
 /// Status of the restriction expressed as a proprietary code.
 /// </summary>
 [IsoId("_gR620CFnEeW9XJWqfgXIIA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRestrictionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

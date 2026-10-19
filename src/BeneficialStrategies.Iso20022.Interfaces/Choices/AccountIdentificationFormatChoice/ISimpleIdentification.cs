@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
 /// Unique and unambiguous identification for the account between the account owner and the account servicer.
 /// </summary>
 [IsoId("_RBvu5tp-Ed-ak6NoX_4Aeg_1757395821")]
+[IsoXmlTag("SmplId")]
 public interface ISimpleIdentification : IAccountIdentificationFormatChoice, IIsoChoiceVariant
 {
     /// <summary>

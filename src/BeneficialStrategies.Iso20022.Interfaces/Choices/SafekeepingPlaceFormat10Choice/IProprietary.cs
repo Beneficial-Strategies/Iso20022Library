@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat10Choice;
 /// Place of safekeeping expressed with a propriety identification scheme.
 /// </summary>
 [IsoId("_5V6N6TnTEeWV5sr121Fc8A")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISafekeepingPlaceFormat10Choice, IIsoChoiceVariant
 {
     /// <summary>

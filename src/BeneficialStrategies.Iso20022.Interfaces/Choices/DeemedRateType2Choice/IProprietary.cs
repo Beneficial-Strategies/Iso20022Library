@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeemedRateType2Choice;
 /// Proprietary identification of the type of deemed rate.
 /// </summary>
 [IsoId("_sH2RM9BbEee0mNiKMkpGNQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDeemedRateType2Choice, IIsoChoiceVariant
 {
     /// <summary>

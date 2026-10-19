@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice;
 /// Provides the summation of the call amounts.
 /// </summary>
 [IsoId("_9boCQaMPEeCojJW5vEuTEQ_377211286")]
+[IsoXmlTag("MrgnCallAmt")]
 public interface IMarginCallAmount : IMarginCallResult2Choice, IIsoChoiceVariant
 {
     /// <summary>

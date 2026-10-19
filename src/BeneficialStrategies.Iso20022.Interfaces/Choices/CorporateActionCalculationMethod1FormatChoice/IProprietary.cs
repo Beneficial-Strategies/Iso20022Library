@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionCalculationMethod
 /// Proprietary code to express the calculation method for drawings.
 /// </summary>
 [IsoId("_Rl9PNdp-Ed-ak6NoX_4Aeg_-550005883")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionCalculationMethod1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

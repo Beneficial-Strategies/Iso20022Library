@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancingRateOrAmountChoice;
 /// Amount expressed as an absolute value.
 /// </summary>
 [IsoId("_RXzecdp-Ed-ak6NoX_4Aeg_-1499695892")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IFinancingRateOrAmountChoice, IIsoChoiceVariant
 {
     /// <summary>

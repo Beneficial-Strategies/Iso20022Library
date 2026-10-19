@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WithdrawalReason1Choice;
 /// Withdrawal reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_VsksgE7XEeifNrXGwadPmg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IWithdrawalReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

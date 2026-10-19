@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentOrSubClassIdentificati
 /// Identifies the financial instrument to which the result relates and its sub-class among non-equity instruments
 /// </summary>
 [IsoId("_BSnWYaaUEeqZmriXpMtonA")]
+[IsoXmlTag("ISINAndSubClss")]
 public interface IISINAndSubClass : IInstrumentOrSubClassIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

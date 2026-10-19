@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentification2C
 /// Identification of a party, such as a tax or social security identifier.
 /// </summary>
 [IsoId("_6KMwsSGZEeWKAaDJcYGKLw")]
+[IsoXmlTag("IdNb")]
 public interface IIdentificationNumber : IIndividualPersonIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

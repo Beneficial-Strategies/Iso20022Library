@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer1Ch
 /// Urea and ammonium nitrate fertilizer commodity derivative.
 /// </summary>
 [IsoId("_xb6EAFr2EeWN79Bl6BUd3g")]
+[IsoXmlTag("UreaAndAmmnmNtrt")]
 public interface IUreaAndAmmoniumNitrate : IAssetClassCommodityFertilizer1Choice, IIsoChoiceVariant
 {
     /// <summary>

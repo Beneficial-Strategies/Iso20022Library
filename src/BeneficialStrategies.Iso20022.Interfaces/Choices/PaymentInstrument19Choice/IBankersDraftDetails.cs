@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument19Choice;
 /// Settlement instructions for a payment by draft.
 /// </summary>
 [IsoId("_-mXAlSC1EeWJd9HF2tO7BA")]
+[IsoXmlTag("BkrsDrftDtls")]
 public interface IBankersDraftDetails : IPaymentInstrument19Choice, IIsoChoiceVariant
 {
     /// <summary>

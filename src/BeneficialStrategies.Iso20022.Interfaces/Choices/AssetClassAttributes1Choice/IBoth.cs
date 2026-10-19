@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice;
 /// Asset class is composed of both an interest derivate and a foreign exchange derivative.
 /// </summary>
 [IsoId("_vAX4UO94EeW7gabYEJmWIA")]
+[IsoXmlTag("Both")]
 public interface IBoth : IAssetClassAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

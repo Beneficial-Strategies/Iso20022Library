@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType67Choice;
 /// Rate expressed as an a proprietary code.
 /// </summary>
 [IsoId("_5mw36ZNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateType67Choice, IIsoChoiceVariant
 {
     /// <summary>

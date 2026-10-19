@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus1Choice;
 /// Status applying to individual instructions of a MeetingInstruction.
 /// </summary>
 [IsoId("_RWnLqdp-Ed-ak6NoX_4Aeg_-1745275553")]
+[IsoXmlTag("DtldInstrSts")]
 public interface IDetailedInstructionStatus : IInstructionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

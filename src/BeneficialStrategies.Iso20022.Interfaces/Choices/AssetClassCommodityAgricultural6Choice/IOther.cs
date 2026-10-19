@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
 /// Other agricultural commodity derivative.
 /// </summary>
 [IsoId("_xG_Ls08SEe2PGo0mhYCh1g")]
+[IsoXmlTag("Othr")]
 public interface IOther : IAssetClassCommodityAgricultural6Choice, IIsoChoiceVariant
 {
     /// <summary>

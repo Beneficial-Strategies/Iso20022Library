@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError4Choice;
 /// Reason the requested business information is not given.
 /// </summary>
 [IsoId("_M2S64249EeiU9cctagi5ow")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : IAccountOrBusinessError4Choice, IIsoChoiceVariant
 {
     /// <summary>

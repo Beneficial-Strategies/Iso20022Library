@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductStructure1Choice;
 /// Product structure expressed as a proprietary code.
 /// </summary>
 [IsoId("_V1DckKDqEequlaOyi6MUhw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IProductStructure1Choice, IIsoChoiceVariant
 {
     /// <summary>

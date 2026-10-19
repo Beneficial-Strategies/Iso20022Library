@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Removal1Choice;
 /// Specifies the removal processing change requested expressed as a proprietary code.
 /// </summary>
 [IsoId("_39lx0PkREeicy5Zn42b9bg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRemoval1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal1Choice;
 /// Reference of the transfer confirmation to be reversed.
 /// </summary>
 [IsoId("_qJndIBg3EeK-_89we2b-bA")]
+[IsoXmlTag("Ref")]
 public interface IReference : IReversal1Choice, IIsoChoiceVariant
 {
     /// <summary>

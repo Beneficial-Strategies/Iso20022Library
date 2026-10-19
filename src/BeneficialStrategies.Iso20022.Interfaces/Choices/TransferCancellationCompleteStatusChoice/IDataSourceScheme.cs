@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationCompleteStat
 /// Proprietary identification for a reason of a complete status in the report.
 /// </summary>
 [IsoId("_U0C709p-Ed-ak6NoX_4Aeg_-1205755663")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : ITransferCancellationCompleteStatusChoice, IIsoChoiceVariant
 {
     /// <summary>

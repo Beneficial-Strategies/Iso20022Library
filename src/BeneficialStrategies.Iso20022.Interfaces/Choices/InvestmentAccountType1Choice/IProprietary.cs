@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentAccountType1Choice;
 /// Investment account type expressed as a proprietary code.
 /// </summary>
 [IsoId("_Y6xSwBdLEeK5g-3oYI0_9Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestmentAccountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

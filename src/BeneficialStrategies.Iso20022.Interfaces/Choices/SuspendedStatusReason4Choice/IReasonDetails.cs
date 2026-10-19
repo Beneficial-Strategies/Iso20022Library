@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason4Choice;
 /// Reason for the suspended status, expressed as a code.
 /// </summary>
 [IsoId("_aSlPVUHlEea8I67lh6qdSQ")]
+[IsoXmlTag("RsnDtls")]
 public interface IReasonDetails : ISuspendedStatusReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery10Choice;
 /// Query criteria specifically applied to recurrent queries.
 /// </summary>
 [IsoId("_esoLY91dEeqxpKDfBZC1vg")]
+[IsoXmlTag("RcrntQry")]
 public interface IRecurrentQuery : ITradeReportQuery10Choice, IIsoChoiceVariant
 {
     /// <summary>

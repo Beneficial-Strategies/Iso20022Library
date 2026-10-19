@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedReason7Choice;
 /// Reason for the accepted status expressed as a proprietary code.
 /// </summary>
 [IsoId("_dwdIMVjzEeOnqqBHs8Gasw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAcceptedReason7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure5Choice;
 /// Proprietary or institution&apos;s own code that specifies the unit of quantity of a commodity or financial instrument.
 /// </summary>
 [IsoId("_0QQXUPp2EeaQh_7a05rSJQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUnitOfMeasure5Choice, IIsoChoiceVariant
 {
     /// <summary>

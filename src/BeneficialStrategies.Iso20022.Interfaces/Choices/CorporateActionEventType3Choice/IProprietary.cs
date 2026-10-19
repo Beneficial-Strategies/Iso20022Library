@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType3Choice;
 /// Event types expressed as a proprietary code.
 /// </summary>
 [IsoId("_Q4g6ZNp-Ed-ak6NoX_4Aeg_489319378")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionEventType3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedStatus5Choice;
 /// Specifies the reason of the DeniedStatus.
 /// </summary>
 [IsoId("_g8PF3_7rEeCvPoRGOxRobQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IDeniedStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

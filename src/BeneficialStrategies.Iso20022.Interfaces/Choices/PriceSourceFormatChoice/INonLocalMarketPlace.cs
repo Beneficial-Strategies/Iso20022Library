@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice;
 /// Source of a price quotation when it is not the local market.
 /// </summary>
 [IsoId("_RCDQ5dp-Ed-ak6NoX_4Aeg_1149070716")]
+[IsoXmlTag("NonLclMktPlc")]
 public interface INonLocalMarketPlace : IPriceSourceFormatChoice, IIsoChoiceVariant
 {
     /// <summary>

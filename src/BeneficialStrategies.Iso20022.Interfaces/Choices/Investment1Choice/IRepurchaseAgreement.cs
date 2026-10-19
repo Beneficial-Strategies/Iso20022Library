@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// Indicates that the investment was made in a repurchase agreement.
 /// </summary>
 [IsoId("_AIsK8LJXEeaYqc4G3TTwhA")]
+[IsoXmlTag("RpAgrmt")]
 public interface IRepurchaseAgreement : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>

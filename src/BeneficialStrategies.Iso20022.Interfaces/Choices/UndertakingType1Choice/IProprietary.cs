@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UndertakingType1Choice;
 /// Type of undertaking expressed as a proprietary code.
 /// </summary>
 [IsoId("_92zi0HltEeG7BsjMvd1mEw_1554859263")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUndertakingType1Choice, IIsoChoiceVariant
 {
     /// <summary>

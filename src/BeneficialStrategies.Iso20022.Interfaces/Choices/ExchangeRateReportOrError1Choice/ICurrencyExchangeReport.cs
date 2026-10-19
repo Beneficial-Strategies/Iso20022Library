@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError1Choice
 /// Reports on currency exchange information.
 /// </summary>
 [IsoId("_77JeRKMgEeCJ6YNENx4h-w_2054430932")]
+[IsoXmlTag("CcyXchgRpt")]
 public interface ICurrencyExchangeReport : IExchangeRateReportOrError1Choice, IIsoChoiceVariant
 {
     /// <summary>

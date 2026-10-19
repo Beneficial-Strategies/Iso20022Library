@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommissionBasis1Choice;
 /// Commission basis expressed as a proprietary code.
 /// </summary>
 [IsoId("_ehQOQBuCEeOqSdXzJ0oydA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICommissionBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

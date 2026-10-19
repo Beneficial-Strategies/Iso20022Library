@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType1Choice;
 /// Repurchase agreement where the agreement allows for the sale and repurchase of any of a selection of assets from a pool of eligible assets.
 /// </summary>
 [IsoId("_EbIM8LbrEeaqL_M7XFD7PQ")]
+[IsoXmlTag("GnlColl")]
 public interface IGeneralCollateral : IRepurchaseAgreementType1Choice, IIsoChoiceVariant
 {
     /// <summary>

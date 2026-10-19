@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction7Choice;
 /// Set of elements used to reference the details of the original payment initiation.
 /// </summary>
 [IsoId("_ehZ9sdcZEeqRFcf2R4bPBw")]
+[IsoXmlTag("Initn")]
 public interface IInitiation : IUnderlyingTransaction7Choice, IIsoChoiceVariant
 {
     /// <summary>

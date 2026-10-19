@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice;
 /// Indicates contract that is to be reported as a new trade and also included in a separate position report on the same day.
 /// </summary>
 [IsoId("_38nfWf_qEemm3skPVSMJQg")]
+[IsoXmlTag("PosCmpnt")]
 public interface IPositionComponent : ITradeReport10Choice, IIsoChoiceVariant
 {
     /// <summary>

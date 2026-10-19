@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice;
 /// Inflation commodities.
 /// </summary>
 [IsoId("_owQIRbtIEeiLRYqS-r-R-A")]
+[IsoXmlTag("Infltn")]
 public interface IInflation : IAssetClassCommodity5Choice, IIsoChoiceVariant
 {
     /// <summary>

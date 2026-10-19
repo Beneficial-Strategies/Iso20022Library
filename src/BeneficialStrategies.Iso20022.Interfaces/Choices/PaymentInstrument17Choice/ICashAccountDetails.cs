@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice;
 /// Cash account to debit for the payment of a subscription or of a savings plan to an investment fund.
 /// </summary>
 [IsoId("_t7vvERdHEeK5g-3oYI0_9Q")]
+[IsoXmlTag("CshAcctDtls")]
 public interface ICashAccountDetails : IPaymentInstrument17Choice, IIsoChoiceVariant
 {
     /// <summary>

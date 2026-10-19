@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason6Choice
 /// Proprietary identification of the reason why a cancellation request sent for the related instruction is pending.
 /// </summary>
 [IsoId("_86aTqZwtEeazcsnODTksnQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPendingCancellationReason6Choice, IIsoChoiceVariant
 {
     /// <summary>

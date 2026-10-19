@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModelType1Choice;
 /// Proprietary or institution&apos;s own code that specifies the type of margin model used by the central counterparty.
 /// </summary>
 [IsoId("_0jJe4I2GEeet3cKIYK84nw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IModelType1Choice, IIsoChoiceVariant
 {
     /// <summary>

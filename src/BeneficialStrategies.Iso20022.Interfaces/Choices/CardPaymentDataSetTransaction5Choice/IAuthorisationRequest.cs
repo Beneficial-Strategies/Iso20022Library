@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction5Ch
 /// Card payment transaction including an authorisation request.
 /// </summary>
 [IsoId("_Cc49Qap3EeanIZ10Ka8PnA")]
+[IsoXmlTag("AuthstnReq")]
 public interface IAuthorisationRequest : ICardPaymentDataSetTransaction5Choice, IIsoChoiceVariant
 {
     /// <summary>

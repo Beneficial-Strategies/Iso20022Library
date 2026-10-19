@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice;
 /// Provides details about the agreed amount for the segregated independent amount.
 /// </summary>
 [IsoId("_Qm7bJ9p-Ed-ak6NoX_4Aeg_-1857537663")]
+[IsoXmlTag("SgrtdIndpdntAmt")]
 public interface ISegregatedIndependentAmount : IAgreedAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

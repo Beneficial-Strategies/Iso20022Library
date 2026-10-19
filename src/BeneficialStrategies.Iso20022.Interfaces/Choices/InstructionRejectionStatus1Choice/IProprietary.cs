@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionRejectionStatus1Choic
 /// This code can be used in case another reason is required.
 /// </summary>
 [IsoId("_RCfVx9p-Ed-ak6NoX_4Aeg_-867514398")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInstructionRejectionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType1Choice;
 /// Last reported price of a financial instrument in a market, determined by supply and demand.
 /// </summary>
 [IsoId("_RdnLhtp-Ed-ak6NoX_4Aeg_-394309489")]
+[IsoXmlTag("Mkt")]
 public interface IMarket : IPriceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

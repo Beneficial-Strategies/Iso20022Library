@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderWaiverReason3Choice;
 /// Reason for the waiver expressed as a proprietary code.
 /// </summary>
 [IsoId("_PibkEzoREeabspMEjqY5TQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOrderWaiverReason3Choice, IIsoChoiceVariant
 {
     /// <summary>

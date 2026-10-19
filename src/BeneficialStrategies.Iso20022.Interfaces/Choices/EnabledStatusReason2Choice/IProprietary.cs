@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnabledStatusReason2Choice;
 /// Reason for the enabled account status expressed as a proprietary code.
 /// </summary>
 [IsoId("_WdIj4Ey-EeafiMTDrtSnyw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IEnabledStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice;
 /// Provides the summation of the call amounts for the segregated independent amount only.
 /// </summary>
 [IsoId("_9boCQqMPEeCojJW5vEuTEQ_-1606532938")]
+[IsoXmlTag("SgrtdIndpdntAmt")]
 public interface ISegregatedIndependentAmount : IMarginCallResult2Choice, IIsoChoiceVariant
 {
     /// <summary>

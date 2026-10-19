@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat3Choice;
 /// Format expressed as a proprietary identification.
 /// </summary>
 [IsoId("_qmP-gUEFEeWVgfuHGaKtRQ")]
+[IsoXmlTag("PrtryId")]
 public interface IProprietaryIdentification : IIdentificationFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

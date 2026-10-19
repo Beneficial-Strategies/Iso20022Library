@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarOrBusinessError1Choice;
 /// Reason the requested business information is not given.
 /// </summary>
 [IsoId("_dVcQ2om7Eeipw6hHPgB4Sw")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : ICalendarOrBusinessError1Choice, IIsoChoiceVariant
 {
     /// <summary>

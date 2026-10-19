@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 /// Indicates an update of a contract valuation or collateral.
 /// </summary>
 [IsoId("__fyLa2EUEe2P-L9DBerEgA")]
+[IsoXmlTag("ValtnUpd")]
 public interface IValuationUpdate : ITradeReport32Choice, IIsoChoiceVariant
 {
     /// <summary>

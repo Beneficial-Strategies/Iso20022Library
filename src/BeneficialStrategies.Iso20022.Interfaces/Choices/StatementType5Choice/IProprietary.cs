@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementType5Choice;
 /// Statement type expressed as a proprietary code.
 /// </summary>
 [IsoId("_u_T9qTqoEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStatementType5Choice, IIsoChoiceVariant
 {
     /// <summary>

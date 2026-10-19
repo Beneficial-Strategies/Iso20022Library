@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CivilStatus1Choice;
 /// Civil status expressed as a proprietary code.
 /// </summary>
 [IsoId("_AvbycCChEeWJd9HF2tO7BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICivilStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice;
 /// Identification of a cryptographic symetric key, previously exchanged between the initiator and the recipient.
 /// </summary>
 [IsoId("_c8uDQFc0EeOi-M6GtW0vCQ")]
+[IsoXmlTag("KeyIdr")]
 public interface IKeyIdentifier : IRecipient3Choice, IIsoChoiceVariant
 {
     /// <summary>

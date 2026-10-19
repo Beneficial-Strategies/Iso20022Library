@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModalityOfCounting1Choice;
 /// Modality of counting expressed as a proprietary code.
 /// </summary>
 [IsoId("_iCsvoK-vEemJ1NnLPsTFaw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IModalityOfCounting1Choice, IIsoChoiceVariant
 {
     /// <summary>

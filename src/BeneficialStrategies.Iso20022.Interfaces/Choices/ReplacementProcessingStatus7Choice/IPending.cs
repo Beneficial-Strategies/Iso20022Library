@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
 /// Replacement of the trade is pending.
 /// </summary>
 [IsoId("_A5cl8NokEeC60axPepSq7g_-1284046964")]
+[IsoXmlTag("Pdg")]
 public interface IPending : IReplacementProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

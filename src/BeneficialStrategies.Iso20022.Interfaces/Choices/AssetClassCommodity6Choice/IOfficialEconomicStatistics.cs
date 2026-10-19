@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice;
 /// Official Economic Statistics commodities.
 /// </summary>
 [IsoId("_1bgUKRZXEe2QNcZTDeoKnQ")]
+[IsoXmlTag("OffclEcnmcSttstcs")]
 public interface IOfficialEconomicStatistics : IAssetClassCommodity6Choice, IIsoChoiceVariant
 {
     /// <summary>

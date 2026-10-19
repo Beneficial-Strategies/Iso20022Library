@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus3Choice
 /// Reason for the pending cancellation status.
 /// </summary>
 [IsoId("_lFW2nQFnEeG2HcWTGfYeDQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IPendingCancellationStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

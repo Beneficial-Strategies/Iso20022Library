@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionNarrative3Choice;
 /// Proprietary identification of the narrative type of the message.
 /// </summary>
 [IsoId("_76NXKUGVEeWqy4niLuXETA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionNarrative3Choice, IIsoChoiceVariant
 {
     /// <summary>

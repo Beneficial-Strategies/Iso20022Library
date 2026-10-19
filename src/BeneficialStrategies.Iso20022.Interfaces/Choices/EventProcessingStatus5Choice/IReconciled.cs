@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus5Choice;
 /// Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed).
 /// </summary>
 [IsoId("_sjUmWeaEEemtTOaHuc_63w")]
+[IsoXmlTag("Rcncld")]
 public interface IReconciled : IEventProcessingStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

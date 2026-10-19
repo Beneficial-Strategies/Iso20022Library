@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation1Choi
 /// Identification of the default reservation.
 /// </summary>
 [IsoId("_8IjoJqMgEeCJ6YNENx4h-w_-508539744")]
+[IsoXmlTag("Dflt")]
 public interface IDefault : ICurrentOrDefaultReservation1Choice, IIsoChoiceVariant
 {
     /// <summary>

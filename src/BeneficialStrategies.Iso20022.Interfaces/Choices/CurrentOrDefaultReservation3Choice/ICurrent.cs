@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation3Choi
 /// Identification of the current reservation.
 /// </summary>
 [IsoId("_hBG6UdcZEeqRFcf2R4bPBw")]
+[IsoXmlTag("Cur")]
 public interface ICurrent : ICurrentOrDefaultReservation3Choice, IIsoChoiceVariant
 {
     /// <summary>

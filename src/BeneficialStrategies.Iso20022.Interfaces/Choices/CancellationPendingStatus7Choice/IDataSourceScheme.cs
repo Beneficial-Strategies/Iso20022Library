@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationPendingStatus7Choice
 /// Proprietary identification of the reason for the cancellation pending status.
 /// </summary>
 [IsoId("_nF77lSY5EeW_ZNn8gbfY7Q")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : ICancellationPendingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties1Choice;
 /// Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.
 /// </summary>
 [IsoId("_5n7tmxdAEeK5g-3oYI0_9Q")]
+[IsoXmlTag("CtdnForMnr")]
 public interface ICustodianForMinor : IAccountParties1Choice, IIsoChoiceVariant
 {
     /// <summary>

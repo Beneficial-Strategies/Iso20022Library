@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus1Choice;
 /// Status of the portfolio transfer reported.
 /// </summary>
 [IsoId("_BJu8ya3EEeeBVbuVcoH9Nw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPortfolioTransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

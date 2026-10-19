@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData18Choic
 /// Data on collateral used for the buy sell back transaction.
 /// </summary>
 [IsoId("_C6xis8g5Eeu4ecZgAYuz5w")]
+[IsoXmlTag("BuySellBck")]
 public interface IBuySellBack : ITransactionCollateralData18Choice, IIsoChoiceVariant
 {
     /// <summary>

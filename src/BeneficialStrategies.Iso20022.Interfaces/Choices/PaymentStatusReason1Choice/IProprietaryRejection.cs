@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice;
 /// Defines the reason that has been used by the system to reject the transaction.
 /// </summary>
 [IsoId("_QWOzu9EdEei798TPbKJMuw")]
+[IsoXmlTag("PrtryRjctn")]
 public interface IProprietaryRejection : IPaymentStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// Indicates that the investment was made in an unsecured deposit at a commercial deposit taking institution.
 /// </summary>
 [IsoId("_8csFMLJUEeaYqc4G3TTwhA")]
+[IsoXmlTag("UscrdCshDpst")]
 public interface IUnsecuredCashDeposit : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>

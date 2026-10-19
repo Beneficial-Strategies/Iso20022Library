@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode18Choice;
 /// Date expressed as a proprietary code.
 /// </summary>
 [IsoId("_aM8eyTqkEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDateCode18Choice, IIsoChoiceVariant
 {
     /// <summary>

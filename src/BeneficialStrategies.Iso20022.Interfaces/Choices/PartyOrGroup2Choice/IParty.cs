@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup2Choice;
 /// Specifies a party.
 /// </summary>
 [IsoId("_DDQTg249EeiU9cctagi5ow")]
+[IsoXmlTag("Pty")]
 public interface IParty : IPartyOrGroup2Choice, IIsoChoiceVariant
 {
     /// <summary>

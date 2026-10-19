@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason4Choice;
 /// Specifies the reason of the MatchedAlleged Status.
 /// </summary>
 [IsoId("_1ZiGg2XREeOWzsrIp2keDA")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IMatchingReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

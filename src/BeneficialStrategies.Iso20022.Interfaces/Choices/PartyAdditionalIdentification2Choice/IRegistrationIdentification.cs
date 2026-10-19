@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
 /// Official identification of an organisation in a specific register.
 /// </summary>
 [IsoId("_Qo3U09p-Ed-ak6NoX_4Aeg_136820808")]
+[IsoXmlTag("RegnId")]
 public interface IRegistrationIdentification
     : IPartyAdditionalIdentification2Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice;
 /// Creation of a benchmark.
 /// </summary>
 [IsoId("_v7YEYdOtEeilDKNlC_3bSg")]
+[IsoXmlTag("Cret")]
 public interface ICreate : IBenchmarkReport1Choice, IIsoChoiceVariant
 {
     /// <summary>

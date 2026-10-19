@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedCancellationStatusReason
 /// Proprietary identification of the reason for the rejected status.
 /// </summary>
 [IsoId("_RXptd9p-Ed-ak6NoX_4Aeg_890850597")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : IRejectedCancellationStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

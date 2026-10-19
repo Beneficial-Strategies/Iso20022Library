@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitOrError4Choice;
 /// Reason the requested business information is not given.
 /// </summary>
 [IsoId("_RixMQ3hdEeidzqjNEfehPg")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : ILimitOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

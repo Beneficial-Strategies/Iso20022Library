@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
 /// Amount specified as an ISO currency (ISO 4217).
 /// </summary>
 [IsoId("_8le6IANhEe2-vqzwMUAewg")]
+[IsoXmlTag("Amt")]
 public interface IAmount : ICurrencyOrDigitalTokenAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

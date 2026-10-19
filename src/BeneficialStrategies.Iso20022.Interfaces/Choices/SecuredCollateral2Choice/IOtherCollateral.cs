@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice;
 /// Identifies the collateral when the asset class pledged as collateral does not correspond to an ISIN.
 /// </summary>
 [IsoId("_iZO6B6idEeWHO_l3hf2rlA")]
+[IsoXmlTag("OthrColl")]
 public interface IOtherCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>

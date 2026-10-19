@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus10C
 /// Specifies a choice of status for the processing of an intra-position movement.
 /// </summary>
 [IsoId("_cdk0wzi8Eeydid5dcNPKvg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IIntraPositionProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

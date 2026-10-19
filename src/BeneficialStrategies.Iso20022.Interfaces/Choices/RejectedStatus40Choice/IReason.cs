@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus40Choice;
 /// Reason for the rejected status.
 /// </summary>
 [IsoId("_9FBMlx9QEeuFz_FaCzCLgQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IRejectedStatus40Choice, IIsoChoiceVariant
 {
     /// <summary>

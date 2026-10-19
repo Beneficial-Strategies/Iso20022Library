@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote1Choice;
 /// Instruction specifiying a vote instruction per resolution for the entire entitlement.
 /// </summary>
 [IsoId("_Rb-Mydp-Ed-ak6NoX_4Aeg_4446117")]
+[IsoXmlTag("GblVoteInstr")]
 public interface IGlobalVoteInstruction : IVote1Choice, IIsoChoiceVariant
 {
     /// <summary>

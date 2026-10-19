@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate8Choice;
 /// Interest rate is a variable / floating rate, based on an index.
 /// </summary>
 [IsoId("_IEREA35aEea2k7EBUopqxw")]
+[IsoXmlTag("Fltg")]
 public interface IFloating : IInterestRate8Choice, IIsoChoiceVariant
 {
     /// <summary>

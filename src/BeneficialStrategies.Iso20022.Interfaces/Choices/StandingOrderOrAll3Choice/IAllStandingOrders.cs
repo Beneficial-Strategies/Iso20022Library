@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll3Choice;
 /// Identification of all standing orders defined with specific characteristics.
 /// </summary>
 [IsoId("_ex1mY9cZEeqRFcf2R4bPBw")]
+[IsoXmlTag("AllStgOrdrs")]
 public interface IAllStandingOrders : IStandingOrderOrAll3Choice, IIsoChoiceVariant
 {
     /// <summary>

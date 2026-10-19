@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason4Ch
 /// Proprietary identification for the reason of the reversal.
 /// </summary>
 [IsoId("_ctOKN5KQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionReversalReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

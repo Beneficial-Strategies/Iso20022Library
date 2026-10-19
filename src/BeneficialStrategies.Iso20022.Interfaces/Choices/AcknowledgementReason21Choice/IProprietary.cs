@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason21Choice;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_6QCdhZNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAcknowledgementReason21Choice, IIsoChoiceVariant
 {
     /// <summary>

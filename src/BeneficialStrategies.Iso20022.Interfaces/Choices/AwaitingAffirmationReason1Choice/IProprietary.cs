@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AwaitingAffirmationReason1Choice
 /// Specifies the reason why the instruction has been alleged.
 /// </summary>
 [IsoId("_A6MM0tokEeC60axPepSq7g_1828180950")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAwaitingAffirmationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

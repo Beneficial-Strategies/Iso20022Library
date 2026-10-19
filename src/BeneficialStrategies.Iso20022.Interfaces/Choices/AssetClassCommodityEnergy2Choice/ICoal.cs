@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
 /// Definition of Coal energy commodity derivative.
 /// </summary>
 [IsoId("_x4yAd7vsEeiLRYqS-r-R-A")]
+[IsoXmlTag("Coal")]
 public interface ICoal : IAssetClassCommodityEnergy2Choice, IIsoChoiceVariant
 {
     /// <summary>

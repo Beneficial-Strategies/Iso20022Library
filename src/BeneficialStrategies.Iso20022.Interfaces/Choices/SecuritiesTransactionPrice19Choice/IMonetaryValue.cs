@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
 /// Price expressed as a monetary value.
 /// </summary>
 [IsoId("_fx9HMMgqEeuGrNSsxk3B0A")]
+[IsoXmlTag("MntryVal")]
 public interface IMonetaryValue : ISecuritiesTransactionPrice19Choice, IIsoChoiceVariant
 {
     /// <summary>

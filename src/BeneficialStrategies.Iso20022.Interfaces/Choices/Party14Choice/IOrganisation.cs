@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party14Choice;
 /// Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_dVFRCBdCEeK5g-3oYI0_9Q")]
+[IsoXmlTag("Org")]
 public interface IOrganisation : IParty14Choice, IIsoChoiceVariant
 {
     /// <summary>

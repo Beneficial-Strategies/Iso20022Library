@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// Mark-to-market pre-haircut value of other commodity collateral.
 /// </summary>
 [IsoId("_SUOCgBYIEeejf-cbr8l5qw")]
+[IsoXmlTag("Cmmdty")]
 public interface ICommodity : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

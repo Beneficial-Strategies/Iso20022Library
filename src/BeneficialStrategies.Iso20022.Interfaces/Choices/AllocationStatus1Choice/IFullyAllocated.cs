@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationStatus1Choice;
 /// Instruction has been fully covered by collateral.
 /// </summary>
 [IsoId("_cFIB8N_-EeiVRbNQx5-Vhg")]
+[IsoXmlTag("FullyAllctd")]
 public interface IFullyAllocated : IAllocationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

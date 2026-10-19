@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction1Choice;
 /// Card transaction details for the individual transaction, as recorded at the POI (point of interaction).
 /// </summary>
 [IsoId("_t6ZGtFkyEeGeoaLUQk__nA_97770603")]
+[IsoXmlTag("Indv")]
 public interface IIndividual : ICardTransaction1Choice, IIsoChoiceVariant
 {
     /// <summary>

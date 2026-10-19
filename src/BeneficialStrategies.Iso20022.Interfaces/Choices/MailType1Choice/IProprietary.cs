@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MailType1Choice;
 /// Mail type expressed as a proprietary code.
 /// </summary>
 [IsoId("_2nnkACCXEeWJd9HF2tO7BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMailType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActiveAmountRange3Choice;
 /// Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.
 /// </summary>
 [IsoId("_OvM9s5lcEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("ImpldCcyAndAmtRg")]
 public interface IImpliedCurrencyAndAmountRange : IActiveAmountRange3Choice, IIsoChoiceVariant
 {
     /// <summary>

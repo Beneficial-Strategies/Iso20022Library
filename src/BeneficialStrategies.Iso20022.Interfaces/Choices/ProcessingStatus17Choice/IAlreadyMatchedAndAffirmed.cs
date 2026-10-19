@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trade is AlreadyMatchedAndAffirmed.
 /// </summary>
 [IsoId("_A42wFNokEeC60axPepSq7g_1860431455")]
+[IsoXmlTag("AlrdyMtchdAndAffrmd")]
 public interface IAlreadyMatchedAndAffirmed : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

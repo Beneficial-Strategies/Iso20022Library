@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData18Choic
 /// Data on collateral used for the margin lending transaction.
 /// </summary>
 [IsoId("_C6xit8g5Eeu4ecZgAYuz5w")]
+[IsoXmlTag("MrgnLndg")]
 public interface IMarginLending : ITransactionCollateralData18Choice, IIsoChoiceVariant
 {
     /// <summary>

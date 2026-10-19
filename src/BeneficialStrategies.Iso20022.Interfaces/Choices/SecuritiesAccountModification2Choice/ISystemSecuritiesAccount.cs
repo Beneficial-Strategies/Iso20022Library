@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
 /// Account to or from which a securities entry is made.
 /// </summary>
 [IsoId("_8IwTgTp0Eemk2e6qGBk8IQ")]
+[IsoXmlTag("SysSctiesAcct")]
 public interface ISystemSecuritiesAccount : ISecuritiesAccountModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

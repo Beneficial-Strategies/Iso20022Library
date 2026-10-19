@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus29Choice;
 /// Specifies the reason of the cancellation status.
 /// </summary>
 [IsoId("_Y_KSwOBPEeiVRbNQx5-Vhg")]
+[IsoXmlTag("Rsn")]
 public interface IReason : ICancellationStatus29Choice, IIsoChoiceVariant
 {
     /// <summary>

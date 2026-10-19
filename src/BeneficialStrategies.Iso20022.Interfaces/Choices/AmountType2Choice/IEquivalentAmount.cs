@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType2Choice;
 /// Amount of money to be transferred between the debtor and creditor, before deduction of charges, expressed in the currency of the debtor&apos;s account, and to be transferred into a different currency. ||Usage: Currency of the amount is expressed in the currency of the debtor&apos;s account, but the amount to be transferred is in another currency. The debtor agent will convert the amount and currency to the to be transferred amount and currency, eg, &apos;pay equivalent of 100000 EUR in JPY&apos;(and account is in EUR).
 /// </summary>
 [IsoId("_Pxu4jtp-Ed-ak6NoX_4Aeg_-1148058938")]
+[IsoXmlTag("EqvtAmt")]
 public interface IEquivalentAmount : IAmountType2Choice, IIsoChoiceVariant
 {
     /// <summary>

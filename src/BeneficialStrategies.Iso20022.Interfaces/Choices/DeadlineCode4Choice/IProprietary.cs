@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeadlineCode4Choice;
 /// Proprietary identification of the reference date of a corporate action.
 /// </summary>
 [IsoId("_cfssl5KQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDeadlineCode4Choice, IIsoChoiceVariant
 {
     /// <summary>

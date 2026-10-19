@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period8Choice;
 /// Time span defined by a start date and time, and an end date and time.
 /// </summary>
 [IsoId("_ctouQv1cEeiAfJEqh4xF_Q")]
+[IsoXmlTag("FrDtToDt")]
 public interface IFromDateToDate : IPeriod8Choice, IIsoChoiceVariant
 {
     /// <summary>

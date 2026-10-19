@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice;
 /// Range of time between a start date and an end date.
 /// </summary>
 [IsoId("_jVCsNZlPEee-Zps0fZQaFQ")]
+[IsoXmlTag("FrToDt")]
 public interface IFromToDate : IDatePeriod2Choice, IIsoChoiceVariant
 {
     /// <summary>

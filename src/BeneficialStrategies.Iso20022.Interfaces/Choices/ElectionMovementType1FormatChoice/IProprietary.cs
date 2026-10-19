@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionMovementType1FormatChoic
 /// Proprietary code to express the effect on the holdings of electing a Corporate Action option.
 /// </summary>
 [IsoId("_RmjsIdp-Ed-ak6NoX_4Aeg_2024835178")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IElectionMovementType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

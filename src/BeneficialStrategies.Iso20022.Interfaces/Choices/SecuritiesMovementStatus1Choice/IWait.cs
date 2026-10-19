@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// At present the security satisfies the currency and eligibility criteria checks.
 /// </summary>
 [IsoId("_rJ9Q0OCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Wait")]
 public interface IWait : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

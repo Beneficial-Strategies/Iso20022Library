@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrOperationalError5Choice
 /// Reports either on the account information or on a business error.
 /// </summary>
 [IsoId("_fCDzsdcZEeqRFcf2R4bPBw")]
+[IsoXmlTag("AcctRpt")]
 public interface IAccountReport : IAccountOrOperationalError5Choice, IIsoChoiceVariant
 {
     /// <summary>

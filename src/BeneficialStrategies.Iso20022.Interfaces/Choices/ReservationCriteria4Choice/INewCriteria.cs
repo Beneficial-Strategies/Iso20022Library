@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria4Choice;
 /// Defines the criteria based on which the information is extracted.
 /// </summary>
 [IsoId("_gt_xE9cZEeqRFcf2R4bPBw")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : IReservationCriteria4Choice, IIsoChoiceVariant
 {
     /// <summary>

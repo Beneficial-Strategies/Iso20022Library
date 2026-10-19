@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MoneyLaunderingCheck1Choice;
 /// Money laundering status expressed as a proprietary code.
 /// </summary>
 [IsoId("_PZS2LRdDEeK5g-3oYI0_9Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMoneyLaunderingCheck1Choice, IIsoChoiceVariant
 {
     /// <summary>

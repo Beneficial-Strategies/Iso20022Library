@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MaturityRedemptionType3Choice;
 /// Maturity redemption type expressed as a proprietary code.
 /// </summary>
 [IsoId("_eFqj8-LxEeWOD7aAy2fAcA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMaturityRedemptionType3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction7Ch
 /// Cancelled card payment transaction to be captured.
 /// </summary>
 [IsoId("_438Tc9eiEeiJyp_aycJaTw")]
+[IsoXmlTag("Cxl")]
 public interface ICancellation : ICardPaymentDataSetTransaction7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountDesignation1Choice;
 /// Account designation expressed as a proprietary code.
 /// </summary>
 [IsoId("_oebyECCzEeWJd9HF2tO7BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAccountDesignation1Choice, IIsoChoiceVariant
 {
     /// <summary>

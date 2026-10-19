@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity14Choice;
 /// Total quantity of securities to be settled.
 /// </summary>
 [IsoId("_QYSGhRgKEeKqWJINzXcn5g")]
+[IsoXmlTag("Unit")]
 public interface IUnit : IQuantity14Choice, IIsoChoiceVariant
 {
     /// <summary>

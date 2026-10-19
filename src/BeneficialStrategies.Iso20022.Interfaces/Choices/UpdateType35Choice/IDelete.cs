@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType35Choice;
 /// Set of data requested for deletion from a security.
 /// </summary>
 [IsoId("_QOJ0M5JKEeuAlLVx8pyt3w")]
+[IsoXmlTag("Del")]
 public interface IDelete : IUpdateType35Choice, IIsoChoiceVariant
 {
     /// <summary>

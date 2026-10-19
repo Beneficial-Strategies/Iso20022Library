@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency7Choice;
 /// Frequency expressed as a proprietary code.
 /// </summary>
 [IsoId("_AbzAodokEeC60axPepSq7g_-1432215723")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFrequency7Choice, IIsoChoiceVariant
 {
     /// <summary>

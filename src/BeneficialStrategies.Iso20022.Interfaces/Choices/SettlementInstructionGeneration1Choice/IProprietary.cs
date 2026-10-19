@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementInstructionGeneration1
 /// Settlement instruction generation expressed as a proprietary code.
 /// </summary>
 [IsoId("_AbMjtNokEeC60axPepSq7g_-1865337149")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementInstructionGeneration1Choice, IIsoChoiceVariant
 {
     /// <summary>

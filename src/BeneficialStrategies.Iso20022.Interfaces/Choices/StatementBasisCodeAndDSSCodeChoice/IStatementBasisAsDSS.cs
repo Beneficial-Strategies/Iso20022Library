@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasisCodeAndDSSCodeChoi
 /// Statement basis expressed as a data source scheme and a code used within the data source scheme.
 /// </summary>
 [IsoId("_Q7Cp8tp-Ed-ak6NoX_4Aeg_-1630736025")]
+[IsoXmlTag("StmtBsisAsDSS")]
 public interface IStatementBasisAsDSS : IStatementBasisCodeAndDSSCodeChoice, IIsoChoiceVariant
 {
     /// <summary>

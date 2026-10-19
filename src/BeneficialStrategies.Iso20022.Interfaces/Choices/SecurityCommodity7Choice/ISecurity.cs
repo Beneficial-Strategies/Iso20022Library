@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityCommodity7Choice;
 /// Data specific to securities being subject to the transaction.
 /// </summary>
 [IsoId("_Ul6y8cgyEeuGrNSsxk3B0A")]
+[IsoXmlTag("Scty")]
 public interface ISecurity : ISecurityCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

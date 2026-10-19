@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice;
 /// Creation or update of a party.
 /// </summary>
 [IsoId("_GejBEDbuEeeYhaZ6bvG1Xg")]
+[IsoXmlTag("Upd")]
 public interface IUpdate : IPartyReport1Choice, IIsoChoiceVariant
 {
     /// <summary>

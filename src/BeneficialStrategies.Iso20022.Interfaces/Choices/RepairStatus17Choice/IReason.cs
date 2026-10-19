@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepairStatus17Choice;
 /// Specifies the reason of the repair status.
 /// </summary>
 [IsoId("_6QDE15NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IRepairStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

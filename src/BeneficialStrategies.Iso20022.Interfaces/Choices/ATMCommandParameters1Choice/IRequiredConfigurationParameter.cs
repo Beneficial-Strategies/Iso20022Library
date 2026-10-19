@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters1Choice;
 /// Parameters to be used by the configuration update command.
 /// </summary>
 [IsoId("_43VMQIqLEeSRT5rEzcAHEw")]
+[IsoXmlTag("ReqrdCfgtnParam")]
 public interface IRequiredConfigurationParameter : IATMCommandParameters1Choice, IIsoChoiceVariant
 {
     /// <summary>

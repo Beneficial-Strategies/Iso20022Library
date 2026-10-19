@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount1Choice;
 /// Total numbers of settlement transactions, receipts and deliveries, and the concerned settlement transaction number.
 /// </summary>
 [IsoId("_Qrsmadp-Ed-ak6NoX_4Aeg_-2040702072")]
+[IsoXmlTag("TtlNb")]
 public interface ITotalNumber : INumberCount1Choice, IIsoChoiceVariant
 {
     /// <summary>

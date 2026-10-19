@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice;
 /// Legal owners of the property. However, the beneficiary has the equitable or beneficial ownership.
 /// </summary>
 [IsoId("_tcOtI0zPEea8fovz_9xSTQ")]
+[IsoXmlTag("Trstee")]
 public interface ITrustee : IAccountParties11Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice;
 /// Cancellation of a benchmark previously updated.
 /// </summary>
 [IsoId("_P2VfdDrWEeedCZZ8dIPp6g")]
+[IsoXmlTag("Cxl")]
 public interface ICancellation : IBenchmarkReport1Choice, IIsoChoiceVariant
 {
     /// <summary>

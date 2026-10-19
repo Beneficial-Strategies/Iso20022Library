@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
 /// Instrument consists of multiple instruments.
 /// </summary>
 [IsoId("_HQWTw35aEea2k7EBUopqxw")]
+[IsoXmlTag("Bskt")]
 public interface IBasket : IFinancialInstrumentIdentification5Choice, IIsoChoiceVariant
 {
     /// <summary>

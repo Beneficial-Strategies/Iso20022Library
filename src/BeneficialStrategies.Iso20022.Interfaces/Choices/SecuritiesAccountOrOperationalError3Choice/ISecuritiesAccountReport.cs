@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrOperationalEr
 /// Report information about securities account reference data.
 /// </summary>
 [IsoId("_x4sjgTp1Eemk2e6qGBk8IQ")]
+[IsoXmlTag("SctiesAcctRpt")]
 public interface ISecuritiesAccountReport
     : ISecuritiesAccountOrOperationalError3Choice,
         IIsoChoiceVariant

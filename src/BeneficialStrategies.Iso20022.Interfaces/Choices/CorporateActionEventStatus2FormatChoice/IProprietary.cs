@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStatus2Forma
 /// Proprietary code to express the status of the CA option.
 /// </summary>
 [IsoId("_RmQKI9p-Ed-ak6NoX_4Aeg_-1374576252")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionEventStatus2FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

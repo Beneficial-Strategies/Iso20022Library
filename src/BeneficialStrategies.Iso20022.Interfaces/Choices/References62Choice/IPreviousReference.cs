@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References62Choice;
 /// Reference to a linked message that was previously sent.
 /// </summary>
 [IsoId("_VILsEUg9Eea8pJjypp-yMQ")]
+[IsoXmlTag("PrvsRef")]
 public interface IPreviousReference : IReferences62Choice, IIsoChoiceVariant
 {
     /// <summary>

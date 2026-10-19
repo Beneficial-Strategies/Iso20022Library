@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationReason2Choice;
 /// Specifies the reason why the related instruction is modified, or the related modification request is executed.
 /// </summary>
 [IsoId("_0jrN9AlIEeGATtfOBToyew_-383362613")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IModificationReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

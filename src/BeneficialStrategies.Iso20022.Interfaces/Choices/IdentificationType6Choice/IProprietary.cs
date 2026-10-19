@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType6Choice;
 /// Type of identification is defined using a proprietary code.
 /// </summary>
 [IsoId("_QmCDRNp-Ed-ak6NoX_4Aeg_-1787833558")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IIdentificationType6Choice, IIsoChoiceVariant
 {
     /// <summary>

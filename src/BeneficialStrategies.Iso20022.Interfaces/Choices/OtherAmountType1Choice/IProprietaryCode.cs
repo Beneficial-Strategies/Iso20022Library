@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAmountType1Choice;
 /// Type of amount expressed as a proprietary code.
 /// </summary>
 [IsoId("_i3ZxsI2NEeeNN9vGwZc5aA")]
+[IsoXmlTag("PrtryCd")]
 public interface IProprietaryCode : IOtherAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

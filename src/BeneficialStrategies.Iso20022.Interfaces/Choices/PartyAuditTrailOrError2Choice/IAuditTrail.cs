@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice;
 /// Provides the details of the audit trail data reported.
 /// </summary>
 [IsoId("_HK0lEWjHEeiCUdTMLdZoIg")]
+[IsoXmlTag("AudtTrl")]
 public interface IAuditTrail : IPartyAuditTrailOrError2Choice, IIsoChoiceVariant
 {
     /// <summary>

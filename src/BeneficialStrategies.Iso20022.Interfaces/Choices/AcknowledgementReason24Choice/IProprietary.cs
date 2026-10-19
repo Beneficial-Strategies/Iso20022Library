@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason24Choice;
 /// Specifies additional information about the processed instruction expressed as a proprietary code.
 /// </summary>
 [IsoId("_H732iZwZEeqtp-LOti013g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAcknowledgementReason24Choice, IIsoChoiceVariant
 {
     /// <summary>

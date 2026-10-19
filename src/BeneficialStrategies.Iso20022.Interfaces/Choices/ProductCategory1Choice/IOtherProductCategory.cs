@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice;
 /// Specifies the type of product category not present in the code list.
 /// </summary>
 [IsoId("_RbrR2Np-Ed-ak6NoX_4Aeg_1819640744")]
+[IsoXmlTag("OthrPdctCtgy")]
 public interface IOtherProductCategory : IProductCategory1Choice, IIsoChoiceVariant
 {
     /// <summary>

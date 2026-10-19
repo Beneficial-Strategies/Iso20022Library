@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier3Choi
 /// Trade identifier expressed in a proprietary notation.
 /// </summary>
 [IsoId("__pAKw07qEe2PGo0mhYCh1g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUniqueTransactionIdentifier3Choice, IIsoChoiceVariant
 {
     /// <summary>

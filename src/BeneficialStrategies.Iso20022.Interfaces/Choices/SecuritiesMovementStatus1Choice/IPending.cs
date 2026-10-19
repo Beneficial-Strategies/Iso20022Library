@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// Validation checks on the security have not yet started or are still ongoing.
 /// </summary>
 [IsoId("_fj4lkOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Pdg")]
 public interface IPending : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

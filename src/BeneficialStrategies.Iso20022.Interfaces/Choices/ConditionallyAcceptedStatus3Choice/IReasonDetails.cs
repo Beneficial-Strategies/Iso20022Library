@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConditionallyAcceptedStatus3Choi
 /// Reason for the conditionally accepted status, expressed as a code.
 /// </summary>
 [IsoId("_s1kxx0HXEeamVPoS58KxXA")]
+[IsoXmlTag("RsnDtls")]
 public interface IReasonDetails : IConditionallyAcceptedStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

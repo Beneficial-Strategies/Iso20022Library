@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatus1Choice;
 /// Status of the account expressed as a proprietary code.
 /// </summary>
 [IsoId("_HgVEICF1EeW9XJWqfgXIIA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAccountStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

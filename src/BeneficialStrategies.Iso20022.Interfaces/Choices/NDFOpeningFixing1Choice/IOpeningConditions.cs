@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NDFOpeningFixing1Choice;
 /// Used to provide the opening information associated with an NDF trade.
 /// </summary>
 [IsoId("_hvh9oLC1EeaYscKJ1tWGRA")]
+[IsoXmlTag("OpngConds")]
 public interface IOpeningConditions : INDFOpeningFixing1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus6Cho
 /// Cancelation request for the trade.
 /// </summary>
 [IsoId("_A4HJNNokEeC60axPepSq7g_-420432720")]
+[IsoXmlTag("CxlReqd")]
 public interface ICancellationRequested : ICancellationProcessingStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>

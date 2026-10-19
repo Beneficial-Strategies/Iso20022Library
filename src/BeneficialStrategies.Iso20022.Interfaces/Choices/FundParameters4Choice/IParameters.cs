@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters4Choice;
 /// Report parameters.
 /// </summary>
 [IsoId("_KQCmF2omEeipaMTLlhaKMQ")]
+[IsoXmlTag("Params")]
 public interface IParameters : IFundParameters4Choice, IIsoChoiceVariant
 {
     /// <summary>

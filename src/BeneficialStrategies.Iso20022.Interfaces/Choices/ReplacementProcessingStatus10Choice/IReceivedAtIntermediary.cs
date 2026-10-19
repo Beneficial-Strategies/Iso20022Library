@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
 /// Replacement of the trade is ReceivedAtIntermediary.
 /// </summary>
 [IsoId("_Rhhu_QeDEe2fOITqoTnSLQ")]
+[IsoXmlTag("RcvdAtIntrmy")]
 public interface IReceivedAtIntermediary : IReplacementProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

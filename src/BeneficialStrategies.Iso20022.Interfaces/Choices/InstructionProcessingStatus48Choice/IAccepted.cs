@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus48Cho
 /// Instruction is accepted.
 /// </summary>
 [IsoId("_pf9iQTi7Eeydid5dcNPKvg")]
+[IsoXmlTag("Accptd")]
 public interface IAccepted : IInstructionProcessingStatus48Choice, IIsoChoiceVariant
 {
     /// <summary>

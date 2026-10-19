@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria5Choice;
 /// Explicitly defines the query criteria.
 /// </summary>
 [IsoId("_OkkalW49EeiU9cctagi5ow")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : ITransactionCriteria5Choice, IIsoChoiceVariant
 {
     /// <summary>

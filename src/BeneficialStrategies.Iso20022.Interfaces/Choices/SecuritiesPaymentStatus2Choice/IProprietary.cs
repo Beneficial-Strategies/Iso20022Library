@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesPaymentStatus2Choice;
 /// Securities payment status expressed as a proprietary code.
 /// </summary>
 [IsoId("_QvHt0tp-Ed-ak6NoX_4Aeg_-1729908324")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecuritiesPaymentStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

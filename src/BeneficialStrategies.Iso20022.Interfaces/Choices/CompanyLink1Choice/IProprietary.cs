@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CompanyLink1Choice;
 /// Company link expressed as a proprietary code.
 /// </summary>
 [IsoId("_8_uDoCCZEeWJd9HF2tO7BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICompanyLink1Choice, IIsoChoiceVariant
 {
     /// <summary>

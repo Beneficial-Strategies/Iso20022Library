@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemRejectionReason1Choice
 /// Status reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_hlx-e73REeO2FLWuu_JIqg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IReportItemRejectionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

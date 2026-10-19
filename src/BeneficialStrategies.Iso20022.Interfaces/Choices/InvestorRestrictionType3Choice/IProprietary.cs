@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorRestrictionType3Choice;
 /// Investor restriction type expressed as a proprietary code.
 /// </summary>
 [IsoId("_dPETI-LxEeWOD7aAy2fAcA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestorRestrictionType3Choice, IIsoChoiceVariant
 {
     /// <summary>

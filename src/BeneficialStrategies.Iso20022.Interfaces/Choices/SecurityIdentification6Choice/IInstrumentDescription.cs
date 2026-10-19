@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice;
 /// Provides the ability to describe the instrument through a description and main characteristics.
 /// </summary>
 [IsoId("_TBKB8tp-Ed-ak6NoX_4Aeg_-1421894924")]
+[IsoXmlTag("InstrmDesc")]
 public interface IInstrumentDescription : ISecurityIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>

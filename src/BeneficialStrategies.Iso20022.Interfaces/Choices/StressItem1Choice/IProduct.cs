@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice;
 /// Identification and stress size of the major representative product.
 /// </summary>
 [IsoId("_t5WBoKsvEeayv9XxdmMwKQ")]
+[IsoXmlTag("Pdct")]
 public interface IProduct : IStressItem1Choice, IIsoChoiceVariant
 {
     /// <summary>

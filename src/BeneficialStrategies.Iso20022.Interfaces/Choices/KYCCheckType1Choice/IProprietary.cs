@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KYCCheckType1Choice;
 /// Type of Know Your Customer (KYC) check type expressed as a proprietary code.
 /// </summary>
 [IsoId("_GvML0BRyEeOKWo1NF21OVw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IKYCCheckType1Choice, IIsoChoiceVariant
 {
     /// <summary>

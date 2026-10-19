@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustificationChoice
 /// Missing or incorrect information.
 /// </summary>
 [IsoId("_VFn0ENp-Ed-ak6NoX_4Aeg_478745608")]
+[IsoXmlTag("MssngOrIncrrctInf")]
 public interface IMissingOrIncorrectInformation
     : IUnableToApplyJustificationChoice,
         IIsoChoiceVariant

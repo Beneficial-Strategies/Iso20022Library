@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice;
 /// Specific credit transfer mandate data.
 /// </summary>
 [IsoId("_2_Hf4clxEem0vqvvoqYsqQ")]
+[IsoXmlTag("CdtTrfMndt")]
 public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoiceVariant
 {
     /// <summary>

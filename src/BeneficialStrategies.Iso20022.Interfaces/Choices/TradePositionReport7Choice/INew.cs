@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice;
 /// Indicates whether position is reported for the first time.
 /// </summary>
 [IsoId("_bWl_gRLBEeqctpBfTmLJnw")]
+[IsoXmlTag("New")]
 public interface INew : ITradePositionReport7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus55Choice;
 /// Reason why the meeting instruction message or the individual meeting instruction is pending.
 /// </summary>
 [IsoId("_Tfp1KrKdEemux5trsZcCpw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IPendingStatus55Choice, IIsoChoiceVariant
 {
     /// <summary>

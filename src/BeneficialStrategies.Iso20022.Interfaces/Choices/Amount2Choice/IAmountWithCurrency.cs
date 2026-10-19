@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount2Choice;
 /// Number of monetary units specified in a currency where the unit of currency is explicit.
 /// </summary>
 [IsoId("_75DzlqMgEeCJ6YNENx4h-w_776606949")]
+[IsoXmlTag("AmtWthCcy")]
 public interface IAmountWithCurrency : IAmount2Choice, IIsoChoiceVariant
 {
     /// <summary>

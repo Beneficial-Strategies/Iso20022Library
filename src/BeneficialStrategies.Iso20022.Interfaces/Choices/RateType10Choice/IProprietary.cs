@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType10Choice;
 /// Proprietary identification of the type of tax rate.
 /// </summary>
 [IsoId("_Q2bPudp-Ed-ak6NoX_4Aeg_1023308151")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateType10Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement4Choice;
 /// Provides the collateral movement direction that is a delivery and optionaly a return.
 /// </summary>
 [IsoId("_yckWYYFvEeWtPe6Crjmeug")]
+[IsoXmlTag("CollMvmntDrctn")]
 public interface ICollateralMovementDirection : ICollateralMovement4Choice, IIsoChoiceVariant
 {
     /// <summary>

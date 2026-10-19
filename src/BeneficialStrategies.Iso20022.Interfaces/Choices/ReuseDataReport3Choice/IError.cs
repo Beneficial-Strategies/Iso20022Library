@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice;
 /// Indicates a cancellation of a wrongly submitted entire report in case the contract never came into existence or was not subject to reporting requirements but was reported to a trade repository by mistake.
 /// </summary>
 [IsoId("_0mq3s64bEemB_csI4yyKLA")]
+[IsoXmlTag("Err")]
 public interface IError : IReuseDataReport3Choice, IIsoChoiceVariant
 {
     /// <summary>

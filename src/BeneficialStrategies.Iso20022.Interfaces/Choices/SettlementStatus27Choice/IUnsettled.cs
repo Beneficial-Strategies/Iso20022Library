@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice;
 /// Instruction is unsettled.
 /// </summary>
 [IsoId("_5g9fgOCbEei2UYJ62ws-Fw")]
+[IsoXmlTag("Usttld")]
 public interface IUnsettled : ISettlementStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>

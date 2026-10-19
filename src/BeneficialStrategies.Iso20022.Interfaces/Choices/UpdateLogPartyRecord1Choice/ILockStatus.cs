@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies whether the party is locked or not, and the reason for this status, when required.
 /// </summary>
 [IsoId("_xPt7iWjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("LckSts")]
 public interface ILockStatus : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

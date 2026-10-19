@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError3Choice;
 /// Report information about party reference data.
 /// </summary>
 [IsoId("_7fpegVhLEeih3fUfzR38Ig")]
+[IsoXmlTag("PtyRpt")]
 public interface IPartyReport : IPartyOrOperationalError3Choice, IIsoChoiceVariant
 {
     /// <summary>

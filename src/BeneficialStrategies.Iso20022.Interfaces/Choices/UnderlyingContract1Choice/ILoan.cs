@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice;
 /// Underlying registered contract is a loan.
 /// </summary>
 [IsoId("_tf9isNLJEeSdq5yU2aaSNw")]
+[IsoXmlTag("Ln")]
 public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
 {
     /// <summary>

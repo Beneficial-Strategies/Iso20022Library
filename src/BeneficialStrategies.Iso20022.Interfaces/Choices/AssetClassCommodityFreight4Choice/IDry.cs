@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight4Choic
 /// Dry freight commodity derivative.
 /// </summary>
 [IsoId("_Rn91cU8REe2PGo0mhYCh1g")]
+[IsoXmlTag("Dry")]
 public interface IDry : IAssetClassCommodityFreight4Choice, IIsoChoiceVariant
 {
     /// <summary>

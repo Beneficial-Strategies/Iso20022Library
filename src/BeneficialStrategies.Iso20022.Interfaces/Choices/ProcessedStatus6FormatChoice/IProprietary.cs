@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus6FormatChoice;
 /// Proprietary code to express the processing status of a deactivation instruction.
 /// </summary>
 [IsoId("_RnmN99p-Ed-ak6NoX_4Aeg_-1064962645")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IProcessedStatus6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

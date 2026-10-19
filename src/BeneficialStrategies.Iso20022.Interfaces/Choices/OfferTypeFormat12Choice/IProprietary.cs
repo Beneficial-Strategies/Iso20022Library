@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat12Choice;
 /// Proprietary identification of the conditions that apply to the offer.
 /// </summary>
 [IsoId("_x2H9Uxe1EeyroI8qKgB7Mg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOfferTypeFormat12Choice, IIsoChoiceVariant
 {
     /// <summary>

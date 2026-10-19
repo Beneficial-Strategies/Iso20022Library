@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingStatus17Choice;
 /// Specifies the reason of the pending processing status.
 /// </summary>
 [IsoId("_fsBemekHEemm4qhb2yFPOw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IPendingProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementFrequencyReason1Choice;
 /// Statement frequency expressed as a proprietary code.
 /// </summary>
 [IsoId("_4OkjUBc_EeK5g-3oYI0_9Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStatementFrequencyReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

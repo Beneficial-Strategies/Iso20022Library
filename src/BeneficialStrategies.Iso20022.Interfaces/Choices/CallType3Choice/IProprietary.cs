@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CallType3Choice;
 /// Call type expressed as a proprietary code.
 /// </summary>
 [IsoId("_fNbCw-LcEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICallType3Choice, IIsoChoiceVariant
 {
     /// <summary>

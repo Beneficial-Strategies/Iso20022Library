@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason12FormatChoice;
 /// Proprietary code to express the reason of a rejection of a deactivation instruction.
 /// </summary>
 [IsoId("_RoMq4dp-Ed-ak6NoX_4Aeg_319289790")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason12FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

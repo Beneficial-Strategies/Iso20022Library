@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus7Cho
 /// Proprietary status.
 /// </summary>
 [IsoId("_17xaXzp4EeWVrPy0StzzSg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IModificationProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

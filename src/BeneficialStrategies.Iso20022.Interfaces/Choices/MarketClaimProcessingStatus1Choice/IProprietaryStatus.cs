@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
 /// Proprietary status related to an instruction.
 /// </summary>
 [IsoId("_YGaIhtx4EeqESbVR5AloZQ")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus : IMarketClaimProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

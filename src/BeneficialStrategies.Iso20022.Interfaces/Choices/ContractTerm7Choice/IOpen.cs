@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm7Choice;
 /// Transaction is open term, that is, has no fixed maturity date.
 /// </summary>
 [IsoId("_xsKXYa5qEeuo-IflVgGqiA")]
+[IsoXmlTag("Opn")]
 public interface IOpen : IContractTerm7Choice, IIsoChoiceVariant
 {
     /// <summary>

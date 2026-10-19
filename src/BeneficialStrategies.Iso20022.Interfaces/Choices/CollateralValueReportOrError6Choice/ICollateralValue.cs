@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError6Cho
 /// Requested information on the value of the position for collateral purposes.
 /// </summary>
 [IsoId("_EP0oozpyEemk2e6qGBk8IQ")]
+[IsoXmlTag("CollVal")]
 public interface ICollateralValue : ICollateralValueReportOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>

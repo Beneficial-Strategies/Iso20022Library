@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification12Choice;
 /// Identification of a security by proprietary or domestic identification scheme.
 /// </summary>
 [IsoId("_XMCG5Np-Ed-ak6NoX_4Aeg_1227787110")]
+[IsoXmlTag("OthrId")]
 public interface IOtherIdentification : ISecurityIdentification12Choice, IIsoChoiceVariant
 {
     /// <summary>

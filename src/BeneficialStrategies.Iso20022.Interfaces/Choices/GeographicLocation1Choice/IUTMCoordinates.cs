@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeographicLocation1Choice;
 /// Location on the earth specified by the Universal Transverse Mercator coordinate system, using the WGS84 geodesic system.
 /// </summary>
 [IsoId("_uiaUMIn5EeShMpas3885ww")]
+[IsoXmlTag("UTMCordints")]
 public interface IUTMCoordinates : IGeographicLocation1Choice, IIsoChoiceVariant
 {
     /// <summary>

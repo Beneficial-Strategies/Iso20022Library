@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockTrade4Choice;
 /// Block parent or child information expressed as a proprietary code.
 /// </summary>
 [IsoId("_2e1tSTqHEeWVrPy0StzzSg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBlockTrade4Choice, IIsoChoiceVariant
 {
     /// <summary>

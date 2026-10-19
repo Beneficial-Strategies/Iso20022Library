@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAsset2Choice;
 /// Other asset type specified as a proprietary code.
 /// </summary>
 [IsoId("__RowI5NBEemQB_8XA98K0Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOtherAsset2Choice, IIsoChoiceVariant
 {
     /// <summary>

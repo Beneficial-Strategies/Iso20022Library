@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeadlineCode3Choice;
 /// Proprietary identification of the reference date of a corporate action.
 /// </summary>
 [IsoId("_XGLR00GZEeWqy4niLuXETA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDeadlineCode3Choice, IIsoChoiceVariant
 {
     /// <summary>

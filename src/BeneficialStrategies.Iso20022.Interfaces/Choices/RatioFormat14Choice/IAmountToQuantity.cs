@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice;
 /// Ratio expressed as an amount to quantity ratio.
 /// </summary>
 [IsoId("_ffvb7AgYEeCVlvYcV4HKqQ")]
+[IsoXmlTag("AmtToQty")]
 public interface IAmountToQuantity : IRatioFormat14Choice, IIsoChoiceVariant
 {
     /// <summary>

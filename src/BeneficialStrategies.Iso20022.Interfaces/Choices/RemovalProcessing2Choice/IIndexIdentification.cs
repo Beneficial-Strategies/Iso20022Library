@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice;
 /// Identification of the security index to be excluded.
 /// </summary>
 [IsoId("__ioAQxIoEeyZaPkaPAzTvQ")]
+[IsoXmlTag("IndxId")]
 public interface IIndexIdentification : IRemovalProcessing2Choice, IIsoChoiceVariant
 {
     /// <summary>

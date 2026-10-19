@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Provides a proprietary status and a proprietary reason of the processing status of the trade.
 /// </summary>
 [IsoId("_A5JrBtokEeC60axPepSq7g_1406332169")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

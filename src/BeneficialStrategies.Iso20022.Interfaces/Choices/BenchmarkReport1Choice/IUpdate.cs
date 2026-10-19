@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice;
 /// Update of a benchmark.
 /// </summary>
 [IsoId("_DzGLgjrgEeedCZZ8dIPp6g")]
+[IsoXmlTag("Upd")]
 public interface IUpdate : IBenchmarkReport1Choice, IIsoChoiceVariant
 {
     /// <summary>

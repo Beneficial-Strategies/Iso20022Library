@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
 /// A credit default swap on an index.
 /// </summary>
 [IsoId("_xfbL035eEea2k7EBUopqxw")]
+[IsoXmlTag("CdtDfltSwpIndx")]
 public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

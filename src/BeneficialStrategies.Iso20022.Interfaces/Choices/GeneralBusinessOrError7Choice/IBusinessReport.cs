@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError7Choice;
 /// Reports either on the business information or on a business error.
 /// </summary>
 [IsoId("_QdJoA3hdEeidzqjNEfehPg")]
+[IsoXmlTag("BizRpt")]
 public interface IBusinessReport : IGeneralBusinessOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

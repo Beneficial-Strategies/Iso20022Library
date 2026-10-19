@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice;
 /// Status report details of all the individual orders conveyed in a bulk or multiple order message. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.
 /// </summary>
 [IsoId("_bpQwY0HPEeazV4RAqPV71g")]
+[IsoXmlTag("OrdrDtlsRpt")]
 public interface IOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
 {
     /// <summary>

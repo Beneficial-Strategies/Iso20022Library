@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus5Choice;
 /// Proprietary status related to the event processing.
 /// </summary>
 [IsoId("_sjUmaeaEEemtTOaHuc_63w")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus : IEventProcessingStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

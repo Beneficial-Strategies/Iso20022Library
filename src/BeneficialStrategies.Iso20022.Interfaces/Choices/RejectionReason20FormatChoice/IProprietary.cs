@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason20FormatChoice;
 /// Proprietary code to express the reason of a rejection of the standing instruction request.
 /// </summary>
 [IsoId("_Rofl1Np-Ed-ak6NoX_4Aeg_227864520")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason20FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

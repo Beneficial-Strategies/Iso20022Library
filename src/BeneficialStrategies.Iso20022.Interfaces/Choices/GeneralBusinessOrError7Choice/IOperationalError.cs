@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError7Choice;
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_QdJoAXhdEeidzqjNEfehPg")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IGeneralBusinessOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

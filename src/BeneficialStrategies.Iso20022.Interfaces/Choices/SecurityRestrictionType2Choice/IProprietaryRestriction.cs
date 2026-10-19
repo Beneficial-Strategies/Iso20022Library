@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityRestrictionType2Choice;
 /// Type of the restriction, for example, selling restriction, buying restriction, placing restriction.
 /// </summary>
 [IsoId("_dF_PoeLxEeWOD7aAy2fAcA")]
+[IsoXmlTag("PrtryRstrctn")]
 public interface IProprietaryRestriction : ISecurityRestrictionType2Choice, IIsoChoiceVariant
 {
     /// <summary>

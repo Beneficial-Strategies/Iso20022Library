@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party43Choice;
 /// Unique and unambiguous identification of a financial institution.
 /// </summary>
 [IsoId("_Bp2Qk249EeiU9cctagi5ow")]
+[IsoXmlTag("FIId")]
 public interface IFinancialInstitutionIdentification : IParty43Choice, IIsoChoiceVariant
 {
     /// <summary>

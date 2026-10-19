@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeCode5Choice;
 /// Specifies the execution priority of the instruction with a proprietary scheme.
 /// </summary>
 [IsoId("_AeoSMdokEeC60axPepSq7g_-1471740390")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPurposeCode5Choice, IIsoChoiceVariant
 {
     /// <summary>

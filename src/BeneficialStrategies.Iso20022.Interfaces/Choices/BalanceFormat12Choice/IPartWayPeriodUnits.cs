@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat12Choice;
 /// Number of units of a fund that were purchased part way throughout a distribution period, for example Group II Units in the U.K.
 /// </summary>
 [IsoId("_KUd0GxuyEeyhRdHRjakS2w")]
+[IsoXmlTag("PartWayPrdUnits")]
 public interface IPartWayPeriodUnits : IBalanceFormat12Choice, IIsoChoiceVariant
 {
     /// <summary>

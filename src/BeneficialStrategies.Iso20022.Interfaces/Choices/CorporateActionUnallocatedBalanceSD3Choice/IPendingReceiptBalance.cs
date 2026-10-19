@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// Quantity of securities in the sub-balance.
 /// </summary>
 [IsoId("_ujGedcSTEeeRJJtE9TSlkw")]
+[IsoXmlTag("PdgRctBal")]
 public interface IPendingReceiptBalance
     : ICorporateActionUnallocatedBalanceSD3Choice,
         IIsoChoiceVariant

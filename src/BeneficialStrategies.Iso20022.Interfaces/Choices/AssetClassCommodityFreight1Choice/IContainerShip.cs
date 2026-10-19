@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight1Choic
 /// Container ship freight commodity derivative.
 /// </summary>
 [IsoId("_AXue4vwgEeW4Wthd0Ze_kA")]
+[IsoXmlTag("CntnrShip")]
 public interface IContainerShip : IAssetClassCommodityFreight1Choice, IIsoChoiceVariant
 {
     /// <summary>

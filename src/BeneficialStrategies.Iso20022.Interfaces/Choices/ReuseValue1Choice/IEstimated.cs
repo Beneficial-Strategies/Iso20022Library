@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice;
 /// In the case when the actual value of reused collateral is unknown or cannot be calculated, an estimate value of reuse at individual financial instrument level calculated.
 /// </summary>
 [IsoId("_TXut0IxnEeap1-whlAlpOw")]
+[IsoXmlTag("Estmtd")]
 public interface IEstimated : IReuseValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

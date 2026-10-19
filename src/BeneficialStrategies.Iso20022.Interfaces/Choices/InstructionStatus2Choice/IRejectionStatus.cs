@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus2Choice;
 /// Status advising on the rejection of the instruction.
 /// </summary>
 [IsoId("_RWwVkdp-Ed-ak6NoX_4Aeg_-1258577092")]
+[IsoXmlTag("RjctnSts")]
 public interface IRejectionStatus : IInstructionStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

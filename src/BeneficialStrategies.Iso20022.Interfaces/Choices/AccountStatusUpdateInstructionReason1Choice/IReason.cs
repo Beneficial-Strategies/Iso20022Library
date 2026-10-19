@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstructionRe
 /// Reason for the instruction to change the account status.
 /// </summary>
 [IsoId("_NHQjM3i8EeaRm5xIK6nGuQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IAccountStatusUpdateInstructionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

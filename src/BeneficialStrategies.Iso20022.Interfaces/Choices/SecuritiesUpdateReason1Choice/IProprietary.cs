@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesUpdateReason1Choice;
 /// Update reason, in a proprietary form.
 /// </summary>
 [IsoId("_EjynM5I8EeuAlLVx8pyt3w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecuritiesUpdateReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

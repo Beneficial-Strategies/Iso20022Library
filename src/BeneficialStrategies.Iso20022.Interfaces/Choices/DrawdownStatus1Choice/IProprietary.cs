@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownStatus1Choice;
 /// Status expressed as a proprietary code.
 /// </summary>
 [IsoId("_oVF1kFKiEeiSDqv62fL07g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDrawdownStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

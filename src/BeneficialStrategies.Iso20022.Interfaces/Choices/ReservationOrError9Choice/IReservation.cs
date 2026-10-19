@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError9Choice;
 /// Requested information on the limit.
 /// </summary>
 [IsoId("_RYRzgXhdEeidzqjNEfehPg")]
+[IsoXmlTag("Rsvatn")]
 public interface IReservation : IReservationOrError9Choice, IIsoChoiceVariant
 {
     /// <summary>

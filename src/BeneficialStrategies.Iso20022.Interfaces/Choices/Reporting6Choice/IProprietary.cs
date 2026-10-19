@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reporting6Choice;
 /// Third party reporting information expressed as a proprietary code.
 /// </summary>
 [IsoId("_pdpd6TtCEeWRTLSN0i0tng")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IReporting6Choice, IIsoChoiceVariant
 {
     /// <summary>

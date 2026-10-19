@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage6Choice;
 /// Linked related reference.
 /// </summary>
 [IsoId("_2-DoNTWhEe2OzdGcZrUAEQ")]
+[IsoXmlTag("RltdRef")]
 public interface IRelatedReference : ILinkedMessage6Choice, IIsoChoiceVariant
 {
     /// <summary>

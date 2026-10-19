@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status25Choice;
 /// Status of the account management instruction is rejected.
 /// </summary>
 [IsoId("_E09yo0QTEealVdmlTDXWkw")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IStatus25Choice, IIsoChoiceVariant
 {
     /// <summary>

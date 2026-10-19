@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssignmentMethod2Choice;
 /// Assignment method expressed as a proprietary code.
 /// </summary>
 [IsoId("_hT0Zc-LaEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAssignmentMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>

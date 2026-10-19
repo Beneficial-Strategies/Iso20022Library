@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status31Choice;
 /// Status of the transfer cancellation is rejected.
 /// </summary>
 [IsoId("_ym2jw5M6EemKz5EOjv82iQ")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IStatus31Choice, IIsoChoiceVariant
 {
     /// <summary>

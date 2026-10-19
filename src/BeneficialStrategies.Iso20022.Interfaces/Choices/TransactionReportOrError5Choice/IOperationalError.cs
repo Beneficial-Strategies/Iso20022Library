@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError5Choice;
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_df3BI9cZEeqRFcf2R4bPBw")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : ITransactionReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>

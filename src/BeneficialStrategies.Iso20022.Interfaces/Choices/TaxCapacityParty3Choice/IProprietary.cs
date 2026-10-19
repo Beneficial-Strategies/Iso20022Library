@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCapacityParty3Choice;
 /// Party tax capacity expressed as a proprietary code.
 /// </summary>
 [IsoId("_AZQqANokEeC60axPepSq7g_258049433")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITaxCapacityParty3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight3Choic
 /// Other freight commodity derivative.
 /// </summary>
 [IsoId("_awrwkLv5EeiLRYqS-r-R-A")]
+[IsoXmlTag("Othr")]
 public interface IOther : IAssetClassCommodityFreight3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice;
 /// Full settlement.
 /// </summary>
 [IsoId("_xAc3AOCbEei2UYJ62ws-Fw")]
+[IsoXmlTag("Sttld")]
 public interface ISettled : ISettlementStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>

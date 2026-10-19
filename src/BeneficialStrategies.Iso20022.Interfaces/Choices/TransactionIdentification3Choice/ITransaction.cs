@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
 /// Provides identification of the securities financial transaction.
 /// </summary>
 [IsoId("_hY22AcK4EeuFNp8LZAnorg")]
+[IsoXmlTag("Tx")]
 public interface ITransaction : ITransactionIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

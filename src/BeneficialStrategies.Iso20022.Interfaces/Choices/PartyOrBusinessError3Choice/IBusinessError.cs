@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError3Choice;
 /// Business error resulting from a rejection.
 /// </summary>
 [IsoId("_0NEVYYwXEei289CGNqs21g")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : IPartyOrBusinessError3Choice, IIsoChoiceVariant
 {
     /// <summary>

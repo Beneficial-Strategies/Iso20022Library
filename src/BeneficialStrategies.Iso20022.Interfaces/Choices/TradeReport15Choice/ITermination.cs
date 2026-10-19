@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport15Choice;
 /// Indicates that reported transaction is a termination or an early termination of an existing contract.
 /// </summary>
 [IsoId("_oZRTV3g-Eeu3kecHd7QKUQ")]
+[IsoXmlTag("Termntn")]
 public interface ITermination : ITradeReport15Choice, IIsoChoiceVariant
 {
     /// <summary>

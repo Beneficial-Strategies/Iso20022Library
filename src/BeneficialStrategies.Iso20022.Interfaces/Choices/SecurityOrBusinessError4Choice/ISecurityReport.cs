@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice;
 /// Provides the financial instruments details.
 /// </summary>
 [IsoId("_P7y44ZJKEeuAlLVx8pyt3w")]
+[IsoXmlTag("SctyRpt")]
 public interface ISecurityReport : ISecurityOrBusinessError4Choice, IIsoChoiceVariant
 {
     /// <summary>

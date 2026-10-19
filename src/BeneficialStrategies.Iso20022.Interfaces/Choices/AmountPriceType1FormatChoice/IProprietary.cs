@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountPriceType1FormatChoice;
 /// Proprietary code to express the amount price type.
 /// </summary>
 [IsoId("_RlqUQ9p-Ed-ak6NoX_4Aeg_221154536")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAmountPriceType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

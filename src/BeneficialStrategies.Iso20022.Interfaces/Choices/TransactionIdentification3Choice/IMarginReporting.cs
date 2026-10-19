@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
 /// Provides identification of the margin reporting.
 /// </summary>
 [IsoId("_hY22A8K4EeuFNp8LZAnorg")]
+[IsoXmlTag("MrgnRptg")]
 public interface IMarginReporting : ITransactionIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

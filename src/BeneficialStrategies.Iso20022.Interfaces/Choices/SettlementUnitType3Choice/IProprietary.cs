@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementUnitType3Choice;
 /// Settlement unit type expressed as a proprietary code.
 /// </summary>
 [IsoId("_d8mHg-LxEeWOD7aAy2fAcA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementUnitType3Choice, IIsoChoiceVariant
 {
     /// <summary>

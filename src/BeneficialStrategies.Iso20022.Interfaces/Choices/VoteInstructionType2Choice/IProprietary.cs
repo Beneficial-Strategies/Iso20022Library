@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType2Choice;
 /// Vote option expressed as a proprietary code.
 /// </summary>
 [IsoId("_YC3j8_NoEeqRfth943bvEA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IVoteInstructionType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Specifies the name by which a party is known and which is usually used to identify that party.
 /// </summary>
 [IsoId("_yJhSpYv-Eei289CGNqs21g")]
+[IsoXmlTag("PtyNm")]
 public interface IPartyName : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

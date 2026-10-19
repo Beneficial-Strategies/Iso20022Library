@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingReason1Choice;
 /// Specifies the reason why the instruction has a failing settlement status.
 /// </summary>
 [IsoId("_UZqs8tp-Ed-ak6NoX_4Aeg_255245774")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFailingReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

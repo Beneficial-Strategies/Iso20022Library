@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType3Choice;
 /// Liquidity transfer request type, in a proprietary form.
 /// </summary>
 [IsoId("_72rN9aMgEeCJ6YNENx4h-w_705337914")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRequestType3Choice, IIsoChoiceVariant
 {
     /// <summary>

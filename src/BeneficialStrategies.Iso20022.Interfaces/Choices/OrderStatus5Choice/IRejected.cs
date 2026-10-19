@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice;
 /// Status of the individual order is rejected. This status is used for an order that has not been accepted or entered in an order book.
 /// </summary>
 [IsoId("_P8YAmkHREeasdbKMiqizqA")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IOrderStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

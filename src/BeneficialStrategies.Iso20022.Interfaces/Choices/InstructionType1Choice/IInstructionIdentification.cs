@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice;
 /// Identifies the meeting instruction message for which the status is provided.
 /// </summary>
 [IsoId("_RCWL1dp-Ed-ak6NoX_4Aeg_2129843244")]
+[IsoXmlTag("InstrId")]
 public interface IInstructionIdentification : IInstructionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

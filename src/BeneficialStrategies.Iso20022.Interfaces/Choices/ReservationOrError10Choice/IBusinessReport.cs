@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError10Choice;
 /// Reports on reservations.
 /// </summary>
 [IsoId("_eIHT8dcZEeqRFcf2R4bPBw")]
+[IsoXmlTag("BizRpt")]
 public interface IBusinessReport : IReservationOrError10Choice, IIsoChoiceVariant
 {
     /// <summary>

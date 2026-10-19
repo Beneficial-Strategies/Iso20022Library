@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LendingTransactionMethod1Choice;
 /// Lending transaction method expressed as a proprietary code.
 /// </summary>
 [IsoId("_AXK_UNokEeC60axPepSq7g_-759112225")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILendingTransactionMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>

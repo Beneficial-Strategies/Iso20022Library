@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticalExposureType1Choice;
 /// Type of political exposure expressed as a proprietary code.
 /// </summary>
 [IsoId("_ybFrYBRvEeOKWo1NF21OVw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPoliticalExposureType1Choice, IIsoChoiceVariant
 {
     /// <summary>

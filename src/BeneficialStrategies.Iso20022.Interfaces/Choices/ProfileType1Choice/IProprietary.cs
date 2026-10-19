@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfileType1Choice;
 /// Type of profile expressed as a proprietary code.
 /// </summary>
 [IsoId("_xfwCwCDNEeWPMvNwVtiMsA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IProfileType1Choice, IIsoChoiceVariant
 {
     /// <summary>

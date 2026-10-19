@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateType3FormatChoice;
 /// Proprietary code to express the type of price rate.
 /// </summary>
 [IsoId("_RnAYFdp-Ed-ak6NoX_4Aeg_-1977418657")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPriceRateType3FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

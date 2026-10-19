@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat1Choice;
 /// Specification of data in structured form.
 /// </summary>
 [IsoId("_Uys4Btp-Ed-ak6NoX_4Aeg_1723007680")]
+[IsoXmlTag("Strd")]
 public interface IStructured : IDataFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

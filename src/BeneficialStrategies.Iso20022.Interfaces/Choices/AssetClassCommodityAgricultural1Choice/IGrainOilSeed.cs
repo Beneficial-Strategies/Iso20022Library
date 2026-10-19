@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
 /// Grain oil seed agricultural commodity derivative.
 /// </summary>
 [IsoId("_VQFYZQ2jEeW72qLtWESimw")]
+[IsoXmlTag("GrnOilSeed")]
 public interface IGrainOilSeed : IAssetClassCommodityAgricultural1Choice, IIsoChoiceVariant
 {
     /// <summary>

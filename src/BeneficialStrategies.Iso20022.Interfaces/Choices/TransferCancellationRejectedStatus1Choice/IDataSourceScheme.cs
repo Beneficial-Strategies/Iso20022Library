@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationRejectedStat
 /// Proprietary identification for a reason of a rejected status in the report.
 /// </summary>
 [IsoId("_U0fAtNp-Ed-ak6NoX_4Aeg_886199596")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : ITransferCancellationRejectedStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

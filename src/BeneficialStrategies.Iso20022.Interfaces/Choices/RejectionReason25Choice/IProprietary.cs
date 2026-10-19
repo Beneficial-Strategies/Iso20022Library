@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason25Choice;
 /// Specifies the reason why the instruction/request has a rejection status using a proprietary format.
 /// </summary>
 [IsoId("_e9ksYzt5EeW638lNyHKv7A")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason25Choice, IIsoChoiceVariant
 {
     /// <summary>

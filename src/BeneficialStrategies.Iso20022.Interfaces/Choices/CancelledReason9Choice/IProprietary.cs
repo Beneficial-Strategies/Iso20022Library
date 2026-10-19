@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledReason9Choice;
 /// Proprietary identification specifying the reason why the instruction is cancelled.
 /// </summary>
 [IsoId("_9U4v-0GWEeWqy4niLuXETA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICancelledReason9Choice, IIsoChoiceVariant
 {
     /// <summary>

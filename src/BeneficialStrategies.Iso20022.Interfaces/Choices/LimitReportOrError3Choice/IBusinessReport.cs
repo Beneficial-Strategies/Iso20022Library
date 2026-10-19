@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError3Choice;
 /// Reports on limits.
 /// </summary>
 [IsoId("_Q1IWIZlhEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("BizRpt")]
 public interface IBusinessReport : ILimitReportOrError3Choice, IIsoChoiceVariant
 {
     /// <summary>

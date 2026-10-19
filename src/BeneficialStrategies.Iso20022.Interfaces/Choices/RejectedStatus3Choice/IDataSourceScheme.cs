@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus3Choice;
 /// Proprietary identification of a reason for a rejected status in the report.
 /// </summary>
 [IsoId("_U3BXUdp-Ed-ak6NoX_4Aeg_-43614249")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : IRejectedStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

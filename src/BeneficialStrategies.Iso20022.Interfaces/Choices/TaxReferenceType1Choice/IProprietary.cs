@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxReferenceType1Choice;
 /// Type of tax reference expressed as a proprietary code.
 /// </summary>
 [IsoId("_T2MrsE4REeiQHa-q1Uephw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITaxReferenceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

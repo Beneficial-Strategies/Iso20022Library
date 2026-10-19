@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrOperationalError4Choice
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_MiVdE249EeiU9cctagi5ow")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IAccountOrOperationalError4Choice, IIsoChoiceVariant
 {
     /// <summary>

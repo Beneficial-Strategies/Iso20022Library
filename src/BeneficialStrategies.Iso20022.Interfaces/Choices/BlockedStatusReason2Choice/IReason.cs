@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedStatusReason2Choice;
 /// Transaction type for which the account is blocked and the underlying reason.
 /// </summary>
 [IsoId("_8t7ZA11LEeagR5I1rq5oaw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IBlockedStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

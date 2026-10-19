@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundTransactionOutType
 /// Transaction type expressed as a proprietary code.
 /// </summary>
 [IsoId("_TMto8xMJEeSopak1K45eVQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestmentFundTransactionOutType1Choice, IIsoChoiceVariant
 {
     /// <summary>

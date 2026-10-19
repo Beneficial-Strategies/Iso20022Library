@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType2Choice;
 /// Type of charge in a proprietary form, as defined by the issuer.
 /// </summary>
 [IsoId("_RvC5xdp-Ed-ak6NoX_4Aeg_-1554093134")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IChargeType2Choice, IIsoChoiceVariant
 {
     /// <summary>

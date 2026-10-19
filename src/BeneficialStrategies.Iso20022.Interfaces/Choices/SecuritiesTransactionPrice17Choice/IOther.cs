@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
 /// Indicates that price or quantity is expressed in another notation.
 /// </summary>
 [IsoId("_gSTIjZjcEeqkLZLH6DK3UQ")]
+[IsoXmlTag("Othr")]
 public interface IOther : ISecuritiesTransactionPrice17Choice, IIsoChoiceVariant
 {
     /// <summary>

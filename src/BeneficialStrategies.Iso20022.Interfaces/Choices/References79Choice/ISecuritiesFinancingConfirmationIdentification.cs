@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References79Choice;
 /// Unambiguous identification of the confirmation to be cancelled.
 /// </summary>
 [IsoId("_Wkm3j0fGEey6Is2iMqV8fg")]
+[IsoXmlTag("SctiesFincgConfId")]
 public interface ISecuritiesFinancingConfirmationIdentification
     : IReferences79Choice,
         IIsoChoiceVariant

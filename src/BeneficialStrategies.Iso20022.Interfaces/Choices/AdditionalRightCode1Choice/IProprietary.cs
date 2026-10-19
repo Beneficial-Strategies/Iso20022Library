@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightCode1Choice;
 /// This code can be used in case another reason is required.
 /// </summary>
 [IsoId("_RDieoNp-Ed-ak6NoX_4Aeg_1874759869")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAdditionalRightCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity8Choice;
 /// Quantity of securities in the sub-balance.
 /// </summary>
 [IsoId("_k0vqaSp8EeyR9JrVGfaMKw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISubBalanceQuantity8Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat1
 /// Proprietary identification of the additional business process linked to a corporate action event.
 /// </summary>
 [IsoId("_M4dnWdD7Eeetfps_dpxRmg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAdditionalBusinessProcessFormat16Choice, IIsoChoiceVariant
 {
     /// <summary>

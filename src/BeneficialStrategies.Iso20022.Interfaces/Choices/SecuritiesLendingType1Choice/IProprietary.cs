@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesLendingType1Choice;
 /// Securities lending type expressed as a proprietary code.
 /// </summary>
 [IsoId("_AYhDIdokEeC60axPepSq7g_-1325852058")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecuritiesLendingType1Choice, IIsoChoiceVariant
 {
     /// <summary>

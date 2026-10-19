@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationStatus1Choice;
 /// Instruction has been partially covered by collateral.
 /// </summary>
 [IsoId("_pLKrIN_-EeiVRbNQx5-Vhg")]
+[IsoXmlTag("PrtlyAllctd")]
 public interface IPartiallyAllocated : IAllocationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

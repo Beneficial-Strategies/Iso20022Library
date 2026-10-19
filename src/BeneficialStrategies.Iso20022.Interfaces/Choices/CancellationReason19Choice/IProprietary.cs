@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason19Choice;
 /// Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.
 /// </summary>
 [IsoId("_jGFhaTnuEeWfSKvvZlhRKg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICancellationReason19Choice, IIsoChoiceVariant
 {
     /// <summary>

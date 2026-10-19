@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorType3Choice;
 /// Investor type expressed as a proprietary code.
 /// </summary>
 [IsoId("_c8LMU-LxEeWOD7aAy2fAcA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestorType3Choice, IIsoChoiceVariant
 {
     /// <summary>

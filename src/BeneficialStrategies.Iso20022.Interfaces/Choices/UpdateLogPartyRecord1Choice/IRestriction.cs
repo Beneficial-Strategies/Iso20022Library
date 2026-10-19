@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.
 /// </summary>
 [IsoId("_xPt7gmjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("Rstrctn")]
 public interface IRestriction : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties3Choice;
 /// Single owner of the investment account or, when the ownership is split among several owners, the primary owner is the one giving its address and account details for the registration.
 /// </summary>
 [IsoId("_4R170RRNEeOKWo1NF21OVw")]
+[IsoXmlTag("PmryOwnr")]
 public interface IPrimaryOwner : IAccountParties3Choice, IIsoChoiceVariant
 {
     /// <summary>

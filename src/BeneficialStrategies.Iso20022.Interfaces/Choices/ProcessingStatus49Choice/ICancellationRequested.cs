@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus49Choice;
 /// Cancellation request from your counterparty for this transaction is pending waiting for your cancellation request or consent.
 /// </summary>
 [IsoId("_kn1BKTnuEeWfSKvvZlhRKg")]
+[IsoXmlTag("CxlReqd")]
 public interface ICancellationRequested : IProcessingStatus49Choice, IIsoChoiceVariant
 {
     /// <summary>

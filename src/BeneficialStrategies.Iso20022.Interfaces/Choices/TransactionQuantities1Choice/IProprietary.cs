@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities1Choice;
 /// Proprietary quantities specification defined in the underlying transaction.
 /// </summary>
 [IsoId("_RU0b6Np-Ed-ak6NoX_4Aeg_1223868507")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITransactionQuantities1Choice, IIsoChoiceVariant
 {
     /// <summary>

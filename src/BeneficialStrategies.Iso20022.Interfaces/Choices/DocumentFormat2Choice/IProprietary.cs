@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat2Choice;
 /// Document format, in a free text form.
 /// </summary>
 [IsoId("_Eluss-atEeqCKaUycnDWEg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDocumentFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

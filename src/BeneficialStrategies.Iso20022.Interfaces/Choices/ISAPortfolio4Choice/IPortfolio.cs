@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio4Choice;
 /// Wrapper for a specific product or a specific sub-product owned by a set of beneficial owners.
 /// </summary>
 [IsoId("_1AA5A7NBEeewUI7-Tnew9A")]
+[IsoXmlTag("Prtfl")]
 public interface IPortfolio : IISAPortfolio4Choice, IIsoChoiceVariant
 {
     /// <summary>

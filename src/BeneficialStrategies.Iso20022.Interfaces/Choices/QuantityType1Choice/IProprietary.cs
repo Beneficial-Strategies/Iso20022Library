@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityType1Choice;
 /// Quantity type expressed as a proprietary code.
 /// </summary>
 [IsoId("_4AwGYQaxEeS3lpTattq7hg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IQuantityType1Choice, IIsoChoiceVariant
 {
     /// <summary>

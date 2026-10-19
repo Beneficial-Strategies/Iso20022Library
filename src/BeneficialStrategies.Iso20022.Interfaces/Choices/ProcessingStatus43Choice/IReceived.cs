@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice;
 /// Status of the standing settlement instruction, cancellation or deletion is received for further processing.
 /// </summary>
 [IsoId("_T_H5oVhGEeOMYfRGLS0NbA")]
+[IsoXmlTag("Rcvd")]
 public interface IReceived : IProcessingStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>

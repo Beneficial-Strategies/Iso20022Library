@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatusReason4Choice;
 /// Reason for the in repair status, expressed as a code.
 /// </summary>
 [IsoId("_Bptp5UHqEea8I67lh6qdSQ")]
+[IsoXmlTag("RsnDtls")]
 public interface IReasonDetails : IInRepairStatusReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

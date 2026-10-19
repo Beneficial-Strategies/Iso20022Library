@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat1
 /// Proprietary identification of the additional business process &quot;tax refund&quot; linked to a corporate action event.
 /// </summary>
 [IsoId("_5k0TypqPEeWNO_b7eN4F_w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAdditionalBusinessProcessFormat13Choice, IIsoChoiceVariant
 {
     /// <summary>

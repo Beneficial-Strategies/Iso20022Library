@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice;
 /// Indicates an update to the valuations of a previously reported position, but not a correction.
 /// </summary>
 [IsoId("_38nfX__qEemm3skPVSMJQg")]
+[IsoXmlTag("ValtnUpd")]
 public interface IValuationUpdate : ITradeReport10Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType42Choice;
 /// Proprietary identification of the type of withholding tax rate.
 /// </summary>
 [IsoId("__pfAU0EIEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateType42Choice, IIsoChoiceVariant
 {
     /// <summary>

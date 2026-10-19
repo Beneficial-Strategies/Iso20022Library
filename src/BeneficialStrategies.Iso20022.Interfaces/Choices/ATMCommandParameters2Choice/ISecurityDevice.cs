@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice;
 /// Parameters to be used to update the configuration or the status security device.
 /// </summary>
 [IsoId("_InOGIItIEeSxlKlAGYErFg")]
+[IsoXmlTag("SctyDvc")]
 public interface ISecurityDevice : IATMCommandParameters2Choice, IIsoChoiceVariant
 {
     /// <summary>

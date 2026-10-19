@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTotalData1Choice;
 /// Aggregated data of settlement instructions.
 /// </summary>
 [IsoId("_hwwPwB2nEeqF2P5v-Rtejg")]
+[IsoXmlTag("Data")]
 public interface IData : ISettlementTotalData1Choice, IIsoChoiceVariant
 {
     /// <summary>

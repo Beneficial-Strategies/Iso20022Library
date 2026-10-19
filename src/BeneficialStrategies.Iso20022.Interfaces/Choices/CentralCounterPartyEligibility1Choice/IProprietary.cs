@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CentralCounterPartyEligibility1C
 /// Central counterparty eligibility information expressed as a proprietary code.
 /// </summary>
 [IsoId("_QvkZwNp-Ed-ak6NoX_4Aeg_74167294")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICentralCounterPartyEligibility1Choice, IIsoChoiceVariant
 {
     /// <summary>

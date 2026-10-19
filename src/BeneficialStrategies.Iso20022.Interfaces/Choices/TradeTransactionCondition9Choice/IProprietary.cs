@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition9Choice
 /// Trade conditions expressed as a proprietary code.
 /// </summary>
 [IsoId("_9iS2C5BgEeakHoV5BVecAQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITradeTransactionCondition9Choice, IIsoChoiceVariant
 {
     /// <summary>

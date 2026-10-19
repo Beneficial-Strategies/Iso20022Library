@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
 /// Detailed information on statistics per combination of counterparties.
 /// </summary>
 [IsoId("_x1GY41yGEe24CqbZJK5XxA")]
+[IsoXmlTag("Rpt")]
 public interface IReport : IDetailedMissingValuationsStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>

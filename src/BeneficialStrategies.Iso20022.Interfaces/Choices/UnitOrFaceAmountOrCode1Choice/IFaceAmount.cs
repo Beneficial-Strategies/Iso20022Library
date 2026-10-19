@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOrFaceAmountOrCode1Choice;
 /// Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.
 /// </summary>
 [IsoId("_SoH22Np-Ed-ak6NoX_4Aeg_361302819")]
+[IsoXmlTag("FaceAmt")]
 public interface IFaceAmount : IUnitOrFaceAmountOrCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

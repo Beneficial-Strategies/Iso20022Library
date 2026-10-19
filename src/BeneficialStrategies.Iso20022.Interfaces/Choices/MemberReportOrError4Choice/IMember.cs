@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError4Choice;
 /// Requested member data when found in the system.
 /// </summary>
 [IsoId("_jEyVkZlCEee-Zps0fZQaFQ")]
+[IsoXmlTag("Mmb")]
 public interface IMember : IMemberReportOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice;
 /// Variable, index, benchmark or other price used in the valuation of a financial instrument.
 /// </summary>
 [IsoId("_27lowKswEeayv9XxdmMwKQ")]
+[IsoXmlTag("RskFctr")]
 public interface IRiskFactor : IStressItem1Choice, IIsoChoiceVariant
 {
     /// <summary>

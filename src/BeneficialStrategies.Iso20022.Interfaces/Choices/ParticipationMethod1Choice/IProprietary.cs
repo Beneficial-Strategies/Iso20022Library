@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ParticipationMethod1Choice;
 /// Method of participation in the general meeting vote expressed as a proprietary code.
 /// </summary>
 [IsoId("_APX1cK32EemG7MmivSuE5g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IParticipationMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>

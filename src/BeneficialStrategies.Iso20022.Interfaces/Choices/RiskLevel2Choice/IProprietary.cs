@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RiskLevel2Choice;
 /// Risk level expressed as a proprietary code.
 /// </summary>
 [IsoId("_BtuioyGREeWO8_xZKx-MFg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRiskLevel2Choice, IIsoChoiceVariant
 {
     /// <summary>

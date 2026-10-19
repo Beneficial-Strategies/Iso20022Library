@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice;
 /// Status that cannot be reported using one of the available standard status.
 /// </summary>
 [IsoId("_5VZh8ukGEemm4qhb2yFPOw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPortfolioTransferStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

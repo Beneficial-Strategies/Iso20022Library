@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity5Choi
 /// Amount of money used to derive the quantity of investment fund units to be sold, including all charges, commissions, and tax.
 /// </summary>
 [IsoId("_Soaxxdp-Ed-ak6NoX_4Aeg_1036647225")]
+[IsoXmlTag("GrssAmt")]
 public interface IGrossAmount : IFinancialInstrumentQuantity5Choice, IIsoChoiceVariant
 {
     /// <summary>

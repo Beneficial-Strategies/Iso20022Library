@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus9Choice;
 /// Trade is matched with tolerance.
 /// </summary>
 [IsoId("_A4aEJNokEeC60axPepSq7g_1625799281")]
+[IsoXmlTag("MtchdWthTlrnce")]
 public interface IMatchedWithTolerance : IMatchingStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

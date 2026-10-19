@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnaffirmedReason2Choice;
 /// Specifies the reason why the instruction/request has a unaffirmed status.
 /// </summary>
 [IsoId("_AzfH4tokEeC60axPepSq7g_-1511831342")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUnaffirmedReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

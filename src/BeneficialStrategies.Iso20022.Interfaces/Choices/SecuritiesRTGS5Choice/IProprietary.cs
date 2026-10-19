@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesRTGS5Choice;
 /// Securities RTGS information expressed as a proprietary code.
 /// </summary>
 [IsoId("_5TJ_C5NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecuritiesRTGS5Choice, IIsoChoiceVariant
 {
     /// <summary>

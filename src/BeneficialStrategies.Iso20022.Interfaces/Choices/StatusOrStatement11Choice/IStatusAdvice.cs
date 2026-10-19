@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement11Choice;
 /// Identifies the status advice and the transaction for which the status advice was requested.
 /// </summary>
 [IsoId("_4yyB8ygSEeym1_Zp1BTvEw")]
+[IsoXmlTag("StsAdvc")]
 public interface IStatusAdvice : IStatusOrStatement11Choice, IIsoChoiceVariant
 {
     /// <summary>

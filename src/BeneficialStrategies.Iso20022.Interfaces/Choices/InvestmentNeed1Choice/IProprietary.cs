@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentNeed1Choice;
 /// Investment need expressed as a proprietary code.
 /// </summary>
 [IsoId("_cMcC8DcdEeidBoT_PugKiA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestmentNeed1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus36Cho
 /// Protect Instruction has been full covered.
 /// </summary>
 [IsoId("_U39JN_0oEeiKOe8GCUL1Lg")]
+[IsoXmlTag("Cvrd")]
 public interface ICovered : IInstructionProcessingStatus36Choice, IIsoChoiceVariant
 {
     /// <summary>

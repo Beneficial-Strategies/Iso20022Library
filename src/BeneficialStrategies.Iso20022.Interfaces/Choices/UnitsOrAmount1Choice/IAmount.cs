@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitsOrAmount1Choice;
 /// Currency and amount of the periodical payments.
 /// </summary>
 [IsoId("_l0iy4BQcEeKebsB9eKJSkA")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IUnitsOrAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

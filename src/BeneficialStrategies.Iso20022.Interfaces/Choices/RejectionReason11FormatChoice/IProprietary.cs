@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason11FormatChoice;
 /// Proprietary code to express the reason of a rejection of the notification cancellation request.
 /// </summary>
 [IsoId("_RoC55tp-Ed-ak6NoX_4Aeg_313748811")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason11FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

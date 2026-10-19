@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError7Choice;
 /// Reason the requested business information is not given.
 /// </summary>
 [IsoId("_T9Cs05liEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : IReservationOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

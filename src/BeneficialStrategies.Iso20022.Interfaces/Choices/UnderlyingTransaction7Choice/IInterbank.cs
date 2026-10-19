@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction7Choice;
 /// Set of elements used to reference the details of the original interbank payment transaction.
 /// </summary>
 [IsoId("_ehZ9s9cZEeqRFcf2R4bPBw")]
+[IsoXmlTag("IntrBk")]
 public interface IInterbank : IUnderlyingTransaction7Choice, IIsoChoiceVariant
 {
     /// <summary>

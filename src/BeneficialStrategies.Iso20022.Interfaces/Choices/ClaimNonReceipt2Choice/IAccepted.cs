@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt2Choice;
 /// Claim non-receipt is accepted and processed by the agent.
 /// </summary>
 [IsoId("_EhbFMW4-EeiU9cctagi5ow")]
+[IsoXmlTag("Accptd")]
 public interface IAccepted : IClaimNonReceipt2Choice, IIsoChoiceVariant
 {
     /// <summary>

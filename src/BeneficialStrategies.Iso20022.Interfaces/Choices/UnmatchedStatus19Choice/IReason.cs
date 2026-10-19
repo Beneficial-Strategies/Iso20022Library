@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedStatus19Choice;
 /// Specifies the reason of the unmatched status.
 /// </summary>
 [IsoId("_6BIegZNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IUnmatchedStatus19Choice, IIsoChoiceVariant
 {
     /// <summary>

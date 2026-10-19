@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument61Choice;
 /// Identification of the security.
 /// </summary>
 [IsoId("_mW7mEZNBEemQB_8XA98K0Q")]
+[IsoXmlTag("Scty")]
 public interface ISecurity : IFinancialInstrument61Choice, IIsoChoiceVariant
 {
     /// <summary>

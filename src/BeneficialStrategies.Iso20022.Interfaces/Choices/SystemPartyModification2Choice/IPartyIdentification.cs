@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Unique identification to unambiguously identify the party within the system.
 /// </summary>
 [IsoId("_yJhSo4v-Eei289CGNqs21g")]
+[IsoXmlTag("PtyId")]
 public interface IPartyIdentification : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

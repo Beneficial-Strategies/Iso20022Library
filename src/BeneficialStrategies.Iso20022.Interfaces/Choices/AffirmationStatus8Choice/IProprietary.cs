@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus8Choice;
 /// Provides the status of the trade at confirmation level at the time the settlement instruction was sent.
 /// </summary>
 [IsoId("_8nU2CTqpEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAffirmationStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>

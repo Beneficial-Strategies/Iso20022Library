@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData26Choice;
 /// Details of the securities lending transaction.
 /// </summary>
 [IsoId("_3-z25Xz2EeurrJrNxcsszQ")]
+[IsoXmlTag("SctiesLndg")]
 public interface ISecuritiesLending : ITransactionLoanData26Choice, IIsoChoiceVariant
 {
     /// <summary>

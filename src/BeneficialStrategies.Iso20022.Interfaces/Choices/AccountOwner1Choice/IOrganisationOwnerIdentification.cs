@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOwner1Choice;
 /// Identification of the organisation that legally owns the account.
 /// </summary>
 [IsoId("_3SysEyFUEeWgV9SQSyaAog")]
+[IsoXmlTag("OrgOwnrId")]
 public interface IOrganisationOwnerIdentification : IAccountOwner1Choice, IIsoChoiceVariant
 {
     /// <summary>

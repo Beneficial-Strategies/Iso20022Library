@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityNominalValue1Choice;
 /// Total nominal amount of bonds (number of bonds multiplied by the face value).
 /// </summary>
 [IsoId("_xcCRUHaiEeavseMKyTsJEA")]
+[IsoXmlTag("NmnlVal")]
 public interface INominalValue : IQuantityNominalValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

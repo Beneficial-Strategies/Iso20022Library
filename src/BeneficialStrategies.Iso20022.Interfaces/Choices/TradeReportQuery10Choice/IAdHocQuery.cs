@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery10Choice;
 /// Query criteria specifically applied to ad-hoc queries.
 /// </summary>
 [IsoId("_esoLYd1dEeqxpKDfBZC1vg")]
+[IsoXmlTag("AdHocQry")]
 public interface IAdHocQuery : ITradeReportQuery10Choice, IIsoChoiceVariant
 {
     /// <summary>

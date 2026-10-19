@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingPosition10Choice;
 /// Processing position expressed as a proprietary code.
 /// </summary>
 [IsoId("_chT0t5KQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IProcessingPosition10Choice, IIsoChoiceVariant
 {
     /// <summary>

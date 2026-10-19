@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity32Cho
 /// Indicates that quantity is expressed as a monetary value.
 /// </summary>
 [IsoId("_Y7YBd5jgEeqkLZLH6DK3UQ")]
+[IsoXmlTag("MntryVal")]
 public interface IMonetaryValue : IFinancialInstrumentQuantity32Choice, IIsoChoiceVariant
 {
     /// <summary>

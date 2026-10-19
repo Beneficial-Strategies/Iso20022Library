@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnershipType2Choice;
 /// Ownership type expressed as a proprietary code.
 /// </summary>
 [IsoId("_9esAU7-GEeWfsa741pI6WA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOwnershipType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod3Choice;
 /// Method of transmission expressed as a proprietary code.
 /// </summary>
 [IsoId("_a0TYAwgqEeSUG-8hqXsVMQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICommunicationMethod3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType11Choice;
 /// Market type expressed as a proprietary code.
 /// </summary>
 [IsoId("_AcsYgdokEeC60axPepSq7g_-428545907")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMarketType11Choice, IIsoChoiceVariant
 {
     /// <summary>

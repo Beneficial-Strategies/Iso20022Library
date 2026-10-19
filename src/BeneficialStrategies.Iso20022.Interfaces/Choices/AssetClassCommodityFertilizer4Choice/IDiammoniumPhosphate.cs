@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Ch
 /// Diammonium phosphate fertilizer commodity derivative.
 /// </summary>
 [IsoId("_idnj808REe2PGo0mhYCh1g")]
+[IsoXmlTag("DmmnmPhspht")]
 public interface IDiammoniumPhosphate : IAssetClassCommodityFertilizer4Choice, IIsoChoiceVariant
 {
     /// <summary>

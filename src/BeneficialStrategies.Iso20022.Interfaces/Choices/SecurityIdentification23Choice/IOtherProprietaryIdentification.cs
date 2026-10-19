@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice;
 /// Proprietary identification of a security assigned by an institution or organisation.
 /// </summary>
 [IsoId("_CSq4TyGQEeW7gKYhAMEFCw")]
+[IsoXmlTag("OthrPrtryId")]
 public interface IOtherProprietaryIdentification
     : ISecurityIdentification23Choice,
         IIsoChoiceVariant

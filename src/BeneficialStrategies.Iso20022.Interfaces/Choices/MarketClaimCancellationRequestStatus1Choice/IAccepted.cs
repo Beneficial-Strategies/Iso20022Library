@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// Provides status information related to a cancellation request accepted for further processing.
 /// </summary>
 [IsoId("_1TcqZ9x4EeqESbVR5AloZQ")]
+[IsoXmlTag("Accptd")]
 public interface IAccepted : IMarketClaimCancellationRequestStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

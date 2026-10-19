@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginResult1Choice;
 /// Deficit amount that the central counterparty will provide to the clearing member.
 /// </summary>
 [IsoId("_Qk1wd9p-Ed-ak6NoX_4Aeg_-1636463476")]
+[IsoXmlTag("DfcitAmt")]
 public interface IDeficitAmount : IMarginResult1Choice, IIsoChoiceVariant
 {
     /// <summary>

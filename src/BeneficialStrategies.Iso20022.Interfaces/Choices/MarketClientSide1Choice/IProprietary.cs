@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClientSide1Choice;
 /// Market side or a client side information expressed as a proprietary code.
 /// </summary>
 [IsoId("_Qv3UsNp-Ed-ak6NoX_4Aeg_-2028755270")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMarketClientSide1Choice, IIsoChoiceVariant
 {
     /// <summary>

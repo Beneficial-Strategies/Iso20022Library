@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorCapacity1Choice;
 /// Investor capacity expressed as a proprietary code.
 /// </summary>
 [IsoId("_Qs45Mdp-Ed-ak6NoX_4Aeg_-1152132898")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestorCapacity1Choice, IIsoChoiceVariant
 {
     /// <summary>

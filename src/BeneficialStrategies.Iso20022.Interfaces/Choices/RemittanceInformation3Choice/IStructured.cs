@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemittanceInformation3Choice;
 /// Information in structured form, that is supplied to enable the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an account receivable system.
 /// </summary>
 [IsoId("_Rb-MwNp-Ed-ak6NoX_4Aeg_506340239")]
+[IsoXmlTag("Strd")]
 public interface IStructured : IRemittanceInformation3Choice, IIsoChoiceVariant
 {
     /// <summary>

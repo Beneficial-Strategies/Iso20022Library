@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxAmountOrRate4Choice;
 /// Amount of money resulting from the calculation of the tax.
 /// </summary>
 [IsoId("_yZwPhTklEeapUO0vUIo9Xw")]
+[IsoXmlTag("Amt")]
 public interface IAmount : ITaxAmountOrRate4Choice, IIsoChoiceVariant
 {
     /// <summary>

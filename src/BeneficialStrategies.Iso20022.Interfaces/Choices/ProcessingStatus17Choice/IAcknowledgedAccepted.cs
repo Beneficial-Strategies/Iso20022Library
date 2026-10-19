@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trade is AcknowledgedAccepted.
 /// </summary>
 [IsoId("_A42wE9okEeC60axPepSq7g_723107509")]
+[IsoXmlTag("AckdAccptd")]
 public interface IAcknowledgedAccepted : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

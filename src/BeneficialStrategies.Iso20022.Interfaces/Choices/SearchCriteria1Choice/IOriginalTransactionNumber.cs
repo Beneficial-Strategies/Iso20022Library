@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// Specifies the original transaction number.
 /// </summary>
 [IsoId("_PWk1NmHcEeGrBqfAqyy96Q")]
+[IsoXmlTag("OrgnlTxNb")]
 public interface IOriginalTransactionNumber : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>

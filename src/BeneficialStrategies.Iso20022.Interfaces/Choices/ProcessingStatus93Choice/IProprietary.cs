@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus93Choice;
 /// Status that cannot be reported using one of the available standard status.
 /// </summary>
 [IsoId("_ds1dhTi8Eeydid5dcNPKvg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IProcessingStatus93Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethodFormat3
 /// Proprietary identification of the format of interest computation method.
 /// </summary>
 [IsoId("_Ab8KkdokEeC60axPepSq7g_2136049806")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInterestComputationMethodFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingMethod1Choice;
 /// Tax values are based on tax calculation method A.
 /// </summary>
 [IsoId("_6P9DspqlEeGSON8vddiWzQ_1371622889")]
+[IsoXmlTag("MtdA")]
 public interface IMethodA : IBillingMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>

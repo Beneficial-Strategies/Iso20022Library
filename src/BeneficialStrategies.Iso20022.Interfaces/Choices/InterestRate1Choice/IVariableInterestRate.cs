@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate1Choice;
 /// Provides details about the variable rate.
 /// </summary>
 [IsoId("_Qk1wdNp-Ed-ak6NoX_4Aeg_1389639465")]
+[IsoXmlTag("VarblIntrstRate")]
 public interface IVariableInterestRate : IInterestRate1Choice, IIsoChoiceVariant
 {
     /// <summary>

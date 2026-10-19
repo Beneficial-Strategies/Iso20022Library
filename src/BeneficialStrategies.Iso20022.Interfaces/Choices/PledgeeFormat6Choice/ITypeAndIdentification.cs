@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat6Choice;
 /// Identification of the entity to which the financial instruments are pledged expressed as a code and a BIC.
 /// </summary>
 [IsoId("_Z07sm_fVEeiNZp_PtLohLw")]
+[IsoXmlTag("TpAndId")]
 public interface ITypeAndIdentification : IPledgeeFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityIndustrialPro
 /// Manufacturing related industrial product commodity derivative.
 /// </summary>
 [IsoId("_YRDnIFrgEeWN79Bl6BUd3g")]
+[IsoXmlTag("Manfctg")]
 public interface IManufacturing : IAssetClassCommodityIndustrialProduct1Choice, IIsoChoiceVariant
 {
     /// <summary>

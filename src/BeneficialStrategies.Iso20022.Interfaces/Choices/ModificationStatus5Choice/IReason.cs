@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationStatus5Choice;
 /// Specifies the reason of the modification status.
 /// </summary>
 [IsoId("_6QDrXZNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IModificationStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

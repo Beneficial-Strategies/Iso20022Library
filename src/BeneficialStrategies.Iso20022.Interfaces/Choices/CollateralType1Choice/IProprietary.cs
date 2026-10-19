@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralType1Choice;
 /// Type of collateral expressed as a proprietary code.
 /// </summary>
 [IsoId("_AYq0INokEeC60axPepSq7g_-1106261733")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICollateralType1Choice, IIsoChoiceVariant
 {
     /// <summary>

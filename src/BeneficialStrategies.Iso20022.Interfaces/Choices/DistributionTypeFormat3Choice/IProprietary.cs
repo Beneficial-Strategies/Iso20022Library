@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionTypeFormat3Choice;
 /// Proprietary identification of the type of distribution.
 /// </summary>
 [IsoId("_A_MZi_mdEeCZMIez125r5g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDistributionTypeFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError7Choice;
 /// Reports either business day information or a business error.
 /// </summary>
 [IsoId("_wq9RgZlcEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("BizRpt")]
 public interface IBusinessReport : IBusinessDayReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError4Choice;
 /// Requested information on the account.
 /// </summary>
 [IsoId("_khrGsRbvEeOy-PlRuFSUzQ")]
+[IsoXmlTag("StgOrdr")]
 public interface IStandingOrder : IStandingOrderOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

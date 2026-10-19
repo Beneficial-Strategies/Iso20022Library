@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote2Choice;
 /// Instruction specifiying a vote instruction per resolution for the entire entitlement.
 /// </summary>
 [IsoId("_RDPju9p-Ed-ak6NoX_4Aeg_116941435")]
+[IsoXmlTag("GblVoteInstr")]
 public interface IGlobalVoteInstruction : IVote2Choice, IIsoChoiceVariant
 {
     /// <summary>

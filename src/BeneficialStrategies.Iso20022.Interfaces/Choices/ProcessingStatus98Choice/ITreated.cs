@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is treated.
 /// </summary>
 [IsoId("_x4XDowarEe2phaVG0lYKTw")]
+[IsoXmlTag("Trtd")]
 public interface ITreated : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

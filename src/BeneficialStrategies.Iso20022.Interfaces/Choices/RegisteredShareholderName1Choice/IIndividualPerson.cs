@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_w5-30FxYEeWvPv3PXpS3fw")]
+[IsoXmlTag("IndvPrsn")]
 public interface IIndividualPerson : IRegisteredShareholderName1Choice, IIsoChoiceVariant
 {
     /// <summary>
