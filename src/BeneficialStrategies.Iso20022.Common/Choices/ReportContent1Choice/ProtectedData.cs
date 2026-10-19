@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent1Choice
     [IsoId("_f3ucsMlWEeuJ35KoBRZFOg")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public record ProtectedData : ReportContent1Choice_
+    public partial record ProtectedData : ReportContent1Choice_
     {
         /// <summary>
         /// Type of data protection.

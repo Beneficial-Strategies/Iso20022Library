@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJy3pdp-Ed-ak6NoX_4Aeg_2106998089")]
 [DisplayName("Rejected Element")]
-public record RejectedElement1
+public partial record RejectedElement1
 {
     /// <summary>
     /// Sequence number that allows to easily identify the element that is rejected.

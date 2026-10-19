@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D54C4U8TEe2PGo0mhYCh1g")]
 [DisplayName("Agricultural Commodity Forestry")]
-public record AgriculturalCommodityForestry2
+public partial record AgriculturalCommodityForestry2
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

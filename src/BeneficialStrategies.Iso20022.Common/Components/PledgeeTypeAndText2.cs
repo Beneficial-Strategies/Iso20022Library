@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sg8bNW_nEeSNvKTulh2IuA")]
 [DisplayName("Pledgee Type And Text")]
-public record PledgeeTypeAndText2
+public partial record PledgeeTypeAndText2
 {
     /// <summary>
     /// Additional information about the entity to which the financial instruments are pledged.

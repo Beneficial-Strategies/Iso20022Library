@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kzdEBO5NEeCisYr99QEiWA_1532720417")]
 [DisplayName("Audit Trail")]
-public record AuditTrail1
+public partial record AuditTrail1
 {
     /// <summary>
     /// Name of the field whose value has been changed.

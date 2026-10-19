@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty3Choice
     /// Financial Institution Identification.
     /// </summary>
     [DisplayName("Financial Institution Identification")]
-    public record FinancialInstitutionIdentification : TrackerParty3Choice_
+    public partial record FinancialInstitutionIdentification : TrackerParty3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

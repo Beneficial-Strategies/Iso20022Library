@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aOU-QbcREeabfchHYoktpA")]
 [DisplayName("Repurchase Agreement")]
-public record RepurchaseAgreement3
+public partial record RepurchaseAgreement3
 {
     /// <summary>
     /// Specifies attributes of a derivative based on Final ISDA Taxonomy v1.0 and Final ISDA Taxonomy v2.0.

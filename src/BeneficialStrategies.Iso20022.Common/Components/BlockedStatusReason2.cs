@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__e0zUV1LEeagR5I1rq5oaw")]
 [DisplayName("Blocked Status Reason")]
-public record BlockedStatusReason2
+public partial record BlockedStatusReason2
 {
     /// <summary>
     /// Type of transaction for which the account has a blocked status.

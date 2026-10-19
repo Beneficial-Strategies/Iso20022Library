@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VZbFQSFPEey8XKHwKquEQw")]
 [DisplayName("Plain Card Data")]
-public record PlainCardData21
+public partial record PlainCardData21
 {
     /// <summary>
     /// Identification of the driver or vehicle.

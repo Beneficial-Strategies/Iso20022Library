@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jomKS5ljEeeE1Ya-LgRsuQ")]
 [DisplayName("From To Amount Range")]
-public record FromToAmountRange1
+public partial record FromToAmountRange1
 {
     /// <summary>
     /// Lower boundary of a range of amount values.

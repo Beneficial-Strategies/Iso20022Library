@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UHySzNp-Ed-ak6NoX_4Aeg_1510604861")]
 [DisplayName("Amount And Quantity Ratio")]
-public record AmountAndQuantityRatio2
+public partial record AmountAndQuantityRatio2
 {
     /// <summary>
     /// Cash amount.

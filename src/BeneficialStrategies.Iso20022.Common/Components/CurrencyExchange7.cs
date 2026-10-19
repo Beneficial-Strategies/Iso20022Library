@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_77TPR6MgEeCJ6YNENx4h-w_156194561")]
 [DisplayName("Currency Exchange")]
-public record CurrencyExchange7
+public partial record CurrencyExchange7
 {
     /// <summary>
     /// The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).

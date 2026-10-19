@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xsKXZa5qEeuo-IflVgGqiA")]
 [DisplayName("Fixed Open Term Contract")]
-public record FixedOpenTermContract2
+public partial record FixedOpenTermContract2
 {
     /// <summary>
     /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the closing leg (forward leg) of the secured financing transaction.

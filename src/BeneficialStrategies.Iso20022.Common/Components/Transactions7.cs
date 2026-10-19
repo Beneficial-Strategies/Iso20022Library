@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M4MEpZlPEee-Zps0fZQaFQ")]
 [DisplayName("Transactions")]
-public record Transactions7
+public partial record Transactions7
 {
     /// <summary>
     /// Common detailed payment instruction information.

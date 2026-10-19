@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uvhcJ299EeKuY41pq1-dog")]
 [DisplayName("Issuer Attributes SD")]
-public record IssuerAttributesSD1
+public partial record IssuerAttributesSD1
 {
     /// <summary>
     /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance. ||In the case of XML, this is expressed by a valid XPath.

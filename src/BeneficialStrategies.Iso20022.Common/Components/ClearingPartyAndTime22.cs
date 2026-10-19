@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-GFDERZNEe2QNcZTDeoKnQ")]
 [DisplayName("Clearing Party And Time")]
-public record ClearingPartyAndTime22
+public partial record ClearingPartyAndTime22
 {
     /// <summary>
     /// Identifies the central counterparty (CCP) that cleared the transaction.

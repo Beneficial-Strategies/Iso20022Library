@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_i0T9sZlPEee-Zps0fZQaFQ")]
     [DisplayName("Standing Order Criteria 2 Choice")]
-    public abstract record StandingOrderCriteria2Choice_ { }
+    public abstract partial record StandingOrderCriteria2Choice_ { }
 }

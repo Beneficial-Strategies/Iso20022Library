@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZTvU4YHREeuwq_rv81SdXw")]
 [DisplayName("Original Transaction")]
-public record OriginalTransaction2
+public partial record OriginalTransaction2
 {
     /// <summary>
     /// Details of the original message for which a retrieval is being requested.

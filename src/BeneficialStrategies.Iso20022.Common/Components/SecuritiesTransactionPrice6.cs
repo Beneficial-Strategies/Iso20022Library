@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M5QB8ZivEe2f7NHvXATP5g")]
 [DisplayName("Securities Transaction Price")]
-public record SecuritiesTransactionPrice6
+public partial record SecuritiesTransactionPrice6
 {
     /// <summary>
     /// Price is currently not available, but pending.

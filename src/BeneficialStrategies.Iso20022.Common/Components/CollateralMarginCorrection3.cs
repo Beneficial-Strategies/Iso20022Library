@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PcVkga4aEemB_csI4yyKLA")]
 [DisplayName("Collateral Margin Correction")]
-public record CollateralMarginCorrection3
+public partial record CollateralMarginCorrection3
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

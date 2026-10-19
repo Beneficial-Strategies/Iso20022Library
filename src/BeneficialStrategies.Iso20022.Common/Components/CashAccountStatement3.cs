@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dB-GUeTXEfC01pKpYIyMTA")]
 [DisplayName("Cash Account Statement3")]
-public record CashAccountStatement3
+public partial record CashAccountStatement3
 {
     /// <summary>
     /// Date for which the statement is valid.

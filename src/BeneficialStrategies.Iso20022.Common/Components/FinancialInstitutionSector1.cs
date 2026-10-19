@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M0T6AQz2Ee2YoLD-1vFj0g")]
 [DisplayName("Financial Institution Sector")]
-public record FinancialInstitutionSector1
+public partial record FinancialInstitutionSector1
 {
     /// <summary>
     /// Specifies the nature of the counterparty business activities.

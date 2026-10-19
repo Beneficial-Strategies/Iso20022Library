@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yeyOwYHWEeu7P-fjMhpKOg")]
 [DisplayName("Retrieval Fulfilment Response")]
-public record RetrievalFulfilmentResponse2
+public partial record RetrievalFulfilmentResponse2
 {
     /// <summary>
     /// Environment of the transaction.

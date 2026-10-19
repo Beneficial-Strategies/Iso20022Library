@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x-2JJcK-EeuCIrYISEfoUg")]
 [DisplayName("Trade State Report")]
-public record TradeStateReport16
+public partial record TradeStateReport16
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

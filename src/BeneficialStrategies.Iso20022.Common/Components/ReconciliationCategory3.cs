@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IVUQNV55Ee2a_-MvhEjKmA")]
 [DisplayName("Reconciliation Category")]
-public record ReconciliationCategory3
+public partial record ReconciliationCategory3
 {
     /// <summary>
     /// Indicator of receiving only one side or both sides of the derivatives.

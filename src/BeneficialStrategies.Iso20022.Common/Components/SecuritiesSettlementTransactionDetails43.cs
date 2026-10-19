@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fp1I-_fYEeiNZp_PtLohLw")]
 [DisplayName("Securities Settlement Transaction Details")]
-public record SecuritiesSettlementTransactionDetails43
+public partial record SecuritiesSettlementTransactionDetails43
 {
     /// <summary>
     /// Provides settlement type and identification information.

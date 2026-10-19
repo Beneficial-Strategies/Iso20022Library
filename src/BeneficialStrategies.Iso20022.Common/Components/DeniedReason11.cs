@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t0nF4Ts8EeWRTLSN0i0tng")]
 [DisplayName("Denied Reason")]
-public record DeniedReason11
+public partial record DeniedReason11
 {
     /// <summary>
     /// Specifies the reason why the request has a denied status.

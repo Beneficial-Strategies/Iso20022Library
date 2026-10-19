@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G0wQQTarEeyjpIf0r_Ojqw")]
 [DisplayName("Amount")]
-public record Amount20
+public partial record Amount20
 {
     /// <summary>
     /// Type of telephone charge.

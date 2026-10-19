@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UlvaFtp-Ed-ak6NoX_4Aeg_-1833234715")]
 [DisplayName("Margin Call Result")]
-public record MarginCallResult2
+public partial record MarginCallResult2
 {
     /// <summary>
     /// Provides the summation of the call amounts for the variation margin amount only.

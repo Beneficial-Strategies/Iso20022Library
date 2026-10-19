@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ntONVzrcEeedCZZ8dIPp6g")]
 [DisplayName("Benchmark Update")]
-public record BenchmarkUpdate1
+public partial record BenchmarkUpdate1
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice messages.

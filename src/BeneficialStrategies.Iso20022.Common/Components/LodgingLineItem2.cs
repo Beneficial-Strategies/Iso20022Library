@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Z6ldASCDEey8XKHwKquEQw")]
 [DisplayName("Lodging Line Item")]
-public record LodgingLineItem2
+public partial record LodgingLineItem2
 {
     /// <summary>
     /// Date of the charge for the product or service associated with the line item.

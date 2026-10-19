@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hyc_gYtIEeSxlKlAGYErFg")]
 [DisplayName("ATM Configuration Parameter")]
-public record ATMConfigurationParameter2
+public partial record ATMConfigurationParameter2
 {
     /// <summary>
     /// Category of the cryptographic key.

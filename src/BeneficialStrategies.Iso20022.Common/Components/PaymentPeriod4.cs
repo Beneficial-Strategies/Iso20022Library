@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H54EIRVgEeOrY9qSHVspCA")]
 [DisplayName("Payment Period")]
-public record PaymentPeriod4
+public partial record PaymentPeriod4
 {
     /// <summary>
     /// Code for the payment.

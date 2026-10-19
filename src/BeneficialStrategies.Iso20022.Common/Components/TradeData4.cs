@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SvM2CgEcEeCQm6a_G2yO_w_-1369738530")]
 [DisplayName("Trade Data")]
-public record TradeData4
+public partial record TradeData4
 {
     /// <summary>
     /// Party that assigned the status to the foreign exchange trade.

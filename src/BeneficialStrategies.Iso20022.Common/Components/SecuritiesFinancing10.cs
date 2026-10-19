@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_At1L1NokEeC60axPepSq7g_-198376474")]
 [DisplayName("Securities Financing")]
-public record SecuritiesFinancing10
+public partial record SecuritiesFinancing10
 {
     /// <summary>
     /// Date/Time at which rate change has taken place.

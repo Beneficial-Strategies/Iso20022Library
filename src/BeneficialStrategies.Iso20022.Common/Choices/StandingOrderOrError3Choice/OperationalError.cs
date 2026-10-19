@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError3Choice
     [IsoId("_i_MAQxbvEeOy-PlRuFSUzQ")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : StandingOrderOrError3Choice_
+    public partial record OperationalError : StandingOrderOrError3Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

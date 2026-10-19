@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource2Choice
     /// </summary>
     [IsoId("_XKZII9p-Ed-ak6NoX_4Aeg_1174160604")]
     [DisplayName("Domestic")]
-    public record Domestic : IdentificationSource2Choice_
+    public partial record Domestic : IdentificationSource2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

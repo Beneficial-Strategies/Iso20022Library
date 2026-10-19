@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VCTJ7ZlQEee-Zps0fZQaFQ")]
 [DisplayName("Transaction Search Criteria")]
-public record TransactionSearchCriteria7
+public partial record TransactionSearchCriteria7
 {
     /// <summary>
     /// Defines the criteria which are used to search for the destination of the payment.

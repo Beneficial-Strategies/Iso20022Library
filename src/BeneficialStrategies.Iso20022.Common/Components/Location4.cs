@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MbodocW3EeuhguwJmlgagQ")]
 [DisplayName("Location")]
-public record Location4
+public partial record Location4
 {
     /// <summary>
     /// Contains the location code.

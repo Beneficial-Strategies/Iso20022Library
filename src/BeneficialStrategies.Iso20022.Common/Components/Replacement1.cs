@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UtfA1dp-Ed-ak6NoX_4Aeg_1630860927")]
 [DisplayName("Replacement")]
-public record Replacement1
+public partial record Replacement1
 {
     /// <summary>
     /// Content of the current element.

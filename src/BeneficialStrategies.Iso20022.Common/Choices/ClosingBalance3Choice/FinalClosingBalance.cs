@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance3Choice
     [IsoId("_96S_QQgHEeSxsfb1OEDVsw")]
     [DisplayName("Final Closing Balance")]
     [IsoXmlTag("FnlClsgBal")]
-    public record FinalClosingBalance : ClosingBalance3Choice_
+    public partial record FinalClosingBalance : ClosingBalance3Choice_
     {
         /// <summary>
         /// Quantity expressed as a number, eg, a number of shares.

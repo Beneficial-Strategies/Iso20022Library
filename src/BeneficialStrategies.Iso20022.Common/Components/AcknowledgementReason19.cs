@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QE5dZNLEeWGlc8L7oPDIg")]
 [DisplayName("Acknowledgement Reason")]
-public record AcknowledgementReason19
+public partial record AcknowledgementReason19
 {
     /// <summary>
     /// Reason provided for the status.

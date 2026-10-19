@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Su5UAQEcEeCQm6a_G2yO_w_1332252059")]
 [DisplayName("Requestor Details")]
-public record RequestorDetails1
+public partial record RequestorDetails1
 {
     /// <summary>
     /// Date and time at which the request was created.

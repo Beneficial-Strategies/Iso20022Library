@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PoVr9tp-Ed-ak6NoX_4Aeg_1399035911")]
 [DisplayName("Account Identification And Purpose")]
-public record AccountIdentificationAndPurpose
+public partial record AccountIdentificationAndPurpose
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

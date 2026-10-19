@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SsSlINp-Ed-ak6NoX_4Aeg_-1395385132")]
 [DisplayName("Airport Description")]
-public record AirportDescription1
+public partial record AirportDescription1
 {
     /// <summary>
     /// Identifies the town where the airport is located. For example: London.

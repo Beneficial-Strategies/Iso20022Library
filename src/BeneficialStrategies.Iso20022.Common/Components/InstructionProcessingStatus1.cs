@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RWwVktp-Ed-ak6NoX_4Aeg_-316967475")]
 [DisplayName("Instruction Processing Status")]
-public record InstructionProcessingStatus1
+public partial record InstructionProcessingStatus1
 {
     /// <summary>
     /// Status on the processing of the instructions.

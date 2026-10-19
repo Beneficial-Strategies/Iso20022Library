@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kEyRFXSbEeiH1ZOt2UD8vQ")]
 [DisplayName("Member")]
-public record Member5
+public partial record Member5
 {
     /// <summary>
     /// Word by which something is called or known or the family name of a person.

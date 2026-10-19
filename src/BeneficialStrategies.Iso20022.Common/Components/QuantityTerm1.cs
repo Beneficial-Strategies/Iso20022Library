@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X-QgoSJEEe2zWP9pqvmqdw")]
 [DisplayName("Quantity Term")]
-public record QuantityTerm1
+public partial record QuantityTerm1
 {
     /// <summary>
     /// Number of units of the financial instrument, that is, the nominal value.

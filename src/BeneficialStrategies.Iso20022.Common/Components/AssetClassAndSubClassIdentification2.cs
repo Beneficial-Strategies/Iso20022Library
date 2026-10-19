@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b_iE8aaUEeqZmriXpMtonA")]
 [DisplayName("Asset Class And Sub Class Identification")]
-public record AssetClassAndSubClassIdentification2
+public partial record AssetClassAndSubClassIdentification2
 {
     /// <summary>
     /// Asset class of non-equity instruments to which the result relates

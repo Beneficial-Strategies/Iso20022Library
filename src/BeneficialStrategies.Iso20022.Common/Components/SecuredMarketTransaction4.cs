@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GZo0hcEREea7jLfvGi1PDw")]
 [DisplayName("Secured Market Transaction")]
-public record SecuredMarketTransaction4
+public partial record SecuredMarketTransaction4
 {
     /// <summary>
     /// Defines the status of the reported transaction, that is details on whether the transaction is a new transaction, an amendment of a previously reported transaction, a cancellation of a previously reported transaction or a correction to a previously reported and rejected transaction.

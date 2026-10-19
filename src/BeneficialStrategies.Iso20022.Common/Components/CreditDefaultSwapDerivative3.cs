@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xtQzi35eEea2k7EBUopqxw")]
 [DisplayName("Credit Default Swap Derivative")]
-public record CreditDefaultSwapDerivative3
+public partial record CreditDefaultSwapDerivative3
 {
     /// <summary>
     /// Derivative on a credit default swap with the ISIN code of the underlying index.

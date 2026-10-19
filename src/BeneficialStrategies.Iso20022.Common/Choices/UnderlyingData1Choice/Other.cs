@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice
     [IsoId("_CXmpalRtEe23M4WgERMsYw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : UnderlyingData1Choice_
+    public partial record Other : UnderlyingData1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

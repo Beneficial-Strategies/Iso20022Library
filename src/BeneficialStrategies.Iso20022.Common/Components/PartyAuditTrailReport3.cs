@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QqREEZ9uEee7Qpz45yWJJw")]
 [DisplayName("Party Audit Trail Report")]
-public record PartyAuditTrailReport3
+public partial record PartyAuditTrailReport3
 {
     /// <summary>
     /// Identifies the returned party reference data or error information.

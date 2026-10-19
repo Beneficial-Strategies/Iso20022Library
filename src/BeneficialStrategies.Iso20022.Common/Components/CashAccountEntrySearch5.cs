@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P4orDZlcEeeE1Ya-LgRsuQ")]
 [DisplayName("Cash Account Entry Search")]
-public record CashAccountEntrySearch5
+public partial record CashAccountEntrySearch5
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

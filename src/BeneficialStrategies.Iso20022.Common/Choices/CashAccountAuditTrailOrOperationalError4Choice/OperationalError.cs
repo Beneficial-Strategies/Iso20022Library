@@ -9,7 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountAuditTrailOrOperation
     /// </summary>
     [IsoId("_9t1JA-VaEfC90e_m8fMznQ")]
     [DisplayName("Operational Error")]
-    public record OperationalError : CashAccountAuditTrailOrOperationalError4Choice_
+    public partial record OperationalError : CashAccountAuditTrailOrOperationalError4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OprlErr")]

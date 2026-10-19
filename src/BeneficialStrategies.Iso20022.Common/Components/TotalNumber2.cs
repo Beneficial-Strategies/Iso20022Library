@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JaoZgygdEey2k_sfZmJz4g")]
 [DisplayName("Total Number")]
-public record TotalNumber2
+public partial record TotalNumber2
 {
     /// <summary>
     /// Sequential number of the instruction in a range of linked settlement instructions.

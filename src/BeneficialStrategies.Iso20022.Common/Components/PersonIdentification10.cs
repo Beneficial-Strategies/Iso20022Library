@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9nU3QfPYEeS_qLctCs2aRQ")]
 [DisplayName("Person Identification")]
-public record PersonIdentification10
+public partial record PersonIdentification10
 {
     /// <summary>
     /// First name of a person (also known as given name).

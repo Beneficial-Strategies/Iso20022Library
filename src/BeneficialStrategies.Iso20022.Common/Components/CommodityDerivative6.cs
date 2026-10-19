@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0hU8oU-nEeiVsYLJl6hleg")]
 [DisplayName("Commodity Derivative")]
-public record CommodityDerivative6
+public partial record CommodityDerivative6
 {
     /// <summary>
     /// Place where the delivery and the cash settlement of the base product occurs.

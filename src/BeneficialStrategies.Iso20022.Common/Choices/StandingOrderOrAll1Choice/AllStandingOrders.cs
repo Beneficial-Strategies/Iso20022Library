@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll1Choice
     [IsoId("_790-0KMgEeCJ6YNENx4h-w_1737485731")]
     [DisplayName("All Standing Orders")]
     [IsoXmlTag("AllStgOrdrs")]
-    public record AllStandingOrders : StandingOrderOrAll1Choice_
+    public partial record AllStandingOrders : StandingOrderOrAll1Choice_
     {
         /// <summary>
         /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.|.

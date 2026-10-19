@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_weKLJTbsEead9bDRE_1DAQ")]
 [DisplayName("Cheque")]
-public record Cheque9
+public partial record Cheque9
 {
     /// <summary>
     /// Unique and unambiguous identifier for a cheque as assigned by the financial institution.

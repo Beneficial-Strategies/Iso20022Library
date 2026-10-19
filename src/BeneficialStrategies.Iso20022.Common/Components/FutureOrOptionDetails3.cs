@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TKaGYQeFEe2fOITqoTnSLQ")]
 [DisplayName("Future Or Option Details")]
-public record FutureOrOptionDetails3
+public partial record FutureOrOptionDetails3
 {
     /// <summary>
     /// Specifies the type of the contract for futures and options.

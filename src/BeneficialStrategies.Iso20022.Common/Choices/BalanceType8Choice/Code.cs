@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType8Choice
     /// </summary>
     [IsoId("_74nutqMgEeCJ6YNENx4h-w_-1104828389")]
     [DisplayName("Code")]
-    public record Code : BalanceType8Choice_
+    public partial record Code : BalanceType8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

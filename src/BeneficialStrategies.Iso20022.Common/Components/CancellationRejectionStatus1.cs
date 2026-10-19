@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RVa42Np-Ed-ak6NoX_4Aeg_-1616407173")]
 [DisplayName("Cancellation Rejection Status")]
-public record CancellationRejectionStatus1
+public partial record CancellationRejectionStatus1
 {
     /// <summary>
     /// Reason advising the rejection of the instruction cancellation request.

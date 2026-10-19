@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NAXwT5lPEee-Zps0fZQaFQ")]
 [DisplayName("Transaction Report")]
-public record TransactionReport4
+public partial record TransactionReport4
 {
     /// <summary>
     /// Reference to the instruction related to the payment for which information is requested.

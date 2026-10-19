@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MM9hZfNyEeqRfth943bvEA")]
 [DisplayName("Safekeeping Account")]
-public record SafekeepingAccount11
+public partial record SafekeepingAccount11
 {
     /// <summary>
     /// Account where financial instruments are maintained. Account held by the responding intermediary with its account servicer.

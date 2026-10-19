@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q52XIdp-Ed-ak6NoX_4Aeg_765499799")]
 [DisplayName("Fund Parameters")]
-public record FundParameters4
+public partial record FundParameters4
 {
     /// <summary>
     /// Financial instrument for which the fund processing passport report report is requested.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TRPsXdp-Ed-ak6NoX_4Aeg_-1876396278")]
 [DisplayName("Product Identifier")]
-public record ProductIdentifier2
+public partial record ProductIdentifier2
 {
     /// <summary>
     /// Specifies the type of product identifier by means of a code.

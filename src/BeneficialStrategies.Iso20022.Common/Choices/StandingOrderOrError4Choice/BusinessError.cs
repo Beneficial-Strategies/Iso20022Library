@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError4Choice
     [IsoId("_khrGsxbvEeOy-PlRuFSUzQ")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : StandingOrderOrError4Choice_
+    public partial record BusinessError : StandingOrderOrError4Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

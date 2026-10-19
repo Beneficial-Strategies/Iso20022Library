@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QIOLVZJKEeuAlLVx8pyt3w")]
 [DisplayName("Security Attributes")]
-public record SecurityAttributes12
+public partial record SecurityAttributes12
 {
     /// <summary>
     /// Provides additional details about the financial instrument.

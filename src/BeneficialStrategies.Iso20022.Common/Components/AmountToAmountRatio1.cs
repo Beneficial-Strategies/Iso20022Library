@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UHySwNp-Ed-ak6NoX_4Aeg_579173663")]
 [DisplayName("Amount To Amount Ratio")]
-public record AmountToAmountRatio1
+public partial record AmountToAmountRatio1
 {
     /// <summary>
     /// Numerator of the quotient of amounts.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FSdbIYEREeu6D49Gi-ZPwQ")]
 [DisplayName("Inquiry Initiation")]
-public record InquiryInitiation2
+public partial record InquiryInitiation2
 {
     /// <summary>
     /// Environment of the transaction.

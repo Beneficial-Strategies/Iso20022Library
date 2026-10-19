@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3XncoTq5EeWQ1Y7f8kds2A")]
 [DisplayName("Proprietary Quantity")]
-public record ProprietaryQuantity7
+public partial record ProprietaryQuantity7
 {
     /// <summary>
     /// Sign of the quantity of security.

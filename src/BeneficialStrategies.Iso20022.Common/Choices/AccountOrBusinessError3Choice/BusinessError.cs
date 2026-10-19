@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError3Choice
     [IsoId("_fowVc5-WEee28J7y9KlTWg")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : AccountOrBusinessError3Choice_
+    public partial record BusinessError : AccountOrBusinessError3Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

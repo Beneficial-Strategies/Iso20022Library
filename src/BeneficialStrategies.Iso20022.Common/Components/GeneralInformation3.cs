@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Su5UBAEcEeCQm6a_G2yO_w_-1968950823")]
 [DisplayName("General Information")]
-public record GeneralInformation3
+public partial record GeneralInformation3
 {
     /// <summary>
     /// Unique and unambiguous identifier for the message, as assigned by the sender.

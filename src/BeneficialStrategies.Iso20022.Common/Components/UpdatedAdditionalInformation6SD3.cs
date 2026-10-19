@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FWA4v2CUEeK8P92abE6HIA")]
 [DisplayName("Updated Additional Information 6 SD")]
-public record UpdatedAdditionalInformation6SD3
+public partial record UpdatedAdditionalInformation6SD3
 {
     /// <summary>
     /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance.

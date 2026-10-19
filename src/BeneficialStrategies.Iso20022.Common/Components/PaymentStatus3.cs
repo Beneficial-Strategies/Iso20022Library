@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NhZZ05lPEee-Zps0fZQaFQ")]
 [DisplayName("Payment Status")]
-public record PaymentStatus3
+public partial record PaymentStatus3
 {
     /// <summary>
     /// Status of a transfer, in coded form, as assigned by the transaction administrator.

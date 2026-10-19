@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__xWrgTpsEemk2e6qGBk8IQ")]
 [DisplayName("Collateral Value Criteria")]
-public record CollateralValueCriteria3
+public partial record CollateralValueCriteria3
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

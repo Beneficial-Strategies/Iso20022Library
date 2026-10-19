@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_NqBxSZlPEee-Zps0fZQaFQ")]
     [DisplayName("Payment Status Reason Code 7 Choice")]
-    public abstract record PaymentStatusReasonCode7Choice_ { }
+    public abstract partial record PaymentStatusReasonCode7Choice_ { }
 }

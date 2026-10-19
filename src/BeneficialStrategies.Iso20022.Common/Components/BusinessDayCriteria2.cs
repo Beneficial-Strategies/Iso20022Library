@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yFXaB5lcEeeE1Ya-LgRsuQ")]
 [DisplayName("Business Day Criteria")]
-public record BusinessDayCriteria2
+public partial record BusinessDayCriteria2
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice
     /// </summary>
     [IsoId("_4GLX05laEeeE1Ya-LgRsuQ")]
     [DisplayName("Query Name")]
-    public record QueryName : AccountCriteria2Choice_
+    public partial record QueryName : AccountCriteria2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

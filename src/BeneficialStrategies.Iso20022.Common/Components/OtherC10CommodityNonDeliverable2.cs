@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lcX3YXvyEeanCNPcMT7sSg")]
 [DisplayName("Other C 10 Commodity Non Deliverable")]
-public record OtherC10CommodityNonDeliverable2
+public partial record OtherC10CommodityNonDeliverable2
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

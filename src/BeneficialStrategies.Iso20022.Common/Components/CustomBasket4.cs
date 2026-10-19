@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_muRycVo2Ee23K4GXSpBSeg")]
 [DisplayName("Custom Basket")]
-public record CustomBasket4
+public partial record CustomBasket4
 {
     /// <summary>
     /// Identification of the structurer of the customer basket.

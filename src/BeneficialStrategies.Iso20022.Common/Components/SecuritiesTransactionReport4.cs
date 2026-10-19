@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J-kCF4G-EeaalK9UbuVGFw")]
 [DisplayName("Securities Transaction Report")]
-public record SecuritiesTransactionReport4
+public partial record SecuritiesTransactionReport4
 {
     /// <summary>
     /// Unique and unambiguous identification of the transaction.

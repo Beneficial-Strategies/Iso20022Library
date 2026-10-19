@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T5CFG9p-Ed-ak6NoX_4Aeg_2136410357")]
 [DisplayName("Product Category")]
-public record ProductCategory1
+public partial record ProductCategory1
 {
     /// <summary>
     /// Specifies the type of product category by means of a code.

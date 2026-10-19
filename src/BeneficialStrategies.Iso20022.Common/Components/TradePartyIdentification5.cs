@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SkxHqQEcEeCQm6a_G2yO_w_1255553988")]
 [DisplayName("Trade Party Identification")]
-public record TradePartyIdentification5
+public partial record TradePartyIdentification5
 {
     /// <summary>
     /// Party that submits the foreign exchange trade to the matching system or to the settlement system or to the counterparty.

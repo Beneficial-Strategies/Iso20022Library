@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7nW5oSCDEey8XKHwKquEQw")]
 [DisplayName("Telecom Services Summary")]
-public record TelecomServicesSummary2
+public partial record TelecomServicesSummary2
 {
     /// <summary>
     /// Contains the details of the customer. Also known as the user of the service.

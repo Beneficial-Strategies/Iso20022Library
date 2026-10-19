@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fMZ5yQAFEeqefbt-QjTNnA")]
 [DisplayName("Collateral")]
-public record Collateral42
+public partial record Collateral42
 {
     /// <summary>
     /// Date on which the counterparties contractually agree the exchange of cash, securities, or commodities versus collateral for the opening leg (spot leg) of the transaction.

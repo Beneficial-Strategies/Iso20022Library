@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitOrError3Choice
     [IsoId("_Rf2uI5lhEeeE1Ya-LgRsuQ")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : LimitOrError3Choice_
+    public partial record BusinessError : LimitOrError3Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

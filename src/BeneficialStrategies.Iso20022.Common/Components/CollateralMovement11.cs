@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sWEhdYpIEeaNTaanBSMWmg")]
 [DisplayName("Collateral Movement")]
-public record CollateralMovement11
+public partial record CollateralMovement11
 {
     /// <summary>
     /// Provides the collateral movement direction that is a delivery only.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T5L2FNp-Ed-ak6NoX_4Aeg_1219351972")]
 [DisplayName("Product Characteristics")]
-public record ProductCharacteristics1
+public partial record ProductCharacteristics1
 {
     /// <summary>
     /// Specifies the type of product characteristic by means of a code.

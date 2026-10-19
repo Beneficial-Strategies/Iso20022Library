@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitOrError3Choice
     [IsoId("_Rf2uIZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Limit")]
     [IsoXmlTag("Lmt")]
-    public record Limit : LimitOrError3Choice_
+    public partial record Limit : LimitOrError3Choice_
     {
         /// <summary>
         /// Amount of money of the limit, expressed in an eligible currency.

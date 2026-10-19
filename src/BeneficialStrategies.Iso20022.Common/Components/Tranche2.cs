@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ocsf0byOEeaUov4jN5X9Qw")]
 [DisplayName("Tranche")]
-public record Tranche2
+public partial record Tranche2
 {
     /// <summary>
     /// Indicates the point at which losses in the pool will attach to a particular tranche.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jwEksYv0EeumSPwlS1PkxQ")]
 [DisplayName("Hired Vehicle")]
-public record HiredVehicle2
+public partial record HiredVehicle2
 {
     /// <summary>
     /// Defines the type of company or vehicle being hired (for example, private, taxi, chauffeur service, rideshare).

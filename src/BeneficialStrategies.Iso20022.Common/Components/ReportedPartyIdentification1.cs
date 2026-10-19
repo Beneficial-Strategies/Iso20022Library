@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v6TEUYInEeWA9fc11zJf1Q")]
 [DisplayName("Reported Party Identification")]
-public record ReportedPartyIdentification1
+public partial record ReportedPartyIdentification1
 {
     /// <summary>
     /// Name or sector of the counterparty of the reporting agent used by the reporting agent.

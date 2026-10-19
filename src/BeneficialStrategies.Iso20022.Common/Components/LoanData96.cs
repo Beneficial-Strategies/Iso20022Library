@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CLGCkbOZEemDE9K-I5TT8Q")]
 [DisplayName("Loan Data")]
-public record LoanData96
+public partial record LoanData96
 {
     /// <summary>
     /// Indication of the cash values to be settled as of the start and maturity date of the transaction.

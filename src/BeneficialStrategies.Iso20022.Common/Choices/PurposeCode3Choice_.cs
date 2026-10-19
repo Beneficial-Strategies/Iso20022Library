@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XN-Akdp-Ed-ak6NoX_4Aeg_-1420247134")]
     [DisplayName("Purpose Code 3 Choice")]
-    public abstract record PurposeCode3Choice_ { }
+    public abstract partial record PurposeCode3Choice_ { }
 }

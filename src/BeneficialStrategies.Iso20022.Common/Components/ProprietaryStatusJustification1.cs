@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ny9Dz5lPEee-Zps0fZQaFQ")]
 [DisplayName("Proprietary Status Justification")]
-public record ProprietaryStatusJustification1
+public partial record ProprietaryStatusJustification1
 {
     /// <summary>
     /// Defines the reason why the Target2 SSP system has rejected the transaction.

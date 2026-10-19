@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_e_q3UE4NEeiQHa-q1Uephw")]
 [DisplayName("General Investment")]
-public record GeneralInvestment1
+public partial record GeneralInvestment1
 {
     /// <summary>
     /// Type of investment.

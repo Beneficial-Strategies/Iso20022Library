@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9qh9YeVaEfC90e_m8fMznQ")]
     [DisplayName("Cash Account Audit Trail Or Operational Error 4 Choice")]
-    public abstract record CashAccountAuditTrailOrOperationalError4Choice_ { }
+    public abstract partial record CashAccountAuditTrailOrOperationalError4Choice_ { }
 }

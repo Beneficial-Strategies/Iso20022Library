@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ul4kA9p-Ed-ak6NoX_4Aeg_1931035123")]
 [DisplayName("Requirement")]
-public record Requirement1
+public partial record Requirement1
 {
     /// <summary>
     /// Provides details about the margin requirements for the variation margin.

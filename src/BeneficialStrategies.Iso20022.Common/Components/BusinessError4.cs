@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P7y45ZJKEeuAlLVx8pyt3w")]
 [DisplayName("Business Error")]
-public record BusinessError4
+public partial record BusinessError4
 {
     /// <summary>
     /// Way(s) of identifying the security.

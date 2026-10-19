@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iwxEdXSbEeiH1ZOt2UD8vQ")]
 [DisplayName("Member Criteria")]
-public record MemberCriteria4
+public partial record MemberCriteria4
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

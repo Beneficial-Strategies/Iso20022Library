@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yfzO8Qz2Ee2YoLD-1vFj0g")]
 [DisplayName("Non Financial Institution Sector")]
-public record NonFinancialInstitutionSector10
+public partial record NonFinancialInstitutionSector10
 {
     /// <summary>
     /// Taxonomy for non-financial counterparties. The categories correspond to the main sections of NACE classification as defined in the regulation.

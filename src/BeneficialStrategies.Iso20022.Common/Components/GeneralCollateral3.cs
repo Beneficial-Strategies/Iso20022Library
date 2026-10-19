@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M0GsEeoaEeadseq5W5YLvQ")]
 [DisplayName("General Collateral")]
-public record GeneralCollateral3
+public partial record GeneralCollateral3
 {
     /// <summary>
     /// ISINs of allocated securities of general collateral where known.

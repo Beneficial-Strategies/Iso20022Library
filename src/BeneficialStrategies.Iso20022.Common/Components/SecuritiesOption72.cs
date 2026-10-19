@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ICF6FbXQEeiTob_PrFFUxA")]
 [DisplayName("Securities Option")]
-public record SecuritiesOption72
+public partial record SecuritiesOption72
 {
     /// <summary>
     /// Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election). In case of proration, if this minimum quantity is not reached then the instruction is void.

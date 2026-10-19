@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GPrWwQ1IEeqV4s5SpzR1dQ")]
 [DisplayName("Floating Rate")]
-public record FloatingRate5
+public partial record FloatingRate5
 {
     /// <summary>
     /// Indication of the floating rate used.

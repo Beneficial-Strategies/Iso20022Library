@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Lu4l8QgHEeSxsfb1OEDVsw")]
     [DisplayName("Opening Balance 3 Choice")]
-    public abstract record OpeningBalance3Choice_ { }
+    public abstract partial record OpeningBalance3Choice_ { }
 }

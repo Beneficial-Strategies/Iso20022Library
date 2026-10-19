@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uSmK8Ks2Eeayv9XxdmMwKQ")]
 [DisplayName("Strategy")]
-public record Strategy1
+public partial record Strategy1
 {
     /// <summary>
     /// Unique identifier for the strategy.

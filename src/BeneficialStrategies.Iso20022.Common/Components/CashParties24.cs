@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nszGBzcjEeOKPpUjhHfcCQ")]
 [DisplayName("Cash Parties")]
-public record CashParties24
+public partial record CashParties24
 {
     /// <summary>
     /// Party to which the payment amount must be ultimately delivered. In some cases, this may be a fund.

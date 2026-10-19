@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError5Choice
     [IsoId("_MP5s45lgEeeE1Ya-LgRsuQ")]
     [DisplayName("Business Report")]
     [IsoXmlTag("BizRpt")]
-    public record BusinessReport : GeneralBusinessOrError5Choice_
+    public partial record BusinessReport : GeneralBusinessOrError5Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t58awlkyEeGeoaLUQk__nA_-58511897")]
 [DisplayName("Card Individual Transaction")]
-public record CardIndividualTransaction1
+public partial record CardIndividualTransaction1
 {
     /// <summary>
     /// Service in addition to the main service.

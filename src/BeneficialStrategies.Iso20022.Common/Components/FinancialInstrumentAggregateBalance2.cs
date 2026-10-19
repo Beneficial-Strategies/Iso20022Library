@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aA5_JqCCEeOEyO7fCl8lLA")]
 [DisplayName("Financial Instrument Aggregate Balance")]
-public record FinancialInstrumentAggregateBalance2
+public partial record FinancialInstrumentAggregateBalance2
 {
     /// <summary>
     /// Balance of settled transactions.

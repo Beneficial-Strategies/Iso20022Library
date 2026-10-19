@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qa2uBdp-Ed-ak6NoX_4Aeg_101667231")]
 [DisplayName("Price Rate")]
-public record PriceRate1
+public partial record PriceRate1
 {
     /// <summary>
     /// Type of rate, eg, yield.

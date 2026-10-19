@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RR2AZNp-Ed-ak6NoX_4Aeg_1677189755")]
 [DisplayName("Investment Account Information Type")]
-public record InvestmentAccountInformationType1
+public partial record InvestmentAccountInformationType1
 {
     /// <summary>
     /// Indicates if the core investment account information must be selected.

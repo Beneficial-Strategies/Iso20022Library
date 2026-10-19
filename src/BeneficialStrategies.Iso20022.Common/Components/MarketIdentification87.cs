@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZkmIMNTPEeKvJeoOII0e7w")]
 [DisplayName("Market Identification")]
-public record MarketIdentification87
+public partial record MarketIdentification87
 {
     /// <summary>
     /// Country in which the financial instrument is to be settled.

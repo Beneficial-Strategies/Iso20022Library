@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PgIEV5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Limit Criteria 5 Choice")]
-    public abstract record LimitCriteria5Choice_ { }
+    public abstract partial record LimitCriteria5Choice_ { }
 }

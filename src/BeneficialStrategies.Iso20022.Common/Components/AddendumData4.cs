@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D4FAcR1UEey8XKHwKquEQw")]
 [DisplayName("Addendum Data")]
-public record AddendumData4
+public partial record AddendumData4
 {
     /// <summary>
     /// Fleet data pertaining to the payment transaction.

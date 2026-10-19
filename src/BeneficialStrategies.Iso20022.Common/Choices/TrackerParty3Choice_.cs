@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_IYmWMTFKEe651u5xu3f5iw")]
     [DisplayName("Tracker Party3Choice")]
-    public abstract record TrackerParty3Choice_ { }
+    public abstract partial record TrackerParty3Choice_ { }
 }

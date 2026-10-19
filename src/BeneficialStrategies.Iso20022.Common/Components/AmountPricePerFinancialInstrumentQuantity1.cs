@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QbAfBtp-Ed-ak6NoX_4Aeg_-1640515139")]
 [DisplayName("Amount Price Per Financial Instrument Quantity")]
-public record AmountPricePerFinancialInstrumentQuantity1
+public partial record AmountPricePerFinancialInstrumentQuantity1
 {
     /// <summary>
     /// Type of amount price.

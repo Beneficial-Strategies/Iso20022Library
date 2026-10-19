@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x1GY5VyGEe24CqbZJK5XxA")]
 [DisplayName("Detailed Transaction Statistics")]
-public record DetailedTransactionStatistics27
+public partial record DetailedTransactionStatistics27
 {
     /// <summary>
     /// Number of outstanding derivatives.

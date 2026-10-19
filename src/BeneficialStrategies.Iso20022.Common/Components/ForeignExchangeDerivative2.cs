@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TzPS8X5iEeaGiOUFl5b1oQ")]
 [DisplayName("Foreign Exchange Derivative")]
-public record ForeignExchangeDerivative2
+public partial record ForeignExchangeDerivative2
 {
     /// <summary>
     /// Type of deliverable and non-deliverable forwards, options and swaps contract.	.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sp5_hdp-Ed-ak6NoX_4Aeg_-1202382033")]
 [DisplayName("Shipment Date Range")]
-public record ShipmentDateRange2
+public partial record ShipmentDateRange2
 {
     /// <summary>
     /// Sub quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.

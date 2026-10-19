@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DU0dAas2Eeayv9XxdmMwKQ")]
 [DisplayName("Stressed Product")]
-public record StressedProduct1
+public partial record StressedProduct1
 {
     /// <summary>
     /// Unique identifier of the product.

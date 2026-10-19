@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Hf56YWi6EeS87LmvcA55sg")]
 [DisplayName("KEK")]
-public record KEK4
+public partial record KEK4
 {
     /// <summary>
     /// Version of the data structure.

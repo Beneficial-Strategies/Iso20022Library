@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ja4gschlEeadgvwNGwK05w")]
 [DisplayName("Financial Instrument Attributes")]
-public record FinancialInstrumentAttributes90
+public partial record FinancialInstrumentAttributes90
 {
     /// <summary>
     /// Reference notional amount of the contract.

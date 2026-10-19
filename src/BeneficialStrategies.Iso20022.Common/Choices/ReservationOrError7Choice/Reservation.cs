@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError7Choice
     [IsoId("_T9Cs0ZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Reservation")]
     [IsoXmlTag("Rsvatn")]
-    public record Reservation : ReservationOrError7Choice_
+    public partial record Reservation : ReservationOrError7Choice_
     {
         /// <summary>
         /// Amount of money of the limit, expressed in an eligible currency.

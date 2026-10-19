@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qcynu9p-Ed-ak6NoX_4Aeg_86583344")]
 [DisplayName("Credit Transfer")]
-public record CreditTransfer6
+public partial record CreditTransfer6
 {
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.

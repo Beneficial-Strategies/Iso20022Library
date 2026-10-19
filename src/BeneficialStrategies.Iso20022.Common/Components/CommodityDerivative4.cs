@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_exiPYU-nEeiVsYLJl6hleg")]
 [DisplayName("Commodity Derivative")]
-public record CommodityDerivative4
+public partial record CommodityDerivative4
 {
     /// <summary>
     /// Provides specific information related to commodity derivatives.

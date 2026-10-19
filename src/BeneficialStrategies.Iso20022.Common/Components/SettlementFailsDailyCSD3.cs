@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MTNhaTOmEeqX8uoQQ3KffQ")]
 [DisplayName("Settlement Fails Daily CSD")]
-public record SettlementFailsDailyCSD3
+public partial record SettlementFailsDailyCSD3
 {
     /// <summary>
     /// Intra-CSD settlement instructions data.

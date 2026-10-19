@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RkLGgNp-Ed-ak6NoX_4Aeg_32536059")]
 [DisplayName("Notification Processing Status")]
-public record NotificationProcessingStatus1
+public partial record NotificationProcessingStatus1
 {
     /// <summary>
     /// The processing status.

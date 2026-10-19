@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eNbcAVyuEeWBopJHIRjb4g")]
 [DisplayName("Person Identification")]
-public record PersonIdentification12
+public partial record PersonIdentification12
 {
     /// <summary>
     /// Branch where the trader is located.

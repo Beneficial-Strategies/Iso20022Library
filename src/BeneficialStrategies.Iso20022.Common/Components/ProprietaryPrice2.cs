@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rpr4pNp-Ed-ak6NoX_4Aeg_1562404369")]
 [DisplayName("Proprietary Price")]
-public record ProprietaryPrice2
+public partial record ProprietaryPrice2
 {
     /// <summary>
     /// Specifies the type of price.

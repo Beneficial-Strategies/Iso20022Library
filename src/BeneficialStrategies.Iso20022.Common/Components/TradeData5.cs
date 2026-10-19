@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SvM2BAEcEeCQm6a_G2yO_w_-47074384")]
 [DisplayName("Trade Data")]
-public record TradeData5
+public partial record TradeData5
 {
     /// <summary>
     /// Reference to the unique system identification assigned to the trade by the central matching system.

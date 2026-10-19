@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pg9j8axtEem81-uIvTF5rQ")]
 [DisplayName("Trade Error")]
-public record TradeError6
+public partial record TradeError6
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

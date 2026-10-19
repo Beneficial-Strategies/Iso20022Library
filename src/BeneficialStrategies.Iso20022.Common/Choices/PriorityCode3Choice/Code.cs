@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityCode3Choice
     /// </summary>
     [IsoId("_5eGn4RbwEeOy-PlRuFSUzQ")]
     [DisplayName("Code")]
-    public record Code : PriorityCode3Choice_
+    public partial record Code : PriorityCode3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

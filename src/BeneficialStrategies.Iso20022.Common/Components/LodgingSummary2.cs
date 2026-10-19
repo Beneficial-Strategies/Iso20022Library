@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JJ2zkcWmEeuhguwJmlgagQ")]
 [DisplayName("Lodging Summary")]
-public record LodgingSummary2
+public partial record LodgingSummary2
 {
     /// <summary>
     /// Contains the lodging company&apos;s invoice or billing ID reference number, referred to as a folio number.

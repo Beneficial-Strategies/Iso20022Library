@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yeZ-MT6CEe2Z1_pdMHu4SA")]
 [DisplayName("Reconciliation Category")]
-public record ReconciliationCategory2
+public partial record ReconciliationCategory2
 {
     /// <summary>
     /// Indicator of derivative reopening, terminated or cancelled by mistake.

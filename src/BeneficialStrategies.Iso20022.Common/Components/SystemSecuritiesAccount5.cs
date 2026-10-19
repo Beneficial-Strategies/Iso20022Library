@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8IwThzp0Eemk2e6qGBk8IQ")]
 [DisplayName("System Securities Account")]
-public record SystemSecuritiesAccount5
+public partial record SystemSecuritiesAccount5
 {
     /// <summary>
     /// Legal closing date of the securities account.

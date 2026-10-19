@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KQMXEWomEeipaMTLlhaKMQ")]
 [DisplayName("Fund Parameters")]
-public record FundParameters5
+public partial record FundParameters5
 {
     /// <summary>
     /// Financial instrument for which the report is requested.

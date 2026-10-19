@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_uCfA8NLJEeSdq5yU2aaSNw")]
 [DisplayName("Loan Contract")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record LoanContract1
+public partial record LoanContract1
 {
     /// <summary>
     /// Contract document referenced from this loan agreement.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZxnU2cEcEea7jLfvGi1PDw")]
 [DisplayName("Name And Location")]
-public record NameAndLocation1
+public partial record NameAndLocation1
 {
     /// <summary>
     /// Internal name of the counterparty of the reporting agent used by the reporting agent.

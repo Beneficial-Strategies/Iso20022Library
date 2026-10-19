@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dFQq5OTXEfC01pKpYIyMTA")]
 [DisplayName("Cash Account Reference Data Change3")]
-public record CashAccountReferenceDataChange3
+public partial record CashAccountReferenceDataChange3
 {
     /// <summary>
     /// Identifies the cash account for which the changes are listed in the advice.

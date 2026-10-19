@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q7XJITtpEeWHYdqXF6YZmg")]
 [DisplayName("Generic Document Identification")]
-public record GenericDocumentIdentification4
+public partial record GenericDocumentIdentification4
 {
     /// <summary>
     /// Message type number/message identifier of the message referenced in the linkage sequence.

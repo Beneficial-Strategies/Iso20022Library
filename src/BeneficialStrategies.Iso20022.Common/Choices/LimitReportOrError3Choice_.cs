@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qm5s4ZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Limit Report Or Error 3 Choice")]
-    public abstract record LimitReportOrError3Choice_ { }
+    public abstract partial record LimitReportOrError3Choice_ { }
 }

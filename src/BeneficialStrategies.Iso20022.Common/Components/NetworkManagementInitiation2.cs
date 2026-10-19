@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9m_bMYv7EeumSPwlS1PkxQ")]
 [DisplayName("Network Management Initiation")]
-public record NetworkManagementInitiation2
+public partial record NetworkManagementInitiation2
 {
     /// <summary>
     /// Contains or describes conditions and characteristics of the transaction.

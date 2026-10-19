@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UoRJqtp-Ed-ak6NoX_4Aeg_1673012479")]
 [DisplayName("Collateral")]
-public record Collateral1
+public partial record Collateral1
 {
     /// <summary>
     /// Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the variation margin.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberCriteriaDefinition1Choice
     /// </summary>
     [IsoId("_tToNgZlVEeeE1Ya-LgRsuQ")]
     [DisplayName("Query Name")]
-    public record QueryName : MemberCriteriaDefinition1Choice_
+    public partial record QueryName : MemberCriteriaDefinition1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

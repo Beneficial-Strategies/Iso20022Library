@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2I_zAEHZEeamVPoS58KxXA")]
 [DisplayName("Conditionally Accepted Status Reason")]
-public record ConditionallyAcceptedStatusReason3
+public partial record ConditionallyAcceptedStatusReason3
 {
     /// <summary>
     /// Reason for the conditionally accepted status expressed as a code.

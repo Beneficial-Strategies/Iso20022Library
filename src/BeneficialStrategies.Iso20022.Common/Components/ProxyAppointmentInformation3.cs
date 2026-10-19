@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7fsShVtgEeSwKe7KuKvXhg")]
 [DisplayName("Proxy Appointment Information")]
-public record ProxyAppointmentInformation3
+public partial record ProxyAppointmentInformation3
 {
     /// <summary>
     /// Specifies how to register the proxy.

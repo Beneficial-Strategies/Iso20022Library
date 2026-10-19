@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0faHobvwEeiLRYqS-r-R-A")]
 [DisplayName("Environment Commodity Other")]
-public record EnvironmentCommodityOther1
+public partial record EnvironmentCommodityOther1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

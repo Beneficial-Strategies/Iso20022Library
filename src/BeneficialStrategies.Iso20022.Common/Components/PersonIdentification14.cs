@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pP744eWkEeevU7McUP3D1w")]
 [DisplayName("Person Identification")]
-public record PersonIdentification14
+public partial record PersonIdentification14
 {
     /// <summary>
     /// Date and place of birth of a person.

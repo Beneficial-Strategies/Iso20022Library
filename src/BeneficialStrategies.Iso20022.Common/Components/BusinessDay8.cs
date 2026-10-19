@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ODn9JXXyEei3jO6riKEVXg")]
 [DisplayName("Business Day")]
-public record BusinessDay8
+public partial record BusinessDay8
 {
     /// <summary>
     /// Identification of a particular market infrastructure.

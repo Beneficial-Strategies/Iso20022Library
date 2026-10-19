@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_53yVBa5qEeuo-IflVgGqiA")]
 [DisplayName("Fixed Rate")]
-public record FixedRate11
+public partial record FixedRate11
 {
     /// <summary>
     /// Annualised interest rate on the principal amount of the repurchase transaction in accordance with the day count convention.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4g_6MV0hEeWErPfQ7BYx8A")]
 [DisplayName("Trading Venue Identification")]
-public record TradingVenueIdentification2
+public partial record TradingVenueIdentification2
 {
     /// <summary>
     /// Identification field of the submitting entity.

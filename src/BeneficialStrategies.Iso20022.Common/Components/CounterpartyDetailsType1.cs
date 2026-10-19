@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_01K7cGHNEeGknP6xAc4fKw")]
 [DisplayName("Counterparty Details Type")]
-public record CounterpartyDetailsType1
+public partial record CounterpartyDetailsType1
 {
     /// <summary>
     /// Identifies the financial instrument.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WZX64dp-Ed-ak6NoX_4Aeg_-1553024577")]
 [DisplayName("Corporate Action Narrative")]
-public record CorporateActionNarrative14
+public partial record CorporateActionNarrative14
 {
     /// <summary>
     /// Provides declaration details narrative relative to the financial instrument, for example, beneficial ownership.

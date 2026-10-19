@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iZO6CaidEeWHO_l3hf2rlA")]
 [DisplayName("Collateral Valuation")]
-public record CollateralValuation6
+public partial record CollateralValuation6
 {
     /// <summary>
     /// Nominal amount of the security pledged as collateral. Except for tri-party repos and any other transaction in which the security pledged is not identified via a single ISIN.

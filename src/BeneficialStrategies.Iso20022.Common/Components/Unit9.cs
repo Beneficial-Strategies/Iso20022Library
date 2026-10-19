@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6jzzka5xEeeMy7TnJ3e__g")]
 [DisplayName("Unit")]
-public record Unit9
+public partial record Unit9
 {
     /// <summary>
     /// Quantity expressed as a number, for example, a number of shares.

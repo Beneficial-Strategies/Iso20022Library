@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YNv3MZMqEeuleeHpFMMhmQ")]
 [DisplayName("Clearing Record Data")]
-public record ClearingRecordData2
+public partial record ClearingRecordData2
 {
     /// <summary>
     /// Originator of the batch.

@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HsTagMlWEeuJ35KoBRZFOg")]
     [DisplayName("Report Content 1 Choice")]
-    public abstract record ReportContent1Choice_ { }
+    public abstract partial record ReportContent1Choice_ { }
 }

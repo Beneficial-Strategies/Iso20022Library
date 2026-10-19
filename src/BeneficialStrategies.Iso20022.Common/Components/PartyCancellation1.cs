@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mI_kIDbvEeeYhaZ6bvG1Xg")]
 [DisplayName("Party Cancellation")]
-public record PartyCancellation1
+public partial record PartyCancellation1
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice messages.

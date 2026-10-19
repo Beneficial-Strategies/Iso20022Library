@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MStLwWlQEeaLAKoEUNsD9g")]
 [DisplayName("Contract For Difference")]
-public record ContractForDifference2
+public partial record ContractForDifference2
 {
     /// <summary>
     /// Underlying type of the contract for difference.

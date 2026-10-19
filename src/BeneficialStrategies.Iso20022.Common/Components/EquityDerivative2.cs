@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PVUIgWlNEeaLAKoEUNsD9g")]
 [DisplayName("Equity Derivative")]
-public record EquityDerivative2
+public partial record EquityDerivative2
 {
     /// <summary>
     /// Underlying type of the equity derivative.

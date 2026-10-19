@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QEgDhtp-Ed-ak6NoX_4Aeg_-47216937")]
 [DisplayName("Non Financial Institution Identification")]
-public record NonFinancialInstitutionIdentification1
+public partial record NonFinancialInstitutionIdentification1
 {
     /// <summary>
     /// Code allocated to a non-financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

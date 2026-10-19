@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_79PI8aMgEeCJ6YNENx4h-w_730901350")]
 [DisplayName("Limit Identification")]
-public record LimitIdentification1
+public partial record LimitIdentification1
 {
     /// <summary>
     /// Identification of a particular cash clearing system.

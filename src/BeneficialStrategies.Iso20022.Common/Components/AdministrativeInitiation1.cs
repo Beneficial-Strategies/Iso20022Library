@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MBoGADNDEeylu6lH-gut-A")]
 [DisplayName("Administrative Initiation")]
-public record AdministrativeInitiation1
+public partial record AdministrativeInitiation1
 {
     /// <summary>
     /// Environment of the transaction.

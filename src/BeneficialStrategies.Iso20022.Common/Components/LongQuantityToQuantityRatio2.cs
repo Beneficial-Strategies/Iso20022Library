@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OYixZXeuEeGnSLS4l8GDAA")]
 [DisplayName("Long Quantity To Quantity Ratio")]
-public record LongQuantityToQuantityRatio2
+public partial record LongQuantityToQuantityRatio2
 {
     /// <summary>
     /// High precision numerator of the quotient of quantities.

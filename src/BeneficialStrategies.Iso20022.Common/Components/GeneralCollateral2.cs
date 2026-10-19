@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N9NIEchuEeadgvwNGwK05w")]
 [DisplayName("General Collateral")]
-public record GeneralCollateral2
+public partial record GeneralCollateral2
 {
     /// <summary>
     /// List of the identifiers of the securities eligible for a general collateral repurchase agreement.

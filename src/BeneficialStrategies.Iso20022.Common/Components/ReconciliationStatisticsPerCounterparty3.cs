@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cFhvQVovEe23K4GXSpBSeg")]
 [DisplayName("Reconciliation Statistics Per Counterparty")]
-public record ReconciliationStatisticsPerCounterparty3
+public partial record ReconciliationStatisticsPerCounterparty3
 {
     /// <summary>
     /// Reference date for statistics collection.

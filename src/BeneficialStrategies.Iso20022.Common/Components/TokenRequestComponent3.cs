@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-v6LoXJBEe299ZbWCkdR_w")]
 [DisplayName("Token Request Component")]
-public record TokenRequestComponent3
+public partial record TokenRequestComponent3
 {
     /// <summary>
     /// Identification of an element in a sequence.

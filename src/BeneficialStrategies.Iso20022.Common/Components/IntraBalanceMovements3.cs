@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YDGlJTneEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movements")]
-public record IntraBalanceMovements3
+public partial record IntraBalanceMovements3
 {
     /// <summary>
     /// Account to or from which an entry is made.

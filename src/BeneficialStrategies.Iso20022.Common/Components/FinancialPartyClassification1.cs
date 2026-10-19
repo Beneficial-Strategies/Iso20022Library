@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1OBykan9EemdLtwzt4CWxg")]
 [DisplayName("Financial Party Classification")]
-public record FinancialPartyClassification1
+public partial record FinancialPartyClassification1
 {
     /// <summary>
     /// Classification of the business activities of the reporting counterparty.

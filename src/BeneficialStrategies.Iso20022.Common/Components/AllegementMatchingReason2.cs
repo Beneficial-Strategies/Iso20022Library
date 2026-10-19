@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2-L0LQd3Ee2fOITqoTnSLQ")]
 [DisplayName("Allegement Matching Reason")]
-public record AllegementMatchingReason2
+public partial record AllegementMatchingReason2
 {
     /// <summary>
     /// Specifies the reason why the instruction has been alleged.

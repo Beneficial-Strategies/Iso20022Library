@@ -169,6 +169,10 @@ def member_decl(m, comps, choices):
     return f"IEnumerable<{elem}> {m.name} {{ get; }}", True, f"IEnumerable<{elem}>"
 
 
+def has_interface(r):
+    return (OUT / r.path.relative_to(COMMON).parent / (iface_name(r.name) + ".cs")).exists()
+
+
 def write_interface(r, base_list, comps, choices, out_root):
     rel = r.path.relative_to(COMMON)
     name = iface_name(r.name)
@@ -250,13 +254,17 @@ def make_partial_and_inheritdoc(r, do_partial, do_inheritdoc, comps, choices):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--areas", nargs="+", required=True)
+    ap.add_argument("--areas", nargs="*", default=[])
+    ap.add_argument("--unreached", action="store_true", help="the components and choices that have no interface yet (no message of the written areas reaches them)")
     ap.add_argument("--partial", action="store_true", help="make the records partial")
     ap.add_argument("--inheritdoc", action="store_true", help="replace the record documentation by <inheritdoc cref/>")
     args = ap.parse_args()
 
     comps, choices, variants, messages = load_all(args.areas)
     seen_c, seen_ch = closure(messages, comps, choices, variants)
+    if args.unreached:
+        seen_c = {n for n, r in comps.items() if not has_interface(r)}
+        seen_ch = {n for n, r in choices.items() if not has_interface(r)}
     n = {"message": 0, "component": 0, "choice": 0, "variant": 0, "members": 0, "explicit": 0}
 
     def count(r):

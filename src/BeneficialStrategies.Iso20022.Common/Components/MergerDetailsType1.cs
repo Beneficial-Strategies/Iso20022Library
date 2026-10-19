@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IY-XYFPaEeG1qPPaW9KJvg")]
 [DisplayName("Merger Details Type")]
-public record MergerDetailsType1
+public partial record MergerDetailsType1
 {
     /// <summary>
     /// Differentiation of different types of merger.

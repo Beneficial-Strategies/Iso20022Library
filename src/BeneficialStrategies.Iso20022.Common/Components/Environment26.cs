@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tr29sYzLEeujJfnIQ4NlpQ")]
 [DisplayName("Environment")]
-public record Environment26
+public partial record Environment26
 {
     /// <summary>
     /// Party in a contractual relationship with an acceptor to acquire card payment transactions.

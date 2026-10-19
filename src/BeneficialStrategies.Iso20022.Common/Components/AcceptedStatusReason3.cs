@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OkfusSqAEeO3oOoGGWHH4A")]
 [DisplayName("Accepted Status Reason")]
-public record AcceptedStatusReason3
+public partial record AcceptedStatusReason3
 {
     /// <summary>
     /// Specifies the reason why the instruction or instruction cancellation has been accepted.

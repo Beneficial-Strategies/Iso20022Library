@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError4Choice
     [IsoId("_khrGsRbvEeOy-PlRuFSUzQ")]
     [DisplayName("Standing Order")]
     [IsoXmlTag("StgOrdr")]
-    public record StandingOrder : StandingOrderOrError4Choice_
+    public partial record StandingOrder : StandingOrderOrError4Choice_
     {
         /// <summary>
         /// Amount of money and currency to be transferred when a payment instruction is created as a result of a standing order.

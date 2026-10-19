@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YFYT_Qd3Ee2fOITqoTnSLQ")]
 [DisplayName("Affirmation Reason")]
-public record AffirmationReason2
+public partial record AffirmationReason2
 {
     /// <summary>
     /// Specifies the reason why the instruction/request has a unaffirmed status.

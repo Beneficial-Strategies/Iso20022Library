@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Hx9E0cnYEeWpf-ImB_F2gQ")]
 [DisplayName("Asset Class Attributes")]
-public record AssetClassAttributes1
+public partial record AssetClassAttributes1
 {
     /// <summary>
     /// Asset class is a non-financial instrument of type interest rate.

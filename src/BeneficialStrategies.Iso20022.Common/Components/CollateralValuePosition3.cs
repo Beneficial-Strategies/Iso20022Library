@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EP0opTpyEemk2e6qGBk8IQ")]
 [DisplayName("Collateral Value Position")]
-public record CollateralValuePosition3
+public partial record CollateralValuePosition3
 {
     /// <summary>
     /// Date and time when the data was last accessed.

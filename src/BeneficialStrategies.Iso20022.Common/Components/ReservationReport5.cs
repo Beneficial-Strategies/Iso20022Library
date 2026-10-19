@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tr4EV5liEeeE1Ya-LgRsuQ")]
 [DisplayName("Reservation Report")]
-public record ReservationReport5
+public partial record ReservationReport5
 {
     /// <summary>
     /// Identification of the reservation on which information is requested.

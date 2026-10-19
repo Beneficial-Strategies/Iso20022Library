@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LIdwgU8TEe2PGo0mhYCh1g")]
 [DisplayName("Agricultural Commodity Grain")]
-public record AgriculturalCommodityGrain3
+public partial record AgriculturalCommodityGrain3
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

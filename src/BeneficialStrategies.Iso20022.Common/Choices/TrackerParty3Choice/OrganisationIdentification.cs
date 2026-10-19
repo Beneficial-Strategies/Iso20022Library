@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty3Choice
     /// Organisation Identification.
     /// </summary>
     [DisplayName("Organisation Identification")]
-    public record OrganisationIdentification : TrackerParty3Choice_
+    public partial record OrganisationIdentification : TrackerParty3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

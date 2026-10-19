@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1id0xRfMEeyPHpqpKwtFdw")]
 [DisplayName("Trade Query Criteria")]
-public record TradeQueryCriteria10
+public partial record TradeQueryCriteria10
 {
     /// <summary>
     /// Indicates whether the response must include all reports submitted for a trade (true) or only the current state of the trade (false).

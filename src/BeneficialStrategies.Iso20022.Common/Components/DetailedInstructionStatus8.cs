@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RCy3w9p-Ed-ak6NoX_4Aeg_1948673401")]
 [DisplayName("Detailed Instruction Status")]
-public record DetailedInstructionStatus8
+public partial record DetailedInstructionStatus8
 {
     /// <summary>
     /// Identifies the detailed instruction within an instruction message.

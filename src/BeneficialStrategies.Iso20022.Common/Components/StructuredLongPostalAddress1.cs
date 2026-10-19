@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QGckRNp-Ed-ak6NoX_4Aeg_829983721")]
 [DisplayName("Structured Long Postal Address")]
-public record StructuredLongPostalAddress1
+public partial record StructuredLongPostalAddress1
 {
     /// <summary>
     /// Name of the building or house.

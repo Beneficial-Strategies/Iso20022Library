@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g8sk0YgoEeu8-LhY4KPfWg")]
 [DisplayName("Transaction")]
-public record Transaction155
+public partial record Transaction155
 {
     /// <summary>
     /// Transaction Identification of the Error message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D0qfgScCEe2BYL6XeAmCWw")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification184
+public partial record GenericIdentification184
 {
     /// <summary>
     /// Indicates other identifier of an underlier.

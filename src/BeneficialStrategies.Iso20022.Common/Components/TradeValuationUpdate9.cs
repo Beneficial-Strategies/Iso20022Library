@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HKRZEc0HEeufhKfUxzsnrQ")]
 [DisplayName("Trade Valuation Update")]
-public record TradeValuationUpdate9
+public partial record TradeValuationUpdate9
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

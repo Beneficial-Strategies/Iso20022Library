@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_8IjoJKMgEeCJ6YNENx4h-w_-1597699286")]
     [DisplayName("Current Or Default Reservation 1 Choice")]
-    public abstract record CurrentOrDefaultReservation1Choice_ { }
+    public abstract partial record CurrentOrDefaultReservation1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_05754Gs4EeW9oI9ZdgWHPQ")]
 [DisplayName("Polypropylene Commodity Plastic")]
-public record PolypropyleneCommodityPlastic1
+public partial record PolypropyleneCommodityPlastic1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

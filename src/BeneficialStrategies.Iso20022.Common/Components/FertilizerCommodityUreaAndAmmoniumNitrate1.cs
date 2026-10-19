@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_f4Fn8Fr2EeWN79Bl6BUd3g")]
 [DisplayName("Fertilizer Commodity Urea And Ammonium Nitrate")]
-public record FertilizerCommodityUreaAndAmmoniumNitrate1
+public partial record FertilizerCommodityUreaAndAmmoniumNitrate1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

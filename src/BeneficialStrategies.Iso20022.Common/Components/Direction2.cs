@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9zN68C0WEe2ZUuvBHegNNg")]
 [DisplayName("Direction")]
-public record Direction2
+public partial record Direction2
 {
     /// <summary>
     /// Identifies whether the reporting counterparty is the payer (Taker) or the receiver (Maker) of the first leg as determined at the time of transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mdZxga7MEemZxoEFHjN-AQ")]
 [DisplayName("Trade Transaction Identification")]
-public record TradeTransactionIdentification9
+public partial record TradeTransactionIdentification9
 {
     /// <summary>
     /// Unique code identifying the reporting counterparty.

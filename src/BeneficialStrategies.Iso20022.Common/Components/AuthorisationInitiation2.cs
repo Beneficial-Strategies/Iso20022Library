@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KnK6MYEKEeu6D49Gi-ZPwQ")]
 [DisplayName("Authorisation Initiation")]
-public record AuthorisationInitiation2
+public partial record AuthorisationInitiation2
 {
     /// <summary>
     /// Contains or describes the information pertaining to the actors interacting with the transaction.

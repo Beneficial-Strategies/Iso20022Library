@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_63apwLbkEeaqL_M7XFD7PQ")]
 [DisplayName("Derivative")]
-public record Derivative3
+public partial record Derivative3
 {
     /// <summary>
     /// Hierarchy of classification of a derivative.

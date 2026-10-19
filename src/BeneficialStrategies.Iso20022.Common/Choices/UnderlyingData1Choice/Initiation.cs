@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice
     [IsoId("_CXmpZ1RtEe23M4WgERMsYw")]
     [DisplayName("Initiation")]
     [IsoXmlTag("Initn")]
-    public record Initiation : UnderlyingData1Choice_
+    public partial record Initiation : UnderlyingData1Choice_
     {
         /// <summary>
         /// Set of elements used to provide information on the original message.

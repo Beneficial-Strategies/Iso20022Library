@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TanVMZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Reservation Or Error 6 Choice")]
-    public abstract record ReservationOrError6Choice_ { }
+    public abstract partial record ReservationOrError6Choice_ { }
 }

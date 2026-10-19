@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QDrY5NLEeWGlc8L7oPDIg")]
 [DisplayName("Modification Reason")]
-public record ModificationReason5
+public partial record ModificationReason5
 {
     /// <summary>
     /// Specifies the reason why the transaction is modified.

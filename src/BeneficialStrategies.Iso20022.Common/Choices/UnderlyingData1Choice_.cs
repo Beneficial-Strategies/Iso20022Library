@@ -30,5 +30,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UnderlyingData1Choice.Other), nameof(UnderlyingData1Choice.Other))]
     [IsoId("_CXmpZVRtEe23M4WgERMsYw")]
     [DisplayName("Underlying Data 1 Choice")]
-    public abstract record UnderlyingData1Choice_ { }
+    public abstract partial record UnderlyingData1Choice_ { }
 }

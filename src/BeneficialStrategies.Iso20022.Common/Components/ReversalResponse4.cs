@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7yoA8YwDEeuC5632vxUfGg")]
 [DisplayName("Reversal Response")]
-public record ReversalResponse4
+public partial record ReversalResponse4
 {
     /// <summary>
     /// Environment of the transaction.

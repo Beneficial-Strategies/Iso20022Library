@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TukJISFVEeWgV9SQSyaAog")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification81
+public partial record GenericIdentification81
 {
     /// <summary>
     /// Identification of a party, such as a tax or social security identifier.

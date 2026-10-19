@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mgXTYeTXEfC01pKpYIyMTA")]
 [DisplayName("Cash Account Audit Trail Search Criteria4")]
-public record CashAccountAuditTrailSearchCriteria4
+public partial record CashAccountAuditTrailSearchCriteria4
 {
     /// <summary>
     /// Describes cash account to be queried.

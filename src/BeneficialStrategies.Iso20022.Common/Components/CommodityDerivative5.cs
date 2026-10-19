@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_njM5VU-nEeiVsYLJl6hleg")]
 [DisplayName("Commodity Derivative")]
-public record CommodityDerivative5
+public partial record CommodityDerivative5
 {
     /// <summary>
     /// Specification of the size related to the freight sub type. Field to be populated when the base product field is equal to freight.
