@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDmQarEe2phaVG0lYKTw")]
     [DisplayName("Received At Intermediary")]
     [IsoXmlTag("RcvdAtIntrmy")]
-    public record ReceivedAtIntermediary : ProcessingStatus98Choice_
+    public partial record ReceivedAtIntermediary : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

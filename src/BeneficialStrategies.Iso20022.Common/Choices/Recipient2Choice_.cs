@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Recipient2Choice.KEK), nameof(Recipient2Choice.KEK))]
     [IsoId("_EvioMQioEeKn9O5oyej_zw")]
     [DisplayName("Recipient 2 Choice")]
-    public abstract record Recipient2Choice_ { }
+    public abstract partial record Recipient2Choice_ { }
 }

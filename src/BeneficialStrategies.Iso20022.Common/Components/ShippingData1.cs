@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ScxsW_cjEeiW-auGnDPZIw")]
 [DisplayName("Shipping Data")]
-public record ShippingData1
+public partial record ShippingData1
 {
     /// <summary>
     /// Contains the invoice number.

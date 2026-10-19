@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cdaGUDhcEeaRwdGFv45qTQ")]
     [DisplayName("Investment Fund Role 2 Choice")]
-    public abstract record InvestmentFundRole2Choice_ { }
+    public abstract partial record InvestmentFundRole2Choice_ { }
 }

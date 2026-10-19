@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rz-88EXVEeegp_DADCe7HQ")]
 [DisplayName("Additional Action")]
-public record AdditionalAction1
+public partial record AdditionalAction1
 {
     /// <summary>
     /// Type of additional action to perform.

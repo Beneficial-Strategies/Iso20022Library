@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection3Choice
     /// </summary>
     [IsoId("_oQaFgZTIEemqYPWMBuVawg")]
     [DisplayName("Account Identification")]
-    public record AccountIdentification : AccountSelection3Choice_
+    public partial record AccountIdentification : AccountSelection3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

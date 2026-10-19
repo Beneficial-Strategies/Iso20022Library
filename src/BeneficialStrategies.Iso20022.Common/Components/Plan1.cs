@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gbtqIEVGEeea-M6VZkEPUw")]
 [DisplayName("Plan")]
-public record Plan1
+public partial record Plan1
 {
     /// <summary>
     /// Identification of the instalment plan.

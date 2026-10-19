@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E4FW4SFyEeW9XJWqfgXIIA")]
 [DisplayName("Postal Address")]
-public record PostalAddress21
+public partial record PostalAddress21
 {
     /// <summary>
     /// Type of address.

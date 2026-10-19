@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HadL0RRxEeOKWo1NF21OVw")]
     [DisplayName("KYC Check Type 1 Choice")]
-    public abstract record KYCCheckType1Choice_ { }
+    public abstract partial record KYCCheckType1Choice_ { }
 }

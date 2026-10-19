@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RpGNURg6EeKnW4lR85q-0A")]
 [DisplayName("Party And Certificate")]
-public record PartyAndCertificate3
+public partial record PartyAndCertificate3
 {
     /// <summary>
     /// Specifies the type of change.

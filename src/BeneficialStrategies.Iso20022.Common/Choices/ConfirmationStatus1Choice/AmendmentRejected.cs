@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationStatus1Choice
     [IsoId("_1BFlFEhCEea8pJjypp-yMQ")]
     [DisplayName("Amendment Rejected")]
     [IsoXmlTag("AmdmntRjctd")]
-    public record AmendmentRejected : ConfirmationStatus1Choice_
+    public partial record AmendmentRejected : ConfirmationStatus1Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

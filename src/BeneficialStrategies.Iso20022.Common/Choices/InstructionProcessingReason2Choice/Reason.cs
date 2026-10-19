@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason2Choi
     [IsoId("_Azo45NokEeC60axPepSq7g_228529796")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : InstructionProcessingReason2Choice_
+    public partial record Reason : InstructionProcessingReason2Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction is in repair.

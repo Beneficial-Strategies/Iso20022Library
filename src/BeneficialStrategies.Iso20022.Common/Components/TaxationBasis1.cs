@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VSvC8tp-Ed-ak6NoX_4Aeg_526119979")]
 [DisplayName("Taxation Basis")]
-public record TaxationBasis1
+public partial record TaxationBasis1
 {
     /// <summary>
     /// Structured format.

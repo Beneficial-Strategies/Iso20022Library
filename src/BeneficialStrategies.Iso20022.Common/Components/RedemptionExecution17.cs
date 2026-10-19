@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o3aFkxwCEe6fEumgV5aG_A")]
 [DisplayName("Redemption Execution17")]
-public record RedemptionExecution17
+public partial record RedemptionExecution17
 {
     /// <summary>
     /// Order Reference.

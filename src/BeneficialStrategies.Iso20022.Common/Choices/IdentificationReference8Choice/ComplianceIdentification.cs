@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice
     /// </summary>
     [IsoId("_AcPsltokEeC60axPepSq7g_2061313578")]
     [DisplayName("Compliance Identification")]
-    public record ComplianceIdentification : IdentificationReference8Choice_
+    public partial record ComplianceIdentification : IdentificationReference8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_I-6FQeE1EeeV6-yubHrZaQ")]
 [DisplayName("Retrieval Fulfilment Initiation V")]
-public record RetrievalFulfilmentInitiationV01 : IOuterRecord
+public partial record RetrievalFulfilmentInitiationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

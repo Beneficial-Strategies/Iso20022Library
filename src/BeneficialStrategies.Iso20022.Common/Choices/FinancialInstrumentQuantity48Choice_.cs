@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FinancialInstrumentQuantity48Choice.HoldingsRedemptionRate), nameof(FinancialInstrumentQuantity48Choice.HoldingsRedemptionRate))]
     [IsoId("c3608a25-7ef0-409d-8054-afb7fc1acf21")]
     [DisplayName("Financial Instrument Quantity 48 Choice")]
-    public abstract record FinancialInstrumentQuantity48Choice_ { }
+    public abstract partial record FinancialInstrumentQuantity48Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qSjOQap4EeanIZ10Ka8PnA")]
 [DisplayName("Card Payment Batch Transfer")]
-public record CardPaymentBatchTransfer5
+public partial record CardPaymentBatchTransfer5
 {
     /// <summary>
     /// Totals of transactions of all the data sets.

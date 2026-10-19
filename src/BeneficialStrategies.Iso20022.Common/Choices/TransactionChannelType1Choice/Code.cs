@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionChannelType1Choice
     /// </summary>
     [IsoId("_aT1UIBRGEeOKWo1NF21OVw")]
     [DisplayName("Code")]
-    public record Code : TransactionChannelType1Choice_
+    public partial record Code : TransactionChannelType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

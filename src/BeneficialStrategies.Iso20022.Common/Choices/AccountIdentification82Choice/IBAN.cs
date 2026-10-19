@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification82Choice
     /// <summary>International Bank Account Number (IBAN).</summary>
     [IsoId("62a4e9f5-f372-4821-93ed-a3ce4d7cc784")]
     [DisplayName("IBAN")]
-    public record IBAN : AccountIdentification82Choice_
+    public partial record IBAN : AccountIdentification82Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IBAN")]

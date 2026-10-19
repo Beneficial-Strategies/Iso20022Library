@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ")]
 [DisplayName("Temporary Services4")]
-public record TemporaryServices4
+public partial record TemporaryServices4
 {
     /// <summary>
     /// Contains the name of the individual at the contracting company that has requested temporary services.

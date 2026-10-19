@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice
     /// </summary>
     [IsoId("_AcF7ktokEeC60axPepSq7g_1236461558")]
     [DisplayName("Instructing Party Transaction Identification")]
-    public record InstructingPartyTransactionIdentification : IdentificationReference8Choice_
+    public partial record InstructingPartyTransactionIdentification : IdentificationReference8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

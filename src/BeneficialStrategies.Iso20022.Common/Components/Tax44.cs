@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s2I_cVXZEfC0lMwgjvMClw")]
 [DisplayName("Tax44")]
-public record Tax44
+public partial record Tax44
 {
     /// <summary>
     /// Type of tax. P000-P999 reserved for private use, N000-N999 reserved for national use.

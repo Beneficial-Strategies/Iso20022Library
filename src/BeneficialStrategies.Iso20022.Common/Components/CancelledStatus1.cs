@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UwnNXNp-Ed-ak6NoX_4Aeg_-1540666967")]
 [DisplayName("Cancelled Status")]
-public record CancelledStatus1
+public partial record CancelledStatus1
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

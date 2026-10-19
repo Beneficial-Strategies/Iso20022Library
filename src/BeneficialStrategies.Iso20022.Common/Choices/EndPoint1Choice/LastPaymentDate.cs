@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EndPoint1Choice
     /// </summary>
     [IsoId("_IPd84A2mEeSNWNtJlXOAhg")]
     [DisplayName("Last Payment Date")]
-    public record LastPaymentDate : EndPoint1Choice_
+    public partial record LastPaymentDate : EndPoint1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

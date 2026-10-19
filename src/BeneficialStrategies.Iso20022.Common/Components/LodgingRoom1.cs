@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kVNgxfcTEeiW-auGnDPZIw")]
 [DisplayName("Lodging Room")]
-public record LodgingRoom1
+public partial record LodgingRoom1
 {
     /// <summary>
     /// Type of room (for example, club/lounge level room).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X9WSMSFfEeW9XJWqfgXIIA")]
 [DisplayName("Investment Account Modification")]
-public record InvestmentAccountModification2
+public partial record InvestmentAccountModification2
 {
     /// <summary>
     /// Reason for the modification to the investment account information.

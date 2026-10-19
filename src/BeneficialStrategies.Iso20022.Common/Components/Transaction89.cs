@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uGVb8abXEeiva6IOmhpVHw")]
 [DisplayName("Transaction")]
-public record Transaction89
+public partial record Transaction89
 {
     /// <summary>
     /// Reason to send the message.

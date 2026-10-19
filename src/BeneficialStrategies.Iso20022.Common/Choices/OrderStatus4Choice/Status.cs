@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus4Choice
     /// </summary>
     [IsoId("_9wxHwUH8EeaV3ab_pHzFIQ")]
     [DisplayName("Status")]
-    public record Status : OrderStatus4Choice_
+    public partial record Status : OrderStatus4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

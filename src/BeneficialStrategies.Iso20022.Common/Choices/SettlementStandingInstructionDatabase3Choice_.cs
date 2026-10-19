@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AbWUtdokEeC60axPepSq7g_-1066698614")]
     [DisplayName("Settlement Standing Instruction Database 3 Choice")]
-    public abstract record SettlementStandingInstructionDatabase3Choice_ { }
+    public abstract partial record SettlementStandingInstructionDatabase3Choice_ { }
 }

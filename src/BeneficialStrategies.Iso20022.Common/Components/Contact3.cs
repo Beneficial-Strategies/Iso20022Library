@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4-TwPfM4Eei4qfiLgRIZBA")]
 [DisplayName("Contact")]
-public record Contact3
+public partial record Contact3
 {
     /// <summary>
     /// Central phone number for the contact.

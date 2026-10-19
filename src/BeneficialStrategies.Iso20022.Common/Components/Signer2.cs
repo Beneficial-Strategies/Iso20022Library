@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6sFCYQirEeKn9O5oyej_zw")]
 [DisplayName("Signer")]
-public record Signer2
+public partial record Signer2
 {
     /// <summary>
     /// Version of the Cryptographic Message Syntax (CMS) data structure.

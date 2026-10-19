@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_3a23dTbsEead9bDRE_1DAQ")]
     [DisplayName("Cash In Or Out 7 Choice")]
-    public abstract record CashInOrOut7Choice_ { }
+    public abstract partial record CashInOrOut7Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IocXk_JZEeiJn9rM2Znz2w")]
 [DisplayName("Additional Characteristics")]
-public record AdditionalCharacteristics1
+public partial record AdditionalCharacteristics1
 {
     /// <summary>
     /// Identifies the specific classification or type of business.

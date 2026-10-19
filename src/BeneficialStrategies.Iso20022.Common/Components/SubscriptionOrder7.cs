@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SG4yCtp-Ed-ak6NoX_4Aeg_740476317")]
 [DisplayName("Subscription Order")]
-public record SubscriptionOrder7
+public partial record SubscriptionOrder7
 {
     /// <summary>
     /// Unique and unambiguous identifier for an order, as assigned by the instructing party.

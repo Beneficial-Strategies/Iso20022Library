@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hI8j0XvDEeSKFIcWw3l4Yw")]
 [DisplayName("Card Transaction Environment")]
-public record CardTransactionEnvironment6
+public partial record CardTransactionEnvironment6
 {
     /// <summary>
     /// Institution initiator of the reconciliation (correspond to the ISO 8583 field 94).

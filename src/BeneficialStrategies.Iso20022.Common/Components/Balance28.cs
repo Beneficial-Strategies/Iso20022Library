@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WhkGsaybEeupy7O5H7ITjQ")]
 [DisplayName("Balance")]
-public record Balance28
+public partial record Balance28
 {
     /// <summary>
     /// Type of card account balance.

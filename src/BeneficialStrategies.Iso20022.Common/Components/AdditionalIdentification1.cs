@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0eiKZPJVEeiJn9rM2Znz2w")]
 [DisplayName("Additional Identification")]
-public record AdditionalIdentification1
+public partial record AdditionalIdentification1
 {
     /// <summary>
     /// Type of additional identification.

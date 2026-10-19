@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pd-vQCDOEeWPMvNwVtiMsA")]
     [DisplayName("Investor Profile Status 1 Choice")]
-    public abstract record InvestorProfileStatus1Choice_ { }
+    public abstract partial record InvestorProfileStatus1Choice_ { }
 }

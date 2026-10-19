@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5v46AxwMEe6O0NdiBuX__w")]
 [DisplayName("Direct Debit Mandate8")]
-public record DirectDebitMandate8
+public partial record DirectDebitMandate8
 {
     /// <summary>
     /// Debtor Account.

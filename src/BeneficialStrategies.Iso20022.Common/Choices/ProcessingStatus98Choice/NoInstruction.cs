@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDkwarEe2phaVG0lYKTw")]
     [DisplayName("No Instruction")]
     [IsoXmlTag("NoInstr")]
-    public record NoInstruction : ProcessingStatus98Choice_
+    public partial record NoInstruction : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

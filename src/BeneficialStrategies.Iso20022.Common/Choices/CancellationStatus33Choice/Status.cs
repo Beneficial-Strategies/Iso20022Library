@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus33Choice
     /// <summary>Status of the order cancellation request is cancelled.</summary>
     [IsoId("03fa80d1-c80b-4026-9152-8183ae3e371b")]
     [DisplayName("Status")]
-    public record Status : CancellationStatus33Choice_
+    public partial record Status : CancellationStatus33Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Sts")]

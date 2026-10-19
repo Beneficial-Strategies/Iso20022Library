@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalAmount1Choice
     [IsoId("_wupB8UG_EeaNEqIb_fgRZg")]
     [DisplayName("Resulting Cash Out")]
     [IsoXmlTag("RsltgCshOut")]
-    public record ResultingCashOut : AdditionalAmount1Choice_
+    public partial record ResultingCashOut : AdditionalAmount1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

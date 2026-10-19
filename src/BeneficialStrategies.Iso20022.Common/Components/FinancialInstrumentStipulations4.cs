@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5DuEYQgTEe2fOITqoTnSLQ")]
 [DisplayName("Financial Instrument Stipulations")]
-public record FinancialInstrumentStipulations4
+public partial record FinancialInstrumentStipulations4
 {
     /// <summary>
     /// Type of stipulation expressing geographical constraints on a fixed income instrument. It is expressed with a state or country abbreviation and a minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in Californian assests).

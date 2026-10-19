@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification262Choice
     /// <summary>Identification of the party expressed as a BIC.</summary>
     [IsoId("e2ae7976-22fd-49c3-b368-82c4b6d9c42d")]
     [DisplayName("Any BIC")]
-    public record AnyBIC : PartyIdentification262Choice_
+    public partial record AnyBIC : PartyIdentification262Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AnyBIC")]

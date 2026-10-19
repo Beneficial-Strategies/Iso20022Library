@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1BW5MJfPEeuqNYk2TG3bTg")]
 [DisplayName("Device Operating System")]
-public record DeviceOperatingSystem1
+public partial record DeviceOperatingSystem1
 {
     /// <summary>
     /// Identification of the operating system.

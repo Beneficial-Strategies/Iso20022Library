@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S5VCYwEcEeCQm6a_G2yO_w_154174815")]
 [DisplayName("Incoterms")]
-public record Incoterms3
+public partial record Incoterms3
 {
     /// <summary>
     /// Specifies the Incoterms.

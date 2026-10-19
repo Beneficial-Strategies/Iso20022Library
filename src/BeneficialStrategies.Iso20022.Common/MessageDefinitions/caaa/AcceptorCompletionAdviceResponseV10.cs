@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 )]
 [IsoId("_HrQV4U7SEeyGi9JAv6wq7Q")]
 [DisplayName("Acceptor Completion Advice Response V")]
-public record AcceptorCompletionAdviceResponseV10 : IOuterRecord
+public partial record AcceptorCompletionAdviceResponseV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

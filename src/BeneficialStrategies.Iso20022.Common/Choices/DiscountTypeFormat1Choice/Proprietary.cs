@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DiscountTypeFormat1Choice
     [IsoId("_SumZFwEcEeCQm6a_G2yO_w_639154739")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DiscountTypeFormat1Choice_
+    public partial record Proprietary : DiscountTypeFormat1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

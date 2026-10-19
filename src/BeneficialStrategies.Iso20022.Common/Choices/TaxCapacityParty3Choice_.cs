@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AZHgFNokEeC60axPepSq7g_1368960852")]
     [DisplayName("Tax Capacity Party 3 Choice")]
-    public abstract record TaxCapacityParty3Choice_ { }
+    public abstract partial record TaxCapacityParty3Choice_ { }
 }

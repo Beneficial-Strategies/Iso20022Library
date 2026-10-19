@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashInOrOut8Choice
     /// <summary>Payment instrument for the cash-in flow.</summary>
     [IsoId("90da441f-054a-4a0b-a51e-39541e371e71")]
     [DisplayName("Cash In Payment Instrument")]
-    public record CashInPaymentInstrument : CashInOrOut8Choice_
+    public partial record CashInPaymentInstrument : CashInOrOut8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CshInPmtInstrm")]

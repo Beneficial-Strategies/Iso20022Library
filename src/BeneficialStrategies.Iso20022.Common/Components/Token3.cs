@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eHaZsJx0EeuwYeL1lHu9zw")]
 [DisplayName("Token")]
-public record Token3
+public partial record Token3
 {
     /// <summary>
     /// Surrogate value of the PAN.

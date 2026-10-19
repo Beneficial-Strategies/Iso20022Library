@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_ctEcNVT_EeetiruPyDPo0Q")]
 [DisplayName("Reversal Initiation V")]
-public record ReversalInitiationV02 : IOuterRecord
+public partial record ReversalInitiationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hyxAAZRBEemqYPWMBuVawg")]
 [DisplayName("Referred Agent")]
-public record ReferredAgent3
+public partial record ReferredAgent3
 {
     /// <summary>
     /// Indicates if the investor was referred by a placement agent.

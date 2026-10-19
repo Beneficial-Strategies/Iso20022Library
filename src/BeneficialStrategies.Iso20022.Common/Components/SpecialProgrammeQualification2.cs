@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SeEdsZm-Ee6Qpd-x8YgzaA")]
 [DisplayName("Special Programme Qualification2")]
-public record SpecialProgrammeQualification2
+public partial record SpecialProgrammeQualification2
 {
     /// <summary>
     /// Programme.

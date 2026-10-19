@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Revaluation2Choice
     /// </summary>
     [IsoId("_AYz-EdokEeC60axPepSq7g_1187469435")]
     [DisplayName("Indicator")]
-    public record Indicator : Revaluation2Choice_
+    public partial record Indicator : Revaluation2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

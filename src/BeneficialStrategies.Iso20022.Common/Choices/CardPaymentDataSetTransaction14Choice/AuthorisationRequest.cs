@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction14C
     /// <summary>Card payment transaction including an authorisation request.</summary>
     [IsoId("_tKIfYbYJEfCUZfsQO4rYeA")]
     [DisplayName("Authorisation Request")]
-    public record AuthorisationRequest : CardPaymentDataSetTransaction14Choice_
+    public partial record AuthorisationRequest : CardPaymentDataSetTransaction14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AuthstnReq")]

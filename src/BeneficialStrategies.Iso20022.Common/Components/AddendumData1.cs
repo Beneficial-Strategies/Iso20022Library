@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DnFa09kkEeiKYdl5SlduIA")]
 [DisplayName("Addendum Data")]
-public record AddendumData1
+public partial record AddendumData1
 {
     /// <summary>
     /// Specifies the type of identifier present in the message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UkZWQtp-Ed-ak6NoX_4Aeg_-1896166238")]
 [DisplayName("Account Contract")]
-public record AccountContract2
+public partial record AccountContract2
 {
     /// <summary>
     /// Date on which the account and related basic services are expected to be operational for the account owner.

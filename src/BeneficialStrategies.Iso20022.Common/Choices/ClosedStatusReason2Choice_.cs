@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_k4eZ0UzDEeafiMTDrtSnyw")]
     [DisplayName("Closed Status Reason 2 Choice")]
-    public abstract record ClosedStatusReason2Choice_ { }
+    public abstract partial record ClosedStatusReason2Choice_ { }
 }

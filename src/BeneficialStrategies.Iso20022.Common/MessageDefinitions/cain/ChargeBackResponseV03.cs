@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_zDpKIYVkEe6odei_lsRKtw")]
 [DisplayName("Charge Back Response V03")]
-public record ChargeBackResponseV03 : IOuterRecord
+public partial record ChargeBackResponseV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

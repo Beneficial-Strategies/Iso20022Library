@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("94360db3-d49d-45e1-8a89-02011544ab99")]
 [DisplayName("Credit Transfer12")]
-public record CreditTransfer12
+public partial record CreditTransfer12
 {
     /// <summary>
     /// Unique identification as assigned by an instructing party for an instructed party to unambiguously identify the instruction.

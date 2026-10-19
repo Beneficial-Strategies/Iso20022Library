@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstructionRe
     [IsoId("_NHQjM3i8EeaRm5xIK6nGuQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : AccountStatusUpdateInstructionReason1Choice_
+    public partial record Reason : AccountStatusUpdateInstructionReason1Choice_
     {
         /// <summary>
         /// Reason for the instruction to change the account status.

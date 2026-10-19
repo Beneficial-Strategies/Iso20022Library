@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_nKgLABrdEeOVR9VN6fAMUg")]
     [DisplayName("Charges Type 1 Choice")]
-    public abstract record ChargesType1Choice_ { }
+    public abstract partial record ChargesType1Choice_ { }
 }

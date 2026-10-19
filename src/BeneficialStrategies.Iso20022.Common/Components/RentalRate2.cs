@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sCARIZmhEe6Qpd-x8YgzaA")]
 [DisplayName("Rental Rate2")]
-public record RentalRate2
+public partial record RentalRate2
 {
     /// <summary>
     /// Period.

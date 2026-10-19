@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PtrCQEy-EeafiMTDrtSnyw")]
     [DisplayName("Enabled Status Reason 2 Choice")]
-    public abstract record EnabledStatusReason2Choice_ { }
+    public abstract partial record EnabledStatusReason2Choice_ { }
 }

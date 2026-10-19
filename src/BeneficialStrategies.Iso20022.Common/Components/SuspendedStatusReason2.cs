@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RTLdLNp-Ed-ak6NoX_4Aeg_-1398166736")]
 [DisplayName("Suspended Status Reason")]
-public record SuspendedStatusReason2
+public partial record SuspendedStatusReason2
 {
     /// <summary>
     /// Reason for the suspended status.

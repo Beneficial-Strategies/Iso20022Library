@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationFormat1Choice
     /// </summary>
     [IsoId("_icpOQA1eEeKGXqvMN6jpiw")]
     [DisplayName("Code")]
-    public record Code : CommunicationFormat1Choice_
+    public partial record Code : CommunicationFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

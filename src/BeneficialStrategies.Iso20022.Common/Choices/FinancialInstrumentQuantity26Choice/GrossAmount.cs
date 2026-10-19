@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity26Cho
     [IsoId("_Aw-nKU_4Eea1ZIrmU5dI3w")]
     [DisplayName("Gross Amount")]
     [IsoXmlTag("GrssAmt")]
-    public record GrossAmount : FinancialInstrumentQuantity26Choice_
+    public partial record GrossAmount : FinancialInstrumentQuantity26Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

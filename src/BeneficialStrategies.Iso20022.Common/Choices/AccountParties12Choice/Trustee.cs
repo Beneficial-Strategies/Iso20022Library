@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties12Choice
     [IsoId("_mp9DU5Q_EemqYPWMBuVawg")]
     [DisplayName("Trustee")]
     [IsoXmlTag("Trstee")]
-    public record Trustee : AccountParties12Choice_
+    public partial record Trustee : AccountParties12Choice_
     {
         /// <summary>
         /// Information about the organisation or individual person.

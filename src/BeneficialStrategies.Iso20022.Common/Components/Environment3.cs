@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3zNAcU93EeePXdaAO32Uew")]
 [DisplayName("Environment")]
-public record Environment3
+public partial record Environment3
 {
     /// <summary>
     /// Initiator of the process.

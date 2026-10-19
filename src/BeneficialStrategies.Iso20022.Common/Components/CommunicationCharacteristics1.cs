@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VHsEkAyIEeKa_56Jbsi1RQ")]
 [DisplayName("Communication Characteristics")]
-public record CommunicationCharacteristics1
+public partial record CommunicationCharacteristics1
 {
     /// <summary>
     /// Type of low level communication.

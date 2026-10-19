@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jrZ20EXWEeegp_DADCe7HQ")]
 [DisplayName("Content")]
-public record Content1
+public partial record Content1
 {
     /// <summary>
     /// Value of the content of or the reference to the message.

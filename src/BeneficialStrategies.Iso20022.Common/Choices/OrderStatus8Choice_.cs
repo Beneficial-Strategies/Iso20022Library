@@ -19,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Suspended), nameof(Suspended))]
     [KnownType(typeof(PartiallySettled))]
     [JsonDerivedType(typeof(PartiallySettled), nameof(PartiallySettled))]
-    public abstract record OrderStatus8Choice_;
+    public abstract partial record OrderStatus8Choice_;
 }

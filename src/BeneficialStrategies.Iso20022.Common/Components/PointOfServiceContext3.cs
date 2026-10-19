@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AFupAahMEeuOaMA1YOy5YQ")]
 [DisplayName("Point Of Service Context")]
-public record PointOfServiceContext3
+public partial record PointOfServiceContext3
 {
     /// <summary>
     /// Indicates whether the transaction has been initiated by a card physically present or not.

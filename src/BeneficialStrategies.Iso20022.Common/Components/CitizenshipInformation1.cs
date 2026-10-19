@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hRQnYQ2bEeSNWNtJlXOAhg")]
 [DisplayName("Citizenship Information")]
-public record CitizenshipInformation1
+public partial record CitizenshipInformation1
 {
     /// <summary>
     /// Specifies the country where a person was born or is legally accepted as belonging to the country.

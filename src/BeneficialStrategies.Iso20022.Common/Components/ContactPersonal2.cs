@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZWnO8Sz4EfCD0_iZ8tw-zA")]
 [DisplayName("Contact Personal2")]
-public record ContactPersonal2
+public partial record ContactPersonal2
 {
     /// <summary>
     /// Home phone number of contact.

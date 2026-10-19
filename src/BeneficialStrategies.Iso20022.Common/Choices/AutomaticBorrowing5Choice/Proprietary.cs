@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutomaticBorrowing5Choice
     [IsoId("_AZHgENokEeC60axPepSq7g_394993137")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AutomaticBorrowing5Choice_
+    public partial record Proprietary : AutomaticBorrowing5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zYIag_jNEeiM7KpzmLtmTQ")]
 [DisplayName("Fleet Data")]
-public record FleetData2
+public partial record FleetData2
 {
     /// <summary>
     /// Invoice Summary information.

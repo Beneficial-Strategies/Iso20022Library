@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OBCckEB6Eeepk8PtnyIgsg")]
 [DisplayName("Address")]
-public record Address1
+public partial record Address1
 {
     /// <summary>
     /// First line of information that locates and identifies a specific address, as defined by postal services.

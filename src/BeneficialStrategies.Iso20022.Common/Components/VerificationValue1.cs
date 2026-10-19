@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_otO6UHG4Ee60F8I8TAMKmg")]
 [DisplayName("Verification Value1")]
-public record VerificationValue1
+public partial record VerificationValue1
 {
     /// <summary>
     /// Name.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FiscalYear1Choice
     /// </summary>
     [IsoId("_HwOT8FxSEeW8MLuBzR10cg")]
     [DisplayName("Start Date")]
-    public record StartDate : FiscalYear1Choice_
+    public partial record StartDate : FiscalYear1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

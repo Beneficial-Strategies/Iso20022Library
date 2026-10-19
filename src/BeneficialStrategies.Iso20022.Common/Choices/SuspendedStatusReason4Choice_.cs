@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Z5vRgUHlEea8I67lh6qdSQ")]
     [DisplayName("Suspended Status Reason 4 Choice")]
-    public abstract record SuspendedStatusReason4Choice_ { }
+    public abstract partial record SuspendedStatusReason4Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rGZAcT_dEfCQAqQ9lolFUg")]
 [DisplayName("Deposit Details4")]
-public record DepositDetails4
+public partial record DepositDetails4
 {
     /// <summary>
     /// Funding source used for deposit. P000-P999 reserved for private use, N000-N999 reserved for national use.

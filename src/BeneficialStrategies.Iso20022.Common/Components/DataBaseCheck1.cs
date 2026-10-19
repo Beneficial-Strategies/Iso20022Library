@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0wzDEQjWEeS5F6qHcKOrew")]
 [DisplayName("Data Base Check")]
-public record DataBaseCheck1
+public partial record DataBaseCheck1
 {
     /// <summary>
     /// Indicates whether the individual or organisation is listed in an on-line global Know Your Customer (KYC) database.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Hqx1RfcWEeiW-auGnDPZIw")]
 [DisplayName("Departure Or Arrival")]
-public record DepartureOrArrival2
+public partial record DepartureOrArrival2
 {
     /// <summary>
     /// Code indicating the name of the passenger transport carrier (for example, United Airlines, Lufthansa, JetBlue, etc.)

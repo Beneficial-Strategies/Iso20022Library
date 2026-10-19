@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_utoEWNE7Ed-BzquC8wXy7w_1346008013")]
 [DisplayName("Redemption Order Confirmation V")]
-public record RedemptionOrderConfirmationV03 : IOuterRecord
+public partial record RedemptionOrderConfirmationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

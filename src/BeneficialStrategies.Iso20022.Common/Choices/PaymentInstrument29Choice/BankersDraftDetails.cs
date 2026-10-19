@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument29Choice
     /// <summary>Banker's draft details.</summary>
     [IsoId("ac988b12-7cd8-4842-b8cc-9f67699195f9")]
     [DisplayName("Bankers Draft Details")]
-    public record BankersDraftDetails : PaymentInstrument29Choice_
+    public partial record BankersDraftDetails : PaymentInstrument29Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("BkrsDrftDtls")]

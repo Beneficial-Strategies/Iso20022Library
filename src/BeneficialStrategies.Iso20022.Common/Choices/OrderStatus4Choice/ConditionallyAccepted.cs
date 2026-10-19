@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus4Choice
     /// </summary>
     [IsoId("_9wxHxUH8EeaV3ab_pHzFIQ")]
     [DisplayName("Conditionally Accepted")]
-    public record ConditionallyAccepted : OrderStatus4Choice_
+    public partial record ConditionallyAccepted : OrderStatus4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CondlyAccptd")]

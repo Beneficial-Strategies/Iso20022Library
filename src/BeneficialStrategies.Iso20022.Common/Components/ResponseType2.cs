@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MGZDwXuGEeSZrqGdHyoIrw")]
 [DisplayName("Response Type")]
-public record ResponseType2
+public partial record ResponseType2
 {
     /// <summary>
     /// Result of the request message or advice message.

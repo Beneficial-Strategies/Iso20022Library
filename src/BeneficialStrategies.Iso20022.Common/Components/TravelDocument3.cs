@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CkD_QVN7EfC0lMwgjvMClw")]
 [DisplayName("Travel Document3")]
-public record TravelDocument3
+public partial record TravelDocument3
 {
     /// <summary>
     /// Type of travel document. P000-P999 reserved for private use, N000-N999 reserved for national use.

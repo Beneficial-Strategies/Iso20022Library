@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7r9TsJTSEemC09f0MxYkRg")]
 [DisplayName("GDPR Data")]
-public record GDPRData1
+public partial record GDPRData1
 {
     /// <summary>
     /// Type of consent.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JUVlIFzPEeeDqe2giKl0eQ")]
 [DisplayName("Driving License")]
-public record DrivingLicense1
+public partial record DrivingLicense1
 {
     /// <summary>
     /// Type of driving license.

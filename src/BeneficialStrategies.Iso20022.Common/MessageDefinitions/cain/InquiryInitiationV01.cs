@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_ggro1VdREeeIAMBcVOw01w")]
 [DisplayName("Inquiry Initiation V")]
-public record InquiryInitiationV01 : IOuterRecord
+public partial record InquiryInitiationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

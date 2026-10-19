@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_FQ5iwCCyEeWJd9HF2tO7BA")]
     [DisplayName("Cash Account Type 3 Choice")]
-    public abstract record CashAccountType3Choice_ { }
+    public abstract partial record CashAccountType3Choice_ { }
 }

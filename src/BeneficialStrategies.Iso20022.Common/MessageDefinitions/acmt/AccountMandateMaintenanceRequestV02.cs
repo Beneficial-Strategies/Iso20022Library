@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_Yex38Q1TEeKGXqvMN6jpiw")]
 [DisplayName("Account Mandate Maintenance Request V")]
-public record AccountMandateMaintenanceRequestV02 : IOuterRecord
+public partial record AccountMandateMaintenanceRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

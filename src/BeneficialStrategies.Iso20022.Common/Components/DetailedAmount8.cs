@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__NLEUXsyEeSTS7uHCe8FPQ")]
 [DisplayName("Detailed Amount")]
-public record DetailedAmount8
+public partial record DetailedAmount8
 {
     /// <summary>
     /// Amount after the currency exchange.

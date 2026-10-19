@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_sSPRRWtdEeCY4-KZ9JEyUQ_219398369")]
 [DisplayName("Identification Modification Advice V")]
-public record IdentificationModificationAdviceV01 : IOuterRecord
+public partial record IdentificationModificationAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

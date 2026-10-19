@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FiscalYear1Choice.EndDate), nameof(FiscalYear1Choice.EndDate))]
     [IsoId("_534EEFxREeW8MLuBzR10cg")]
     [DisplayName("Fiscal Year 1 Choice")]
-    public abstract record FiscalYear1Choice_ { }
+    public abstract partial record FiscalYear1Choice_ { }
 }

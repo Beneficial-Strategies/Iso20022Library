@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledReason12Choice
     [IsoId("_fBNm2UHTEeasdbKMiqizqA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CancelledReason12Choice_
+    public partial record Proprietary : CancelledReason12Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

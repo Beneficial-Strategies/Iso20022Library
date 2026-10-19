@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod2Choice
     [IsoId("_7HIKc248EeiU9cctagi5ow")]
     [DisplayName("Debit")]
     [IsoXmlTag("Dbt")]
-    public record Debit : SettlementMethod2Choice_
+    public partial record Debit : SettlementMethod2Choice_
     {
         /// <summary>
         /// Set of elements used to reference a payment instruction.

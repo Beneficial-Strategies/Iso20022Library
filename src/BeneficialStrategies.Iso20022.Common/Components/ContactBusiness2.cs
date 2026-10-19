@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YKYSUVN5EfC0lMwgjvMClw")]
 [DisplayName("Contact Business2")]
-public record ContactBusiness2
+public partial record ContactBusiness2
 {
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.

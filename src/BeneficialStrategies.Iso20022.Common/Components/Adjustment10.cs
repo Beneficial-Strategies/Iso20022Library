@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TMwPmPJ0EeiJn9rM2Znz2w")]
 [DisplayName("Adjustment")]
-public record Adjustment10
+public partial record Adjustment10
 {
     /// <summary>
     /// Type of adjustment.

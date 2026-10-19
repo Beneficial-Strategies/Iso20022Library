@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3HL7gEVREeea-M6VZkEPUw")]
 [DisplayName("Approval Entity")]
-public record ApprovalEntity1
+public partial record ApprovalEntity1
 {
     /// <summary>
     /// Identification of the entity.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_VI5xiNp-Ed-ak6NoX_4Aeg_-463850161")]
 [DisplayName("Total Charges")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record TotalCharges2
+public partial record TotalCharges2
 {
     /// <summary>
     /// Total value of the charges for a specific order.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice
     /// </summary>
     [IsoId("_t7vvIBdHEeK5g-3oYI0_9Q")]
     [DisplayName("Cheque")]
-    public record Cheque : PaymentInstrument17Choice_
+    public partial record Cheque : PaymentInstrument17Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

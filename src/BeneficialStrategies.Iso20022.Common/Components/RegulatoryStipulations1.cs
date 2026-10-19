@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AmX48NokEeC60axPepSq7g_4921707")]
 [DisplayName("Regulatory Stipulations")]
-public record RegulatoryStipulations1
+public partial record RegulatoryStipulations1
 {
     /// <summary>
     /// Nation with its own government, occupying a particular territory.

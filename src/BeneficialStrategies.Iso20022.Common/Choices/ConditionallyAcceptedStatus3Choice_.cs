@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_scSIAUHXEeamVPoS58KxXA")]
     [DisplayName("Conditionally Accepted Status 3 Choice")]
-    public abstract record ConditionallyAcceptedStatus3Choice_ { }
+    public abstract partial record ConditionallyAcceptedStatus3Choice_ { }
 }

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(SettlementDate8Choice.Code), nameof(SettlementDate8Choice.Code))]
     [IsoId("_AcsYgtokEeC60axPepSq7g_-1335452175")]
     [DisplayName("Settlement Date 8 Choice")]
-    public abstract record SettlementDate8Choice_ { }
+    public abstract partial record SettlementDate8Choice_ { }
 }

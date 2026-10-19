@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3cod5RwMEe6O0NdiBuX__w")]
 [DisplayName("Delivering Parties And Account20")]
-public record DeliveringPartiesAndAccount20
+public partial record DeliveringPartiesAndAccount20
 {
     /// <summary>
     /// Deliverers Custodian Details.

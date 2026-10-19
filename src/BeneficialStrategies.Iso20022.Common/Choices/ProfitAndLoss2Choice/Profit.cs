@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss2Choice
     [IsoId("_Nd_nIWYDEeaJx-BUPcSWQA")]
     [DisplayName("Profit")]
     [IsoXmlTag("Prft")]
-    public record Profit : ProfitAndLoss2Choice_
+    public partial record Profit : ProfitAndLoss2Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

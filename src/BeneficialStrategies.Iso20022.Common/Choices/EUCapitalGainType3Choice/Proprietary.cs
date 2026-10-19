@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUCapitalGainType3Choice
     [IsoId("_X3dy85BhEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : EUCapitalGainType3Choice_
+    public partial record Proprietary : EUCapitalGainType3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

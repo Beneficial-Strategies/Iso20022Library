@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zKXVUTEyEe6g-ffJsqGiSA")]
 [DisplayName("Identification Modification5")]
-public record IdentificationModification5
+public partial record IdentificationModification5
 {
     /// <summary>
     /// Identification.

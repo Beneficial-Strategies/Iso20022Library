@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstructionRe
     /// </summary>
     [IsoId("_NHQjMXi8EeaRm5xIK6nGuQ")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : AccountStatusUpdateInstructionReason1Choice_
+    public partial record NoSpecifiedReason : AccountStatusUpdateInstructionReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ljU4MEzEEeafiMTDrtSnyw")]
 [DisplayName("Other Account Status")]
-public record OtherAccountStatus1
+public partial record OtherAccountStatus1
 {
     /// <summary>
     /// Status of the account.

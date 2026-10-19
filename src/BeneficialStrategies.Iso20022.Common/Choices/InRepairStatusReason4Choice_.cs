@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_BRBdEUHqEea8I67lh6qdSQ")]
     [DisplayName("In Repair Status Reason 4 Choice")]
-    public abstract record InRepairStatusReason4Choice_ { }
+    public abstract partial record InRepairStatusReason4Choice_ { }
 }

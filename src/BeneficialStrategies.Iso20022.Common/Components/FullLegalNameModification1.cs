@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c8xsMA4iEeK3IMoVvcTkkg")]
 [DisplayName("Full Legal Name Modification")]
-public record FullLegalNameModification1
+public partial record FullLegalNameModification1
 {
     /// <summary>
     /// Specifies the type of change.

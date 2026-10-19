@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversible1Choice
     [IsoId("_AYXSIdokEeC60axPepSq7g_2118805940")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Reversible1Choice_
+    public partial record Proprietary : Reversible1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

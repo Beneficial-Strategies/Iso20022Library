@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_NJKKkCDVEeWCLu74WLgP4w")]
     [DisplayName("Consolidation Type 1 Choice")]
-    public abstract record ConsolidationType1Choice_ { }
+    public abstract partial record ConsolidationType1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
     [IsoId("_yANgEFxYEeWvPv3PXpS3fw")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
-    public record Organisation : RegisteredShareholderName1Choice_
+    public partial record Organisation : RegisteredShareholderName1Choice_
     {
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.

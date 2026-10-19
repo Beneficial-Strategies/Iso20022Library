@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod7Choice
     /// <summary>Settlement via a credit transfer transaction.</summary>
     [IsoId("_GcCY0XeKEfCdoODv2ypKfw")]
     [DisplayName("Credit")]
-    public record Credit : SettlementMethod7Choice_
+    public partial record Credit : SettlementMethod7Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cdt")]

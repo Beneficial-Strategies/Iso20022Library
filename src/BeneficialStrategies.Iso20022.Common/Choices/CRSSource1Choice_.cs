@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CRSSource1Choice.Proprietary), nameof(CRSSource1Choice.Proprietary))]
     [IsoId("_JdcmcUNfEeamLdeYEZm56w")]
     [DisplayName("CRS Source 1 Choice")]
-    public abstract record CRSSource1Choice_ { }
+    public abstract partial record CRSSource1Choice_ { }
 }

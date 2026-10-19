@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HQHgwBrXEeOVR9VN6fAMUg")]
     [DisplayName("Adjustment Type 1 Choice")]
-    public abstract record AdjustmentType1Choice_ { }
+    public abstract partial record AdjustmentType1Choice_ { }
 }

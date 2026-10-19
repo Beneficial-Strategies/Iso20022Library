@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S5CHjgEcEeCQm6a_G2yO_w_-1855522854")]
 [DisplayName("Trade Delivery")]
-public record TradeDelivery1
+public partial record TradeDelivery1
 {
     /// <summary>
     /// Actual delivery period of the products and/or services.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hc90MQjREeS5F6qHcKOrew")]
 [DisplayName("FATCA Status")]
-public record FATCAStatus1
+public partial record FATCAStatus1
 {
     /// <summary>
     /// Foreign Account Tax Compliance Act (FATCA) status.

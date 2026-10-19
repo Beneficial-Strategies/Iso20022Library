@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Azyp49okEeC60axPepSq7g_-773750122")]
     [DisplayName("Instruction Processing Reason 1 Choice")]
-    public abstract record InstructionProcessingReason1Choice_ { }
+    public abstract partial record InstructionProcessingReason1Choice_ { }
 }

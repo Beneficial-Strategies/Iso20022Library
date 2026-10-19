@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("13f34c81-a583-4d11-b4e2-d62551fc1ceb")]
 [DisplayName("Receiving Parties And Account24")]
-public record ReceivingPartiesAndAccount24
+public partial record ReceivingPartiesAndAccount24
 {
     /// <summary>
     /// Party that acts on behalf of the receiver agent and holds the securities.

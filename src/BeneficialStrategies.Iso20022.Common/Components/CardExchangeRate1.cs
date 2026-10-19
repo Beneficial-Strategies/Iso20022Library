@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fbVncSH1EfCkq6-p7S3J1Q")]
 [DisplayName("Card Exchange Rate1")]
-public record CardExchangeRate1
+public partial record CardExchangeRate1
 {
     /// <summary>
     /// Identifies the source of the rate information.

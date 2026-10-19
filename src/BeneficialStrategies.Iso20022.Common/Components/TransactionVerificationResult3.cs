@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0RdhAWjkEeSDR-pyia6Xtg")]
 [DisplayName("Transaction Verification Result")]
-public record TransactionVerificationResult3
+public partial record TransactionVerificationResult3
 {
     /// <summary>
     /// Method of verification that has been used.

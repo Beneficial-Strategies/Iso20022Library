@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vgLY5PPoEeihCvvpsmGI2w")]
 [DisplayName("Departure Or Arrival")]
-public record DepartureOrArrival1
+public partial record DepartureOrArrival1
 {
     /// <summary>
     /// Departure or arrival location (for example, city, airport code, station id, etc).

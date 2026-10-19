@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B51cYUNTEeiut6dbx3wnBg")]
 [DisplayName("Account Balance")]
-public record AccountBalance1
+public partial record AccountBalance1
 {
     /// <summary>
     /// Account for which a balance is sought.

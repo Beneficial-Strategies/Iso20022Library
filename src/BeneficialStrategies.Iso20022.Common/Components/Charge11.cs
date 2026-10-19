@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VIwAiNp-Ed-ak6NoX_4Aeg_2085827171")]
 [DisplayName("Charge")]
-public record Charge11
+public partial record Charge11
 {
     /// <summary>
     /// Amount of money asked or paid for the charge.

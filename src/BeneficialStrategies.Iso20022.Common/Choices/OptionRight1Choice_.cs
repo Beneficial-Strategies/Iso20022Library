@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AeoSNdokEeC60axPepSq7g_-1501938465")]
     [DisplayName("Option Right 1 Choice")]
-    public abstract record OptionRight1Choice_ { }
+    public abstract partial record OptionRight1Choice_ { }
 }

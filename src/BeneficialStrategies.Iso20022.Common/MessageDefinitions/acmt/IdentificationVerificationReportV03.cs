@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_dgmtEwyYEeukGOovyT2RcQ")]
 [DisplayName("Identification Verification Report V")]
-public record IdentificationVerificationReportV03 : IOuterRecord
+public partial record IdentificationVerificationReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

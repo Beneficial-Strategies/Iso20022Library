@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification82Choice
     /// <summary>Unique identification of an account, as assigned by the account servicer, using an identification scheme.</summary>
     [IsoId("0ea7fcff-df38-469b-8412-306607c0c809")]
     [DisplayName("Other")]
-    public record Other : AccountIdentification82Choice_
+    public partial record Other : AccountIdentification82Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Othr")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument18Choice
     [IsoId("_fprtBSC1EeWJd9HF2tO7BA")]
     [DisplayName("Direct Debit Details")]
     [IsoXmlTag("DrctDbtDtls")]
-    public record DirectDebitDetails : PaymentInstrument18Choice_
+    public partial record DirectDebitDetails : PaymentInstrument18Choice_
     {
         /// <summary>
         /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.

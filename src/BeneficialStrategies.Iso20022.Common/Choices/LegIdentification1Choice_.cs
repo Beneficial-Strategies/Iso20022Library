@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_r7QIIEglEea9YuSvQGoi-w")]
     [DisplayName("Leg Identification 1 Choice")]
-    public abstract record LegIdentification1Choice_ { }
+    public abstract partial record LegIdentification1Choice_ { }
 }

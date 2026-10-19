@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_Aab7szbLEead9bDRE_1DAQ")]
 [DisplayName("Redemption Order Confirmation Cancellation Instruction V")]
-public record RedemptionOrderConfirmationCancellationInstructionV02 : IOuterRecord
+public partial record RedemptionOrderConfirmationCancellationInstructionV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

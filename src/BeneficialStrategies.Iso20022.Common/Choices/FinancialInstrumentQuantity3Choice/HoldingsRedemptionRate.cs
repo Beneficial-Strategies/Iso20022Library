@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity3Choi
     /// </summary>
     [IsoId("_VO3Pk9p-Ed-ak6NoX_4Aeg_1922478169")]
     [DisplayName("Holdings Redemption Rate")]
-    public record HoldingsRedemptionRate : FinancialInstrumentQuantity3Choice_
+    public partial record HoldingsRedemptionRate : FinancialInstrumentQuantity3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

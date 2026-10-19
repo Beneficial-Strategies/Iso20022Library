@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DAmGAbADEeah1_v59tW6Rg")]
 [DisplayName("Cardholder")]
-public record Cardholder12
+public partial record Cardholder12
 {
     /// <summary>
     /// Identification of the cardholder involved in a transaction.

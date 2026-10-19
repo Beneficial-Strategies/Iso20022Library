@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LevelOfControl1Choice
     /// </summary>
     [IsoId("_RhNOECDDEeWPMvNwVtiMsA")]
     [DisplayName("Code")]
-    public record Code : LevelOfControl1Choice_
+    public partial record Code : LevelOfControl1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

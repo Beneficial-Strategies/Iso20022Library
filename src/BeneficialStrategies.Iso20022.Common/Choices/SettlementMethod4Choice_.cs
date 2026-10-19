@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(SettlementMethod4Choice.Debit), nameof(SettlementMethod4Choice.Debit))]
     [IsoId("_dWm-h9cZEeqRFcf2R4bPBw")]
     [DisplayName("Settlement Method 4 Choice")]
-    public abstract record SettlementMethod4Choice_ { }
+    public abstract partial record SettlementMethod4Choice_ { }
 }

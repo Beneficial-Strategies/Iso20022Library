@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__MxEsEUTEeea-M6VZkEPUw")]
 [DisplayName("Transfer Service")]
-public record TransferService1
+public partial record TransferService1
 {
     /// <summary>
     /// Identification of the funding service provider.

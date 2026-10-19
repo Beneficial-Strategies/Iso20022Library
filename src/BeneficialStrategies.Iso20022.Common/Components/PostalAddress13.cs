@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zlTVEUuAEeOC3MFxIpMwug")]
 [DisplayName("Postal Address")]
-public record PostalAddress13
+public partial record PostalAddress13
 {
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.

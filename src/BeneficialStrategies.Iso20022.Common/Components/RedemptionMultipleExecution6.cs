@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oeOJYRwCEe6fEumgV5aG_A")]
 [DisplayName("Redemption Multiple Execution6")]
-public record RedemptionMultipleExecution6
+public partial record RedemptionMultipleExecution6
 {
     /// <summary>
     /// Amendment Indicator.

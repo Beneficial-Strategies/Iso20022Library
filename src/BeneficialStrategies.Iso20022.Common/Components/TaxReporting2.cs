@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1U4BwUN2EeaS-NnwLNvMPg")]
 [DisplayName("Tax Reporting")]
-public record TaxReporting2
+public partial record TaxReporting2
 {
     /// <summary>
     /// Country of taxation of the organisation or individual person.

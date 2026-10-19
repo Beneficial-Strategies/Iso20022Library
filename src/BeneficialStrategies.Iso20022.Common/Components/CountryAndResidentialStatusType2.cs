@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0D9OcSDZEeWCLu74WLgP4w")]
 [DisplayName("Country And Residential Status Type")]
-public record CountryAndResidentialStatusType2
+public partial record CountryAndResidentialStatusType2
 {
     /// <summary>
     /// Country to which the residential status is applicable.

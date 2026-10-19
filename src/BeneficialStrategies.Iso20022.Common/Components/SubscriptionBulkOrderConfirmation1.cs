@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RN-NDNp-Ed-ak6NoX_4Aeg_372099263")]
 [DisplayName("Subscription Bulk Order Confirmation")]
-public record SubscriptionBulkOrderConfirmation1
+public partial record SubscriptionBulkOrderConfirmation1
 {
     /// <summary>
     /// Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.

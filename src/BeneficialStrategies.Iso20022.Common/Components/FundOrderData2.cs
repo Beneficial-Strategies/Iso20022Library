@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SNctANp-Ed-ak6NoX_4Aeg_1967045110")]
 [DisplayName("Fund Order Data")]
-public record FundOrderData2
+public partial record FundOrderData2
 {
     /// <summary>
     /// Amount of money used to derive the quantity of investment fund units to be redeemed.

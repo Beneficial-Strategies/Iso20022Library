@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cJRaIX5TEe6YlIMyoxWMJA")]
 [DisplayName("Context22")]
-public record Context22
+public partial record Context22
 {
     /// <summary>
     /// Merchant Category Code.

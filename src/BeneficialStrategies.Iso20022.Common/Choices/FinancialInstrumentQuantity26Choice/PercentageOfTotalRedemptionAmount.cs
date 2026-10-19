@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity26Cho
     /// </summary>
     [IsoId("_Aw-nJU_4Eea1ZIrmU5dI3w")]
     [DisplayName("Percentage Of Total Redemption Amount")]
-    public record PercentageOfTotalRedemptionAmount : FinancialInstrumentQuantity26Choice_
+    public partial record PercentageOfTotalRedemptionAmount : FinancialInstrumentQuantity26Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

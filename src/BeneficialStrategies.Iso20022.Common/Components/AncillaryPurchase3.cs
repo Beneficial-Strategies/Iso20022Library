@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kAOWYXTeEe6h-4AZRg9sVg")]
 [DisplayName("Ancillary Purchase3")]
-public record AncillaryPurchase3
+public partial record AncillaryPurchase3
 {
     /// <summary>
     /// Document Number.

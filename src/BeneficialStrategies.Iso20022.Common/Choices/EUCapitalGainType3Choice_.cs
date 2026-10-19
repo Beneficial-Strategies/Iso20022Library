@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XolpcZBhEeakHoV5BVecAQ")]
     [DisplayName("EU Capital Gain Type 3 Choice")]
-    public abstract record EUCapitalGainType3Choice_ { }
+    public abstract partial record EUCapitalGainType3Choice_ { }
 }

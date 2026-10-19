@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument30Choice
     /// <summary>Credit transfer details.</summary>
     [IsoId("e0179a41-dce3-4c02-a479-1c2d235ccb19")]
     [DisplayName("Credit Transfer Details")]
-    public record CreditTransferDetails : PaymentInstrument30Choice_
+    public partial record CreditTransferDetails : PaymentInstrument30Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CdtTrfDtls")]

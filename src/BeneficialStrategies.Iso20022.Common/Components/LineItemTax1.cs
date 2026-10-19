@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S0j3MQEcEeCQm6a_G2yO_w_1452898168")]
 [DisplayName("Line Item Tax")]
-public record LineItemTax1
+public partial record LineItemTax1
 {
     /// <summary>
     /// Amount of money resulting from the calculation of the tax.

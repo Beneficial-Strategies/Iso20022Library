@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xhplsXvFEeSKFIcWw3l4Yw")]
 [DisplayName("Card Transaction")]
-public record CardTransaction12
+public partial record CardTransaction12
 {
     /// <summary>
     /// Type of network management service (correspond to the ISO 8583 field 24).

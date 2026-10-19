@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AYz-ENokEeC60axPepSq7g_1301308501")]
     [DisplayName("Revaluation 2 Choice")]
-    public abstract record Revaluation2Choice_ { }
+    public abstract partial record Revaluation2Choice_ { }
 }

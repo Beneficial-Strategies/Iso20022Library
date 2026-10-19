@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kj-g8Hn0EfCmC4yYaU27Kg")]
 [DisplayName("Software2")]
-public record Software2
+public partial record Software2
 {
     /// <summary>
     /// Software type code. P000-P999 reserved for private use, N000-N999 reserved for national use.

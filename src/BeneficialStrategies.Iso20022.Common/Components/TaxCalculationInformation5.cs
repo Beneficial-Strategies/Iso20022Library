@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SlvRMNp-Ed-ak6NoX_4Aeg_500717863")]
 [DisplayName("Tax Calculation Information")]
-public record TaxCalculationInformation5
+public partial record TaxCalculationInformation5
 {
     /// <summary>
     /// Basis used to determine the capital gain or loss, eg, the purchase price.

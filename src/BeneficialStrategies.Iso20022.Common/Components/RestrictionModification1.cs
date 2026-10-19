@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OmFkYA4rEeK3IMoVvcTkkg")]
 [DisplayName("Restriction Modification")]
-public record RestrictionModification1
+public partial record RestrictionModification1
 {
     /// <summary>
     /// Specifies the type of change.

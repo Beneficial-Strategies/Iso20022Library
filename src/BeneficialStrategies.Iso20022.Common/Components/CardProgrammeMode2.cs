@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2fS94-kOEemeDPHh-U9b6w")]
 [DisplayName("Card Programme Mode")]
-public record CardProgrammeMode2
+public partial record CardProgrammeMode2
 {
     /// <summary>
     /// Type of card programme or brand.

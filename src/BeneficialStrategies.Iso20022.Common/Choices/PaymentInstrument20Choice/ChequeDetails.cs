@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
     [IsoId("_weKLHzbsEead9bDRE_1DAQ")]
     [DisplayName("Cheque Details")]
     [IsoXmlTag("ChqDtls")]
-    public record ChequeDetails : PaymentInstrument20Choice_
+    public partial record ChequeDetails : PaymentInstrument20Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a cheque as assigned by the financial institution.

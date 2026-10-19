@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction13C
     /// Cancellation.
     /// </summary>
     [DisplayName("Cancellation")]
-    public record Cancellation : CardPaymentDataSetTransaction13Choice_
+    public partial record Cancellation : CardPaymentDataSetTransaction13Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

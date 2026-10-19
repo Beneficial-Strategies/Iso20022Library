@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_auNAsbpVEfCPZvweyV2nEg")]
 [DisplayName("Frequency2")]
-public record Frequency2
+public partial record Frequency2
 {
     /// <summary>
     /// Technical identifier of a Credit Transfer as part of a series of Credit Transfers within a single Payment Instruction.

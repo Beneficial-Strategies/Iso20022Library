@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference15Choice
     /// Executing Party Transaction Identification.
     /// </summary>
     [DisplayName("Executing Party Transaction Identification")]
-    public record ExecutingPartyTransactionIdentification : IdentificationReference15Choice_
+    public partial record ExecutingPartyTransactionIdentification : IdentificationReference15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D9gQgSX7Eeym0KcvJF9aDQ")]
 [DisplayName("Addendum Data")]
-public record AddendumData5
+public partial record AddendumData5
 {
     /// <summary>
     /// Data exclusively related to a card issuer financial loan of the payment transaction, or instalment.

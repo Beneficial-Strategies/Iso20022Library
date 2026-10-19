@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MLB1AQurEeK6BpGAixa3eA")]
 [DisplayName("Parameter")]
-public record Parameter2
+public partial record Parameter2
 {
     /// <summary>
     /// Digest algorithm used in the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).

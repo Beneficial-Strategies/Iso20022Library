@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuJtKQEcEeCQm6a_G2yO_w_1027665844")]
 [DisplayName("Country Code And Name")]
-public record CountryCodeAndName1
+public partial record CountryCodeAndName1
 {
     /// <summary>
     /// Country is specified by its code.

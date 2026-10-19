@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5GxE0XHJEe60F8I8TAMKmg")]
 [DisplayName("Error Details3")]
-public record ErrorDetails3
+public partial record ErrorDetails3
 {
     /// <summary>
     /// Type.

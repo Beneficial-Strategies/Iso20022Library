@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kLz1YEX7Eeegp_DADCe7HQ")]
 [DisplayName("Settlement Reporting Entity")]
-public record SettlementReportingEntity1
+public partial record SettlementReportingEntity1
 {
     /// <summary>
     /// Identifies the type of settlement reporting entity

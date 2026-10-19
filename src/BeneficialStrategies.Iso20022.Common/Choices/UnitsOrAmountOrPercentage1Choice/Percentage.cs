@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitsOrAmountOrPercentage1Choice
     /// </summary>
     [IsoId("_B1SlYQjdEeS5F6qHcKOrew")]
     [DisplayName("Percentage")]
-    public record Percentage : UnitsOrAmountOrPercentage1Choice_
+    public partial record Percentage : UnitsOrAmountOrPercentage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

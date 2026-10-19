@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification30Choice
     /// </summary>
     [IsoId("_cZCyhXs8EeSTS7uHCe8FPQ")]
     [DisplayName("UPIC")]
-    public record UPIC : AccountIdentification30Choice_
+    public partial record UPIC : AccountIdentification30Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

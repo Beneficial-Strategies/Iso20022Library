@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_rxRn99E7Ed-BzquC8wXy7w_-865600091")]
 [DisplayName("Redemption Multiple Order V")]
-public record RedemptionMultipleOrderV02 : IOuterRecord
+public partial record RedemptionMultipleOrderV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

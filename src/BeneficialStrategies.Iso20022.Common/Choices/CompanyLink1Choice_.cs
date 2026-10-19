@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xMOncCCZEeWJd9HF2tO7BA")]
     [DisplayName("Company Link 1 Choice")]
-    public abstract record CompanyLink1Choice_ { }
+    public abstract partial record CompanyLink1Choice_ { }
 }

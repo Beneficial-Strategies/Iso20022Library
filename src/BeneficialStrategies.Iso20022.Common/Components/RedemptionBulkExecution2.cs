@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_VWdsY9p-Ed-ak6NoX_4Aeg_676422996")]
 [DisplayName("Redemption Bulk Execution")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record RedemptionBulkExecution2
+public partial record RedemptionBulkExecution2
 {
     /// <summary>
     /// Market in which the advised trade transaction was executed.

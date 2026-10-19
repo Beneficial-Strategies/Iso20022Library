@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hKP4BWp_EemXfKijhrqa-Q")]
 [DisplayName("Settlement Service Mode")]
-public record SettlementServiceMode1
+public partial record SettlementServiceMode1
 {
     /// <summary>
     /// Type of settlement service.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QlXxgEbQEeeIjf8aP9KbJA")]
 [DisplayName("Additional Risk Data")]
-public record AdditionalRiskData1
+public partial record AdditionalRiskData1
 {
     /// <summary>
     /// Identification of the additional risk data type related to the transaction.

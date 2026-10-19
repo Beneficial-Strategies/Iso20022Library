@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AzfH4NokEeC60axPepSq7g_1484054937")]
     [DisplayName("Unaffirmed Reason 2 Choice")]
-    public abstract record UnaffirmedReason2Choice_ { }
+    public abstract partial record UnaffirmedReason2Choice_ { }
 }

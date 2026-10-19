@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MoneyLaunderingCheck1Choice
     /// </summary>
     [IsoId("_PZS2KBdDEeK5g-3oYI0_9Q")]
     [DisplayName("Code")]
-    public record Code : MoneyLaunderingCheck1Choice_
+    public partial record Code : MoneyLaunderingCheck1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

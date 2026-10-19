@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uu1Eptp-Ed-ak6NoX_4Aeg_-1083249158")]
 [DisplayName("Individual Order Status And Reason")]
-public record IndividualOrderStatusAndReason1
+public partial record IndividualOrderStatusAndReason1
 {
     /// <summary>
     /// Status of the order is accepted or already executed or sent to next party or received. There is no reason attached.

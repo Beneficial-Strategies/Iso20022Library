@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EmVXet3pEeieV46qhAnbyQ")]
 [DisplayName("Amendment")]
-public record Amendment10
+public partial record Amendment10
 {
     /// <summary>
     /// Contains or describes the information pertaining to the actors interacting with the transaction.

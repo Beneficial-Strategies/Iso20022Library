@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jg3o4CDUEeWCLu74WLgP4w")]
     [DisplayName("Settlement Frequency 1 Choice")]
-    public abstract record SettlementFrequency1Choice_ { }
+    public abstract partial record SettlementFrequency1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4oDGATEyEe6g-ffJsqGiSA")]
 [DisplayName("Cheque19")]
-public record Cheque19
+public partial record Cheque19
 {
     /// <summary>
     /// Cheque Type.

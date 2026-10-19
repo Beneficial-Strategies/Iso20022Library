@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalAmount1Choice
     [IsoId("_uMB7QUG_EeaNEqIb_fgRZg")]
     [DisplayName("Additional Cash In")]
     [IsoXmlTag("AddtlCshIn")]
-    public record AdditionalCashIn : AdditionalAmount1Choice_
+    public partial record AdditionalCashIn : AdditionalAmount1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

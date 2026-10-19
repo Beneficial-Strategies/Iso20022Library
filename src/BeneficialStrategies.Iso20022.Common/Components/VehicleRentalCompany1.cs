@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-kUfUFymEeeve7Je9cXtkQ")]
 [DisplayName("Vehicle Rental Company")]
-public record VehicleRentalCompany1
+public partial record VehicleRentalCompany1
 {
     /// <summary>
     /// Name of the vehicle rental company.

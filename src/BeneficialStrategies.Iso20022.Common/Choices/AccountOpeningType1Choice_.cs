@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wuO4IEzJEeafiMTDrtSnyw")]
     [DisplayName("Account Opening Type 1 Choice")]
-    public abstract record AccountOpeningType1Choice_ { }
+    public abstract partial record AccountOpeningType1Choice_ { }
 }

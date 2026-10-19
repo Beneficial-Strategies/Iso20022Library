@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SucoHAEcEeCQm6a_G2yO_w_1990739481")]
 [DisplayName("Line Item Monetary Summation")]
-public record LineItemMonetarySummation1
+public partial record LineItemMonetarySummation1
 {
     /// <summary>
     /// Monetary value of the line amount total being reported in this trade settlement monetary summation.

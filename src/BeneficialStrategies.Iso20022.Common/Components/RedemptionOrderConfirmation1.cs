@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ROtz5Np-Ed-ak6NoX_4Aeg_-2102884970")]
 [DisplayName("Redemption Order Confirmation")]
-public record RedemptionOrderConfirmation1
+public partial record RedemptionOrderConfirmation1
 {
     /// <summary>
     /// Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.

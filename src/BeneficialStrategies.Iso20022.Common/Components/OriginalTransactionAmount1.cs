@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wYTrgEULEeea-M6VZkEPUw")]
 [DisplayName("Original Transaction Amount")]
-public record OriginalTransactionAmount1
+public partial record OriginalTransactionAmount1
 {
     /// <summary>
     /// Qualifies the amount of the transaction.

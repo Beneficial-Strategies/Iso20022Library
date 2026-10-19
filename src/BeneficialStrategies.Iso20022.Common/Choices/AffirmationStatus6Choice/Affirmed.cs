@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus6Choice
     [IsoId("_A55R5dokEeC60axPepSq7g_-752277579")]
     [DisplayName("Affirmed")]
     [IsoXmlTag("Affrmd")]
-    public record Affirmed : AffirmationStatus6Choice_
+    public partial record Affirmed : AffirmationStatus6Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

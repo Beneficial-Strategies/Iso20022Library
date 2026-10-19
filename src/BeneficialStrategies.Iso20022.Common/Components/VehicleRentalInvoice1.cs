@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cYeOxvTZEeife6veM7daYw")]
 [DisplayName("Vehicle Rental Invoice")]
-public record VehicleRentalInvoice1
+public partial record VehicleRentalInvoice1
 {
     /// <summary>
     /// Indicates that the cardholder failed to pick up the vehicle and was therefore charged a no-show fee; vehicle was not actually rented.

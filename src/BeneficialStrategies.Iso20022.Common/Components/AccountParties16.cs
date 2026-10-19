@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GmcvUUzPEeafiMTDrtSnyw")]
 [DisplayName("Account Parties")]
-public record AccountParties16
+public partial record AccountParties16
 {
     /// <summary>
     /// Specifies the type of modification to be applied.

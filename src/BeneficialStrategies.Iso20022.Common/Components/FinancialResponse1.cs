@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VpWwllT5EeetiruPyDPo0Q")]
 [DisplayName("Financial Response")]
-public record FinancialResponse1
+public partial record FinancialResponse1
 {
     /// <summary>
     /// Environment of the transaction.

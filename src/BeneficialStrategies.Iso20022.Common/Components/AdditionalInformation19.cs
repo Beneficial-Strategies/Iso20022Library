@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EkHNFf2qEeiS2rs-hXBB5Q")]
 [DisplayName("Additional Information")]
-public record AdditionalInformation19
+public partial record AdditionalInformation19
 {
     /// <summary>
     /// Key-entered numeric data.

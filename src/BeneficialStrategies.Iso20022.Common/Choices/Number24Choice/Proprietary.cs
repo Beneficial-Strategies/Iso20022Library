@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number24Choice
     [IsoId("_6donq5BfEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Number24Choice_
+    public partial record Proprietary : Number24Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

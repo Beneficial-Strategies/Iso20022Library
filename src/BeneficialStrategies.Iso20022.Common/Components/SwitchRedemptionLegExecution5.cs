@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("f3cc386a-dadf-4691-afd6-1c60f6402f94")]
 [DisplayName("Switch Redemption Leg Execution5")]
-public record SwitchRedemptionLegExecution5
+public partial record SwitchRedemptionLegExecution5
 {
     /// <summary>
     /// Unique technical identifier for the instance of the leg within a switch.

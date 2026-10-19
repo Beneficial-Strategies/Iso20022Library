@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QpBF1dp-Ed-ak6NoX_4Aeg_1103415062")]
 [DisplayName("Message Identification")]
-public record MessageIdentification4
+public partial record MessageIdentification4
 {
     /// <summary>
     /// Point to point reference, as assigned by the assigner, and sent to the next party in the chain to unambiguously identify the message.

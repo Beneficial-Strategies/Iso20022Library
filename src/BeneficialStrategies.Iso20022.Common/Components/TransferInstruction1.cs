@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AU8gYUz5EeepdbMfWGyv3Q")]
 [DisplayName("Transfer Instruction")]
-public record TransferInstruction1
+public partial record TransferInstruction1
 {
     /// <summary>
     /// Indicates whether a payment arrangement is transferable.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xZZNIw3wEeKGXqvMN6jpiw")]
 [DisplayName("Authorisation")]
-public record Authorisation2
+public partial record Authorisation2
 {
     /// <summary>
     /// Maximum amount allowed by the mandate for each transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KKDwkC_uEeugIJ3Gvoevmg")]
 [DisplayName("Non Financial Response Content Component")]
-public record NonFinancialResponseContentComponent1
+public partial record NonFinancialResponseContentComponent1
 {
     /// <summary>
     /// Type of non financial request that the Acquirer processed.

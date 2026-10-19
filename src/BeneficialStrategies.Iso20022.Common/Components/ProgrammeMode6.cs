@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DuuKsRWlEfC_aaedwHHlmw")]
 [DisplayName("Programme Mode6")]
-public record ProgrammeMode6
+public partial record ProgrammeMode6
 {
     /// <summary>
     /// Identification of Programme, network, or brand proposed for the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_blvrpPfWEei89sMSHxl1ew")]
 [DisplayName("Temporary Services Job")]
-public record TemporaryServicesJob1
+public partial record TemporaryServicesJob1
 {
     /// <summary>
     /// Identifies the job or task being performed by the individual working in a temporary capacity.

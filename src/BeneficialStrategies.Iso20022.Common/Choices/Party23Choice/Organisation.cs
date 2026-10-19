@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice
     [IsoId("_BkkfcWW8EeSHcOWXSsMhqw")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
-    public record Organisation : Party23Choice_
+    public partial record Organisation : Party23Choice_
     {
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KqlEoR7cEfCkq6-p7S3J1Q")]
 [DisplayName("Originator Data2")]
-public record OriginatorData2
+public partial record OriginatorData2
 {
     /// <summary>
     /// Identification of the originator.

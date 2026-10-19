@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_7dvQsX5VEe6YlIMyoxWMJA")]
 [DisplayName("Addendum Initiation V03")]
-public record AddendumInitiationV03 : IOuterRecord
+public partial record AddendumInitiationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

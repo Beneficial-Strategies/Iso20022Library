@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegIdentification1Choice
     /// </summary>
     [IsoId("_1CxGQ0glEea9YuSvQGoi-w")]
     [DisplayName("Subscription Leg Identification")]
-    public record SubscriptionLegIdentification : LegIdentification1Choice_
+    public partial record SubscriptionLegIdentification : LegIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

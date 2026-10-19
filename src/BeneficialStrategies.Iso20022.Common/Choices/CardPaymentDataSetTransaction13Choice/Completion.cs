@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction13C
     /// Completion.
     /// </summary>
     [DisplayName("Completion")]
-    public record Completion : CardPaymentDataSetTransaction13Choice_
+    public partial record Completion : CardPaymentDataSetTransaction13Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

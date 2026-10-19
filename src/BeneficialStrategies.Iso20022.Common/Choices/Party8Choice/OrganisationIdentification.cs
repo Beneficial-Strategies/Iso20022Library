@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party8Choice
     [IsoId("_PXDusNp-Ed-ak6NoX_4Aeg_-1912923115")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public record OrganisationIdentification : Party8Choice_
+    public partial record OrganisationIdentification : Party8Choice_
     {
         /// <summary>
         /// Code allocated to organisations by the ISO 9362 Registration Authority, under an international identification scheme, as described in the latest version of the standard ISO 9362 Banking (Banking telecommunication messages, Business Identifier Codes).

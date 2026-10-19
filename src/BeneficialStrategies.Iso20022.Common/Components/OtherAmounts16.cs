@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AkJEUNokEeC60axPepSq7g_-185304496")]
 [DisplayName("Other Amounts")]
-public record OtherAmounts16
+public partial record OtherAmounts16
 {
     /// <summary>
     /// Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.

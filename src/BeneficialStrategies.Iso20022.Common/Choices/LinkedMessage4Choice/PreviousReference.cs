@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage4Choice
     [IsoId("_5R1ssaDjEeahP9OZs6K4wg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public record PreviousReference : LinkedMessage4Choice_
+    public partial record PreviousReference : LinkedMessage4Choice_
     {
         /// <summary>
         /// Message identification of a message. This reference was assigned by the party issuing the message.

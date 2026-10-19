@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwiSzgEcEeCQm6a_G2yO_w_-1031438550")]
 [DisplayName("Digested Data")]
-public record DigestedData1
+public partial record DigestedData1
 {
     /// <summary>
     /// Version of the data structure.

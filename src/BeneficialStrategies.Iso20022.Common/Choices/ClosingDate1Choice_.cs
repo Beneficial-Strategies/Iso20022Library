@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ClosingDate1Choice.Code), nameof(ClosingDate1Choice.Code))]
     [IsoId("_j2-tkNopEeCWg-hsBVGrDA_1110999750")]
     [DisplayName("Closing Date 1 Choice")]
-    public abstract record ClosingDate1Choice_ { }
+    public abstract partial record ClosingDate1Choice_ { }
 }

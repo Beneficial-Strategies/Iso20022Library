@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8JM04WPyEfCX7uJiAWHfoQ")]
 [DisplayName("Transaction Identification62")]
-public record TransactionIdentification62
+public partial record TransactionIdentification62
 {
     /// <summary>
     /// Specifies the type of identifier present in the message. P000-P999 reserved for private use, N000-N999 reserved for national use.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_g_M0Wwd3Ee2fOITqoTnSLQ")]
     [DisplayName("Repair Reason 19 Choice")]
-    public abstract record RepairReason19Choice_ { }
+    public abstract partial record RepairReason19Choice_ { }
 }

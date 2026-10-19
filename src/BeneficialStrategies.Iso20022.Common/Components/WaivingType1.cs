@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VRshKNp-Ed-ak6NoX_4Aeg_978065066")]
 [DisplayName("Waiving Type")]
-public record WaivingType1
+public partial record WaivingType1
 {
     /// <summary>
     /// Structured format.

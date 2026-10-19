@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     [IsoId("_A42wFNokEeC60axPepSq7g_1860431455")]
     [DisplayName("Already Matched And Affirmed")]
     [IsoXmlTag("AlrdyMtchdAndAffrmd")]
-    public record AlreadyMatchedAndAffirmed : ProcessingStatus17Choice_
+    public partial record AlreadyMatchedAndAffirmed : ProcessingStatus17Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

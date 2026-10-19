@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U36vM9p-Ed-ak6NoX_4Aeg_-1456785777")]
 [DisplayName("Foreign Exchange Terms")]
-public record ForeignExchangeTerms4
+public partial record ForeignExchangeTerms4
 {
     /// <summary>
     /// Currency and amount bought in a foreign exchange trade. The buy amount is received by the buyer.

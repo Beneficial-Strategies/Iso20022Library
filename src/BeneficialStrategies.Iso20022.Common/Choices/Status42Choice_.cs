@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Status42Choice.IndividualCancellationStatusReport))]
     [JsonDerivedType(typeof(Status42Choice.CancellationStatusReport))]
     [JsonDerivedType(typeof(Status42Choice.IndividualCancellationStatusReport))]
-    public abstract record Status42Choice_
+    public abstract partial record Status42Choice_
     {
     }
 }

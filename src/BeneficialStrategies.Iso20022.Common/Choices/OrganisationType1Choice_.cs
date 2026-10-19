@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wpZ08CCeEeWJd9HF2tO7BA")]
     [DisplayName("Organisation Type 1 Choice")]
-    public abstract record OrganisationType1Choice_ { }
+    public abstract partial record OrganisationType1Choice_ { }
 }

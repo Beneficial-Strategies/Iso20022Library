@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_E0HGsxdwEeKYM7Bc71nDlA")]
     [DisplayName("Customer Conduct Classification 1 Choice")]
-    public abstract record CustomerConductClassification1Choice_ { }
+    public abstract partial record CustomerConductClassification1Choice_ { }
 }

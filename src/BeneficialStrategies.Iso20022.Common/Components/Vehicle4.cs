@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fX6l4PTaEeife6veM7daYw")]
 [DisplayName("Vehicle")]
-public record Vehicle4
+public partial record Vehicle4
 {
     /// <summary>
     /// Contains the classification of the vehicle (for example, economy, intermediate, luxury, etc.)

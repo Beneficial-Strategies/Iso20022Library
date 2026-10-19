@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_K53kQHucEeSBS-QFUaKA-g")]
 [DisplayName("Acquirer Financial Response")]
-public record AcquirerFinancialResponse : IOuterRecord
+public partial record AcquirerFinancialResponse : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

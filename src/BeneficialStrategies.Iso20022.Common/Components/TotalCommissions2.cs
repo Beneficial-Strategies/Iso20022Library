@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_VPm2dtp-Ed-ak6NoX_4Aeg_668714663")]
 [DisplayName("Total Commissions")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record TotalCommissions2
+public partial record TotalCommissions2
 {
     /// <summary>
     /// Total value of the commissions for a specific order.

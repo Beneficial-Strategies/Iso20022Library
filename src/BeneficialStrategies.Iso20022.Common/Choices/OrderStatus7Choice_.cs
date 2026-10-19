@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InRepair), nameof(InRepair))]
     [KnownType(typeof(PartiallySettled))]
     [JsonDerivedType(typeof(PartiallySettled), nameof(PartiallySettled))]
-    public abstract record OrderStatus7Choice_;
+    public abstract partial record OrderStatus7Choice_;
 }

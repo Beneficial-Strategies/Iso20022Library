@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ENP28UgnEea9YuSvQGoi-w")]
 [DisplayName("Fund Order Data")]
-public record FundOrderData6
+public partial record FundOrderData6
 {
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.

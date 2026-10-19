@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("9c743842-bfb1-4163-bd81-2e5c6836b4d2")]
 [DisplayName("Block Chain Address Wallet14")]
-public record BlockChainAddressWallet14
+public partial record BlockChainAddressWallet14
 {
     /// <summary>
     /// Unambiguous identification for the account between the account owner and the account servicer.

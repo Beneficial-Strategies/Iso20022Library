@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K0XSoBHCEeKVqeHljBM1MQ")]
 [DisplayName("Blocked")]
-public record Blocked1
+public partial record Blocked1
 {
     /// <summary>
     /// Specifies the order type for which the account is blocked.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AmountOrRate2Choice.Rate), nameof(AmountOrRate2Choice.Rate))]
     [IsoId("_Ac_TddokEeC60axPepSq7g_1944068516")]
     [DisplayName("Amount Or Rate 2 Choice")]
-    public abstract record AmountOrRate2Choice_ { }
+    public abstract partial record AmountOrRate2Choice_ { }
 }

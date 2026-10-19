@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementFrequencyReason1Choice
     [IsoId("_4OkjUBc_EeK5g-3oYI0_9Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : StatementFrequencyReason1Choice_
+    public partial record Proprietary : StatementFrequencyReason1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

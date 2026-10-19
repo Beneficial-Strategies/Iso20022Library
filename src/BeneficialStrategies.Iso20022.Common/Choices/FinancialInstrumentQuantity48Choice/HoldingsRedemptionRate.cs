@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity48Cho
     /// <summary>Portion of the investor's holdings to be redeemed.</summary>
     [IsoId("26c4eb0c-4d21-4986-a36f-5f0aa7440cab")]
     [DisplayName("Holdings Redemption Rate")]
-    public record HoldingsRedemptionRate : FinancialInstrumentQuantity48Choice_
+    public partial record HoldingsRedemptionRate : FinancialInstrumentQuantity48Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("HldgsRedRate")]

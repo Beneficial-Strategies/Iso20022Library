@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h-7gIT2BEfCQAqQ9lolFUg")]
 [DisplayName("Instalment Amount Data1")]
-public record InstalmentAmountData1
+public partial record InstalmentAmountData1
 {
     /// <summary>
     /// Instalment amount detail type. P000-P999 reserved for private use, N000-N999 reserved for national use.

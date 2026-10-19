@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockTrade3Choice
     [IsoId("_AbDZwNokEeC60axPepSq7g_-1763844730")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BlockTrade3Choice_
+    public partial record Proprietary : BlockTrade3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

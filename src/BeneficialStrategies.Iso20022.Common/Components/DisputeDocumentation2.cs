@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L5P44WvYEfCyxsm1jzUNug")]
 [DisplayName("Dispute Documentation2")]
-public record DisputeDocumentation2
+public partial record DisputeDocumentation2
 {
     /// <summary>
     /// Format of the additional information. P000-P999 reserved for private use, N000-N999 reserved for national use.

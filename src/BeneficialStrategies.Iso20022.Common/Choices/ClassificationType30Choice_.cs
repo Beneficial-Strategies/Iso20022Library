@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AbpPotokEeC60axPepSq7g_371267189")]
     [DisplayName("Classification Type 30 Choice")]
-    public abstract record ClassificationType30Choice_ { }
+    public abstract partial record ClassificationType30Choice_ { }
 }

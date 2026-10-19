@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jAIIcG6VEe6DxcrvCrq6hQ")]
 [DisplayName("Additional Fee3")]
-public record AdditionalFee3
+public partial record AdditionalFee3
 {
     /// <summary>
     /// Type.

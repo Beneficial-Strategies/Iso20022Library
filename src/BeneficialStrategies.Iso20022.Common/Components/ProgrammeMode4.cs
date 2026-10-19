@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__--R4W3bEe6dwbOqHXrHWg")]
 [DisplayName("Programme Mode4")]
-public record ProgrammeMode4
+public partial record ProgrammeMode4
 {
     /// <summary>
     /// Proposed Identification.

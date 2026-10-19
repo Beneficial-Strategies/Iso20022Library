@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MoneyLaunderingCheck1Choice
     [IsoId("_PZS2LRdDEeK5g-3oYI0_9Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MoneyLaunderingCheck1Choice_
+    public partial record Proprietary : MoneyLaunderingCheck1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

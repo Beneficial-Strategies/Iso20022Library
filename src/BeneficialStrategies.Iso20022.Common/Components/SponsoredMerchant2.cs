@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6l8gMMWPEeuhguwJmlgagQ")]
 [DisplayName("Sponsored Merchant")]
-public record SponsoredMerchant2
+public partial record SponsoredMerchant2
 {
     /// <summary>
     /// Identification of the sponsored merchant.

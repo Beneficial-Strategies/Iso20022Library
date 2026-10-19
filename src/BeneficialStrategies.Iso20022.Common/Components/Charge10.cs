@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VIm2ktp-Ed-ak6NoX_4Aeg_32079845")]
 [DisplayName("Charge")]
-public record Charge10
+public partial record Charge10
 {
     /// <summary>
     /// Type of service for which a charge is asked or paid.

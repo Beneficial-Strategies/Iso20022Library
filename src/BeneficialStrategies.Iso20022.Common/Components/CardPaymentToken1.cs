@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__GUTcGkgEeSTIuB9A-QJ6g")]
 [DisplayName("Card Payment Token")]
-public record CardPaymentToken1
+public partial record CardPaymentToken1
 {
     /// <summary>
     /// Additional token payment information.

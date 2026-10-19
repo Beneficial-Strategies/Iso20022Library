@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TXee8RT6EfC_aaedwHHlmw")]
 [DisplayName("Local Data18")]
-public record LocalData18
+public partial record LocalData18
 {
     /// <summary>
     /// The language code conforming to ISO 639-1 that identifies the language in which the fields are expressed in this component.

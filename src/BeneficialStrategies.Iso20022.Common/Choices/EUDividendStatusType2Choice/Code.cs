@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUDividendStatusType2Choice
     /// </summary>
     [IsoId("_P4AegTh8EeaH-93K5JKmzw")]
     [DisplayName("Code")]
-    public record Code : EUDividendStatusType2Choice_
+    public partial record Code : EUDividendStatusType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

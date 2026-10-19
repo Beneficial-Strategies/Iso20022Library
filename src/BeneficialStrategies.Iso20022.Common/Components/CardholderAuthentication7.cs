@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uzlg0YIDEeS7UOLM47txvA")]
 [DisplayName("Cardholder Authentication")]
-public record CardholderAuthentication7
+public partial record CardholderAuthentication7
 {
     /// <summary>
     /// Method and data intended to be used for this transaction to authenticate the cardholder or its card.

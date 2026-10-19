@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SpYh7gEcEeCQm6a_G2yO_w_-569860423")]
 [DisplayName("Recurring Transaction")]
-public record RecurringTransaction1
+public partial record RecurringTransaction1
 {
     /// <summary>
     /// Indicates the recurring/instalment occurrence of the transaction (1 = 1st instalment, 2 = 2nd instalment, etc.).

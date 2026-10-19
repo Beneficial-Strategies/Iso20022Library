@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction14C
     /// <summary>Request for a token computation.</summary>
     [IsoId("_tKIfbbYJEfCUZfsQO4rYeA")]
     [DisplayName("Token Request")]
-    public record TokenRequest : CardPaymentDataSetTransaction14Choice_
+    public partial record TokenRequest : CardPaymentDataSetTransaction14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TknReq")]

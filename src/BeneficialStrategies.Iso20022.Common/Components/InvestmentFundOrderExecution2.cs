@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R60r8tp-Ed-ak6NoX_4Aeg_1702688877")]
 [DisplayName("Investment Fund Order Execution")]
-public record InvestmentFundOrderExecution2
+public partial record InvestmentFundOrderExecution2
 {
     /// <summary>
     /// Unique and unambiguous identifier for an order, as assigned by the instructing party.

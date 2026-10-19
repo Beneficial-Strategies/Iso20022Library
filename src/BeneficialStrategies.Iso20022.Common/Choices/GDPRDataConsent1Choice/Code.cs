@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GDPRDataConsent1Choice
     /// </summary>
     [IsoId("_LyNlkJTTEemC09f0MxYkRg")]
     [DisplayName("Code")]
-    public record Code : GDPRDataConsent1Choice_
+    public partial record Code : GDPRDataConsent1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

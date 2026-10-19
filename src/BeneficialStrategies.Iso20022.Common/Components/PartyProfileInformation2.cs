@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XMeHwRODEeKjmvxNCObNeQ")]
 [DisplayName("Party Profile Information")]
-public record PartyProfileInformation2
+public partial record PartyProfileInformation2
 {
     /// <summary>
     /// Indicates whether the certificate type has been obtained and verified.

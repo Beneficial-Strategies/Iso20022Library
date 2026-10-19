@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationType1Choice
     [IsoId("_vmGggUzLEeafiMTDrtSnyw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ConfirmationType1Choice_
+    public partial record Proprietary : ConfirmationType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

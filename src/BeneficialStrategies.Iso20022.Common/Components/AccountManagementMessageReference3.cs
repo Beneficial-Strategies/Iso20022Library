@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dJFMsSFeEeW9XJWqfgXIIA")]
 [DisplayName("Account Management Message Reference")]
-public record AccountManagementMessageReference3
+public partial record AccountManagementMessageReference3
 {
     /// <summary>
     /// Reference to a linked message.

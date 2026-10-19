@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A1IGoNokEeC60axPepSq7g_1106734346")]
 [DisplayName("Settlement Details")]
-public record SettlementDetails43
+public partial record SettlementDetails43
 {
     /// <summary>
     /// Indicates whether the trade is to be settled as principal or netted off against another trade.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedStatusReason2Choice
     [IsoId("_8t7ZA11LEeagR5I1rq5oaw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : BlockedStatusReason2Choice_
+    public partial record Reason : BlockedStatusReason2Choice_
     {
         /// <summary>
         /// Type of transaction for which the account has a blocked status.

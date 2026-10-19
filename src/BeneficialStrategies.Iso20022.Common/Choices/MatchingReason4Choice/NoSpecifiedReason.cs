@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason4Choice
     /// </summary>
     [IsoId("_1ZiGhWXREeOWzsrIp2keDA")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : MatchingReason4Choice_
+    public partial record NoSpecifiedReason : MatchingReason4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

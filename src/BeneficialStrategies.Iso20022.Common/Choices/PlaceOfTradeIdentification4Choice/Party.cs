@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
     /// Party.
     /// </summary>
     [DisplayName("Party")]
-    public record Party : PlaceOfTradeIdentification4Choice_
+    public partial record Party : PlaceOfTradeIdentification4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a-ynQUUVEea21qTBwbMSEA")]
 [DisplayName("Tax Calculation Information")]
-public record TaxCalculationInformation9
+public partial record TaxCalculationInformation9
 {
     /// <summary>
     /// Form of the rebate, for example, cash.

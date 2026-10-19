@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ommxURUJEfC_aaedwHHlmw")]
 [DisplayName("Settlement Service7")]
-public record SettlementService7
+public partial record SettlementService7
 {
     /// <summary>
     /// Proposed type of settlement service.

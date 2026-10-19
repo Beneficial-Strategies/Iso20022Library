@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QoQ359p-Ed-ak6NoX_4Aeg_823875605")]
 [DisplayName("References")]
-public record References5
+public partial record References5
 {
     /// <summary>
     /// Identifies the type of acknowledged request.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RnF4QXjWEe6YlIMyoxWMJA")]
 [DisplayName("Addendum Data7")]
-public record AddendumData7
+public partial record AddendumData7
 {
     /// <summary>
     /// Fleet Line Item.

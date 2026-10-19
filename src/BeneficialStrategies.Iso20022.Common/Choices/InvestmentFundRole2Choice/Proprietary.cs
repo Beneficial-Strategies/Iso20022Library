@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundRole2Choice
     [IsoId("_iug4AzhcEeaRwdGFv45qTQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InvestmentFundRole2Choice_
+    public partial record Proprietary : InvestmentFundRole2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity5Choi
     [IsoId("_Soaxwtp-Ed-ak6NoX_4Aeg_1036645252")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
-    public record UnitsNumber : FinancialInstrumentQuantity5Choice_
+    public partial record UnitsNumber : FinancialInstrumentQuantity5Choice_
     {
         /// <summary>
         /// Quantity expressed as a number, eg, a number of shares.

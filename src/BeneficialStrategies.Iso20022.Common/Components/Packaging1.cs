@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S-_lgQEcEeCQm6a_G2yO_w_809159669")]
 [DisplayName("Packaging")]
-public record Packaging1
+public partial record Packaging1
 {
     /// <summary>
     /// Specifies the type of packaging as a code.

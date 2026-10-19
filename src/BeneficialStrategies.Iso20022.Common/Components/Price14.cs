@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UazzwQeEEe2fOITqoTnSLQ")]
 [DisplayName("Price")]
-public record Price14
+public partial record Price14
 {
     /// <summary>
     /// Value of the price.

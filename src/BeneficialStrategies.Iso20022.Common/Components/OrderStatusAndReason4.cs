@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uvt1dNp-Ed-ak6NoX_4Aeg_816044413")]
 [DisplayName("Order Status And Reason")]
-public record OrderStatusAndReason4
+public partial record OrderStatusAndReason4
 {
     /// <summary>
     /// Status of the order.

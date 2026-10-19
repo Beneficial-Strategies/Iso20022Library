@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PaoEcXn7EfCmC4yYaU27Kg")]
 [DisplayName("Promotion Data1")]
-public record PromotionData1
+public partial record PromotionData1
 {
     /// <summary>
     /// Identify the type of entity offering the promotion.

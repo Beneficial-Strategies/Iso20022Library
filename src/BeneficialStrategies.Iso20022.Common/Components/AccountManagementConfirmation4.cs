@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ax-xUUzLEeafiMTDrtSnyw")]
 [DisplayName("Account Management Confirmation")]
-public record AccountManagementConfirmation4
+public partial record AccountManagementConfirmation4
 {
     /// <summary>
     /// Specifies the confirmation type.

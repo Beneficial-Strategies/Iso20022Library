@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument7Choice
     [IsoId("_VKshQNp-Ed-ak6NoX_4Aeg_1301163735")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
-    public record AccountDetails : PaymentInstrument7Choice_
+    public partial record AccountDetails : PaymentInstrument7Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K82tGW49EeiU9cctagi5ow")]
 [DisplayName("Operation Mandate")]
-public record OperationMandate5
+public partial record OperationMandate5
 {
     /// <summary>
     /// Specifies the type of change.

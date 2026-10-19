@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pkC1gRT_EfC_aaedwHHlmw")]
 [DisplayName("Dispute Data5")]
-public record DisputeData5
+public partial record DisputeData5
 {
     /// <summary>
     /// Indicates the cycle of presentment.

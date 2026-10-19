@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RBTC99p-Ed-ak6NoX_4Aeg_955902350")]
     [DisplayName("Rate Or Absolute Value 1 Choice")]
-    public abstract record RateOrAbsoluteValue1Choice_ { }
+    public abstract partial record RateOrAbsoluteValue1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JHxqYZqHEe6bZt44gtg6XQ")]
 [DisplayName("Strong Customer Authentication2")]
-public record StrongCustomerAuthentication2
+public partial record StrongCustomerAuthentication2
 {
     /// <summary>
     /// Subject To SCA.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AwRLkMV4Eee3gsS0IxDWIA")]
 [DisplayName("Credentials")]
-public record Credentials1
+public partial record Credentials1
 {
     /// <summary>
     /// Identification of the type of credential.

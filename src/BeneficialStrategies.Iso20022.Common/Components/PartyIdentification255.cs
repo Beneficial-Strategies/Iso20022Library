@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h0OF0YZ_EeuSbct6WWD-Ng")]
 [DisplayName("Party Identification")]
-public record PartyIdentification255
+public partial record PartyIdentification255
 {
     /// <summary>
     /// Identification of the acceptor.

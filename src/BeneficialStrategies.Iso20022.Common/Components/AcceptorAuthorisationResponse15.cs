@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DqB10bX0EfCUZfsQO4rYeA")]
 [DisplayName("Acceptor Authorisation Response15")]
-public record AcceptorAuthorisationResponse15
+public partial record AcceptorAuthorisationResponse15
 {
     /// <summary>
     /// Environment of the transaction.

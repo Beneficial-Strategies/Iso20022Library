@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CashAccountDetails), nameof(CashAccountDetails))]
     [KnownType(typeof(BlockChainCashWallet))]
     [JsonDerivedType(typeof(BlockChainCashWallet), nameof(BlockChainCashWallet))]
-    public abstract record PaymentInstrument28Choice_;
+    public abstract partial record PaymentInstrument28Choice_;
 }

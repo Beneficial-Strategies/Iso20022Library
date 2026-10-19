@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vL6cgIZ7EeuSbct6WWD-Ng")]
 [DisplayName("Rate Lock")]
-public record RateLock1
+public partial record RateLock1
 {
     /// <summary>
     /// Indicates if a rate lock is or was requested.

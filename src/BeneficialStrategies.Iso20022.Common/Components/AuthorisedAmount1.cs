@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jl_RBPcYEeiW-auGnDPZIw")]
 [DisplayName("Authorised Amount")]
-public record AuthorisedAmount1
+public partial record AuthorisedAmount1
 {
     /// <summary>
     /// Date and time of the amount authorized

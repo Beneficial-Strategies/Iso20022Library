@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OzOSkHG8Ee60F8I8TAMKmg")]
 [DisplayName("Recommendation Action1")]
-public record RecommendationAction1
+public partial record RecommendationAction1
 {
     /// <summary>
     /// Action.

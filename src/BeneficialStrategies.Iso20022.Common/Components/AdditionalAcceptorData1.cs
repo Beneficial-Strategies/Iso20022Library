@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZG0IJfJREeiJn9rM2Znz2w")]
 [DisplayName("Additional Acceptor Data")]
-public record AdditionalAcceptorData1
+public partial record AdditionalAcceptorData1
 {
     /// <summary>
     /// Contains a code that facilitates card acceptor/corporation communication and record keeping.

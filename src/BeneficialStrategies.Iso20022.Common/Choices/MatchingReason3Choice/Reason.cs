@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason3Choice
     [IsoId("_Az7z0dokEeC60axPepSq7g_1317919921")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : MatchingReason3Choice_
+    public partial record Reason : MatchingReason3Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction has been alleged.

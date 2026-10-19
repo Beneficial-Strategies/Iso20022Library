@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_1ENlzdcAEeq_l4BJLVUF2Q")]
 [DisplayName("Account Opening Request V")]
-public record AccountOpeningRequestV04 : IOuterRecord
+public partial record AccountOpeningRequestV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

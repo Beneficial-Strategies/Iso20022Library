@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K1f94XTfEe6h-4AZRg9sVg")]
 [DisplayName("Hired Vehicle3")]
-public record HiredVehicle3
+public partial record HiredVehicle3
 {
     /// <summary>
     /// Company Type.

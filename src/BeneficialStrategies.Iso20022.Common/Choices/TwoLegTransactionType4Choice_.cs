@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_854_sQhKEe2fOITqoTnSLQ")]
     [DisplayName("Two Leg Transaction Type 4 Choice")]
-    public abstract record TwoLegTransactionType4Choice_ { }
+    public abstract partial record TwoLegTransactionType4Choice_ { }
 }

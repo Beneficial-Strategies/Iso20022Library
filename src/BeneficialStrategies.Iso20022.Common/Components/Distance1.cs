@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M0xaMF_pEee-csPAW1txwQ")]
 [DisplayName("Distance")]
-public record Distance1
+public partial record Distance1
 {
     /// <summary>
     /// Unit of measure used to compute the distance.

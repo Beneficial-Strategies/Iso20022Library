@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JW-UgVgQEeedJb6VxsnkPg")]
 [DisplayName("Card Management Initiation")]
-public record CardManagementInitiation1
+public partial record CardManagementInitiation1
 {
     /// <summary>
     /// Environment of the transaction.

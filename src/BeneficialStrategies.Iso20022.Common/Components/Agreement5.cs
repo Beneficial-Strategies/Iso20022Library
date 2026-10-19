@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ozNtAY-eEeaEa8S_GI1QNA")]
 [DisplayName("Agreement")]
-public record Agreement5
+public partial record Agreement5
 {
     /// <summary>
     /// Full name of the base standard agreement, annexes and amendments in place between the principals and applicable to this deal.

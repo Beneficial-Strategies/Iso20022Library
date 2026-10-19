@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VJzJZdp-Ed-ak6NoX_4Aeg_-1239141267")]
 [DisplayName("Cash Account Type")]
-public record CashAccountType1
+public partial record CashAccountType1
 {
     /// <summary>
     /// Structured format.

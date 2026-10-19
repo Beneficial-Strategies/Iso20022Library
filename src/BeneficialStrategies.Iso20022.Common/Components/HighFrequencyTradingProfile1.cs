@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O87qwCDUEeWCLu74WLgP4w")]
 [DisplayName("High Frequency Trading Profile")]
-public record HighFrequencyTradingProfile1
+public partial record HighFrequencyTradingProfile1
 {
     /// <summary>
     /// Date on which the investor starts high frequency trading.

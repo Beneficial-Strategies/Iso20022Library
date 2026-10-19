@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q7yQ0dp-Ed-ak6NoX_4Aeg_528848853")]
 [DisplayName("Term")]
-public record Term1
+public partial record Term1
 {
     /// <summary>
     /// Provides the relationship between a variable and a fixed value.

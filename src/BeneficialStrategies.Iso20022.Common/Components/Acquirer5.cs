@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LKZqkWmIEeS7iYydEtv3Ug")]
 [DisplayName("Acquirer")]
-public record Acquirer5
+public partial record Acquirer5
 {
     /// <summary>
     /// Identification of the acquirer (for example the bank identification number BIN).

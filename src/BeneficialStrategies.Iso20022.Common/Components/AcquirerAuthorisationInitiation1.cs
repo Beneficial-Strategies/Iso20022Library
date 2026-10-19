@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JQs4AHrhEeSlsoBd7x4P6A")]
 [DisplayName("Acquirer Authorisation Initiation")]
-public record AcquirerAuthorisationInitiation1
+public partial record AcquirerAuthorisationInitiation1
 {
     /// <summary>
     /// Environment of the transaction.

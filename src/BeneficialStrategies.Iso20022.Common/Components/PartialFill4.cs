@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3k2WFQd4Ee2fOITqoTnSLQ")]
 [DisplayName("Partial Fill")]
-public record PartialFill4
+public partial record PartialFill4
 {
     /// <summary>
     /// Quantity of financial instrument to be ordered.

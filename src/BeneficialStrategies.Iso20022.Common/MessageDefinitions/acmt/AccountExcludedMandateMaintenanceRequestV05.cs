@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("08234ebe-bb5d-487f-b042-2fe459be526e")]
 [DisplayName("Account Excluded Mandate Maintenance Request V05")]
-public record AccountExcludedMandateMaintenanceRequestV05 : IOuterRecord
+public partial record AccountExcludedMandateMaintenanceRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

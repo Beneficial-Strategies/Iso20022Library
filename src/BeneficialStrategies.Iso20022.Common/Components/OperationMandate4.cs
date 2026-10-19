@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Cj9vd249EeiU9cctagi5ow")]
 [DisplayName("Operation Mandate")]
-public record OperationMandate4
+public partial record OperationMandate4
 {
     /// <summary>
     /// Unique and unambiguous identification of the mandate.

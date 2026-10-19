@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_R48xQUHtEeaNSo9he0Belg")]
     [DisplayName("Partially Settled 21 Choice")]
-    public abstract record PartiallySettled21Choice_ { }
+    public abstract partial record PartiallySettled21Choice_ { }
 }

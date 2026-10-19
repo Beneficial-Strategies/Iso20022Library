@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0a0QkTEyEe6g-ffJsqGiSA")]
 [DisplayName("Original Transaction Reference43")]
-public record OriginalTransactionReference43
+public partial record OriginalTransactionReference43
 {
     /// <summary>
     /// Message Identification.

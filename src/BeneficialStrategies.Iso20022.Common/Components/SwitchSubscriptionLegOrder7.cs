@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("696a1285-d3fc-427d-be05-073e778482f8")]
 [DisplayName("Switch Subscription Leg Order7")]
-public record SwitchSubscriptionLegOrder7
+public partial record SwitchSubscriptionLegOrder7
 {
     /// <summary>
     /// Unique technical identifier for the instance of the leg within a switch.

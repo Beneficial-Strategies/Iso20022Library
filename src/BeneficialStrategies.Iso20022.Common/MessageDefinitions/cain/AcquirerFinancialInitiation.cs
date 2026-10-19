@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_Mdr84HubEeSBS-QFUaKA-g")]
 [DisplayName("Acquirer Financial Initiation")]
-public record AcquirerFinancialInitiation : IOuterRecord
+public partial record AcquirerFinancialInitiation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

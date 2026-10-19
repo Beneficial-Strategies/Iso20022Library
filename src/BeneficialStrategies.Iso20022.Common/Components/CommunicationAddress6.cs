@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IHGxISCBEeWhHbfCMWc1cw")]
 [DisplayName("Communication Address")]
-public record CommunicationAddress6
+public partial record CommunicationAddress6
 {
     /// <summary>
     /// Type of communication address.

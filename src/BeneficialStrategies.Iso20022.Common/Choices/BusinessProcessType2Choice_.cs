@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0hNQAZBgEeakHoV5BVecAQ")]
     [DisplayName("Business Process Type 2 Choice")]
-    public abstract record BusinessProcessType2Choice_ { }
+    public abstract partial record BusinessProcessType2Choice_ { }
 }

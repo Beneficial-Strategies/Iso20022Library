@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity48Cho
     /// <summary>Quantity of digital tokens expressed as a number, for example, a number of blockchain tokens.</summary>
     [IsoId("6baf5e77-2fe1-4550-a460-d2811c98437f")]
     [DisplayName("Digital Token Unit")]
-    public record DigitalTokenUnit : FinancialInstrumentQuantity48Choice_
+    public partial record DigitalTokenUnit : FinancialInstrumentQuantity48Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DgtlTknUnit")]

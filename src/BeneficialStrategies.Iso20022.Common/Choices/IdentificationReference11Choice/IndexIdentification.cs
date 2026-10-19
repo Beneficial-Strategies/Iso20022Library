@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice
     /// </summary>
     [IsoId("_Adu6VdokEeC60axPepSq7g_1550706670")]
     [DisplayName("Index Identification")]
-    public record IndexIdentification : IdentificationReference11Choice_
+    public partial record IndexIdentification : IdentificationReference11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

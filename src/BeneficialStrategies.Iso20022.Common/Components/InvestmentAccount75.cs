@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QqdlYZS8EemqYPWMBuVawg")]
 [DisplayName("Investment Account")]
-public record InvestmentAccount75
+public partial record InvestmentAccount75
 {
     /// <summary>
     /// Change of account status is instructed.

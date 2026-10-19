@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimePeriodChoice
     [IsoId("_T57c8dp-Ed-ak6NoX_4Aeg_1215657175")]
     [DisplayName("Date Time Range")]
     [IsoXmlTag("DtTmRg")]
-    public record DateTimeRange : DateTimePeriodChoice_
+    public partial record DateTimeRange : DateTimePeriodChoice_
     {
         /// <summary>
         /// Date and time at which the range starts.

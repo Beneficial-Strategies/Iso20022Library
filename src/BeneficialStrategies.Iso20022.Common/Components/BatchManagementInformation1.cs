@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A7J8gEBbEeepk8PtnyIgsg")]
 [DisplayName("Batch Management Information")]
-public record BatchManagementInformation1
+public partial record BatchManagementInformation1
 {
     /// <summary>
     /// Identification of the collection to which the batch belongs.

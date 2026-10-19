@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus10Ch
     [IsoId("_l0B_1Qd4Ee2fOITqoTnSLQ")]
     [DisplayName("Cancellation Completed")]
     [IsoXmlTag("CxlCmpltd")]
-    public record CancellationCompleted : CancellationProcessingStatus10Choice_
+    public partial record CancellationCompleted : CancellationProcessingStatus10Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

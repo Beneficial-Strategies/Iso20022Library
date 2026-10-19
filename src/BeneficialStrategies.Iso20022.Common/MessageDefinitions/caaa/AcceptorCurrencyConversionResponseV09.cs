@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 )]
 [IsoId("_b-b8QU4DEey_VecAUE-C9Q")]
 [DisplayName("Acceptor Currency Conversion Response V")]
-public record AcceptorCurrencyConversionResponseV09 : IOuterRecord
+public partial record AcceptorCurrencyConversionResponseV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

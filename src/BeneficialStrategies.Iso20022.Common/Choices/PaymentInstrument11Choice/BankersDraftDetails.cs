@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument11Choice
     [IsoId("_SBhw5tp-Ed-ak6NoX_4Aeg_2000876344")]
     [DisplayName("Bankers Draft Details")]
     [IsoXmlTag("BkrsDrftDtls")]
-    public record BankersDraftDetails : PaymentInstrument11Choice_
+    public partial record BankersDraftDetails : PaymentInstrument11Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a cheque as assigned by the financial institution.

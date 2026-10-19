@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountPrice1Choice
     [IsoId("_VMB-Ctp-Ed-ak6NoX_4Aeg_1790266847")]
     [DisplayName("Unit Price")]
     [IsoXmlTag("UnitPric")]
-    public record UnitPrice : AmountPrice1Choice_
+    public partial record UnitPrice : AmountPrice1Choice_
     {
         /// <summary>
         /// Type and information about a price.

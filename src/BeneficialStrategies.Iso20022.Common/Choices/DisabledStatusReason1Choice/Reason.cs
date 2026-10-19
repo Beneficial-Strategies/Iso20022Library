@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisabledStatusReason1Choice
     [IsoId("_R5FfA0zAEeafiMTDrtSnyw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : DisabledStatusReason1Choice_
+    public partial record Reason : DisabledStatusReason1Choice_
     {
         /// <summary>
         /// Reason for the disabled account status.

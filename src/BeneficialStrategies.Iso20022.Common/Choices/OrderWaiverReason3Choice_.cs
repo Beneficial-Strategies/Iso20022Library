@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PJanIToREeabspMEjqY5TQ")]
     [DisplayName("Order Waiver Reason 3 Choice")]
-    public abstract record OrderWaiverReason3Choice_ { }
+    public abstract partial record OrderWaiverReason3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDjwarEe2phaVG0lYKTw")]
     [DisplayName("Generated")]
     [IsoXmlTag("Gnrtd")]
-    public record Generated : ProcessingStatus98Choice_
+    public partial record Generated : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

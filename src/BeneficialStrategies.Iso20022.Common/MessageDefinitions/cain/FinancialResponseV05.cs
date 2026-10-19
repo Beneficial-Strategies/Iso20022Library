@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_LHQ6YROIEfC1ZfCQz0xB3g")]
 [DisplayName("Financial Response V05")]
-public record FinancialResponseV05 : IOuterRecord
+public partial record FinancialResponseV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

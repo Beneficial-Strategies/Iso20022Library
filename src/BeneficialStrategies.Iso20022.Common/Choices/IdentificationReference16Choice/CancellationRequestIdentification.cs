@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice
     /// Cancellation Request Identification.
     /// </summary>
     [DisplayName("Cancellation Request Identification")]
-    public record CancellationRequestIdentification : IdentificationReference16Choice_
+    public partial record CancellationRequestIdentification : IdentificationReference16Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

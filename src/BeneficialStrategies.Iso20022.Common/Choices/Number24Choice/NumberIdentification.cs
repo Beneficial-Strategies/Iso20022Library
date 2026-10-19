@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number24Choice
     /// </summary>
     [IsoId("_6dono5BfEeakHoV5BVecAQ")]
     [DisplayName("Number Identification")]
-    public record NumberIdentification : Number24Choice_
+    public partial record NumberIdentification : Number24Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

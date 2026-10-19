@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_v7tBCNE7Ed-BzquC8wXy7w_-862773278")]
 [DisplayName("Request For Order Confirmation Status Report V")]
-public record RequestForOrderConfirmationStatusReportV01 : IOuterRecord
+public partial record RequestForOrderConfirmationStatusReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

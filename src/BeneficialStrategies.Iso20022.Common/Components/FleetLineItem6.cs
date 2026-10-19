@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_icu_sXjWEe6YlIMyoxWMJA")]
 [DisplayName("Fleet Line Item6")]
-public record FleetLineItem6
+public partial record FleetLineItem6
 {
     /// <summary>
     /// Allowed Item.

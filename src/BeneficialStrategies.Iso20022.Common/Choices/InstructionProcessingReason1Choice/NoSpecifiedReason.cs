@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason1Choi
     /// </summary>
     [IsoId("_Azyp5dokEeC60axPepSq7g_1763428885")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : InstructionProcessingReason1Choice_
+    public partial record NoSpecifiedReason : InstructionProcessingReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

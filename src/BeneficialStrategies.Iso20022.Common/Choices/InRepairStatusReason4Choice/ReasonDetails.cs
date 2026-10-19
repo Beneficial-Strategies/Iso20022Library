@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatusReason4Choice
     [IsoId("_Bptp5UHqEea8I67lh6qdSQ")]
     [DisplayName("Reason Details")]
     [IsoXmlTag("RsnDtls")]
-    public record ReasonDetails : InRepairStatusReason4Choice_
+    public partial record ReasonDetails : InRepairStatusReason4Choice_
     {
         /// <summary>
         /// Reason for the in repair status expressed as a code.

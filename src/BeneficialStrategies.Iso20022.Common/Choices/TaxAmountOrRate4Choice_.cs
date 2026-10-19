@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TaxAmountOrRate4Choice.Rate), nameof(TaxAmountOrRate4Choice.Rate))]
     [IsoId("_mnR34EUWEea21qTBwbMSEA")]
     [DisplayName("Tax Amount Or Rate 4 Choice")]
-    public abstract record TaxAmountOrRate4Choice_ { }
+    public abstract partial record TaxAmountOrRate4Choice_ { }
 }

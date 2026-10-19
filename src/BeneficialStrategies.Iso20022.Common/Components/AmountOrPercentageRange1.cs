@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MVJmYZJOEeuAlLVx8pyt3w")]
 [DisplayName("Amount Or Percentage Range")]
-public record AmountOrPercentageRange1
+public partial record AmountOrPercentageRange1
 {
     /// <summary>
     /// Indication of the relationship between two variables.

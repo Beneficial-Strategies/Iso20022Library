@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_th7UgKd4EeuEcqP2FGAFaA")]
 [DisplayName("Authority")]
-public record Authority1
+public partial record Authority1
 {
     /// <summary>
     /// Country code of the authority.

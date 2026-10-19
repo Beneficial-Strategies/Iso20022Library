@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x5PxQXNVEe6Y1uOeeiF_Eg")]
 [DisplayName("Fleet Transaction Detail1")]
-public record FleetTransactionDetail1
+public partial record FleetTransactionDetail1
 {
     /// <summary>
     /// Purchase Type.

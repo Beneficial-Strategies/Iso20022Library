@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Status40Choice.OrderDetailsReport))]
     [JsonDerivedType(typeof(Status40Choice.IndividualOrderDetailsReport))]
     [JsonDerivedType(typeof(Status40Choice.SwitchOrderDetailsReport))]
-    public abstract record Status40Choice_
+    public abstract partial record Status40Choice_
     {
     }
 }

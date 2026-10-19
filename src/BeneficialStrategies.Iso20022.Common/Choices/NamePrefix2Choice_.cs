@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HMqgQQ2fEeSNWNtJlXOAhg")]
     [DisplayName("Name Prefix 2 Choice")]
-    public abstract record NamePrefix2Choice_ { }
+    public abstract partial record NamePrefix2Choice_ { }
 }

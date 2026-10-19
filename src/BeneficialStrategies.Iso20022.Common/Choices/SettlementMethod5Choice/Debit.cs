@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod5Choice
     /// Debit.
     /// </summary>
     [DisplayName("Debit")]
-    public record Debit : SettlementMethod5Choice_
+    public partial record Debit : SettlementMethod5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

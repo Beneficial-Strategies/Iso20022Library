@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction14C
     /// <summary>Cancelled card payment transaction to be captured.</summary>
     [IsoId("_tKIfW7YJEfCUZfsQO4rYeA")]
     [DisplayName("Cancellation")]
-    public record Cancellation : CardPaymentDataSetTransaction14Choice_
+    public partial record Cancellation : CardPaymentDataSetTransaction14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cxl")]

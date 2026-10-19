@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_R3AnxTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Request Redirection V04")]
-public record AccountSwitchRequestRedirectionV04 : IOuterRecord
+public partial record AccountSwitchRequestRedirectionV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

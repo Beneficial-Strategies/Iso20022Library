@@ -19,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_NkLQYEbbEeeIjf8aP9KbJA")]
     [DisplayName("Track 2 Data 1 Choice")]
-    public abstract record Track2Data1Choice_ { }
+    public abstract partial record Track2Data1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8UHSIXnwEfCmC4yYaU27Kg")]
 [DisplayName("Rental Rate3")]
-public record RentalRate3
+public partial record RentalRate3
 {
     /// <summary>
     /// Unit of measure used to compute the rental rate.

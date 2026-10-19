@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G2Xe0XG-Ee60F8I8TAMKmg")]
 [DisplayName("Instalment6")]
-public record Instalment6
+public partial record Instalment6
 {
     /// <summary>
     /// Payment Sequence Number.

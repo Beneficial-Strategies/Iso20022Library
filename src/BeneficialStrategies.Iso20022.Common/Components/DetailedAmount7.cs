@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ddRJ8WkEEeS7zPBpvm732w")]
 [DisplayName("Detailed Amount")]
-public record DetailedAmount7
+public partial record DetailedAmount7
 {
     /// <summary>
     /// Cash-back amount.

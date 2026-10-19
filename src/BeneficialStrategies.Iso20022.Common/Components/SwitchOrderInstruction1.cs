@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uzce69p-Ed-ak6NoX_4Aeg_-530074752")]
 [DisplayName("Switch Order Instruction")]
-public record SwitchOrderInstruction1
+public partial record SwitchOrderInstruction1
 {
     /// <summary>
     /// Information related to the switch order.

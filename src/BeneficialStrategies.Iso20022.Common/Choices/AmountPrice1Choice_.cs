@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AmountPrice1Choice.UnitPrice), nameof(AmountPrice1Choice.UnitPrice))]
     [IsoId("_VMB-CNp-Ed-ak6NoX_4Aeg_834424130")]
     [DisplayName("Amount Price 1 Choice")]
-    public abstract record AmountPrice1Choice_ { }
+    public abstract partial record AmountPrice1Choice_ { }
 }

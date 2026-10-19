@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status40Choice
     /// <summary>Status expressed as order details report.</summary>
     [IsoId("a447d08c-7c2b-44cc-9348-b5d601e991f0")]
     [DisplayName("Order Details Report")]
-    public record OrderDetailsReport : Status40Choice_
+    public partial record OrderDetailsReport : Status40Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OrdrDtlsRpt")]

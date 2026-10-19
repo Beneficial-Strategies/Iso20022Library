@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice
     [IsoId("_RbrR2Np-Ed-ak6NoX_4Aeg_1819640744")]
     [DisplayName("Other Product Category")]
     [IsoXmlTag("OthrPdctCtgy")]
-    public record OtherProductCategory : ProductCategory1Choice_
+    public partial record OtherProductCategory : ProductCategory1Choice_
     {
         /// <summary>
         /// Identifier issued to a person for which no specific identifier has been defined.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PssmMSq6EfCD0_iZ8tw-zA")]
 [DisplayName("Transactor Data1")]
-public record TransactorData1
+public partial record TransactorData1
 {
     /// <summary>
     /// Type of the transactor.

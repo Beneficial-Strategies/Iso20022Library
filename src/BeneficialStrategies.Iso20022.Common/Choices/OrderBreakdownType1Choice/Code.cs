@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderBreakdownType1Choice
     /// </summary>
     [IsoId("_4Ff_gjhjEeamLZQeccJa7w")]
     [DisplayName("Code")]
-    public record Code : OrderBreakdownType1Choice_
+    public partial record Code : OrderBreakdownType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

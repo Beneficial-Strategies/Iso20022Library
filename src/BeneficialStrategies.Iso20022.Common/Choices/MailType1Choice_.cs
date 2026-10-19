@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(MailType1Choice.Proprietary), nameof(MailType1Choice.Proprietary))]
     [IsoId("_mQiA0CCXEeWJd9HF2tO7BA")]
     [DisplayName("Mail Type 1 Choice")]
-    public abstract record MailType1Choice_ { }
+    public abstract partial record MailType1Choice_ { }
 }

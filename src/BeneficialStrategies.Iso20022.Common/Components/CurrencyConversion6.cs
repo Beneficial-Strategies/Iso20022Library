@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V0cSEY0lEeWzoK7sd7oTyw")]
 [DisplayName("Currency Conversion")]
-public record CurrencyConversion6
+public partial record CurrencyConversion6
 {
     /// <summary>
     /// Identification of the currency conversion operation for the service provider.

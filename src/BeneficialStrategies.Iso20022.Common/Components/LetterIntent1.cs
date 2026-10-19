@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QXVWcxKHEeKj15WxqwlXPw")]
 [DisplayName("Letter Intent")]
-public record LetterIntent1
+public partial record LetterIntent1
 {
     /// <summary>
     /// Reference of a letter of intent program, in which sales commissions are reduced based on the aggregate of a customer&apos;s actual purchase and anticipated purchases, over a specific period of time, and as agreed by the customer.

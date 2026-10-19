@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G9Oy1vjDEeiJaN6-Lf-c_w")]
 [DisplayName("Fleet Discount Totals")]
-public record FleetDiscountTotals1
+public partial record FleetDiscountTotals1
 {
     /// <summary>
     /// Total amount.

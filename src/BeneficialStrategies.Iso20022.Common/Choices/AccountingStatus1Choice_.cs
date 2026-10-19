@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9Oz2cCDDEeWPMvNwVtiMsA")]
     [DisplayName("Accounting Status 1 Choice")]
-    public abstract record AccountingStatus1Choice_ { }
+    public abstract partial record AccountingStatus1Choice_ { }
 }

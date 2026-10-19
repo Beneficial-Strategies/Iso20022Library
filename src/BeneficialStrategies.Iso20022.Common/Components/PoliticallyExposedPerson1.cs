@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kC2a0KeeEemSUcvu_mDC7w")]
 [DisplayName("Politically Exposed Person")]
-public record PoliticallyExposedPerson1
+public partial record PoliticallyExposedPerson1
 {
     /// <summary>
     /// Specifies if due diligence checks on the political exposure of the investor have been carried out. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.)

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WW5cEZ-LEe-nbM0aSPcoiQ")]
 [DisplayName("Card Payment Transaction143")]
-public record CardPaymentTransaction143
+public partial record CardPaymentTransaction143
 {
     /// <summary>
     /// Merchant Category Code.

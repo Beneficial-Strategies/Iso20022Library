@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentification2C
     [IsoId("_6KMwsyGZEeWKAaDJcYGKLw")]
     [DisplayName("Person Name")]
     [IsoXmlTag("PrsnNm")]
-    public record PersonName : IndividualPersonIdentification2Choice_
+    public partial record PersonName : IndividualPersonIdentification2Choice_
     {
         /// <summary>
         /// First name of the person.

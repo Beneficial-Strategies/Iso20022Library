@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XYsm0W3bEe6dwbOqHXrHWg")]
 [DisplayName("Account Details4")]
-public record AccountDetails4
+public partial record AccountDetails4
 {
     /// <summary>
     /// Name.

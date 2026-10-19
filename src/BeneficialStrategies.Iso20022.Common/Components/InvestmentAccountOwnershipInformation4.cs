@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TT7M6tp-Ed-ak6NoX_4Aeg_2021205061")]
 [DisplayName("Investment Account Ownership Information")]
-public record InvestmentAccountOwnershipInformation4
+public partial record InvestmentAccountOwnershipInformation4
 {
     /// <summary>
     /// Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.

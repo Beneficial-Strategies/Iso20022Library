@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity48Cho
     /// <summary>Amount of money to be received following redemption of fund units. Net Amount = (Quantity * Price) - (Fees + Taxes).</summary>
     [IsoId("0eae4ddf-782b-488b-91a2-510ba80ff2fb")]
     [DisplayName("Net Amount")]
-    public record NetAmount : FinancialInstrumentQuantity48Choice_
+    public partial record NetAmount : FinancialInstrumentQuantity48Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NetAmt")]

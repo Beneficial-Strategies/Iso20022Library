@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hZ5eIA4qEeK3IMoVvcTkkg")]
 [DisplayName("Amount Modification")]
-public record AmountModification1
+public partial record AmountModification1
 {
     /// <summary>
     /// Specifies the type of change.

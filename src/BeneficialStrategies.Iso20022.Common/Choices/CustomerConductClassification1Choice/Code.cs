@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CustomerConductClassification1Ch
     /// </summary>
     [IsoId("_XdT2cBdwEeKYM7Bc71nDlA")]
     [DisplayName("Code")]
-    public record Code : CustomerConductClassification1Choice_
+    public partial record Code : CustomerConductClassification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

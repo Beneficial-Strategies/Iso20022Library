@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZI_1kUKTEeWuG5hmkcJWSQ")]
 [DisplayName("Modification Scope")]
-public record ModificationScope34
+public partial record ModificationScope34
 {
     /// <summary>
     /// Specifies the type of modification to be applied on a set of information.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GDPRDataConsent1Choice
     [IsoId("_OVaiIJTTEemC09f0MxYkRg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : GDPRDataConsent1Choice_
+    public partial record Proprietary : GDPRDataConsent1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

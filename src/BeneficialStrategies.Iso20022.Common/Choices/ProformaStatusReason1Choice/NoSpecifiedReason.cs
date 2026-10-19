@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProformaStatusReason1Choice
     /// </summary>
     [IsoId("_5BVa8UzCEeafiMTDrtSnyw")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : ProformaStatusReason1Choice_
+    public partial record NoSpecifiedReason : ProformaStatusReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

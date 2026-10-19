@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     [IsoId("_x4XDnwarEe2phaVG0lYKTw")]
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
-    public record StandingInstruction : ProcessingStatus98Choice_
+    public partial record StandingInstruction : ProcessingStatus98Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

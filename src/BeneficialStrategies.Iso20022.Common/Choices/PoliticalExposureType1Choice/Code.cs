@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticalExposureType1Choice
     /// </summary>
     [IsoId("_rL9LMBRvEeOKWo1NF21OVw")]
     [DisplayName("Code")]
-    public record Code : PoliticalExposureType1Choice_
+    public partial record Code : PoliticalExposureType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

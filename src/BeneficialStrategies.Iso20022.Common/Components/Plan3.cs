@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KYvZYXG-Ee60F8I8TAMKmg")]
 [DisplayName("Plan3")]
-public record Plan3
+public partial record Plan3
 {
     /// <summary>
     /// Identification.

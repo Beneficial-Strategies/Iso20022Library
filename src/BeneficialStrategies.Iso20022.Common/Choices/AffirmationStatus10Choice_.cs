@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_O8WS8Qd3Ee2fOITqoTnSLQ")]
     [DisplayName("Affirmation Status 10 Choice")]
-    public abstract record AffirmationStatus10Choice_ { }
+    public abstract partial record AffirmationStatus10Choice_ { }
 }

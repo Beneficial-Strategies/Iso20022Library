@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(EndPoint2Choice.LastPaymentDate), nameof(EndPoint2Choice.LastPaymentDate))]
     [IsoId("_avgfkbvGEfCYYbmqNrQFSg")]
     [DisplayName("End Point 2 Choice")]
-    public abstract record EndPoint2Choice_ { }
+    public abstract partial record EndPoint2Choice_ { }
 }

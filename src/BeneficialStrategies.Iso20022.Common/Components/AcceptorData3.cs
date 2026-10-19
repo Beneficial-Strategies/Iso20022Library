@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KXEPwXRwEfC68Y4jZPNEug")]
 [DisplayName("Acceptor Data3")]
-public record AcceptorData3
+public partial record AcceptorData3
 {
     /// <summary>
     /// Identification of the acceptor.

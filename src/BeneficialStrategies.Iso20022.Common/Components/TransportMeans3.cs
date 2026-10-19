@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S5xucAEcEeCQm6a_G2yO_w_-1153183053")]
 [DisplayName("Transport Means")]
-public record TransportMeans3
+public partial record TransportMeans3
 {
     /// <summary>
     /// Code specifying the transport mode for the delivery of the consignment, such as by air, sea, rail, road or inland waterway. Reference UN/ECE Recommendation 19 - Code for Modes of Transport (www.unece.org/cefact/recommendations).

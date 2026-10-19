@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Track2Data1Choice
     /// </summary>
     [IsoId("_jYXPMd8aEeeNTcLLmuYy-w")]
     [DisplayName("Hexadecimal Binary Value")]
-    public record HexadecimalBinaryValue : Track2Data1Choice_
+    public partial record HexadecimalBinaryValue : Track2Data1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

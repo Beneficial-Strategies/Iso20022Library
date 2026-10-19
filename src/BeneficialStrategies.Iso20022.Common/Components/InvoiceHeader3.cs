@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xV7LweWoEeevU7McUP3D1w")]
 [DisplayName("Invoice Header")]
-public record InvoiceHeader3
+public partial record InvoiceHeader3
 {
     /// <summary>
     /// Unique identification of this invoice document.

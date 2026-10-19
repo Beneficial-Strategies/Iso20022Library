@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status26Choice
     [IsoId("_n7iikkgrEeaD2L_hzZaE0w")]
     [DisplayName("Cancellation Status Report")]
     [IsoXmlTag("CxlStsRpt")]
-    public record CancellationStatusReport : Status26Choice_
+    public partial record CancellationStatusReport : Status26Choice_
     {
         /// <summary>
         /// Reference assigned to a set of orders or trades in order to link them together.

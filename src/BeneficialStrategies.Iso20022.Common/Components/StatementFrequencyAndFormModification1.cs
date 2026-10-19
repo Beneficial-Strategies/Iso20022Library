@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5U5pQA4rEeK3IMoVvcTkkg")]
 [DisplayName("Statement Frequency And Form Modification")]
-public record StatementFrequencyAndFormModification1
+public partial record StatementFrequencyAndFormModification1
 {
     /// <summary>
     /// Specifies the type of change.

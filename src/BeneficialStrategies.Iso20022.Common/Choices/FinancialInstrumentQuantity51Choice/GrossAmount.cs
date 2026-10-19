@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity51Cho
     /// <summary>Quantity expressed as a gross amount of money.</summary>
     [IsoId("62a93a67-a7b3-400f-aab7-9c94851a6782")]
     [DisplayName("Gross Amount")]
-    public record GrossAmount : FinancialInstrumentQuantity51Choice_
+    public partial record GrossAmount : FinancialInstrumentQuantity51Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("GrssAmt")]

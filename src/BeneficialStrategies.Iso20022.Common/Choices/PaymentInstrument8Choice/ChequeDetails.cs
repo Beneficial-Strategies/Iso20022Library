@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument8Choice
     [IsoId("_VKshRdp-Ed-ak6NoX_4Aeg_-528606598")]
     [DisplayName("Cheque Details")]
     [IsoXmlTag("ChqDtls")]
-    public record ChequeDetails : PaymentInstrument8Choice_
+    public partial record ChequeDetails : PaymentInstrument8Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a cheque as assigned by the financial institution.

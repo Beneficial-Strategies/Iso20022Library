@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Fx2LRTbtEead9bDRE_1DAQ")]
 [DisplayName("Switch Leg References")]
-public record SwitchLegReferences2
+public partial record SwitchLegReferences2
 {
     /// <summary>
     /// Identification of a switch leg.

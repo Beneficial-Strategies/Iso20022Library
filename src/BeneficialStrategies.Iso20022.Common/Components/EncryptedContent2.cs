@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Z_proQivEeKn9O5oyej_zw")]
 [DisplayName("Encrypted Content")]
-public record EncryptedContent2
+public partial record EncryptedContent2
 {
     /// <summary>
     /// Type of data which have been encrypted.

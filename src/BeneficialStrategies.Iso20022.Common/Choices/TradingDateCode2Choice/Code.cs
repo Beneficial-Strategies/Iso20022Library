@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingDateCode2Choice
     /// </summary>
     [IsoId("_Dpk9UZBhEeakHoV5BVecAQ")]
     [DisplayName("Code")]
-    public record Code : TradingDateCode2Choice_
+    public partial record Code : TradingDateCode2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

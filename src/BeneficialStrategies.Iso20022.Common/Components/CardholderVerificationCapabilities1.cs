@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X8FtUcZSEeiCDcGzDHI_9Q")]
 [DisplayName("Cardholder Verification Capabilities")]
-public record CardholderVerificationCapabilities1
+public partial record CardholderVerificationCapabilities1
 {
     /// <summary>
     /// Cardholder verification capabilities performing the transaction at the point of service.

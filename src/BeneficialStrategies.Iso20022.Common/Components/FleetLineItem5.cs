@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VEN0wXNXEe6Y1uOeeiF_Eg")]
 [DisplayName("Fleet Line Item5")]
-public record FleetLineItem5
+public partial record FleetLineItem5
 {
     /// <summary>
     /// Fuel.

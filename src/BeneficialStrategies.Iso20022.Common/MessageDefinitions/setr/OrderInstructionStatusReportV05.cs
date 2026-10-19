@@ -53,7 +53,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("b7ba4a58-4ec2-4997-a354-a448fb49418c")]
 [DisplayName("Order Instruction Status Report V05")]
-public record OrderInstructionStatusReportV05 : IOuterRecord
+public partial record OrderInstructionStatusReportV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fOv6QFW5EeeiG_nL4vgKnQ")]
 [DisplayName("Detailed Error")]
-public record DetailedError1
+public partial record DetailedError1
 {
     /// <summary>
     /// Type of error corrected or amendment brought to the message.

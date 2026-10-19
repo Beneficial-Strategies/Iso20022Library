@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialAmount1Choice
     [IsoId("_bXzBQCDaEeWCLu74WLgP4w")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : InitialAmount1Choice_
+    public partial record Amount : InitialAmount1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

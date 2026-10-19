@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_kY3MAEzLEeafiMTDrtSnyw")]
     [DisplayName("Confirmation Type 1 Choice")]
-    public abstract record ConfirmationType1Choice_ { }
+    public abstract partial record ConfirmationType1Choice_ { }
 }

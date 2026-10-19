@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Liability1Choice.Proprietary), nameof(Liability1Choice.Proprietary))]
     [IsoId("_YmJhYCDMEeWPMvNwVtiMsA")]
     [DisplayName("Liability 1 Choice")]
-    public abstract record Liability1Choice_ { }
+    public abstract partial record Liability1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yTl6cad9EeuEcqP2FGAFaA")]
 [DisplayName("Party Identification")]
-public record PartyIdentification257
+public partial record PartyIdentification257
 {
     /// <summary>
     /// Financial institution-related data required by business and/or regulation (for example, money or funds transfer).

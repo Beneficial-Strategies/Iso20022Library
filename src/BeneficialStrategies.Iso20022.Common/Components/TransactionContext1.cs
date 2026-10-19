@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N2aVEEbJEeeIjf8aP9KbJA")]
 [DisplayName("Transaction Context")]
-public record TransactionContext1
+public partial record TransactionContext1
 {
     /// <summary>
     /// Category code related to the type of services or goods the merchant provides for the transaction.

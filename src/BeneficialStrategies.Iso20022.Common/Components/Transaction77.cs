@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GYwNwVwfEeeFSOC87I8qLw")]
 [DisplayName("Transaction")]
-public record Transaction77
+public partial record Transaction77
 {
     /// <summary>
     /// Type of transaction associated with the main service.

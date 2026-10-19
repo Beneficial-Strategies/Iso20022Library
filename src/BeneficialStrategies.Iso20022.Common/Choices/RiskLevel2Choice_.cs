@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RiskLevel2Choice.Proprietary), nameof(RiskLevel2Choice.Proprietary))]
     [IsoId("_BQa7kSGREeWO8_xZKx-MFg")]
     [DisplayName("Risk Level 2 Choice")]
-    public abstract record RiskLevel2Choice_ { }
+    public abstract partial record RiskLevel2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus11Choice
     [IsoId("_XzM-1Qd3Ee2fOITqoTnSLQ")]
     [DisplayName("Proprietary Status")]
     [IsoXmlTag("PrtrySts")]
-    public record ProprietaryStatus : AffirmationStatus11Choice_
+    public partial record ProprietaryStatus : AffirmationStatus11Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

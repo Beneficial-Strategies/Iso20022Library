@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationReason1Choice
     /// </summary>
     [IsoId("_Qo3U1dp-Ed-ak6NoX_4Aeg_-1342337588")]
     [DisplayName("Code")]
-    public record Code : VerificationReason1Choice_
+    public partial record Code : VerificationReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

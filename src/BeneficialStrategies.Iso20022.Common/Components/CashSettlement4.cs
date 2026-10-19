@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_opbHoa0gEem-sffGyZ-CNg")]
 [DisplayName("Cash Settlement")]
-public record CashSettlement4
+public partial record CashSettlement4
 {
     /// <summary>
     /// Specifies the type of modification to be applied.

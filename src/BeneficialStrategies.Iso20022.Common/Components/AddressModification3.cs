@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y83E2zEyEe6g-ffJsqGiSA")]
 [DisplayName("Address Modification3")]
-public record AddressModification3
+public partial record AddressModification3
 {
     /// <summary>
     /// Modification Code.

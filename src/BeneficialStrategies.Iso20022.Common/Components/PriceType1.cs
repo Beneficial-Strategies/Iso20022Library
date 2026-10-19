@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vbrjltp-Ed-ak6NoX_4Aeg_931175430")]
 [DisplayName("Price Type")]
-public record PriceType1
+public partial record PriceType1
 {
     /// <summary>
     /// Structured format.

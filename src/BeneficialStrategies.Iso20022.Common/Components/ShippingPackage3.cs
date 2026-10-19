@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g4wRUXTtEe6h-4AZRg9sVg")]
 [DisplayName("Shipping Package3")]
-public record ShippingPackage3
+public partial record ShippingPackage3
 {
     /// <summary>
     /// Tracking Number.

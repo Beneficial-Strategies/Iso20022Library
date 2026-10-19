@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hlHzIUrhEfCMZJtj4J7UGQ")]
 [DisplayName("Fleet Line Item7")]
-public record FleetLineItem7
+public partial record FleetLineItem7
 {
     /// <summary>
     /// Indicates whether or not the line item represents a fuel or non-fuel product or service.

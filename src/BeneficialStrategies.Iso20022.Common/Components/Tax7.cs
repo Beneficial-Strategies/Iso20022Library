@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VR_cHNp-Ed-ak6NoX_4Aeg_-1881206398")]
 [DisplayName("Tax")]
-public record Tax7
+public partial record Tax7
 {
     /// <summary>
     /// Type of tax applied.

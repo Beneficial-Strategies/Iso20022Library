@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_WBqvcQgqEeSUG-8hqXsVMQ")]
     [DisplayName("Communication Method 3 Choice")]
-    public abstract record CommunicationMethod3Choice_ { }
+    public abstract partial record CommunicationMethod3Choice_ { }
 }

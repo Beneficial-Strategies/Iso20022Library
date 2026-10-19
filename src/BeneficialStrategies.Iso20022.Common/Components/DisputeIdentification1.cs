@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a9s9oOCnEee9RadpHmUgYw")]
 [DisplayName("Dispute Identification")]
-public record DisputeIdentification1
+public partial record DisputeIdentification1
 {
     /// <summary>
     /// Type of dispute.

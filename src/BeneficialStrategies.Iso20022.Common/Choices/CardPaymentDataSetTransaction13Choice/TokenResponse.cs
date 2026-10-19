@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction13C
     /// Token Response.
     /// </summary>
     [DisplayName("Token Response")]
-    public record TokenResponse : CardPaymentDataSetTransaction13Choice_
+    public partial record TokenResponse : CardPaymentDataSetTransaction13Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

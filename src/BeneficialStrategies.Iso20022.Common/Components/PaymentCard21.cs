@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eTiqgY0TEeWRYffwL7E13A")]
 [DisplayName("Payment Card")]
-public record PaymentCard21
+public partial record PaymentCard21
 {
     /// <summary>
     /// Replacement of the message element PlainCardData by a digital envelope using a cryptographic key.

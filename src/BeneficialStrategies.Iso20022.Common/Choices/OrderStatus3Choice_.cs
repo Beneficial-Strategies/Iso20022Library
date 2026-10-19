@@ -29,5 +29,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_uvD4kUH7EeaV3ab_pHzFIQ")]
     [DisplayName("Order Status 3 Choice")]
-    public abstract record OrderStatus3Choice_ { }
+    public abstract partial record OrderStatus3Choice_ { }
 }

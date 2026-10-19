@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_bfzgV22PEei3KuUgpx7Xcw")]
 [DisplayName("Account Request Rejection V")]
-public record AccountRequestRejectionV03 : IOuterRecord
+public partial record AccountRequestRejectionV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

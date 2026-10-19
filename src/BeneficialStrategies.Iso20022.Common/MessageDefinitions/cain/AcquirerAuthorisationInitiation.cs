@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_Kdha0Hq9EeSqmf43GdBXXQ")]
 [DisplayName("Acquirer Authorisation Initiation")]
-public record AcquirerAuthorisationInitiation : IOuterRecord
+public partial record AcquirerAuthorisationInitiation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

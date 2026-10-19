@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_VVuFi9p-Ed-ak6NoX_4Aeg_-1360536112")]
 [DisplayName("Switch Order")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record SwitchOrder2
+public partial record SwitchOrder2
 {
     /// <summary>
     /// Date and time at which the order was placed by the investor.

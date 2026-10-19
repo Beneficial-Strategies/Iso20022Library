@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RpP9EZJAEe6RsYhlPIxpVw")]
 [DisplayName("Common Data13")]
-public record CommonData13
+public partial record CommonData13
 {
     /// <summary>
     /// Environment.

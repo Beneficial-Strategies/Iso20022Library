@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod5Choice
     /// Credit.
     /// </summary>
     [DisplayName("Credit")]
-    public record Credit : SettlementMethod5Choice_
+    public partial record Credit : SettlementMethod5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

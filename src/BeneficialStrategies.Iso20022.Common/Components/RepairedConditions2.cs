@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U3USS9p-Ed-ak6NoX_4Aeg_-1187208577")]
 [DisplayName("Repaired Conditions")]
-public record RepairedConditions2
+public partial record RepairedConditions2
 {
     /// <summary>
     /// Charge from the original individual order details that has been repaired so that the order can be accepted.

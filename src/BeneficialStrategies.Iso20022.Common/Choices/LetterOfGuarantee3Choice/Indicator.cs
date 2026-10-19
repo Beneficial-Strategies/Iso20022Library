@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LetterOfGuarantee3Choice
     /// </summary>
     [IsoId("_AY9vEtokEeC60axPepSq7g_-1780486835")]
     [DisplayName("Indicator")]
-    public record Indicator : LetterOfGuarantee3Choice_
+    public partial record Indicator : LetterOfGuarantee3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

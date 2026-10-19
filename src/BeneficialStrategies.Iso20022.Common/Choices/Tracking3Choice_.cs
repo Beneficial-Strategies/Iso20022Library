@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Tracking3Choice.Proprietary), nameof(Tracking3Choice.Proprietary))]
     [IsoId("_AZHgEdokEeC60axPepSq7g_546870439")]
     [DisplayName("Tracking 3 Choice")]
-    public abstract record Tracking3Choice_ { }
+    public abstract partial record Tracking3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_e2J2gXTkEe6h-4AZRg9sVg")]
 [DisplayName("Rental Details3")]
-public record RentalDetails3
+public partial record RentalDetails3
 {
     /// <summary>
     /// Identification.

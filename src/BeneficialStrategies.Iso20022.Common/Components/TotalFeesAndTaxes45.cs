@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("dc9e6b08-8884-4c4d-a910-abcaf5dab61e")]
 [DisplayName("Total Fees And Taxes45")]
-public record TotalFeesAndTaxes45
+public partial record TotalFeesAndTaxes45
 {
     /// <summary>
     /// Total amount of overhead applied to the transaction that impacts the settlement amount.

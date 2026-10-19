@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_4EhKpZaNEemfCcEf5rVTyg")]
     [DisplayName("Verification Value 1 Choice")]
-    public abstract record VerificationValue1Choice_ { }
+    public abstract partial record VerificationValue1Choice_ { }
 }

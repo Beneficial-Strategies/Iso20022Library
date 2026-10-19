@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T6YI7tp-Ed-ak6NoX_4Aeg_152223563")]
 [DisplayName("Delivery Parameters")]
-public record DeliveryParameters3
+public partial record DeliveryParameters3
 {
     /// <summary>
     /// Address for physical delivery.

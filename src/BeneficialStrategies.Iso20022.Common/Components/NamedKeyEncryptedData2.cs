@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t4lk8QivEeKn9O5oyej_zw")]
 [DisplayName("Named Key Encrypted Data")]
-public record NamedKeyEncryptedData2
+public partial record NamedKeyEncryptedData2
 {
     /// <summary>
     /// Version of the data structure.

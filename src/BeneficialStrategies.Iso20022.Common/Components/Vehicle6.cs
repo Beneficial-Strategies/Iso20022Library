@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mc1NwXNUEe6Y1uOeeiF_Eg")]
 [DisplayName("Vehicle6")]
-public record Vehicle6
+public partial record Vehicle6
 {
     /// <summary>
     /// Number.

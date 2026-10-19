@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_RHEuodkcEeizh_fAW7LywQ")]
 [DisplayName("Addendum Initiation V")]
-public record AddendumInitiationV01 : IOuterRecord
+public partial record AddendumInitiationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

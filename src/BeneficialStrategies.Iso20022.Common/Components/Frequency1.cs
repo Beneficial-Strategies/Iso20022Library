@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QUNr4Q2lEeSNWNtJlXOAhg")]
 [DisplayName("Frequency")]
-public record Frequency1
+public partial record Frequency1
 {
     /// <summary>
     /// Technical identifier of a Credit Transfer as part of a series of Credit Transfers within a single Payment Instruction. Assists the transfer of complex variable future payment schedules, associated with a single act of customer consent, within a single Payment Instruction.

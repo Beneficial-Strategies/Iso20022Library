@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_02aBcHsJEeSR68OJvMfxJQ")]
 [DisplayName("Card Transaction Condition")]
-public record CardTransactionCondition1
+public partial record CardTransactionCondition1
 {
     /// <summary>
     /// Identification of the specific condition.

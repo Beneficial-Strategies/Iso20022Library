@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UW638WCLEeabZtzjEVWYCQ")]
     [DisplayName("Closure Pending Status Reason 1 Choice")]
-    public abstract record ClosurePendingStatusReason1Choice_ { }
+    public abstract partial record ClosurePendingStatusReason1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_05CBYXTwEe6h-4AZRg9sVg")]
 [DisplayName("Telecom Services3")]
-public record TelecomServices3
+public partial record TelecomServices3
 {
     /// <summary>
     /// Customer Account Number.

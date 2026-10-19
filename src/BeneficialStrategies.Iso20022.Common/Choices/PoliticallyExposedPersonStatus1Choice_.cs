@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Y1YIAJUiEemC09f0MxYkRg")]
     [DisplayName("Politically Exposed Person Status 1 Choice")]
-    public abstract record PoliticallyExposedPersonStatus1Choice_ { }
+    public abstract partial record PoliticallyExposedPersonStatus1Choice_ { }
 }

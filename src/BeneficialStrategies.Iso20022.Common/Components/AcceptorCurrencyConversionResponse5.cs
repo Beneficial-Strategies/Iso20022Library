@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qg_mQdtZEee9e6xduATmQg")]
 [DisplayName("Acceptor Currency Conversion Response")]
-public record AcceptorCurrencyConversionResponse5
+public partial record AcceptorCurrencyConversionResponse5
 {
     /// <summary>
     /// Environment of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q-niYtp-Ed-ak6NoX_4Aeg_-1715964179")]
 [DisplayName("Spread Rate")]
-public record SpreadRate1
+public partial record SpreadRate1
 {
     /// <summary>
     /// Specifies the sign of the rate.

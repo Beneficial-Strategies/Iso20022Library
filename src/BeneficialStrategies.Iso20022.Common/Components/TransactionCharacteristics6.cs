@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_59mCwV59EfCoP_h9uwd39Q")]
 [DisplayName("Transaction Characteristics6")]
-public record TransactionCharacteristics6
+public partial record TransactionCharacteristics6
 {
     /// <summary>
     /// Code that indicates the type of transaction being undertaken in accordance with ISO 8583, Transaction Type.

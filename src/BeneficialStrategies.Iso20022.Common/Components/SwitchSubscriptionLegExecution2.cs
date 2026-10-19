@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VX86K9p-Ed-ak6NoX_4Aeg_-468679588")]
 [DisplayName("Switch Subscription Leg Execution")]
-public record SwitchSubscriptionLegExecution2
+public partial record SwitchSubscriptionLegExecution2
 {
     /// <summary>
     /// Unique technical identifier for an instance of a leg within a switch.

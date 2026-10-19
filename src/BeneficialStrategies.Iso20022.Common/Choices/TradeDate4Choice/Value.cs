@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDate4Choice
     /// </summary>
     [IsoId("_AXK_U9okEeC60axPepSq7g_-838039776")]
     [DisplayName("Value")]
-    public record Value : TradeDate4Choice_
+    public partial record Value : TradeDate4Choice_
     {
         /// <summary>The choice this variant holds. (Not called Value: the variant is.)</summary>
         [IsoXmlTag("Val")]

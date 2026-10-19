@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatusReason4Choice
     /// </summary>
     [IsoId("_Bptp40HqEea8I67lh6qdSQ")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : InRepairStatusReason4Choice_
+    public partial record NoSpecifiedReason : InRepairStatusReason4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

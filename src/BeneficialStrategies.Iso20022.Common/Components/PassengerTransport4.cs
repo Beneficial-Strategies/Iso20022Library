@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FSx7sUhsEfCMZJtj4J7UGQ")]
 [DisplayName("Passenger Transport4")]
-public record PassengerTransport4
+public partial record PassengerTransport4
 {
     /// <summary>
     /// Unique identification number of the document.

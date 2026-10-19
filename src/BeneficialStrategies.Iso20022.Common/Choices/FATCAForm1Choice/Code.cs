@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FATCAForm1Choice
     /// </summary>
     [IsoId("_gPPrkAjLEeS5F6qHcKOrew")]
     [DisplayName("Code")]
-    public record Code : FATCAForm1Choice_
+    public partial record Code : FATCAForm1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FraPARTjEfC_aaedwHHlmw")]
 [DisplayName("Sub Merchant1")]
-public record SubMerchant1
+public partial record SubMerchant1
 {
     /// <summary>
     /// Identification of the party.

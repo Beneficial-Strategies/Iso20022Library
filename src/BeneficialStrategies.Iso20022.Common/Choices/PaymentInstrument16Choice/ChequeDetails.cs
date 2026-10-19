@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument16Choice
     [IsoId("_MgQvYBdKEeK5g-3oYI0_9Q")]
     [DisplayName("Cheque Details")]
     [IsoXmlTag("ChqDtls")]
-    public record ChequeDetails : PaymentInstrument16Choice_
+    public partial record ChequeDetails : PaymentInstrument16Choice_
     {
         /// <summary>
         /// Party to which a cheque is made payable.

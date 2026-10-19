@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity51Cho
     /// <summary>Percentage of the total redemption amount to be redeemed.</summary>
     [IsoId("5d3b5841-cd11-4d16-992a-19846b56026c")]
     [DisplayName("Percentage Of Total Redemption Amount")]
-    public record PercentageOfTotalRedemptionAmount : FinancialInstrumentQuantity51Choice_
+    public partial record PercentageOfTotalRedemptionAmount : FinancialInstrumentQuantity51Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PctgOfTtlRedAmt")]

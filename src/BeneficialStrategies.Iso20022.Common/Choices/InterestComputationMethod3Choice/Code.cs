@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethod3Choice
     /// </summary>
     [IsoId("_x33EkZEjEeakHoV5BVecAQ")]
     [DisplayName("Code")]
-    public record Code : InterestComputationMethod3Choice_
+    public partial record Code : InterestComputationMethod3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

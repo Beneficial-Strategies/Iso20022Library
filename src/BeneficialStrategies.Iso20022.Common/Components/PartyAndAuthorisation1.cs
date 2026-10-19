@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MhacEQ4ZEeKGXqvMN6jpiw")]
 [DisplayName("Party And Authorisation")]
-public record PartyAndAuthorisation1
+public partial record PartyAndAuthorisation1
 {
     /// <summary>
     /// Specifies a party or a group of parties.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8MCksR2xEeKyZ4l838zwaQ")]
 [DisplayName("Transaction Verification Result")]
-public record TransactionVerificationResult2
+public partial record TransactionVerificationResult2
 {
     /// <summary>
     /// Result of an e-commerce authentication process.

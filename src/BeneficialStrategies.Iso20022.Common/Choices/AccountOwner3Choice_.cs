@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6NYocZTIEemqYPWMBuVawg")]
     [DisplayName("Account Owner 3 Choice")]
-    public abstract record AccountOwner3Choice_ { }
+    public abstract partial record AccountOwner3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uuhiptp-Ed-ak6NoX_4Aeg_-794783023")]
 [DisplayName("In Repair Status")]
-public record InRepairStatus1
+public partial record InRepairStatus1
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

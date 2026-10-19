@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnabledStatusReason2Choice
     [IsoId("_WdIj4Ey-EeafiMTDrtSnyw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : EnabledStatusReason2Choice_
+    public partial record Proprietary : EnabledStatusReason2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

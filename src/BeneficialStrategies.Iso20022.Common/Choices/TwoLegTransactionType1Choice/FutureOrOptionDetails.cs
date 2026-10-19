@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
     [IsoId("_AYOINtokEeC60axPepSq7g_921777527")]
     [DisplayName("Future Or Option Details")]
     [IsoXmlTag("FutrOrOptnDtls")]
-    public record FutureOrOptionDetails : TwoLegTransactionType1Choice_
+    public partial record FutureOrOptionDetails : TwoLegTransactionType1Choice_
     {
         /// <summary>
         /// Specifies the type of the contract for futures and options.

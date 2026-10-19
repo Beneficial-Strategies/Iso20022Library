@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle6Choice
     /// </summary>
     [IsoId("_AbpPoNokEeC60axPepSq7g_1913109761")]
     [DisplayName("Code")]
-    public record Code : OptionStyle6Choice_
+    public partial record Code : OptionStyle6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

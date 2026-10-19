@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d4BsgdXtEee5XtaG1wqDfQ")]
 [DisplayName("Environment")]
-public record Environment12
+public partial record Environment12
 {
     /// <summary>
     /// Identification of the acquirer.

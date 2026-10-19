@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uu1EoNp-Ed-ak6NoX_4Aeg_616925675")]
 [DisplayName("Identification Type")]
-public record IdentificationType1
+public partial record IdentificationType1
 {
     /// <summary>
     /// Structured format.

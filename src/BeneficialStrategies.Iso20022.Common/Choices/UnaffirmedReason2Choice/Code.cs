@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnaffirmedReason2Choice
     /// </summary>
     [IsoId("_AzfH4dokEeC60axPepSq7g_-704873595")]
     [DisplayName("Code")]
-    public record Code : UnaffirmedReason2Choice_
+    public partial record Code : UnaffirmedReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

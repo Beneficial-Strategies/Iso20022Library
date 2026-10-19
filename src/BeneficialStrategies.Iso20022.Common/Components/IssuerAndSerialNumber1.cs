@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SxIvsQEcEeCQm6a_G2yO_w_-65882528")]
 [DisplayName("Issuer And Serial Number")]
-public record IssuerAndSerialNumber1
+public partial record IssuerAndSerialNumber1
 {
     /// <summary>
     /// Certificate issuer name (see X.509).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UkjHQtp-Ed-ak6NoX_4Aeg_15886237")]
 [DisplayName("Contract Document")]
-public record ContractDocument1
+public partial record ContractDocument1
 {
     /// <summary>
     /// Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RetrievalDeliveryMethod1Choice
     /// </summary>
     [IsoId("_-v7SRewhEeiMkKo2clXHdQ")]
     [DisplayName("Actual Delivery Method")]
-    public record ActualDeliveryMethod : RetrievalDeliveryMethod1Choice_
+    public partial record ActualDeliveryMethod : RetrievalDeliveryMethod1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

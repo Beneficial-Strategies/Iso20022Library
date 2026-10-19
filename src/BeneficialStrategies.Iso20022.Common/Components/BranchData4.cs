@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kbtKce6REemVDc1WJaqofw")]
 [DisplayName("Branch Data")]
-public record BranchData4
+public partial record BranchData4
 {
     /// <summary>
     /// Unique and unambiguous identification of a branch of a financial institution.

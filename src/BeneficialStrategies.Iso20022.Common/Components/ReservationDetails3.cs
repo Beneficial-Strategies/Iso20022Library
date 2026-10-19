@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tCvU1PPiEeihCvvpsmGI2w")]
 [DisplayName("Reservation Details")]
-public record ReservationDetails3
+public partial record ReservationDetails3
 {
     /// <summary>
     /// Computerised reservation system used to make the reservation and purchase the ticket.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H9TA8Wl-EeSxgrJ0GX4SQQ")]
 [DisplayName("Card Payment Transaction")]
-public record CardPaymentTransaction44
+public partial record CardPaymentTransaction44
 {
     /// <summary>
     /// Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.

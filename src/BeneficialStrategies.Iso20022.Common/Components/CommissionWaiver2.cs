@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VRshJdp-Ed-ak6NoX_4Aeg_998746205")]
 [DisplayName("Commission Waiver")]
-public record CommissionWaiver2
+public partial record CommissionWaiver2
 {
     /// <summary>
     /// Form of the rebate, eg, cash.

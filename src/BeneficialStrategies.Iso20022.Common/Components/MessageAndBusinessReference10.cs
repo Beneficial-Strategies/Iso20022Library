@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IGLlRzbtEead9bDRE_1DAQ")]
 [DisplayName("Message And Business Reference")]
-public record MessageAndBusinessReference10
+public partial record MessageAndBusinessReference10
 {
     /// <summary>
     /// Reference to a linked message that was previously sent.

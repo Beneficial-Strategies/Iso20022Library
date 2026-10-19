@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XlQGxwasEe2phaVG0lYKTw")]
 [DisplayName("Confirmation Parties")]
-public record ConfirmationParties8
+public partial record ConfirmationParties8
 {
     /// <summary>
     /// Party (buyer or seller) that positively affirms the details of a previously agreed security trade confirmation.

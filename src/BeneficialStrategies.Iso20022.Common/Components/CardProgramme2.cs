@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h6JQ4SuBEeyg-aG5nXcnfg")]
 [DisplayName("Card Programme")]
-public record CardProgramme2
+public partial record CardProgramme2
 {
     /// <summary>
     /// Card programme or brand proposed for the transaction.

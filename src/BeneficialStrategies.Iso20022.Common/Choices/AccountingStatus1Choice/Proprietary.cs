@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountingStatus1Choice
     [IsoId("_DqxNQCDEEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AccountingStatus1Choice_
+    public partial record Proprietary : AccountingStatus1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

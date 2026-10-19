@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NRcA0YVyEe6odei_lsRKtw")]
 [DisplayName("Retrieval Fulfilment Instructions3")]
-public record RetrievalFulfilmentInstructions3
+public partial record RetrievalFulfilmentInstructions3
 {
     /// <summary>
     /// Requested Method.

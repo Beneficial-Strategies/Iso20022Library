@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gXIANhkMEeKSublfJr3XCg")]
 [DisplayName("Financial Instrument Attributes")]
-public record FinancialInstrumentAttributes44
+public partial record FinancialInstrumentAttributes44
 {
     /// <summary>
     /// Market(s) on which the security is listed.

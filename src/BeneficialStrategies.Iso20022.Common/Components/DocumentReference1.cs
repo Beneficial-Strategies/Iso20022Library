@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__ljNE_QAEeihCvvpsmGI2w")]
 [DisplayName("Document Reference")]
-public record DocumentReference1
+public partial record DocumentReference1
 {
     /// <summary>
     /// Describes the type of document.

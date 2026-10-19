@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jKs7kWi8EeS87LmvcA55sg")]
 [DisplayName("Parameter")]
-public record Parameter6
+public partial record Parameter6
 {
     /// <summary>
     /// Format of data before encryption, if the format is not plaintext or implicit.

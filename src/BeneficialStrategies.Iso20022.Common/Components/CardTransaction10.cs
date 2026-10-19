@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CR9eAXvCEeSLmfFG0DG7zQ")]
 [DisplayName("Card Transaction")]
-public record CardTransaction10
+public partial record CardTransaction10
 {
     /// <summary>
     /// Identification of the reconciliation period between the acquirer and the issuer or their respective agents.

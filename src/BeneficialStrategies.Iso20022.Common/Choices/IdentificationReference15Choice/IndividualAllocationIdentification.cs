@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference15Choice
     /// Individual Allocation Identification.
     /// </summary>
     [DisplayName("Individual Allocation Identification")]
-    public record IndividualAllocationIdentification : IdentificationReference15Choice_
+    public partial record IndividualAllocationIdentification : IdentificationReference15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

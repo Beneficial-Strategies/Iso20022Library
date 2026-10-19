@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QPrYxtp-Ed-ak6NoX_4Aeg_434657677")]
 [DisplayName("Organisation Identification")]
-public record OrganisationIdentification6
+public partial record OrganisationIdentification6
 {
     /// <summary>
     /// Code allocated to organisations by the ISO 9362 Registration Authority, under an international identification scheme, as described in the latest version of the standard ISO 9362 Banking (Banking telecommunication messages, Business Identifier Codes).

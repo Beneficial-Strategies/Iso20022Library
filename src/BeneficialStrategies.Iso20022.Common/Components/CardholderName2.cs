@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UcqZAcWwEeuhguwJmlgagQ")]
 [DisplayName("Cardholder Name")]
-public record CardholderName2
+public partial record CardholderName2
 {
     /// <summary>
     /// Local language equivalent of the name of the cardholder.

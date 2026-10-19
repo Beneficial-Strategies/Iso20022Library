@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UzJj-tp-Ed-ak6NoX_4Aeg_-563586890")]
 [DisplayName("Subscription Multiple Order Instruction")]
-public record SubscriptionMultipleOrderInstruction1
+public partial record SubscriptionMultipleOrderInstruction1
 {
     /// <summary>
     /// Common information related to all the orders to be cancelled.

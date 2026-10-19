@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification262Choice
     /// <summary>Place of settlement expressed with a Digital Ledger Identifier.</summary>
     [IsoId("30bcce29-726f-45c7-b0d5-32ba878d562d")]
     [DisplayName("Digital Ledger Identification")]
-    public record DigitalLedgerIdentification : PartyIdentification262Choice_
+    public partial record DigitalLedgerIdentification : PartyIdentification262Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DgtlLdgrId")]

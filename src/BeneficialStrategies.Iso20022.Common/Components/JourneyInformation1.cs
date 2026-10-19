@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fEn7AF1mEeeu75xdwwAXQw")]
 [DisplayName("Journey Information")]
-public record JourneyInformation1
+public partial record JourneyInformation1
 {
     /// <summary>
     /// Type of journey.

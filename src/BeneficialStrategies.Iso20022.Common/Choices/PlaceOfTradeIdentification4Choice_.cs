@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_w2GyoRwIEe6fEumgV5aG_A")]
     [DisplayName("Place Of Trade Identification4Choice")]
-    public abstract record PlaceOfTradeIdentification4Choice_ { }
+    public abstract partial record PlaceOfTradeIdentification4Choice_ { }
 }

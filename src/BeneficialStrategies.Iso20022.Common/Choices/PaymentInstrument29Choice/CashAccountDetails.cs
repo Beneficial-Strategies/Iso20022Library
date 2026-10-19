@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument29Choice
     /// <summary>Cash account details.</summary>
     [IsoId("e109de48-2805-493d-a978-354f6d4880a9")]
     [DisplayName("Cash Account Details")]
-    public record CashAccountDetails : PaymentInstrument29Choice_
+    public partial record CashAccountDetails : PaymentInstrument29Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CshAcctDtls")]

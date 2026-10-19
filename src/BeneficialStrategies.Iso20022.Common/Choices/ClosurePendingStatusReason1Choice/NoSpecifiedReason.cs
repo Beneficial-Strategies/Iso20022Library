@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choic
     /// </summary>
     [IsoId("_UwXSsWCLEeabZtzjEVWYCQ")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : ClosurePendingStatusReason1Choice_
+    public partial record NoSpecifiedReason : ClosurePendingStatusReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

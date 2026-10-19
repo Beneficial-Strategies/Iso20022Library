@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticallyExposedPersonStatus1C
     [IsoId("_fsaRQJUiEemC09f0MxYkRg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PoliticallyExposedPersonStatus1Choice_
+    public partial record Proprietary : PoliticallyExposedPersonStatus1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

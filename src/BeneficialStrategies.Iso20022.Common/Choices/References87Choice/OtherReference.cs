@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References87Choice
     /// <summary>Specifies the other reference.</summary>
     [IsoId("2b074670-a615-4797-b6c1-6155ca7c2a77")]
     [DisplayName("Other Reference")]
-    public record OtherReference : References87Choice_
+    public partial record OtherReference : References87Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OthrRef")]

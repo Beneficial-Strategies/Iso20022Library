@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qDPEQEbWEeeIjf8aP9KbJA")]
 [DisplayName("Context")]
-public record Context1
+public partial record Context1
 {
     /// <summary>
     /// Contains point of interaction information specific to a given transaction that may change from transaction to transaction.

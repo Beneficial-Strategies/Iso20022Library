@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SfRJwEUMEeea-M6VZkEPUw")]
 [DisplayName("Transaction Amount")]
-public record TransactionAmount1
+public partial record TransactionAmount1
 {
     /// <summary>
     /// Amount of the transaction expressed in the currency of the terminal or as a reversed amount of a previous authorisation.

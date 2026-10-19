@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CompanyLink1Choice
     /// </summary>
     [IsoId("_6ha1MCCZEeWJd9HF2tO7BA")]
     [DisplayName("Code")]
-    public record Code : CompanyLink1Choice_
+    public partial record Code : CompanyLink1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

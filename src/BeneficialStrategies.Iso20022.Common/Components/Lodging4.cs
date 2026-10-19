@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xbSzYXTpEe6h-4AZRg9sVg")]
 [DisplayName("Lodging4")]
-public record Lodging4
+public partial record Lodging4
 {
     /// <summary>
     /// Folio Number.

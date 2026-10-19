@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number1Choice
     [IsoId("_RdKfldp-Ed-ak6NoX_4Aeg_-1790569525")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Number1Choice_
+    public partial record Proprietary : Number1Choice_
     {
         /// <summary>
         /// Entity that assigns the identification.

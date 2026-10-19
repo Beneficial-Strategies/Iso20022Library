@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClientSide3Choice
     [IsoId("_Aamt09okEeC60axPepSq7g_-1972786447")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MarketClientSide3Choice_
+    public partial record Proprietary : MarketClientSide3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

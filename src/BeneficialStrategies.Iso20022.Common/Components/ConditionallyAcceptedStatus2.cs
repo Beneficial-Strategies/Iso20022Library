@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RM7EKdp-Ed-ak6NoX_4Aeg_-367108012")]
 [DisplayName("Conditionally Accepted Status")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record ConditionallyAcceptedStatus2
+public partial record ConditionallyAcceptedStatus2
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason4Choice
     /// </summary>
     [IsoId("_aSlPU0HlEea8I67lh6qdSQ")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : SuspendedStatusReason4Choice_
+    public partial record NoSpecifiedReason : SuspendedStatusReason4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Xr9A8A1gEeKGXqvMN6jpiw")]
 [DisplayName("Statement Frequency And Form")]
-public record StatementFrequencyAndForm1
+public partial record StatementFrequencyAndForm1
 {
     /// <summary>
     /// Specifies the frequency for sending statements.

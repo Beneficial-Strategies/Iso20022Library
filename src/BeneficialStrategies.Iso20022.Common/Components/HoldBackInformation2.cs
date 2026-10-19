@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i4Ff4TwvEeaFzejt0Yw_3A")]
 [DisplayName("Hold Back Information")]
-public record HoldBackInformation2
+public partial record HoldBackInformation2
 {
     /// <summary>
     /// Type of gating or a hold back.

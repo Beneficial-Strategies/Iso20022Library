@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sMaVcNv-EeeOusYHZbyj7w")]
 [DisplayName("Risk Assessment Data Entity Provider")]
-public record RiskAssessmentDataEntityProvider1
+public partial record RiskAssessmentDataEntityProvider1
 {
     /// <summary>
     /// Type of entity providing data for risk assessment.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bNNI4RUGEeOIaq8KyCdIDQ")]
 [DisplayName("Intermediary")]
-public record Intermediary24
+public partial record Intermediary24
 {
     /// <summary>
     /// Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun &amp; Bradstreet Identification.

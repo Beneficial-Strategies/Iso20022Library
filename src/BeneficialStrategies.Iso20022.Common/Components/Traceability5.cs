@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sk9sgZZ0EeWuSaWgzo19MQ")]
 [DisplayName("Traceability")]
-public record Traceability5
+public partial record Traceability5
 {
     /// <summary>
     /// Identification of a partner of a message exchange.

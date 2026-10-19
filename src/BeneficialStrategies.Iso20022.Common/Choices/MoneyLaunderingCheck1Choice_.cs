@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_GExWwxdDEeK5g-3oYI0_9Q")]
     [DisplayName("Money Laundering Check 1 Choice")]
-    public abstract record MoneyLaunderingCheck1Choice_ { }
+    public abstract partial record MoneyLaunderingCheck1Choice_ { }
 }

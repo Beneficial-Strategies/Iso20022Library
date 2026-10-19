@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v8xEwUYYEfCQAqQ9lolFUg")]
 [DisplayName("Transaction Specific Data2")]
-public record TransactionSpecificData2
+public partial record TransactionSpecificData2
 {
     /// <summary>
     /// Contain issuer's purchase restriction applied at POS.

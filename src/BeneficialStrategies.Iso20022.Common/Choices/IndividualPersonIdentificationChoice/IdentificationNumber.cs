@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentificationCh
     [IsoId("_REuxfdp-Ed-ak6NoX_4Aeg_-1639846397")]
     [DisplayName("Identification Number")]
     [IsoXmlTag("IdNb")]
-    public record IdentificationNumber : IndividualPersonIdentificationChoice_
+    public partial record IdentificationNumber : IndividualPersonIdentificationChoice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.

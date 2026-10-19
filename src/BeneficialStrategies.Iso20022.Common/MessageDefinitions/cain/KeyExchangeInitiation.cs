@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_tdBdMHvGEeSCJdwgzb6SFw")]
 [DisplayName("Key Exchange Initiation")]
-public record KeyExchangeInitiation : IOuterRecord
+public partial record KeyExchangeInitiation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

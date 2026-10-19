@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OIXCoDh4EeamLZQeccJa7w")]
 [DisplayName("Fee")]
-public record Fee1
+public partial record Fee1
 {
     /// <summary>
     /// Type of fee (charge/commission).

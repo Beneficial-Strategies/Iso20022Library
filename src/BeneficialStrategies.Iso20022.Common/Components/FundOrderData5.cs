@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JSDipTbtEead9bDRE_1DAQ")]
 [DisplayName("Fund Order Data")]
-public record FundOrderData5
+public partial record FundOrderData5
 {
     /// <summary>
     /// Account information of the individual order instruction for which the status is given.

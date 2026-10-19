@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RSb2Sdp-Ed-ak6NoX_4Aeg_-1122306786")]
 [DisplayName("Account Parties")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record AccountParties5
+public partial record AccountParties5
 {
     /// <summary>
     /// Single owner of the investment account or, when the ownership is split among several owners, the primary owner is the one giving its address and account details for the registration.

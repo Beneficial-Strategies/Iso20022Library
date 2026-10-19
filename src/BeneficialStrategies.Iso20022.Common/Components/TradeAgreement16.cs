@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Issv0eWnEeevU7McUP3D1w")]
 [DisplayName("Trade Agreement")]
-public record TradeAgreement16
+public partial record TradeAgreement16
 {
     /// <summary>
     /// Party that is specified as the buyer for this trade agreement.

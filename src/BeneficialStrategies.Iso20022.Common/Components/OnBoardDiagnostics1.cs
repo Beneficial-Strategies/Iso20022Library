@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9D_nY9kGEeizh_fAW7LywQ")]
 [DisplayName("On Board Diagnostics")]
-public record OnBoardDiagnostics1
+public partial record OnBoardDiagnostics1
 {
     /// <summary>
     /// Current amount of time the vehicle engine has run idle (under no load) as determined by the vehicle monitoring system.

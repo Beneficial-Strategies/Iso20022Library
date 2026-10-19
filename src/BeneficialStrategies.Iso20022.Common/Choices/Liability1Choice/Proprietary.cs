@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Liability1Choice
     [IsoId("_hdANUCDMEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Liability1Choice_
+    public partial record Proprietary : Liability1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

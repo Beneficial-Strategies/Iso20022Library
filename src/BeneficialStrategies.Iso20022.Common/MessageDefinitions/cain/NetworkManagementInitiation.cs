@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_C8o9QHvDEeSKFIcWw3l4Yw")]
 [DisplayName("Network Management Initiation")]
-public record NetworkManagementInitiation : IOuterRecord
+public partial record NetworkManagementInitiation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

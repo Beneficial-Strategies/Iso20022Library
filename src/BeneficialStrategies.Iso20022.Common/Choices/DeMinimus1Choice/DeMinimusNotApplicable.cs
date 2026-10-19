@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
     [IsoId("_CgNiAwgqEeSUG-8hqXsVMQ")]
     [DisplayName("De Minimus Not Applicable")]
     [IsoXmlTag("DeMnmsNotAplbl")]
-    public record DeMinimusNotApplicable : DeMinimus1Choice_
+    public partial record DeMinimusNotApplicable : DeMinimus1Choice_
     {
         /// <summary>
         /// Reason for the restricted person.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 )]
 [IsoId("_acX4lVf3EeedJb6VxsnkPg")]
 [DisplayName("Verification Initiation V")]
-public record VerificationInitiationV01 : IOuterRecord
+public partial record VerificationInitiationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

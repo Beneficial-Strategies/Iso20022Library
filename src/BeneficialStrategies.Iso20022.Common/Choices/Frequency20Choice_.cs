@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Frequency20Choice.Proprietary), nameof(Frequency20Choice.Proprietary))]
     [IsoId("_B_wykRUSEeOIaq8KyCdIDQ")]
     [DisplayName("Frequency 20 Choice")]
-    public abstract record Frequency20Choice_ { }
+    public abstract partial record Frequency20Choice_ { }
 }

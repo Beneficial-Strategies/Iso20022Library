@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ujtfkS5AEeunNvJlR_vCbg")]
 [DisplayName("Acceptor Completion Advice")]
-public record AcceptorCompletionAdvice10
+public partial record AcceptorCompletionAdvice10
 {
     /// <summary>
     /// Environment of the transaction.

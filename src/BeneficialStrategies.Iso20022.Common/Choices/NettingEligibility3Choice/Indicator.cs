@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingEligibility3Choice
     /// </summary>
     [IsoId("_Aac80tokEeC60axPepSq7g_-876914956")]
     [DisplayName("Indicator")]
-    public record Indicator : NettingEligibility3Choice_
+    public partial record Indicator : NettingEligibility3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

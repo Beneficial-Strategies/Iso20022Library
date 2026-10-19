@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aRwo0VXaEfC0lMwgjvMClw")]
 [DisplayName("Telecom Line Item Amount1")]
-public record TelecomLineItemAmount1
+public partial record TelecomLineItemAmount1
 {
     /// <summary>
     /// Type of telephone charge. P000-P999 reserved for private use, N000-N999 reserved for national use.

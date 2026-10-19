@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SlbvM9p-Ed-ak6NoX_4Aeg_-655710552")]
 [DisplayName("Total Taxes")]
-public record TotalTaxes3
+public partial record TotalTaxes3
 {
     /// <summary>
     /// Total value of the taxes for a specific order.

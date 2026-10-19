@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XZUnwXNTEe6Y1uOeeiF_Eg")]
 [DisplayName("Fleet Data6")]
-public record FleetData6
+public partial record FleetData6
 {
     /// <summary>
     /// Driver.

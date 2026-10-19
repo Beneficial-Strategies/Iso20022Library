@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup3Choice
     /// Party.
     /// </summary>
     [DisplayName("Party")]
-    public record Party : PartyOrGroup3Choice_
+    public partial record Party : PartyOrGroup3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

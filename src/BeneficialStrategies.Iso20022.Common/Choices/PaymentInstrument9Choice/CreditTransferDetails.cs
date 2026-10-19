@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument9Choice
     [IsoId("_VK1rMNp-Ed-ak6NoX_4Aeg_853690870")]
     [DisplayName("Credit Transfer Details")]
     [IsoXmlTag("CdtTrfDtls")]
-    public record CreditTransferDetails : PaymentInstrument9Choice_
+    public partial record CreditTransferDetails : PaymentInstrument9Choice_
     {
         /// <summary>
         /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.

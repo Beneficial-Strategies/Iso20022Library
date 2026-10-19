@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kSpocF--Eee_oqB7UglxLw")]
 [DisplayName("Loyalty Programme")]
-public record LoyaltyProgramme1
+public partial record LoyaltyProgramme1
 {
     /// <summary>
     /// Eligibility for loyalty.

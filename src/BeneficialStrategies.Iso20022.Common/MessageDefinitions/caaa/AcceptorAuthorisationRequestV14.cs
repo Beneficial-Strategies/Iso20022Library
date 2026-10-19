@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_5C3AsaE_Ee-MRKYsaX6JDg")]
 [DisplayName("Acceptor Authorisation Request V14")]
-public record AcceptorAuthorisationRequestV14 : IOuterRecord
+public partial record AcceptorAuthorisationRequestV14 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

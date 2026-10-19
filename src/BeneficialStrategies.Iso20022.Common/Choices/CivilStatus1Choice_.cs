@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_zKj4MCCgEeWJd9HF2tO7BA")]
     [DisplayName("Civil Status 1 Choice")]
-    public abstract record CivilStatus1Choice_ { }
+    public abstract partial record CivilStatus1Choice_ { }
 }

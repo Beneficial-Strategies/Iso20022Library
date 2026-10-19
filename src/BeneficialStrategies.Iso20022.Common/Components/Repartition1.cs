@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQptnNp-Ed-ak6NoX_4Aeg_421967977")]
 [DisplayName("Repartition")]
-public record Repartition1
+public partial record Repartition1
 {
     /// <summary>
     /// Percentage of amount invested in a funds.

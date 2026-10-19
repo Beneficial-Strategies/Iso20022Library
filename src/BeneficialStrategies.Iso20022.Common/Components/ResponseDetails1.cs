@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W-pnUBE7EeafpqhYGpTDnw")]
 [DisplayName("Response Details")]
-public record ResponseDetails1
+public partial record ResponseDetails1
 {
     /// <summary>
     /// Code for account servicer warnings, rejections, pay no/pay responses and technical rejections.

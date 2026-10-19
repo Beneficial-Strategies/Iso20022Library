@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_0HGxcROHEfC1ZfCQz0xB3g")]
 [DisplayName("Card Management Initiation V04")]
-public record CardManagementInitiationV04 : IOuterRecord
+public partial record CardManagementInitiationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

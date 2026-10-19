@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument28Choice
     /// <summary>Block chain cash wallet details.</summary>
     [IsoId("39c92d53-eb9e-4ebd-81bf-9ae1b3f7300c")]
     [DisplayName("Block Chain Cash Wallet")]
-    public record BlockChainCashWallet : PaymentInstrument28Choice_
+    public partial record BlockChainCashWallet : PaymentInstrument28Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("BlckChainCshWllt")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AwaitingAffirmationReason1Choice
     [IsoId("_A6MM0tokEeC60axPepSq7g_1828180950")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AwaitingAffirmationReason1Choice_
+    public partial record Proprietary : AwaitingAffirmationReason1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

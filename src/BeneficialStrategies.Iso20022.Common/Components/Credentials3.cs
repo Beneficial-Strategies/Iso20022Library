@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_90C5AW9oEe6DxcrvCrq6hQ")]
 [DisplayName("Credentials3")]
-public record Credentials3
+public partial record Credentials3
 {
     /// <summary>
     /// Type.

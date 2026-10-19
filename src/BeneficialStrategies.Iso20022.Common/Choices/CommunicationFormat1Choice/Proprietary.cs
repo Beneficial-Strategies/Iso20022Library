@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationFormat1Choice
     /// </summary>
     [IsoId("_nBnOQA1eEeKGXqvMN6jpiw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CommunicationFormat1Choice_
+    public partial record Proprietary : CommunicationFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

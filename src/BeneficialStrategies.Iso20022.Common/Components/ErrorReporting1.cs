@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KNibIIPeEeS-ibzJaEIoIQ")]
 [DisplayName("Error Reporting")]
-public record ErrorReporting1
+public partial record ErrorReporting1
 {
     /// <summary>
     /// Type of error.

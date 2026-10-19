@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g-kHQR7gEfCkq6-p7S3J1Q")]
 [DisplayName("Sender Data1")]
-public record SenderData1
+public partial record SenderData1
 {
     /// <summary>
     /// Identification of the sender.

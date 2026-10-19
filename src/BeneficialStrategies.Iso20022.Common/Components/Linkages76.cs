@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BZ5R8YcGEe-6cOl7zMpJaA")]
 [DisplayName("Linkages76")]
-public record Linkages76
+public partial record Linkages76
 {
     /// <summary>
     /// Message Number.

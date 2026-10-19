@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CjgGwU0CEeybj420QgWBkA")]
 [DisplayName("Card Payment Transaction")]
-public record CardPaymentTransaction113
+public partial record CardPaymentTransaction113
 {
     /// <summary>
     /// Outcome of the authorisation, and actions to perform.

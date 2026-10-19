@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PfdboTh8EeaH-93K5JKmzw")]
     [DisplayName("EU Dividend Status Type 2 Choice")]
-    public abstract record EUDividendStatusType2Choice_ { }
+    public abstract partial record EUDividendStatusType2Choice_ { }
 }

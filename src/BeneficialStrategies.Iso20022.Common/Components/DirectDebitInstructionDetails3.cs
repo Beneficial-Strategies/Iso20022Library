@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zllRsTEyEe6g-ffJsqGiSA")]
 [DisplayName("Direct Debit Instruction Details3")]
-public record DirectDebitInstructionDetails3
+public partial record DirectDebitInstructionDetails3
 {
     /// <summary>
     /// Mandate Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction11C
     [IsoId("_1ylO23JCEe299ZbWCkdR_w")]
     [DisplayName("Token Response")]
     [IsoXmlTag("TknRspn")]
-    public record TokenResponse : CardPaymentDataSetTransaction11Choice_
+    public partial record TokenResponse : CardPaymentDataSetTransaction11Choice_
     {
         /// <summary>
         /// Identification of an element in a sequence.

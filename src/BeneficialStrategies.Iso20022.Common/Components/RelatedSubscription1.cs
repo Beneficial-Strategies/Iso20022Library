@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F_zyQBvzEe6BvtAMnhq3zw")]
 [DisplayName("Related Subscription1")]
-public record RelatedSubscription1
+public partial record RelatedSubscription1
 {
     /// <summary>
     /// Reference.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status42Choice
     /// <summary>Status expressed as individual cancellation status report.</summary>
     [IsoId("3778c74f-9ca1-4138-925d-aa5dabf3b78f")]
     [DisplayName("Individual Cancellation Status Report")]
-    public record IndividualCancellationStatusReport : Status42Choice_
+    public partial record IndividualCancellationStatusReport : Status42Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IndvCxlStsRpt")]

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CentralCounterPartyEligibility3C
     /// </summary>
     [IsoId("_Aa5owtokEeC60axPepSq7g_-373218773")]
     [DisplayName("Indicator")]
-    public record Indicator : CentralCounterPartyEligibility3Choice_
+    public partial record Indicator : CentralCounterPartyEligibility3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

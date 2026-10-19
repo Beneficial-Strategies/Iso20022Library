@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G1pwUSCBEeWhHbfCMWc1cw")]
 [DisplayName("Investment Account Ownership Information")]
-public record InvestmentAccountOwnershipInformation12
+public partial record InvestmentAccountOwnershipInformation12
 {
     /// <summary>
     /// Information about the organisation or individual person.

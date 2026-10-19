@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VPKKidp-Ed-ak6NoX_4Aeg_-1856414852")]
 [DisplayName("Charge Type")]
-public record ChargeType1
+public partial record ChargeType1
 {
     /// <summary>
     /// Structured format.

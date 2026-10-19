@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_VddsSdp-Ed-ak6NoX_4Aeg_-438010863")]
 [DisplayName("Redemption Multiple Order")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record RedemptionMultipleOrder2
+public partial record RedemptionMultipleOrder2
 {
     /// <summary>
     /// Market in which the advised trade transaction was executed.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedReason1Choice
     /// </summary>
     [IsoId("_rKbmwBHdEeKVqeHljBM1MQ")]
     [DisplayName("Reason")]
-    public record Reason : BlockedReason1Choice_
+    public partial record Reason : BlockedReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

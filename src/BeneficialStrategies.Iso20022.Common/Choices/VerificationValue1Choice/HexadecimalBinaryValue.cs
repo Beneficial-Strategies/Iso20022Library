@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
     /// </summary>
     [IsoId("_4EhKqJaNEemfCcEf5rVTyg")]
     [DisplayName("Hexadecimal Binary Value")]
-    public record HexadecimalBinaryValue : VerificationValue1Choice_
+    public partial record HexadecimalBinaryValue : VerificationValue1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

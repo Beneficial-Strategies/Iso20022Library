@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gb_yQZCBEeakHoV5BVecAQ")]
     [DisplayName("Settlement Instruction Generation 2 Choice")]
-    public abstract record SettlementInstructionGeneration2Choice_ { }
+    public abstract partial record SettlementInstructionGeneration2Choice_ { }
 }

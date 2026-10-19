@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_OCIkoZUuEe62CMB9luireQ")]
 [DisplayName("Acceptor Non Financial Request V04")]
-public record AcceptorNonFinancialRequestV04 : IOuterRecord
+public partial record AcceptorNonFinancialRequestV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

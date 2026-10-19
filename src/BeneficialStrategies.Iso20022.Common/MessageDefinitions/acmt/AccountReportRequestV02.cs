@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_eBAKYQ1TEeKGXqvMN6jpiw")]
 [DisplayName("Account Report Request V")]
-public record AccountReportRequestV02 : IOuterRecord
+public partial record AccountReportRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

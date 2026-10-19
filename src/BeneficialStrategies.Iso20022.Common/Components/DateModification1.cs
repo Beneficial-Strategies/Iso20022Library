@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8KJNgA4qEeK3IMoVvcTkkg")]
 [DisplayName("Date Modification")]
-public record DateModification1
+public partial record DateModification1
 {
     /// <summary>
     /// Specifies the type of change.

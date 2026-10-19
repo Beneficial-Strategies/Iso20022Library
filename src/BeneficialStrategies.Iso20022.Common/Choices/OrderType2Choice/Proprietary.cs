@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderType2Choice
     [IsoId("_dOFRw1xUEeWvPv3PXpS3fw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : OrderType2Choice_
+    public partial record Proprietary : OrderType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

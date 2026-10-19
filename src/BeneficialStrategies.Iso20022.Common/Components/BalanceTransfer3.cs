@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PdFGAcQAEemsic1bQcEtLA")]
 [DisplayName("Balance Transfer")]
-public record BalanceTransfer3
+public partial record BalanceTransfer3
 {
     /// <summary>
     /// Reference that enables the creditor to reconcile a payment received through a different payment channel with the payment request.

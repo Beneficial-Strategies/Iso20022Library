@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification2Choice
     /// </summary>
     [IsoId("_FJYQgSGZEeWKAaDJcYGKLw")]
     [DisplayName("Individual Owner Identification")]
-    public record IndividualOwnerIdentification : OwnerIdentification2Choice_
+    public partial record IndividualOwnerIdentification : OwnerIdentification2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IndvOwnrId")]

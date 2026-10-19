@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IeuoLzbtEead9bDRE_1DAQ")]
 [DisplayName("Investment Fund Order")]
-public record InvestmentFundOrder8
+public partial record InvestmentFundOrder8
 {
     /// <summary>
     /// Reference assigned to a set of orders or trades in order to link them together.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lw9aNPPrEeihCvvpsmGI2w")]
 [DisplayName("Amount Details")]
-public record AmountDetails1
+public partial record AmountDetails1
 {
     /// <summary>
     /// Code that describes the type of amount or fee.

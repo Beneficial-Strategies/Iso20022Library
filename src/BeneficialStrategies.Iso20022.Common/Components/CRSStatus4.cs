@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uRVacUNeEeamLdeYEZm56w")]
 [DisplayName("CRS Status")]
-public record CRSStatus4
+public partial record CRSStatus4
 {
     /// <summary>
     /// Common Reporting Standard (CRS) status.

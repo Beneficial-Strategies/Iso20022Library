@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties7Choice
     [IsoId("_J0DZtwhDEeSUPbC7DbLJpQ")]
     [DisplayName("Custodian For Minor")]
     [IsoXmlTag("CtdnForMnr")]
-    public record CustodianForMinor : AccountParties7Choice_
+    public partial record CustodianForMinor : AccountParties7Choice_
     {
         /// <summary>
         /// Information about the organisation or individual person.

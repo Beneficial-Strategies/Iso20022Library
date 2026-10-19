@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__b7DoQ2lEeSNWNtJlXOAhg")]
     [DisplayName("End Point 1 Choice")]
-    public abstract record EndPoint1Choice_ { }
+    public abstract partial record EndPoint1Choice_ { }
 }

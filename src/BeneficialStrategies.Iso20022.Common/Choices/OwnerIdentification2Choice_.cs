@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Es6-ASGZEeWKAaDJcYGKLw")]
     [DisplayName("Owner Identification 2 Choice")]
-    public abstract record OwnerIdentification2Choice_ { }
+    public abstract partial record OwnerIdentification2Choice_ { }
 }

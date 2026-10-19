@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EndPoint1Choice
     /// </summary>
     [IsoId("_FOEocA2mEeSNWNtJlXOAhg")]
     [DisplayName("Number Of Payments")]
-    public record NumberOfPayments : EndPoint1Choice_
+    public partial record NumberOfPayments : EndPoint1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

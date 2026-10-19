@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1ivxoZRBEemqYPWMBuVawg")]
 [DisplayName("Additiononal Information")]
-public record AdditiononalInformation13
+public partial record AdditiononalInformation13
 {
     /// <summary>
     /// Restrictions and/or limitations on the account or party.

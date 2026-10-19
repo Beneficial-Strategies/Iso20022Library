@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qUbLQSnUEfCD0_iZ8tw-zA")]
 [DisplayName("Context27")]
-public record Context27
+public partial record Context27
 {
     /// <summary>
     /// Entry mode of the card data for the transaction.

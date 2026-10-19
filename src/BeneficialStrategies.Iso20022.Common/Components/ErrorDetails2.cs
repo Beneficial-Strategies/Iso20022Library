@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9egA0dBHEeuFC7k3JpyaRA")]
 [DisplayName("Error Details")]
-public record ErrorDetails2
+public partial record ErrorDetails2
 {
     /// <summary>
     /// Code list containing a code that identifies the error condition.

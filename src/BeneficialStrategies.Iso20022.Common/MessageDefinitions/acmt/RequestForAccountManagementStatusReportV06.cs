@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_rpQ9MZDiEem7fvtoGpNpow")]
 [DisplayName("Request For Account Management Status Report V")]
-public record RequestForAccountManagementStatusReportV06 : IOuterRecord
+public partial record RequestForAccountManagementStatusReportV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties10Choice
     [IsoId("_xFUDJ0NMEeamLdeYEZm56w")]
     [DisplayName("Joint Owner")]
     [IsoXmlTag("JntOwnr")]
-    public record JointOwner : AccountParties10Choice_
+    public partial record JointOwner : AccountParties10Choice_
     {
         /// <summary>
         /// Information about the organisation or individual person.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mzrg8bX_EfCUZfsQO4rYeA")]
 [DisplayName("Acceptor Diagnostic Response12")]
-public record AcceptorDiagnosticResponse12
+public partial record AcceptorDiagnosticResponse12
 {
     /// <summary>
     /// Environment of the transaction.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UnitsOrAmount1Choice.Unit), nameof(UnitsOrAmount1Choice.Unit))]
     [IsoId("_Jb_o8xQcEeKebsB9eKJSkA")]
     [DisplayName("Units Or Amount 1 Choice")]
-    public abstract record UnitsOrAmount1Choice_ { }
+    public abstract partial record UnitsOrAmount1Choice_ { }
 }

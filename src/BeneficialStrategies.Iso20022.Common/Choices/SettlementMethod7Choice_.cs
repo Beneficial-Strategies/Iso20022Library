@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SettlementMethod7Choice.Debit))]
     [JsonDerivedType(typeof(SettlementMethod7Choice.Credit))]
     [JsonDerivedType(typeof(SettlementMethod7Choice.Debit))]
-    public abstract record SettlementMethod7Choice_
+    public abstract partial record SettlementMethod7Choice_
     {
     }
 }

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_SJINuNp-Ed-ak6NoX_4Aeg_1217939136")]
 [DisplayName("Subscription Bulk Order")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record SubscriptionBulkOrder4
+public partial record SubscriptionBulkOrder4
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.

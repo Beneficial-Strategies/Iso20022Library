@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus7Choice
     /// <summary>Status of the switch order is in repair.</summary>
     [IsoId("07d5c54d-1cfe-4580-b600-ddf776b3c935")]
     [DisplayName("In Repair")]
-    public record InRepair : OrderStatus7Choice_
+    public partial record InRepair : OrderStatus7Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("InRpr")]

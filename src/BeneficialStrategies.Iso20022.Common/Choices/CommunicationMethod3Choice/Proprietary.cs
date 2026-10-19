@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod3Choice
     [IsoId("_a0TYAwgqEeSUG-8hqXsVMQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CommunicationMethod3Choice_
+    public partial record Proprietary : CommunicationMethod3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

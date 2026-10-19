@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qLqWUTAPEeOKib24wnHaFg")]
 [DisplayName("Quantity")]
-public record Quantity10
+public partial record Quantity10
 {
     /// <summary>
     /// Specifies a unit of measure with a code or free text.

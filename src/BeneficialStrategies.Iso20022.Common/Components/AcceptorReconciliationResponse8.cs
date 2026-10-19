@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2W61YU7TEeyGi9JAv6wq7Q")]
 [DisplayName("Acceptor Reconciliation Response")]
-public record AcceptorReconciliationResponse8
+public partial record AcceptorReconciliationResponse8
 {
     /// <summary>
     /// Environment of the transaction.

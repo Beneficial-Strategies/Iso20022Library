@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("147c8031-e035-49fa-8fbc-8a99f3fb6846")]
 [DisplayName("Foreign Exchange Terms44")]
-public record ForeignExchangeTerms44
+public partial record ForeignExchangeTerms44
 {
     /// <summary>
     /// Currency from which the quoted currency is converted in an exchange rate calculation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X8nxfvJHEeiJn9rM2Znz2w")]
 [DisplayName("Transaction Identification")]
-public record TransactionIdentification14
+public partial record TransactionIdentification14
 {
     /// <summary>
     /// Identification of the transaction by the card acceptor. It may appear on the receipt of the cardholder. It remains unchanged throughout the lifetime of the transaction.

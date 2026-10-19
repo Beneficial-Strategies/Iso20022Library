@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status25Choice
     [IsoId("_E09yo0QTEealVdmlTDXWkw")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
-    public record Rejected : Status25Choice_
+    public partial record Rejected : Status25Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

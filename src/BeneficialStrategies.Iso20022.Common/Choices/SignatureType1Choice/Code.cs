@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SignatureType1Choice
     /// </summary>
     [IsoId("_rszToDoHEeabspMEjqY5TQ")]
     [DisplayName("Code")]
-    public record Code : SignatureType1Choice_
+    public partial record Code : SignatureType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

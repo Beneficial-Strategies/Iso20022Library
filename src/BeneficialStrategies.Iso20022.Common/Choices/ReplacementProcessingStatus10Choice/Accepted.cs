@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
     [IsoId("_Rhhu8QeDEe2fOITqoTnSLQ")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
-    public record Accepted : ReplacementProcessingStatus10Choice_
+    public partial record Accepted : ReplacementProcessingStatus10Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

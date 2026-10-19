@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     [IsoId("_A42wFtokEeC60axPepSq7g_227762549")]
     [DisplayName("Done")]
     [IsoXmlTag("Done")]
-    public record Done : ProcessingStatus17Choice_
+    public partial record Done : ProcessingStatus17Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

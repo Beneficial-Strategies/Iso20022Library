@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lnDF4HsKEeSR68OJvMfxJQ")]
 [DisplayName("Card Transaction Risk Indicator")]
-public record CardTransactionRiskIndicator1
+public partial record CardTransactionRiskIndicator1
 {
     /// <summary>
     /// Reason to indicate a certain level of risk for the transaction.

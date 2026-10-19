@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KaECoDnlEeW7UoCHqpiMaQ")]
 [DisplayName("Personal Information")]
-public record PersonalInformation1
+public partial record PersonalInformation1
 {
     /// <summary>
     /// Name of the father of the individual person.

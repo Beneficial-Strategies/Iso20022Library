@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity29Cho
     /// </summary>
     [IsoId("_52gvZU_3Eea1ZIrmU5dI3w")]
     [DisplayName("Percentage Of Total Subscription Amount")]
-    public record PercentageOfTotalSubscriptionAmount : FinancialInstrumentQuantity29Choice_
+    public partial record PercentageOfTotalSubscriptionAmount : FinancialInstrumentQuantity29Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

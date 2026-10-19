@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 )]
 [IsoId("_R3AAmDEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Balance Transfer Acknowledgement V05")]
-public record AccountSwitchBalanceTransferAcknowledgementV05 : IOuterRecord
+public partial record AccountSwitchBalanceTransferAcknowledgementV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

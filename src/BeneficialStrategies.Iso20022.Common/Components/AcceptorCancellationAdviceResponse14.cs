@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KZ9xMbX3EfCUZfsQO4rYeA")]
 [DisplayName("Acceptor Cancellation Advice Response14")]
-public record AcceptorCancellationAdviceResponse14
+public partial record AcceptorCancellationAdviceResponse14
 {
     /// <summary>
     /// Environment of the transaction.

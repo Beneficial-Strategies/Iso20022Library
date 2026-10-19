@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 )]
 [IsoId("_7t2ZYNE7Ed-BzquC8wXy7w_190731874")]
 [DisplayName("Switch Order Confirmation V")]
-public record SwitchOrderConfirmationV03 : IOuterRecord
+public partial record SwitchOrderConfirmationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

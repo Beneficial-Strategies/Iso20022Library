@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0vBqcT1zEfCQAqQ9lolFUg")]
 [DisplayName("Risk Input Data3")]
-public record RiskInputData3
+public partial record RiskInputData3
 {
     /// <summary>
     /// Type of entity providing data for risk assessment.

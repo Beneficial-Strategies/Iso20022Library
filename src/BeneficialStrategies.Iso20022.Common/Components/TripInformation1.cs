@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X6Xf1_i3EeiJaN6-Lf-c_w")]
 [DisplayName("Trip Information")]
-public record TripInformation1
+public partial record TripInformation1
 {
     /// <summary>
     /// Identification number of the trip.
