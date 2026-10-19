@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oHfs8MBmEeak3I7j2hsibw")]
 [DisplayName("Absolute")]
-public record Absolute1
+public partial record Absolute1
 {
     /// <summary>
     /// Unit of measure for the absolute stress.

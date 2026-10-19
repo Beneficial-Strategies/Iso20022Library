@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria2Choice
     /// </summary>
     [IsoId("_kmHRg5laEeeE1Ya-LgRsuQ")]
     [DisplayName("Query Name")]
-    public record QueryName : ReservationCriteria2Choice_
+    public partial record QueryName : ReservationCriteria2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

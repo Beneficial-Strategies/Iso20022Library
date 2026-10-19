@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Wf3Xu0EIEeWVgfuHGaKtRQ")]
 [DisplayName("Rate Type And Amount And Status")]
-public record RateTypeAndAmountAndStatus27
+public partial record RateTypeAndAmountAndStatus27
 {
     /// <summary>
     /// Value expressed as a rate type.

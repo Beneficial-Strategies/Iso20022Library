@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i7VOgZiuEe2f7NHvXATP5g")]
 [DisplayName("Securities Transaction Price")]
-public record SecuritiesTransactionPrice7
+public partial record SecuritiesTransactionPrice7
 {
     /// <summary>
     /// Price expressed as a monetary value.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UPrqgNp-Ed-ak6NoX_4Aeg_2118430595")]
 [DisplayName("Net Dividend Rate")]
-public record NetDividendRate2
+public partial record NetDividendRate2
 {
     /// <summary>
     /// Type of underlying securities to which the rate is related, eg, underlying security for which an interest is paid.

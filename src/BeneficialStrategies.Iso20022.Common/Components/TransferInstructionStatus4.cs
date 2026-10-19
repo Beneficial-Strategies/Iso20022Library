@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H_n8ISY_EeW_ZNn8gbfY7Q")]
 [DisplayName("Transfer Instruction Status")]
-public record TransferInstructionStatus4
+public partial record TransferInstructionStatus4
 {
     /// <summary>
     /// Status code.

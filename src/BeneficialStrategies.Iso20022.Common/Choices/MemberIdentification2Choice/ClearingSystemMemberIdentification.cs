@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification2Choice
     [IsoId("_8Hq3WKMgEeCJ6YNENx4h-w_-79393312")]
     [DisplayName("Clearing System Member Identification")]
     [IsoXmlTag("ClrSysMmbId")]
-    public record ClearingSystemMemberIdentification : MemberIdentification2Choice_
+    public partial record ClearingSystemMemberIdentification : MemberIdentification2Choice_
     {
         /// <summary>
         /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.

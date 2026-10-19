@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionType1Choice
     /// </summary>
     [IsoId("_RF4ZcAf_EeSaceXTzyiZRg")]
     [DisplayName("Corporate Action Type")]
-    public record CorporateActionType : TransactionType1Choice_
+    public partial record CorporateActionType : TransactionType1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CorpActnTp")]

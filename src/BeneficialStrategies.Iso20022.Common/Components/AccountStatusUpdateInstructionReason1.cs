@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qkYIgXi8EeaRm5xIK6nGuQ")]
 [DisplayName("Account Status Update Instruction Reason")]
-public record AccountStatusUpdateInstructionReason1
+public partial record AccountStatusUpdateInstructionReason1
 {
     /// <summary>
     /// Reason for the instruction to change the account status.

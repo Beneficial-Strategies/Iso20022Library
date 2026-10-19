@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vB-boTNJEeylu6lH-gut-A")]
 [DisplayName("Transaction")]
-public record Transaction144
+public partial record Transaction144
 {
     /// <summary>
     /// Code that identifies an administrative type.

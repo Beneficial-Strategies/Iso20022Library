@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QSO71DrXEeedCZZ8dIPp6g")]
 [DisplayName("Benchmark Cancellation")]
-public record BenchmarkCancellation1
+public partial record BenchmarkCancellation1
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice messages.

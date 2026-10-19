@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9t1JBeVaEfC90e_m8fMznQ")]
 [DisplayName("Cash Account Audit Trail Report")]
-public record CashAccountAuditTrailReport4
+public partial record CashAccountAuditTrailReport4
 {
     /// <summary>
     /// Identifies the returned cash account reference data or error information.

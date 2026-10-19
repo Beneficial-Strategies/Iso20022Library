@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZyMJQUzAEeafiMTDrtSnyw")]
 [DisplayName("Disabled Status Reason")]
-public record DisabledStatusReason1
+public partial record DisabledStatusReason1
 {
     /// <summary>
     /// Reason for the disabled account status.

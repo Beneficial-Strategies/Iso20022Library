@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1qvqUcW3EeuhguwJmlgagQ")]
 [DisplayName("Delivery Information")]
-public record DeliveryInformation4
+public partial record DeliveryInformation4
 {
     /// <summary>
     /// Contains the number identifying an individual delivery note.

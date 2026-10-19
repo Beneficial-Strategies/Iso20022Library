@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T9gVYtp-Ed-ak6NoX_4Aeg_1111011316")]
 [DisplayName("Rejected Cancellation Justification")]
-public record RejectedCancellationJustification
+public partial record RejectedCancellationJustification
 {
     /// <summary>
     /// Justification for the rejection of the cancellation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4Eg3F__qEemm3skPVSMJQg")]
 [DisplayName("Loan Data")]
-public record LoanData98
+public partial record LoanData98
 {
     /// <summary>
     /// Specifies whether the transaction was settled using the Delivery-by-Value (DBV) mechanism.

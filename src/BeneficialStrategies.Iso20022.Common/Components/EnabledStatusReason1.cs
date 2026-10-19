@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tdbsMEy9EeafiMTDrtSnyw")]
 [DisplayName("Enabled Status Reason")]
-public record EnabledStatusReason1
+public partial record EnabledStatusReason1
 {
     /// <summary>
     /// Reason for the enabled account status.

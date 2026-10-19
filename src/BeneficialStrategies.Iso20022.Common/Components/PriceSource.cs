@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qebmfdp-Ed-ak6NoX_4Aeg_-24723485")]
 [DisplayName("Price Source")]
-public record PriceSource
+public partial record PriceSource
 {
     /// <summary>
     /// Source of the price.

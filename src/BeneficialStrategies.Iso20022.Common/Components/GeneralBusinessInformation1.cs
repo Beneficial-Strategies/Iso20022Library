@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mg4IJZlgEeeE1Ya-LgRsuQ")]
 [DisplayName("General Business Information")]
-public record GeneralBusinessInformation1
+public partial record GeneralBusinessInformation1
 {
     /// <summary>
     /// Further information about the criticality or importance of a general business information system.

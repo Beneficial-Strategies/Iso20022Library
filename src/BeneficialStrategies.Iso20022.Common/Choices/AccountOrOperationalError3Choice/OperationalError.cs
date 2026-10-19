@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrOperationalError3Choice
     [IsoId("_fSjb85-WEee28J7y9KlTWg")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : AccountOrOperationalError3Choice_
+    public partial record OperationalError : AccountOrOperationalError3Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

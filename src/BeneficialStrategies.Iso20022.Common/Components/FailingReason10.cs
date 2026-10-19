@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6BKUD5NLEeWGlc8L7oPDIg")]
 [DisplayName("Failing Reason")]
-public record FailingReason10
+public partial record FailingReason10
 {
     /// <summary>
     /// Specifies the reason why the instruction has a failing status.

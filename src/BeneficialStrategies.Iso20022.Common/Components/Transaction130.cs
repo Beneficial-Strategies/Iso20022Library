@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S466AYv3EeumSPwlS1PkxQ")]
 [DisplayName("Transaction")]
-public record Transaction130
+public partial record Transaction130
 {
     /// <summary>
     /// Identification of the  transaction reporting the fraud.

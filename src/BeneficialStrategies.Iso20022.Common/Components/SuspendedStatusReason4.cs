@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d2qkoUHmEea8I67lh6qdSQ")]
 [DisplayName("Suspended Status Reason")]
-public record SuspendedStatusReason4
+public partial record SuspendedStatusReason4
 {
     /// <summary>
     /// Reason for the conditionally accepted status expressed as a code.

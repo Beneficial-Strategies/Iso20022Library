@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UPh5g9p-Ed-ak6NoX_4Aeg_1227561580")]
 [DisplayName("Gross Dividend Rate")]
-public record GrossDividendRate2
+public partial record GrossDividendRate2
 {
     /// <summary>
     /// Type of underlying securities to which the rate is related, eg, underlying security for which an interest is paid.

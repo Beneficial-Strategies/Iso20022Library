@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WI-uedp-Ed-ak6NoX_4Aeg_192444084")]
 [DisplayName("Commission")]
-public record Commission13
+public partial record Commission13
 {
     /// <summary>
     /// Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.

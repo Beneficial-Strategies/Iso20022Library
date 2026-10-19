@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EwdoAUhDEea8pJjypp-yMQ")]
 [DisplayName("Confirmation Rejected Status")]
-public record ConfirmationRejectedStatus2
+public partial record ConfirmationRejectedStatus2
 {
     /// <summary>
     /// Reason for the rejected status.

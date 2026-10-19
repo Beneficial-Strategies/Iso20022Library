@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YbmQwFrAEeWN79Bl6BUd3g")]
 [DisplayName("Agricultural Commodity Live Stock")]
-public record AgriculturalCommodityLiveStock1
+public partial record AgriculturalCommodityLiveStock1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

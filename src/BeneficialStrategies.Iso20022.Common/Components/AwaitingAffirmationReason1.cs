@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A6MM09okEeC60axPepSq7g_-1610048646")]
 [DisplayName("Awaiting Affirmation Reason")]
-public record AwaitingAffirmationReason1
+public partial record AwaitingAffirmationReason1
 {
     /// <summary>
     /// Specifies the reason why the trade is wainting the affirmation.

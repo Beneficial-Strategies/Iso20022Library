@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qg6kof_pEemm3skPVSMJQg")]
 [DisplayName("Reuse Data Report Correction")]
-public record ReuseDataReportCorrection9
+public partial record ReuseDataReportCorrection9
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

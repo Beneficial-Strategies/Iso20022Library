@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YxXJ0dLGEeiN28wlpBQScw")]
 [DisplayName("Pledgee Type And Any BIC Identifier")]
-public record PledgeeTypeAndAnyBICIdentifier2
+public partial record PledgeeTypeAndAnyBICIdentifier2
 {
     /// <summary>
     /// Identification of the entity to which the financial instruments are pledged, expressed as a BIC.

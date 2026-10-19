@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xJiqQWlIEeaLAKoEUNsD9g")]
 [DisplayName("Interest Rate Derivative")]
-public record InterestRateDerivative5
+public partial record InterestRateDerivative5
 {
     /// <summary>
     /// Specific details on the underlying type of the interest rate derivative.

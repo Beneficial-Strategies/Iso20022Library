@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TjY2tZliEeeE1Ya-LgRsuQ")]
 [DisplayName("Current And Default Reservation")]
-public record CurrentAndDefaultReservation3
+public partial record CurrentAndDefaultReservation3
 {
     /// <summary>
     /// Report is given for a current reservation.

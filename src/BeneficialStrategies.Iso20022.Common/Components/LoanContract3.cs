@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2n360bGIEeuSTr8k0UEM8A")]
 [DisplayName("Loan Contract")]
-public record LoanContract3
+public partial record LoanContract3
 {
     /// <summary>
     /// Contract document referenced from this loan agreement.

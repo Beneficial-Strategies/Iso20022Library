@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_72PJEKMgEeCJ6YNENx4h-w_-1323572611")]
 [DisplayName("Payment Transaction Party")]
-public record PaymentTransactionParty2
+public partial record PaymentTransactionParty2
 {
     /// <summary>
     /// Party that owes assets to the creditor, such as a result of receipt of goods or services, gifts, or charity payments. The debtor may also be the debit account owner.

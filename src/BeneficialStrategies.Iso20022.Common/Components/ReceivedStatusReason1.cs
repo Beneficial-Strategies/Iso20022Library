@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Kak_Clj7EeOgwYxfAV02bg")]
 [DisplayName("Received Status Reason")]
-public record ReceivedStatusReason1
+public partial record ReceivedStatusReason1
 {
     /// <summary>
     /// Reason for the received status.

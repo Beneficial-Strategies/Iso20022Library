@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AjSxdZPuEey0rJ3Gl6WZVA")]
 [DisplayName("Clearing Exception Or Exemption")]
-public record ClearingExceptionOrExemption2
+public partial record ClearingExceptionOrExemption2
 {
     /// <summary>
     /// Identifies the type of clearing exemption or exception that the reporting counterparty has elected.

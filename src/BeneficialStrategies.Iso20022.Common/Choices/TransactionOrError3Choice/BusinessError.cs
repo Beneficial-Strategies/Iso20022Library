@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError3Choice
     [IsoId("_NRCCdZlPEee-Zps0fZQaFQ")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : TransactionOrError3Choice_
+    public partial record BusinessError : TransactionOrError3Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

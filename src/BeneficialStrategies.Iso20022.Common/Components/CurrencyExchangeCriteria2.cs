@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H5cuNZlZEeeE1Ya-LgRsuQ")]
 [DisplayName("Currency Exchange Criteria")]
-public record CurrencyExchangeCriteria2
+public partial record CurrencyExchangeCriteria2
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

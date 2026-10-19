@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BPv8AR1DEey8XKHwKquEQw")]
 [DisplayName("Telecom Services Line Item")]
-public record TelecomServicesLineItem2
+public partial record TelecomServicesLineItem2
 {
     /// <summary>
     /// Contains the start date and time of the phone call.

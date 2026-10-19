@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vyh485qLEeWcAIE4lEkF_Q")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification79
+public partial record GenericIdentification79
 {
     /// <summary>
     /// Proprietary information, often a code, issued by the data source scheme issuer.

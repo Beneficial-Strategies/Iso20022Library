@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CxFZMItIEeSxlKlAGYErFg")]
 [DisplayName("ATM Command Parameters")]
-public record ATMCommandParameters1
+public partial record ATMCommandParameters1
 {
     /// <summary>
     /// Serial number of the device.

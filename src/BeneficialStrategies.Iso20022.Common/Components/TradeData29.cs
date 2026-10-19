@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hSAnJcK4EeuFNp8LZAnorg")]
 [DisplayName("Trade Data")]
-public record TradeData29
+public partial record TradeData29
 {
     /// <summary>
     /// Information about accepted and rejected reports and the reasons of rejection.

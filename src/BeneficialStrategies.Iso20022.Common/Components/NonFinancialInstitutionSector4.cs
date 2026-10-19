@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MU138QbWEeqrW7Meu5r3kQ")]
 [DisplayName("Non Financial Institution Sector")]
-public record NonFinancialInstitutionSector4
+public partial record NonFinancialInstitutionSector4
 {
     /// <summary>
     /// Indicates that reporting party is a central counterparty.

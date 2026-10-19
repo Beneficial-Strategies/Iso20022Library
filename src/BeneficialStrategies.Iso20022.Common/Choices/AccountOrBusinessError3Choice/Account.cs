@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError3Choice
     [IsoId("_fowVcZ-WEee28J7y9KlTWg")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public record Account : AccountOrBusinessError3Choice_
+    public partial record Account : AccountOrBusinessError3Choice_
     {
         /// <summary>
         /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.

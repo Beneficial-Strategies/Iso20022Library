@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_41hXYA1KEeqV4s5SpzR1dQ")]
 [DisplayName("Trade Transaction Early Termination")]
-public record TradeTransactionEarlyTermination5
+public partial record TradeTransactionEarlyTermination5
 {
     /// <summary>
     /// Counterparty data details.

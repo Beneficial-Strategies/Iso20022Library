@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B0ZF0TIDEe2fXedS_ucFOA")]
 [DisplayName("Portfolio Identification")]
-public record PortfolioIdentification3
+public partial record PortfolioIdentification3
 {
     /// <summary>
     /// Unique code determined by the reporting counterparty to identify the portfolio if collateral is reported on a portfolio basis.

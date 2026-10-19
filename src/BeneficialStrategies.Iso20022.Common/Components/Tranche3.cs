@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d9OP8Q06EeuJ1fOEB4bQXA")]
 [DisplayName("Tranche")]
-public record Tranche3
+public partial record Tranche3
 {
     /// <summary>
     /// Indicates the lower point at which the level of losses in the underlying portfolio reduces the notional of the tranche.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wZj7gWXqEeap-P22vGV91g")]
 [DisplayName("Corrective Payment Initiation")]
-public record CorrectivePaymentInitiation2
+public partial record CorrectivePaymentInitiation2
 {
     /// <summary>
     /// Set of elements used to provide corrective information for the group header of the message under investigation.

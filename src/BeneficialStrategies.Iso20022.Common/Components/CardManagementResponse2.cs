@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mb2JwYN1EeuHqfO1LgkE9Q")]
 [DisplayName("Card Management Response")]
-public record CardManagementResponse2
+public partial record CardManagementResponse2
 {
     /// <summary>
     /// Environment of the transaction.

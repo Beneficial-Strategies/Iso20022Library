@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tP338dizEeq5MfBBxQig1Q")]
 [DisplayName("Corrective Interbank Transaction")]
-public record CorrectiveInterbankTransaction3
+public partial record CorrectiveInterbankTransaction3
 {
     /// <summary>
     /// Set of elements used to provide corrective information for the group header of the message under investigation.

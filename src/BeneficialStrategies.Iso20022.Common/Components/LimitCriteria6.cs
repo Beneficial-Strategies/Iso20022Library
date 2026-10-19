@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FMyWZ24-EeiU9cctagi5ow")]
 [DisplayName("Limit Criteria")]
-public record LimitCriteria6
+public partial record LimitCriteria6
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

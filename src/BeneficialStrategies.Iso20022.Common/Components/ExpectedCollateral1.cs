@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UllpF9p-Ed-ak6NoX_4Aeg_217990249")]
 [DisplayName("Expected Collateral")]
-public record ExpectedCollateral1
+public partial record ExpectedCollateral1
 {
     /// <summary>
     /// Provides the expected collateral type and direction for the variation margin.

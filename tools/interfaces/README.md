@@ -8,6 +8,8 @@ choice they reach:
 * a partial of the record next to it, `Name.Interfaces.cs`, that adds the interface and the explicit implementations C# needs where
   the record's member is a component, a choice or a list (`IEnumerable<IFoo> IBar.Items => Items;`).
 
+`--unreached` (instead of `--areas`) writes the same for the components and choices that have no interface yet, because no message of the areas reaches them (old versions kept in the library); the validators of those need them too.
+
 `--partial` also makes the record declaration `partial`. The records are not otherwise changed. Run from the repository root, safe to repeat.
 
 Interface members: get-only; required is not nullable and optional is; a member that may repeat is an `IEnumerable<T>`; a component or

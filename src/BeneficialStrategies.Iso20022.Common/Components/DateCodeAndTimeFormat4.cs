@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ctczB5KQEeWHWpTQn1FFVg")]
 [DisplayName("Date Code And Time Format")]
-public record DateCodeAndTimeFormat4
+public partial record DateCodeAndTimeFormat4
 {
     /// <summary>
     /// Specifies the type of date.

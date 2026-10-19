@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U0fAtdp-Ed-ak6NoX_4Aeg_1587150778")]
 [DisplayName("Transfer Cancellation Rejection Reason")]
-public record TransferCancellationRejectionReason1
+public partial record TransferCancellationRejectionReason1
 {
     /// <summary>
     /// Reason for a rejected status in structured form.

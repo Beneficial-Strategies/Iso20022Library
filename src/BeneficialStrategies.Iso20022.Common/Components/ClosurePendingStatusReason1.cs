@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0rCfkWCLEeabZtzjEVWYCQ")]
 [DisplayName("Closure Pending Status Reason")]
-public record ClosurePendingStatusReason1
+public partial record ClosurePendingStatusReason1
 {
     /// <summary>
     /// Reason for the closure pending status.

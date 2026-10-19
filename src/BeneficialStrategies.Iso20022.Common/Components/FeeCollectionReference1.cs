@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0yDt0SxMEeyg-aG5nXcnfg")]
 [DisplayName("Fee Collection Reference")]
-public record FeeCollectionReference1
+public partial record FeeCollectionReference1
 {
     /// <summary>
     /// Name of the entity assigning the fee collection reference.

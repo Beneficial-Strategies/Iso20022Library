@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuwKHAEcEeCQm6a_G2yO_w_2135472976")]
 [DisplayName("Responder Details")]
-public record ResponderDetails1
+public partial record ResponderDetails1
 {
     /// <summary>
     /// Date and time at which the response was created.

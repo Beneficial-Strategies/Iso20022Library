@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wETkwIn5EeShMpas3885ww")]
 [DisplayName("UTM Coordinates")]
-public record UTMCoordinates1
+public partial record UTMCoordinates1
 {
     /// <summary>
     /// UTM grid zone combination of the longitude zone (1 to 60) and the latitude band, C to X, excluding I and O (for example Eiffel tower UTM zone is 31U).

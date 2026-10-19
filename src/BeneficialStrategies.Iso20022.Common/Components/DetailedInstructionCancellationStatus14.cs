@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WrUtJ8T3Eem9aZlimxVUIw")]
 [DisplayName("Detailed Instruction Cancellation Status")]
-public record DetailedInstructionCancellationStatus14
+public partial record DetailedInstructionCancellationStatus14
 {
     /// <summary>
     /// Identification of the specific individual instruction cancellation request from the original meeting instruction cancellation request message identified in InstructionType/ InstructionCancellationIdentification, for which the status is provided.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B0q0IR7zEeSxevWRRWxNAg")]
 [DisplayName("Frequency Period")]
-public record FrequencyPeriod1
+public partial record FrequencyPeriod1
 {
     /// <summary>
     /// Period for which the number of instructions are to be created and processed.

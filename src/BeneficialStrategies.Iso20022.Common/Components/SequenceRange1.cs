@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_22wBoIy0EeeGkvZr3jtnCQ")]
 [DisplayName("Sequence Range")]
-public record SequenceRange1
+public partial record SequenceRange1
 {
     /// <summary>
     /// Start sequence of the range.

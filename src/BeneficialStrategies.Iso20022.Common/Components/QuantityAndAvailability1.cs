@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QZhRR9p-Ed-ak6NoX_4Aeg_-987951378")]
 [DisplayName("Quantity And Availability")]
-public record QuantityAndAvailability1
+public partial record QuantityAndAvailability1
 {
     /// <summary>
     /// Quantity of securities in the sub-balance.

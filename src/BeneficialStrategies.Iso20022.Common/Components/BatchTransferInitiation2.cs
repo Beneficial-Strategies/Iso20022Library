@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZUjRwZMrEeuleeHpFMMhmQ")]
 [DisplayName("Batch Transfer Initiation")]
-public record BatchTransferInitiation2
+public partial record BatchTransferInitiation2
 {
     /// <summary>
     /// Environment of the message.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1NV5sTEyEe6g-ffJsqGiSA")]
     [DisplayName("Account Report Or Error 4 Choice")]
-    public abstract record AccountReportOrError4Choice_ { }
+    public abstract partial record AccountReportOrError4Choice_ { }
 }

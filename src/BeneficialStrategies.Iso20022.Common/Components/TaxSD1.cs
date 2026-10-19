@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1bBq5m99EeKuY41pq1-dog")]
 [DisplayName("Tax SD")]
-public record TaxSD1
+public partial record TaxSD1
 {
     /// <summary>
     /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance.

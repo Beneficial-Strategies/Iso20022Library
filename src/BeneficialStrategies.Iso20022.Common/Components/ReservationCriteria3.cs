@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kmHRh5laEeeE1Ya-LgRsuQ")]
 [DisplayName("Reservation Criteria")]
-public record ReservationCriteria3
+public partial record ReservationCriteria3
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

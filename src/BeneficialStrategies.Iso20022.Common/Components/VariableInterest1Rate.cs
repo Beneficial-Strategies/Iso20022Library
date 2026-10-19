@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qkr_dtp-Ed-ak6NoX_4Aeg_1444401531")]
 [DisplayName("Variable Interest 1 Rate")]
-public record VariableInterest1Rate
+public partial record VariableInterest1Rate
 {
     /// <summary>
     /// Specifies the index taken into account to calculate the variable interest rate.

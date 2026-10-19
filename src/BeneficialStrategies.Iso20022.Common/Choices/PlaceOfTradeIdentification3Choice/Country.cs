@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification3Choic
     /// </summary>
     [IsoId("_WNmIsNp-Ed-ak6NoX_4Aeg_1213217874")]
     [DisplayName("Country")]
-    public record Country : PlaceOfTradeIdentification3Choice_
+    public partial record Country : PlaceOfTradeIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

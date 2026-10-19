@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8KUvwKs2Eeayv9XxdmMwKQ")]
 [DisplayName("Risk Factor")]
-public record RiskFactor1
+public partial record RiskFactor1
 {
     /// <summary>
     /// Unique identifier for the risk factor.

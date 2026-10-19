@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationRequestStatus1Choic
     /// </summary>
     [IsoId("_foSGhWQCEe297MhDQvVHLQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : InvestigationRequestStatus1Choice_
+    public partial record Proprietary : InvestigationRequestStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

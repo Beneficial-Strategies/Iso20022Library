@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vl2wP5NSEeWGlc8L7oPDIg")]
 [DisplayName("Consent Reason")]
-public record ConsentReason5
+public partial record ConsentReason5
 {
     /// <summary>
     /// Reason provided for the status.

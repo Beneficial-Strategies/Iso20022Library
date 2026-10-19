@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification4Choice
     [IsoId("_74w4oqMgEeCJ6YNENx4h-w_-1853582681")]
     [DisplayName("Long Business Identification")]
     [IsoXmlTag("LngBizId")]
-    public record LongBusinessIdentification : PaymentIdentification4Choice_
+    public partial record LongBusinessIdentification : PaymentIdentification4Choice_
     {
         /// <summary>
         /// Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.|Usage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.|Usage: this is the former PaymentInstructionReference element.

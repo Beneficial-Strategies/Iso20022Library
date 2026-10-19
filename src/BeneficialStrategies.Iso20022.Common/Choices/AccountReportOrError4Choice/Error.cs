@@ -9,7 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountReportOrError4Choice
     /// </summary>
     [IsoId("_1Pl8cTEyEe6g-ffJsqGiSA")]
     [DisplayName("Error")]
-    public record Error : AccountReportOrError4Choice_
+    public partial record Error : AccountReportOrError4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Err")]

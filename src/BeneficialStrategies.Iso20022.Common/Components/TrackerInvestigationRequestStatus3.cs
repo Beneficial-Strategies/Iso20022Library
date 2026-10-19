@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_heHI0Z95Ee6ujbXJ3GcKgA")]
 [DisplayName("Tracker Investigation Request Status3")]
-public record TrackerInvestigationRequestStatus3
+public partial record TrackerInvestigationRequestStatus3
 {
     /// <summary>
     /// Status.

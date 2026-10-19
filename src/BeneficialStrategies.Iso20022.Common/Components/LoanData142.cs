@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IVzPgczwEeux2uvSBFU54Q")]
 [DisplayName("Loan Data")]
-public record LoanData142
+public partial record LoanData142
 {
     /// <summary>
     /// Unique trade Identifier (UTI) as agreed with the other counterparty.

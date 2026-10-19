@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WIFf0SJdEe2zWP9pqvmqdw")]
 [DisplayName("Floating Rate")]
-public record FloatingRate13
+public partial record FloatingRate13
 {
     /// <summary>
     /// Identifier of the security subject of the transaction

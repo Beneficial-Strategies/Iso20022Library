@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x4sjhTp1Eemk2e6qGBk8IQ")]
 [DisplayName("Securities Account Report")]
-public record SecuritiesAccountReport3
+public partial record SecuritiesAccountReport3
 {
     /// <summary>
     /// Unique and unambiguous identification for the system security account.

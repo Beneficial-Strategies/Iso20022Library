@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError7Choice
     [IsoId("_wq9RgZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Business Report")]
     [IsoXmlTag("BizRpt")]
-    public record BusinessReport : BusinessDayReportOrError7Choice_
+    public partial record BusinessReport : BusinessDayReportOrError7Choice_
     {
         /// <summary>
         /// Identification of a particular market infrastructure.

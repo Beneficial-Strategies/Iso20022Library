@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bXBNUFryEeWN79Bl6BUd3g")]
 [DisplayName("Paper Commodity Recovered Paper")]
-public record PaperCommodityRecoveredPaper1
+public partial record PaperCommodityRecoveredPaper1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

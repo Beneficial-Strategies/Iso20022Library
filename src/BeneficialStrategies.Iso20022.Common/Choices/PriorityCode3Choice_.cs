@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5FjlARbwEeOy-PlRuFSUzQ")]
     [DisplayName("Priority Code 3 Choice")]
-    public abstract record PriorityCode3Choice_ { }
+    public abstract partial record PriorityCode3Choice_ { }
 }

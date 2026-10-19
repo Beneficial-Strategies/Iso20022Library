@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CpO6Zf_oEemm3skPVSMJQg")]
 [DisplayName("Trade Data")]
-public record TradeData21
+public partial record TradeData21
 {
     /// <summary>
     /// Status of the required transactions reconciliation or pairing.

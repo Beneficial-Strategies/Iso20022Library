@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U_dt8bv7EeiLRYqS-r-R-A")]
 [DisplayName("Fertilizer Commodity Other")]
-public record FertilizerCommodityOther1
+public partial record FertilizerCommodityOther1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

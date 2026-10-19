@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eun4sdtQEee9e6xduATmQg")]
 [DisplayName("Card Payment Data Set Transaction")]
-public record CardPaymentDataSetTransaction25
+public partial record CardPaymentDataSetTransaction25
 {
     /// <summary>
     /// Sequential counter of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VMep9tp-Ed-ak6NoX_4Aeg_-615142722")]
 [DisplayName("Direct Debit Mandate")]
-public record DirectDebitMandate2
+public partial record DirectDebitMandate2
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

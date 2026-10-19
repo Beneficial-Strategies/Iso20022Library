@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hbH5F4KZEee7hrXqLO3yQg")]
 [DisplayName("Underlying Payment Transaction")]
-public record UnderlyingPaymentTransaction3
+public partial record UnderlyingPaymentTransaction3
 {
     /// <summary>
     /// Set of elements used to provide information on the original message.

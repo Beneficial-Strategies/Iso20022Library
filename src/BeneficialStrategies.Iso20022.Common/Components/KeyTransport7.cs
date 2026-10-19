@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SNoCoS8jEeu125Ip9zFcsQ")]
 [DisplayName("Key Transport")]
-public record KeyTransport7
+public partial record KeyTransport7
 {
     /// <summary>
     /// Version of the data structure.

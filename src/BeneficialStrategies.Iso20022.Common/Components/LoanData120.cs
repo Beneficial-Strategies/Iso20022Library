@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3-z26Xz2EeurrJrNxcsszQ")]
 [DisplayName("Loan Data")]
-public record LoanData120
+public partial record LoanData120
 {
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place.

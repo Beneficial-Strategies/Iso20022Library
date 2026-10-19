@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wcJ5EayeEeuupt0UCH5uiw")]
 [DisplayName("Vehicle Rental Agreement")]
-public record VehicleRentalAgreement2
+public partial record VehicleRentalAgreement2
 {
     /// <summary>
     /// Contains the original vehicle rental agreement, invoice or contract number.

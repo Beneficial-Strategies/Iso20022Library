@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3QmsQJMfEeuleeHpFMMhmQ")]
 [DisplayName("Deposit Details")]
-public record DepositDetails2
+public partial record DepositDetails2
 {
     /// <summary>
     /// Funding source used for deposit.

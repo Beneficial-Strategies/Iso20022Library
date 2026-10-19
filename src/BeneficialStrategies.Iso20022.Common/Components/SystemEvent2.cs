@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8FSRsqMgEeCJ6YNENx4h-w_-140040828")]
 [DisplayName("System Event")]
-public record SystemEvent2
+public partial record SystemEvent2
 {
     /// <summary>
     /// Nature of the event that has occurred.

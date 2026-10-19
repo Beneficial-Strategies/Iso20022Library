@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T53CMTEBEeyjbpgZW6G1Fg")]
 [DisplayName("Dispute Data")]
-public record DisputeData3
+public partial record DisputeData3
 {
     /// <summary>
     /// Indicates the cycle of presentment or of the chargeback  (1= first cycle for chargeback, 2= second cycle of presentment or chargeback, etc.).

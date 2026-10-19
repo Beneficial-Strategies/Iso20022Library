@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gohsMZ-dEee28J7y9KlTWg")]
 [DisplayName("Bilateral Limit")]
-public record BilateralLimit2
+public partial record BilateralLimit2
 {
     /// <summary>
     /// Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.

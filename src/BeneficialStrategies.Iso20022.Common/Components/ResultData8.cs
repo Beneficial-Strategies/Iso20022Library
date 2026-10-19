@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r_HnMcsVEeuNe7RtB4qFHw")]
 [DisplayName("Result Data")]
-public record ResultData8
+public partial record ResultData8
 {
     /// <summary>
     /// Generic result of the processing.

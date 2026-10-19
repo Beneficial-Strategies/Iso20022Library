@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lsmvER1NEey8XKHwKquEQw")]
 [DisplayName("Processing Result")]
-public record ProcessingResult19
+public partial record ProcessingResult19
 {
     /// <summary>
     /// Information about the entity that provides the response.

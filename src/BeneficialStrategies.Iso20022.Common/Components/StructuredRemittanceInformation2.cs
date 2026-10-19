@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QFjMZtp-Ed-ak6NoX_4Aeg_-1409254181")]
 [DisplayName("Structured Remittance Information")]
-public record StructuredRemittanceInformation2
+public partial record StructuredRemittanceInformation2
 {
     /// <summary>
     /// Specifies the nature of the referred document/transaction, eg, invoice or credit note.

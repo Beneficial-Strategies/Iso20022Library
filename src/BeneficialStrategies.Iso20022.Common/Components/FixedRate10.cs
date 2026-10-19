@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7j19V1fREeqqKf65rDYWYw")]
 [DisplayName("Fixed Rate")]
-public record FixedRate10
+public partial record FixedRate10
 {
     /// <summary>
     /// Indicates the per annum rate of the fixed leg(s) of an interest rate contract.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RDPjttp-Ed-ak6NoX_4Aeg_1264973703")]
 [DisplayName("Additional Status")]
-public record AdditionalStatus2
+public partial record AdditionalStatus2
 {
     /// <summary>
     /// Reason advising the rejection of the instruction cancellation request.

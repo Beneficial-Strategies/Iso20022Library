@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hctRgYzREeutDIMngNCnkg")]
 [DisplayName("Environment")]
-public record Environment27
+public partial record Environment27
 {
     /// <summary>
     /// financial institution (or its agent) at which the accounts are held by the parties settling. This institution, acting on information provided by the parties, transfers the appropriate funds between the accounts.

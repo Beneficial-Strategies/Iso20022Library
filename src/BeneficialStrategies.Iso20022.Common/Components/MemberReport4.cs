@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i0a-VZlCEee-Zps0fZQaFQ")]
 [DisplayName("Member Report")]
-public record MemberReport4
+public partial record MemberReport4
 {
     /// <summary>
     /// Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.

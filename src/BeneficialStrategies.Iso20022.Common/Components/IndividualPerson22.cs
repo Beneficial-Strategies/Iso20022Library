@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_AXXaARRlEeOKWo1NF21OVw")]
 [DisplayName("Individual Person")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-11-10.")]
-public record IndividualPerson22
+public partial record IndividualPerson22
 {
     /// <summary>
     /// Term used to address a person.

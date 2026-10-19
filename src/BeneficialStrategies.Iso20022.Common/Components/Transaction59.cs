@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NRCCd5lPEee-Zps0fZQaFQ")]
 [DisplayName("Transaction")]
-public record Transaction59
+public partial record Transaction59
 {
     /// <summary>
     /// Destination of the payment (be it a member or a system or both).

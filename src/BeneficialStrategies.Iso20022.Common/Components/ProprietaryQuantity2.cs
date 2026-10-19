@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q0fWAtp-Ed-ak6NoX_4Aeg_-2068153748")]
 [DisplayName("Proprietary Quantity")]
-public record ProprietaryQuantity2
+public partial record ProprietaryQuantity2
 {
     /// <summary>
     /// Provides the proprietary quantity with a decimal number.

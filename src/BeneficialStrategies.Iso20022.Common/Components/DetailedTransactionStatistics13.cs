@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hUsuxcK4EeuFNp8LZAnorg")]
 [DisplayName("Detailed Transaction Statistics")]
-public record DetailedTransactionStatistics13
+public partial record DetailedTransactionStatistics13
 {
     /// <summary>
     /// Total number of reports sent or received.

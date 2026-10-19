@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bmqFUdwYEee0mvR9H3APRg")]
 [DisplayName("Underlying Statement Entry")]
-public record UnderlyingStatementEntry2
+public partial record UnderlyingStatementEntry2
 {
     /// <summary>
     /// Set of elements used to provide information on the original message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ui8bkQ3WEeW9YKj3GUmIEw")]
 [DisplayName("Exchange Rate Basis")]
-public record ExchangeRateBasis1
+public partial record ExchangeRateBasis1
 {
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange.

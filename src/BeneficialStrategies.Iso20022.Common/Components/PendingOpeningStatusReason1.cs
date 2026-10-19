@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nZh4IWCJEeabZtzjEVWYCQ")]
 [DisplayName("Pending Opening Status Reason")]
-public record PendingOpeningStatusReason1
+public partial record PendingOpeningStatusReason1
 {
     /// <summary>
     /// Reason for the pending account opening status.

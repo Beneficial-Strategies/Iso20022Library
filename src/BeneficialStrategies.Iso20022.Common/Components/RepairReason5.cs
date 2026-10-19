@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A5mW89okEeC60axPepSq7g_-1181049036")]
 [DisplayName("Repair Reason")]
-public record RepairReason5
+public partial record RepairReason5
 {
     /// <summary>
     /// Specifies the reason why the instruction is in repair.

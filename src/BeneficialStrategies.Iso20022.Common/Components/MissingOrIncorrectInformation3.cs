@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d3zpQUgqEeaGKYpLDboHPQ")]
 [DisplayName("Missing Or Incorrect Information")]
-public record MissingOrIncorrectInformation3
+public partial record MissingOrIncorrectInformation3
 {
     /// <summary>
     /// Indicates whether the request is related to an AML (Anti Money Laundering) investigation or not.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mPKjUJNeEeytjZlcgApf6A")]
 [DisplayName("Basket Query")]
-public record BasketQuery1
+public partial record BasketQuery1
 {
     /// <summary>
     /// Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.

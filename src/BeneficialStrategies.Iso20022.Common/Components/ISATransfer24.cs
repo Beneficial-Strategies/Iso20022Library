@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8u6kdSPvEeWQjryFgN2ITg")]
 [DisplayName("ISA Transfer")]
-public record ISATransfer24
+public partial record ISATransfer24
 {
     /// <summary>
     /// Information identifying the primary individual investor, for example, name, address, social security number and date of birth.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-jk90SzyEeOsiuMH68so7Q")]
 [DisplayName("Cancellation Reason")]
-public record CancellationReason7
+public partial record CancellationReason7
 {
     /// <summary>
     /// Specifies the reason why the instruction is cancelled.

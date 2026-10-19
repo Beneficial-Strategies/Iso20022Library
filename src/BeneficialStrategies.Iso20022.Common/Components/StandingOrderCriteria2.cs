@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i8ykRZlPEee-Zps0fZQaFQ")]
 [DisplayName("Standing Order Criteria")]
-public record StandingOrderCriteria2
+public partial record StandingOrderCriteria2
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

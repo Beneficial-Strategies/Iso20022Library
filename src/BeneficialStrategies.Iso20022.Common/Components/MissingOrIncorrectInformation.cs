@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_VFn0C9p-Ed-ak6NoX_4Aeg_-503881610")]
 [DisplayName("Missing Or Incorrect Information")]
-public record MissingOrIncorrectInformation
+public partial record MissingOrIncorrectInformation
 {
     /// <summary>
     /// Indicates the missing information.

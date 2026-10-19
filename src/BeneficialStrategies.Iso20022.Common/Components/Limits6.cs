@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q1IWJZlhEeeE1Ya-LgRsuQ")]
 [DisplayName("Limits")]
-public record Limits6
+public partial record Limits6
 {
     /// <summary>
     /// Report is given for a current risk management type limit.

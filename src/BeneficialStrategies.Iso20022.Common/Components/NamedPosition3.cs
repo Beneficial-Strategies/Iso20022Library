@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0nw0hcKwEeuM4pgP8Vixbg")]
 [DisplayName("Named Position")]
-public record NamedPosition3
+public partial record NamedPosition3
 {
     /// <summary>
     /// Reference date for statistics collection.

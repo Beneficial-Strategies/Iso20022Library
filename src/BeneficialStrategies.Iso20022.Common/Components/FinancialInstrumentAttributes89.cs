@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dxAZAMhjEeadgvwNGwK05w")]
 [DisplayName("Financial Instrument Attributes")]
-public record FinancialInstrumentAttributes89
+public partial record FinancialInstrumentAttributes89
 {
     /// <summary>
     /// Quantity of product defined in the contract.

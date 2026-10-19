@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7HpiwU4aEeiQHa-q1Uephw")]
 [DisplayName("Tax Efficient Product")]
-public record TaxEfficientProduct2
+public partial record TaxEfficientProduct2
 {
     /// <summary>
     /// Type of tax efficient product, for example, an individual savings account (ISA) in the UK.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kov6qZwsEeazcsnODTksnQ")]
 [DisplayName("Pending Status Reason")]
-public record PendingStatusReason15
+public partial record PendingStatusReason15
 {
     /// <summary>
     /// Specifies the reason why the instruction&apos;s processing is pending.

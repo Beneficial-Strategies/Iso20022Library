@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VvH_sR1CEey8XKHwKquEQw")]
 [DisplayName("Telecom Call Details")]
-public record TelecomCallDetails2
+public partial record TelecomCallDetails2
 {
     /// <summary>
     /// Contains call type values.

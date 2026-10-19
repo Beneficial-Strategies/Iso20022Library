@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EXWGMYaBEeuSbct6WWD-Ng")]
 [DisplayName("Fee Collection Initiation")]
-public record FeeCollectionInitiation2
+public partial record FeeCollectionInitiation2
 {
     /// <summary>
     /// Environment of the transaction.

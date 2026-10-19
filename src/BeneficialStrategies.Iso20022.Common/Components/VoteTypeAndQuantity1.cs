@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X_oUcPNBEeqRfth943bvEA")]
 [DisplayName("Vote Type And Quantity")]
-public record VoteTypeAndQuantity1
+public partial record VoteTypeAndQuantity1
 {
     /// <summary>
     /// Types of vote instruction allowed for resolutions to be voted on in general meeting.

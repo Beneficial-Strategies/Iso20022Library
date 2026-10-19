@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dVcQ04m7Eeipw6hHPgB4Sw")]
 [DisplayName("Calendar Data")]
-public record CalendarData1
+public partial record CalendarData1
 {
     /// <summary>
     /// Date for which the calendar information is provided.

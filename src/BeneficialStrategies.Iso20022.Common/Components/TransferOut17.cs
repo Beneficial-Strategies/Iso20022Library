@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Aa4f5SPwEeWQjryFgN2ITg")]
 [DisplayName("Transfer Out")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record TransferOut17
+public partial record TransferOut17
 {
     /// <summary>
     /// Requested date at which the instructing party places the transfer instruction.

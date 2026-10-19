@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KwT9gRIlEeyLzJfz3xPQNA")]
 [DisplayName("Rate Type And Lookback")]
-public record RateTypeAndLookback2
+public partial record RateTypeAndLookback2
 {
     /// <summary>
     /// Specifies the rate type as an index type or by its name.

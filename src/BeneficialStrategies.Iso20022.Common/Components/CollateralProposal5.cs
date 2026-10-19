@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zeoQX4FvEeWtPe6Crjmeug")]
 [DisplayName("Collateral Proposal")]
-public record CollateralProposal5
+public partial record CollateralProposal5
 {
     /// <summary>
     /// Provides details about the proposal for the variation margin.

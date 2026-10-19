@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KtVU4QACEeqefbt-QjTNnA")]
 [DisplayName("Trade Transaction Collateral Update")]
-public record TradeTransactionCollateralUpdate5
+public partial record TradeTransactionCollateralUpdate5
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

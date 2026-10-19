@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QbAfAtp-Ed-ak6NoX_4Aeg_-795428506")]
 [DisplayName("Amount Price Per Amount")]
-public record AmountPricePerAmount1
+public partial record AmountPricePerAmount1
 {
     /// <summary>
     /// Type of amount price.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_C44f9f_oEemm3skPVSMJQg")]
 [DisplayName("Reconciliation Result")]
-public record ReconciliationResult7
+public partial record ReconciliationResult7
 {
     /// <summary>
     /// First side of the contract that needs to be matched.

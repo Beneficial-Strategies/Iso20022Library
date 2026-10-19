@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_19BGYYdLEeuBS50MFjViNw")]
 [DisplayName("Transaction")]
-public record Transaction149
+public partial record Transaction149
 {
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.

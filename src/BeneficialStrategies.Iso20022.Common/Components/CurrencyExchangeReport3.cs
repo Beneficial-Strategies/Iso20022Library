@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_77JeRqMgEeCJ6YNENx4h-w_928566132")]
 [DisplayName("Currency Exchange Report")]
-public record CurrencyExchangeReport3
+public partial record CurrencyExchangeReport3
 {
     /// <summary>
     /// Source and target currencies for which information is request.

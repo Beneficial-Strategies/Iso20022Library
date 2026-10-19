@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice
     [IsoId("_Szn0AQgHEeSxsfb1OEDVsw")]
     [DisplayName("Intermediary Opening Balance")]
     [IsoXmlTag("IntrmyOpngBal")]
-    public record IntermediaryOpeningBalance : OpeningBalance3Choice_
+    public partial record IntermediaryOpeningBalance : OpeningBalance3Choice_
     {
         /// <summary>
         /// Quantity expressed as a number, eg, a number of shares.

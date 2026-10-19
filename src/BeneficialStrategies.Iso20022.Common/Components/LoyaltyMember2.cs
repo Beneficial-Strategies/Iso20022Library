@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P8wQccW2EeuhguwJmlgagQ")]
 [DisplayName("Loyalty Member")]
-public record LoyaltyMember2
+public partial record LoyaltyMember2
 {
     /// <summary>
     /// Name of the member of the loyalty programme.

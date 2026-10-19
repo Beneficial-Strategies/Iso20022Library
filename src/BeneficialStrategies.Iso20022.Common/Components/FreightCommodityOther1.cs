@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m-fxQbv5EeiLRYqS-r-R-A")]
 [DisplayName("Freight Commodity Other")]
-public record FreightCommodityOther1
+public partial record FreightCommodityOther1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_99Ei5nltEeG7BsjMvd1mEw_171384620")]
 [DisplayName("Percentage")]
-public record Percentage1
+public partial record Percentage1
 {
     /// <summary>
     /// Percentage of an amount.

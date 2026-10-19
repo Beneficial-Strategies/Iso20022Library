@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ptf-NZJKEeuAlLVx8pyt3w")]
 [DisplayName("Securities Audit Trail Report")]
-public record SecuritiesAuditTrailReport4
+public partial record SecuritiesAuditTrailReport4
 {
     /// <summary>
     /// Identifies the returned securities reference data or error information.

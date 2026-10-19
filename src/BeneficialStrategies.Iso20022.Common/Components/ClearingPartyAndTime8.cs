@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jg-jkZQPEeiok48Eh9lW9Q")]
 [DisplayName("Clearing Party And Time")]
-public record ClearingPartyAndTime8
+public partial record ClearingPartyAndTime8
 {
     /// <summary>
     /// In the case of a contract that has been cleared, the unique code for the CCP that has cleared the contract.

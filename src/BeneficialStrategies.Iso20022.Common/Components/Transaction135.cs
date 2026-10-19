@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_onnzYYv9EeuC5632vxUfGg")]
 [DisplayName("Transaction")]
-public record Transaction135
+public partial record Transaction135
 {
     /// <summary>
     /// Type of reconciliation.

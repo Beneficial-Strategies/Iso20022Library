@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K0tXcdOAEeSQ_-lmj1tzfw")]
 [DisplayName("Payment Date Range")]
-public record PaymentDateRange1
+public partial record PaymentDateRange1
 {
     /// <summary>
     /// Unique and unambiguous identification of the payment schedule.

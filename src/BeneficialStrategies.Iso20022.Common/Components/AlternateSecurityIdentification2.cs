@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SlSlRdp-Ed-ak6NoX_4Aeg_-1695096238")]
 [DisplayName("Alternate Security Identification")]
-public record AlternateSecurityIdentification2
+public partial record AlternateSecurityIdentification2
 {
     /// <summary>
     /// Identifies the type of financial instrument identifier type.

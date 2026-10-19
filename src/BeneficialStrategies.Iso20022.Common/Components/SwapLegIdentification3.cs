@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2EZuFZ3DEeuwmdq0KtnICg")]
 [DisplayName("Swap Leg Identification")]
-public record SwapLegIdentification3
+public partial record SwapLegIdentification3
 {
     /// <summary>
     /// Instrument received by the buyer.

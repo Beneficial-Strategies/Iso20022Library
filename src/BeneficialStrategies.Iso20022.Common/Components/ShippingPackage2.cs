@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l2yNwZF_EeukDPgU2BMkjQ")]
 [DisplayName("Shipping Package")]
-public record ShippingPackage2
+public partial record ShippingPackage2
 {
     /// <summary>
     /// Contains the identification number for the packages being shipped and is also used for pickup number.

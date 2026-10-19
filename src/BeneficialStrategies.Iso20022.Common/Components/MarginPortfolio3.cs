@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tm21gTICEe2fXedS_ucFOA")]
 [DisplayName("Margin Portfolio")]
-public record MarginPortfolio3
+public partial record MarginPortfolio3
 {
     /// <summary>
     /// Specifies the unique code assigned by the reporting counterparty to the portfolio if the collateral is posted on a portfolio basis.

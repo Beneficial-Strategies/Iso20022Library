@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SvDFAAEcEeCQm6a_G2yO_w_-1493991605")]
 [DisplayName("Trade Data")]
-public record TradeData6
+public partial record TradeData6
 {
     /// <summary>
     /// Reference to the identification of the notification for which the status is given, as assigned by the participant that submitted the foreign exchange or derivative trade.

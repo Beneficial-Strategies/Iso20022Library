@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XA2xrdp-Ed-ak6NoX_4Aeg_-661527747")]
 [DisplayName("Underlying Security")]
-public record UnderlyingSecurity2
+public partial record UnderlyingSecurity2
 {
     /// <summary>
     /// Identifies the financial instrument.

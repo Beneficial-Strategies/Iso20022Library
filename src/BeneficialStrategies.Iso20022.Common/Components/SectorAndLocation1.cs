@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RsV18JfdEeSfnc-VXAEapg")]
 [DisplayName("Sector And Location")]
-public record SectorAndLocation1
+public partial record SectorAndLocation1
 {
     /// <summary>
     /// Represents the counterparty institutional section (such as non-financial corporation, central bank.).

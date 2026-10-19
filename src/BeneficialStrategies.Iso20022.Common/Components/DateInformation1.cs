@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_98LLAnltEeG7BsjMvd1mEw_1203331503")]
 [DisplayName("Date Information")]
-public record DateInformation1
+public partial record DateInformation1
 {
     /// <summary>
     /// Date on which a recurrent date will commence.

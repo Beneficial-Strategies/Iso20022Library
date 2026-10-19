@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0bORUZNvEembCsVG-3f_AA")]
 [DisplayName("Pension")]
-public record Pension3
+public partial record Pension3
 {
     /// <summary>
     /// Identification of the pension policy, plan or scheme.

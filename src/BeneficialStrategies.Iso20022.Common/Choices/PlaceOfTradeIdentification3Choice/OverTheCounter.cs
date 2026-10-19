@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification3Choic
     /// </summary>
     [IsoId("_WNmIstp-Ed-ak6NoX_4Aeg_-1162943025")]
     [DisplayName("Over The Counter")]
-    public record OverTheCounter : PlaceOfTradeIdentification3Choice_
+    public partial record OverTheCounter : PlaceOfTradeIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

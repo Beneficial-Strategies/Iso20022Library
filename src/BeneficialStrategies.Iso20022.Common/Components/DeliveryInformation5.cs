@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IIQ5EcW5EeuhguwJmlgagQ")]
 [DisplayName("Delivery Information")]
-public record DeliveryInformation5
+public partial record DeliveryInformation5
 {
     /// <summary>
     /// Contact for delivery.

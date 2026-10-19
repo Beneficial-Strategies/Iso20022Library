@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QGNoJqlEeGSON8vddiWzQ_173630706")]
 [DisplayName("Billing Method")]
-public record BillingMethod3
+public partial record BillingMethod3
 {
     /// <summary>
     /// Equivalent amount to the service tax host amount but allows the sender to optionally express the value in the pricing currency.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MQiA0TOmEeqX8uoQQ3KffQ")]
 [DisplayName("Settlement Daily Failure Reason")]
-public record SettlementDailyFailureReason3
+public partial record SettlementDailyFailureReason3
 {
     /// <summary>
     /// Fails due to lack of securities.

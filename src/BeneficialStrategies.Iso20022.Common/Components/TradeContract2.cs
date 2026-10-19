@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J3au_W49EeiU9cctagi5ow")]
 [DisplayName("Trade Contract")]
-public record TradeContract2
+public partial record TradeContract2
 {
     /// <summary>
     /// Contract document referenced from this trade agreement.

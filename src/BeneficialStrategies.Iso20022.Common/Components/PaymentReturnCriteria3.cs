@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_733gwKMgEeCJ6YNENx4h-w_-1718054260")]
 [DisplayName("Payment Return Criteria")]
-public record PaymentReturnCriteria3
+public partial record PaymentReturnCriteria3
 {
     /// <summary>
     /// Indicates whether the original payment transaction message identification is requested.|Usage: this is the former TransactionReference.

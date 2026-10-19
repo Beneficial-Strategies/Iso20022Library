@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gI37VQAAEeqefbt-QjTNnA")]
 [DisplayName("Collaterised Data")]
-public record CollaterisedData8
+public partial record CollaterisedData8
 {
     /// <summary>
     /// Date on which the counterparties contractually agree the exchange of cash, securities, or commodities versus collateral for the opening leg (spot leg) of the securities financing transaction.

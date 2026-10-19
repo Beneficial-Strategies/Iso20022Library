@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xbmERZlcEeeE1Ya-LgRsuQ")]
 [DisplayName("System Availability And Events")]
-public record SystemAvailabilityAndEvents2
+public partial record SystemAvailabilityAndEvents2
 {
     /// <summary>
     /// Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.

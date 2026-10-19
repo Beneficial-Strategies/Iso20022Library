@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AljAYVhHEeOMYfRGLS0NbA")]
 [DisplayName("Proprietary Status And Reason")]
-public record ProprietaryStatusAndReason5
+public partial record ProprietaryStatusAndReason5
 {
     /// <summary>
     /// Proprietary identification of the status of the instruction.

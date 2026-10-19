@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Cj1gZMqEeuleeHpFMMhmQ")]
 [DisplayName("Transaction")]
-public record Transaction141
+public partial record Transaction141
 {
     /// <summary>
     /// Identification of the batch management transaction.

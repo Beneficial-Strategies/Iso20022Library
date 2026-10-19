@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2HVpgSJDEe2zWP9pqvmqdw")]
 [DisplayName("Schedule")]
-public record Schedule10
+public partial record Schedule10
 {
     /// <summary>
     /// Number of units of the financial instrument, that is, the nominal value.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mIue8TaqEeyjpIf0r_Ojqw")]
 [DisplayName("Account Statement Data")]
-public record AccountStatementData2
+public partial record AccountStatementData2
 {
     /// <summary>
     /// Date the statement is generated.

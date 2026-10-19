@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T2uWkU8SEe2PGo0mhYCh1g")]
 [DisplayName("Energy Commodity Electricity")]
-public record EnergyCommodityElectricity2
+public partial record EnergyCommodityElectricity2
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

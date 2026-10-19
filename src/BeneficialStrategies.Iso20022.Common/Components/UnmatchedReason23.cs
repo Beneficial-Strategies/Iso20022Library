@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_goeg_Qd4Ee2fOITqoTnSLQ")]
 [DisplayName("Unmatched Reason")]
-public record UnmatchedReason23
+public partial record UnmatchedReason23
 {
     /// <summary>
     /// Specifies the reason why the instruction has an unmatched status.

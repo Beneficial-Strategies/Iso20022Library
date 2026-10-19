@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_74nutaMgEeCJ6YNENx4h-w_-431996980")]
     [DisplayName("Balance Type 8 Choice")]
-    public abstract record BalanceType8Choice_ { }
+    public abstract partial record BalanceType8Choice_ { }
 }

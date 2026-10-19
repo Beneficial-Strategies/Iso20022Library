@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QP1JwNp-Ed-ak6NoX_4Aeg_-158801686")]
 [DisplayName("Organisation Identification")]
-public record OrganisationIdentification5
+public partial record OrganisationIdentification5
 {
     /// <summary>
     /// Name of the register of legal entities.

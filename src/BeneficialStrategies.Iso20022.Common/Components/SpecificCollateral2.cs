@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u1WsobcREeabfchHYoktpA")]
 [DisplayName("Specific Collateral")]
-public record SpecificCollateral2
+public partial record SpecificCollateral2
 {
     /// <summary>
     /// Identification of collateral placed as security for repo.

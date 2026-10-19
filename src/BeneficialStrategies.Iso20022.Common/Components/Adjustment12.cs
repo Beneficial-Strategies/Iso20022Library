@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MMRkATaqEeyjpIf0r_Ojqw")]
 [DisplayName("Adjustment")]
-public record Adjustment12
+public partial record Adjustment12
 {
     /// <summary>
     /// Contains the adjusted amount (for example, discounts).

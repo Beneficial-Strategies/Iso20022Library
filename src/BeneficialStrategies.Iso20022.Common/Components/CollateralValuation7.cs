@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_n1EQkaidEeWHO_l3hf2rlA")]
 [DisplayName("Collateral Valuation")]
-public record CollateralValuation7
+public partial record CollateralValuation7
 {
     /// <summary>
     /// Specifies whether the collateral is a pool collateral or not.

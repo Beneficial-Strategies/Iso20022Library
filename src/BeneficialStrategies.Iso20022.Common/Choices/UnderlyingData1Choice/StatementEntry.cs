@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice
     [IsoId("_CXmpaFRtEe23M4WgERMsYw")]
     [DisplayName("Statement Entry")]
     [IsoXmlTag("StmtNtry")]
-    public record StatementEntry : UnderlyingData1Choice_
+    public partial record StatementEntry : UnderlyingData1Choice_
     {
         /// <summary>
         /// Provides details of the account, for which the original statement was generated.

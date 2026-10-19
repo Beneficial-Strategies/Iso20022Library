@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UmCVAtp-Ed-ak6NoX_4Aeg_-442441347")]
 [DisplayName("Agreed Amount")]
-public record AgreedAmount1
+public partial record AgreedAmount1
 {
     /// <summary>
     /// Provides details about the agreed amount for the variation margin.

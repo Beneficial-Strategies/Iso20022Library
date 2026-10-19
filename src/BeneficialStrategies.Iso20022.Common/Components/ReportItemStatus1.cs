@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hEIC4b3REeO2FLWuu_JIqg")]
 [DisplayName("Report Item Status")]
-public record ReportItemStatus1
+public partial record ReportItemStatus1
 {
     /// <summary>
     /// Reason for the exception status.

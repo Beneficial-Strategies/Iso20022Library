@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0jmr9Tj3EeSz-s1QOUJaOg")]
 [DisplayName("Card Individual Transaction")]
-public record CardIndividualTransaction2
+public partial record CardIndividualTransaction2
 {
     /// <summary>
     /// Data related to an integrated circuit card application.

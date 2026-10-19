@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_slWAQSC3EeWJd9HF2tO7BA")]
 [DisplayName("Payment Card")]
-public record PaymentCard18
+public partial record PaymentCard18
 {
     /// <summary>
     /// Type of card, for example, credit card.

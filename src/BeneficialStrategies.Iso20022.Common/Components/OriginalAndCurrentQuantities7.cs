@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cfsEZZKQEeWHWpTQn1FFVg")]
 [DisplayName("Original And Current Quantities")]
-public record OriginalAndCurrentQuantities7
+public partial record OriginalAndCurrentQuantities7
 {
     /// <summary>
     /// Sign of the quantity of security.

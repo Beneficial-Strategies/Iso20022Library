@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError4Choice
     [IsoId("_jEyVkZlCEee-Zps0fZQaFQ")]
     [DisplayName("Member")]
     [IsoXmlTag("Mmb")]
-    public record Member : MemberReportOrError4Choice_
+    public partial record Member : MemberReportOrError4Choice_
     {
         /// <summary>
         /// Word by which something is called or known or the family name of a person.

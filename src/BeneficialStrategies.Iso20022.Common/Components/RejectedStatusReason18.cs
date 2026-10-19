@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GK018UGXEeWqy4niLuXETA")]
 [DisplayName("Rejected Status Reason")]
-public record RejectedStatusReason18
+public partial record RejectedStatusReason18
 {
     /// <summary>
     /// Specifies the reason why the instruction or instruction cancellation has been rejected.

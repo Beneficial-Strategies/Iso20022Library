@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o0L6kVosEe23K4GXSpBSeg")]
 [DisplayName("Margin Report Data")]
-public record MarginReportData7
+public partial record MarginReportData7
 {
     /// <summary>
     /// Date and time of submission of the report to the trade repository.

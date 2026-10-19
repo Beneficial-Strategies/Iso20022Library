@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A4QTItokEeC60axPepSq7g_582343091")]
 [DisplayName("Awaiting Cancellation Reason")]
-public record AwaitingCancellationReason1
+public partial record AwaitingCancellationReason1
 {
     /// <summary>
     /// Specifies the reason why the trade is wainting the cancellation.

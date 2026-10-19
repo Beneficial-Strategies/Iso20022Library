@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xpB0YYv7EeumSPwlS1PkxQ")]
 [DisplayName("Transaction")]
-public record Transaction134
+public partial record Transaction134
 {
     /// <summary>
     /// Type of network management service.

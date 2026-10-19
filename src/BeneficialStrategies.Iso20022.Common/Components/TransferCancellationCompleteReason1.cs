@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U0V2yNp-Ed-ak6NoX_4Aeg_-1275943610")]
 [DisplayName("Transfer Cancellation Complete Reason")]
-public record TransferCancellationCompleteReason1
+public partial record TransferCancellationCompleteReason1
 {
     /// <summary>
     /// Reason for a complete status in structured form.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UQ43QCYwEeW_ZNn8gbfY7Q")]
 [DisplayName("Cancelled Complete Reason")]
-public record CancelledCompleteReason1
+public partial record CancelledCompleteReason1
 {
     /// <summary>
     /// Reason for the cancelled complete status.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7_BRpaMgEeCJ6YNENx4h-w_873727815")]
 [DisplayName("From To Percentage Range")]
-public record FromToPercentageRange1
+public partial record FromToPercentageRange1
 {
     /// <summary>
     /// Lower boundary of a range of percentage rates.

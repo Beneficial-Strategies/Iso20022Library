@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wz3WGrKdEemux5trsZcCpw")]
 [DisplayName("Pending Status Reason")]
-public record PendingStatusReason16
+public partial record PendingStatusReason16
 {
     /// <summary>
     /// Reason for the pending status.

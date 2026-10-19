@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WIFWmdp-Ed-ak6NoX_4Aeg_-2114215062")]
 [DisplayName("Rejected Status")]
-public record RejectedStatus8
+public partial record RejectedStatus8
 {
     /// <summary>
     /// Reason for the rejected status.

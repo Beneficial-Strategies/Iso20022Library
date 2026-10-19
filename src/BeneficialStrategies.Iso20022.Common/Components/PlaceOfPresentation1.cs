@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_97RzI3ltEeG7BsjMvd1mEw_-1003914803")]
 [DisplayName("Place Of Presentation")]
-public record PlaceOfPresentation1
+public partial record PlaceOfPresentation1
 {
     /// <summary>
     /// Place of the presentation.

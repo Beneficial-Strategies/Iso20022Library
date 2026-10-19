@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6P9DtZqlEeGSON8vddiWzQ_-345491927")]
 [DisplayName("Billing Method")]
-public record BillingMethod2
+public partial record BillingMethod2
 {
     /// <summary>
     /// Amount of the original charge expressed in the host currency.

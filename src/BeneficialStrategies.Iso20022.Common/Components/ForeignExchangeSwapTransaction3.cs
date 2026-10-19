@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r9-RMcEUEea7jLfvGi1PDw")]
 [DisplayName("Foreign Exchange Swap Transaction")]
-public record ForeignExchangeSwapTransaction3
+public partial record ForeignExchangeSwapTransaction3
 {
     /// <summary>
     /// Defines the status of the reported transaction, that is details on whether the transaction is a new transaction, an amendment of a previously reported transaction, a cancellation of a previously reported transaction or a correction to a previously reported and rejected transaction.

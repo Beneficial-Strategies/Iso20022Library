@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SxIvtgEcEeCQm6a_G2yO_w_182276268")]
 [DisplayName("Key Transport")]
-public record KeyTransport1
+public partial record KeyTransport1
 {
     /// <summary>
     /// Version of the cryptographic key.

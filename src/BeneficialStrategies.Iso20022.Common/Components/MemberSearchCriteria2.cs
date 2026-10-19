@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8G7QcaMgEeCJ6YNENx4h-w_1746030860")]
 [DisplayName("Member Search Criteria")]
-public record MemberSearchCriteria2
+public partial record MemberSearchCriteria2
 {
     /// <summary>
     /// Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.

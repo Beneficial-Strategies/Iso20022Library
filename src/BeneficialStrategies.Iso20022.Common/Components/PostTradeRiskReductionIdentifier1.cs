@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LUHs4D1hEeyA3eIPELln4g")]
 [DisplayName("Post Trade Risk Reduction Identifier")]
-public record PostTradeRiskReductionIdentifier1
+public partial record PostTradeRiskReductionIdentifier1
 {
     /// <summary>
     /// Identification of the structurer of the post trade risk reduction identifier.

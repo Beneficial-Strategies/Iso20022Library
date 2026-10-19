@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FEPHAR1TEey8XKHwKquEQw")]
 [DisplayName("Fleet Data")]
-public record FleetData5
+public partial record FleetData5
 {
     /// <summary>
     /// It is designed to carry detail level fleet data and to enable issuers to supply more transaction information to their consumer and corporate clients pertaining to fleet transactions.

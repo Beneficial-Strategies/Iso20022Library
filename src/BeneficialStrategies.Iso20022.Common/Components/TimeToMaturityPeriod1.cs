@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vvHl4MVbEeiYpLQka876sg")]
 [DisplayName("Time To Maturity Period")]
-public record TimeToMaturityPeriod1
+public partial record TimeToMaturityPeriod1
 {
     /// <summary>
     /// Specifies the start of the maturity period.

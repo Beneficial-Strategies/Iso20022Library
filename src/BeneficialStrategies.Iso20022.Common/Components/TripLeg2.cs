@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k7Q5QZJGEeuuktRxxQZoNQ")]
 [DisplayName("Trip Leg")]
-public record TripLeg2
+public partial record TripLeg2
 {
     /// <summary>
     /// Identifies the specific occurrence of trip leg data.

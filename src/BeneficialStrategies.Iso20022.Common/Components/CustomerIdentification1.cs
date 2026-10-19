@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_cgxhY0yuEeGcV5yVhSZuNw")]
 [DisplayName("Customer Identification")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record CustomerIdentification1
+public partial record CustomerIdentification1
 {
     /// <summary>
     /// Identifies the customer for the investigation.

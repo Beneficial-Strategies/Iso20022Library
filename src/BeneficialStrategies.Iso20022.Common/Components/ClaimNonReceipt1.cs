@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xyjo8IjYEeeDW7_wB-eK_g")]
 [DisplayName("Claim Non Receipt")]
-public record ClaimNonReceipt1
+public partial record ClaimNonReceipt1
 {
     /// <summary>
     /// Specifies the date the original payment instruction was processed.

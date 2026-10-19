@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fFDdVdcZEeqRFcf2R4bPBw")]
 [DisplayName("Cash Account")]
-public record CashAccount42
+public partial record CashAccount42
 {
     /// <summary>
     /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.

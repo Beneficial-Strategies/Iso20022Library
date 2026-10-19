@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TK73gRrYEeOVR9VN6fAMUg")]
 [DisplayName("Report Line")]
-public record ReportLine6
+public partial record ReportLine6
 {
     /// <summary>
     /// Reference to the identification of the underlying commercial document.

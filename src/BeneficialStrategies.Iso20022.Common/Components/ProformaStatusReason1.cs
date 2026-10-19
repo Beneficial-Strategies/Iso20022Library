@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GeducUzDEeafiMTDrtSnyw")]
 [DisplayName("Proforma Status Reason")]
-public record ProformaStatusReason1
+public partial record ProformaStatusReason1
 {
     /// <summary>
     /// Reason for the proforma account status.

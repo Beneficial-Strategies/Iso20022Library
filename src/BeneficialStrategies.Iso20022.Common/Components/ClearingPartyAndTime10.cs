@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Bemz9-xYEemioJdkOVFBdw")]
 [DisplayName("Clearing Party And Time")]
-public record ClearingPartyAndTime10
+public partial record ClearingPartyAndTime10
 {
     /// <summary>
     /// Indicates that the contract is intended to be cleared.

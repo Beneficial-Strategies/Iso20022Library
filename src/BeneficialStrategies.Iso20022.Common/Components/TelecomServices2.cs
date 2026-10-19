@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vShsAR1DEey8XKHwKquEQw")]
 [DisplayName("Telecom Services")]
-public record TelecomServices2
+public partial record TelecomServices2
 {
     /// <summary>
     /// Telecom Services Summary component is designed to carry summary level telephony billing data and to enable issuers to supply more transaction information to their consumer and corporate clients pertaining to telecommunications services and related billing information.

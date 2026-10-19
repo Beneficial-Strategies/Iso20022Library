@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_we-icaH8EeuiuNcvKhXmNQ")]
 [DisplayName("Terminal")]
-public record Terminal5
+public partial record Terminal5
 {
     /// <summary>
     /// Identification of the terminal performing the transaction.

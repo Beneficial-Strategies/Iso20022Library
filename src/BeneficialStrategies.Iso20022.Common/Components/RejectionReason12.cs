@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0j0X4AlIEeGATtfOBToyew_274464054")]
 [DisplayName("Rejection Reason")]
-public record RejectionReason12
+public partial record RejectionReason12
 {
     /// <summary>
     /// Specifies the reason why the instruction/request has a rejected or repair status.

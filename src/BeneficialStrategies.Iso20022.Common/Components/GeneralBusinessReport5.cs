@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MP5s5ZlgEeeE1Ya-LgRsuQ")]
 [DisplayName("General Business Report")]
-public record GeneralBusinessReport5
+public partial record GeneralBusinessReport5
 {
     /// <summary>
     /// Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator.

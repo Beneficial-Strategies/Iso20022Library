@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UnOn1dp-Ed-ak6NoX_4Aeg_-1003583230")]
 [DisplayName("Margin")]
-public record Margin1
+public partial record Margin1
 {
     /// <summary>
     /// Elements used to calculate the collateral margin call for the variation margin.

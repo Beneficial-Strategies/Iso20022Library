@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4dfWIQFXEeaDfK-zDSyB6A")]
 [DisplayName("Trade Confirmation")]
-public record TradeConfirmation3
+public partial record TradeConfirmation3
 {
     /// <summary>
     /// Specifies whether the contract was confirmed electronically or non-electronically.

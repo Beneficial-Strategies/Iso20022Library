@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SiW0AcWmEeuhguwJmlgagQ")]
 [DisplayName("Lodging")]
-public record Lodging3
+public partial record Lodging3
 {
     /// <summary>
     /// Component provides summary information about lodging accommodations and related expenses for the cardholder. One occurrence of this component provides lodging accommodation reporting for a single lodging folio, such as a single stay at a lodging facility with one check-in and one check-out.

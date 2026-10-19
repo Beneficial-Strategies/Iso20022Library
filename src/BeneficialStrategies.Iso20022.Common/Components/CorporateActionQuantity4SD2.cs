@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o9JB5GCXEeK8P92abE6HIA")]
 [DisplayName("Corporate Action Quantity 4 SD")]
-public record CorporateActionQuantity4SD2
+public partial record CorporateActionQuantity4SD2
 {
     /// <summary>
     /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance.

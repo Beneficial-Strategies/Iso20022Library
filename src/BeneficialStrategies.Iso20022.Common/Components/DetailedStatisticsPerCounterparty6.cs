@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MYzuUVfdEeqZr5K1Woax-g")]
 [DisplayName("Detailed Statistics Per Counterparty")]
-public record DetailedStatisticsPerCounterparty6
+public partial record DetailedStatisticsPerCounterparty6
 {
     /// <summary>
     /// Reference period for statistics collection.

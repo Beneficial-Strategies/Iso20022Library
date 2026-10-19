@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError3Choice
     [IsoId("_i_MAQRbvEeOy-PlRuFSUzQ")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : StandingOrderOrError3Choice_
+    public partial record Report : StandingOrderOrError3Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.

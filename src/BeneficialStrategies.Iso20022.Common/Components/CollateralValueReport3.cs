@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-DiXdTpvEemk2e6qGBk8IQ")]
 [DisplayName("Collateral Value Report")]
-public record CollateralValueReport3
+public partial record CollateralValueReport3
 {
     /// <summary>
     /// Unique identification, as assigned by the account servicer, to unambiguously identify the account on which information is requested.

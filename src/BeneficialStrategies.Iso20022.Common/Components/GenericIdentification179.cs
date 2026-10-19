@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fe2HswxeEeuoAcnnpX2x_w")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification179
+public partial record GenericIdentification179
 {
     /// <summary>
     /// Identification of the lot, according to a data source scheme. Used to indicate which processing to apply to the corresponding market value amount.

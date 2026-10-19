@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P1GugFrgEeWN79Bl6BUd3g")]
 [DisplayName("Industrial Product Commodity Manufacturing")]
-public record IndustrialProductCommodityManufacturing1
+public partial record IndustrialProductCommodityManufacturing1
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

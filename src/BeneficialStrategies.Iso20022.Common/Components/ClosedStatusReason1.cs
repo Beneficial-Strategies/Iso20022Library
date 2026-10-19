@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d6JVwUzDEeafiMTDrtSnyw")]
 [DisplayName("Closed Status Reason")]
-public record ClosedStatusReason1
+public partial record ClosedStatusReason1
 {
     /// <summary>
     /// Reason for the closed account status.

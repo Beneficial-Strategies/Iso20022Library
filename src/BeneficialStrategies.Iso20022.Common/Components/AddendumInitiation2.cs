@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RtF34YdIEeuBS50MFjViNw")]
 [DisplayName("Addendum Initiation")]
-public record AddendumInitiation2
+public partial record AddendumInitiation2
 {
     /// <summary>
     /// Contains or describes the information pertaining to the actors interacting with the transaction.

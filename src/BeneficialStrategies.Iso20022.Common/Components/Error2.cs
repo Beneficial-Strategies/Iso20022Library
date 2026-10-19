@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rZTGkYgoEeu8-LhY4KPfWg")]
 [DisplayName("Error")]
-public record Error2
+public partial record Error2
 {
     /// <summary>
     /// Environment of the transaction.

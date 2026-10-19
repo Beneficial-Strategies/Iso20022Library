@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tw694R1TEey8XKHwKquEQw")]
 [DisplayName("Fleet Line Item")]
-public record FleetLineItem3
+public partial record FleetLineItem3
 {
     /// <summary>
     /// Indicates whether or not the requested product or service is allowed.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UFK5bW99EeKuY41pq1-dog")]
 [DisplayName("Franking SD")]
-public record FrankingSD1
+public partial record FrankingSD1
 {
     /// <summary>
     /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance.
