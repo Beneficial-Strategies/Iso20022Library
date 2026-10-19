@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DatePeriod2"/> per the ISO 20022 specification.
+/// Validates <see cref="IDatePeriod2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _lZP5MYaDEee8r9VKRbnJSg

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CollateralAccount4"/> per the ISO 20022 specification.
+/// Validates <see cref="ICollateralAccount4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CollateralAccount4Validator : AbstractValidator<ICollateralAccount4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CollateralAccount4"/>.
+    /// Initializes a new instance of the validator for <see cref="ICollateralAccount4"/>.
     /// </summary>
     public CollateralAccount4Validator()
     {

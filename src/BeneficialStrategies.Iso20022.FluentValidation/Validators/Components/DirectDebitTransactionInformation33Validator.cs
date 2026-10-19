@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DirectDebitTransactionInformation33"/> per the ISO 20022 specification.
+/// Validates <see cref="IDirectDebitTransactionInformation33"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _69BZlTEyEe6g-ffJsqGiSA

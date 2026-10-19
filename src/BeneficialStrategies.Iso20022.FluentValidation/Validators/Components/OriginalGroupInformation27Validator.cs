@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OriginalGroupInformation27"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalGroupInformation27"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6x8aIRdSEea6o_d8S96x5g

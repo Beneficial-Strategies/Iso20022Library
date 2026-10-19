@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="GroupHeader124"/> per the ISO 20022 specification.
+/// Validates <see cref="IGroupHeader124"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _5P03sTEyEe6g-ffJsqGiSA
@@ -38,7 +38,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>Authorisation</c>, <c>CreditorAgent</c>/<c>DebtorAgent</c>/
 /// <c>ForwardingAgent</c>, and <c>InitiatingParty</c> are each validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="BranchAndFinancialInstitutionIdentification8"/> validator instance is reused across
+/// <see cref="IBranchAndFinancialInstitutionIdentification8"/> validator instance is reused across
 /// all three agent fields — see the two constructors below.
 /// </remarks>
 public class GroupHeader124Validator : AbstractValidator<IGroupHeader124>

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ProprietaryData6"/> per the ISO 20022 specification.
+/// Validates <see cref="IProprietaryData6"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _1gW-cYKYEee7hrXqLO3yQg

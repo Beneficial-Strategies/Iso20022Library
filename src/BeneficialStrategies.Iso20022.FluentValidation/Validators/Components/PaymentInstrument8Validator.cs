@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PaymentInstrument8"/> per the ISO 20022 specification.
+/// Validates <see cref="IPaymentInstrument8"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class PaymentInstrument8Validator : AbstractValidator<IPaymentInstrument8>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="PaymentInstrument8"/>.
+    /// Initializes a new instance of the validator for <see cref="IPaymentInstrument8"/>.
     /// </summary>
     public PaymentInstrument8Validator()
     {

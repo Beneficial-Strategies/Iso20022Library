@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CaseForwardingNotification3"/> per the ISO 20022 specification.
+/// Validates <see cref="ICaseForwardingNotification3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _T-ZtQtp-Ed-ak6NoX_4Aeg_-1114775558

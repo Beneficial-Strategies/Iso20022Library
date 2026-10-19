@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="LoginResponse5"/> per the ISO 20022 specification.
+/// Validates <see cref="ILoginResponse5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class LoginResponse5Validator : AbstractValidator<ILoginResponse5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="LoginResponse5"/>.
+    /// Initializes a new instance of the validator for <see cref="ILoginResponse5"/>.
     /// </summary>
     public LoginResponse5Validator()
     {

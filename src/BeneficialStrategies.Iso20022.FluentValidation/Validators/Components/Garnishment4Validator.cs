@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Garnishment4"/> per the ISO 20022 specification.
+/// Validates <see cref="IGarnishment4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _v9i0ETEyEe6g-ffJsqGiSA
@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: <c>Garnishee</c>/<c>GarnishmentAdministrator</c> and <c>Type</c> are
 /// each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c>
-/// — the same <see cref="PartyIdentification272"/> validator instance is reused across
+/// — the same <see cref="IPartyIdentification272"/> validator instance is reused across
 /// <c>Garnishee</c> and <c>GarnishmentAdministrator</c> — see the two constructors below.
 /// </remarks>
 public class Garnishment4Validator : AbstractValidator<IGarnishment4>

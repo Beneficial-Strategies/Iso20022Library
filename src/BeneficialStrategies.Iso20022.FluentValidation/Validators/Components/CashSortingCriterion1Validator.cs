@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CashSortingCriterion1"/> per the ISO 20022 specification.
+/// Validates <see cref="ICashSortingCriterion1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Uw6IQtp-Ed-ak6NoX_4Aeg_1294908608
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CashSortingCriterion1Validator : AbstractValidator<ICashSortingCriterion1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CashSortingCriterion1"/>.
+    /// Initializes a new instance of the validator for <see cref="ICashSortingCriterion1"/>.
     /// </summary>
     public CashSortingCriterion1Validator()
     {

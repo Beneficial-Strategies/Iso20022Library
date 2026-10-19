@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ModificationScope35"/> per the ISO 20022 specification.
+/// Validates <see cref="IModificationScope35"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ModificationScope35Validator : AbstractValidator<IModificationScope35>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ModificationScope35"/>.
+    /// Initializes a new instance of the validator for <see cref="IModificationScope35"/>.
     /// </summary>
     public ModificationScope35Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CertificationRequest2"/> per the ISO 20022 specification.
+/// Validates <see cref="ICertificationRequest2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CertificationRequest2Validator : AbstractValidator<ICertificationRequest2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CertificationRequest2"/>.
+    /// Initializes a new instance of the validator for <see cref="ICertificationRequest2"/>.
     /// </summary>
     public CertificationRequest2Validator()
     {

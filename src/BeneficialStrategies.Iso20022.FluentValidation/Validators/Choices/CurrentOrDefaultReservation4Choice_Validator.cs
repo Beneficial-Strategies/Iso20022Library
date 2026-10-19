@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="CurrentOrDefaultReservation4Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ICurrentOrDefaultReservation4Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _5IwmYTEyEe6g-ffJsqGiSA
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Current or default reservation set by the member and managed by the transaction administrator.
 /// <list type="table">
-///   <item><term><see cref="Choices.CurrentOrDefaultReservation4Choice.Current"/></term><description>Value: ReservationIdentification4</description></item>
-///   <item><term><see cref="Choices.CurrentOrDefaultReservation4Choice.Default"/></term><description>Value: ReservationIdentification4</description></item>
+///   <item><term><see cref="Choices.CurrentOrDefaultReservation4Choice.ICurrent"/></term><description>Value: ReservationIdentification4</description></item>
+///   <item><term><see cref="Choices.CurrentOrDefaultReservation4Choice.IDefault"/></term><description>Value: ReservationIdentification4</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -31,8 +31,8 @@ public class CurrentOrDefaultReservation4Choice_Validator : AbstractValidator<IC
     /// this type constructing its own.
     /// </summary>
     /// <param name="reservationIdentificationValidator">
-    /// Validator for both <see cref="Choices.CurrentOrDefaultReservation4Choice.Current"/>'s and
-    /// <see cref="Choices.CurrentOrDefaultReservation4Choice.Default"/>'s <c>Value</c>
+    /// Validator for both <see cref="Choices.CurrentOrDefaultReservation4Choice.ICurrent"/>'s and
+    /// <see cref="Choices.CurrentOrDefaultReservation4Choice.IDefault"/>'s <c>Value</c>
     /// (ReservationIdentification4).
     /// </param>
     public CurrentOrDefaultReservation4Choice_Validator(

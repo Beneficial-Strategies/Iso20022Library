@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="CryptographicKey1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ICryptographicKey1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: __lk0wD6wEe-QZYT2pcGFZw
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of cryptographic key representations.
 /// <list type="table">
-///   <item><term><see cref="Choices.CryptographicKey1Choice.ILPV4"/></term><description>Value: HexBinaryText</description></item>
-///   <item><term><see cref="Choices.CryptographicKey1Choice.Signature"/></term><description>Value: SHA256SignatureText</description></item>
+///   <item><term><see cref="Choices.CryptographicKey1Choice.IILPV4"/></term><description>Value: HexBinaryText</description></item>
+///   <item><term><see cref="Choices.CryptographicKey1Choice.ISignature"/></term><description>Value: SHA256SignatureText</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (both wrap

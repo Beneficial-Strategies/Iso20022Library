@@ -55,6 +55,14 @@ jobs:
             -c Release \
             --output ./nupkg
 
+      # Needs only Primitives (not the message records), so it is packed with the other packages that depend on Primitives alone.
+      - name: Build and pack (BeneficialStrategies.Iso20022.FluentValidation.Payloads)
+        run: |
+          cd src
+          dotnet pack BeneficialStrategies.Iso20022.FluentValidation.Payloads \
+            -c Release \
+            --output ./nupkg
+
       # Trusted Publishing (OIDC), replacing the long-lived NUGET_API_KEY secret. The GitHub OIDC
       # token from this workflow run is exchanged for a NuGet API key valid for 1 hour, matched
       # against the policy registered on nuget.org for Beneficial-Strategies/Iso20022Library,

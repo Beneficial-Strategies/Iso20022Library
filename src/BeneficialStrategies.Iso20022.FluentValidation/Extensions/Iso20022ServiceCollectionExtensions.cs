@@ -71,13 +71,7 @@ public static class Iso20022ServiceCollectionExtensions
             filter is null ? null : scanResult => filter(scanResult.ValidatorType)
         );
 
-        return services.AddMessageValidatorAdapters(
-            lifetime,
-            AssemblyScanner
-                .FindValidatorsInAssemblyContaining<AssemblyMarker>()
-                .Where(result => filter is null || filter(result.ValidatorType))
-                .Select(result => result.InterfaceType.GetGenericArguments()[0])
-        );
+        return services;
     }
 
     /// <summary>
@@ -178,7 +172,7 @@ public static class Iso20022ServiceCollectionExtensions
                 result => (ValidatorType: result.ValidatorType, InterfaceType: result.InterfaceType)
             );
 
-        var roots = rootTypes.Select(MessageValidatorAdapters.ToInterface).ToList();
+        var roots = rootTypes.Select(ToMessageInterface).ToList();
         foreach (var root in roots)
         {
             if (!byValidatedType.ContainsKey(root))
@@ -215,8 +209,14 @@ public static class Iso20022ServiceCollectionExtensions
             services.Add(new ServiceDescriptor(interfaceType, validatorType, lifetime));
         }
 
-        return services.AddMessageValidatorAdapters(lifetime, reachable);
+        return services;
     }
+
+    /// <summary>A message record is accepted for a root as well as its interface; the validators are those of the interface.</summary>
+    private static Type ToMessageInterface(Type type) =>
+        type.IsInterface
+            ? type
+            : type.GetInterfaces().FirstOrDefault(i => i.Name == "I" + type.Name && typeof(IOuterRecord).IsAssignableFrom(i)) ?? type;
 
     /// <summary>
     /// Returns the validated model types (<c>T</c> in <c>IValidator&lt;T&gt;</c>) that
@@ -239,92 +239,6 @@ public static class Iso20022ServiceCollectionExtensions
         static bool IsValidatorParameter(ParameterInfo parameter) =>
             parameter.ParameterType.IsGenericType
             && parameter.ParameterType.GetGenericTypeDefinition() == typeof(IValidator<>);
-    }
-
-    /// <summary>
-    /// For every ISO 20022 message type that already has an <c>IValidator&lt;TMessage&gt;</c>
-    /// registered in <paramref name="services"/>, additionally registers
-    /// <c>IValidator&lt;XmlEnvelope&lt;TMessage&gt;&gt;</c> and
-    /// <c>IValidator&lt;JsonEnvelope&lt;TMessage&gt;&gt;</c> — so raw XML/JSON payloads can be
-    /// deserialized-then-validated through the exact same <c>IValidator&lt;T&gt;</c> surface as
-    /// any other validator in this project (see <see cref="XmlEnvelope{TMessage}"/> and
-    /// <see cref="JsonEnvelope{TMessage}"/>).
-    /// </summary>
-    /// <param name="services">
-    /// The service collection to register payload validators with. Call one of the
-    /// <c>AddIso20022Validators</c> overloads first — this method only wraps message types that
-    /// are already registered; it does not itself add any <c>IValidator&lt;TMessage&gt;</c>.
-    /// </param>
-    /// <param name="lifetime">
-    /// The DI lifetime to register payload validators with. Defaults to
-    /// <see cref="ServiceLifetime.Scoped"/>.
-    /// </param>
-    /// <returns><paramref name="services"/>, for chaining.</returns>
-    /// <remarks>
-    /// Use this — resolving <c>IValidator&lt;XmlEnvelope&lt;TMessage&gt;&gt;</c> directly — when
-    /// the target message type is known at the call site. When it isn't known until the payload
-    /// itself is inspected, use <see cref="AddIso20022PayloadValidationDispatcher"/> instead; that
-    /// path only needs the plain <c>IValidator&lt;TMessage&gt;</c> registrations and does not
-    /// depend on this method having been called.
-    /// </remarks>
-    public static IServiceCollection AddIso20022PayloadValidators(
-        this IServiceCollection services,
-        ServiceLifetime lifetime = ServiceLifetime.Scoped
-    )
-    {
-        var messageTypes = services
-            .Where(sd => sd.ServiceType.IsGenericType && sd.ServiceType.GetGenericTypeDefinition() == typeof(IValidator<>))
-            .Select(sd => sd.ServiceType.GetGenericArguments()[0])
-            .Where(t => t.IsClass && typeof(IOuterRecord).IsAssignableFrom(t))
-            .Distinct()
-            .ToList();
-
-        foreach (var messageType in messageTypes)
-        {
-            var xmlEnvelopeType = typeof(XmlEnvelope<>).MakeGenericType(messageType);
-            var xmlValidatorType = typeof(XmlEnvelopeValidator<>).MakeGenericType(messageType);
-            services.TryAdd(
-                new ServiceDescriptor(typeof(IValidator<>).MakeGenericType(xmlEnvelopeType), xmlValidatorType, lifetime)
-            );
-
-            var jsonEnvelopeType = typeof(JsonEnvelope<>).MakeGenericType(messageType);
-            var jsonValidatorType = typeof(JsonEnvelopeValidator<>).MakeGenericType(messageType);
-            services.TryAdd(
-                new ServiceDescriptor(typeof(IValidator<>).MakeGenericType(jsonEnvelopeType), jsonValidatorType, lifetime)
-            );
-        }
-
-        return services;
-    }
-
-    /// <summary>
-    /// Registers <see cref="IIso20022PayloadValidationDispatcher"/>, for validating raw XML/JSON
-    /// payloads whose message type isn't known until the payload (XML) or an out-of-band hint
-    /// (JSON) is inspected — see that interface's remarks.
-    /// </summary>
-    /// <param name="services">
-    /// The service collection to register the dispatcher with. Call one of the
-    /// <c>AddIso20022Validators</c> overloads first so the dispatcher has message validators to
-    /// resolve at runtime; it does not require <see cref="AddIso20022PayloadValidators"/>.
-    /// </param>
-    /// <param name="lifetime">
-    /// The DI lifetime to register the dispatcher with. Defaults to
-    /// <see cref="ServiceLifetime.Scoped"/>.
-    /// </param>
-    /// <returns><paramref name="services"/>, for chaining.</returns>
-    public static IServiceCollection AddIso20022PayloadValidationDispatcher(
-        this IServiceCollection services,
-        ServiceLifetime lifetime = ServiceLifetime.Scoped
-    )
-    {
-        services.TryAdd(
-            new ServiceDescriptor(
-                typeof(IIso20022PayloadValidationDispatcher),
-                typeof(Iso20022PayloadValidationDispatcher),
-                lifetime
-            )
-        );
-        return services;
     }
 
     /// <summary>

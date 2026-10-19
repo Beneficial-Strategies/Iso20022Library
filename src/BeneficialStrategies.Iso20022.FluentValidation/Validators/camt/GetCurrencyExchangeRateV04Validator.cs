@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="GetCurrencyExchangeRateV04"/> (camt.016.001.04) per the ISO 20022
+/// Validates <see cref="IGetCurrencyExchangeRateV04"/> (camt.016.001.04) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

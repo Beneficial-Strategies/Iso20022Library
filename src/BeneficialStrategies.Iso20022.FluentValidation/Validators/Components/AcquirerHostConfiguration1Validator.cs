@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AcquirerHostConfiguration1"/> per the ISO 20022 specification.
+/// Validates <see cref="IAcquirerHostConfiguration1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AcquirerHostConfiguration1Validator : AbstractValidator<IAcquirerHostConfiguration1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AcquirerHostConfiguration1"/>.
+    /// Initializes a new instance of the validator for <see cref="IAcquirerHostConfiguration1"/>.
     /// </summary>
     public AcquirerHostConfiguration1Validator()
     {

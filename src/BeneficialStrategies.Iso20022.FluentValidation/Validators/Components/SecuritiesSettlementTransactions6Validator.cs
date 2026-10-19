@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SecuritiesSettlementTransactions6"/> per the ISO 20022 specification.
+/// Validates <see cref="ISecuritiesSettlementTransactions6"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class SecuritiesSettlementTransactions6Validator : AbstractValidator<ISecuritiesSettlementTransactions6>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="SecuritiesSettlementTransactions6"/>.
+    /// Initializes a new instance of the validator for <see cref="ISecuritiesSettlementTransactions6"/>.
     /// </summary>
     public SecuritiesSettlementTransactions6Validator()
     {

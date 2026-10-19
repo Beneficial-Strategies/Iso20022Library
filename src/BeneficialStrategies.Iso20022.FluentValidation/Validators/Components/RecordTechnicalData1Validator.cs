@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RecordTechnicalData1"/> per the ISO 20022 specification.
+/// Validates <see cref="IRecordTechnicalData1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class RecordTechnicalData1Validator : AbstractValidator<IRecordTechnicalData1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="RecordTechnicalData1"/>.
+    /// Initializes a new instance of the validator for <see cref="IRecordTechnicalData1"/>.
     /// </summary>
     public RecordTechnicalData1Validator()
     {

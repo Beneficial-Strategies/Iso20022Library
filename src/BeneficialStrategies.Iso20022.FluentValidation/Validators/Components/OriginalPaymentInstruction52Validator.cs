@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OriginalPaymentInstruction52"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalPaymentInstruction52"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: bf9235eb-bfaf-490c-99bb-dbbbce3ca4c3

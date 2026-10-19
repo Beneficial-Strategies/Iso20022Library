@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="GenericOrganisationIdentification3"/> per the ISO 20022 specification.
+/// Validates <see cref="IGenericOrganisationIdentification3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _bM2KRzFIEe651u5xu3f5iw

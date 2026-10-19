@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="NetworkParameters7"/> per the ISO 20022 specification.
+/// Validates <see cref="INetworkParameters7"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class NetworkParameters7Validator : AbstractValidator<INetworkParameters7>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="NetworkParameters7"/>.
+    /// Initializes a new instance of the validator for <see cref="INetworkParameters7"/>.
     /// </summary>
     public NetworkParameters7Validator()
     {

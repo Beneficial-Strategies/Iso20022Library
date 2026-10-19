@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SearchOutputOrder1"/> per the ISO 20022 specification.
+/// Validates <see cref="ISearchOutputOrder1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class SearchOutputOrder1Validator : AbstractValidator<ISearchOutputOrder1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="SearchOutputOrder1"/>.
+    /// Initializes a new instance of the validator for <see cref="ISearchOutputOrder1"/>.
     /// </summary>
     public SearchOutputOrder1Validator()
     {

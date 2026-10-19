@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="IntraPositionPending11"/> per the ISO 20022 specification.
+/// Validates <see cref="IIntraPositionPending11"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class IntraPositionPending11Validator : AbstractValidator<IIntraPositionPending11>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="IntraPositionPending11"/>.
+    /// Initializes a new instance of the validator for <see cref="IIntraPositionPending11"/>.
     /// </summary>
     public IntraPositionPending11Validator()
     {

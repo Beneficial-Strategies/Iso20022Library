@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RedemptionBulkExecution5"/> per the ISO 20022 specification.
+/// Validates <see cref="IRedemptionBulkExecution5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class RedemptionBulkExecution5Validator : AbstractValidator<IRedemptionBulkExecution5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="RedemptionBulkExecution5"/>.
+    /// Initializes a new instance of the validator for <see cref="IRedemptionBulkExecution5"/>.
     /// </summary>
     public RedemptionBulkExecution5Validator()
     {

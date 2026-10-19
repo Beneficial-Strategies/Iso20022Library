@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ReferredMandateDocument2"/> per the ISO 20022 specification.
+/// Validates <see cref="IReferredMandateDocument2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _O661sTE0Ee62xuUQ2zyZww

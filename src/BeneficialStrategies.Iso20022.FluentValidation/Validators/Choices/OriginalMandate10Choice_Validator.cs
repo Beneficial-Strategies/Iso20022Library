@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="OriginalMandate10Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalMandate10Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _yNcaETEyEe6g-ffJsqGiSA
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the mandate that is being accepted.
 /// <list type="table">
-///   <item><term><see cref="Choices.OriginalMandate10Choice.OriginalMandateIdentification"/></term><description>Unique identification, as assigned by the responsible party or agent, to unambiguously identify the original mandate — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.OriginalMandate10Choice.OriginalMandate"/></term><description>Provides the original mandate data — Value: Mandate20</description></item>
+///   <item><term><see cref="Choices.OriginalMandate10Choice.IOriginalMandateIdentification"/></term><description>Unique identification, as assigned by the responsible party or agent, to unambiguously identify the original mandate — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.OriginalMandate10Choice.IOriginalMandate"/></term><description>Provides the original mandate data — Value: Mandate20</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -30,7 +30,7 @@ public class OriginalMandate10Choice_Validator : AbstractValidator<IOriginalMand
     /// — instead of this type constructing its own.
     /// </summary>
     /// <param name="originalMandateValueValidator">
-    /// Validator for <see cref="Choices.OriginalMandate10Choice.OriginalMandate"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.OriginalMandate10Choice.IOriginalMandate"/>'s <c>Value</c>
     /// (Mandate20).
     /// </param>
     public OriginalMandate10Choice_Validator(IValidator<IMandate20> originalMandateValueValidator)

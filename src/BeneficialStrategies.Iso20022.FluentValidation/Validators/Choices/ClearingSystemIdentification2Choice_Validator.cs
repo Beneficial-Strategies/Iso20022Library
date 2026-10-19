@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ClearingSystemIdentification2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IClearingSystemIdentification2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _TMoSENp-Ed-ak6NoX_4Aeg_-1410917193
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of a clearing system identifier.
 /// <list type="table">
-///   <item><term><see cref="Choices.ClearingSystemIdentification2Choice.Code"/></term><description>Identification of a clearing system, in a coded form as published in an external list — Value: ExternalClearingSystemIdentification1Code</description></item>
-///   <item><term><see cref="Choices.ClearingSystemIdentification2Choice.Proprietary"/></term><description>Identification code for a clearing system not yet identified in the external list — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification2Choice.ICode"/></term><description>Identification of a clearing system, in a coded form as published in an external list — Value: ExternalClearingSystemIdentification1Code</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification2Choice.IProprietary"/></term><description>Identification code for a clearing system not yet identified in the external list — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (an <c>IIsoExternalCode</c>

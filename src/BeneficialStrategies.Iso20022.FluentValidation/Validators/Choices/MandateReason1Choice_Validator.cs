@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="MandateReason1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateReason1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _TOt8xdp-Ed-ak6NoX_4Aeg_-162041513
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the reason for the request or status of a mandate.
 /// <list type="table">
-///   <item><term><see cref="Choices.MandateReason1Choice.Code"/></term><description>Value: ExternalMandateReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.MandateReason1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.MandateReason1Choice.ICode"/></term><description>Value: ExternalMandateReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.MandateReason1Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="NotificationOfCaseAssignmentV06"/> (camt.030.001.06) per the ISO 20022
+/// Validates <see cref="INotificationOfCaseAssignmentV06"/> (camt.030.001.06) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AmendmentInformationDetails15"/> per the ISO 20022 specification.
+/// Validates <see cref="IAmendmentInformationDetails15"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _wL-4oTEyEe6g-ffJsqGiSA
@@ -31,10 +31,10 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: every building-block field above is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="BranchAndFinancialInstitutionIdentification8"/> validator instance is reused across
+/// <see cref="IBranchAndFinancialInstitutionIdentification8"/> validator instance is reused across
 /// <c>OriginalCreditorAgent</c> and <c>OriginalDebtorAgent</c>, the same
-/// <see cref="CashAccount40"/> validator instance across all three account fields, and the same
-/// <see cref="PartyIdentification272"/> validator instance across
+/// <see cref="ICashAccount40"/> validator instance across all three account fields, and the same
+/// <see cref="IPartyIdentification272"/> validator instance across
 /// <c>OriginalCreditorSchemeIdentification</c> and <c>OriginalDebtor</c> — see the two
 /// constructors below.
 /// </remarks>

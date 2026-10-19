@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ReturnReason5Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IReturnReason5Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _TP6Pkdp-Ed-ak6NoX_4Aeg_-1676326037

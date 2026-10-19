@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PEPISATransfer11"/> per the ISO 20022 specification.
+/// Validates <see cref="IPEPISATransfer11"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _XE7zcfpfEeCLMa5EIHtDrg
@@ -81,7 +81,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class PEPISATransfer11Validator : AbstractValidator<IPEPISATransfer11>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="PEPISATransfer11"/>.
+    /// Initializes a new instance of the validator for <see cref="IPEPISATransfer11"/>.
     /// </summary>
     public PEPISATransfer11Validator()
     {

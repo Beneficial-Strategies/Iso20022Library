@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OriginalMessageInformation1"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalMessageInformation1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _PgJZVdp-Ed-ak6NoX_4Aeg_1129957204
@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class OriginalMessageInformation1Validator : AbstractValidator<IOriginalMessageInformation1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="OriginalMessageInformation1"/>.
+    /// Initializes a new instance of the validator for <see cref="IOriginalMessageInformation1"/>.
     /// </summary>
     public OriginalMessageInformation1Validator()
     {

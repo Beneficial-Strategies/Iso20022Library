@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="GarnishmentType1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IGarnishmentType1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _k8MIkYnnEeOORMXOfBk1Bw
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the type of garnishment.
 /// <list type="table">
-///   <item><term><see cref="Choices.GarnishmentType1Choice.Code"/></term><description>Value: ExternalGarnishmentType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.GarnishmentType1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.GarnishmentType1Choice.ICode"/></term><description>Value: ExternalGarnishmentType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.GarnishmentType1Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

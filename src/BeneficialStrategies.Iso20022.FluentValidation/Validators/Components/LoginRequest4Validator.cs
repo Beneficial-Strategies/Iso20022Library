@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="LoginRequest4"/> per the ISO 20022 specification.
+/// Validates <see cref="ILoginRequest4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class LoginRequest4Validator : AbstractValidator<ILoginRequest4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="LoginRequest4"/>.
+    /// Initializes a new instance of the validator for <see cref="ILoginRequest4"/>.
     /// </summary>
     public LoginRequest4Validator()
     {

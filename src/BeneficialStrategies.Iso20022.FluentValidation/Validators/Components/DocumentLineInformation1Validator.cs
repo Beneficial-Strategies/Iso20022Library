@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DocumentLineInformation1"/> per the ISO 20022 specification.
+/// Validates <see cref="IDocumentLineInformation1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Cy5dt6JpEeKmspP9k_hIRQ
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DocumentLineInformation1Validator : AbstractValidator<IDocumentLineInformation1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DocumentLineInformation1"/>.
+    /// Initializes a new instance of the validator for <see cref="IDocumentLineInformation1"/>.
     /// </summary>
     public DocumentLineInformation1Validator()
     {

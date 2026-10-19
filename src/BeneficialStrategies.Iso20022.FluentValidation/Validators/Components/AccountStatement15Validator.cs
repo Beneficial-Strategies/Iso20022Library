@@ -6,7 +6,7 @@ using SeqRange1 = BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AccountStatement15"/> per the ISO 20022 specification.
+/// Validates <see cref="IAccountStatement15"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: f2d5db70-d297-4049-9ae1-97fe2c32f5ef
@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AccountStatement15Validator : AbstractValidator<IAccountStatement15>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AccountStatement15"/>.
+    /// Initializes a new instance of the validator for <see cref="IAccountStatement15"/>.
     /// </summary>
     public AccountStatement15Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MaintenanceDelegationRequest9"/> per the ISO 20022 specification.
+/// Validates <see cref="IMaintenanceDelegationRequest9"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class MaintenanceDelegationRequest9Validator : AbstractValidator<IMaintenanceDelegationRequest9>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="MaintenanceDelegationRequest9"/>.
+    /// Initializes a new instance of the validator for <see cref="IMaintenanceDelegationRequest9"/>.
     /// </summary>
     public MaintenanceDelegationRequest9Validator()
     {

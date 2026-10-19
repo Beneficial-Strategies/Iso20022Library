@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="CreateLimitV02"/> (camt.101.001.02) per the ISO 20022 specification.
+/// Validates <see cref="ICreateLimitV02"/> (camt.101.001.02) per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _R3GHiTEZEe6kQ-WGAhcVPQ

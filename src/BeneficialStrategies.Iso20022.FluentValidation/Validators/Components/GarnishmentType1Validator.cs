@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="GarnishmentType1"/> per the ISO 20022 specification.
+/// Validates <see cref="IGarnishmentType1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _LLLooYnnEeOORMXOfBk1Bw

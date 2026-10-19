@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="MandateCancellationRequestV08"/> (pain.011.001.08) per the ISO 20022
+/// Validates <see cref="IMandateCancellationRequestV08"/> (pain.011.001.08) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

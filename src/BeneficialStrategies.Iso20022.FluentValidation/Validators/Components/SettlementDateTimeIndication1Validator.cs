@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SettlementDateTimeIndication1"/> per the ISO 20022 specification.
+/// Validates <see cref="ISettlementDateTimeIndication1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _QIYeB9p-Ed-ak6NoX_4Aeg_-498720410

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PaymentInstruction48"/> per the ISO 20022 specification.
+/// Validates <see cref="IPaymentInstruction48"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 41f45edb-b794-450d-b6d0-63ff93e72ea6
@@ -35,10 +35,10 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: every optional/required building block above is validated by an
 /// injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="PartyIdentification272"/> validator instance is reused across <c>Debtor</c> and
-/// <c>UltimateDebtor</c>, the same <see cref="CashAccount40"/> validator instance across
+/// <see cref="IPartyIdentification272"/> validator instance is reused across <c>Debtor</c> and
+/// <c>UltimateDebtor</c>, the same <see cref="ICashAccount40"/> validator instance across
 /// <c>DebtorAccount</c> and <c>DebtorAgentAccount</c>, and the same
-/// <see cref="DateAndDateTime2Choice_"/> validator instance across <c>RequestedExecutionDate</c>
+/// <see cref="IDateAndDateTime2Choice"/> validator instance across <c>RequestedExecutionDate</c>
 /// and <c>ExpiryDate</c> — see the two constructors below.
 ///
 /// Known test-coverage gap (2026-08-21): the <c>CreditTransferTransaction</c> minimum-count rule

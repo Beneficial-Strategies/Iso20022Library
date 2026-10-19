@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="LocalInstrument2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ILocalInstrument2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _TF7NItp-Ed-ak6NoX_4Aeg_365018897
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Set of elements that further identifies the type of local instruments being requested by the initiating party.
 /// <list type="table">
-///   <item><term><see cref="Choices.LocalInstrument2Choice.Code"/></term><description>Specifies the local instrument, as published in an external local instrument code list — Value: ExternalLocalInstrument1Code</description></item>
-///   <item><term><see cref="Choices.LocalInstrument2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.LocalInstrument2Choice.ICode"/></term><description>Specifies the local instrument, as published in an external local instrument code list — Value: ExternalLocalInstrument1Code</description></item>
+///   <item><term><see cref="Choices.LocalInstrument2Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="CustomerPaymentStatusReportV15"/> per the ISO 20022 specification.
+/// Validates <see cref="ICustomerPaymentStatusReportV15"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: pain.002.001.15 (0a3b2906-aae5-4c8c-b5cb-4ce211d29911), Registered.
@@ -65,7 +65,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 ///       additional information about a transaction — the SupplementaryData element at
 ///       transaction level should be used for that purpose instead. Not independently
 ///       enforceable by this library — no structural signal distinguishes message-level-scoped
-///       content from transaction-scoped content inside a <see cref="SupplementaryData1"/>
+///       content from transaction-scoped content inside a <see cref="ISupplementaryData1"/>
 ///       instance at the C# model level.
 ///     </description>
 ///   </item>

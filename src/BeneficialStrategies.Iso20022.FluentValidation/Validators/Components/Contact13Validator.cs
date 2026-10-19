@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Contact13"/> per the ISO 20022 specification.
+/// Validates <see cref="IContact13"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _YinuxzE_Ee62xuUQ2zyZww

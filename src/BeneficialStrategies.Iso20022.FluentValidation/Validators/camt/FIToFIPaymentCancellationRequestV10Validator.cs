@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="FIToFIPaymentCancellationRequestV10"/> (camt.056.001.10)
+/// Validates <see cref="IFIToFIPaymentCancellationRequestV10"/> (camt.056.001.10)
 /// per the ISO 20022 specification.
 /// </summary>
 /// <remarks>

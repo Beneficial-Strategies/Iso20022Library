@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="BranchData5"/> per the ISO 20022 specification.
+/// Validates <see cref="IBranchData5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _v0bUQTEyEe6g-ffJsqGiSA

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DetailedStatisticsPerCounterparty19"/> per the ISO 20022 specification.
+/// Validates <see cref="IDetailedStatisticsPerCounterparty19"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DetailedStatisticsPerCounterparty19Validator : AbstractValidator<IDetailedStatisticsPerCounterparty19>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DetailedStatisticsPerCounterparty19"/>.
+    /// Initializes a new instance of the validator for <see cref="IDetailedStatisticsPerCounterparty19"/>.
     /// </summary>
     public DetailedStatisticsPerCounterparty19Validator()
     {

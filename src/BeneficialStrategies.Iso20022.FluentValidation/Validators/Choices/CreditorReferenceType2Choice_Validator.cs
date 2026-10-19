@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="CreditorReferenceType2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ICreditorReferenceType2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _7zR6pTEsEe6GxLzpkVnWYg
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the type of document referred by the creditor.
 /// <list type="table">
-///   <item><term><see cref="Choices.CreditorReferenceType2Choice.Code"/></term><description>Value: ExternalCreditorReferenceType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.CreditorReferenceType2Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CreditorReferenceType2Choice.ICode"/></term><description>Value: ExternalCreditorReferenceType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CreditorReferenceType2Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

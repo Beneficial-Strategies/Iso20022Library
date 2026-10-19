@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OriginalTransactionReference45"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalTransactionReference45"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 4e387edc-deca-49ee-beb0-bf53f204c1d5

@@ -100,29 +100,4 @@ public class ValidatorsOnInterfacesTests
 
         Assert.Empty(onRecords);
     }
-
-    [Fact]
-    public void EveryMessageValidator_IsAlsoResolvableForTheMessageRecord()
-    {
-        var services = new ServiceCollection();
-        services.AddIso20022Validators();
-        var messageInterfaces = services
-            .Select(d => d.ServiceType)
-            .Where(t => t.IsGenericType && !t.ContainsGenericParameters && t.GetGenericTypeDefinition() == typeof(IValidator<>))
-            .Select(t => t.GetGenericArguments()[0])
-            .Where(t => t.IsInterface && typeof(IOuterRecord).IsAssignableFrom(t))
-            .ToList();
-        Assert.NotEmpty(messageInterfaces);
-
-        var records = typeof(Iso20022XmlSerializer).Assembly.GetTypes()
-            .Where(t => t is { IsClass: true, IsAbstract: false } && typeof(IOuterRecord).IsAssignableFrom(t))
-            .ToList();
-
-        using var provider = services.BuildServiceProvider();
-        foreach (var iface in messageInterfaces)
-        {
-            var record = records.Single(r => r.Name == iface.Name[1..] && iface.IsAssignableFrom(r));
-            Assert.NotNull(provider.GetService(typeof(IValidator<>).MakeGenericType(record)));
-        }
-    }
 }

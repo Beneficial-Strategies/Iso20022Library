@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PostalAddress27"/> per the ISO 20022 specification.
+/// Validates <see cref="IPostalAddress27"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _vvaRYTEyEe6g-ffJsqGiSA

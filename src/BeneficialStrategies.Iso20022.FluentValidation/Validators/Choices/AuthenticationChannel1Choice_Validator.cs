@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="AuthenticationChannel1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IAuthenticationChannel1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _U4Y945dgEea1K6JAcAwoVg
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of format for an authentication channel.
 /// <list type="table">
-///   <item><term><see cref="Choices.AuthenticationChannel1Choice.Code"/></term><description>Specifies the authentication channel, in a coded form as published in an external list — Value: ExternalAuthenticationChannel1Code</description></item>
-///   <item><term><see cref="Choices.AuthenticationChannel1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.AuthenticationChannel1Choice.ICode"/></term><description>Specifies the authentication channel, in a coded form as published in an external list — Value: ExternalAuthenticationChannel1Code</description></item>
+///   <item><term><see cref="Choices.AuthenticationChannel1Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

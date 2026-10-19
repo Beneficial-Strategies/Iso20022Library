@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="IntraBalancePending5"/> per the ISO 20022 specification.
+/// Validates <see cref="IIntraBalancePending5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Ys-BmzneEem7JZMuWtwtsg
@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class IntraBalancePending5Validator : AbstractValidator<IIntraBalancePending5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="IntraBalancePending5"/>.
+    /// Initializes a new instance of the validator for <see cref="IIntraBalancePending5"/>.
     /// </summary>
     public IntraBalancePending5Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CreditorReferenceType3"/> per the ISO 20022 specification.
+/// Validates <see cref="ICreditorReferenceType3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _7xH-hTEsEe6GxLzpkVnWYg

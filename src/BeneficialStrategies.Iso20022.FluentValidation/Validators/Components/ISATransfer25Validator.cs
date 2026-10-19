@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ISATransfer25"/> per the ISO 20022 specification.
+/// Validates <see cref="IISATransfer25"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ISATransfer25Validator : AbstractValidator<IISATransfer25>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ISATransfer25"/>.
+    /// Initializes a new instance of the validator for <see cref="IISATransfer25"/>.
     /// </summary>
     public ISATransfer25Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PaymentTypeInformation29"/> per the ISO 20022 specification.
+/// Validates <see cref="IPaymentTypeInformation29"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _gXVWIe10Eei2O5Op8j5zpA

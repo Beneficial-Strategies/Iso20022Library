@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PartyAndSignature4"/> per the ISO 20022 specification.
+/// Validates <see cref="IPartyAndSignature4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _w1V-sTEyEe6g-ffJsqGiSA
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 ///
-/// Known test-coverage gap (2026-08-21): <see cref="PartyIdentification272"/> has no required
+/// Known test-coverage gap (2026-08-21): <see cref="IPartyIdentification272"/> has no required
 /// fields, and the test suite's happy-path case supplies only a <c>Name</c> — nothing that would
 /// trigger any of <see cref="PartyIdentification272Validator"/>'s conditional rules. That test
 /// therefore produces zero validation errors whether or not the

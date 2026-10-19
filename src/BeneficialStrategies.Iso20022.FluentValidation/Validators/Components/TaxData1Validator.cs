@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TaxData1"/> per the ISO 20022 specification.
+/// Validates <see cref="ITaxData1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _n7DtAd4lEeqt1ZcLzWyWFw
@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: <c>Creditor</c>, <c>Debtor</c>/<c>UltimateDebtor</c>, and <c>Record</c>
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
-/// <c>new</c> — the same <see cref="TaxParty2"/> validator instance is reused across
+/// <c>new</c> — the same <see cref="ITaxParty2"/> validator instance is reused across
 /// <c>Debtor</c> and <c>UltimateDebtor</c> — see the two constructors below.
 /// </remarks>
 public class TaxData1Validator : AbstractValidator<ITaxData1>

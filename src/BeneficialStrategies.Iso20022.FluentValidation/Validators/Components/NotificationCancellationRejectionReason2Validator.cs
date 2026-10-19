@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="NotificationCancellationRejectionReason2"/> per the ISO 20022 specification.
+/// Validates <see cref="INotificationCancellationRejectionReason2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class NotificationCancellationRejectionReason2Validator : AbstractValidator<INotificationCancellationRejectionReason2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="NotificationCancellationRejectionReason2"/>.
+    /// Initializes a new instance of the validator for <see cref="INotificationCancellationRejectionReason2"/>.
     /// </summary>
     public NotificationCancellationRejectionReason2Validator()
     {

@@ -49,7 +49,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Common\BeneficialStrategies.Iso20022.Common.csproj" />
+    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
+    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Interfaces\BeneficialStrategies.Iso20022.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

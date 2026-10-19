@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PaymentTransaction174"/> per the ISO 20022 specification.
+/// Validates <see cref="IPaymentTransaction174"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 5be6bec5-d8be-45bf-83e9-ccc1cafba2ba

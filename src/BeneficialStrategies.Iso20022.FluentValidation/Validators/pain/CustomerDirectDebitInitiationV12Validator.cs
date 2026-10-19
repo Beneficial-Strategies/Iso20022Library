@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="CustomerDirectDebitInitiationV12"/> per the ISO 20022 specification.
+/// Validates <see cref="ICustomerDirectDebitInitiationV12"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: pain.008.001.12 (7869e710-db06-4132-848e-539312ac3db9), Registered.
@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 ///       additional information about a transaction — the SupplementaryData element at
 ///       transaction level should be used for that purpose instead. Not independently
 ///       enforceable by this library — no structural signal distinguishes message-level-scoped
-///       content from transaction-scoped content inside a <see cref="SupplementaryData1"/>
+///       content from transaction-scoped content inside a <see cref="ISupplementaryData1"/>
 ///       instance at the C# model level.
 ///     </description>
 ///   </item>

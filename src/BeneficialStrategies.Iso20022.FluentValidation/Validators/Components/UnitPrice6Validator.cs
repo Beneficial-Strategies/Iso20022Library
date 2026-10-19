@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="UnitPrice6"/> per the ISO 20022 specification.
+/// Validates <see cref="IUnitPrice6"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class UnitPrice6Validator : AbstractValidator<IUnitPrice6>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="UnitPrice6"/>.
+    /// Initializes a new instance of the validator for <see cref="IUnitPrice6"/>.
     /// </summary>
     public UnitPrice6Validator()
     {

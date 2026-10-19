@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="LiquidityCreditTransferV07"/> (camt.050.001.07) per the ISO 20022
+/// Validates <see cref="ILiquidityCreditTransferV07"/> (camt.050.001.07) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

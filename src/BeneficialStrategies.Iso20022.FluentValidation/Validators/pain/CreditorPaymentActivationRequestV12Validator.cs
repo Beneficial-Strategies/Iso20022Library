@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="CreditorPaymentActivationRequestV12"/> per the ISO 20022 specification.
+/// Validates <see cref="ICreditorPaymentActivationRequestV12"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: pain.013.001.12 (d2b0673a-1f10-4086-ad39-b4f95fef2cb5), Registered.

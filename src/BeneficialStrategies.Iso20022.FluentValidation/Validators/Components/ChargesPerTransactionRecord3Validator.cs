@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ChargesPerTransactionRecord3"/> per the ISO 20022 specification.
+/// Validates <see cref="IChargesPerTransactionRecord3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _4FcvQTEyEe6g-ffJsqGiSA
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ChargesPerTransactionRecord3Validator : AbstractValidator<IChargesPerTransactionRecord3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ChargesPerTransactionRecord3"/>.
+    /// Initializes a new instance of the validator for <see cref="IChargesPerTransactionRecord3"/>.
     /// </summary>
     public ChargesPerTransactionRecord3Validator()
     {

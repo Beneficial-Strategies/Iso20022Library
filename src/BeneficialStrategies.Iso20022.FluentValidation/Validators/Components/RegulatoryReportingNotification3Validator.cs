@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RegulatoryReportingNotification3"/> per the ISO 20022 specification.
+/// Validates <see cref="IRegulatoryReportingNotification3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class RegulatoryReportingNotification3Validator : AbstractValidator<IRegulatoryReportingNotification3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="RegulatoryReportingNotification3"/>.
+    /// Initializes a new instance of the validator for <see cref="IRegulatoryReportingNotification3"/>.
     /// </summary>
     public RegulatoryReportingNotification3Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MarginReport2"/> per the ISO 20022 specification.
+/// Validates <see cref="IMarginReport2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class MarginReport2Validator : AbstractValidator<IMarginReport2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="MarginReport2"/>.
+    /// Initializes a new instance of the validator for <see cref="IMarginReport2"/>.
     /// </summary>
     public MarginReport2Validator()
     {

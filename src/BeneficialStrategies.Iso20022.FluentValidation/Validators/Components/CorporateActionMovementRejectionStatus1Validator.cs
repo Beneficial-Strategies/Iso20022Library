@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CorporateActionMovementRejectionStatus1"/> per the ISO 20022 specification.
+/// Validates <see cref="ICorporateActionMovementRejectionStatus1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CorporateActionMovementRejectionStatus1Validator : AbstractValidator<ICorporateActionMovementRejectionStatus1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CorporateActionMovementRejectionStatus1"/>.
+    /// Initializes a new instance of the validator for <see cref="ICorporateActionMovementRejectionStatus1"/>.
     /// </summary>
     public CorporateActionMovementRejectionStatus1Validator()
     {

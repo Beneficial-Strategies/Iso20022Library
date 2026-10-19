@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DistributionRejectionStatus1"/> per the ISO 20022 specification.
+/// Validates <see cref="IDistributionRejectionStatus1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _RlXZUtp-Ed-ak6NoX_4Aeg_-2041243325
@@ -23,7 +23,7 @@ public class DistributionRejectionStatus1Validator
     : AbstractValidator<IDistributionRejectionStatus1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DistributionRejectionStatus1"/>.
+    /// Initializes a new instance of the validator for <see cref="IDistributionRejectionStatus1"/>.
     /// </summary>
     public DistributionRejectionStatus1Validator()
     {

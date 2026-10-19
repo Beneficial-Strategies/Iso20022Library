@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CashAccount40"/> per the ISO 20022 specification.
+/// Validates <see cref="ICashAccount40"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _avXPcdcZEeqRFcf2R4bPBw

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="MandateAcceptanceReportV08"/> (pain.012.001.08) per the ISO 20022
+/// Validates <see cref="IMandateAcceptanceReportV08"/> (pain.012.001.08) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CorporateActionBalanceDetails43"/> per the ISO 20022 specification.
+/// Validates <see cref="ICorporateActionBalanceDetails43"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Tj5YGRuyEeyhRdHRjakS2w
@@ -27,7 +27,7 @@ public class CorporateActionBalanceDetails43Validator
     : AbstractValidator<ICorporateActionBalanceDetails43>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CorporateActionBalanceDetails43"/>.
+    /// Initializes a new instance of the validator for <see cref="ICorporateActionBalanceDetails43"/>.
     /// </summary>
     public CorporateActionBalanceDetails43Validator()
     {

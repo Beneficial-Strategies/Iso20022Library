@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PreviousYear1"/> per the ISO 20022 specification.
+/// Validates <see cref="IPreviousYear1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class PreviousYear1Validator : AbstractValidator<IPreviousYear1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="PreviousYear1"/>.
+    /// Initializes a new instance of the validator for <see cref="IPreviousYear1"/>.
     /// </summary>
     public PreviousYear1Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="StructuredRemittanceInformation22"/> per the ISO 20022 specification.
+/// Validates <see cref="IStructuredRemittanceInformation22"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 228ed14b-2fc2-4f3f-bc8e-47c7306ee6f5
@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: every building block above is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="PartyIdentification272"/> validator instance is reused across <c>Invoicer</c> and
+/// <see cref="IPartyIdentification272"/> validator instance is reused across <c>Invoicer</c> and
 /// <c>Invoicee</c> — see the two constructors below.
 /// </remarks>
 public class StructuredRemittanceInformation22Validator : AbstractValidator<IStructuredRemittanceInformation22>

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ReservationType2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IReservationType2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _5v7SsRUNEeusI4XK3oQSyg
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Defines the type of action to be performed in the request.
 /// <list type="table">
-///   <item><term><see cref="Choices.ReservationType2Choice.Code"/></term><description>Value: ExternalReservationType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.ReservationType2Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ReservationType2Choice.ICode"/></term><description>Value: ExternalReservationType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ReservationType2Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

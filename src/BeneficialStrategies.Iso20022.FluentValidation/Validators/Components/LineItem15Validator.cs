@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="LineItem15"/> per the ISO 20022 specification.
+/// Validates <see cref="ILineItem15"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class LineItem15Validator : AbstractValidator<ILineItem15>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="LineItem15"/>.
+    /// Initializes a new instance of the validator for <see cref="ILineItem15"/>.
     /// </summary>
     public LineItem15Validator()
     {

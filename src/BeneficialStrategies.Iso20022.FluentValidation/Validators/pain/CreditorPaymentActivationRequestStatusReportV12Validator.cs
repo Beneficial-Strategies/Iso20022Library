@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="CreditorPaymentActivationRequestStatusReportV12"/> per the ISO 20022
+/// Validates <see cref="ICreditorPaymentActivationRequestStatusReportV12"/> per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>
@@ -63,7 +63,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 ///       additional information about a transaction — the SupplementaryData element at
 ///       transaction level should be used for that purpose instead. Not independently
 ///       enforceable by this library — no structural signal distinguishes message-level-scoped
-///       content from transaction-scoped content inside a <see cref="SupplementaryData1"/>
+///       content from transaction-scoped content inside a <see cref="ISupplementaryData1"/>
 ///       instance at the C# model level.
 ///     </description>
 ///   </item>

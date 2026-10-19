@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ReconciliationList1"/> per the ISO 20022 specification.
+/// Validates <see cref="IReconciliationList1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ReconciliationList1Validator : AbstractValidator<IReconciliationList1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ReconciliationList1"/>.
+    /// Initializes a new instance of the validator for <see cref="IReconciliationList1"/>.
     /// </summary>
     public ReconciliationList1Validator()
     {

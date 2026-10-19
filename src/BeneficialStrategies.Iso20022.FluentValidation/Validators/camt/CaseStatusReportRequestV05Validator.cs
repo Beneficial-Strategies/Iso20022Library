@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="CaseStatusReportRequestV05"/> (camt.038.001.05) per the ISO 20022
+/// Validates <see cref="ICaseStatusReportRequestV05"/> (camt.038.001.05) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

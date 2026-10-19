@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="FundCashForecast2"/> per the ISO 20022 specification.
+/// Validates <see cref="IFundCashForecast2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _VBdFudp-Ed-ak6NoX_4Aeg_386757279
@@ -28,9 +28,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///     </description>
 ///   </item>
 /// </list>
-/// Traced and confirmed enforceable: <see cref="CashSortingCriterion2"/>.ForecastBreakdownDetails
-/// is <see cref="ForecastParameter2"/>, which has both <c>CashInForecastDetails</c>
-/// (<see cref="CashInForecast1"/>) and <c>CashOutForecastDetails</c> (<see cref="CashOutForecast1"/>)
+/// Traced and confirmed enforceable: <see cref="ICashSortingCriterion2"/>.ForecastBreakdownDetails
+/// is <see cref="IForecastParameter2"/>, which has both <c>CashInForecastDetails</c>
+/// (<see cref="ICashInForecast1"/>) and <c>CashOutForecastDetails</c> (<see cref="ICashOutForecast1"/>)
 /// collections, and each element type carries its own nullable <c>ExceptionalCashFlowIndicator</c>.
 ///
 /// Dependency injection: the <c>SortingCriteriaDetails</c> collection is validated per-item by

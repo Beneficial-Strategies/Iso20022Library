@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CommunicationCharacteristics4"/> per the ISO 20022 specification.
+/// Validates <see cref="ICommunicationCharacteristics4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CommunicationCharacteristics4Validator : AbstractValidator<ICommunicationCharacteristics4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CommunicationCharacteristics4"/>.
+    /// Initializes a new instance of the validator for <see cref="ICommunicationCharacteristics4"/>.
     /// </summary>
     public CommunicationCharacteristics4Validator()
     {

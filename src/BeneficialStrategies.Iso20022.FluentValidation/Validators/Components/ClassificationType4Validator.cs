@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ClassificationType4"/> per the ISO 20022 specification.
+/// Validates <see cref="IClassificationType4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ClassificationType4Validator : AbstractValidator<IClassificationType4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ClassificationType4"/>.
+    /// Initializes a new instance of the validator for <see cref="IClassificationType4"/>.
     /// </summary>
     public ClassificationType4Validator()
     {

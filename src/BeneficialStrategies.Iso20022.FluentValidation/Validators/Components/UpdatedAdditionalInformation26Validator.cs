@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="UpdatedAdditionalInformation26"/> per the ISO 20022 specification.
+/// Validates <see cref="IUpdatedAdditionalInformation26"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class UpdatedAdditionalInformation26Validator : AbstractValidator<IUpdatedAdditionalInformation26>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="UpdatedAdditionalInformation26"/>.
+    /// Initializes a new instance of the validator for <see cref="IUpdatedAdditionalInformation26"/>.
     /// </summary>
     public UpdatedAdditionalInformation26Validator()
     {

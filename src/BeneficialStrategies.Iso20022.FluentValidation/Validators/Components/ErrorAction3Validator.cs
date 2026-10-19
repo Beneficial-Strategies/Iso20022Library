@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ErrorAction3"/> per the ISO 20022 specification.
+/// Validates <see cref="IErrorAction3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ErrorAction3Validator : AbstractValidator<IErrorAction3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ErrorAction3"/>.
+    /// Initializes a new instance of the validator for <see cref="IErrorAction3"/>.
     /// </summary>
     public ErrorAction3Validator()
     {

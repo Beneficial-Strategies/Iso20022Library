@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="DeleteReservationV07"/> (camt.049.001.07) per the ISO 20022
+/// Validates <see cref="IDeleteReservationV07"/> (camt.049.001.07) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

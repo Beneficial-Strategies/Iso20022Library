@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PaymentConditionStatus2"/> per the ISO 20022 specification.
+/// Validates <see cref="IPaymentConditionStatus2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _FJs0oWwLEe6Mn47rYvO6fQ

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AuthenticatedData3"/> per the ISO 20022 specification.
+/// Validates <see cref="IAuthenticatedData3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AuthenticatedData3Validator : AbstractValidator<IAuthenticatedData3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AuthenticatedData3"/>.
+    /// Initializes a new instance of the validator for <see cref="IAuthenticatedData3"/>.
     /// </summary>
     public AuthenticatedData3Validator()
     {

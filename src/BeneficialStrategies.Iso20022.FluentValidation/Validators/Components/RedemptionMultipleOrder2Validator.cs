@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RedemptionMultipleOrder2"/> per the ISO 20022 specification.
+/// Validates <see cref="IRedemptionMultipleOrder2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _VddsSdp-Ed-ak6NoX_4Aeg_-438010863
@@ -47,7 +47,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class RedemptionMultipleOrder2Validator : AbstractValidator<IRedemptionMultipleOrder2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="RedemptionMultipleOrder2"/>.
+    /// Initializes a new instance of the validator for <see cref="IRedemptionMultipleOrder2"/>.
     /// </summary>
     public RedemptionMultipleOrder2Validator()
     {

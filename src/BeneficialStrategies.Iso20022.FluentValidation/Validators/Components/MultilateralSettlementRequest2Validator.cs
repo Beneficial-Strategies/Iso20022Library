@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MultilateralSettlementRequest2"/> per the ISO 20022 specification.
+/// Validates <see cref="IMultilateralSettlementRequest2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class MultilateralSettlementRequest2Validator : AbstractValidator<IMultilateralSettlementRequest2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="MultilateralSettlementRequest2"/>.
+    /// Initializes a new instance of the validator for <see cref="IMultilateralSettlementRequest2"/>.
     /// </summary>
     public MultilateralSettlementRequest2Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CommercialDataSet3"/> per the ISO 20022 specification.
+/// Validates <see cref="ICommercialDataSet3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CommercialDataSet3Validator : AbstractValidator<ICommercialDataSet3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CommercialDataSet3"/>.
+    /// Initializes a new instance of the validator for <see cref="ICommercialDataSet3"/>.
     /// </summary>
     public CommercialDataSet3Validator()
     {

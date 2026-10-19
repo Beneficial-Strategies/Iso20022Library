@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="AdviceType1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IAdviceType1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _u3TXw9omEembTrt_WixjyQ
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the type of advice requested for the transaction.
 /// <list type="table">
-///   <item><term><see cref="Choices.AdviceType1Choice.Code"/></term><description>Value: AdviceType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.AdviceType1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.AdviceType1Choice.ICode"/></term><description>Value: AdviceType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.AdviceType1Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OriginalTransactionReference46"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalTransactionReference46"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 2c1c1fe9-2ee1-4fde-9241-77fb34759ccb
@@ -37,9 +37,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: every building block above is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="PartyIdentification272"/> validator instance is reused across all five party
-/// fields, the same <see cref="CashAccount40"/> validator instance across all three account
-/// fields, and the same <see cref="BranchAndFinancialInstitutionIdentification8"/> validator
+/// <see cref="IPartyIdentification272"/> validator instance is reused across all five party
+/// fields, the same <see cref="ICashAccount40"/> validator instance across all three account
+/// fields, and the same <see cref="IBranchAndFinancialInstitutionIdentification8"/> validator
 /// instance across <c>DebtorAgent</c> and <c>CreditorAgent</c> — see the two constructors below.
 /// </remarks>
 public class OriginalTransactionReference46Validator : AbstractValidator<IOriginalTransactionReference46>

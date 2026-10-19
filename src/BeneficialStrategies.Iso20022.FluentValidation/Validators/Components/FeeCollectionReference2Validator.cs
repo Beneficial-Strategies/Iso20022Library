@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="FeeCollectionReference2"/> per the ISO 20022 specification.
+/// Validates <see cref="IFeeCollectionReference2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class FeeCollectionReference2Validator : AbstractValidator<IFeeCollectionReference2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="FeeCollectionReference2"/>.
+    /// Initializes a new instance of the validator for <see cref="IFeeCollectionReference2"/>.
     /// </summary>
     public FeeCollectionReference2Validator()
     {

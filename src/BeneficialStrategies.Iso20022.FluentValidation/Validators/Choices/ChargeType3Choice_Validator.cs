@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ChargeType3Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IChargeType3Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _tjJEUVkyEeGeoaLUQk__nA_-594962709
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the charge type.
 /// <list type="table">
-///   <item><term><see cref="Choices.ChargeType3Choice.Code"/></term><description>Value: ExternalChargeType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.ChargeType3Choice.Proprietary"/></term><description>Identification: Max35Text (required), Issuer: Max35Text (optional) — both fully struct-enforced</description></item>
+///   <item><term><see cref="Choices.ChargeType3Choice.ICode"/></term><description>Value: ExternalChargeType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ChargeType3Choice.IProprietary"/></term><description>Identification: Max35Text (required), Issuer: Max35Text (optional) — both fully struct-enforced</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

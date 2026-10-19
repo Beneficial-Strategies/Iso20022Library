@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DetailedInstructionStatus2"/> per the ISO 20022 specification.
+/// Validates <see cref="IDetailedInstructionStatus2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DetailedInstructionStatus2Validator : AbstractValidator<IDetailedInstructionStatus2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DetailedInstructionStatus2"/>.
+    /// Initializes a new instance of the validator for <see cref="IDetailedInstructionStatus2"/>.
     /// </summary>
     public DetailedInstructionStatus2Validator()
     {

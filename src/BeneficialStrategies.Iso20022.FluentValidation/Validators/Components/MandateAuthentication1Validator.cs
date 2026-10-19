@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MandateAuthentication1"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateAuthentication1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _HSGqsGVVEeacpJ-gG9kyUQ

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="AddressType3Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IAddressType3Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _CneugRb-EeiyVv5j1vf1VQ
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of formats for the type of address.
 /// <list type="table">
-///   <item><term><see cref="Choices.AddressType3Choice.Code"/></term><description>Type of address expressed as a code — Value: AddressType2Code</description></item>
-///   <item><term><see cref="Choices.AddressType3Choice.Proprietary"/></term><description>Type of address expressed as a proprietary code — Identification (Exact4AlphaNumericText, required), Issuer (Max35Text, required), SchemeName (Max35Text, optional)</description></item>
+///   <item><term><see cref="Choices.AddressType3Choice.ICode"/></term><description>Type of address expressed as a code — Value: AddressType2Code</description></item>
+///   <item><term><see cref="Choices.AddressType3Choice.IProprietary"/></term><description>Type of address expressed as a proprietary code — Identification (Exact4AlphaNumericText, required), Issuer (Max35Text, required), SchemeName (Max35Text, optional)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (the <c>Code</c> variant's

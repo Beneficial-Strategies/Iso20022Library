@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="SystemIdentification2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ISystemIdentification2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _8BZ3QaMgEeCJ6YNENx4h-w_-1347709917
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Information used to identify a cash clearing system.
 /// <list type="table">
-///   <item><term><see cref="Choices.SystemIdentification2Choice.MarketInfrastructureIdentification"/></term><description>Clearing service selected for a transaction — carries no properties at all in this generation of the model (unlike other identical-sounding scheme-name choices elsewhere in the library), so there is nothing to validate</description></item>
-///   <item><term><see cref="Choices.SystemIdentification2Choice.Country"/></term><description>Country in which the system is located — Value: CountryCode (external code set — see <see cref="CountryCodeValidator"/>)</description></item>
+///   <item><term><see cref="Choices.SystemIdentification2Choice.IMarketInfrastructureIdentification"/></term><description>Clearing service selected for a transaction — carries no properties at all in this generation of the model (unlike other identical-sounding scheme-name choices elsewhere in the library), so there is nothing to validate</description></item>
+///   <item><term><see cref="Choices.SystemIdentification2Choice.ICountry"/></term><description>Country in which the system is located — Value: CountryCode (external code set — see <see cref="CountryCodeValidator"/>)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -35,7 +35,7 @@ public class SystemIdentification2Choice_Validator : AbstractValidator<ISystemId
     /// instead of this type constructing its own.
     /// </summary>
     /// <param name="countryValueValidator">
-    /// Validator for <see cref="Choices.SystemIdentification2Choice.Country"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.SystemIdentification2Choice.ICountry"/>'s <c>Value</c>
     /// (CountryCode).
     /// </param>
     public SystemIdentification2Choice_Validator(IValidator<CountryCode> countryValueValidator)

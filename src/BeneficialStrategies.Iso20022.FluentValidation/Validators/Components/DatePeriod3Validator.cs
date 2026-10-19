@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DatePeriod3"/> per the ISO 20022 specification.
+/// Validates <see cref="IDatePeriod3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Lk9JgUavEemG5fbqCekzMw
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DatePeriod3Validator : AbstractValidator<IDatePeriod3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DatePeriod3"/>.
+    /// Initializes a new instance of the validator for <see cref="IDatePeriod3"/>.
     /// </summary>
     public DatePeriod3Validator()
     {

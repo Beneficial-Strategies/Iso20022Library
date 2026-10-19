@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SettlementAgent2"/> per the ISO 20022 specification.
+/// Validates <see cref="ISettlementAgent2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class SettlementAgent2Validator : AbstractValidator<ISettlementAgent2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="SettlementAgent2"/>.
+    /// Initializes a new instance of the validator for <see cref="ISettlementAgent2"/>.
     /// </summary>
     public SettlementAgent2Validator()
     {

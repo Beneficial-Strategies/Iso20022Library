@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="DebitAuthorisationResponseV06"/> (camt.036.001.06) per the ISO 20022
+/// Validates <see cref="IDebitAuthorisationResponseV06"/> (camt.036.001.06) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

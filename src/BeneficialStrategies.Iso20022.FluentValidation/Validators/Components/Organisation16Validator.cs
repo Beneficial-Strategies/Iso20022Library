@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Organisation16"/> per the ISO 20022 specification.
+/// Validates <see cref="IOrganisation16"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class Organisation16Validator : AbstractValidator<IOrganisation16>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Organisation16"/>.
+    /// Initializes a new instance of the validator for <see cref="IOrganisation16"/>.
     /// </summary>
     public Organisation16Validator()
     {

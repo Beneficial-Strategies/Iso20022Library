@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ATMCustomer6"/> per the ISO 20022 specification.
+/// Validates <see cref="IATMCustomer6"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ATMCustomer6Validator : AbstractValidator<IATMCustomer6>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ATMCustomer6"/>.
+    /// Initializes a new instance of the validator for <see cref="IATMCustomer6"/>.
     /// </summary>
     public ATMCustomer6Validator()
     {

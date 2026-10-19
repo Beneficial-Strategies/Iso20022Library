@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SecuritiesAttributes1"/> per the ISO 20022 specification.
+/// Validates <see cref="ISecuritiesAttributes1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 15df450f-df3b-4230-9d9a-8fba15b89a4e

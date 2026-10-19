@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TaxParty1"/> per the ISO 20022 specification.
+/// Validates <see cref="ITaxParty1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _PdBMxtp-Ed-ak6NoX_4Aeg_-1937885674

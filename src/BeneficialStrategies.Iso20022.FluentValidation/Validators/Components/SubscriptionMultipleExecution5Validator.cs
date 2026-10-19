@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SubscriptionMultipleExecution5"/> per the ISO 20022 specification.
+/// Validates <see cref="ISubscriptionMultipleExecution5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class SubscriptionMultipleExecution5Validator : AbstractValidator<ISubscriptionMultipleExecution5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="SubscriptionMultipleExecution5"/>.
+    /// Initializes a new instance of the validator for <see cref="ISubscriptionMultipleExecution5"/>.
     /// </summary>
     public SubscriptionMultipleExecution5Validator()
     {

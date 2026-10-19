@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="CharacterSearch1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ICharacterSearch1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _F7k20ZlaEeeE1Ya-LgRsuQ
@@ -11,10 +11,10 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Set of characters to be matched to be considered as valid.
 /// <list type="table">
-///   <item><term><see cref="Choices.CharacterSearch1Choice.Equal"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.CharacterSearch1Choice.NotEqual"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.CharacterSearch1Choice.Contain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.CharacterSearch1Choice.NotContain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.IEqual"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.INotEqual"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.IContain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.INotContain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// All four variants are fully enforced at the struct level already — there is no additional

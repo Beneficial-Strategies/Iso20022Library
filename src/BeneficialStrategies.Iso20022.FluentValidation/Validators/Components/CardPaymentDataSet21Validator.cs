@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CardPaymentDataSet21"/> per the ISO 20022 specification.
+/// Validates <see cref="ICardPaymentDataSet21"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CardPaymentDataSet21Validator : AbstractValidator<ICardPaymentDataSet21>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CardPaymentDataSet21"/>.
+    /// Initializes a new instance of the validator for <see cref="ICardPaymentDataSet21"/>.
     /// </summary>
     public CardPaymentDataSet21Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="IndividualPerson20"/> per the ISO 20022 specification.
+/// Validates <see cref="IIndividualPerson20"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class IndividualPerson20Validator : AbstractValidator<IIndividualPerson20>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="IndividualPerson20"/>.
+    /// Initializes a new instance of the validator for <see cref="IIndividualPerson20"/>.
     /// </summary>
     public IndividualPerson20Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ExecutionType1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IExecutionType1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _75qQhqMgEeCJ6YNENx4h-w_354040007
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Defines the type of execution to be performed in the request.
 /// <list type="table">
-///   <item><term><see cref="Choices.ExecutionType1Choice.Time"/></term><description>Value: ISOTime (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.ExecutionType1Choice.Event"/></term><description>Execution type is executed based on an event driven trigger — carries no properties at all, nothing to validate</description></item>
+///   <item><term><see cref="Choices.ExecutionType1Choice.ITime"/></term><description>Value: ISOTime (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ExecutionType1Choice.IEvent"/></term><description>Execution type is executed based on an event driven trigger — carries no properties at all, nothing to validate</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced already — there is no additional cross-field or business

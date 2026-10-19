@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="OrganisationIdentificationSchemeName1Choice_"/> per the ISO 20022
+/// Validates <see cref="IOrganisationIdentificationSchemeName1Choice"/> per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>
@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Sets of elements to identify a name of the organisation identification scheme.
 /// <list type="table">
-///   <item><term><see cref="Choices.OrganisationIdentificationSchemeName1Choice.Code"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalOrganisationIdentification1Code</description></item>
-///   <item><term><see cref="Choices.OrganisationIdentificationSchemeName1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.OrganisationIdentificationSchemeName1Choice.ICode"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalOrganisationIdentification1Code</description></item>
+///   <item><term><see cref="Choices.OrganisationIdentificationSchemeName1Choice.IProprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (an <c>IIsoExternalCode</c>

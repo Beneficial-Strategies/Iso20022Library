@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AccountNotification23"/> per the ISO 20022 specification.
+/// Validates <see cref="IAccountNotification23"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _93YgYTEsEe6GxLzpkVnWYg
@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AccountNotification23Validator : AbstractValidator<IAccountNotification23>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AccountNotification23"/>.
+    /// Initializes a new instance of the validator for <see cref="IAccountNotification23"/>.
     /// </summary>
     public AccountNotification23Validator()
     {

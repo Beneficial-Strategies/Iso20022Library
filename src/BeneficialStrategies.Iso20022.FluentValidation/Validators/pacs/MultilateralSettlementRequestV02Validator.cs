@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pacs;
 
 /// <summary>
-/// Validates <see cref="MultilateralSettlementRequestV02"/> per the ISO 20022 specification.
+/// Validates <see cref="IMultilateralSettlementRequestV02"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: pacs.029.001.02 (_R3QfeTEZEe6kQ-WGAhcVPQ), Registered.

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Case5"/> per the ISO 20022 specification.
+/// Validates <see cref="ICase5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _8BF4W248EeiU9cctagi5ow
@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class Case5Validator : AbstractValidator<ICase5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Case5"/>.
+    /// Initializes a new instance of the validator for <see cref="ICase5"/>.
     /// </summary>
     public Case5Validator()
     {

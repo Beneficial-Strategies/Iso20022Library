@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="Authorisation1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IAuthorisation1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _RD1Zltp-Ed-ak6NoX_4Aeg_-955120203
@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Provides the details on the user identification or any user key that allows to check if the
 /// initiating party is allowed to issue the transaction.
 /// <list type="table">
-///   <item><term><see cref="Choices.Authorisation1Choice.Code"/></term><description>Specifies the authorisation, in a coded form — Value: Authorisation1Code</description></item>
-///   <item><term><see cref="Choices.Authorisation1Choice.Proprietary"/></term><description>Specifies the authorisation, in a free text form — Value: Max128Text</description></item>
+///   <item><term><see cref="Choices.Authorisation1Choice.ICode"/></term><description>Specifies the authorisation, in a coded form — Value: Authorisation1Code</description></item>
+///   <item><term><see cref="Choices.Authorisation1Choice.IProprietary"/></term><description>Specifies the authorisation, in a free text form — Value: Max128Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (closed codeset enum / a

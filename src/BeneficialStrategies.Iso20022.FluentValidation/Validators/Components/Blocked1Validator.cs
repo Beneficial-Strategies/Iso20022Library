@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Blocked1"/> per the ISO 20022 specification.
+/// Validates <see cref="IBlocked1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class Blocked1Validator : AbstractValidator<IBlocked1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Blocked1"/>.
+    /// Initializes a new instance of the validator for <see cref="IBlocked1"/>.
     /// </summary>
     public Blocked1Validator()
     {

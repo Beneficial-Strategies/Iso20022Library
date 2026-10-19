@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RemittanceInformation22"/> per the ISO 20022 specification.
+/// Validates <see cref="IRemittanceInformation22"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _7ql4wTEsEe6GxLzpkVnWYg

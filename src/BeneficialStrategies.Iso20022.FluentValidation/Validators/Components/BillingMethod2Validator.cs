@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="BillingMethod2"/> per the ISO 20022 specification.
+/// Validates <see cref="IBillingMethod2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class BillingMethod2Validator : AbstractValidator<IBillingMethod2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="BillingMethod2"/>.
+    /// Initializes a new instance of the validator for <see cref="IBillingMethod2"/>.
     /// </summary>
     public BillingMethod2Validator()
     {

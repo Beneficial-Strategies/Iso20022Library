@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="IntraBalanceMovements4"/> per the ISO 20022 specification.
+/// Validates <see cref="IIntraBalanceMovements4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _3syXoTEyEe6g-ffJsqGiSA
@@ -25,18 +25,18 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Note on <c>CashAccountServicerRule</c>: the spec text literally reads
 /// "Movement(*)/AccountOwner" — identical wording to <c>CashAccountOwnerRule</c> just above it.
-/// <see cref="IntraBalanceMovement7"/> has no <c>AccountOwner</c> element at all (only
+/// <see cref="IIntraBalanceMovement7"/> has no <c>AccountOwner</c> element at all (only
 /// <c>CashAccountOwner</c> and <c>CashAccountServicer</c>), and the rule name plus the pattern of
 /// the other rules (each pairs the top-level field with the identically-named nested field) make
 /// it clear this is a copy-paste typo in the spec's constraint text (same one found on
-/// <see cref="IntraBalanceCancellation7"/> and <see cref="IntraBalanceModification7"/>) —
+/// <see cref="IIntraBalanceCancellation7"/> and <see cref="IIntraBalanceModification7"/>) —
 /// implemented here against <c>Movement(*)/CashAccountServicer</c>, the obviously-intended field,
 /// not the literal (nonexistent) text.
 /// </remarks>
 public class IntraBalanceMovements4Validator : AbstractValidator<IIntraBalanceMovements4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="IntraBalanceMovements4"/>.
+    /// Initializes a new instance of the validator for <see cref="IIntraBalanceMovements4"/>.
     /// </summary>
     public IntraBalanceMovements4Validator()
     {

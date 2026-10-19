@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="DatePeriod2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IDatePeriod2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _jNAKm5lPEee-Zps0fZQaFQ
@@ -11,9 +11,9 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Range of time defined by a start date and an end date.
 /// <list type="table">
-///   <item><term><see cref="Choices.DatePeriod2Choice.FromDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.DatePeriod2Choice.ToDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.DatePeriod2Choice.FromToDate"/></term><description>FromDate, ToDate — both ISODate, fully struct-enforced, no further rule needed</description></item>
+///   <item><term><see cref="Choices.DatePeriod2Choice.IFromDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DatePeriod2Choice.IToDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DatePeriod2Choice.IFromToDate"/></term><description>FromDate, ToDate — both ISODate, fully struct-enforced, no further rule needed</description></item>
 /// </list>
 ///
 /// All three variants are fully enforced at the struct level already — there is no additional

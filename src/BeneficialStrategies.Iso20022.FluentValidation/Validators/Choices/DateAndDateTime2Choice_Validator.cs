@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="DateAndDateTime2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IDateAndDateTime2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _fGuzgZlhEeeE1Ya-LgRsuQ
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice between a date or a date and time format.
 /// <list type="table">
-///   <item><term><see cref="Choices.DateAndDateTime2Choice.Date"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.DateAndDateTime2Choice.DateTime"/></term><description>Value: ISODateTime (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DateAndDateTime2Choice.IDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DateAndDateTime2Choice.IDateTime"/></term><description>Value: ISODateTime (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already — there is no additional

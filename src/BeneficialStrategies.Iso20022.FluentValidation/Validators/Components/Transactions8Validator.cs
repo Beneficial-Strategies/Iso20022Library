@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Transactions8"/> per the ISO 20022 specification.
+/// Validates <see cref="ITransactions8"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class Transactions8Validator : AbstractValidator<ITransactions8>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Transactions8"/>.
+    /// Initializes a new instance of the validator for <see cref="ITransactions8"/>.
     /// </summary>
     public Transactions8Validator()
     {

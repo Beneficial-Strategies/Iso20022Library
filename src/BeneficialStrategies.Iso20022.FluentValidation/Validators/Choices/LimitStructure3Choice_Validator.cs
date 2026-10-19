@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="LimitStructure3Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ILimitStructure3Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _64VGkTEyEe6g-ffJsqGiSA
@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Limit details of one or more limits set by the member and managed by the transaction
 /// administrator.
 /// <list type="table">
-///   <item><term><see cref="Choices.LimitStructure3Choice.AllCurrentLimits"/></term><description>Identifies all the current limits managed by the transaction administrator — Value: LimitIdentification9</description></item>
-///   <item><term><see cref="Choices.LimitStructure3Choice.CurrentLimitIdentification"/></term><description>Identifies one particular current limit — Value: LimitIdentification8</description></item>
+///   <item><term><see cref="Choices.LimitStructure3Choice.IAllCurrentLimits"/></term><description>Identifies all the current limits managed by the transaction administrator — Value: LimitIdentification9</description></item>
+///   <item><term><see cref="Choices.LimitStructure3Choice.ICurrentLimitIdentification"/></term><description>Identifies one particular current limit — Value: LimitIdentification8</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -31,11 +31,11 @@ public class LimitStructure3Choice_Validator : AbstractValidator<ILimitStructure
     /// this type constructing its own.
     /// </summary>
     /// <param name="allCurrentLimitsValueValidator">
-    /// Validator for <see cref="Choices.LimitStructure3Choice.AllCurrentLimits"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.LimitStructure3Choice.IAllCurrentLimits"/>'s <c>Value</c>
     /// (LimitIdentification9).
     /// </param>
     /// <param name="currentLimitIdentificationValueValidator">
-    /// Validator for <see cref="Choices.LimitStructure3Choice.CurrentLimitIdentification"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.LimitStructure3Choice.ICurrentLimitIdentification"/>'s <c>Value</c>
     /// (LimitIdentification8).
     /// </param>
     public LimitStructure3Choice_Validator(

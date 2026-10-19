@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ProxyAccountIdentification1"/> per the ISO 20022 specification.
+/// Validates <see cref="IProxyAccountIdentification1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _luR59Xh2EeidzqjNEfehPg
