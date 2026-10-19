@@ -58,7 +58,7 @@ public static class Iso20022JsonSerializer
             if (string.IsNullOrEmpty(json))
                 throw new JsonException("JSON payload is null or empty.");
 
-            message = Deserialize<TMessage>(json);
+            message = Deserialize<TMessage>(json!);
             error = null;
             return true;
         }

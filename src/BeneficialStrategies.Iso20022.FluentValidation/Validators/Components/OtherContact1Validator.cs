@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OtherContact1"/> per the ISO 20022 specification.
+/// Validates <see cref="IOtherContact1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6SokSZqlEeGSON8vddiWzQ_1969673172
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class OtherContact1Validator : AbstractValidator<IOtherContact1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="OtherContact1"/>.
+    /// Initializes a new instance of the validator for <see cref="IOtherContact1"/>.
     /// </summary>
     public OtherContact1Validator()
     {

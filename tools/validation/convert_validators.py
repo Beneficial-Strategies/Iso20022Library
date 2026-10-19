@@ -62,6 +62,23 @@ def convert_variant_uses(text):
     return "\n".join(out)
 
 
+CREF = re.compile(r'cref="([A-Za-z0-9_.]+)"')
+
+
+def convert_crefs(text):
+    """cref="Foo" (a record) becomes cref="IFoo", so the documentation resolves without the records' assembly."""
+    def one(m):
+        value = m.group(1)
+        parts = value.split(".")
+        base = parts[0][:-1] if parts[0].endswith("_") else parts[0]
+        if len(parts) > 1 and parts[0] != "Choices" and "I" + base in top:
+            parts[0] = "I" + base          # a member of a record: the member of its interface
+            return 'cref="' + ".".join(parts) + '"'
+        return f'cref="{convert(value)}"'
+
+    return CREF.sub(one, text)
+
+
 def main():
     changed = 0
     for p in VAL.rglob("*.cs"):
@@ -70,6 +87,7 @@ def main():
         s = p.read_text(encoding="utf-8")
         n = GENERIC.sub(lambda m: f"{m.group(1)}<{convert(m.group(2))}>", s)
         n = convert_variant_uses(n)
+        n = convert_crefs(n)
         if n != s:
             p.write_text(n, encoding="utf-8")
             changed += 1

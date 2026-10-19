@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DocumentAdjustment1"/> per the ISO 20022 specification.
+/// Validates <see cref="IDocumentAdjustment1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _UP-lctp-Ed-ak6NoX_4Aeg_1188294125

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Transactions11"/> per the ISO 20022 specification.
+/// Validates <see cref="ITransactions11"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _1paxszEyEe6g-ffJsqGiSA
@@ -25,11 +25,11 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <list type="bullet">
 ///   <item><term>PaymentInstructionStatusRule</term><description>If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.</description></item>
 /// </list>
-/// Neither side of this rule exists in the generated model: <see cref="PaymentCommon6"/> (the
+/// Neither side of this rule exists in the generated model: <see cref="IPaymentCommon6"/> (the
 /// "PaymentCommonInformation" type) has no <c>PaymentInstructionStatus</c> element — it has
-/// <c>CommonStatus</c>, a <c>ValueList&lt;PaymentStatus6&gt;</c>. <see cref="PaymentInstruction47"/>
+/// <c>CommonStatus</c>, a <c>ValueList&lt;PaymentStatus6&gt;</c>. <see cref="IPaymentInstruction47"/>
 /// (the "Payment" type, reached via <c>TransactionReport[*].TransactionOrError</c> when it's the
-/// <see cref="Choices.TransactionOrError6Choice.Transaction"/> variant) has no
+/// <see cref="Choices.TransactionOrError6Choice.ITransaction"/> variant) has no
 /// <c>InstructionStatus</c> element either — it has its own <c>Status</c>, also a
 /// <c>ValueList&lt;PaymentStatus6&gt;</c> exposing <c>Code</c>, not a single
 /// <c>PaymentInstructionStatus</c> value. Left unimplemented rather than guessing which list
@@ -38,7 +38,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class Transactions11Validator : AbstractValidator<ITransactions11>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Transactions11"/>.
+    /// Initializes a new instance of the validator for <see cref="ITransactions11"/>.
     /// </summary>
     public Transactions11Validator()
     {

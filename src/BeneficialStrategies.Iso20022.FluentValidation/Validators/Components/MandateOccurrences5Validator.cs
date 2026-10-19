@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MandateOccurrences5"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateOccurrences5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _VlU0kWZVEeuQ__SOdbf47A

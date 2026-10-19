@@ -107,7 +107,7 @@ public class InMemoryExternalCodeRegistry<TCode> : IExternalCodeRegistry<TCode>
     /// additional logic (e.g. an extra rejection rule) on top of the base membership check
     /// without duplicating it.
     /// </summary>
-    protected IReadOnlySet<string> AcceptableValues => _acceptableValues;
+    protected IReadOnlyCollection<string> AcceptableValues => _acceptableValues;
 
     /// <inheritdoc/>
     /// <remarks>

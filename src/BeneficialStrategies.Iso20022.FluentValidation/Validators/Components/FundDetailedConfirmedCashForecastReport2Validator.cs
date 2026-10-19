@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="FundDetailedConfirmedCashForecastReport2"/> per the ISO 20022 specification.
+/// Validates <see cref="IFundDetailedConfirmedCashForecastReport2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _RPmku9p-Ed-ak6NoX_4Aeg_-256800213
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class FundDetailedConfirmedCashForecastReport2Validator : AbstractValidator<IFundDetailedConfirmedCashForecastReport2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="FundDetailedConfirmedCashForecastReport2"/>.
+    /// Initializes a new instance of the validator for <see cref="IFundDetailedConfirmedCashForecastReport2"/>.
     /// </summary>
     public FundDetailedConfirmedCashForecastReport2Validator()
     {

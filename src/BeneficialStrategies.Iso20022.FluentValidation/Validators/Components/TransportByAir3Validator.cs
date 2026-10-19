@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TransportByAir3"/> per the ISO 20022 specification.
+/// Validates <see cref="ITransportByAir3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TransportByAir3Validator : AbstractValidator<ITransportByAir3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TransportByAir3"/>.
+    /// Initializes a new instance of the validator for <see cref="ITransportByAir3"/>.
     /// </summary>
     public TransportByAir3Validator()
     {

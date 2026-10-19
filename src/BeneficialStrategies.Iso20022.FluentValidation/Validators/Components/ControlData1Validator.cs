@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ControlData1"/> per the ISO 20022 specification.
+/// Validates <see cref="IControlData1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _RqlQiNp-Ed-ak6NoX_4Aeg_518525040
@@ -16,7 +16,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ControlData1Validator : AbstractValidator<IControlData1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ControlData1"/>.
+    /// Initializes a new instance of the validator for <see cref="IControlData1"/>.
     /// </summary>
     public ControlData1Validator()
     {

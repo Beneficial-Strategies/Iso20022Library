@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="StandingOrderIdentification9"/> per the ISO 20022 specification.
+/// Validates <see cref="IStandingOrderIdentification9"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6l3dlTEyEe6g-ffJsqGiSA

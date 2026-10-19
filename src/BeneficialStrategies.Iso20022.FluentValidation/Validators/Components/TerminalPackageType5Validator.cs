@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TerminalPackageType5"/> per the ISO 20022 specification.
+/// Validates <see cref="ITerminalPackageType5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TerminalPackageType5Validator : AbstractValidator<ITerminalPackageType5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TerminalPackageType5"/>.
+    /// Initializes a new instance of the validator for <see cref="ITerminalPackageType5"/>.
     /// </summary>
     public TerminalPackageType5Validator()
     {

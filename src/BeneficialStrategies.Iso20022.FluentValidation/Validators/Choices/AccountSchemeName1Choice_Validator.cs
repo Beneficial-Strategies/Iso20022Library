@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="AccountSchemeName1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IAccountSchemeName1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _P_4pQNp-Ed-ak6NoX_4Aeg_-240227306
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Sets of elements to identify a name of the identification scheme.
 /// <list type="table">
-///   <item><term><see cref="Choices.AccountSchemeName1Choice.Code"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalAccountIdentification1Code</description></item>
-///   <item><term><see cref="Choices.AccountSchemeName1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.AccountSchemeName1Choice.ICode"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalAccountIdentification1Code</description></item>
+///   <item><term><see cref="Choices.AccountSchemeName1Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

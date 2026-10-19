@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="Party50Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IParty50Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _vqulsTEyEe6g-ffJsqGiSA
@@ -12,11 +12,11 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Identification of a person, an organisation or a financial institution.
 ///
 /// This is a choice component: exactly one of its two variants is present on any given
-/// instance (enforced by the C# model — <see cref="Party50Choice_"/> is an abstract record and
+/// instance (enforced by the C# model — <see cref="IParty50Choice"/> is an abstract record and
 /// each variant is a distinct derived record with its own single <c>Value</c> property).
 /// <list type="table">
-///   <item><term><see cref="Choices.Party50Choice.Party"/></term><description>Identification of a person or an organisation — Value: PartyIdentification272</description></item>
-///   <item><term><see cref="Choices.Party50Choice.Agent"/></term><description>Identification of a financial institution — Value: BranchAndFinancialInstitutionIdentification8</description></item>
+///   <item><term><see cref="Choices.Party50Choice.IParty"/></term><description>Identification of a person or an organisation — Value: PartyIdentification272</description></item>
+///   <item><term><see cref="Choices.Party50Choice.IAgent"/></term><description>Identification of a financial institution — Value: BranchAndFinancialInstitutionIdentification8</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -34,10 +34,10 @@ public class Party50Choice_Validator : AbstractValidator<IParty50Choice>
     /// this type constructing its own.
     /// </summary>
     /// <param name="agentValueValidator">
-    /// Validator for <see cref="Choices.Party50Choice.Agent"/>'s <c>Value</c> (BranchAndFinancialInstitutionIdentification8).
+    /// Validator for <see cref="Choices.Party50Choice.IAgent"/>'s <c>Value</c> (BranchAndFinancialInstitutionIdentification8).
     /// </param>
     /// <param name="partyValueValidator">
-    /// Validator for <see cref="Choices.Party50Choice.Party"/>'s <c>Value</c> (PartyIdentification272).
+    /// Validator for <see cref="Choices.Party50Choice.IParty"/>'s <c>Value</c> (PartyIdentification272).
     /// </param>
     public Party50Choice_Validator(
         IValidator<IBranchAndFinancialInstitutionIdentification8> agentValueValidator,

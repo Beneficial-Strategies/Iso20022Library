@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PEPISATransfer7"/> per the ISO 20022 specification.
+/// Validates <see cref="IPEPISATransfer7"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class PEPISATransfer7Validator : AbstractValidator<IPEPISATransfer7>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="PEPISATransfer7"/>.
+    /// Initializes a new instance of the validator for <see cref="IPEPISATransfer7"/>.
     /// </summary>
     public PEPISATransfer7Validator()
     {

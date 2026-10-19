@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="IntraBalanceModification7"/> per the ISO 20022 specification.
+/// Validates <see cref="IIntraBalanceModification7"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _7tvrpTEyEe6g-ffJsqGiSA
@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Note on <c>CashAccountServicerRule</c>: the spec text literally reads
 /// "Modification(*)/AccountOwner" — identical wording to <c>CashAccountOwnerRule</c> just above
-/// it. <see cref="IntraBalanceModification8"/> has no <c>AccountOwner</c> element at all (only
+/// it. <see cref="IIntraBalanceModification8"/> has no <c>AccountOwner</c> element at all (only
 /// <c>CashAccountOwner</c> and <c>CashAccountServicer</c>), and the rule name plus the pattern of
 /// the other three rules (each pairs the top-level field with the identically-named nested field)
 /// make it clear this is a copy-paste typo in the spec's constraint text — implemented here
@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class IntraBalanceModification7Validator : AbstractValidator<IIntraBalanceModification7>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="IntraBalanceModification7"/>.
+    /// Initializes a new instance of the validator for <see cref="IIntraBalanceModification7"/>.
     /// </summary>
     public IntraBalanceModification7Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DirectDebitTransactionInformation34"/> per the ISO 20022 specification.
+/// Validates <see cref="IDirectDebitTransactionInformation34"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: ef49b2c4-35cf-4b49-8961-2811120821b6
@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: every building block above is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="PartyIdentification272"/> validator instance is reused across <c>UltimateCreditor</c>,
+/// <see cref="IPartyIdentification272"/> validator instance is reused across <c>UltimateCreditor</c>,
 /// <c>Debtor</c>, and <c>UltimateDebtor</c> — see the two constructors below.
 /// </remarks>
 public class DirectDebitTransactionInformation34Validator : AbstractValidator<IDirectDebitTransactionInformation34>

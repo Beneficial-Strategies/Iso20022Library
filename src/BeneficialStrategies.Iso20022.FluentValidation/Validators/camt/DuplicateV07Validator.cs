@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="DuplicateV07"/> (camt.034.001.07) per the ISO 20022 specification.
+/// Validates <see cref="IDuplicateV07"/> (camt.034.001.07) per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _R3IjtTEZEe6kQ-WGAhcVPQ

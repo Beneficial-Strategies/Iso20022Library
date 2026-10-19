@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="PersonIdentificationSchemeName1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IPersonIdentificationSchemeName1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _P_4pQ9p-Ed-ak6NoX_4Aeg_2056543129
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Sets of elements to identify a name of the identification scheme.
 /// <list type="table">
-///   <item><term><see cref="Choices.PersonIdentificationSchemeName1Choice.Code"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalPersonIdentification1Code</description></item>
-///   <item><term><see cref="Choices.PersonIdentificationSchemeName1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.PersonIdentificationSchemeName1Choice.ICode"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalPersonIdentification1Code</description></item>
+///   <item><term><see cref="Choices.PersonIdentificationSchemeName1Choice.IProprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (an <c>IIsoExternalCode</c>

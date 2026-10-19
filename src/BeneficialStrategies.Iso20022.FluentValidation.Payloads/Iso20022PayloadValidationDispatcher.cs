@@ -100,8 +100,13 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
             );
         }
 
-        var validatorInterface = typeof(IValidator<>).MakeGenericType(messageType);
-        if (_serviceProvider.GetService(validatorInterface) is not IValidator validator)
+        // The validators are written for the message interface (#28); a validator registered for the record itself is also used.
+        var messageInterface = MessageValidatorAdapters.InterfaceOf(messageType);
+        var validator =
+            (messageInterface is null ? null : _serviceProvider.GetService(typeof(IValidator<>).MakeGenericType(messageInterface)))
+            as IValidator
+            ?? _serviceProvider.GetService(typeof(IValidator<>).MakeGenericType(messageType)) as IValidator;
+        if (validator is null)
         {
             return new Iso20022PayloadValidationResult(
                 SingleFailure($"No validator is registered for {messageType.Name}.", "NoValidatorRegistered"),

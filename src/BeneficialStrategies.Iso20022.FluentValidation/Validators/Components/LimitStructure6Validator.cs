@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="LimitStructure6"/> per the ISO 20022 specification.
+/// Validates <see cref="ILimitStructure6"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _4Oc6QTEyEe6g-ffJsqGiSA

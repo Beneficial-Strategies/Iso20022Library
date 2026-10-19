@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="IntraPositionDetails32"/> per the ISO 20022 specification.
+/// Validates <see cref="IIntraPositionDetails32"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class IntraPositionDetails32Validator : AbstractValidator<IIntraPositionDetails32>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="IntraPositionDetails32"/>.
+    /// Initializes a new instance of the validator for <see cref="IIntraPositionDetails32"/>.
     /// </summary>
     public IntraPositionDetails32Validator()
     {

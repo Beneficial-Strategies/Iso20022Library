@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PaymentInstruction50"/> per the ISO 20022 specification.
+/// Validates <see cref="IPaymentInstruction50"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 88833a18-3210-4838-a808-05caac40b3f4
@@ -42,10 +42,10 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: every optional/required building block above is validated by an
 /// injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="PartyIdentification272"/> validator instance is reused across <c>Creditor</c>,
+/// <see cref="IPartyIdentification272"/> validator instance is reused across <c>Creditor</c>,
 /// <c>UltimateCreditor</c>, and <c>CreditorSchemeIdentification</c>, the same
-/// <see cref="CashAccount40"/> validator instance across all three account fields, and the same
-/// <see cref="BranchAndFinancialInstitutionIdentification8"/> validator instance across
+/// <see cref="ICashAccount40"/> validator instance across all three account fields, and the same
+/// <see cref="IBranchAndFinancialInstitutionIdentification8"/> validator instance across
 /// <c>CreditorAgent</c> and <c>ChargesAccountAgent</c> — see the two constructors below.
 /// (Upgraded 2026-08-21 from an earlier abbreviated version that only enforced the multiplicity
 /// gap above — <see cref="DirectDebitTransactionInformation34Validator"/> did not exist yet at

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DirectDebitTransaction12"/> per the ISO 20022 specification.
+/// Validates <see cref="IDirectDebitTransaction12"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _wuFgITEyEe6g-ffJsqGiSA

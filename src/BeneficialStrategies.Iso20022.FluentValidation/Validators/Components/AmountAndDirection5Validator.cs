@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AmountAndDirection5"/> per the ISO 20022 specification.
+/// Validates <see cref="IAmountAndDirection5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _T2Wkhdp-Ed-ak6NoX_4Aeg_-2124038249
@@ -32,7 +32,7 @@ public class AmountAndDirection5Validator : AbstractValidator<IAmountAndDirectio
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AmountAndDirection5"/>.
+    /// Initializes a new instance of the validator for <see cref="IAmountAndDirection5"/>.
     /// </summary>
     public AmountAndDirection5Validator()
     {

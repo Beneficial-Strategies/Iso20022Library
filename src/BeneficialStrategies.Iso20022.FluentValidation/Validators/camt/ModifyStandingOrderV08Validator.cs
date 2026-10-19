@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="ModifyStandingOrderV08"/> (camt.024.001.08) per the ISO 20022
+/// Validates <see cref="IModifyStandingOrderV08"/> (camt.024.001.08) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

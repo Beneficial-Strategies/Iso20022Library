@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AcceptorConfiguration8"/> per the ISO 20022 specification.
+/// Validates <see cref="IAcceptorConfiguration8"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AcceptorConfiguration8Validator : AbstractValidator<IAcceptorConfiguration8>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AcceptorConfiguration8"/>.
+    /// Initializes a new instance of the validator for <see cref="IAcceptorConfiguration8"/>.
     /// </summary>
     public AcceptorConfiguration8Validator()
     {

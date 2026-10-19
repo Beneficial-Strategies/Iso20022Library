@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="RegulatoryReportingType1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IRegulatoryReportingType1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _JVOXAHeLEfCdoODv2ypKfw
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice between a code or proprietary format for regulatory reporting type.
 /// <list type="table">
-///   <item><term><see cref="Choices.RegulatoryReportingType1Choice.Code"/></term><description>Value: ExternalRegulatoryReportingType1Code (required 1..1) — checked against an injected <see cref="IExternalCodeRegistry{TCode}"/> via <see cref="ExternalRegulatoryReportingType1CodeValidator"/></description></item>
-///   <item><term><see cref="Choices.RegulatoryReportingType1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.RegulatoryReportingType1Choice.ICode"/></term><description>Value: ExternalRegulatoryReportingType1Code (required 1..1) — checked against an injected <see cref="IExternalCodeRegistry{TCode}"/> via <see cref="ExternalRegulatoryReportingType1CodeValidator"/></description></item>
+///   <item><term><see cref="Choices.RegulatoryReportingType1Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -30,7 +30,7 @@ public class RegulatoryReportingType1Choice_Validator : AbstractValidator<IRegul
     /// of this type constructing its own.
     /// </summary>
     /// <param name="codeValueValidator">
-    /// Validator for <see cref="Choices.RegulatoryReportingType1Choice.Code"/>'s required <c>Value</c>
+    /// Validator for <see cref="Choices.RegulatoryReportingType1Choice.ICode"/>'s required <c>Value</c>
     /// (ExternalRegulatoryReportingType1Code, 1..1).
     /// </param>
     public RegulatoryReportingType1Choice_Validator(

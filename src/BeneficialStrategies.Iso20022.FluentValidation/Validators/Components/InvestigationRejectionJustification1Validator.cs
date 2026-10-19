@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="InvestigationRejectionJustification1"/> per the ISO 20022 specification.
+/// Validates <see cref="IInvestigationRejectionJustification1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _T-ZtQNp-Ed-ak6NoX_4Aeg_947706668

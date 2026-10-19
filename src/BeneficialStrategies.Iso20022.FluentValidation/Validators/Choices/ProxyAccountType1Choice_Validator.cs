@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ProxyAccountType1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IProxyAccountType1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _dyock3h3EeidzqjNEfehPg
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the scheme used for the identification of an account alias.
 /// <list type="table">
-///   <item><term><see cref="Choices.ProxyAccountType1Choice.Code"/></term><description>Specifies the proxy account type, as published in an external proxy account type code list — Value: ExternalProxyAccountType1Code</description></item>
-///   <item><term><see cref="Choices.ProxyAccountType1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.ProxyAccountType1Choice.ICode"/></term><description>Specifies the proxy account type, as published in an external proxy account type code list — Value: ExternalProxyAccountType1Code</description></item>
+///   <item><term><see cref="Choices.ProxyAccountType1Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

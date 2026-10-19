@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="NonFinancialResponseComponent6"/> per the ISO 20022 specification.
+/// Validates <see cref="INonFinancialResponseComponent6"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class NonFinancialResponseComponent6Validator : AbstractValidator<INonFinancialResponseComponent6>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="NonFinancialResponseComponent6"/>.
+    /// Initializes a new instance of the validator for <see cref="INonFinancialResponseComponent6"/>.
     /// </summary>
     public NonFinancialResponseComponent6Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="References80Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IReferences80Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _gLk2a4YdEe-Pv9KR9bv9IA
@@ -11,17 +11,17 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of reference types for a securities-related allocation.
 /// <list type="table">
-///   <item><term><see cref="Choices.References80Choice.AccountServicerTransactionIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.CommonIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.CounterpartyMarketInfrastructureTransactionIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.IntraBalanceMovementIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.IntraPositionMovementIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.MarketInfrastructureTransactionIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.OtherTransactionIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.PoolIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.SecuritiesSettlementTransactionIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.TradeIdentification"/></term><description>Value: Max35Text</description></item>
-///   <item><term><see cref="Choices.References80Choice.UniqueTransactionIdentifier"/></term><description>Value: UTIIdentifier</description></item>
+///   <item><term><see cref="Choices.References80Choice.IAccountServicerTransactionIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.ICommonIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.ICounterpartyMarketInfrastructureTransactionIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.IIntraBalanceMovementIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.IIntraPositionMovementIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.IMarketInfrastructureTransactionIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.IOtherTransactionIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.IPoolIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.ISecuritiesSettlementTransactionIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.ITradeIdentification"/></term><description>Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.References80Choice.IUniqueTransactionIdentifier"/></term><description>Value: UTIIdentifier</description></item>
 /// </list>
 ///
 /// All eleven variants are fully enforced at the struct level already (every variant wraps an

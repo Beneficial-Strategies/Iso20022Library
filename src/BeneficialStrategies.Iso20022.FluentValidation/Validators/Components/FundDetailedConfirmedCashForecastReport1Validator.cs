@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="FundDetailedConfirmedCashForecastReport1"/> per the ISO 20022 specification.
+/// Validates <see cref="IFundDetailedConfirmedCashForecastReport1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Uu-Omtp-Ed-ak6NoX_4Aeg_1656814301

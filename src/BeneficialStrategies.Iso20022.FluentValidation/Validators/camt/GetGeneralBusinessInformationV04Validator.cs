@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="GetGeneralBusinessInformationV04"/> (camt.020.001.04) per the ISO 20022
+/// Validates <see cref="IGetGeneralBusinessInformationV04"/> (camt.020.001.04) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

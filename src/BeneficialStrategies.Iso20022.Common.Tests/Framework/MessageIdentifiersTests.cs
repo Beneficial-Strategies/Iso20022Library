@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022;
 public class MessageIdentifiersTests
 {
     private static IEnumerable<(Type Type, string Identifier, string Namespace)> Messages() =>
-        typeof(Iso20022XmlSerializer)
+        typeof(BeneficialStrategies.Iso20022.pacs.FIToFICustomerCreditTransferV14)
             .Assembly.GetExportedTypes()
             .Where(t => typeof(IOuterRecord).IsAssignableFrom(t) && t.IsClass)
             .Select(t => (t, (string)t.GetField("IsoIdentifier")!.GetRawConstantValue()!, (string)t.GetField("DocumentNamespace")!.GetRawConstantValue()!));

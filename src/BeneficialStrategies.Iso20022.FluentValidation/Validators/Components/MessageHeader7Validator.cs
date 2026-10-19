@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MessageHeader7"/> per the ISO 20022 specification.
+/// Validates <see cref="IMessageHeader7"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _imfkUZIhEeect698_YsnIA
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 ///
 /// No constraints are declared on this component in the spec. This is the "response" sibling of
-/// <see cref="MessageHeader9"/> (used on the request side) — same <c>RequestType</c> field, plus
+/// <see cref="IMessageHeader9"/> (used on the request side) — same <c>RequestType</c> field, plus
 /// <c>OriginalBusinessQuery</c> and <c>QueryName</c> to correlate the response back to the
 /// original request.
 ///

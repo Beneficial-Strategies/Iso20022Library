@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="Amount2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IAmount2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _75DzlKMgEeCJ6YNENx4h-w_890446015
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice between an amount with or without the currency.
 /// <list type="table">
-///   <item><term><see cref="Choices.Amount2Choice.AmountWithCurrency"/></term><description>Number of monetary units specified in a currency where the unit of currency is explicit — Currency (string), Amount (decimal), both fully primitive-typed, no further rule needed</description></item>
-///   <item><term><see cref="Choices.Amount2Choice.AmountWithoutCurrency"/></term><description>Number of monetary units specified in a currency where the unit of currency is implied by the context — Currency (string), Amount (decimal), both fully primitive-typed, no further rule needed</description></item>
+///   <item><term><see cref="Choices.Amount2Choice.IAmountWithCurrency"/></term><description>Number of monetary units specified in a currency where the unit of currency is explicit — Currency (string), Amount (decimal), both fully primitive-typed, no further rule needed</description></item>
+///   <item><term><see cref="Choices.Amount2Choice.IAmountWithoutCurrency"/></term><description>Number of monetary units specified in a currency where the unit of currency is implied by the context — Currency (string), Amount (decimal), both fully primitive-typed, no further rule needed</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced already (their fields match this project's Amounts-namespace

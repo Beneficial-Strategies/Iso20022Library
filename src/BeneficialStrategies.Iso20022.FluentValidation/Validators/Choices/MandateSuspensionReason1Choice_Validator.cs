@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="MandateSuspensionReason1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateSuspensionReason1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _gW_7w4PDEeahmOIR_zFG6A
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the reason for the suspension request of a mandate.
 /// <list type="table">
-///   <item><term><see cref="Choices.MandateSuspensionReason1Choice.Code"/></term><description>Value: ExternalMandateSuspensionReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.MandateSuspensionReason1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.MandateSuspensionReason1Choice.ICode"/></term><description>Value: ExternalMandateSuspensionReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.MandateSuspensionReason1Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

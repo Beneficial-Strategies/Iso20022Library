@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="CustomerPaymentReversalV13"/> per the ISO 20022 specification.
+/// Validates <see cref="ICustomerPaymentReversalV13"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: pain.007.001.13 (bf413c78-37ae-4bd7-bfe4-b88659e3626d), Registered.
@@ -66,7 +66,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 ///       additional information about a transaction — the SupplementaryData element at
 ///       transaction level should be used for that purpose instead. Not independently
 ///       enforceable by this library — no structural signal distinguishes message-level-scoped
-///       content from transaction-scoped content inside a <see cref="SupplementaryData1"/>
+///       content from transaction-scoped content inside a <see cref="ISupplementaryData1"/>
 ///       instance at the C# model level.
 ///     </description>
 ///   </item>

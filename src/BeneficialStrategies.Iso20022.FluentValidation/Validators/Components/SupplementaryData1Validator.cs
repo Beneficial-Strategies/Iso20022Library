@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SupplementaryData1"/> per the ISO 20022 specification.
+/// Validates <see cref="ISupplementaryData1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Qn0zC9p-Ed-ak6NoX_4Aeg_468227563
@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class SupplementaryData1Validator : AbstractValidator<ISupplementaryData1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="SupplementaryData1"/>.
+    /// Initializes a new instance of the validator for <see cref="ISupplementaryData1"/>.
     /// </summary>
     public SupplementaryData1Validator()
     {

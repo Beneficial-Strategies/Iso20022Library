@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DocumentNumber5"/> per the ISO 20022 specification.
+/// Validates <see cref="IDocumentNumber5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DocumentNumber5Validator : AbstractValidator<IDocumentNumber5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DocumentNumber5"/>.
+    /// Initializes a new instance of the validator for <see cref="IDocumentNumber5"/>.
     /// </summary>
     public DocumentNumber5Validator()
     {

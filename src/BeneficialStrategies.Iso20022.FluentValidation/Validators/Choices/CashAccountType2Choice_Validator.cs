@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="CashAccountType2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ICashAccountType2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _sb6WgFkyEeGeoaLUQk__nA_1768299331
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Nature or use of the account.
 /// <list type="table">
-///   <item><term><see cref="Choices.CashAccountType2Choice.Code"/></term><description>Specifies the nature, or use, of the account in a coded form — Value: ExternalCashAccountType1Code</description></item>
-///   <item><term><see cref="Choices.CashAccountType2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.CashAccountType2Choice.ICode"/></term><description>Specifies the nature, or use, of the account in a coded form — Value: ExternalCashAccountType1Code</description></item>
+///   <item><term><see cref="Choices.CashAccountType2Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

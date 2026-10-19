@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SettlementInstruction14"/> per the ISO 20022 specification.
+/// Validates <see cref="ISettlementInstruction14"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _g2NR-9cZEeqRFcf2R4bPBw

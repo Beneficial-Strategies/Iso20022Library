@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RedemptionMultipleOrder07"/> per the ISO 20022 specification.
+/// Validates <see cref="IRedemptionMultipleOrder07"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class RedemptionMultipleOrder07Validator : AbstractValidator<IRedemptionMultipleOrder07>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="RedemptionMultipleOrder07"/>.
+    /// Initializes a new instance of the validator for <see cref="IRedemptionMultipleOrder07"/>.
     /// </summary>
     public RedemptionMultipleOrder07Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="LiquidityCreditTransfer4"/> per the ISO 20022 specification.
+/// Validates <see cref="ILiquidityCreditTransfer4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6_VGcTEyEe6g-ffJsqGiSA

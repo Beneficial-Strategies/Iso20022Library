@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="GroupHeader131"/> per the ISO 20022 specification.
+/// Validates <see cref="IGroupHeader131"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _sVST0W9YEe-Mlpx0N5T4gg

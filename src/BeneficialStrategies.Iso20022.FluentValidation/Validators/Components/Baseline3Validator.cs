@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Baseline3"/> per the ISO 20022 specification.
+/// Validates <see cref="IBaseline3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class Baseline3Validator : AbstractValidator<IBaseline3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Baseline3"/>.
+    /// Initializes a new instance of the validator for <see cref="IBaseline3"/>.
     /// </summary>
     public Baseline3Validator()
     {

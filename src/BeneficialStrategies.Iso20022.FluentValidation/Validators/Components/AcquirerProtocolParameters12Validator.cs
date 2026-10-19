@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AcquirerProtocolParameters12"/> per the ISO 20022 specification.
+/// Validates <see cref="IAcquirerProtocolParameters12"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AcquirerProtocolParameters12Validator : AbstractValidator<IAcquirerProtocolParameters12>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AcquirerProtocolParameters12"/>.
+    /// Initializes a new instance of the validator for <see cref="IAcquirerProtocolParameters12"/>.
     /// </summary>
     public AcquirerProtocolParameters12Validator()
     {

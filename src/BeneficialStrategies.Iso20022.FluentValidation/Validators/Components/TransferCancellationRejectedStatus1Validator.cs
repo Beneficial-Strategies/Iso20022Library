@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TransferCancellationRejectedStatus1"/> per the ISO 20022 specification.
+/// Validates <see cref="ITransferCancellationRejectedStatus1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TransferCancellationRejectedStatus1Validator : AbstractValidator<ITransferCancellationRejectedStatus1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TransferCancellationRejectedStatus1"/>.
+    /// Initializes a new instance of the validator for <see cref="ITransferCancellationRejectedStatus1"/>.
     /// </summary>
     public TransferCancellationRejectedStatus1Validator()
     {

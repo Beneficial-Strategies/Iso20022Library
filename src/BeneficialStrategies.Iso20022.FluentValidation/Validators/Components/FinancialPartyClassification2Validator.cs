@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="FinancialPartyClassification2"/> per the ISO 20022 specification.
+/// Validates <see cref="IFinancialPartyClassification2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class FinancialPartyClassification2Validator : AbstractValidator<IFinancialPartyClassification2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="FinancialPartyClassification2"/>.
+    /// Initializes a new instance of the validator for <see cref="IFinancialPartyClassification2"/>.
     /// </summary>
     public FinancialPartyClassification2Validator()
     {

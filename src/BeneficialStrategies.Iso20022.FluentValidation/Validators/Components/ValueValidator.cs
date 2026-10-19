@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Value"/> per the ISO 20022 specification.
+/// Validates <see cref="IValue"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _SVDJ0dp-Ed-ak6NoX_4Aeg_-76711377
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ValueValidator : AbstractValidator<IValue>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Value"/>.
+    /// Initializes a new instance of the validator for <see cref="IValue"/>.
     /// </summary>
     public ValueValidator()
     {

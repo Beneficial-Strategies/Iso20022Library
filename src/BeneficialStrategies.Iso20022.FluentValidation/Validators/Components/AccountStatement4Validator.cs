@@ -5,7 +5,7 @@ using RptgSrc1 = BeneficialStrategies.Iso20022.Choices.ReportingSource1Choice;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AccountStatement4"/> per the ISO 20022 specification.
+/// Validates <see cref="IAccountStatement4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _9cVDkSGxEeKjd4jizyIDGA
@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AccountStatement4Validator : AbstractValidator<IAccountStatement4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AccountStatement4"/>.
+    /// Initializes a new instance of the validator for <see cref="IAccountStatement4"/>.
     /// </summary>
     public AccountStatement4Validator()
     {

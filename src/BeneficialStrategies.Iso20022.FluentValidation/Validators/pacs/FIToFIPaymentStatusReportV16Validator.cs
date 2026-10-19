@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pacs;
 
 /// <summary>
-/// Validates <see cref="FIToFIPaymentStatusReportV16"/> per the ISO 20022 specification.
+/// Validates <see cref="IFIToFIPaymentStatusReportV16"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: pacs.002.001.16 (42d3d142-0665-41d5-b5b7-87bdd32671d8), Registered.
@@ -60,7 +60,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 ///       additional information about a transaction — the SupplementaryData element at
 ///       transaction level should be used for that purpose instead. Not independently
 ///       enforceable by this library — no structural signal distinguishes message-level-scoped
-///       content from transaction-scoped content inside a <see cref="SupplementaryData1"/>
+///       content from transaction-scoped content inside a <see cref="ISupplementaryData1"/>
 ///       instance at the C# model level.
 ///     </description>
 ///   </item>

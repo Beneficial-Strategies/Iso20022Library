@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TrackerStatusAndTransaction21"/> per the ISO 20022 specification.
+/// Validates <see cref="ITrackerStatusAndTransaction21"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TrackerStatusAndTransaction21Validator : AbstractValidator<ITrackerStatusAndTransaction21>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TrackerStatusAndTransaction21"/>.
+    /// Initializes a new instance of the validator for <see cref="ITrackerStatusAndTransaction21"/>.
     /// </summary>
     public TrackerStatusAndTransaction21Validator()
     {

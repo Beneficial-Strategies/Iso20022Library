@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TaxCalculation1"/> per the ISO 20022 specification.
+/// Validates <see cref="ITaxCalculation1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6R49apqlEeGSON8vddiWzQ_163014572
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TaxCalculation1Validator : AbstractValidator<ITaxCalculation1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TaxCalculation1"/>.
+    /// Initializes a new instance of the validator for <see cref="ITaxCalculation1"/>.
     /// </summary>
     public TaxCalculation1Validator()
     {

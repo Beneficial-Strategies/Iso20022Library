@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Cheque19"/> per the ISO 20022 specification.
+/// Validates <see cref="ICheque19"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// Rewritten from the ISO 20022 repository when the members of the component were corrected (#47): the members, their order and

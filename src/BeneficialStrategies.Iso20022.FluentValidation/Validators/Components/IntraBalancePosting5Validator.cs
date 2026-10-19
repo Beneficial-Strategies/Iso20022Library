@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="IntraBalancePosting5"/> per the ISO 20022 specification.
+/// Validates <see cref="IIntraBalancePosting5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _ZMt4zTneEem7JZMuWtwtsg
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class IntraBalancePosting5Validator : AbstractValidator<IIntraBalancePosting5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="IntraBalancePosting5"/>.
+    /// Initializes a new instance of the validator for <see cref="IIntraBalancePosting5"/>.
     /// </summary>
     public IntraBalancePosting5Validator()
     {

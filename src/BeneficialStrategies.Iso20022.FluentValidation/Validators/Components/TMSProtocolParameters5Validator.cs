@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TMSProtocolParameters5"/> per the ISO 20022 specification.
+/// Validates <see cref="ITMSProtocolParameters5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TMSProtocolParameters5Validator : AbstractValidator<ITMSProtocolParameters5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TMSProtocolParameters5"/>.
+    /// Initializes a new instance of the validator for <see cref="ITMSProtocolParameters5"/>.
     /// </summary>
     public TMSProtocolParameters5Validator()
     {

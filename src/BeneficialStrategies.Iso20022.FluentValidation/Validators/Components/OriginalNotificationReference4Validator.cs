@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OriginalNotificationReference4"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalNotificationReference4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _tn6PlVkyEeGeoaLUQk__nA_237224306
@@ -23,8 +23,8 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>AccountAndCurrencyRule</term><description>If Account is present, then all occurrences of OriginalItem/Amount must have the same currency.</description></item>
 /// </list>
 ///
-/// Constraints (from spec) — <b>NOT enforceable, spec/model mismatch</b>: <see cref="OriginalItem3"/>
-/// (the type of <see cref="OriginalNotificationReference4.OriginalItem"/>) has only 5 real ISO
+/// Constraints (from spec) — <b>NOT enforceable, spec/model mismatch</b>: <see cref="IOriginalItem3"/>
+/// (the type of <see cref="IOriginalNotificationReference4.OriginalItem"/>) has only 5 real ISO
 /// dictionary children — OriginalItemIdentification, OriginalEndToEndIdentification, Amount,
 /// ExpectedValueDate, OriginalItemReference (verified directly against the ISO dictionary entry,
 /// not just the generated C#) — it has no Debtor, DebtorAgent, Account, AccountOwner,
@@ -48,7 +48,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class OriginalNotificationReference4Validator : AbstractValidator<IOriginalNotificationReference4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="OriginalNotificationReference4"/>.
+    /// Initializes a new instance of the validator for <see cref="IOriginalNotificationReference4"/>.
     /// </summary>
     public OriginalNotificationReference4Validator()
     {

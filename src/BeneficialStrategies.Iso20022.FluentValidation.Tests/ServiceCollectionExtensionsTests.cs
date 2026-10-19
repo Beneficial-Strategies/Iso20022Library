@@ -33,8 +33,8 @@ public class ServiceCollectionExtensionsTests
         using var provider = services.BuildServiceProvider();
 
         // One message validator per registered business area...
-        Assert.NotNull(provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<MandateCopyRequestV04>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IMandateCopyRequestV04>>());
         // ...and the shared component/choice validators messages in any area depend on.
         Assert.NotNull(provider.GetRequiredService<IValidator<ICase6>>());
         Assert.NotNull(
@@ -49,7 +49,7 @@ public class ServiceCollectionExtensionsTests
         services.AddIso20022Validators();
         using var provider = services.BuildServiceProvider();
 
-        var sut = provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>();
+        var sut = provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>();
         var result = sut.Validate(ValidCancelCaseAssignment());
 
         Assert.True(result.IsValid, string.Join("; ", result.Errors.Select(e => e.ErrorMessage)));
@@ -80,7 +80,7 @@ public class ServiceCollectionExtensionsTests
         services.AddScoped<IValidator<ICase6>, AlwaysInvalidCase6Validator>();
         using var provider = services.BuildServiceProvider();
 
-        var sut = provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>();
+        var sut = provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>();
         var result = sut.Validate(ValidCancelCaseAssignment());
 
         Assert.False(result.IsValid);
@@ -110,11 +110,11 @@ public class ServiceCollectionExtensionsTests
         using var provider = services.BuildServiceProvider();
 
         // Requested area: registered.
-        Assert.NotNull(provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>());
 
         // Non-requested area: not registered.
         Assert.Throws<InvalidOperationException>(
-            () => provider.GetRequiredService<IValidator<MandateCopyRequestV04>>()
+            () => provider.GetRequiredService<IValidator<IMandateCopyRequestV04>>()
         );
 
         // Shared component/choice validators: always registered, regardless of area filter,
@@ -132,7 +132,7 @@ public class ServiceCollectionExtensionsTests
         services.AddIso20022Validators(businessAreas: ["camt"]);
         using var provider = services.BuildServiceProvider();
 
-        var sut = provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>();
+        var sut = provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>();
         var result = sut.Validate(ValidCancelCaseAssignment());
 
         Assert.True(result.IsValid, string.Join("; ", result.Errors.Select(e => e.ErrorMessage)));
@@ -148,7 +148,7 @@ public class ServiceCollectionExtensionsTests
         using var provider = services.BuildServiceProvider();
 
         // The root itself and everything it transitively needs, several levels deep, all resolve.
-        Assert.NotNull(provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>());
         Assert.NotNull(provider.GetRequiredService<IValidator<ICaseAssignment6>>());
         Assert.NotNull(provider.GetRequiredService<IValidator<ICase6>>());
         Assert.NotNull(
@@ -163,7 +163,7 @@ public class ServiceCollectionExtensionsTests
         // this is the precision the namespace-based area filter can't give you: MandateCopy4
         // and GroupHeader110 live in Components too, but CancelCaseAssignmentV05 never reaches them.
         Assert.Throws<InvalidOperationException>(
-            () => provider.GetRequiredService<IValidator<MandateCopyRequestV04>>()
+            () => provider.GetRequiredService<IValidator<IMandateCopyRequestV04>>()
         );
         Assert.Throws<InvalidOperationException>(() => provider.GetRequiredService<IValidator<IMandateCopy4>>());
         Assert.Throws<InvalidOperationException>(
@@ -193,7 +193,7 @@ public class ServiceCollectionExtensionsTests
         services.AddIso20022Validators(rootTypes: [typeof(CancelCaseAssignmentV05)]);
         using var provider = services.BuildServiceProvider();
 
-        var sut = provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>();
+        var sut = provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>();
         var result = sut.Validate(ValidCancelCaseAssignment());
 
         Assert.True(result.IsValid, string.Join("; ", result.Errors.Select(e => e.ErrorMessage)));
@@ -208,8 +208,8 @@ public class ServiceCollectionExtensionsTests
         );
         using var provider = services.BuildServiceProvider();
 
-        Assert.NotNull(provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<MandateCopyRequestV04>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IMandateCopyRequestV04>>());
         Assert.NotNull(provider.GetRequiredService<IValidator<IGroupHeader110>>());
         Assert.NotNull(provider.GetRequiredService<IValidator<ICase6>>());
     }

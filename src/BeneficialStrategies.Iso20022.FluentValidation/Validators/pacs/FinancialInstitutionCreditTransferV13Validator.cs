@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pacs;
 
 /// <summary>
-/// Validates <see cref="FinancialInstitutionCreditTransferV13"/> per the ISO 20022 specification.
+/// Validates <see cref="IFinancialInstitutionCreditTransferV13"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: pacs.009.001.13 (b70980f0-c5be-4e42-bb84-24f01b90e88e), Registered.
@@ -66,7 +66,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 ///       additional information about a transaction — the SupplementaryData element at
 ///       transaction level should be used for that purpose instead. Not independently
 ///       enforceable by this library — no structural signal distinguishes message-level-scoped
-///       content from transaction-scoped content inside a <see cref="SupplementaryData1"/>
+///       content from transaction-scoped content inside a <see cref="ISupplementaryData1"/>
 ///       instance at the C# model level.
 ///     </description>
 ///   </item>

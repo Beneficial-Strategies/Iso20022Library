@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SettlementInstruction15"/> per the ISO 20022 specification.
+/// Validates <see cref="ISettlementInstruction15"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _wFG0kTEyEe6g-ffJsqGiSA
@@ -27,8 +27,8 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: every building block above is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="BranchAndFinancialInstitutionIdentification8"/> validator instance is reused across
-/// all three agent fields and the same <see cref="CashAccount40"/> validator instance across all
+/// <see cref="IBranchAndFinancialInstitutionIdentification8"/> validator instance is reused across
+/// all three agent fields and the same <see cref="ICashAccount40"/> validator instance across all
 /// four account fields — see the two constructors below.
 /// </remarks>
 public class SettlementInstruction15Validator : AbstractValidator<ISettlementInstruction15>

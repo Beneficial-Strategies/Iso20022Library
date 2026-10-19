@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ExchangeRate1"/> per the ISO 20022 specification.
+/// Validates <see cref="IExchangeRate1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// Written from the ISO 20022 repository (#47). Every member is a simple type or a code set, which check themselves when they are

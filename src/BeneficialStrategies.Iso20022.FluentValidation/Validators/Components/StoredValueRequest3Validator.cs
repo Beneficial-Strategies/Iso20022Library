@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="StoredValueRequest3"/> per the ISO 20022 specification.
+/// Validates <see cref="IStoredValueRequest3"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class StoredValueRequest3Validator : AbstractValidator<IStoredValueRequest3>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="StoredValueRequest3"/>.
+    /// Initializes a new instance of the validator for <see cref="IStoredValueRequest3"/>.
     /// </summary>
     public StoredValueRequest3Validator()
     {

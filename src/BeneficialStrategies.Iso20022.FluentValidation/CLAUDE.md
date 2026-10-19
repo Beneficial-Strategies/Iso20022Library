@@ -226,8 +226,9 @@ Every validator is an `AbstractValidator<I…>` (`GroupHeader131Validator : Abst
 implements its interface, and so does any class an implementer writes, so both are validated by the same rules and give the
 same failures. Never test or cast to a record in a rule (`x is Choices.Foo.Bar`); use the variant interface
 (`Choices.Foo.IBar`). `tools/validation/convert_validators.py` does the mechanical move for a validator written against records.
-The message roots also resolve as `IValidator<TheRecord>`, through `MessageValidatorAdapter`, so the envelope validators and
-call sites that hold the record keep working.
+`IValidator<in T>` is contravariant, so a message validator can be handed where `IValidator<TheRecord>` is expected. A DI container does not do that:
+the `.Payloads` package (`BeneficialStrategies.Iso20022.FluentValidation.Payloads`, which does not reference the records) registers the
+`IValidator<TheRecord>` forwarders its envelope validators need. This package references `Primitives` and `Interfaces` only.
 
 Validating a choice type is validating *which concrete variant is present and what it carries*. Use
 `this.SetVariantValidators(v => v.Add(variantValidator))` (in `Extensions/VariantValidatorExtensions.cs`): build one small

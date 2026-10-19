@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CounterpartyData88"/> per the ISO 20022 specification.
+/// Validates <see cref="ICounterpartyData88"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CounterpartyData88Validator : AbstractValidator<ICounterpartyData88>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CounterpartyData88"/>.
+    /// Initializes a new instance of the validator for <see cref="ICounterpartyData88"/>.
     /// </summary>
     public CounterpartyData88Validator()
     {

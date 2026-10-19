@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="Purpose2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IPurpose2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _P6qyHtp-Ed-ak6NoX_4Aeg_-1283223379
@@ -14,8 +14,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// information concerning the nature of the payment. Purpose is a content element, which is not
 /// used for processing by any of the agents involved in the payment chain.
 /// <list type="table">
-///   <item><term><see cref="Choices.Purpose2Choice.Code"/></term><description>Value: ExternalPurpose1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.Purpose2Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.Purpose2Choice.ICode"/></term><description>Value: ExternalPurpose1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.Purpose2Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

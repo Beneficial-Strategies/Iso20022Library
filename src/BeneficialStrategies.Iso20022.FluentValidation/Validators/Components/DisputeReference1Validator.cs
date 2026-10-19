@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DisputeReference1"/> per the ISO 20022 specification.
+/// Validates <see cref="IDisputeReference1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DisputeReference1Validator : AbstractValidator<IDisputeReference1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DisputeReference1"/>.
+    /// Initializes a new instance of the validator for <see cref="IDisputeReference1"/>.
     /// </summary>
     public DisputeReference1Validator()
     {

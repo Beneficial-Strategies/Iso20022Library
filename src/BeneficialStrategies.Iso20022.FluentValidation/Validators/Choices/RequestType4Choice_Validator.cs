@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="RequestType4Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IRequestType4Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _ivV-XZIhEeect698_YsnIA
@@ -11,9 +11,9 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Defines the type of action to be performed in the request.
 /// <list type="table">
-///   <item><term><see cref="Choices.RequestType4Choice.PaymentControl"/></term><description>Value: ExternalPaymentControlRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.RequestType4Choice.Enquiry"/></term><description>Value: ExternalEnquiryRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.RequestType4Choice.Proprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
+///   <item><term><see cref="Choices.RequestType4Choice.IPaymentControl"/></term><description>Value: ExternalPaymentControlRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.RequestType4Choice.IEnquiry"/></term><description>Value: ExternalEnquiryRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.RequestType4Choice.IProprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
 /// </list>
 ///
 /// All three variants are fully enforced at the struct/enum level already — there is no

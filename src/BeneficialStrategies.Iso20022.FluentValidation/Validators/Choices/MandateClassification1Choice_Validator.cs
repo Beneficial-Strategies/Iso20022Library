@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="MandateClassification1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateClassification1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _JThtg2oDEearR-CA7eRZXQ
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the high level purpose of the instruction based on a set of pre-defined categories. Usage: This is used by the initiating party to provide information concerning the processing of the payment. It is likely to trigger special processing by any of the agents involved in the payment chain.
 /// <list type="table">
-///   <item><term><see cref="Choices.MandateClassification1Choice.Code"/></term><description>Specifies the mandate classification in a coded form — Value: MandateClassification1Code</description></item>
-///   <item><term><see cref="Choices.MandateClassification1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.MandateClassification1Choice.ICode"/></term><description>Specifies the mandate classification in a coded form — Value: MandateClassification1Code</description></item>
+///   <item><term><see cref="Choices.MandateClassification1Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

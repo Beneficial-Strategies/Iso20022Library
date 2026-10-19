@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SafekeepingAccount9"/> per the ISO 20022 specification.
+/// Validates <see cref="ISafekeepingAccount9"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class SafekeepingAccount9Validator : AbstractValidator<ISafekeepingAccount9>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="SafekeepingAccount9"/>.
+    /// Initializes a new instance of the validator for <see cref="ISafekeepingAccount9"/>.
     /// </summary>
     public SafekeepingAccount9Validator()
     {

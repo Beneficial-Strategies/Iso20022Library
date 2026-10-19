@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MandateTypeInformation2"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateTypeInformation2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _cm369kjwEeaVLL5QKJ4f-A

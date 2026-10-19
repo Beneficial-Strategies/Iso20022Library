@@ -49,7 +49,7 @@ class Entries(unittest.TestCase):
     def test_areas_route_to_packages_and_sagas_are_unpublished(self):
         e = r.build_entries([issue(1, "a", "bug", "area:validation"), issue(2, "b", "bug"), issue(3, "c", "bug", "area:sagas")], {})
         self.assertEqual({"validation"}, e[0]["packages"])
-        self.assertEqual({"core", "primitives", "interfaces", "validation"}, e[1]["packages"])
+        self.assertEqual({"core", "primitives", "interfaces", "validation", "payloads"}, e[1]["packages"])
         self.assertEqual([1, 2], [x["number"] for x in e])
 
 

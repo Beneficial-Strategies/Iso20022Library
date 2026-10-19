@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="DocumentType2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IDocumentType2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _O4jeMzE0Ee62xuUQ2zyZww
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the type of the referred document, in a coded or proprietary form.
 /// <list type="table">
-///   <item><term><see cref="Choices.DocumentType2Choice.Code"/></term><description>Specifies the document type, as published in an external document type code list — Value: ExternalDocumentType1Code</description></item>
-///   <item><term><see cref="Choices.DocumentType2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.DocumentType2Choice.ICode"/></term><description>Specifies the document type, as published in an external document type code list — Value: ExternalDocumentType1Code</description></item>
+///   <item><term><see cref="Choices.DocumentType2Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

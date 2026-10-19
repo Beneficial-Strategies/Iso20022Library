@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ChargesPerTransaction4"/> per the ISO 20022 specification.
+/// Validates <see cref="IChargesPerTransaction4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6FpFYTEyEe6g-ffJsqGiSA

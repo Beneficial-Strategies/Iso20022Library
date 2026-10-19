@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="InvestmentFundOrderExecution1"/> per the ISO 20022 specification.
+/// Validates <see cref="IInvestmentFundOrderExecution1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class InvestmentFundOrderExecution1Validator : AbstractValidator<IInvestmentFundOrderExecution1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="InvestmentFundOrderExecution1"/>.
+    /// Initializes a new instance of the validator for <see cref="IInvestmentFundOrderExecution1"/>.
     /// </summary>
     public InvestmentFundOrderExecution1Validator()
     {

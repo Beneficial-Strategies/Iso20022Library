@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RegisteredContract9"/> per the ISO 20022 specification.
+/// Validates <see cref="IRegisteredContract9"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class RegisteredContract9Validator : AbstractValidator<IRegisteredContract9>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="RegisteredContract9"/>.
+    /// Initializes a new instance of the validator for <see cref="IRegisteredContract9"/>.
     /// </summary>
     public RegisteredContract9Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Undertaking1"/> per the ISO 20022 specification.
+/// Validates <see cref="IUndertaking1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class Undertaking1Validator : AbstractValidator<IUndertaking1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="Undertaking1"/>.
+    /// Initializes a new instance of the validator for <see cref="IUndertaking1"/>.
     /// </summary>
     public Undertaking1Validator()
     {

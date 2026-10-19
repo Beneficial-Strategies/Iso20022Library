@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
 /// <summary>
-/// Validates <see cref="PayInEventAcknowledgementV02"/> (camt.063.001.02) per the ISO 20022
+/// Validates <see cref="IPayInEventAcknowledgementV02"/> (camt.063.001.02) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

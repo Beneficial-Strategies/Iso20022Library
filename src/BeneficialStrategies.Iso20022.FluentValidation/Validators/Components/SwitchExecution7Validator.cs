@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="SwitchExecution7"/> per the ISO 20022 specification.
+/// Validates <see cref="ISwitchExecution7"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class SwitchExecution7Validator : AbstractValidator<ISwitchExecution7>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="SwitchExecution7"/>.
+    /// Initializes a new instance of the validator for <see cref="ISwitchExecution7"/>.
     /// </summary>
     public SwitchExecution7Validator()
     {

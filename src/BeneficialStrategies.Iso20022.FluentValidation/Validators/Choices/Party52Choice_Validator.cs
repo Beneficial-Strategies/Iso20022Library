@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="Party52Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IParty52Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _bHNcUTFIEe651u5xu3f5iw
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the identification of a person or an organisation.
 /// <list type="table">
-///   <item><term><see cref="Choices.Party52Choice.OrganisationIdentification"/></term><description>Unique and unambiguous way to identify an organisation — Value: OrganisationIdentification39</description></item>
-///   <item><term><see cref="Choices.Party52Choice.PrivateIdentification"/></term><description>Unique and unambiguous identification of a person, for example a passport — Value: PersonIdentification18</description></item>
+///   <item><term><see cref="Choices.Party52Choice.IOrganisationIdentification"/></term><description>Unique and unambiguous way to identify an organisation — Value: OrganisationIdentification39</description></item>
+///   <item><term><see cref="Choices.Party52Choice.IPrivateIdentification"/></term><description>Unique and unambiguous identification of a person, for example a passport — Value: PersonIdentification18</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -29,11 +29,11 @@ public class Party52Choice_Validator : AbstractValidator<IParty52Choice>
     /// this type constructing its own.
     /// </summary>
     /// <param name="organisationIdentificationValueValidator">
-    /// Validator for <see cref="Choices.Party52Choice.OrganisationIdentification"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.Party52Choice.IOrganisationIdentification"/>'s <c>Value</c>
     /// (OrganisationIdentification39).
     /// </param>
     /// <param name="privateIdentificationValueValidator">
-    /// Validator for <see cref="Choices.Party52Choice.PrivateIdentification"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.Party52Choice.IPrivateIdentification"/>'s <c>Value</c>
     /// (PersonIdentification18).
     /// </param>
     public Party52Choice_Validator(

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ReportLine4"/> per the ISO 20022 specification.
+/// Validates <see cref="IReportLine4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ReportLine4Validator : AbstractValidator<IReportLine4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ReportLine4"/>.
+    /// Initializes a new instance of the validator for <see cref="IReportLine4"/>.
     /// </summary>
     public ReportLine4Validator()
     {

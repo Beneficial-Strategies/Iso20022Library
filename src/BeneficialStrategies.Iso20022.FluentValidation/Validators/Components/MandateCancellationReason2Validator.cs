@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MandateCancellationReason2"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateCancellationReason2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _5w0E6TEyEe6g-ffJsqGiSA

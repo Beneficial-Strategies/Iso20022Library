@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="GenericFinancialIdentification1"/> per the ISO 20022 specification.
+/// Validates <see cref="IGenericFinancialIdentification1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _QALkM9p-Ed-ak6NoX_4Aeg_-2141717394

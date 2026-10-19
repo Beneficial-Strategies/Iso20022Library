@@ -105,7 +105,7 @@ public static partial class Iso20022XmlSerializer
         try
         {
             if (xml is null)
-                throw new ArgumentNullException(nameof(xml));
+                throw new System.ArgumentNullException(nameof(xml));
 
             message = Deserialize<TMessage>(xml);
             error = null;
@@ -136,7 +136,7 @@ public static partial class Iso20022XmlSerializer
         try
         {
             if (document is null)
-                throw new ArgumentNullException(nameof(document));
+                throw new System.ArgumentNullException(nameof(document));
 
             message = Deserialize<TMessage>(document);
             error = null;
@@ -158,7 +158,7 @@ public static partial class Iso20022XmlSerializer
             or NotSupportedException
             or FormatException // covers Iso20022FormatException too (see above)
             or OverflowException
-            or ArgumentNullException;
+            or System.ArgumentNullException;
 
     // ── Message constants ──────────────────────────────────────────────────────
 
@@ -638,7 +638,7 @@ public static partial class Iso20022XmlSerializer
                 $"XML deserialization failed for {type.Name}: {fmt.Message} " +
                 $"(violation: {fmt.Violation})", fmt);
         }
-        catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is ArgumentNullException)
+        catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is System.ArgumentNullException)
         {
             throw new InvalidOperationException(
                 $"XML deserialization produced a null value for non-nullable {type.Name}.", ex);
@@ -690,8 +690,14 @@ public static partial class Iso20022XmlSerializer
                 return field.GetValue(null)!;
         }
         // Fallback: try by C# name (e.g. for external codeset strings stored as-is)
-        if (Enum.TryParse(enumType, text, out var result))
-            return result!;
+        try
+        {
+            return Enum.Parse(enumType, text);
+        }
+        catch (ArgumentException)
+        {
+            // not a member: falls through to the error below (Enum.TryParse(Type, ...) does not exist on netstandard2.0)
+        }
         throw new InvalidOperationException($"Unknown value '{text}' for enum {enumType.Name}.");
     }
 
@@ -746,7 +752,7 @@ public static partial class Iso20022XmlSerializer
         if (string.IsNullOrEmpty(ccy))
             throw new InvalidOperationException($"Required attribute Ccy is missing on <{el.Name.LocalName}>.");
         else
-            currencyProp.SetValue(instance, ConstructSimpleValue(currencyProp.PropertyType, ccy));
+            currencyProp.SetValue(instance, ConstructSimpleValue(currencyProp.PropertyType, ccy!));
         amountProp.SetValue(instance, decimal.Parse(el.Value, CultureInfo.InvariantCulture));
         return instance;
     }

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CorporateActionGeneralInformation196"/> per the ISO 20022 specification.
+/// Validates <see cref="ICorporateActionGeneralInformation196"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CorporateActionGeneralInformation196Validator : AbstractValidator<ICorporateActionGeneralInformation196>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CorporateActionGeneralInformation196"/>.
+    /// Initializes a new instance of the validator for <see cref="ICorporateActionGeneralInformation196"/>.
     /// </summary>
     public CorporateActionGeneralInformation196Validator()
     {

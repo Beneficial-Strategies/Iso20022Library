@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="StatusReason6Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IStatusReason6Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _TRGiZtp-Ed-ak6NoX_4Aeg_-1877638998
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the reason for the status of the transaction.
 /// <list type="table">
-///   <item><term><see cref="Choices.StatusReason6Choice.Code"/></term><description>Value: ExternalStatusReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.StatusReason6Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.StatusReason6Choice.ICode"/></term><description>Value: ExternalStatusReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.StatusReason6Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

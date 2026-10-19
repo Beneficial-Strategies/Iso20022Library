@@ -12,7 +12,6 @@ global using BeneficialStrategies.Iso20022.Components;
 global using BeneficialStrategies.Iso20022.ExternalSchema;
 global using BeneficialStrategies.Iso20022.Serialization;
 global using BeneficialStrategies.Iso20022.Validation;
-global using BeneficialStrategies.Iso20022.Validation.Payloads;
 global using BeneficialStrategies.Iso20022.Validation.camt;
 global using BeneficialStrategies.Iso20022.Validation.pacs;
 global using BeneficialStrategies.Iso20022.Validation.pain;

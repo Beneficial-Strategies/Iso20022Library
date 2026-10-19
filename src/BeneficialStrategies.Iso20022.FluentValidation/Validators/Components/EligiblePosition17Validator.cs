@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="EligiblePosition17"/> per the ISO 20022 specification.
+/// Validates <see cref="IEligiblePosition17"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class EligiblePosition17Validator : AbstractValidator<IEligiblePosition17>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="EligiblePosition17"/>.
+    /// Initializes a new instance of the validator for <see cref="IEligiblePosition17"/>.
     /// </summary>
     public EligiblePosition17Validator()
     {

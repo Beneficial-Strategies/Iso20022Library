@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="NameAndAddress18"/> per the ISO 20022 specification.
+/// Validates <see cref="INameAndAddress18"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _0MzpxzEyEe6g-ffJsqGiSA
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 ///
-/// Known test-coverage gap (2026-08-21): <see cref="PostalAddress27"/> has no required
+/// Known test-coverage gap (2026-08-21): <see cref="IPostalAddress27"/> has no required
 /// sub-fields and its own validator applies rules only conditionally on fields that are
 /// present — this is correct per spec, not a defect (confirmed against the published ISO 20022
 /// schema: there is no constraint requiring any address sub-field to be populated). But it means

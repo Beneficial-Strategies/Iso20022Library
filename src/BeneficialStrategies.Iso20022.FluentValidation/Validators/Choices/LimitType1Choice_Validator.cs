@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="LimitType1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="ILimitType1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _79FX8KMgEeCJ6YNENx4h-w_1397757128
@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Nature of the risk management limit defined as a choice between a coded list or a proprietary
 /// limit.
 /// <list type="table">
-///   <item><term><see cref="Choices.LimitType1Choice.Code"/></term><description>Specifies the type of risk management limit — Value: LimitType3Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.LimitType1Choice.Proprietary"/></term><description>Type of the limit, in a proprietary form — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.LimitType1Choice.ICode"/></term><description>Specifies the type of risk management limit — Value: LimitType3Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.LimitType1Choice.IProprietary"/></term><description>Type of the limit, in a proprietary form — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

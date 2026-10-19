@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AggregateBalancePerSafekeepingPlace40"/> per the ISO 20022 specification.
+/// Validates <see cref="IAggregateBalancePerSafekeepingPlace40"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AggregateBalancePerSafekeepingPlace40Validator : AbstractValidator<IAggregateBalancePerSafekeepingPlace40>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AggregateBalancePerSafekeepingPlace40"/>.
+    /// Initializes a new instance of the validator for <see cref="IAggregateBalancePerSafekeepingPlace40"/>.
     /// </summary>
     public AggregateBalancePerSafekeepingPlace40Validator()
     {

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CreditTransferTransaction72"/> per the ISO 20022 specification.
+/// Validates <see cref="ICreditTransferTransaction72"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: 83c0d23e-26b3-45a5-9881-5eba6c105141
@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Provides further details specific to the individual transaction(s) included in the message —
 /// the underlying customer credit transfer carried inside a cover-method
-/// <see cref="CreditTransferTransaction79"/>.
+/// <see cref="ICreditTransferTransaction79"/>.
 /// <list type="table">
 ///   <item><term>Debtor</term><description>PartyIdentification272 — required (1..1)</description></item>
 ///   <item><term>DebtorAgent</term><description>BranchAndFinancialInstitutionIdentification8 — required (1..1)</description></item>

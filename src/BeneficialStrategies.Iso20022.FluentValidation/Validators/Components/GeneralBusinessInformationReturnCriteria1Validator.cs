@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="GeneralBusinessInformationReturnCriteria1"/> per the ISO 20022
+/// Validates <see cref="IGeneralBusinessInformationReturnCriteria1"/> per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

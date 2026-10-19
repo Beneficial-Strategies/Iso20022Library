@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ManagementPlanContent14"/> per the ISO 20022 specification.
+/// Validates <see cref="IManagementPlanContent14"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ManagementPlanContent14Validator : AbstractValidator<IManagementPlanContent14>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ManagementPlanContent14"/>.
+    /// Initializes a new instance of the validator for <see cref="IManagementPlanContent14"/>.
     /// </summary>
     public ManagementPlanContent14Validator()
     {

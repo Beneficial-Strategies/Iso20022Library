@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DisplayCapabilities7"/> per the ISO 20022 specification.
+/// Validates <see cref="IDisplayCapabilities7"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DisplayCapabilities7Validator : AbstractValidator<IDisplayCapabilities7>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DisplayCapabilities7"/>.
+    /// Initializes a new instance of the validator for <see cref="IDisplayCapabilities7"/>.
     /// </summary>
     public DisplayCapabilities7Validator()
     {

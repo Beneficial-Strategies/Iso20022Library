@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DocumentLineInformation2"/> per the ISO 20022 specification.
+/// Validates <see cref="IDocumentLineInformation2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _eZxMgTE4Ee62xuUQ2zyZww

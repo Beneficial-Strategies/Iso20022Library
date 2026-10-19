@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="EnvelopedData11"/> per the ISO 20022 specification.
+/// Validates <see cref="IEnvelopedData11"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class EnvelopedData11Validator : AbstractValidator<IEnvelopedData11>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="EnvelopedData11"/>.
+    /// Initializes a new instance of the validator for <see cref="IEnvelopedData11"/>.
     /// </summary>
     public EnvelopedData11Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="InvoiceTotals8"/> per the ISO 20022 specification.
+/// Validates <see cref="IInvoiceTotals8"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _xQ9M3Uw0EfCpsI1b9uv5FQ
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class InvoiceTotals8Validator : AbstractValidator<IInvoiceTotals8>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="InvoiceTotals8"/>.
+    /// Initializes a new instance of the validator for <see cref="IInvoiceTotals8"/>.
     /// </summary>
     public InvoiceTotals8Validator()
     {

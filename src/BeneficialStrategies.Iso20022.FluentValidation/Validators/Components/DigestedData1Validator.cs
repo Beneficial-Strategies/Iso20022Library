@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="DigestedData1"/> per the ISO 20022 specification.
+/// Validates <see cref="IDigestedData1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DigestedData1Validator : AbstractValidator<IDigestedData1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="DigestedData1"/>.
+    /// Initializes a new instance of the validator for <see cref="IDigestedData1"/>.
     /// </summary>
     public DigestedData1Validator()
     {

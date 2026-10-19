@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="DateType2Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IDateType2Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _5NXe0DLNEe6C5PjOhOZ_sw
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of formats for the type of a date.
 /// <list type="table">
-///   <item><term><see cref="Choices.DateType2Choice.Code"/></term><description>Specifies the type of date, as published in an external date type code list — Value: ExternalDateType1Code</description></item>
-///   <item><term><see cref="Choices.DateType2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.DateType2Choice.ICode"/></term><description>Specifies the type of date, as published in an external date type code list — Value: ExternalDateType1Code</description></item>
+///   <item><term><see cref="Choices.DateType2Choice.IProprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

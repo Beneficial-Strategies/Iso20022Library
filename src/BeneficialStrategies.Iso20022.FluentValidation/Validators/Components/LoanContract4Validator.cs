@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="LoanContract4"/> per the ISO 20022 specification.
+/// Validates <see cref="ILoanContract4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class LoanContract4Validator : AbstractValidator<ILoanContract4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="LoanContract4"/>.
+    /// Initializes a new instance of the validator for <see cref="ILoanContract4"/>.
     /// </summary>
     public LoanContract4Validator()
     {

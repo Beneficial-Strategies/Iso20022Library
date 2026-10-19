@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="MandateRelatedData5Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateRelatedData5Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _RA3lIbvIEfCYYbmqNrQFSg
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice between direct debit mandate and credit transfer mandate data.
 /// <list type="table">
-///   <item><term><see cref="Choices.MandateRelatedData5Choice.DirectDebitMandate"/></term><description>Value: MandateRelatedInformation16 (required 1..1)</description></item>
-///   <item><term><see cref="Choices.MandateRelatedData5Choice.CreditTransferMandate"/></term><description>Value: CreditTransferMandateData1 (required 1..1)</description></item>
+///   <item><term><see cref="Choices.MandateRelatedData5Choice.IDirectDebitMandate"/></term><description>Value: MandateRelatedInformation16 (required 1..1)</description></item>
+///   <item><term><see cref="Choices.MandateRelatedData5Choice.ICreditTransferMandate"/></term><description>Value: CreditTransferMandateData1 (required 1..1)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -29,11 +29,11 @@ public class MandateRelatedData5Choice_Validator : AbstractValidator<IMandateRel
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     /// <param name="directDebitMandateValueValidator">
-    /// Validator for <see cref="Choices.MandateRelatedData5Choice.DirectDebitMandate"/>'s required
+    /// Validator for <see cref="Choices.MandateRelatedData5Choice.IDirectDebitMandate"/>'s required
     /// <c>Value</c> (MandateRelatedInformation16, 1..1).
     /// </param>
     /// <param name="creditTransferMandateValueValidator">
-    /// Validator for <see cref="Choices.MandateRelatedData5Choice.CreditTransferMandate"/>'s required
+    /// Validator for <see cref="Choices.MandateRelatedData5Choice.ICreditTransferMandate"/>'s required
     /// <c>Value</c> (CreditTransferMandateData1, 1..1).
     /// </param>
     public MandateRelatedData5Choice_Validator(

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TradeData29"/> per the ISO 20022 specification.
+/// Validates <see cref="ITradeData29"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TradeData29Validator : AbstractValidator<ITradeData29>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TradeData29"/>.
+    /// Initializes a new instance of the validator for <see cref="ITradeData29"/>.
     /// </summary>
     public TradeData29Validator()
     {

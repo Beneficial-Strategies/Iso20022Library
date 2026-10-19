@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MetadataReport5"/> per the ISO 20022 specification.
+/// Validates <see cref="IMetadataReport5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class MetadataReport5Validator : AbstractValidator<IMetadataReport5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="MetadataReport5"/>.
+    /// Initializes a new instance of the validator for <see cref="IMetadataReport5"/>.
     /// </summary>
     public MetadataReport5Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="LimitIdentification8"/> per the ISO 20022 specification.
+/// Validates <see cref="ILimitIdentification8"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _0WRu0TEyEe6g-ffJsqGiSA

@@ -3,13 +3,13 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ChequeDeliveryMethod1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IChequeDeliveryMethod1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// Choice between a coded or a proprietary delivery method of a cheque.
 /// <list type="table">
-///   <item><term><see cref="Choices.ChequeDeliveryMethod1Choice.Code"/></term><description>Value: ChequeDelivery1Code (closed enum, fully enforced)</description></item>
-///   <item><term><see cref="Choices.ChequeDeliveryMethod1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced)</description></item>
+///   <item><term><see cref="Choices.ChequeDeliveryMethod1Choice.ICode"/></term><description>Value: ChequeDelivery1Code (closed enum, fully enforced)</description></item>
+///   <item><term><see cref="Choices.ChequeDeliveryMethod1Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the type level already; this validator has no rules. It

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CreditTransferTransaction47"/> per the ISO 20022 specification.
+/// Validates <see cref="ICreditTransferTransaction47"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CreditTransferTransaction47Validator : AbstractValidator<ICreditTransferTransaction47>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="CreditTransferTransaction47"/>.
+    /// Initializes a new instance of the validator for <see cref="ICreditTransferTransaction47"/>.
     /// </summary>
     public CreditTransferTransaction47Validator()
     {

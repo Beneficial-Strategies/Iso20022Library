@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="InstructionForNextAgent1"/> per the ISO 20022 specification.
+/// Validates <see cref="IInstructionForNextAgent1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _TOHf0dp-Ed-ak6NoX_4Aeg_1118639475

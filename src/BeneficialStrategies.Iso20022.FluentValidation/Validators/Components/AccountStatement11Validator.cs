@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AccountStatement11"/> per the ISO 20022 specification.
+/// Validates <see cref="IAccountStatement11"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _zoNd0StwEeysar7zFstVmw
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AccountStatement11Validator : AbstractValidator<IAccountStatement11>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AccountStatement11"/>.
+    /// Initializes a new instance of the validator for <see cref="IAccountStatement11"/>.
     /// </summary>
     public AccountStatement11Validator()
     {

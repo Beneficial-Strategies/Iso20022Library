@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="OriginalTransactionReference47"/> per the ISO 20022 specification.
+/// Validates <see cref="IOriginalTransactionReference47"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: b6168479-406c-4e82-b807-50ae6886bee6
@@ -37,16 +37,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// No cross-field constraints found for this component (no "constraint" declaration rows under
 /// its ISO dictionary entry) — this is the same "original transaction reference" pattern
-/// documented on <see cref="FIToFIPaymentCancellationRequestV10"/>'s dependency graph, but this
+/// documented on <see cref="IFIToFIPaymentCancellationRequestV10"/>'s dependency graph, but this
 /// version carries no structured tax/garnishment cascade beyond what's already built here (see
 /// <see cref="RemittanceInformation26Validator"/>).
 ///
 /// Dependency injection: every building block above is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — the same
-/// <see cref="Party50Choice_"/> validator instance is reused across all four party fields
+/// <see cref="IParty50Choice"/> validator instance is reused across all four party fields
 /// (<c>UltimateDebtor</c>, <c>Debtor</c>, <c>Creditor</c>, <c>UltimateCreditor</c>), the same
-/// <see cref="BranchAndFinancialInstitutionIdentification8"/> validator instance across
-/// <c>DebtorAgent</c> and <c>CreditorAgent</c>, and the same <see cref="CashAccount40"/>
+/// <see cref="IBranchAndFinancialInstitutionIdentification8"/> validator instance across
+/// <c>DebtorAgent</c> and <c>CreditorAgent</c>, and the same <see cref="ICashAccount40"/>
 /// validator instance across all four account fields — see the two constructors below.
 /// </remarks>
 public class OriginalTransactionReference47Validator : AbstractValidator<IOriginalTransactionReference47>

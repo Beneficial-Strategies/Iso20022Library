@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TransferOut15"/> per the ISO 20022 specification.
+/// Validates <see cref="ITransferOut15"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TransferOut15Validator : AbstractValidator<ITransferOut15>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TransferOut15"/>.
+    /// Initializes a new instance of the validator for <see cref="ITransferOut15"/>.
     /// </summary>
     public TransferOut15Validator()
     {

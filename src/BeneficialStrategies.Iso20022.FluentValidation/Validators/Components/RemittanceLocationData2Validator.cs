@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="RemittanceLocationData2"/> per the ISO 20022 specification.
+/// Validates <see cref="IRemittanceLocationData2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _0KjnBTEyEe6g-ffJsqGiSA
@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Known test-coverage gap (2026-08-21): the test suite's happy-path case does not populate
 /// <c>PostalAddress</c> at all, so the <see cref="NameAndAddress18Validator"/> wiring below is
 /// unproven — see that type's own remarks for the underlying reason (an all-default
-/// <see cref="PostalAddress27"/> has nothing to violate regardless of wiring, which is correct
+/// <see cref="IPostalAddress27"/> has nothing to violate regardless of wiring, which is correct
 /// per spec, not a defect).
 /// </remarks>
 public class RemittanceLocationData2Validator : AbstractValidator<IRemittanceLocationData2>

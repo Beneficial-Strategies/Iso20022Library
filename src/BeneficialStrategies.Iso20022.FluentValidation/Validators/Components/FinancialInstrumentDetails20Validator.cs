@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="FinancialInstrumentDetails20"/> per the ISO 20022 specification.
+/// Validates <see cref="IFinancialInstrumentDetails20"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class FinancialInstrumentDetails20Validator : AbstractValidator<IFinancialInstrumentDetails20>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="FinancialInstrumentDetails20"/>.
+    /// Initializes a new instance of the validator for <see cref="IFinancialInstrumentDetails20"/>.
     /// </summary>
     public FinancialInstrumentDetails20Validator()
     {

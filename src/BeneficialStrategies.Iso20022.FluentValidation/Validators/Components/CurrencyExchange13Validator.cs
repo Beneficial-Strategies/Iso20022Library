@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CurrencyExchange13"/> per the ISO 20022 specification.
+/// Validates <see cref="ICurrencyExchange13"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _M5wl0IW7EeiDBOVr6AJAFA

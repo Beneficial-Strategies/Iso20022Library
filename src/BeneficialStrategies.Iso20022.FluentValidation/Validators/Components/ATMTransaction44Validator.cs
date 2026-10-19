@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ATMTransaction44"/> per the ISO 20022 specification.
+/// Validates <see cref="IATMTransaction44"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ATMTransaction44Validator : AbstractValidator<IATMTransaction44>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ATMTransaction44"/>.
+    /// Initializes a new instance of the validator for <see cref="IATMTransaction44"/>.
     /// </summary>
     public ATMTransaction44Validator()
     {

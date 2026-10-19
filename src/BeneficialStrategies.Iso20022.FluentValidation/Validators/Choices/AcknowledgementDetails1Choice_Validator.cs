@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="AcknowledgementDetails1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IAcknowledgementDetails1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _oIaocSzSEeKZfox_pyYpTA
@@ -13,8 +13,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Identification element from the Report Data sequence of the Pay In Schedule message or the
 /// Pay In Call message.
 /// <list type="table">
-///   <item><term><see cref="Choices.AcknowledgementDetails1Choice.PayInScheduleReference"/></term><description>Reference to the pay in schedule that is being acknowledged — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.AcknowledgementDetails1Choice.PayInCallReference"/></term><description>Reference to the pay in call that is being acknowledged — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.AcknowledgementDetails1Choice.IPayInScheduleReference"/></term><description>Reference to the pay in schedule that is being acknowledged — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.AcknowledgementDetails1Choice.IPayInCallReference"/></term><description>Reference to the pay in call that is being acknowledged — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (each variant's <c>Value</c> is a

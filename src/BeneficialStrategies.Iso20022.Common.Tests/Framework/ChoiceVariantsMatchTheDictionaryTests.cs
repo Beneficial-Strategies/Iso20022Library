@@ -31,7 +31,7 @@ public class ChoiceVariantsMatchTheDictionaryTests
             .Select(f => new Variant(f[1], f[3], f[4], f[5]));
 
     private static Type? FindVariant(Variant v) =>
-        typeof(Iso20022XmlSerializer).Assembly.GetType($"BeneficialStrategies.Iso20022.Choices.{v.Choice}.{v.Name}");
+        typeof(BeneficialStrategies.Iso20022.pacs.FIToFICustomerCreditTransferV14).Assembly.GetType($"BeneficialStrategies.Iso20022.Choices.{v.Choice}.{v.Name}");
 
     private static string? TagOf(Type variant)
     {

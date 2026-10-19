@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="ClearingSystemIdentification3Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IClearingSystemIdentification3Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _TMVXJdp-Ed-ak6NoX_4Aeg_948374898
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the clearing system identification.
 /// <list type="table">
-///   <item><term><see cref="Choices.ClearingSystemIdentification3Choice.Code"/></term><description>Value: ExternalCashClearingSystem1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.ClearingSystemIdentification3Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification3Choice.ICode"/></term><description>Value: ExternalCashClearingSystem1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification3Choice.IProprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

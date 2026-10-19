@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TrackerRecord5"/> per the ISO 20022 specification.
+/// Validates <see cref="ITrackerRecord5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _1bDllzEyEe6g-ffJsqGiSA

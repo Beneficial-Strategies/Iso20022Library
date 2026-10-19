@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CreditTransferTransaction80"/> per the ISO 20022 specification.
+/// Validates <see cref="ICreditTransferTransaction80"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _eyUN4XePEfCdoODv2ypKfw
@@ -14,10 +14,10 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Provides further details specific to the individual transaction(s) included in the message —
 /// the underlying financial institution credit transfer carried inside a cover-method
-/// <see cref="CreditTransferTransaction79"/>. Every party/agent field on this version is a
-/// <see cref="BranchAndFinancialInstitutionIdentification8"/> (both debtor and creditor sides are
-/// financial institutions), unlike <see cref="CreditTransferTransaction72"/>'s
-/// <see cref="PartyIdentification272"/> debtor/creditor fields.
+/// <see cref="ICreditTransferTransaction79"/>. Every party/agent field on this version is a
+/// <see cref="IBranchAndFinancialInstitutionIdentification8"/> (both debtor and creditor sides are
+/// financial institutions), unlike <see cref="ICreditTransferTransaction72"/>'s
+/// <see cref="IPartyIdentification272"/> debtor/creditor fields.
 /// <list type="table">
 ///   <item><term>PaymentIdentification</term><description>PaymentIdentification13 — required (1..1)</description></item>
 ///   <item><term>InterbankSettlementAmount</term><description>ActiveCurrencyAndAmount — required (1..1)</description></item>

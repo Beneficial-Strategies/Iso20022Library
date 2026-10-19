@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.pain;
 
 /// <summary>
-/// Validates <see cref="MandateCopyRequestV04"/> (pain.017.001.04) per the ISO 20022
+/// Validates <see cref="IMandateCopyRequestV04"/> (pain.017.001.04) per the ISO 20022
 /// specification.
 /// </summary>
 /// <remarks>

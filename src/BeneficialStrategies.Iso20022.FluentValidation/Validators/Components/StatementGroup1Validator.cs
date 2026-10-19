@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="StatementGroup1"/> per the ISO 20022 specification.
+/// Validates <see cref="IStatementGroup1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6QsqlZqlEeGSON8vddiWzQ_1977241265
@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class StatementGroup1Validator : AbstractValidator<IStatementGroup1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="StatementGroup1"/>.
+    /// Initializes a new instance of the validator for <see cref="IStatementGroup1"/>.
     /// </summary>
     public StatementGroup1Validator()
     {

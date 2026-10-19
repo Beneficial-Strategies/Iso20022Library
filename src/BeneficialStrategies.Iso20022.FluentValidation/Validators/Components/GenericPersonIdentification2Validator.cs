@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="GenericPersonIdentification2"/> per the ISO 20022 specification.
+/// Validates <see cref="IGenericPersonIdentification2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: __Aaz9TFLEe651u5xu3f5iw

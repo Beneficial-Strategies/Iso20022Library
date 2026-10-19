@@ -26,13 +26,14 @@ from pathlib import Path
 MAJOR_LABELS = {"breaking-change"}
 MINOR_LABELS = {"enhancement", "message-support", "snapshot-sync"}
 SKIP_LABELS = {"no-release-notes"}
-AREA_PACKAGES = {"area:core": {"core"}, "area:primitives": {"primitives"}, "area:interfaces": {"interfaces"}, "area:validation": {"validation"}}   # no area label: every published package
+AREA_PACKAGES = {"area:core": {"core"}, "area:primitives": {"primitives"}, "area:interfaces": {"interfaces"}, "area:validation": {"validation"}, "area:payloads": {"payloads"}}   # no area label: every published package
 IGNORED_AREAS = {"area:sagas"}                                               # not published
 NOTE_FILES = {
     "primitives": "src/BeneficialStrategies.Iso20022.Primitives/release-notes.txt",
     "interfaces": "src/BeneficialStrategies.Iso20022.Interfaces/release-notes.txt",
     "core": "src/BeneficialStrategies.Iso20022.Common/release-notes.txt",
     "validation": "src/BeneficialStrategies.Iso20022.FluentValidation/release-notes.txt",
+    "payloads": "src/BeneficialStrategies.Iso20022.FluentValidation.Payloads/release-notes.txt",
 }
 PROPS = "src/Directory.Build.props"
 CATEGORIES = [("breaking", "Breaking change"), ("added", "Added"), ("fixed", "Fixed"), ("changed", "Changed")]

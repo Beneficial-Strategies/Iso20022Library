@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AcceptanceResult6"/> per the ISO 20022 specification.
+/// Validates <see cref="IAcceptanceResult6"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _RBvu4dp-Ed-ak6NoX_4Aeg_2046006177

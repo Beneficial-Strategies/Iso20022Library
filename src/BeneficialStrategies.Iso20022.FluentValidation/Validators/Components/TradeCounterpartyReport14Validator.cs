@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="TradeCounterpartyReport14"/> per the ISO 20022 specification.
+/// Validates <see cref="ITradeCounterpartyReport14"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class TradeCounterpartyReport14Validator : AbstractValidator<ITradeCounterpartyReport14>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="TradeCounterpartyReport14"/>.
+    /// Initializes a new instance of the validator for <see cref="ITradeCounterpartyReport14"/>.
     /// </summary>
     public TradeCounterpartyReport14Validator()
     {

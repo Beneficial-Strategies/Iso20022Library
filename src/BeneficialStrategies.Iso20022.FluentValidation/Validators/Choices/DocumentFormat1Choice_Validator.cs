@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 
 /// <summary>
-/// Validates <see cref="DocumentFormat1Choice_"/> per the ISO 20022 specification.
+/// Validates <see cref="IDocumentFormat1Choice"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _932rtHltEeG7BsjMvd1mEw_-1666043325
@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of format for the type of document format.
 /// <list type="table">
-///   <item><term><see cref="Choices.DocumentFormat1Choice.Code"/></term><description>Value: ExternalDocumentFormat1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="Choices.DocumentFormat1Choice.Proprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
+///   <item><term><see cref="Choices.DocumentFormat1Choice.ICode"/></term><description>Value: ExternalDocumentFormat1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DocumentFormat1Choice.IProprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

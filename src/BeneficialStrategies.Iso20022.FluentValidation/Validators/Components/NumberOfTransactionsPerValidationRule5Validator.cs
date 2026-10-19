@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="NumberOfTransactionsPerValidationRule5"/> per the ISO 20022 specification.
+/// Validates <see cref="INumberOfTransactionsPerValidationRule5"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class NumberOfTransactionsPerValidationRule5Validator : AbstractValidator<INumberOfTransactionsPerValidationRule5>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="NumberOfTransactionsPerValidationRule5"/>.
+    /// Initializes a new instance of the validator for <see cref="INumberOfTransactionsPerValidationRule5"/>.
     /// </summary>
     public NumberOfTransactionsPerValidationRule5Validator()
     {

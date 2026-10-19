@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AccountSubLevel25"/> per the ISO 20022 specification.
+/// Validates <see cref="IAccountSubLevel25"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AccountSubLevel25Validator : AbstractValidator<IAccountSubLevel25>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AccountSubLevel25"/>.
+    /// Initializes a new instance of the validator for <see cref="IAccountSubLevel25"/>.
     /// </summary>
     public AccountSubLevel25Validator()
     {

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ChargesPerType4"/> per the ISO 20022 specification.
+/// Validates <see cref="IChargesPerType4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _6BIY6zEyEe6g-ffJsqGiSA
@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ChargesPerType4Validator : AbstractValidator<IChargesPerType4>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ChargesPerType4"/>.
+    /// Initializes a new instance of the validator for <see cref="IChargesPerType4"/>.
     /// </summary>
     public ChargesPerType4Validator()
     {

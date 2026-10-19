@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="UnderlyingTransaction28"/> per the ISO 20022 specification.
+/// Validates <see cref="IUnderlyingTransaction28"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _c7S7gdcZEeqRFcf2R4bPBw

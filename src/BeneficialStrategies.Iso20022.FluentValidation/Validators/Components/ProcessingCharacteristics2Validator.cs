@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="ProcessingCharacteristics2"/> per the ISO 20022 specification.
+/// Validates <see cref="IProcessingCharacteristics2"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class ProcessingCharacteristics2Validator : AbstractValidator<IProcessingCharacteristics2>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="ProcessingCharacteristics2"/>.
+    /// Initializes a new instance of the validator for <see cref="IProcessingCharacteristics2"/>.
     /// </summary>
     public ProcessingCharacteristics2Validator()
     {

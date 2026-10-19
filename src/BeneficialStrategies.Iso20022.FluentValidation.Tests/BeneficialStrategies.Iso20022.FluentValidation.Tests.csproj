@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BeneficialStrategies.Iso20022.FluentValidation\BeneficialStrategies.Iso20022.FluentValidation.csproj" />
+    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Common\BeneficialStrategies.Iso20022.Common.csproj" />
   </ItemGroup>
 
 </Project>

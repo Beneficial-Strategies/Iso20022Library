@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="CreditTransferTransaction79"/> per the ISO 20022 specification.
+/// Validates <see cref="ICreditTransferTransaction79"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _Hvt08XePEfCdoODv2ypKfw
@@ -13,10 +13,10 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// against the current MCP snapshot for this exact ISO ID — matched exactly, no gap.
 ///
 /// Provides further details specific to the individual transaction(s) included in the message —
-/// the top-level transaction carried by <see cref="FinancialInstitutionCreditTransferV13"/>,
+/// the top-level transaction carried by <see cref="IFinancialInstitutionCreditTransferV13"/>,
 /// which may itself carry an underlying customer credit transfer
-/// (<see cref="CreditTransferTransaction72"/>) and/or an underlying financial institution credit
-/// transfer (<see cref="CreditTransferTransaction80"/>) when used as a cover payment.
+/// (<see cref="ICreditTransferTransaction72"/>) and/or an underlying financial institution credit
+/// transfer (<see cref="ICreditTransferTransaction80"/>) when used as a cover payment.
 /// <list type="table">
 ///   <item><term>PaymentIdentification</term><description>PaymentIdentification13 — required (1..1)</description></item>
 ///   <item><term>InterbankSettlementAmount</term><description>ActiveCurrencyAndAmount — required (1..1)</description></item>

@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="MandateCopy4"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandateCopy4"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _5GXZsTEyEe6g-ffJsqGiSA

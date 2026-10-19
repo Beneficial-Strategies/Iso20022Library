@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="AggregateBalanceInformation22"/> per the ISO 20022 specification.
+/// Validates <see cref="IAggregateBalanceInformation22"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class AggregateBalanceInformation22Validator : AbstractValidator<IAggregateBalanceInformation22>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="AggregateBalanceInformation22"/>.
+    /// Initializes a new instance of the validator for <see cref="IAggregateBalanceInformation22"/>.
     /// </summary>
     public AggregateBalanceInformation22Validator()
     {

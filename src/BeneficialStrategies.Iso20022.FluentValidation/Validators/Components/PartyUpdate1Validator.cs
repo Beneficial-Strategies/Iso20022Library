@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PartyUpdate1"/> per the ISO 20022 specification.
+/// Validates <see cref="IPartyUpdate1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class PartyUpdate1Validator : AbstractValidator<IPartyUpdate1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="PartyUpdate1"/>.
+    /// Initializes a new instance of the validator for <see cref="IPartyUpdate1"/>.
     /// </summary>
     public PartyUpdate1Validator()
     {

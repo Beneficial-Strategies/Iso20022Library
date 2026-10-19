@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="Mandate21"/> per the ISO 20022 specification.
+/// Validates <see cref="IMandate21"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// ISO ID: _yR4OUTEyEe6g-ffJsqGiSA
@@ -46,7 +46,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///     <description>UltimateCreditor may only be present if different from Creditor.</description>
 ///   </item>
 /// </list>
-/// Both guidelines are structurally checkable — <see cref="PartyIdentification272"/> is a record,
+/// Both guidelines are structurally checkable — <see cref="IPartyIdentification272"/> is a record,
 /// so <c>Equals</c>/<c>==</c> gives correct hierarchical, structural equality — so both are
 /// implemented as real rules below rather than left as non-enforceable commentary. Same shape as
 /// the sibling types <see cref="Mandate20Validator"/> and <see cref="Mandate23Validator"/>, which

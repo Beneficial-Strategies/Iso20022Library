@@ -13,7 +13,7 @@ public class NoSelfTypedMembersTests
     [Fact]
     public void NoModelTypeHasAPropertyOfItsOwnType()
     {
-        var offenders = typeof(Iso20022XmlSerializer)
+        var offenders = typeof(BeneficialStrategies.Iso20022.pacs.FIToFICustomerCreditTransferV14)
             .Assembly.GetExportedTypes()
             .Where(t => t.IsClass && Iso.KindOf(t) is not null || t.Namespace?.StartsWith("BeneficialStrategies.Iso20022.Choices") == true)
             .SelectMany(t =>

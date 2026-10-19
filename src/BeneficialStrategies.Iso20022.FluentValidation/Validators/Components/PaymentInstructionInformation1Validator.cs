@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.Validation.Components;
 
 /// <summary>
-/// Validates <see cref="PaymentInstructionInformation1"/> per the ISO 20022 specification.
+/// Validates <see cref="IPaymentInstructionInformation1"/> per the ISO 20022 specification.
 /// </summary>
 /// <remarks>
 /// TODO: Abbreviated validator — only enforces the known Defect 2 minimum-collection-size gap(s)
@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class PaymentInstructionInformation1Validator : AbstractValidator<IPaymentInstructionInformation1>
 {
     /// <summary>
-    /// Initializes a new instance of the validator for <see cref="PaymentInstructionInformation1"/>.
+    /// Initializes a new instance of the validator for <see cref="IPaymentInstructionInformation1"/>.
     /// </summary>
     public PaymentInstructionInformation1Validator()
     {
