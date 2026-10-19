@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Other</c> collection is validated per-item by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class Contact13Validator : AbstractValidator<Contact13>
+public class Contact13Validator : AbstractValidator<IContact13>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -42,7 +42,7 @@ public class Contact13Validator : AbstractValidator<Contact13>
     /// <param name="otherValidator">
     /// Validator for each item of the <c>Other</c> collection (OtherContact1, 0..∞).
     /// </param>
-    public Contact13Validator(IValidator<OtherContact1> otherValidator)
+    public Contact13Validator(IValidator<IOtherContact1> otherValidator)
     {
         // All scalar fields (NamePrefix, Name, PhoneNumber, MobileNumber, FaxNumber, URLAddress,
         // EmailAddress, EmailPurpose, JobTitle, Responsibility, Department, PreferredMethod):

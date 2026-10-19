@@ -22,13 +22,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class GarnishmentType1Validator : AbstractValidator<GarnishmentType1>
+public class GarnishmentType1Validator : AbstractValidator<IGarnishmentType1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public GarnishmentType1Validator(IValidator<GarnishmentType1Choice_> codeOrProprietaryValidator)
+    public GarnishmentType1Validator(IValidator<IGarnishmentType1Choice> codeOrProprietaryValidator)
     {
         RuleFor(x => x.CodeOrProprietary).SetValidator(codeOrProprietaryValidator!);
     }

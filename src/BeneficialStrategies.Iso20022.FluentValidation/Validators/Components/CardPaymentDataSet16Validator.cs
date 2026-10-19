@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public class CardPaymentDataSet16Validator : AbstractValidator<CardPaymentDataSet16>
+public class CardPaymentDataSet16Validator : AbstractValidator<ICardPaymentDataSet16>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CardPaymentDataSet16"/>.

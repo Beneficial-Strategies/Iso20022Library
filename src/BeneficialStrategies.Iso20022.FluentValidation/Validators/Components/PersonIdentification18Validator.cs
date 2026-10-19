@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// collection are each validated by an injected <see cref="IValidator{T}"/> rather than a
 /// hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class PersonIdentification18Validator : AbstractValidator<PersonIdentification18>
+public class PersonIdentification18Validator : AbstractValidator<IPersonIdentification18>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -38,8 +38,8 @@ public class PersonIdentification18Validator : AbstractValidator<PersonIdentific
     /// Validator for each item of the <c>Other</c> collection (GenericPersonIdentification2, 0..∞).
     /// </param>
     public PersonIdentification18Validator(
-        IValidator<DateAndPlaceOfBirth1> dateAndPlaceOfBirthValidator,
-        IValidator<GenericPersonIdentification2> otherValidator
+        IValidator<IDateAndPlaceOfBirth1> dateAndPlaceOfBirthValidator,
+        IValidator<IGenericPersonIdentification2> otherValidator
     )
     {
         When(

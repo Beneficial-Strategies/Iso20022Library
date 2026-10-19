@@ -53,7 +53,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// the <c>TransactionInformation</c> collection are each validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class UnderlyingTransaction28Validator : AbstractValidator<UnderlyingTransaction28>
+public class UnderlyingTransaction28Validator : AbstractValidator<IUnderlyingTransaction28>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -70,15 +70,15 @@ public class UnderlyingTransaction28Validator : AbstractValidator<UnderlyingTran
     /// (PaymentTransaction137, 0..∞).
     /// </param>
     public UnderlyingTransaction28Validator(
-        IValidator<OriginalGroupHeader15> originalGroupInformationAndCancellationValidator,
-        IValidator<PaymentTransaction137> transactionInformationValidator
+        IValidator<IOriginalGroupHeader15> originalGroupInformationAndCancellationValidator,
+        IValidator<IPaymentTransaction137> transactionInformationValidator
     )
     {
         // Practical check: at least one cancellation target must be specified.
         RuleFor(x => x)
             .Must(x =>
                 x.OriginalGroupInformationAndCancellation is not null
-                || x.TransactionInformation.Count > 0
+                || x.TransactionInformation.Count() > 0
             )
             .WithName("UnderlyingTransaction28")
             .WithMessage(
@@ -113,7 +113,7 @@ public class UnderlyingTransaction28Validator : AbstractValidator<UnderlyingTran
                     return true; // NumberOfTransactions is optional — skip if absent
                 if (!int.TryParse(nbStr, out int nb))
                     return false;
-                int txCount = x.TransactionInformation.Count;
+                int txCount = x.TransactionInformation.Count();
                 return nb == txCount;
             })
             .WithName("GroupCancellationAndNumberOfTransactionsRule")
@@ -127,7 +127,7 @@ public class UnderlyingTransaction28Validator : AbstractValidator<UnderlyingTran
             .Must(x =>
                 !(
                     x.OriginalGroupInformationAndCancellation?.GroupCancellation?.BoolValue == true
-                    && x.TransactionInformation.Count > 0
+                    && x.TransactionInformation.Count() > 0
                 )
             )
             .WithName("GroupCancellationTrueAndTransactionInformationRule")
@@ -141,7 +141,7 @@ public class UnderlyingTransaction28Validator : AbstractValidator<UnderlyingTran
             .Must(x =>
                 !(
                     x.OriginalGroupInformationAndCancellation?.GroupCancellation?.BoolValue == false
-                    && x.TransactionInformation.Count == 0
+                    && x.TransactionInformation.Count() == 0
                 )
             )
             .WithName("GroupCancellationFalseAndTransactionInformationRule")

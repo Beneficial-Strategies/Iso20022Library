@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>CodeOrProprietary</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class DocumentType1Validator : AbstractValidator<DocumentType1>
+public class DocumentType1Validator : AbstractValidator<IDocumentType1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -32,7 +32,7 @@ public class DocumentType1Validator : AbstractValidator<DocumentType1>
     /// Validator for the required <c>CodeOrProprietary</c> building block (DocumentType2Choice_,
     /// 1..1).
     /// </param>
-    public DocumentType1Validator(IValidator<DocumentType2Choice_> codeOrProprietaryValidator)
+    public DocumentType1Validator(IValidator<IDocumentType2Choice> codeOrProprietaryValidator)
     {
         // Issuer: Max35Text, optional — length [1..35] enforced by struct constructor.
 

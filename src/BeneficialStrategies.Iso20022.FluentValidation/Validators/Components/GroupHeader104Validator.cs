@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>SettlementInformation</c> is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class GroupHeader104Validator : AbstractValidator<GroupHeader104>
+public class GroupHeader104Validator : AbstractValidator<IGroupHeader104>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -36,7 +36,7 @@ public class GroupHeader104Validator : AbstractValidator<GroupHeader104>
     /// Validator for the optional <c>SettlementInformation</c> building block
     /// (SettlementInstruction14, 0..1) — only invoked when present.
     /// </param>
-    public GroupHeader104Validator(IValidator<SettlementInstruction14> settlementInformationValidator)
+    public GroupHeader104Validator(IValidator<ISettlementInstruction14> settlementInformationValidator)
     {
         // MessageIdentification, NumberOfSettlementRequests: required scalars, format/length
         // enforced by struct constructors — no rule needed.

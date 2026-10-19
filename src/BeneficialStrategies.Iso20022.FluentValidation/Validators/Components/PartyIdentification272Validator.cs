@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// against an injected <see cref="IExternalCodeRegistry{TCode}"/> (via
 /// <see cref="CountryCodeValidator"/>) — see the two constructors below.
 /// </remarks>
-public class PartyIdentification272Validator : AbstractValidator<PartyIdentification272>
+public class PartyIdentification272Validator : AbstractValidator<IPartyIdentification272>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -52,9 +52,9 @@ public class PartyIdentification272Validator : AbstractValidator<PartyIdentifica
     /// when present.
     /// </param>
     public PartyIdentification272Validator(
-        IValidator<Contact13> contactDetailsValidator,
-        IValidator<Party52Choice_> identificationValidator,
-        IValidator<PostalAddress27> postalAddressValidator,
+        IValidator<IContact13> contactDetailsValidator,
+        IValidator<IParty52Choice> identificationValidator,
+        IValidator<IPostalAddress27> postalAddressValidator,
         IValidator<CountryCode> countryOfResidenceValidator
     )
     {

@@ -29,13 +29,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="PostalAddress27"/> has nothing to violate regardless of wiring, which is correct
 /// per spec, not a defect).
 /// </remarks>
-public class RemittanceLocationData2Validator : AbstractValidator<RemittanceLocationData2>
+public class RemittanceLocationData2Validator : AbstractValidator<IRemittanceLocationData2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public RemittanceLocationData2Validator(IValidator<NameAndAddress18> postalAddressValidator)
+    public RemittanceLocationData2Validator(IValidator<INameAndAddress18> postalAddressValidator)
     {
         When(
             x => x.PostalAddress is not null,

@@ -40,25 +40,25 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="PartyIdentification272"/> validator instance is reused across <c>UltimateCreditor</c>,
 /// <c>Debtor</c>, and <c>UltimateDebtor</c> — see the two constructors below.
 /// </remarks>
-public class DirectDebitTransactionInformation34Validator : AbstractValidator<DirectDebitTransactionInformation34>
+public class DirectDebitTransactionInformation34Validator : AbstractValidator<IDirectDebitTransactionInformation34>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public DirectDebitTransactionInformation34Validator(
-        IValidator<PaymentIdentification6> paymentIdentificationValidator,
-        IValidator<PaymentTypeInformation29> paymentTypeInformationValidator,
-        IValidator<DirectDebitTransaction12> directDebitTransactionValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<Purpose2Choice_> purposeValidator,
-        IValidator<RegulatoryReporting10> regulatoryReportingValidator,
-        IValidator<TaxData1> taxValidator,
-        IValidator<RemittanceLocation8> relatedRemittanceInformationValidator,
-        IValidator<RemittanceInformation26> remittanceInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IPaymentIdentification6> paymentIdentificationValidator,
+        IValidator<IPaymentTypeInformation29> paymentTypeInformationValidator,
+        IValidator<IDirectDebitTransaction12> directDebitTransactionValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IPurpose2Choice> purposeValidator,
+        IValidator<IRegulatoryReporting10> regulatoryReportingValidator,
+        IValidator<ITaxData1> taxValidator,
+        IValidator<IRemittanceLocation8> relatedRemittanceInformationValidator,
+        IValidator<IRemittanceInformation26> remittanceInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.PaymentIdentification).SetValidator(paymentIdentificationValidator!);

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Category</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MandateAdjustment1Validator : AbstractValidator<MandateAdjustment1>
+public class MandateAdjustment1Validator : AbstractValidator<IMandateAdjustment1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class MandateAdjustment1Validator : AbstractValidator<MandateAdjustment1>
     /// Validator for the optional <c>Category</c> building block (Frequency37Choice_, 0..1) —
     /// only invoked when present.
     /// </param>
-    public MandateAdjustment1Validator(IValidator<Frequency37Choice_> categoryValidator)
+    public MandateAdjustment1Validator(IValidator<IFrequency37Choice> categoryValidator)
     {
         // DateAdjustmentRuleIndicator: required (1..1) and already `required` C# property — no
         // rule needed.

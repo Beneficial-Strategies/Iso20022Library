@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DerivativeUnderlyingLeg</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..2</description></item>
 /// </list>
 /// </remarks>
-public class Derivative3Validator : AbstractValidator<Derivative3>
+public class Derivative3Validator : AbstractValidator<IDerivative3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Derivative3"/>.

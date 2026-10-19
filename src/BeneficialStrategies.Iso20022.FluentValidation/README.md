@@ -161,6 +161,20 @@ foreach (var error in invalidResult.Errors)
 // MessageOrTransactionCaseRule).
 ```
 
+## Validating your own classes
+
+The validators are written for the interfaces of `BeneficialStrategies.Iso20022.Interfaces`, not for our records. A record of
+this library implements its interface, so it is validated as before; so is a class of yours that implements, for example,
+`IGroupHeader131`, with the same rules and the same failures:
+
+```csharp
+IValidator<IGroupHeader131> validator = provider.GetRequiredService<IValidator<IGroupHeader131>>();
+var result = validator.Validate(myOwnGroupHeader);
+```
+
+For a message root, `IValidator<TheRecord>` (for example `IValidator<FIToFICustomerCreditTransferV14>`) also resolves; it forwards to
+the validator of the message interface. Validators of components and choices are registered for their interfaces only.
+
 ## Registering validators with dependency injection
 
 Constructing one validator with `new` is fine for a quick check, but every validator in this

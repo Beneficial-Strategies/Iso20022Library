@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>BreakdownByPurchaseOrder</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ReportLine6Validator : AbstractValidator<ReportLine6>
+public class ReportLine6Validator : AbstractValidator<IReportLine6>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ReportLine6"/>.

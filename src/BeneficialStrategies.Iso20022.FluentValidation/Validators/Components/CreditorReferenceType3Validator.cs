@@ -22,13 +22,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class CreditorReferenceType3Validator : AbstractValidator<CreditorReferenceType3>
+public class CreditorReferenceType3Validator : AbstractValidator<ICreditorReferenceType3>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public CreditorReferenceType3Validator(IValidator<CreditorReferenceType2Choice_> codeOrProprietaryValidator)
+    public CreditorReferenceType3Validator(IValidator<ICreditorReferenceType2Choice> codeOrProprietaryValidator)
     {
         RuleFor(x => x.CodeOrProprietary).SetValidator(codeOrProprietaryValidator!);
     }

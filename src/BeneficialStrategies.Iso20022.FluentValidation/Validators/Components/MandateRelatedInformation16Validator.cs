@@ -31,16 +31,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MandateRelatedInformation16Validator : AbstractValidator<MandateRelatedInformation16>
+public class MandateRelatedInformation16Validator : AbstractValidator<IMandateRelatedInformation16>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public MandateRelatedInformation16Validator(
-        IValidator<AmendmentInformationDetails15> amendmentInformationDetailsValidator,
-        IValidator<Frequency36Choice_> frequencyValidator,
-        IValidator<MandateSetupReason1Choice_> reasonValidator
+        IValidator<IAmendmentInformationDetails15> amendmentInformationDetailsValidator,
+        IValidator<IFrequency36Choice> frequencyValidator,
+        IValidator<IMandateSetupReason1Choice> reasonValidator
     )
     {
         When(

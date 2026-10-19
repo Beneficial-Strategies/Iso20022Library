@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DelegationResponse</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class MaintenanceDelegationResponse6Validator : AbstractValidator<MaintenanceDelegationResponse6>
+public class MaintenanceDelegationResponse6Validator : AbstractValidator<IMaintenanceDelegationResponse6>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="MaintenanceDelegationResponse6"/>.

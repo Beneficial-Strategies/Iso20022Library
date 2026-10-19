@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// agent fields, one <c>CashAccount40</c> validator across all 9 account fields — see the two
 /// constructors below.
 /// </remarks>
-public class TransactionParties11Validator : AbstractValidator<TransactionParties11>
+public class TransactionParties11Validator : AbstractValidator<ITransactionParties11>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
@@ -42,9 +42,9 @@ public class TransactionParties11Validator : AbstractValidator<TransactionPartie
     /// resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public TransactionParties11Validator(
-        IValidator<Party50Choice_> partyValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator
+        IValidator<IParty50Choice> partyValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator
     )
     {
         RuleFor(x => x.Creditor).SetValidator(partyValidator!);

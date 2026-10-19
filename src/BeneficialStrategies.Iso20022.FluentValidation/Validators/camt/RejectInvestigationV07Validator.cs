@@ -45,7 +45,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class RejectInvestigationV07Validator : AbstractValidator<RejectInvestigationV07>
+public class RejectInvestigationV07Validator : AbstractValidator<IRejectInvestigationV07>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -68,10 +68,10 @@ public class RejectInvestigationV07Validator : AbstractValidator<RejectInvestiga
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public RejectInvestigationV07Validator(
-        IValidator<CaseAssignment6> assignmentValidator,
-        IValidator<Case6> caseValidator,
-        IValidator<InvestigationRejectionJustification1> justificationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<ICaseAssignment6> assignmentValidator,
+        IValidator<ICase6> caseValidator,
+        IValidator<IInvestigationRejectionJustification1> justificationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.Assignment).SetValidator(assignmentValidator);

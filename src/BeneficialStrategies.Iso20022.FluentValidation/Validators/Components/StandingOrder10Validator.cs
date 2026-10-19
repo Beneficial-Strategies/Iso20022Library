@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>DebtorAccount</c>) — one injected validator serves both properties of the same validated
 /// type.
 /// </remarks>
-public class StandingOrder10Validator : AbstractValidator<StandingOrder10>
+public class StandingOrder10Validator : AbstractValidator<IStandingOrder10>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -57,11 +57,11 @@ public class StandingOrder10Validator : AbstractValidator<StandingOrder10>
     /// Validator for the optional <c>ValidityPeriod</c> building block (DatePeriod2Choice_, 0..1).
     /// </param>
     public StandingOrder10Validator(
-        IValidator<Amount2Choice_> amountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<ExecutionType1Choice_> executionTypeValidator,
-        IValidator<DatePeriod2Choice_> validityPeriodValidator
+        IValidator<IAmount2Choice> amountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IExecutionType1Choice> executionTypeValidator,
+        IValidator<IDatePeriod2Choice> validityPeriodValidator
     )
     {
         When(x => x.Amount is not null, () => RuleFor(x => x.Amount).SetValidator(amountValidator!));

@@ -51,20 +51,20 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// enforced the multiplicity gap above — <see cref="CreditTransferTransaction76Validator"/> did
 /// not exist yet at that time.)
 /// </remarks>
-public class PaymentInstruction51Validator : AbstractValidator<PaymentInstruction51>
+public class PaymentInstruction51Validator : AbstractValidator<IPaymentInstruction51>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public PaymentInstruction51Validator(
-        IValidator<AdviceType1> requestedAdviceTypeValidator,
-        IValidator<PaymentTypeInformation26> paymentTypeInformationValidator,
-        IValidator<DateAndDateTime2Choice_> requestedExecutionDateValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CreditTransferTransaction76> creditTransferTransactionInformationValidator
+        IValidator<IAdviceType1> requestedAdviceTypeValidator,
+        IValidator<IPaymentTypeInformation26> paymentTypeInformationValidator,
+        IValidator<IDateAndDateTime2Choice> requestedExecutionDateValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICreditTransferTransaction76> creditTransferTransactionInformationValidator
     )
     {
         When(

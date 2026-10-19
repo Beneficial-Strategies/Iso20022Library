@@ -30,15 +30,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// enforced the multiplicity gap above — <see cref="RemittanceAmount4Validator"/> and
 /// <see cref="DocumentLineIdentification1Validator"/> did not exist yet at that time.)
 /// </remarks>
-public class DocumentLineInformation2Validator : AbstractValidator<DocumentLineInformation2>
+public class DocumentLineInformation2Validator : AbstractValidator<IDocumentLineInformation2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public DocumentLineInformation2Validator(
-        IValidator<RemittanceAmount4> amountValidator,
-        IValidator<DocumentLineIdentification1> identificationValidator
+        IValidator<IRemittanceAmount4> amountValidator,
+        IValidator<IDocumentLineIdentification1> identificationValidator
     )
     {
         When(x => x.Amount is not null, () => RuleFor(x => x.Amount).SetValidator(amountValidator!));

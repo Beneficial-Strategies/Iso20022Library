@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ClearingMember</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class Clearing5Validator : AbstractValidator<Clearing5>
+public class Clearing5Validator : AbstractValidator<IClearing5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Clearing5"/>.

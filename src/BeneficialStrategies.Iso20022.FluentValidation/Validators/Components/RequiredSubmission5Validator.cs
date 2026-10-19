@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class RequiredSubmission5Validator : AbstractValidator<RequiredSubmission5>
+public class RequiredSubmission5Validator : AbstractValidator<IRequiredSubmission5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="RequiredSubmission5"/>.

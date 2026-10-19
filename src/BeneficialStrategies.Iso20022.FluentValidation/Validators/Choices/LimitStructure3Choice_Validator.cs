@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Dependency injection: each variant's nested <c>Value</c> is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class LimitStructure3Choice_Validator : AbstractValidator<LimitStructure3Choice_>
+public class LimitStructure3Choice_Validator : AbstractValidator<ILimitStructure3Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -39,21 +39,20 @@ public class LimitStructure3Choice_Validator : AbstractValidator<LimitStructure3
     /// (LimitIdentification8).
     /// </param>
     public LimitStructure3Choice_Validator(
-        IValidator<LimitIdentification9> allCurrentLimitsValueValidator,
-        IValidator<LimitIdentification8> currentLimitIdentificationValueValidator
+        IValidator<ILimitIdentification9> allCurrentLimitsValueValidator,
+        IValidator<ILimitIdentification8> currentLimitIdentificationValueValidator
     )
     {
-        var allCurrentLimitsVariantValidator = new InlineValidator<Choices.LimitStructure3Choice.AllCurrentLimits>();
+        var allCurrentLimitsVariantValidator = new InlineValidator<Choices.LimitStructure3Choice.IAllCurrentLimits>();
         allCurrentLimitsVariantValidator.RuleFor(x => x.Value).SetValidator(allCurrentLimitsValueValidator);
 
         var currentLimitIdentificationVariantValidator =
-            new InlineValidator<Choices.LimitStructure3Choice.CurrentLimitIdentification>();
+            new InlineValidator<Choices.LimitStructure3Choice.ICurrentLimitIdentification>();
         currentLimitIdentificationVariantValidator
             .RuleFor(x => x.Value)
             .SetValidator(currentLimitIdentificationValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(allCurrentLimitsVariantValidator);
                 v.Add(currentLimitIdentificationVariantValidator);

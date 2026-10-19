@@ -21,4 +21,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// first-class type so the coverage-scoping policy (see the FluentValidation project's own
 /// <c>CLAUDE.md</c>) can record this type as reviewed rather than silently skipped.
 /// </remarks>
-public class InformationQualifierType1Validator : AbstractValidator<InformationQualifierType1> { }
+public class InformationQualifierType1Validator : AbstractValidator<IInformationQualifierType1> { }

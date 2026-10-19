@@ -24,15 +24,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
-public class DirectDebitTransaction12Validator : AbstractValidator<DirectDebitTransaction12>
+public class DirectDebitTransaction12Validator : AbstractValidator<IDirectDebitTransaction12>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public DirectDebitTransaction12Validator(
-        IValidator<PartyIdentification272> creditorSchemeIdentificationValidator,
-        IValidator<MandateRelatedInformation16> mandateRelatedInformationValidator
+        IValidator<IPartyIdentification272> creditorSchemeIdentificationValidator,
+        IValidator<IMandateRelatedInformation16> mandateRelatedInformationValidator
     )
     {
         When(

@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class OriginalMandate11Choice_Validator : AbstractValidator<OriginalMandate11Choice_>
+public class OriginalMandate11Choice_Validator : AbstractValidator<IOriginalMandate11Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -38,13 +38,12 @@ public class OriginalMandate11Choice_Validator : AbstractValidator<OriginalManda
     /// Validator for <see cref="Choices.OriginalMandate11Choice.OriginalMandate"/>'s <c>Value</c>
     /// (Mandate22).
     /// </param>
-    public OriginalMandate11Choice_Validator(IValidator<Mandate22> originalMandateValueValidator)
+    public OriginalMandate11Choice_Validator(IValidator<IMandate22> originalMandateValueValidator)
     {
-        var originalMandateVariantValidator = new InlineValidator<Choices.OriginalMandate11Choice.OriginalMandate>();
+        var originalMandateVariantValidator = new InlineValidator<Choices.OriginalMandate11Choice.IOriginalMandate>();
         originalMandateVariantValidator.RuleFor(x => x.Value).SetValidator(originalMandateValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(originalMandateVariantValidator);
             });

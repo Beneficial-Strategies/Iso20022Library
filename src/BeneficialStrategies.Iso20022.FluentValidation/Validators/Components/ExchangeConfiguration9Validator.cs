@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ExchangePolicy</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ExchangeConfiguration9Validator : AbstractValidator<ExchangeConfiguration9>
+public class ExchangeConfiguration9Validator : AbstractValidator<IExchangeConfiguration9>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ExchangeConfiguration9"/>.

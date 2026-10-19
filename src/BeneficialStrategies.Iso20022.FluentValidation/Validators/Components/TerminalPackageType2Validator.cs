@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Package</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class TerminalPackageType2Validator : AbstractValidator<TerminalPackageType2>
+public class TerminalPackageType2Validator : AbstractValidator<ITerminalPackageType2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TerminalPackageType2"/>.

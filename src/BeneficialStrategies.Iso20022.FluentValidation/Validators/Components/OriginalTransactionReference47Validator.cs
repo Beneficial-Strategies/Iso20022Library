@@ -49,24 +49,24 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>DebtorAgent</c> and <c>CreditorAgent</c>, and the same <see cref="CashAccount40"/>
 /// validator instance across all four account fields — see the two constructors below.
 /// </remarks>
-public class OriginalTransactionReference47Validator : AbstractValidator<OriginalTransactionReference47>
+public class OriginalTransactionReference47Validator : AbstractValidator<IOriginalTransactionReference47>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public OriginalTransactionReference47Validator(
-        IValidator<AmountType4Choice_> amountValidator,
-        IValidator<DateAndDateTime2Choice_> requestedExecutionDateValidator,
-        IValidator<PartyIdentification272> creditorSchemeIdentificationValidator,
-        IValidator<SettlementInstruction15> settlementInformationValidator,
-        IValidator<PaymentTypeInformation27> paymentTypeInformationValidator,
-        IValidator<MandateRelatedData5Choice_> mandateRelatedInformationValidator,
-        IValidator<RemittanceInformation26> remittanceInformationValidator,
-        IValidator<Party50Choice_> partyValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<Purpose2Choice_> purposeValidator
+        IValidator<IAmountType4Choice> amountValidator,
+        IValidator<IDateAndDateTime2Choice> requestedExecutionDateValidator,
+        IValidator<IPartyIdentification272> creditorSchemeIdentificationValidator,
+        IValidator<ISettlementInstruction15> settlementInformationValidator,
+        IValidator<IPaymentTypeInformation27> paymentTypeInformationValidator,
+        IValidator<IMandateRelatedData5Choice> mandateRelatedInformationValidator,
+        IValidator<IRemittanceInformation26> remittanceInformationValidator,
+        IValidator<IParty50Choice> partyValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<IPurpose2Choice> purposeValidator
     )
     {
         When(x => x.Amount is not null, () => RuleFor(x => x.Amount).SetValidator(amountValidator!));

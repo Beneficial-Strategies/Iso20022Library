@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ContractRegistrationOpening</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ContractRegistration7Validator : AbstractValidator<ContractRegistration7>
+public class ContractRegistration7Validator : AbstractValidator<IContractRegistration7>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ContractRegistration7"/>.

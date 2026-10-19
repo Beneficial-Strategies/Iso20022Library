@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Recipient</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class EnvelopedData8Validator : AbstractValidator<EnvelopedData8>
+public class EnvelopedData8Validator : AbstractValidator<IEnvelopedData8>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="EnvelopedData8"/>.

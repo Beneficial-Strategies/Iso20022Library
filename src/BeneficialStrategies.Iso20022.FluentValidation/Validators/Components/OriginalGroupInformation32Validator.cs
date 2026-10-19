@@ -33,15 +33,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
-public class OriginalGroupInformation32Validator : AbstractValidator<OriginalGroupInformation32>
+public class OriginalGroupInformation32Validator : AbstractValidator<IOriginalGroupInformation32>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public OriginalGroupInformation32Validator(
-        IValidator<NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatusValidator,
-        IValidator<StatusReasonInformation14> statusReasonInformationValidator
+        IValidator<INumberOfTransactionsPerStatus5> numberOfTransactionsPerStatusValidator,
+        IValidator<IStatusReasonInformation14> statusReasonInformationValidator
     )
     {
         RuleForEach(x => x.NumberOfTransactionsPerStatus).SetValidator(numberOfTransactionsPerStatusValidator!);

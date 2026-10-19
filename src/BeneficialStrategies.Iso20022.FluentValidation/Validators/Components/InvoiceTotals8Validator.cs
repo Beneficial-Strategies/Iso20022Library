@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
 /// </remarks>
-public class InvoiceTotals8Validator : AbstractValidator<InvoiceTotals8>
+public class InvoiceTotals8Validator : AbstractValidator<IInvoiceTotals8>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="InvoiceTotals8"/>.

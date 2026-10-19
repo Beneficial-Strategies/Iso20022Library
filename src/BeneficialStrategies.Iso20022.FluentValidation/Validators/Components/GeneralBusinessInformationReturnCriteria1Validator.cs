@@ -24,4 +24,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// project's own <c>CLAUDE.md</c>) can record this type as reviewed rather than silently skipped.
 /// </remarks>
 public class GeneralBusinessInformationReturnCriteria1Validator
-    : AbstractValidator<GeneralBusinessInformationReturnCriteria1> { }
+    : AbstractValidator<IGeneralBusinessInformationReturnCriteria1> { }

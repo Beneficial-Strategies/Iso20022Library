@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Type</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class DateAndType1Validator : AbstractValidator<DateAndType1>
+public class DateAndType1Validator : AbstractValidator<IDateAndType1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -31,7 +31,7 @@ public class DateAndType1Validator : AbstractValidator<DateAndType1>
     /// <param name="typeValidator">
     /// Validator for the required <c>Type</c> building block (DateType2Choice_, 1..1).
     /// </param>
-    public DateAndType1Validator(IValidator<DateType2Choice_> typeValidator)
+    public DateAndType1Validator(IValidator<IDateType2Choice> typeValidator)
     {
         // Date: required (1..1) and already `required` C# property — format enforced by struct
         // constructor.

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Address</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class NetworkParameters5Validator : AbstractValidator<NetworkParameters5>
+public class NetworkParameters5Validator : AbstractValidator<INetworkParameters5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="NetworkParameters5"/>.

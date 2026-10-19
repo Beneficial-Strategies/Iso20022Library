@@ -29,15 +29,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// — the same <see cref="PartyIdentification272"/> validator instance is reused across
 /// <c>Garnishee</c> and <c>GarnishmentAdministrator</c> — see the two constructors below.
 /// </remarks>
-public class Garnishment4Validator : AbstractValidator<Garnishment4>
+public class Garnishment4Validator : AbstractValidator<IGarnishment4>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public Garnishment4Validator(
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<GarnishmentType1> typeValidator
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<IGarnishmentType1> typeValidator
     )
     {
         When(x => x.Garnishee is not null, () => RuleFor(x => x.Garnishee).SetValidator(partyValidator!));

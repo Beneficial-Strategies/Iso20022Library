@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// agent building blocks are each validated by an injected <see cref="IValidator{T}"/> rather
 /// than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class GroupHeader110Validator : AbstractValidator<GroupHeader110>
+public class GroupHeader110Validator : AbstractValidator<IGroupHeader110>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -48,9 +48,9 @@ public class GroupHeader110Validator : AbstractValidator<GroupHeader110>
     /// both.
     /// </param>
     public GroupHeader110Validator(
-        IValidator<Authorisation1Choice_> authorisationValidator,
-        IValidator<PartyIdentification272> initiatingPartyValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator
+        IValidator<IAuthorisation1Choice> authorisationValidator,
+        IValidator<IPartyIdentification272> initiatingPartyValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator
     )
     {
         // MessageIdentification, CreationDateTime: required (1..1) and already `required` C#

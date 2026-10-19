@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Balance</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance47>
+public class AccountAndBalance47Validator : AbstractValidator<IAccountAndBalance47>
 {
     // AnyBICDec2014Identifier (ISO ID: _jp-90kI6EeirV6K70JJQ8Q):
     // Format: 4 chars institution + 2 chars country + 2 chars location + optional 3 chars branch
@@ -74,7 +74,7 @@ public class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance4
     /// Validator for the optional <c>Balance</c> building block (CorporateActionBalanceDetails43,
     /// 0..1) — only invoked when present.
     /// </param>
-    public AccountAndBalance47Validator(IValidator<CorporateActionBalanceDetails43> balanceValidator)
+    public AccountAndBalance47Validator(IValidator<ICorporateActionBalanceDetails43> balanceValidator)
     {
         // ── Cross-field constraints ───────────────────────────────────────────────
         // SafekeepingPlaceRule: business-context only — cannot be enforced structurally.
@@ -114,9 +114,9 @@ public class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance4
         // ── AccountOwner: PartyIdentification127Choice (0..1) ────────────────────
         // Variant: AnyBIC — value must match AnyBICDec2014Identifier pattern
         When(
-            x => x.AccountOwner is PartyId127.AnyBIC,
+            x => x.AccountOwner is PartyId127.IAnyBIC,
             () =>
-                RuleFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value)
+                RuleFor(x => ((PartyId127.IAnyBIC)x.AccountOwner!).Value)
                     .NotEmpty()
         // AnyBICDec2014Identifier pattern enforced by struct constructor.
         );
@@ -124,14 +124,14 @@ public class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance4
         // Variant: ProprietaryIdentification — Identification and Issuer required Max35Text;
         // SchemeName optional Max35Text
         When(
-            x => x.AccountOwner is PartyId127.ProprietaryIdentification,
+            x => x.AccountOwner is PartyId127.IProprietaryIdentification,
             () =>
             {
                 // Length [1..35] enforced by Max35Text constructor for all three fields.
-                RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification)
+                RuleFor(x => ((PartyId127.IProprietaryIdentification)x.AccountOwner!).Identification)
                     .NotEmpty();
 
-                RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Issuer)
+                RuleFor(x => ((PartyId127.IProprietaryIdentification)x.AccountOwner!).Issuer)
                     .NotEmpty();
             }
         );
@@ -139,9 +139,9 @@ public class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance4
         // ── SafekeepingPlace: SafekeepingPlaceFormat28Choice (0..1) ──────────────
         // Variant: Country — value is ISO 3166 Alpha-2 country code
         When(
-            x => x.SafekeepingPlace is SfkpgPlace28.Country,
+            x => x.SafekeepingPlace is SfkpgPlace28.ICountry,
             () =>
-                RuleFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value)
+                RuleFor(x => ((SfkpgPlace28.ICountry)x.SafekeepingPlace!).Value)
                     .NotEmpty()
         // Pattern ^[A-Z]{2}$ is enforced by CountryCode constructor — no Matches() needed.
         );
@@ -150,10 +150,10 @@ public class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance4
 
         // Variant: TypeAndIdentification — Identification must match AnyBICDec2014Identifier
         When(
-            x => x.SafekeepingPlace is SfkpgPlace28.TypeAndIdentification,
+            x => x.SafekeepingPlace is SfkpgPlace28.ITypeAndIdentification,
             () =>
                 RuleFor(x =>
-                        ((SfkpgPlace28.TypeAndIdentification)x.SafekeepingPlace!).Identification
+                        ((SfkpgPlace28.ITypeAndIdentification)x.SafekeepingPlace!).Identification
                     )
                     .NotEmpty()
         // AnyBICDec2014Identifier pattern enforced by struct constructor.

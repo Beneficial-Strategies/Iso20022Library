@@ -31,16 +31,16 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MultilateralSettlementRequestV02Validator : AbstractValidator<MultilateralSettlementRequestV02>
+public class MultilateralSettlementRequestV02Validator : AbstractValidator<IMultilateralSettlementRequestV02>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public MultilateralSettlementRequestV02Validator(
-        IValidator<GroupHeader104> groupHeaderValidator,
-        IValidator<MultilateralSettlementRequest3> settlementRequestValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader104> groupHeaderValidator,
+        IValidator<IMultilateralSettlementRequest3> settlementRequestValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);

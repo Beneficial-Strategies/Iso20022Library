@@ -22,4 +22,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// type so the coverage-scoping policy (see the FluentValidation project's own <c>CLAUDE.md</c>)
 /// can record this type as reviewed rather than silently skipped.
 /// </remarks>
-public class MessageHeader1Validator : AbstractValidator<MessageHeader1> { }
+public class MessageHeader1Validator : AbstractValidator<IMessageHeader1> { }

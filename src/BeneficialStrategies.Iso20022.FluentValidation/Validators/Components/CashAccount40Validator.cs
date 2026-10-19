@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IExternalCodeRegistry{TCode}"/> (via <see cref="ActiveOrHistoricCurrencyCodeValidator"/>)
 /// — see the two constructors below.
 /// </remarks>
-public class CashAccount40Validator : AbstractValidator<CashAccount40>
+public class CashAccount40Validator : AbstractValidator<ICashAccount40>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -68,9 +68,9 @@ public class CashAccount40Validator : AbstractValidator<CashAccount40>
     /// invoked when present.
     /// </param>
     public CashAccount40Validator(
-        IValidator<AccountIdentification4Choice_> identificationValidator,
-        IValidator<CashAccountType2Choice_> typeValidator,
-        IValidator<ProxyAccountIdentification1> proxyValidator,
+        IValidator<IAccountIdentification4Choice> identificationValidator,
+        IValidator<ICashAccountType2Choice> typeValidator,
+        IValidator<IProxyAccountIdentification1> proxyValidator,
         IValidator<ActiveOrHistoricCurrencyCode> currencyValidator
     )
     {

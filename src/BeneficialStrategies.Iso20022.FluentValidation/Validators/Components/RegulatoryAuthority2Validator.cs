@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>Country</c> is validated by an injected <see cref="IValidator{T}"/>
 /// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class RegulatoryAuthority2Validator : AbstractValidator<RegulatoryAuthority2>
+public class RegulatoryAuthority2Validator : AbstractValidator<IRegulatoryAuthority2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —

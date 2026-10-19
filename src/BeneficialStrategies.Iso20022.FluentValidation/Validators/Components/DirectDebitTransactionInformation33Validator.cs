@@ -46,7 +46,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>Purpose</c>, and <c>RemittanceInformation</c> are each validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class DirectDebitTransactionInformation33Validator : AbstractValidator<DirectDebitTransactionInformation33>
+public class DirectDebitTransactionInformation33Validator : AbstractValidator<IDirectDebitTransactionInformation33>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -58,17 +58,17 @@ public class DirectDebitTransactionInformation33Validator : AbstractValidator<Di
     /// constructing its own.
     /// </summary>
     public DirectDebitTransactionInformation33Validator(
-        IValidator<PaymentIdentification13> paymentIdentificationValidator,
-        IValidator<PaymentTypeInformation28> paymentTypeInformationValidator,
-        IValidator<SettlementDateTimeIndication1> settlementTimeIndicationValidator,
-        IValidator<SettlementTimeRequest2> settlementTimeRequestValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> ultimateDebtorValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> debtorValidator,
-        IValidator<CashAccount40> debtorAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> debtorAgentValidator,
-        IValidator<CashAccount40> debtorAgentAccountValidator,
-        IValidator<Purpose2Choice_> purposeValidator,
-        IValidator<RemittanceInformation2> remittanceInformationValidator
+        IValidator<IPaymentIdentification13> paymentIdentificationValidator,
+        IValidator<IPaymentTypeInformation28> paymentTypeInformationValidator,
+        IValidator<ISettlementDateTimeIndication1> settlementTimeIndicationValidator,
+        IValidator<ISettlementTimeRequest2> settlementTimeRequestValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> ultimateDebtorValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> debtorValidator,
+        IValidator<ICashAccount40> debtorAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> debtorAgentValidator,
+        IValidator<ICashAccount40> debtorAgentAccountValidator,
+        IValidator<IPurpose2Choice> purposeValidator,
+        IValidator<IRemittanceInformation2> remittanceInformationValidator
     )
     {
         RuleFor(x => x.PaymentIdentification).SetValidator(paymentIdentificationValidator!);

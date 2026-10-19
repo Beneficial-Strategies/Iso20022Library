@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> —
 /// see the two constructors below.
 /// </remarks>
-public class PaymentTransaction171Validator : AbstractValidator<PaymentTransaction171>
+public class PaymentTransaction171Validator : AbstractValidator<IPaymentTransaction171>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
@@ -45,11 +45,11 @@ public class PaymentTransaction171Validator : AbstractValidator<PaymentTransacti
     /// type constructing its own.
     /// </summary>
     public PaymentTransaction171Validator(
-        IValidator<OriginalGroupInformation33> originalGroupInformationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
-        IValidator<OriginalTransactionReference47> originalTransactionReferenceValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IOriginalGroupInformation33> originalGroupInformationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
+        IValidator<IOriginalTransactionReference47> originalTransactionReferenceValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         // StatusRequestIdentification, OriginalInstructionIdentification,

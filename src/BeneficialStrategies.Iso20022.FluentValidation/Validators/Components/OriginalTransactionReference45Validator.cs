@@ -50,7 +50,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// agent fields, one <c>CashAccount40</c> validator across all 4 account fields — see the two
 /// constructors below.
 /// </remarks>
-public class OriginalTransactionReference45Validator : AbstractValidator<OriginalTransactionReference45>
+public class OriginalTransactionReference45Validator : AbstractValidator<IOriginalTransactionReference45>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -61,19 +61,19 @@ public class OriginalTransactionReference45Validator : AbstractValidator<Origina
     /// type constructing its own.
     /// </summary>
     public OriginalTransactionReference45Validator(
-        IValidator<AmountType4Choice_> amountValidator,
-        IValidator<DateAndDateTime2Choice_> requestedExecutionDateValidator,
-        IValidator<PartyIdentification272> creditorSchemeIdentificationValidator,
-        IValidator<SettlementInstruction15> settlementInformationValidator,
-        IValidator<PaymentTypeInformation27> paymentTypeInformationValidator,
-        IValidator<MandateRelatedData5Choice_> mandateRelatedInformationValidator,
-        IValidator<RemittanceInformation26> remittanceInformationValidator,
-        IValidator<Party50Choice_> partyValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<Purpose2Choice_> purposeValidator,
-        IValidator<CreditTransferTransaction72> underlyingCustomerCreditTransferValidator,
-        IValidator<CreditTransferTransaction82> underlyingFinancialInstitutionCreditTransferValidator
+        IValidator<IAmountType4Choice> amountValidator,
+        IValidator<IDateAndDateTime2Choice> requestedExecutionDateValidator,
+        IValidator<IPartyIdentification272> creditorSchemeIdentificationValidator,
+        IValidator<ISettlementInstruction15> settlementInformationValidator,
+        IValidator<IPaymentTypeInformation27> paymentTypeInformationValidator,
+        IValidator<IMandateRelatedData5Choice> mandateRelatedInformationValidator,
+        IValidator<IRemittanceInformation26> remittanceInformationValidator,
+        IValidator<IParty50Choice> partyValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<IPurpose2Choice> purposeValidator,
+        IValidator<ICreditTransferTransaction72> underlyingCustomerCreditTransferValidator,
+        IValidator<ICreditTransferTransaction82> underlyingFinancialInstitutionCreditTransferValidator
     )
     {
         When(

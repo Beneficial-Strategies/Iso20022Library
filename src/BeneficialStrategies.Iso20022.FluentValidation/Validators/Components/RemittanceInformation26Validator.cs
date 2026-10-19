@@ -23,13 +23,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class RemittanceInformation26Validator : AbstractValidator<RemittanceInformation26>
+public class RemittanceInformation26Validator : AbstractValidator<IRemittanceInformation26>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public RemittanceInformation26Validator(IValidator<StructuredRemittanceInformation22> structuredValidator)
+    public RemittanceInformation26Validator(IValidator<IStructuredRemittanceInformation22> structuredValidator)
     {
         RuleForEach(x => x.Structured).SetValidator(structuredValidator!);
     }

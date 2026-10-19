@@ -58,7 +58,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// all 8 agent fields, one <c>CashAccount40</c> validator across all 8 account fields — see the
 /// two constructors below.
 /// </remarks>
-public class CreditTransferTransaction72Validator : AbstractValidator<CreditTransferTransaction72>
+public class CreditTransferTransaction72Validator : AbstractValidator<ICreditTransferTransaction72>
 {
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -70,16 +70,16 @@ public class CreditTransferTransaction72Validator : AbstractValidator<CreditTran
     /// this type constructing its own.
     /// </summary>
     public CreditTransferTransaction72Validator(
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<PaymentIdentification13> paymentIdentificationValidator,
-        IValidator<PaymentTypeInformation28> paymentTypeInformationValidator,
-        IValidator<InstructionForCreditorAgent3> instructionForCreditorAgentValidator,
-        IValidator<InstructionForNextAgent1> instructionForNextAgentValidator,
-        IValidator<Purpose2Choice_> purposeValidator,
-        IValidator<TaxData1> taxValidator,
-        IValidator<RemittanceInformation26> remittanceInformationValidator
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IPaymentIdentification13> paymentIdentificationValidator,
+        IValidator<IPaymentTypeInformation28> paymentTypeInformationValidator,
+        IValidator<IInstructionForCreditorAgent3> instructionForCreditorAgentValidator,
+        IValidator<IInstructionForNextAgent1> instructionForNextAgentValidator,
+        IValidator<IPurpose2Choice> purposeValidator,
+        IValidator<ITaxData1> taxValidator,
+        IValidator<IRemittanceInformation26> remittanceInformationValidator
     )
     {
         RuleFor(x => x.Debtor).SetValidator(partyValidator!);

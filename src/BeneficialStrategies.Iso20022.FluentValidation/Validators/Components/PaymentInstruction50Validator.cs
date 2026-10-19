@@ -51,19 +51,19 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// gap above — <see cref="DirectDebitTransactionInformation34Validator"/> did not exist yet at
 /// that time.)
 /// </remarks>
-public class PaymentInstruction50Validator : AbstractValidator<PaymentInstruction50>
+public class PaymentInstruction50Validator : AbstractValidator<IPaymentInstruction50>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public PaymentInstruction50Validator(
-        IValidator<AdviceType1> requestedAdviceTypeValidator,
-        IValidator<PaymentTypeInformation29> paymentTypeInformationValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<DirectDebitTransactionInformation34> directDebitTransactionInformationValidator
+        IValidator<IAdviceType1> requestedAdviceTypeValidator,
+        IValidator<IPaymentTypeInformation29> paymentTypeInformationValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<IDirectDebitTransactionInformation34> directDebitTransactionInformationValidator
     )
     {
         When(

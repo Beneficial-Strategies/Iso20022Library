@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class Reservation4Validator : AbstractValidator<Reservation4>
+public class Reservation4Validator : AbstractValidator<IReservation4>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -37,8 +37,8 @@ public class Reservation4Validator : AbstractValidator<Reservation4>
     /// Validator for the required <c>Amount</c> building block (Amount2Choice_, 1..1).
     /// </param>
     public Reservation4Validator(
-        IValidator<DateAndDateTime2Choice_> startDateTimeValidator,
-        IValidator<Amount2Choice_> amountValidator
+        IValidator<IDateAndDateTime2Choice> startDateTimeValidator,
+        IValidator<IAmount2Choice> amountValidator
     )
     {
         RuleFor(x => x.Amount).SetValidator(amountValidator);

@@ -102,17 +102,17 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class PaymentReturnV15Validator : AbstractValidator<PaymentReturnV15>
+public class PaymentReturnV15Validator : AbstractValidator<IPaymentReturnV15>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public PaymentReturnV15Validator(
-        IValidator<GroupHeader123> groupHeaderValidator,
-        IValidator<OriginalGroupHeader19> originalGroupInformationValidator,
-        IValidator<PaymentTransaction168> transactionInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader123> groupHeaderValidator,
+        IValidator<IOriginalGroupHeader19> originalGroupInformationValidator,
+        IValidator<IPaymentTransaction168> transactionInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);
@@ -127,7 +127,7 @@ public class PaymentReturnV15Validator : AbstractValidator<PaymentReturnV15>
 
         // ── GroupReturnAndTransactionInformationNotPresentRule ───────────────────────
         RuleFor(x => x)
-            .Must(x => x.GroupHeader.GroupReturn?.BoolValue != true || x.TransactionInformation.Count == 0)
+            .Must(x => x.GroupHeader.GroupReturn?.BoolValue != true || x.TransactionInformation.Count() == 0)
             .WithName("GroupReturnAndTransactionInformationNotPresentRule")
             .WithMessage(
                 "PaymentReturnV15: if GroupHeader.GroupReturn is true, "
@@ -136,7 +136,7 @@ public class PaymentReturnV15Validator : AbstractValidator<PaymentReturnV15>
 
         // ── GroupReturnAndTransactionInformationPresentRule ──────────────────────────
         RuleFor(x => x)
-            .Must(x => x.GroupHeader.GroupReturn?.BoolValue != false || x.TransactionInformation.Count >= 1)
+            .Must(x => x.GroupHeader.GroupReturn?.BoolValue != false || x.TransactionInformation.Count() >= 1)
             .WithName("GroupReturnAndTransactionInformationPresentRule")
             .WithMessage(
                 "PaymentReturnV15: if GroupHeader.GroupReturn is false, at least one "
@@ -210,7 +210,7 @@ public class PaymentReturnV15Validator : AbstractValidator<PaymentReturnV15>
             .Must(x =>
                 x.GroupHeader.GroupReturn?.BoolValue != false
                 || (int.TryParse((string)x.GroupHeader.NumberOfTransactions, out var n)
-                    && n == x.TransactionInformation.Count)
+                    && n == x.TransactionInformation.Count())
             )
             .WithName("GroupReturnAndNumberOfTransactionsRule")
             .WithMessage(

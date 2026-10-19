@@ -49,7 +49,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class MandateCopyRequestV04Validator : AbstractValidator<MandateCopyRequestV04>
+public class MandateCopyRequestV04Validator : AbstractValidator<IMandateCopyRequestV04>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -68,9 +68,9 @@ public class MandateCopyRequestV04Validator : AbstractValidator<MandateCopyReque
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public MandateCopyRequestV04Validator(
-        IValidator<GroupHeader110> groupHeaderValidator,
-        IValidator<MandateCopy4> underlyingCopyRequestDetailsValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader110> groupHeaderValidator,
+        IValidator<IMandateCopy4> underlyingCopyRequestDetailsValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator);

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>IndividualExecutionDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SubscriptionBulkExecution05Validator : AbstractValidator<SubscriptionBulkExecution05>
+public class SubscriptionBulkExecution05Validator : AbstractValidator<ISubscriptionBulkExecution05>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SubscriptionBulkExecution05"/>.

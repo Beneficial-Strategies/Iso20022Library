@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TotalInitialMargin</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class InteroperabilityCCP1Validator : AbstractValidator<InteroperabilityCCP1>
+public class InteroperabilityCCP1Validator : AbstractValidator<IInteroperabilityCCP1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="InteroperabilityCCP1"/>.

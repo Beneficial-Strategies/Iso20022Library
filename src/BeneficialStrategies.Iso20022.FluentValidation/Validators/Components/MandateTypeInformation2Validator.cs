@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>Classification</c> are each validated by an injected <see cref="IValidator{T}"/> rather
 /// than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MandateTypeInformation2Validator : AbstractValidator<MandateTypeInformation2>
+public class MandateTypeInformation2Validator : AbstractValidator<IMandateTypeInformation2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -49,10 +49,10 @@ public class MandateTypeInformation2Validator : AbstractValidator<MandateTypeInf
     /// (MandateClassification1Choice_, 0..1) — only invoked when present.
     /// </param>
     public MandateTypeInformation2Validator(
-        IValidator<ServiceLevel8Choice_> serviceLevelValidator,
-        IValidator<LocalInstrument2Choice_> localInstrumentValidator,
-        IValidator<CategoryPurpose1Choice_> categoryPurposeValidator,
-        IValidator<MandateClassification1Choice_> classificationValidator
+        IValidator<IServiceLevel8Choice> serviceLevelValidator,
+        IValidator<ILocalInstrument2Choice> localInstrumentValidator,
+        IValidator<ICategoryPurpose1Choice> categoryPurposeValidator,
+        IValidator<IMandateClassification1Choice> classificationValidator
     )
     {
         When(

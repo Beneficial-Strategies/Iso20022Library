@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class MandateAcceptanceReportV08Validator : AbstractValidator<MandateAcceptanceReportV08>
+public class MandateAcceptanceReportV08Validator : AbstractValidator<IMandateAcceptanceReportV08>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -70,9 +70,9 @@ public class MandateAcceptanceReportV08Validator : AbstractValidator<MandateAcce
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public MandateAcceptanceReportV08Validator(
-        IValidator<GroupHeader110> groupHeaderValidator,
-        IValidator<MandateAcceptance8> underlyingAcceptanceDetailsValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader110> groupHeaderValidator,
+        IValidator<IMandateAcceptance8> underlyingAcceptanceDetailsValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator);

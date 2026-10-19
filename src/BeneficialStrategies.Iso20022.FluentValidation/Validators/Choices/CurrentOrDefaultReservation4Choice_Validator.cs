@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class CurrentOrDefaultReservation4Choice_Validator : AbstractValidator<CurrentOrDefaultReservation4Choice_>
+public class CurrentOrDefaultReservation4Choice_Validator : AbstractValidator<ICurrentOrDefaultReservation4Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -36,17 +36,16 @@ public class CurrentOrDefaultReservation4Choice_Validator : AbstractValidator<Cu
     /// (ReservationIdentification4).
     /// </param>
     public CurrentOrDefaultReservation4Choice_Validator(
-        IValidator<ReservationIdentification4> reservationIdentificationValidator
+        IValidator<IReservationIdentification4> reservationIdentificationValidator
     )
     {
-        var currentVariantValidator = new InlineValidator<Choices.CurrentOrDefaultReservation4Choice.Current>();
+        var currentVariantValidator = new InlineValidator<Choices.CurrentOrDefaultReservation4Choice.ICurrent>();
         currentVariantValidator.RuleFor(x => x.Value).SetValidator(reservationIdentificationValidator);
 
-        var defaultVariantValidator = new InlineValidator<Choices.CurrentOrDefaultReservation4Choice.Default>();
+        var defaultVariantValidator = new InlineValidator<Choices.CurrentOrDefaultReservation4Choice.IDefault>();
         defaultVariantValidator.RuleFor(x => x.Value).SetValidator(reservationIdentificationValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(currentVariantValidator);
                 v.Add(defaultVariantValidator);

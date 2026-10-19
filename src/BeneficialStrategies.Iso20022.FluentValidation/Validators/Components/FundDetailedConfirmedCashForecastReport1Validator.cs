@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// constructors below.
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class FundDetailedConfirmedCashForecastReport1Validator : AbstractValidator<FundDetailedConfirmedCashForecastReport1>
+public class FundDetailedConfirmedCashForecastReport1Validator : AbstractValidator<IFundDetailedConfirmedCashForecastReport1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class FundDetailedConfirmedCashForecastReport1Validator : AbstractValidat
     /// Validator for each item of the <c>FundCashForecastDetails</c> collection (FundCashForecast2, 1..∞).
     /// </param>
     public FundDetailedConfirmedCashForecastReport1Validator(
-        IValidator<FundCashForecast2> fundCashForecastDetailsValidator
+        IValidator<IFundCashForecast2> fundCashForecastDetailsValidator
     )
     {
         // Extension: Extension1, 0..∞ — any size including empty is valid, no rule needed.

@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// constructors below.
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class EstimatedFundCashForecast2Validator : AbstractValidator<EstimatedFundCashForecast2>
+public class EstimatedFundCashForecast2Validator : AbstractValidator<IEstimatedFundCashForecast2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -50,7 +50,7 @@ public class EstimatedFundCashForecast2Validator : AbstractValidator<EstimatedFu
     /// Validator for each item of the <c>SortingCriteriaDetails</c> collection (CashSortingCriterion1, 1..∞).
     /// </param>
     public EstimatedFundCashForecast2Validator(
-        IValidator<CashSortingCriterion1> sortingCriteriaDetailsValidator
+        IValidator<ICashSortingCriterion1> sortingCriteriaDetailsValidator
     )
     {
         // ── Cross-field constraints ───────────────────────────────────────────────

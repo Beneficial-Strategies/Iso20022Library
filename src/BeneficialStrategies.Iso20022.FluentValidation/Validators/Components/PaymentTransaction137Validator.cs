@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// collection are each validated by an injected <see cref="IValidator{T}"/> rather than a
 /// hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class PaymentTransaction137Validator : AbstractValidator<PaymentTransaction137>
+public class PaymentTransaction137Validator : AbstractValidator<IPaymentTransaction137>
 {
     // UUIDv4Identifier spec pattern (ISO ID: _TQIBwHrVEeidVZmeoasaWQ):
     // [a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}
@@ -45,8 +45,8 @@ public class PaymentTransaction137Validator : AbstractValidator<PaymentTransacti
     /// (PaymentCancellationReason5, 0..∞).
     /// </param>
     public PaymentTransaction137Validator(
-        IValidator<Case5> caseValidator,
-        IValidator<PaymentCancellationReason5> cancellationReasonInformationValidator
+        IValidator<ICase5> caseValidator,
+        IValidator<IPaymentCancellationReason5> cancellationReasonInformationValidator
     )
     {
         // Max35Text optional fields: length [1..35] enforced by Max35Text constructor — no FV rules needed.

@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public class AccountNotification13Validator : AbstractValidator<AccountNotification13>
+public class AccountNotification13Validator : AbstractValidator<IAccountNotification13>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AccountNotification13"/>.
@@ -60,7 +60,7 @@ public class AccountNotification13Validator : AbstractValidator<AccountNotificat
             );
 
         RuleFor(x => x)
-            .Must(x => x.Debtor is not null || (x.Item.Count > 0 && x.Item.All(i => i.Debtor is not null)))
+            .Must(x => x.Debtor is not null || (x.Item.Count() > 0 && x.Item.All(i => i.Debtor is not null)))
             .WithName("MandatoryDebtorRule")
             .WithMessage("Either Debtor must be present or Item/Debtor must be present (MandatoryDebtorRule).");
 

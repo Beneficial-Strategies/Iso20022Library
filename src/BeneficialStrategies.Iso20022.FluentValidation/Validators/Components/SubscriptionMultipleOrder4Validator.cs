@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class SubscriptionMultipleOrder4Validator : AbstractValidator<SubscriptionMultipleOrder4>
+public class SubscriptionMultipleOrder4Validator : AbstractValidator<ISubscriptionMultipleOrder4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SubscriptionMultipleOrder4"/>.

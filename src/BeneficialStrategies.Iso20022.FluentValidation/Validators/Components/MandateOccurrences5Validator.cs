@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: <c>Frequency</c> and <c>Duration</c> are each validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MandateOccurrences5Validator : AbstractValidator<MandateOccurrences5>
+public class MandateOccurrences5Validator : AbstractValidator<IMandateOccurrences5>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -41,8 +41,8 @@ public class MandateOccurrences5Validator : AbstractValidator<MandateOccurrences
     /// invoked when present.
     /// </param>
     public MandateOccurrences5Validator(
-        IValidator<Frequency36Choice_> frequencyValidator,
-        IValidator<DatePeriod3> durationValidator
+        IValidator<IFrequency36Choice> frequencyValidator,
+        IValidator<IDatePeriod3> durationValidator
     )
     {
         // SequenceType: required (1..1) and already `required` C# property — closed codeset

@@ -36,9 +36,9 @@ public class ServiceCollectionExtensionsTests
         Assert.NotNull(provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>());
         Assert.NotNull(provider.GetRequiredService<IValidator<MandateCopyRequestV04>>());
         // ...and the shared component/choice validators messages in any area depend on.
-        Assert.NotNull(provider.GetRequiredService<IValidator<Case6>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICase6>>());
         Assert.NotNull(
-            provider.GetRequiredService<IValidator<BeneficialStrategies.Iso20022.Choices.Party50Choice_>>()
+            provider.GetRequiredService<IValidator<BeneficialStrategies.Iso20022.Choices.IParty50Choice>>()
         );
     }
 
@@ -57,14 +57,14 @@ public class ServiceCollectionExtensionsTests
 
     // ── DI actually wires the constructor with dependencies, not the parameterless one ────────
     //
-    // This is the empirical proof requested in conversation: register a fake IValidator<Case6>
+    // This is the empirical proof requested in conversation: register a fake IValidator<ICase6>
     // that rejects everything, then confirm it's the one CancelCaseAssignmentV05Validator's
     // resolved instance actually uses. If DI had silently fallen back to the parameterless
     // "default dependencies" constructor instead, that constructor builds its own internal
     // `new Case6Validator()` and this fake would never run — the otherwise-fully-valid message
     // would incorrectly validate as valid.
 
-    private sealed class AlwaysInvalidCase6Validator : AbstractValidator<Case6>
+    private sealed class AlwaysInvalidCase6Validator : AbstractValidator<ICase6>
     {
         public AlwaysInvalidCase6Validator() =>
             RuleFor(x => x).Must(_ => false).WithMessage("FAKE always-invalid Case6 validator ran");
@@ -77,7 +77,7 @@ public class ServiceCollectionExtensionsTests
         services.AddIso20022Validators();
         // Last registration for a given service type wins when resolving a single instance —
         // this overrides the real Case6Validator registered by AddIso20022Validators() above.
-        services.AddScoped<IValidator<Case6>, AlwaysInvalidCase6Validator>();
+        services.AddScoped<IValidator<ICase6>, AlwaysInvalidCase6Validator>();
         using var provider = services.BuildServiceProvider();
 
         var sut = provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>();
@@ -96,8 +96,8 @@ public class ServiceCollectionExtensionsTests
         services.AddIso20022Validators(filter: t => t == typeof(OtherContact1Validator));
         using var provider = services.BuildServiceProvider();
 
-        Assert.NotNull(provider.GetRequiredService<IValidator<OtherContact1>>());
-        Assert.Throws<InvalidOperationException>(() => provider.GetRequiredService<IValidator<Case6>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IOtherContact1>>());
+        Assert.Throws<InvalidOperationException>(() => provider.GetRequiredService<IValidator<ICase6>>());
     }
 
     // ── Business-area overload ─────────────────────────────────────────────────
@@ -119,9 +119,9 @@ public class ServiceCollectionExtensionsTests
 
         // Shared component/choice validators: always registered, regardless of area filter,
         // because camt's own message validator depends on them.
-        Assert.NotNull(provider.GetRequiredService<IValidator<Case6>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICase6>>());
         Assert.NotNull(
-            provider.GetRequiredService<IValidator<BeneficialStrategies.Iso20022.Choices.Party50Choice_>>()
+            provider.GetRequiredService<IValidator<BeneficialStrategies.Iso20022.Choices.IParty50Choice>>()
         );
     }
 
@@ -149,15 +149,15 @@ public class ServiceCollectionExtensionsTests
 
         // The root itself and everything it transitively needs, several levels deep, all resolve.
         Assert.NotNull(provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<CaseAssignment6>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<Case6>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICaseAssignment6>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICase6>>());
         Assert.NotNull(
-            provider.GetRequiredService<IValidator<BeneficialStrategies.Iso20022.Choices.Party50Choice_>>()
+            provider.GetRequiredService<IValidator<BeneficialStrategies.Iso20022.Choices.IParty50Choice>>()
         );
-        Assert.NotNull(provider.GetRequiredService<IValidator<BranchAndFinancialInstitutionIdentification8>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<PartyIdentification272>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<Contact13>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<OtherContact1>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IBranchAndFinancialInstitutionIdentification8>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IPartyIdentification272>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IContact13>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IOtherContact1>>());
 
         // Nothing specific to the unrelated pain.017 (MandateCopyRequest) chain was pulled in —
         // this is the precision the namespace-based area filter can't give you: MandateCopy4
@@ -165,9 +165,9 @@ public class ServiceCollectionExtensionsTests
         Assert.Throws<InvalidOperationException>(
             () => provider.GetRequiredService<IValidator<MandateCopyRequestV04>>()
         );
-        Assert.Throws<InvalidOperationException>(() => provider.GetRequiredService<IValidator<MandateCopy4>>());
+        Assert.Throws<InvalidOperationException>(() => provider.GetRequiredService<IValidator<IMandateCopy4>>());
         Assert.Throws<InvalidOperationException>(
-            () => provider.GetRequiredService<IValidator<GroupHeader110>>()
+            () => provider.GetRequiredService<IValidator<IGroupHeader110>>()
         );
     }
 
@@ -210,8 +210,8 @@ public class ServiceCollectionExtensionsTests
 
         Assert.NotNull(provider.GetRequiredService<IValidator<CancelCaseAssignmentV05>>());
         Assert.NotNull(provider.GetRequiredService<IValidator<MandateCopyRequestV04>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<GroupHeader110>>());
-        Assert.NotNull(provider.GetRequiredService<IValidator<Case6>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<IGroupHeader110>>());
+        Assert.NotNull(provider.GetRequiredService<IValidator<ICase6>>());
     }
 
     [Fact]

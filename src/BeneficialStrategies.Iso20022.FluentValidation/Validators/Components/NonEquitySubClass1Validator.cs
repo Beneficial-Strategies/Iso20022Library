@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SegmentationCriteria</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class NonEquitySubClass1Validator : AbstractValidator<NonEquitySubClass1>
+public class NonEquitySubClass1Validator : AbstractValidator<INonEquitySubClass1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="NonEquitySubClass1"/>.

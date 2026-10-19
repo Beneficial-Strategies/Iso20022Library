@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// <see cref="IExternalCodeRegistry{TCode}"/> (via <see cref="ExternalMandateSetupReason1CodeValidator"/>)
 /// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MandateSetupReason1Choice_Validator : AbstractValidator<MandateSetupReason1Choice_>
+public class MandateSetupReason1Choice_Validator : AbstractValidator<IMandateSetupReason1Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -42,11 +42,10 @@ public class MandateSetupReason1Choice_Validator : AbstractValidator<MandateSetu
         // no InlineValidator is registered for it; SetInheritanceValidator leaves an unregistered
         // variant type as always-valid by design (see Party50Choice_Validator's own remarks).
 
-        var codeVariantValidator = new InlineValidator<Choices.MandateSetupReason1Choice.Code>();
+        var codeVariantValidator = new InlineValidator<Choices.MandateSetupReason1Choice.ICode>();
         codeVariantValidator.RuleFor(x => x.Value).SetValidator(codeValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(codeVariantValidator);
             });

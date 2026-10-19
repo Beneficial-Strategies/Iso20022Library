@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Party</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class Group3Validator : AbstractValidator<Group3>
+public class Group3Validator : AbstractValidator<IGroup3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Group3"/>.

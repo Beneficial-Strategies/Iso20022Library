@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CriteriaOrder</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SearchOutputOrder1Validator : AbstractValidator<SearchOutputOrder1>
+public class SearchOutputOrder1Validator : AbstractValidator<ISearchOutputOrder1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SearchOutputOrder1"/>.

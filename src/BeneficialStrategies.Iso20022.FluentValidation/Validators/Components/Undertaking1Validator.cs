@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-09-08.")]
-public class Undertaking1Validator : AbstractValidator<Undertaking1>
+public class Undertaking1Validator : AbstractValidator<IUndertaking1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Undertaking1"/>.

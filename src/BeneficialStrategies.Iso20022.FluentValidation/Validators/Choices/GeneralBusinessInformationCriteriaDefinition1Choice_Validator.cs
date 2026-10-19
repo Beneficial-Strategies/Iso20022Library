@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// see the two constructors below.
 /// </remarks>
 public class GeneralBusinessInformationCriteriaDefinition1Choice_Validator
-    : AbstractValidator<GeneralBusinessInformationCriteriaDefinition1Choice_>
+    : AbstractValidator<IGeneralBusinessInformationCriteriaDefinition1Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -47,20 +47,19 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice_Validator
     /// optional <c>ReturnCriteria</c> building block (GeneralBusinessInformationReturnCriteria1, 0..1).
     /// </param>
     public GeneralBusinessInformationCriteriaDefinition1Choice_Validator(
-        IValidator<GeneralBusinessInformationSearchCriteria1> searchCriteriaValidator,
-        IValidator<GeneralBusinessInformationReturnCriteria1> returnCriteriaValidator
+        IValidator<IGeneralBusinessInformationSearchCriteria1> searchCriteriaValidator,
+        IValidator<IGeneralBusinessInformationReturnCriteria1> returnCriteriaValidator
     )
     {
         var newCriteriaVariantValidator =
-            new InlineValidator<Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria>();
+            new InlineValidator<Choices.GeneralBusinessInformationCriteriaDefinition1Choice.INewCriteria>();
         newCriteriaVariantValidator.RuleForEach(x => x.SearchCriteria).SetValidator(searchCriteriaValidator);
         newCriteriaVariantValidator.When(
             x => x.ReturnCriteria is not null,
             () => newCriteriaVariantValidator.RuleFor(x => x.ReturnCriteria).SetValidator(returnCriteriaValidator!)
         );
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(newCriteriaVariantValidator);
             });

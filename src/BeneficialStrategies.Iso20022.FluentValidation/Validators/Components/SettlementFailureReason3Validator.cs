@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Description</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SettlementFailureReason3Validator : AbstractValidator<SettlementFailureReason3>
+public class SettlementFailureReason3Validator : AbstractValidator<ISettlementFailureReason3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SettlementFailureReason3"/>.

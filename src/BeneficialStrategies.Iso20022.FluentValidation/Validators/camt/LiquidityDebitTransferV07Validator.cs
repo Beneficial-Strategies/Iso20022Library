@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class LiquidityDebitTransferV07Validator : AbstractValidator<LiquidityDebitTransferV07>
+public class LiquidityDebitTransferV07Validator : AbstractValidator<ILiquidityDebitTransferV07>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -58,9 +58,9 @@ public class LiquidityDebitTransferV07Validator : AbstractValidator<LiquidityDeb
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public LiquidityDebitTransferV07Validator(
-        IValidator<MessageHeader1> messageHeaderValidator,
-        IValidator<LiquidityDebitTransfer4> liquidityDebitTransferValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IMessageHeader1> messageHeaderValidator,
+        IValidator<ILiquidityDebitTransfer4> liquidityDebitTransferValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.MessageHeader).SetValidator(messageHeaderValidator);

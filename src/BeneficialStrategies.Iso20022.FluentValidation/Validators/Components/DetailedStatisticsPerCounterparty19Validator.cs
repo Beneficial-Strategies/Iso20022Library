@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RejectionStatistics</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class DetailedStatisticsPerCounterparty19Validator : AbstractValidator<DetailedStatisticsPerCounterparty19>
+public class DetailedStatisticsPerCounterparty19Validator : AbstractValidator<IDetailedStatisticsPerCounterparty19>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="DetailedStatisticsPerCounterparty19"/>.

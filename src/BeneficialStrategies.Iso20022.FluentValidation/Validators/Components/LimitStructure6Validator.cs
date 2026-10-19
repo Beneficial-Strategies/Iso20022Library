@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class LimitStructure6Validator : AbstractValidator<LimitStructure6>
+public class LimitStructure6Validator : AbstractValidator<ILimitStructure6>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -44,9 +44,9 @@ public class LimitStructure6Validator : AbstractValidator<LimitStructure6>
     /// Validator for the required <c>Amount</c> building block (Amount2Choice_, 1..1).
     /// </param>
     public LimitStructure6Validator(
-        IValidator<LimitIdentification8> limitIdentificationValidator,
-        IValidator<DateAndDateTime2Choice_> startDateTimeValidator,
-        IValidator<Amount2Choice_> amountValidator
+        IValidator<ILimitIdentification8> limitIdentificationValidator,
+        IValidator<IDateAndDateTime2Choice> startDateTimeValidator,
+        IValidator<IAmount2Choice> amountValidator
     )
     {
         RuleFor(x => x.LimitIdentification).SetValidator(limitIdentificationValidator);

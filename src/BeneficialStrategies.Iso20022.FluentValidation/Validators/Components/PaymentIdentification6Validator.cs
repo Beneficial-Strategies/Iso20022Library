@@ -21,4 +21,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// still exists as a first-class type so the coverage-scoping policy (see the FluentValidation
 /// project's own <c>CLAUDE.md</c>) can record this type as reviewed rather than silently skipped.
 /// </remarks>
-public class PaymentIdentification6Validator : AbstractValidator<PaymentIdentification6> { }
+public class PaymentIdentification6Validator : AbstractValidator<IPaymentIdentification6> { }

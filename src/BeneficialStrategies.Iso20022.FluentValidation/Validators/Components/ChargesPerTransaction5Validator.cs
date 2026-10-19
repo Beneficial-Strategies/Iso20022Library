@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Record</c> collection is validated per-item by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class ChargesPerTransaction5Validator : AbstractValidator<ChargesPerTransaction5>
+public class ChargesPerTransaction5Validator : AbstractValidator<IChargesPerTransaction5>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class ChargesPerTransaction5Validator : AbstractValidator<ChargesPerTrans
     /// <param name="recordValidator">
     /// Validator for each item of the <c>Record</c> collection (ChargesPerTransactionRecord5, 1..∞).
     /// </param>
-    public ChargesPerTransaction5Validator(IValidator<ChargesPerTransactionRecord5> recordValidator)
+    public ChargesPerTransaction5Validator(IValidator<IChargesPerTransactionRecord5> recordValidator)
     {
         // ── Cross-field constraints ───────────────────────────────────────────────
         // Both rules express the same mutual-exclusivity between the top-level charges account

@@ -76,7 +76,7 @@ namespace BeneficialStrategies.Iso20022.Validation.pain;
 /// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class CustomerPaymentStatusReportV15Validator : AbstractValidator<CustomerPaymentStatusReportV15>
+public class CustomerPaymentStatusReportV15Validator : AbstractValidator<ICustomerPaymentStatusReportV15>
 {
     private static readonly ExternalPaymentGroupStatus1Code[] AcceptedStatuses =
     [
@@ -92,10 +92,10 @@ public class CustomerPaymentStatusReportV15Validator : AbstractValidator<Custome
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public CustomerPaymentStatusReportV15Validator(
-        IValidator<GroupHeader128> groupHeaderValidator,
-        IValidator<OriginalGroupHeader22> originalGroupInformationAndStatusValidator,
-        IValidator<OriginalPaymentInstruction56> originalPaymentInformationAndStatusValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader128> groupHeaderValidator,
+        IValidator<IOriginalGroupHeader22> originalGroupInformationAndStatusValidator,
+        IValidator<IOriginalPaymentInstruction56> originalPaymentInformationAndStatusValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);

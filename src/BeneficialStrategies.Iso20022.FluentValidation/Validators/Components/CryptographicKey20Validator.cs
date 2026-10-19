@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Function</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CryptographicKey20Validator : AbstractValidator<CryptographicKey20>
+public class CryptographicKey20Validator : AbstractValidator<ICryptographicKey20>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CryptographicKey20"/>.

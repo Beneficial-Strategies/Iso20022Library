@@ -22,13 +22,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class RemittanceLocation8Validator : AbstractValidator<RemittanceLocation8>
+public class RemittanceLocation8Validator : AbstractValidator<IRemittanceLocation8>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public RemittanceLocation8Validator(IValidator<RemittanceLocationData2> remittanceLocationDetailsValidator)
+    public RemittanceLocation8Validator(IValidator<IRemittanceLocationData2> remittanceLocationDetailsValidator)
     {
         RuleForEach(x => x.RemittanceLocationDetails).SetValidator(remittanceLocationDetailsValidator!);
     }

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ValueInInvestmentCurrency</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class UnitPrice24Validator : AbstractValidator<UnitPrice24>
+public class UnitPrice24Validator : AbstractValidator<IUnitPrice24>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="UnitPrice24"/>.

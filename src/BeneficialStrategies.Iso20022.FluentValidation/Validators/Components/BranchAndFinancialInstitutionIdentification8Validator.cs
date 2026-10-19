@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>new</c> — see the two constructors below.
 /// </remarks>
 public class BranchAndFinancialInstitutionIdentification8Validator
-    : AbstractValidator<BranchAndFinancialInstitutionIdentification8>
+    : AbstractValidator<IBranchAndFinancialInstitutionIdentification8>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -42,8 +42,8 @@ public class BranchAndFinancialInstitutionIdentification8Validator
     /// (FinancialInstitutionIdentification23, 1..1).
     /// </param>
     public BranchAndFinancialInstitutionIdentification8Validator(
-        IValidator<BranchData5> branchIdentificationValidator,
-        IValidator<FinancialInstitutionIdentification23> financialInstitutionIdentificationValidator
+        IValidator<IBranchData5> branchIdentificationValidator,
+        IValidator<IFinancialInstitutionIdentification23> financialInstitutionIdentificationValidator
     )
     {
         When(

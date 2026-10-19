@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>OriginalBusinessQuery</c> are each validated by an injected <see cref="IValidator{T}"/>
 /// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class GroupHeader120Validator : AbstractValidator<GroupHeader120>
+public class GroupHeader120Validator : AbstractValidator<IGroupHeader120>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,9 +34,9 @@ public class GroupHeader120Validator : AbstractValidator<GroupHeader120>
     /// of this type constructing its own.
     /// </summary>
     public GroupHeader120Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
-        IValidator<OriginalBusinessQuery1> originalBusinessQueryValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator,
+        IValidator<IOriginalBusinessQuery1> originalBusinessQueryValidator
     )
     {
         // MessageIdentification: required scalar, length enforced by struct constructor — no rule needed.

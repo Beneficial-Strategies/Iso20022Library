@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SearchCriteria</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CurrencyExchangeCriteria2Validator : AbstractValidator<CurrencyExchangeCriteria2>
+public class CurrencyExchangeCriteria2Validator : AbstractValidator<ICurrencyExchangeCriteria2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CurrencyExchangeCriteria2"/>.

@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> —
 /// see the two constructors below.
 /// </remarks>
-public class MultilateralSettlementRequest3Validator : AbstractValidator<MultilateralSettlementRequest3>
+public class MultilateralSettlementRequest3Validator : AbstractValidator<IMultilateralSettlementRequest3>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
@@ -50,8 +50,8 @@ public class MultilateralSettlementRequest3Validator : AbstractValidator<Multila
     /// (SettlementTimeRequest2, 0..1) — only invoked when present.
     /// </param>
     public MultilateralSettlementRequest3Validator(
-        IValidator<MovementRecord2> movementRecordValidator,
-        IValidator<SettlementTimeRequest2> settlementTimeRequestValidator
+        IValidator<IMovementRecord2> movementRecordValidator,
+        IValidator<ISettlementTimeRequest2> settlementTimeRequestValidator
     )
     {
         // InstructionIdentification, SettlementCycle: length enforced by struct constructors — no rule needed.
@@ -59,7 +59,7 @@ public class MultilateralSettlementRequest3Validator : AbstractValidator<Multila
         // NumberOfMovementRecords: optional scalar — no rule needed.
 
         RuleFor(x => x.MovementRecord)
-            .Must(records => records.Count >= 2)
+            .Must(records => records.Count() >= 2)
             .WithMessage(
                 "MultilateralSettlementRequest3.MovementRecord must contain at least two elements (2..∞)."
             );

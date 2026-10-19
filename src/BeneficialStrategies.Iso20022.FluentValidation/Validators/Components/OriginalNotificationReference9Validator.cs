@@ -44,7 +44,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RelatedAccountRule</term><description>Either RelatedAccount or OriginalItemAndStatus/RelatedAccount may be present but not both.</description></item>
 /// </list>
 /// </remarks>
-public class OriginalNotificationReference9Validator : AbstractValidator<OriginalNotificationReference9>
+public class OriginalNotificationReference9Validator : AbstractValidator<IOriginalNotificationReference9>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="OriginalNotificationReference9"/>.

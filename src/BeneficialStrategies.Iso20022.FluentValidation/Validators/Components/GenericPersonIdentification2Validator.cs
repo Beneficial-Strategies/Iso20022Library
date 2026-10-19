@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>SchemeName</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class GenericPersonIdentification2Validator : AbstractValidator<GenericPersonIdentification2>
+public class GenericPersonIdentification2Validator : AbstractValidator<IGenericPersonIdentification2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class GenericPersonIdentification2Validator : AbstractValidator<GenericPe
     /// (PersonIdentificationSchemeName1Choice_, 0..1) — only invoked when present.
     /// </param>
     public GenericPersonIdentification2Validator(
-        IValidator<PersonIdentificationSchemeName1Choice_> schemeNameValidator
+        IValidator<IPersonIdentificationSchemeName1Choice> schemeNameValidator
     )
     {
         // Identification: Max256Text, required (1..1) and already `required` C# property —

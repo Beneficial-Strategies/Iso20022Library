@@ -33,16 +33,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>new</c> — the same <see cref="TaxParty2"/> validator instance is reused across
 /// <c>Debtor</c> and <c>UltimateDebtor</c> — see the two constructors below.
 /// </remarks>
-public class TaxData1Validator : AbstractValidator<TaxData1>
+public class TaxData1Validator : AbstractValidator<ITaxData1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public TaxData1Validator(
-        IValidator<TaxParty1> creditorValidator,
-        IValidator<TaxParty2> debtorValidator,
-        IValidator<TaxRecord3> recordValidator
+        IValidator<ITaxParty1> creditorValidator,
+        IValidator<ITaxParty2> debtorValidator,
+        IValidator<ITaxRecord3> recordValidator
     )
     {
         When(x => x.Creditor is not null, () => RuleFor(x => x.Creditor).SetValidator(creditorValidator!));

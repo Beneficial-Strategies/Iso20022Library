@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DisplayOutput</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class DeviceDisplayRequest7Validator : AbstractValidator<DeviceDisplayRequest7>
+public class DeviceDisplayRequest7Validator : AbstractValidator<IDeviceDisplayRequest7>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="DeviceDisplayRequest7"/>.

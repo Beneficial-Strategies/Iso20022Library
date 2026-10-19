@@ -22,13 +22,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class DocumentLineType1Validator : AbstractValidator<DocumentLineType1>
+public class DocumentLineType1Validator : AbstractValidator<IDocumentLineType1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public DocumentLineType1Validator(IValidator<DocumentLineType1Choice_> codeOrProprietaryValidator)
+    public DocumentLineType1Validator(IValidator<IDocumentLineType1Choice> codeOrProprietaryValidator)
     {
         RuleFor(x => x.CodeOrProprietary).SetValidator(codeOrProprietaryValidator!);
     }

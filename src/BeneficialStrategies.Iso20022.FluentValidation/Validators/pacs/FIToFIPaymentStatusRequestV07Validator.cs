@@ -64,17 +64,17 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 /// <c>TransactionInformation</c>, and <c>SupplementaryData</c> are each validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class FIToFIPaymentStatusRequestV07Validator : AbstractValidator<FIToFIPaymentStatusRequestV07>
+public class FIToFIPaymentStatusRequestV07Validator : AbstractValidator<IFIToFIPaymentStatusRequestV07>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public FIToFIPaymentStatusRequestV07Validator(
-        IValidator<GroupHeader109> groupHeaderValidator,
-        IValidator<OriginalGroupInformation27> originalGroupInformationValidator,
-        IValidator<PaymentTransaction171> transactionInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader109> groupHeaderValidator,
+        IValidator<IOriginalGroupInformation27> originalGroupInformationValidator,
+        IValidator<IPaymentTransaction171> transactionInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);
@@ -86,7 +86,7 @@ public class FIToFIPaymentStatusRequestV07Validator : AbstractValidator<FIToFIPa
         // ── OriginalGroupInformationAbsenceRule ──────────────────────────────────────
         RuleFor(x => x)
             .Must(x =>
-                x.OriginalGroupInformation.Count != 0
+                x.OriginalGroupInformation.Count() != 0
                 || x.TransactionInformation.All(t => t.OriginalGroupInformation is not null)
             )
             .WithName("OriginalGroupInformationAbsenceRule")
@@ -99,7 +99,7 @@ public class FIToFIPaymentStatusRequestV07Validator : AbstractValidator<FIToFIPa
         // ── OriginalGroupInformationSinglePresenceRule ───────────────────────────────
         RuleFor(x => x)
             .Must(x =>
-                x.OriginalGroupInformation.Count != 1
+                x.OriginalGroupInformation.Count() != 1
                 || x.TransactionInformation.All(t => t.OriginalGroupInformation is null)
             )
             .WithName("OriginalGroupInformationSinglePresenceRule")
@@ -112,7 +112,7 @@ public class FIToFIPaymentStatusRequestV07Validator : AbstractValidator<FIToFIPa
         // ── OriginalGroupInformationMultiplePresenceRule ─────────────────────────────
         RuleFor(x => x)
             .Must(x =>
-                x.OriginalGroupInformation.Count <= 1
+                x.OriginalGroupInformation.Count() <= 1
                 || x.TransactionInformation.All(t => t.OriginalGroupInformation is not null)
             )
             .WithName("OriginalGroupInformationMultiplePresenceRule")

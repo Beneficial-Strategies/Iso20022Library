@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
 /// </remarks>
-public class ChargesPerTransactionRecord5Validator : AbstractValidator<ChargesPerTransactionRecord5>
+public class ChargesPerTransactionRecord5Validator : AbstractValidator<IChargesPerTransactionRecord5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ChargesPerTransactionRecord5"/>.

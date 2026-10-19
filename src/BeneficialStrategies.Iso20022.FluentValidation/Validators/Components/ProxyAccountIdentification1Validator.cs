@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Type</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class ProxyAccountIdentification1Validator : AbstractValidator<ProxyAccountIdentification1>
+public class ProxyAccountIdentification1Validator : AbstractValidator<IProxyAccountIdentification1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -32,7 +32,7 @@ public class ProxyAccountIdentification1Validator : AbstractValidator<ProxyAccou
     /// Validator for the optional <c>Type</c> building block (ProxyAccountType1Choice_, 0..1) —
     /// only invoked when present.
     /// </param>
-    public ProxyAccountIdentification1Validator(IValidator<ProxyAccountType1Choice_> typeValidator)
+    public ProxyAccountIdentification1Validator(IValidator<IProxyAccountType1Choice> typeValidator)
     {
         // Identification: Max2048Text, required (1..1) and already `required` C# property —
         // length enforced by struct constructor.

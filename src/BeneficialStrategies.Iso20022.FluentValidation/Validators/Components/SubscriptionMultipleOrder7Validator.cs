@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>IndividualOrderDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SubscriptionMultipleOrder7Validator : AbstractValidator<SubscriptionMultipleOrder7>
+public class SubscriptionMultipleOrder7Validator : AbstractValidator<ISubscriptionMultipleOrder7>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SubscriptionMultipleOrder7"/>.

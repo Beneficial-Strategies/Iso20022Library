@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
-public class IntraPositionDetails28Validator : AbstractValidator<IntraPositionDetails28>
+public class IntraPositionDetails28Validator : AbstractValidator<IIntraPositionDetails28>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="IntraPositionDetails28"/>.

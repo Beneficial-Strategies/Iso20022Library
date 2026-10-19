@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-08-07.")]
-public class PaymentInstructionInformation4Validator : AbstractValidator<PaymentInstructionInformation4>
+public class PaymentInstructionInformation4Validator : AbstractValidator<IPaymentInstructionInformation4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="PaymentInstructionInformation4"/>.

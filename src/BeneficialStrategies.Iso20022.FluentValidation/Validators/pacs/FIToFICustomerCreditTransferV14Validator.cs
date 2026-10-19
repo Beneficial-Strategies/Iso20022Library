@@ -84,16 +84,16 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class FIToFICustomerCreditTransferV14Validator : AbstractValidator<FIToFICustomerCreditTransferV14>
+public class FIToFICustomerCreditTransferV14Validator : AbstractValidator<IFIToFICustomerCreditTransferV14>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public FIToFICustomerCreditTransferV14Validator(
-        IValidator<GroupHeader131> groupHeaderValidator,
-        IValidator<CreditTransferTransaction73> creditTransferTransactionInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader131> groupHeaderValidator,
+        IValidator<ICreditTransferTransaction73> creditTransferTransactionInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);
@@ -199,7 +199,7 @@ public class FIToFICustomerCreditTransferV14Validator : AbstractValidator<FIToFI
         RuleFor(x => x)
             .Must(x =>
                 int.TryParse((string)x.GroupHeader.NumberOfTransactions, out var n)
-                && n == x.CreditTransferTransactionInformation.Count
+                && n == x.CreditTransferTransactionInformation.Count()
             )
             .WithName("NumberOfTransactionsAndCreditTransfersRule")
             .WithMessage(

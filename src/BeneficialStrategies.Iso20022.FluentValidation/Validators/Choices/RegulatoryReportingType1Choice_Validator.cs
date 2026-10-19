@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class RegulatoryReportingType1Choice_Validator : AbstractValidator<RegulatoryReportingType1Choice_>
+public class RegulatoryReportingType1Choice_Validator : AbstractValidator<IRegulatoryReportingType1Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -37,7 +37,7 @@ public class RegulatoryReportingType1Choice_Validator : AbstractValidator<Regula
         IValidator<ExternalRegulatoryReportingType1Code> codeValueValidator
     )
     {
-        var codeVariantValidator = new InlineValidator<Choices.RegulatoryReportingType1Choice.Code>();
+        var codeVariantValidator = new InlineValidator<Choices.RegulatoryReportingType1Choice.ICode>();
         codeVariantValidator.RuleFor(x => x.Value).SetValidator(codeValueValidator!);
 
         // Proprietary variant: Value is fully struct-enforced (Max35Text) — no rules needed, so
@@ -45,8 +45,7 @@ public class RegulatoryReportingType1Choice_Validator : AbstractValidator<Regula
         // variant type as always-valid by design (see Party50Choice_Validator's own remarks for
         // the general pattern).
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(codeVariantValidator);
             });

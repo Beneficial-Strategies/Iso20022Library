@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see
 /// the two constructors below.
 /// </remarks>
-public class MandateCopy4Validator : AbstractValidator<MandateCopy4>
+public class MandateCopy4Validator : AbstractValidator<IMandateCopy4>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -49,10 +49,10 @@ public class MandateCopy4Validator : AbstractValidator<MandateCopy4>
     /// Validator for each item of the <c>SupplementaryData</c> collection (SupplementaryData1, 0..∞).
     /// </param>
     public MandateCopy4Validator(
-        IValidator<MandateStatus1Choice_> mandateStatusValidator,
-        IValidator<OriginalMandate10Choice_> originalMandateValidator,
-        IValidator<OriginalMessageInformation1> originalMessageInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IMandateStatus1Choice> mandateStatusValidator,
+        IValidator<IOriginalMandate10Choice> originalMandateValidator,
+        IValidator<IOriginalMessageInformation1> originalMessageInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         When(

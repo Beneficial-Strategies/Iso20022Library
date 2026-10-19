@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Account</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class SettlementAgent2Validator : AbstractValidator<SettlementAgent2>
+public class SettlementAgent2Validator : AbstractValidator<ISettlementAgent2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="SettlementAgent2"/>.

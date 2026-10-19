@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ReinvestedCash</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CashReuseData1Validator : AbstractValidator<CashReuseData1>
+public class CashReuseData1Validator : AbstractValidator<ICashReuseData1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CashReuseData1"/>.

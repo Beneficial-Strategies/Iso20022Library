@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class GroupHeader119Validator : AbstractValidator<GroupHeader119>
+public class GroupHeader119Validator : AbstractValidator<IGroupHeader119>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -42,8 +42,8 @@ public class GroupHeader119Validator : AbstractValidator<GroupHeader119>
     /// (BranchAndFinancialInstitutionIdentification8, 0..1) — only invoked when present.
     /// </param>
     public GroupHeader119Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> instructedAgentValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructingAgentValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> instructedAgentValidator
     )
     {
         // MessageIdentification, NumberOfTransactions: required scalars, format/length enforced

@@ -97,17 +97,17 @@ namespace BeneficialStrategies.Iso20022.Validation.pacs;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class FIToFIPaymentReversalV14Validator : AbstractValidator<FIToFIPaymentReversalV14>
+public class FIToFIPaymentReversalV14Validator : AbstractValidator<IFIToFIPaymentReversalV14>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public FIToFIPaymentReversalV14Validator(
-        IValidator<GroupHeader127> groupHeaderValidator,
-        IValidator<OriginalGroupHeader20> originalGroupInformationValidator,
-        IValidator<PaymentTransaction182> transactionInformationValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IGroupHeader127> groupHeaderValidator,
+        IValidator<IOriginalGroupHeader20> originalGroupInformationValidator,
+        IValidator<IPaymentTransaction182> transactionInformationValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.GroupHeader).SetValidator(groupHeaderValidator!);
@@ -122,7 +122,7 @@ public class FIToFIPaymentReversalV14Validator : AbstractValidator<FIToFIPayment
 
         // ── GroupReversalAndTransactionInformationNotPresentRule ─────────────────────
         RuleFor(x => x)
-            .Must(x => x.GroupHeader.GroupReversal?.BoolValue != true || x.TransactionInformation.Count == 0)
+            .Must(x => x.GroupHeader.GroupReversal?.BoolValue != true || x.TransactionInformation.Count() == 0)
             .WithName("GroupReversalAndTransactionInformationNotPresentRule")
             .WithMessage(
                 "FIToFIPaymentReversalV14: if GroupHeader.GroupReversal is true, "
@@ -131,7 +131,7 @@ public class FIToFIPaymentReversalV14Validator : AbstractValidator<FIToFIPayment
 
         // ── GroupReversalAndTransactionInformationPresentRule ────────────────────────
         RuleFor(x => x)
-            .Must(x => x.GroupHeader.GroupReversal?.BoolValue != false || x.TransactionInformation.Count >= 1)
+            .Must(x => x.GroupHeader.GroupReversal?.BoolValue != false || x.TransactionInformation.Count() >= 1)
             .WithName("GroupReversalAndTransactionInformationPresentRule")
             .WithMessage(
                 "FIToFIPaymentReversalV14: if GroupHeader.GroupReversal is false, at least one "
@@ -205,7 +205,7 @@ public class FIToFIPaymentReversalV14Validator : AbstractValidator<FIToFIPayment
             .Must(x =>
                 x.GroupHeader.GroupReversal?.BoolValue != false
                 || (int.TryParse((string)x.GroupHeader.NumberOfTransactions, out var n)
-                    && n == x.TransactionInformation.Count)
+                    && n == x.TransactionInformation.Count())
             )
             .WithName("GroupReversalAndNumberOfTransactionsRule")
             .WithMessage(

@@ -62,7 +62,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// (<c>CreditorAccount</c>, <c>DebtorAccount</c>) — one injected validator serves all properties
 /// of the same validated type.
 /// </remarks>
-public class Mandate22Validator : AbstractValidator<Mandate22>
+public class Mandate22Validator : AbstractValidator<IMandate22>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -103,15 +103,15 @@ public class Mandate22Validator : AbstractValidator<Mandate22>
     /// 0..∞).
     /// </param>
     public Mandate22Validator(
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<MandateAdjustment1> adjustmentValidator,
-        IValidator<MandateAuthentication1> authenticationValidator,
-        IValidator<MandateOccurrences5> occurrencesValidator,
-        IValidator<MandateSetupReason1Choice_> reasonValidator,
-        IValidator<MandateTypeInformation2> typeValidator,
-        IValidator<ReferredMandateDocument2> referredDocumentValidator
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IMandateAdjustment1> adjustmentValidator,
+        IValidator<IMandateAuthentication1> authenticationValidator,
+        IValidator<IMandateOccurrences5> occurrencesValidator,
+        IValidator<IMandateSetupReason1Choice> reasonValidator,
+        IValidator<IMandateTypeInformation2> typeValidator,
+        IValidator<IReferredMandateDocument2> referredDocumentValidator
     )
     {
         // ── UltimateDebtorGuideline ───────────────────────────────────────────────

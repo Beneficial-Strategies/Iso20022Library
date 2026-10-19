@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class CommercialDataSet5Validator : AbstractValidator<CommercialDataSet5>
+public class CommercialDataSet5Validator : AbstractValidator<ICommercialDataSet5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CommercialDataSet5"/>.

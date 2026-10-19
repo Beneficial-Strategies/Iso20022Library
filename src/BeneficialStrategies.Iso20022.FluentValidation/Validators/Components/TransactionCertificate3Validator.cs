@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CertificateRecord</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class TransactionCertificate3Validator : AbstractValidator<TransactionCertificate3>
+public class TransactionCertificate3Validator : AbstractValidator<ITransactionCertificate3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TransactionCertificate3"/>.

@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 /// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class GetCurrencyExchangeRateV04Validator : AbstractValidator<GetCurrencyExchangeRateV04>
+public class GetCurrencyExchangeRateV04Validator : AbstractValidator<IGetCurrencyExchangeRateV04>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -62,9 +62,9 @@ public class GetCurrencyExchangeRateV04Validator : AbstractValidator<GetCurrency
     /// 0..1) — only invoked when present.
     /// </param>
     public GetCurrencyExchangeRateV04Validator(
-        IValidator<MessageHeader1> messageHeaderValidator,
-        IValidator<CurrencyQueryDefinition3> currencyQueryDefinitionValidator,
-        IValidator<SupplementaryData1> supplementaryDataValidator
+        IValidator<IMessageHeader1> messageHeaderValidator,
+        IValidator<ICurrencyQueryDefinition3> currencyQueryDefinitionValidator,
+        IValidator<ISupplementaryData1> supplementaryDataValidator
     )
     {
         RuleFor(x => x.MessageHeader).SetValidator(messageHeaderValidator);

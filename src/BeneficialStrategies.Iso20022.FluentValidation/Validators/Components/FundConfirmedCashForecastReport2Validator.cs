@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// under its ISO dictionary entry).
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class FundConfirmedCashForecastReport2Validator : AbstractValidator<FundConfirmedCashForecastReport2>
+public class FundConfirmedCashForecastReport2Validator : AbstractValidator<IFundConfirmedCashForecastReport2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="FundConfirmedCashForecastReport2"/>.

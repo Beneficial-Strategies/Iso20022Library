@@ -44,7 +44,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public class RedemptionMultipleOrder2Validator : AbstractValidator<RedemptionMultipleOrder2>
+public class RedemptionMultipleOrder2Validator : AbstractValidator<IRedemptionMultipleOrder2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="RedemptionMultipleOrder2"/>.

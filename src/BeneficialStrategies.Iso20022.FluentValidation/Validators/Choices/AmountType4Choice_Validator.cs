@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see
 /// the two constructors below.
 /// </remarks>
-public class AmountType4Choice_Validator : AbstractValidator<AmountType4Choice_>
+public class AmountType4Choice_Validator : AbstractValidator<IAmountType4Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -43,14 +43,13 @@ public class AmountType4Choice_Validator : AbstractValidator<AmountType4Choice_>
         // SetInheritanceValidator leaves an unregistered variant type as always-valid by design
         // (see Party50Choice_Validator's own remarks for the general pattern).
 
-        var equivalentAmountVariantValidator = new InlineValidator<Choices.AmountType4Choice.EquivalentAmount>();
+        var equivalentAmountVariantValidator = new InlineValidator<Choices.AmountType4Choice.IEquivalentAmount>();
         // Amount: Amounts-namespace exemption, no rule needed.
         equivalentAmountVariantValidator
             .RuleFor(x => x.CurrencyOfTransfer)
             .SetValidator(equivalentAmountCurrencyOfTransferValidator!);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(equivalentAmountVariantValidator);
             });

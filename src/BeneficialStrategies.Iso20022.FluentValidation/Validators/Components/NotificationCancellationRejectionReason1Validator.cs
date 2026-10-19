@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Reason</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class NotificationCancellationRejectionReason1Validator : AbstractValidator<NotificationCancellationRejectionReason1>
+public class NotificationCancellationRejectionReason1Validator : AbstractValidator<INotificationCancellationRejectionReason1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="NotificationCancellationRejectionReason1"/>.

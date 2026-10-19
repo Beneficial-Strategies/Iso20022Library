@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>PostalAddress</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class BranchData5Validator : AbstractValidator<BranchData5>
+public class BranchData5Validator : AbstractValidator<IBranchData5>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class BranchData5Validator : AbstractValidator<BranchData5>
     /// Validator for the optional <c>PostalAddress</c> building block (PostalAddress27, 0..1) —
     /// only invoked when present.
     /// </param>
-    public BranchData5Validator(IValidator<PostalAddress27> postalAddressValidator)
+    public BranchData5Validator(IValidator<IPostalAddress27> postalAddressValidator)
     {
         // Identification, LEI, Name: optional scalars, length/pattern enforced by struct
         // constructors — no rule needed.

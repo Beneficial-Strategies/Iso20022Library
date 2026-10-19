@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 /// </remarks>
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public class AggregateBalanceInformation2Validator : AbstractValidator<AggregateBalanceInformation2>
+public class AggregateBalanceInformation2Validator : AbstractValidator<IAggregateBalanceInformation2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AggregateBalanceInformation2"/>.

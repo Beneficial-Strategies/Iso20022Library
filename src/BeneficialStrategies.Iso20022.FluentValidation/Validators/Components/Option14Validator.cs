@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ExpirationStyle</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..4</description></item>
 /// </list>
 /// </remarks>
-public class Option14Validator : AbstractValidator<Option14>
+public class Option14Validator : AbstractValidator<IOption14>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Option14"/>.

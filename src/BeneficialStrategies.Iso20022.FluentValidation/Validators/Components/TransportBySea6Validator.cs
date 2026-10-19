@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PortOfDischarge</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class TransportBySea6Validator : AbstractValidator<TransportBySea6>
+public class TransportBySea6Validator : AbstractValidator<ITransportBySea6>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TransportBySea6"/>.

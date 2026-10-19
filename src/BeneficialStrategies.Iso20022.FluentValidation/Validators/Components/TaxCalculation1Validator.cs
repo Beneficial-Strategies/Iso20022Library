@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
 /// </remarks>
-public class TaxCalculation1Validator : AbstractValidator<TaxCalculation1>
+public class TaxCalculation1Validator : AbstractValidator<ITaxCalculation1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="TaxCalculation1"/>.
@@ -44,7 +44,7 @@ public class TaxCalculation1Validator : AbstractValidator<TaxCalculation1>
             .WithMessage("TaxCalculation1.TaxIdentification must contain at least one element (1..3).");
 
         RuleFor(x => x.TaxIdentification)
-            .Must(list => list.Count <= 3)
+            .Must(list => list.Count() <= 3)
             .WithMessage("TaxCalculation1.TaxIdentification must not contain more than 3 element(s) (1..3).");
     }
 }

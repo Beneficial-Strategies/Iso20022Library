@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class LimitIdentification9Validator : AbstractValidator<LimitIdentification9>
+public class LimitIdentification9Validator : AbstractValidator<ILimitIdentification9>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -46,10 +46,10 @@ public class LimitIdentification9Validator : AbstractValidator<LimitIdentificati
     /// Validator for the required <c>Type</c> building block (LimitType1Choice_, 1..1).
     /// </param>
     public LimitIdentification9Validator(
-        IValidator<AccountIdentification4Choice_> accountIdentificationValidator,
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<SystemIdentification2Choice_> systemIdentificationValidator,
-        IValidator<LimitType1Choice_> typeValidator
+        IValidator<IAccountIdentification4Choice> accountIdentificationValidator,
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ISystemIdentification2Choice> systemIdentificationValidator,
+        IValidator<ILimitType1Choice> typeValidator
     )
     {
         RuleFor(x => x.Type).SetValidator(typeValidator);

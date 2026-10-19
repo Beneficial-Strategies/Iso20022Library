@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>References</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class DocumentNumber22Validator : AbstractValidator<DocumentNumber22>
+public class DocumentNumber22Validator : AbstractValidator<IDocumentNumber22>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="DocumentNumber22"/>.

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>HoldingBalance</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..3</description></item>
 /// </list>
 /// </remarks>
-public class EligiblePosition17Validator : AbstractValidator<EligiblePosition17>
+public class EligiblePosition17Validator : AbstractValidator<IEligiblePosition17>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="EligiblePosition17"/>.

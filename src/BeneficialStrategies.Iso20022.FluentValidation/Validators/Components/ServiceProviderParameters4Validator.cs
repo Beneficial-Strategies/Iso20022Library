@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ServiceProviderIdentification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class ServiceProviderParameters4Validator : AbstractValidator<ServiceProviderParameters4>
+public class ServiceProviderParameters4Validator : AbstractValidator<IServiceProviderParameters4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ServiceProviderParameters4"/>.

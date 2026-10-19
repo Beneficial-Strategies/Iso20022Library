@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows under
 /// its ISO dictionary entry).
 /// </remarks>
-public class OriginalMessageInformation1Validator : AbstractValidator<OriginalMessageInformation1>
+public class OriginalMessageInformation1Validator : AbstractValidator<IOriginalMessageInformation1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="OriginalMessageInformation1"/>.

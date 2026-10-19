@@ -38,18 +38,18 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>OriginalCreditorSchemeIdentification</c> and <c>OriginalDebtor</c> — see the two
 /// constructors below.
 /// </remarks>
-public class AmendmentInformationDetails15Validator : AbstractValidator<AmendmentInformationDetails15>
+public class AmendmentInformationDetails15Validator : AbstractValidator<IAmendmentInformationDetails15>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public AmendmentInformationDetails15Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<PartyIdentification272> partyValidator,
-        IValidator<Frequency36Choice_> frequencyValidator,
-        IValidator<MandateSetupReason1Choice_> reasonValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IPartyIdentification272> partyValidator,
+        IValidator<IFrequency36Choice> frequencyValidator,
+        IValidator<IMandateSetupReason1Choice> reasonValidator
     )
     {
         When(

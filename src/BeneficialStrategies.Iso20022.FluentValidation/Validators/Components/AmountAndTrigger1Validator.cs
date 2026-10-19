@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Trigger</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class AmountAndTrigger1Validator : AbstractValidator<AmountAndTrigger1>
+public class AmountAndTrigger1Validator : AbstractValidator<IAmountAndTrigger1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AmountAndTrigger1"/>.

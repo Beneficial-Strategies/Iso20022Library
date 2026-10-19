@@ -43,18 +43,18 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// should add a case that populates a populated registry to prove the <c>LanguageCode</c> wiring
 /// at minimum, since that is the one dependency here capable of failing at all today.
 /// </remarks>
-public class Document15Validator : AbstractValidator<Document15>
+public class Document15Validator : AbstractValidator<IDocument15>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public Document15Validator(
-        IValidator<PartyAndSignature4> digitalSignatureValidator,
-        IValidator<DocumentFormat1Choice_> formatValidator,
-        IValidator<DateAndDateTime2Choice_> issueDateValidator,
+        IValidator<IPartyAndSignature4> digitalSignatureValidator,
+        IValidator<IDocumentFormat1Choice> formatValidator,
+        IValidator<IDateAndDateTime2Choice> issueDateValidator,
         IValidator<LanguageCode> languageCodeValidator,
-        IValidator<DocumentType1Choice_> typeValidator
+        IValidator<IDocumentType1Choice> typeValidator
     )
     {
         When(

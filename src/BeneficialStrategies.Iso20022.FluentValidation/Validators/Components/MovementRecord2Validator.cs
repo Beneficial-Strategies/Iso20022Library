@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>Participant</c>, and <c>ParticipantAccount</c> are each validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MovementRecord2Validator : AbstractValidator<MovementRecord2>
+public class MovementRecord2Validator : AbstractValidator<IMovementRecord2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
@@ -37,11 +37,11 @@ public class MovementRecord2Validator : AbstractValidator<MovementRecord2>
     /// blocks — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public MovementRecord2Validator(
-        IValidator<AmountAndDirection5> amountValidator,
-        IValidator<PartyIdentification272> settlementAgentValidator,
-        IValidator<CashAccount40> settlementAgentAccountValidator,
-        IValidator<PartyIdentification272> participantValidator,
-        IValidator<CashAccount40> participantAccountValidator
+        IValidator<IAmountAndDirection5> amountValidator,
+        IValidator<IPartyIdentification272> settlementAgentValidator,
+        IValidator<ICashAccount40> settlementAgentAccountValidator,
+        IValidator<IPartyIdentification272> participantValidator,
+        IValidator<ICashAccount40> participantAccountValidator
     )
     {
         // Identification: Max35Text, required — length enforced by struct constructor, no rule needed.

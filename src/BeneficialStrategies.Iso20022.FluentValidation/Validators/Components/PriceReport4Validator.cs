@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PriceValuationDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class PriceReport4Validator : AbstractValidator<PriceReport4>
+public class PriceReport4Validator : AbstractValidator<IPriceReport4>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="PriceReport4"/>.

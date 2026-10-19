@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>POISoftware</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class LoginResponse2Validator : AbstractValidator<LoginResponse2>
+public class LoginResponse2Validator : AbstractValidator<ILoginResponse2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="LoginResponse2"/>.

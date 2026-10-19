@@ -25,13 +25,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class PaymentCondition2Validator : AbstractValidator<PaymentCondition2>
+public class PaymentCondition2Validator : AbstractValidator<IPaymentCondition2>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator —
     /// e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
-    public PaymentCondition2Validator(IValidator<AmountOrRate1Choice_> immediatePaymentRebateValidator)
+    public PaymentCondition2Validator(IValidator<IAmountOrRate1Choice> immediatePaymentRebateValidator)
     {
         When(
             x => x.ImmediatePaymentRebate is not null,

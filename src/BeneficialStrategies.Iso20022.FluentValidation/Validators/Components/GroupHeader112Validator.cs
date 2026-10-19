@@ -34,15 +34,15 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// actually present. A future pass should add a case that populates a nested field with a value
 /// a populated <see cref="IExternalCodeRegistry{TCode}"/> would reject, to close this gap.
 /// </remarks>
-public class GroupHeader112Validator : AbstractValidator<GroupHeader112>
+public class GroupHeader112Validator : AbstractValidator<IGroupHeader112>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validators
     /// — e.g. resolved from a DI container — instead of this type constructing its own.
     /// </summary>
     public GroupHeader112Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> forwardingAgentValidator,
-        IValidator<PartyIdentification272> initiatingPartyValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> forwardingAgentValidator,
+        IValidator<IPartyIdentification272> initiatingPartyValidator
     )
     {
         When(

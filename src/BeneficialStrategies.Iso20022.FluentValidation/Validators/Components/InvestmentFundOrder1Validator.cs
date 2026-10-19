@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>OrderReferences</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class InvestmentFundOrder1Validator : AbstractValidator<InvestmentFundOrder1>
+public class InvestmentFundOrder1Validator : AbstractValidator<IInvestmentFundOrder1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="InvestmentFundOrder1"/>.

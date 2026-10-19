@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Dependency injection: the <c>Other</c> variant's <c>SchemeName</c> is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class AccountIdentification4Choice_Validator : AbstractValidator<AccountIdentification4Choice_>
+public class AccountIdentification4Choice_Validator : AbstractValidator<IAccountIdentification4Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -33,7 +33,7 @@ public class AccountIdentification4Choice_Validator : AbstractValidator<AccountI
     /// (AccountSchemeName1Choice_, 0..1) — only invoked when present.
     /// </param>
     public AccountIdentification4Choice_Validator(
-        IValidator<AccountSchemeName1Choice_> otherSchemeNameValidator
+        IValidator<IAccountSchemeName1Choice> otherSchemeNameValidator
     )
     {
         // IBAN variant: Value is fully struct-enforced (IBAN2007Identifier) — no rules needed,
@@ -41,7 +41,7 @@ public class AccountIdentification4Choice_Validator : AbstractValidator<AccountI
         // unregistered variant type as always-valid by design (see Party50Choice_Validator's own
         // remarks for the general pattern).
 
-        var otherVariantValidator = new InlineValidator<Choices.AccountIdentification4Choice.Other>();
+        var otherVariantValidator = new InlineValidator<Choices.AccountIdentification4Choice.IOther>();
         // Identification, Issuer: struct-enforced scalars — no rule needed.
         otherVariantValidator
             .When(
@@ -49,8 +49,7 @@ public class AccountIdentification4Choice_Validator : AbstractValidator<AccountI
                 () => otherVariantValidator.RuleFor(x => x.SchemeName).SetValidator(otherSchemeNameValidator!)
             );
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(otherVariantValidator);
             });

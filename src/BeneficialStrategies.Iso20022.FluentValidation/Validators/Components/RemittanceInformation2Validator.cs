@@ -21,4 +21,4 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// coverage-scoping policy ("reviewed and confirmed to need nothing"), same convention as
 /// <c>AddressType3Choice_Validator</c>.
 /// </remarks>
-public class RemittanceInformation2Validator : AbstractValidator<RemittanceInformation2> { }
+public class RemittanceInformation2Validator : AbstractValidator<IRemittanceInformation2> { }

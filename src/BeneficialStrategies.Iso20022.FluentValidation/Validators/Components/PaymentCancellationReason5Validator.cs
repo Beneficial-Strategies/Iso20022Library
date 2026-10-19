@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Constraints: *(none defined in spec)*
 /// </remarks>
 public class PaymentCancellationReason5Validator
-    : AbstractValidator<PaymentCancellationReason5>
+    : AbstractValidator<IPaymentCancellationReason5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="PaymentCancellationReason5"/>.

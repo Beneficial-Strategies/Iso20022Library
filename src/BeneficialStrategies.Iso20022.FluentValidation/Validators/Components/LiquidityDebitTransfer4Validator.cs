@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>DebtorAccount</c>) — one injected validator serves both properties of the same validated
 /// type.
 /// </remarks>
-public class LiquidityDebitTransfer4Validator : AbstractValidator<LiquidityDebitTransfer4>
+public class LiquidityDebitTransfer4Validator : AbstractValidator<ILiquidityDebitTransfer4>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -52,10 +52,10 @@ public class LiquidityDebitTransfer4Validator : AbstractValidator<LiquidityDebit
     /// Validator for the required <c>TransferredAmount</c> building block (Amount2Choice_, 1..1).
     /// </param>
     public LiquidityDebitTransfer4Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
-        IValidator<CashAccount40> cashAccountValidator,
-        IValidator<PaymentIdentification8> liquidityTransferIdentificationValidator,
-        IValidator<Amount2Choice_> transferredAmountValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValidator,
+        IValidator<ICashAccount40> cashAccountValidator,
+        IValidator<IPaymentIdentification8> liquidityTransferIdentificationValidator,
+        IValidator<IAmount2Choice> transferredAmountValidator
     )
     {
         // SettlementDate: optional scalar, format enforced by the struct constructor — no rule

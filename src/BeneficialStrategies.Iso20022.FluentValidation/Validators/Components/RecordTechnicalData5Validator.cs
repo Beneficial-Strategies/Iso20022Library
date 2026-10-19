@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ExchangeReason</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class RecordTechnicalData5Validator : AbstractValidator<RecordTechnicalData5>
+public class RecordTechnicalData5Validator : AbstractValidator<IRecordTechnicalData5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="RecordTechnicalData5"/>.

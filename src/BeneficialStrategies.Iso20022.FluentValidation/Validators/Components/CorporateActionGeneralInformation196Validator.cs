@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>UnderlyingSecurity</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CorporateActionGeneralInformation196Validator : AbstractValidator<CorporateActionGeneralInformation196>
+public class CorporateActionGeneralInformation196Validator : AbstractValidator<ICorporateActionGeneralInformation196>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CorporateActionGeneralInformation196"/>.

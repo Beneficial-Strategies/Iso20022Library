@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="CountryCodeValidator"/>) rather than a hardcoded <c>new</c> — see the two
 /// constructors below.
 /// </remarks>
-public class DateAndPlaceOfBirth1Validator : AbstractValidator<DateAndPlaceOfBirth1>
+public class DateAndPlaceOfBirth1Validator : AbstractValidator<IDateAndPlaceOfBirth1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator

@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ChargesAccountAgentRule</term><description>When ChargesAccountAgent is present or ChargesAccountAgentAccount is present then Record/ChargesAccountAgent must be absent and Record/ChargesAccountAgentAccount must be absent.</description></item>
 /// </list>
 /// </remarks>
-public class ChargesPerType3Validator : AbstractValidator<ChargesPerType3>
+public class ChargesPerType3Validator : AbstractValidator<IChargesPerType3>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="ChargesPerType3"/>.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Dependency injection: the <c>Channel</c> building block is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class MandateAuthentication1Validator : AbstractValidator<MandateAuthentication1>
+public class MandateAuthentication1Validator : AbstractValidator<IMandateAuthentication1>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -33,7 +33,7 @@ public class MandateAuthentication1Validator : AbstractValidator<MandateAuthenti
     /// Validator for the optional <c>Channel</c> building block (AuthenticationChannel1Choice_,
     /// 0..1) — only invoked when present.
     /// </param>
-    public MandateAuthentication1Validator(IValidator<AuthenticationChannel1Choice_> channelValidator)
+    public MandateAuthentication1Validator(IValidator<IAuthenticationChannel1Choice> channelValidator)
     {
         // MessageAuthenticationCode, Date: optional scalars, length/format enforced by struct
         // constructors — no rule needed.

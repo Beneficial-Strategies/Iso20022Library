@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IExternalCodeRegistry{TCode}"/> (via <see cref="CountryCodeValidator"/>) — see the
 /// two constructors below.
 /// </remarks>
-public class PostalAddress27Validator : AbstractValidator<PostalAddress27>
+public class PostalAddress27Validator : AbstractValidator<IPostalAddress27>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -55,7 +55,7 @@ public class PostalAddress27Validator : AbstractValidator<PostalAddress27>
     /// Validator for the optional <c>Country</c> (CountryCode, 0..1) — only invoked when present.
     /// </param>
     public PostalAddress27Validator(
-        IValidator<AddressType3Choice_> addressTypeValidator,
+        IValidator<IAddressType3Choice> addressTypeValidator,
         IValidator<CountryCode> countryValidator
     )
     {

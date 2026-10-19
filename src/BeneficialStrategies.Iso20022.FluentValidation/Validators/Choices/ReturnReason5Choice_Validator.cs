@@ -19,4 +19,4 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// left for FluentValidation to add, per the empty-validator convention (see
 /// <c>AddressType3Choice_Validator</c>).
 /// </remarks>
-public class ReturnReason5Choice_Validator : AbstractValidator<ReturnReason5Choice_> { }
+public class ReturnReason5Choice_Validator : AbstractValidator<IReturnReason5Choice> { }

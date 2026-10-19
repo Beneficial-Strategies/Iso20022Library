@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Dependency injection: each variant's nested <c>Value</c> is validated by an injected
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public class Party50Choice_Validator : AbstractValidator<Party50Choice_>
+public class Party50Choice_Validator : AbstractValidator<IParty50Choice>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -40,18 +40,17 @@ public class Party50Choice_Validator : AbstractValidator<Party50Choice_>
     /// Validator for <see cref="Choices.Party50Choice.Party"/>'s <c>Value</c> (PartyIdentification272).
     /// </param>
     public Party50Choice_Validator(
-        IValidator<BranchAndFinancialInstitutionIdentification8> agentValueValidator,
-        IValidator<PartyIdentification272> partyValueValidator
+        IValidator<IBranchAndFinancialInstitutionIdentification8> agentValueValidator,
+        IValidator<IPartyIdentification272> partyValueValidator
     )
     {
-        var agentVariantValidator = new InlineValidator<Choices.Party50Choice.Agent>();
+        var agentVariantValidator = new InlineValidator<Choices.Party50Choice.IAgent>();
         agentVariantValidator.RuleFor(x => x.Value).SetValidator(agentValueValidator);
 
-        var partyVariantValidator = new InlineValidator<Choices.Party50Choice.Party>();
+        var partyVariantValidator = new InlineValidator<Choices.Party50Choice.IParty>();
         partyVariantValidator.RuleFor(x => x.Value).SetValidator(partyValueValidator);
 
-        RuleFor(x => x)
-            .SetInheritanceValidator(v =>
+        this.SetVariantValidators(v =>
             {
                 v.Add(agentVariantValidator);
                 v.Add(partyVariantValidator);

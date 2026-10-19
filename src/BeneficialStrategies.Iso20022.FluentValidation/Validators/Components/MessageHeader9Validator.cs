@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors
 /// below.
 /// </remarks>
-public class MessageHeader9Validator : AbstractValidator<MessageHeader9>
+public class MessageHeader9Validator : AbstractValidator<IMessageHeader9>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -34,7 +34,7 @@ public class MessageHeader9Validator : AbstractValidator<MessageHeader9>
     /// Validator for the optional <c>RequestType</c> building block (RequestType4Choice_, 0..1)
     /// — only invoked when present.
     /// </param>
-    public MessageHeader9Validator(IValidator<RequestType4Choice_> requestTypeValidator)
+    public MessageHeader9Validator(IValidator<IRequestType4Choice> requestTypeValidator)
     {
         When(
             x => x.RequestType is not null,

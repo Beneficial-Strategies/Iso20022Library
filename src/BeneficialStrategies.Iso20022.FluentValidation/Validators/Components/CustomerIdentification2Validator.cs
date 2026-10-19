@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>AuthorityRequest</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class CustomerIdentification2Validator : AbstractValidator<CustomerIdentification2>
+public class CustomerIdentification2Validator : AbstractValidator<ICustomerIdentification2>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="CustomerIdentification2"/>.

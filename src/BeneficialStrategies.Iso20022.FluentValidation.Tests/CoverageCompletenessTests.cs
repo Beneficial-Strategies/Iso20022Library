@@ -90,7 +90,7 @@ public class CoverageCompletenessTests
     [MemberData(nameof(FullySupportedMessageCases))]
     public void FullySupportedMessage_EveryReachableModelTypeHasAWiredValidator(Type messageType)
     {
-        var modelReachable = GetModelReachableTypes(messageType);
+        var modelReachable = GetModelReachableTypes(messageType).Select(ToValidatedType).ToHashSet();
         var wiredClosure = GetWiredValidatedTypes(messageType);
 
         var gaps = modelReachable.Except(wiredClosure).ToList();
@@ -154,6 +154,22 @@ public class CoverageCompletenessTests
         }
 
         return reachable;
+    }
+
+    /// <summary>
+    /// The type a validator is written for: the interface of a component or choice record (a choice <c>Foo_</c> has
+    /// <c>IFoo</c>), since the validators validate the interfaces; a code set is its own type.
+    /// </summary>
+    private static Type ToValidatedType(Type type)
+    {
+        if (!IsModelComponentOrChoice(type))
+        {
+            return type;
+        }
+
+        var name = "I" + type.Name.TrimEnd('_');
+        var iface = typeof(BeneficialStrategies.Iso20022.Components.IGroupHeader110).Assembly.GetType(type.Namespace + "." + name);
+        return iface ?? throw new InvalidOperationException($"No interface {name} for {type.FullName}.");
     }
 
     private static Type Unwrap(Type type)

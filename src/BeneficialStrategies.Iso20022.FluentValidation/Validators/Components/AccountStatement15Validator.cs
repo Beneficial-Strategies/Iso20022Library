@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints were found for this component (no "constraint" rows in the
 /// MCP children table).
 /// </remarks>
-public class AccountStatement15Validator : AbstractValidator<AccountStatement15>
+public class AccountStatement15Validator : AbstractValidator<IAccountStatement15>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="AccountStatement15"/>.
@@ -45,43 +45,43 @@ public class AccountStatement15Validator : AbstractValidator<AccountStatement15>
         // All variants wrap Max35Text — length enforced by struct ctor; NotEmpty() guards
         // against a default(Max35Text) slipping through an object initializer.
         When(
-            x => x.ReportingSequence is SeqRange1.FromSequence,
-            () => RuleFor(x => ((SeqRange1.FromSequence)x.ReportingSequence!).Value).NotEmpty()
+            x => x.ReportingSequence is SeqRange1.IFromSequence,
+            () => RuleFor(x => ((SeqRange1.IFromSequence)x.ReportingSequence!).Value).NotEmpty()
         );
 
         When(
-            x => x.ReportingSequence is SeqRange1.ToSequence,
-            () => RuleFor(x => ((SeqRange1.ToSequence)x.ReportingSequence!).Value).NotEmpty()
+            x => x.ReportingSequence is SeqRange1.IToSequence,
+            () => RuleFor(x => ((SeqRange1.IToSequence)x.ReportingSequence!).Value).NotEmpty()
         );
 
         When(
-            x => x.ReportingSequence is SeqRange1.FromToSequence,
+            x => x.ReportingSequence is SeqRange1.IFromToSequence,
             () =>
             {
-                RuleFor(x => ((SeqRange1.FromToSequence)x.ReportingSequence!).FromSequence)
+                RuleFor(x => ((SeqRange1.IFromToSequence)x.ReportingSequence!).FromSequence)
                     .NotEmpty();
-                RuleFor(x => ((SeqRange1.FromToSequence)x.ReportingSequence!).ToSequence)
+                RuleFor(x => ((SeqRange1.IFromToSequence)x.ReportingSequence!).ToSequence)
                     .NotEmpty();
             }
         );
 
         When(
-            x => x.ReportingSequence is SeqRange1.EqualSequence,
-            () => RuleFor(x => ((SeqRange1.EqualSequence)x.ReportingSequence!).Value).NotEmpty()
+            x => x.ReportingSequence is SeqRange1.IEqualSequence,
+            () => RuleFor(x => ((SeqRange1.IEqualSequence)x.ReportingSequence!).Value).NotEmpty()
         );
 
         When(
-            x => x.ReportingSequence is SeqRange1.NotEqualSequence,
+            x => x.ReportingSequence is SeqRange1.INotEqualSequence,
             () =>
-                RuleFor(x => ((SeqRange1.NotEqualSequence)x.ReportingSequence!).Value).NotEmpty()
+                RuleFor(x => ((SeqRange1.INotEqualSequence)x.ReportingSequence!).Value).NotEmpty()
         );
 
         // ── ReportingSource: ReportingSource1Choice (0..1) ───────────────────────
         // Variant Code wraps an external code enum — cannot be "empty", no rule applicable.
         // Variant Proprietary wraps Max35Text — NotEmpty() guards against a default struct.
         When(
-            x => x.ReportingSource is RptgSrc1.Proprietary,
-            () => RuleFor(x => ((RptgSrc1.Proprietary)x.ReportingSource!).Value).NotEmpty()
+            x => x.ReportingSource is RptgSrc1.IProprietary,
+            () => RuleFor(x => ((RptgSrc1.IProprietary)x.ReportingSource!).Value).NotEmpty()
         );
     }
 }

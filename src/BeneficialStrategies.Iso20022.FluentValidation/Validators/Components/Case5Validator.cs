@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ReopenCaseIndication</term><description>YesNoIndicator — optional (0..1)</description></item>
 /// </list>
 /// </remarks>
-public class Case5Validator : AbstractValidator<Case5>
+public class Case5Validator : AbstractValidator<ICase5>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="Case5"/>.

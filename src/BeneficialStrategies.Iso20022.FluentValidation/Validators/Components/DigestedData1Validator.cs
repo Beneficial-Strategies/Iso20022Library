@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DigestAlgorithm</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public class DigestedData1Validator : AbstractValidator<DigestedData1>
+public class DigestedData1Validator : AbstractValidator<IDigestedData1>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="DigestedData1"/>.

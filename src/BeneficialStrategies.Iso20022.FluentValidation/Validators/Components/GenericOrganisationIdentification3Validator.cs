@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
 public class GenericOrganisationIdentification3Validator
-    : AbstractValidator<GenericOrganisationIdentification3>
+    : AbstractValidator<IGenericOrganisationIdentification3>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
@@ -35,7 +35,7 @@ public class GenericOrganisationIdentification3Validator
     /// (OrganisationIdentificationSchemeName1Choice_, 0..1) — only invoked when present.
     /// </param>
     public GenericOrganisationIdentification3Validator(
-        IValidator<OrganisationIdentificationSchemeName1Choice_> schemeNameValidator
+        IValidator<IOrganisationIdentificationSchemeName1Choice> schemeNameValidator
     )
     {
         // Identification: Max256Text, required (1..1) and already `required` C# property —

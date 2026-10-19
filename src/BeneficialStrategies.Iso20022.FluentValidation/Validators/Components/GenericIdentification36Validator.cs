@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SchemeName</term><description>Max35Text — optional (0..1)</description></item>
 /// </list>
 /// </remarks>
-public class GenericIdentification36Validator : AbstractValidator<GenericIdentification36>
+public class GenericIdentification36Validator : AbstractValidator<IGenericIdentification36>
 {
     /// <summary>
     /// Initializes a new instance of the validator for <see cref="GenericIdentification36"/>.
