@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <!-- TFM policy: same rationale and same two targets as BeneficialStrategies.Iso20022.Common — see that project's csproj. -->
-    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net8.0;net10.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>BeneficialStrategies.Iso20022.Validation</RootNamespace>
@@ -46,6 +47,10 @@
       expected for a validators package designed for DI registration.
     -->
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Polyfill" Version="11.*" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>

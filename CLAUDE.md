@@ -232,9 +232,9 @@ SDK.
 `BeneficialStrategies.Iso20022.FluentValidation` via `src/Directory.Build.props` (`<Version>` and
 the rest of the shared package metadata) — see "Multi-Package Repository Strategy" below for why.
 
-**The exception: `BeneficialStrategies.Iso20022.Primitives`, `.Interfaces` and `.FluentValidation.Payloads` also target `netstandard2.0`** (#26, #28), so that .NET Framework
-4.6.1+, Mono 5.4+ and Unity can take the primitive types, the interfaces and the payload validation without the records (`Common` and the
-validators stay net8.0 + net10.0). The XML and JSON serializers, the value lists and the message-type registry are in `Primitives` for that reason (they work by
+**The exception: `BeneficialStrategies.Iso20022.Primitives`, `.Interfaces`, `.FluentValidation` and `.FluentValidation.Payloads` also target `netstandard2.0`** (#26, #28), so that .NET Framework
+4.6.1+, Mono 5.4+ and Unity can take the primitive types, the interfaces, the validators and the payload validation without the records (`Common` and the
+saga toolkit stay net8.0 + net10.0; the validators reference `Primitives` and `Interfaces` only). The XML and JSON serializers, the value lists and the message-type registry are in `Primitives` for that reason (they work by
 reflection over the attributes and `IOuterRecord`, and the registry is told the records' assembly), so `.Payloads` needs `Primitives` only. `netstandard2.0` is one build for all of those. What it costs:
 * three packages that flow to a consumer of that build only: `System.Text.Json` (not in the box), `Portable.System.DateTimeOnly`
   (`ISODate`, `ISOTime` and the Gregorian types expose `DateOnly` and `TimeOnly`, which .NET Framework lacks) and
@@ -243,7 +243,7 @@ reflection over the attributes and `IOuterRecord`, and the registry is told the 
   methods the code uses; `Framework/NetStandardPolyfills.cs` maps `ArgumentNullException.ThrowIfNull` (a global using alias in that
   build only, so type tests for the exception write `System.ArgumentNullException`);
 * no `ReadOnlySpan` overloads of `Parse` (use `Substring`), and `LangVersion` is `latest`.
-Its tests run on .NET Framework 4.8 (`Primitives.Tests` adds `net48` on Windows; tests that need the records, such as the serializer tests on real messages, are in `Common.Tests`, and those of `.Payloads` in `FluentValidation.Payloads.Tests`; the `primitives-net48` CI job). Code in `Primitives`
+Its tests run on .NET Framework 4.8 (`Primitives.Tests` adds `net48` on Windows; tests that need the records, such as the serializer tests on real messages, are in `Common.Tests`, and those of `.Payloads` in `FluentValidation.Payloads.Tests`; `FluentValidation.NetStandard.Tests` runs the validators and the payload validators on .NET Framework 4.8 with classes of its own; the `primitives-net48` CI job). Code in `Primitives`
 must keep compiling for `netstandard2.0`: build it (`dotnet build src/BeneficialStrategies.Iso20022.Primitives`) after a change.
 `Iso20022PrimitiveJsonOptions` holds the JSON converters of the primitives alone.
 

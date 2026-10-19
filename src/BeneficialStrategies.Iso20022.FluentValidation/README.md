@@ -161,6 +161,8 @@ foreach (var error in invalidResult.Errors)
 // MessageOrTransactionCaseRule).
 ```
 
+Targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0; it references the Primitives and Interfaces packages, not the message records.
+
 ## Validating your own classes
 
 The validators are written for the interfaces of `BeneficialStrategies.Iso20022.Interfaces`, not for our records. A record of
