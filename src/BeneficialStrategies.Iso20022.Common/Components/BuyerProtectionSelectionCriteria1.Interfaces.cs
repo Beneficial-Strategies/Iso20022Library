@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BuyerProtectionSelectionCriteria1 : IBuyerProtectionSelectionCriteria1
 {
-    IFinancialInstitutionIdentification28 IBuyerProtectionSelectionCriteria1.FinancialInstitutionIdentification => FinancialInstitutionIdentification;
-    ISecuritiesAccountIdentification1Choice? IBuyerProtectionSelectionCriteria1.AccountIdentification => AccountIdentification;
+    IFinancialInstitutionIdentification28 IBuyerProtectionSelectionCriteria1.FinancialInstitutionIdentification =>
+        FinancialInstitutionIdentification;
+    ISecuritiesAccountIdentification1Choice? IBuyerProtectionSelectionCriteria1.AccountIdentification =>
+        AccountIdentification;
 }

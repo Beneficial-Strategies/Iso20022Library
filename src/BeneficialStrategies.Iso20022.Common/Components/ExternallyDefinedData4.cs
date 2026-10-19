@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kUooAXDTEe2MCaKO5AtGsA")]
 [DisplayName("Externally Defined Data")]
-public record ExternallyDefinedData4
+public partial record ExternallyDefinedData4
 {
     /// <summary>
     /// Identification of the set of data to exchange.

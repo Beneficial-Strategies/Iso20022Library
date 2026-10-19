@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PriorityNumeric5Choice;
 
-public partial record Numeric : INumeric
-{
-}
+public partial record Numeric : INumeric { }

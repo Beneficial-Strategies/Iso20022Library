@@ -8,7 +8,8 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NotificationCancellationProcessingStatus2 : INotificationCancellationProcessingStatus2
+public partial record NotificationCancellationProcessingStatus2
+    : INotificationCancellationProcessingStatus2
 {
     IProcessedStatus2Format1Choice INotificationCancellationProcessingStatus2.Status => Status;
 }

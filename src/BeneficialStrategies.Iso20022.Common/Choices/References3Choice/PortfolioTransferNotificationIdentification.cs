@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice
     /// </summary>
     [IsoId("_USz3B9p-Ed-ak6NoX_4Aeg_-1699094780")]
     [DisplayName("Portfolio Transfer Notification Identification")]
-    public record PortfolioTransferNotificationIdentification : References3Choice_
+    public partial record PortfolioTransferNotificationIdentification : References3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

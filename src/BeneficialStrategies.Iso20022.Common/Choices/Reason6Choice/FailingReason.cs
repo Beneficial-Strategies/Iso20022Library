@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason6Choice
     /// </summary>
     [IsoId("_itAoG0AAEeCaq78Ig8ATcA")]
     [DisplayName("Failing Reason")]
-    public record FailingReason : Reason6Choice_
+    public partial record FailingReason : Reason6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FlngRsn")]

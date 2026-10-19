@@ -10,12 +10,20 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record SecuritiesFinancingStatusAdvice002V09 : ISecuritiesFinancingStatusAdvice002V09
 {
-    ITransactionIdentifications35 ISecuritiesFinancingStatusAdvice002V09.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus90Choice? ISecuritiesFinancingStatusAdvice002V09.ProcessingStatus => ProcessingStatus;
-    IMatchingStatus29Choice? ISecuritiesFinancingStatusAdvice002V09.MatchingStatus => MatchingStatus;
-    IMatchingStatus29Choice? ISecuritiesFinancingStatusAdvice002V09.InferredMatchingStatus => InferredMatchingStatus;
-    ISettlementStatus21Choice? ISecuritiesFinancingStatusAdvice002V09.SettlementStatus => SettlementStatus;
-    IRepoCallRequestStatus9Choice? ISecuritiesFinancingStatusAdvice002V09.RepoCallRequestStatus => RepoCallRequestStatus;
-    ISecuritiesFinancingTransactionDetails53? ISecuritiesFinancingStatusAdvice002V09.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingStatusAdvice002V09.SupplementaryData => SupplementaryData;
+    ITransactionIdentifications35 ISecuritiesFinancingStatusAdvice002V09.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus90Choice? ISecuritiesFinancingStatusAdvice002V09.ProcessingStatus =>
+        ProcessingStatus;
+    IMatchingStatus29Choice? ISecuritiesFinancingStatusAdvice002V09.MatchingStatus =>
+        MatchingStatus;
+    IMatchingStatus29Choice? ISecuritiesFinancingStatusAdvice002V09.InferredMatchingStatus =>
+        InferredMatchingStatus;
+    ISettlementStatus21Choice? ISecuritiesFinancingStatusAdvice002V09.SettlementStatus =>
+        SettlementStatus;
+    IRepoCallRequestStatus9Choice? ISecuritiesFinancingStatusAdvice002V09.RepoCallRequestStatus =>
+        RepoCallRequestStatus;
+    ISecuritiesFinancingTransactionDetails53? ISecuritiesFinancingStatusAdvice002V09.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingStatusAdvice002V09.SupplementaryData =>
+        SupplementaryData;
 }

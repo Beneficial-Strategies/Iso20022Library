@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information used to identify a cash clearing system.
 /// </summary>
 [IsoId("_TMLmMNp-Ed-ak6NoX_4Aeg_-1061546408")]
-public interface IClearingSystemIdentification1Choice : IIsoChoice
-{
-}
+public interface IClearingSystemIdentification1Choice : IIsoChoice { }

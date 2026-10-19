@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice to provide additional portfolio information or individual savings account information (UK government scheme provided by UK based financial institutions only).
 /// </summary>
 [IsoId("_3fnhckXfEeGY6MkiuzuPOA_858119227")]
-public interface IISAPortfolio2Choice : IIsoChoice
-{
-}
+public interface IISAPortfolio2Choice : IIsoChoice { }

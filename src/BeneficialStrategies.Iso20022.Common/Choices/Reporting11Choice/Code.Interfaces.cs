@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Reporting11Choice;
 
-public partial record Code : ICode
-{
-}
+public partial record Code : ICode { }

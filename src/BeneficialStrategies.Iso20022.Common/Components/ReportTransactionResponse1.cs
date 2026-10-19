@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nL5KEN6VEeiwsev40qZGEQ")]
 [DisplayName("Report Transaction Response")]
-public record ReportTransactionResponse1
+public partial record ReportTransactionResponse1
 {
     /// <summary>
     /// The total number of transactions matching the search criteria.

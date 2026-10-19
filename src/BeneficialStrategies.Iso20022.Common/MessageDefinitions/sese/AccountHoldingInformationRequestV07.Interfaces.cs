@@ -10,20 +10,32 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record AccountHoldingInformationRequestV07 : IAccountHoldingInformationRequestV07
 {
-    IMessageIdentification1 IAccountHoldingInformationRequestV07.MessageReference => MessageReference;
+    IMessageIdentification1 IAccountHoldingInformationRequestV07.MessageReference =>
+        MessageReference;
     IAdditionalReference11? IAccountHoldingInformationRequestV07.PoolReference => PoolReference;
-    IAdditionalReference10? IAccountHoldingInformationRequestV07.PreviousReference => PreviousReference;
-    IAdditionalReference10? IAccountHoldingInformationRequestV07.RelatedReference => RelatedReference;
-    IIndividualPerson8? IAccountHoldingInformationRequestV07.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IAccountHoldingInformationRequestV07.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IAccountHoldingInformationRequestV07.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation36? IAccountHoldingInformationRequestV07.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation36? IAccountHoldingInformationRequestV07.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation36> IAccountHoldingInformationRequestV07.OtherCorporateInvestor => OtherCorporateInvestor;
-    IInvestmentAccount69 IAccountHoldingInformationRequestV07.TransferorAccount => TransferorAccount;
+    IAdditionalReference10? IAccountHoldingInformationRequestV07.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference10? IAccountHoldingInformationRequestV07.RelatedReference =>
+        RelatedReference;
+    IIndividualPerson8? IAccountHoldingInformationRequestV07.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IAccountHoldingInformationRequestV07.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IAccountHoldingInformationRequestV07.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation36? IAccountHoldingInformationRequestV07.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation36? IAccountHoldingInformationRequestV07.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation36> IAccountHoldingInformationRequestV07.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
+    IInvestmentAccount69 IAccountHoldingInformationRequestV07.TransferorAccount =>
+        TransferorAccount;
     IInvestmentAccount69? IAccountHoldingInformationRequestV07.NomineeAccount => NomineeAccount;
     IPartyIdentification132 IAccountHoldingInformationRequestV07.Transferee => Transferee;
-    IEnumerable<IPortfolioTransfer6> IAccountHoldingInformationRequestV07.ProductTransfer => ProductTransfer;
-    IMarketPracticeVersion1? IAccountHoldingInformationRequestV07.MarketPracticeVersion => MarketPracticeVersion;
+    IEnumerable<IPortfolioTransfer6> IAccountHoldingInformationRequestV07.ProductTransfer =>
+        ProductTransfer;
+    IMarketPracticeVersion1? IAccountHoldingInformationRequestV07.MarketPracticeVersion =>
+        MarketPracticeVersion;
     IEnumerable<IExtension1> IAccountHoldingInformationRequestV07.Extension => Extension;
 }

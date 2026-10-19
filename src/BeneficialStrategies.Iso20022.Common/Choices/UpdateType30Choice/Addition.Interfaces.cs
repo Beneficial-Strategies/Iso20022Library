@@ -10,19 +10,23 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType30Choice;
 
 public partial record Addition : IAddition
 {
-    ISettlementTypeAndAdditionalParameters17? IAddition.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters17? IAddition.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages48> IAddition.Linkages => Linkages;
     ISecuritiesTradeDetails109? IAddition.TradeDetails => TradeDetails;
-    IFinancialInstrumentAttributes97? IAddition.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    IFinancialInstrumentAttributes97? IAddition.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IQuantityAndAccount93? IAddition.QuantityAndAccountDetails => QuantityAndAccountDetails;
     ISettlementDetails179? IAddition.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction17? IAddition.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
+    IStandingSettlementInstruction17? IAddition.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
     ISettlementParties92? IAddition.DeliveringSettlementParties => DeliveringSettlementParties;
     ISettlementParties92? IAddition.ReceivingSettlementParties => ReceivingSettlementParties;
     ICashParties38? IAddition.CashParties => CashParties;
     IAmountAndDirection101? IAddition.SettlementAmount => SettlementAmount;
     IOtherAmounts43? IAddition.OtherAmounts => OtherAmounts;
     IOtherParties35? IAddition.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters7? IAddition.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
+    IRegistrationParameters7? IAddition.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
     IEnumerable<ISupplementaryData1> IAddition.SupplementaryData => SupplementaryData;
 }

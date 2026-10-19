@@ -12,5 +12,6 @@ public partial record TotalFeesAndTaxes44 : ITotalFeesAndTaxes44
 {
     IEnumerable<IFee11> ITotalFeesAndTaxes44.IndividualFee => IndividualFee;
     IEnumerable<ITax35> ITotalFeesAndTaxes44.IndividualTax => IndividualTax;
-    IEnumerable<IDigitalPaymentSettlement3> ITotalFeesAndTaxes44.DigitalNetworkFee => DigitalNetworkFee;
+    IEnumerable<IDigitalPaymentSettlement3> ITotalFeesAndTaxes44.DigitalNetworkFee =>
+        DigitalNetworkFee;
 }

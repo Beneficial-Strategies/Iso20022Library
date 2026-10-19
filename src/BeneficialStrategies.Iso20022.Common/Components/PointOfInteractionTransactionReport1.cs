@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_li9A4N6WEeiwsev40qZGEQ")]
 [DisplayName("Point Of Interaction Transaction Report")]
-public record PointOfInteractionTransactionReport1
+public partial record PointOfInteractionTransactionReport1
 {
     /// <summary>
     /// Response for this specific transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JsNwUZRJEe6mHLZGMDWxvg")]
 [DisplayName("Reversal Response8")]
-public record ReversalResponse8
+public partial record ReversalResponse8
 {
     /// <summary>
     /// Sale Transaction Identification.

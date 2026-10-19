@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record LotteryTypeFormat4Choice_ : ILotteryTypeFormat4Choice
-{
-}
+public abstract partial record LotteryTypeFormat4Choice_ : ILotteryTypeFormat4Choice { }

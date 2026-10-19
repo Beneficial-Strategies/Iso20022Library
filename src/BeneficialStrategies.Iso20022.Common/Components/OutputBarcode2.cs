@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gocIQXDBEe2MCaKO5AtGsA")]
 [DisplayName("Output Barcode")]
-public record OutputBarcode2
+public partial record OutputBarcode2
 {
     /// <summary>
     /// Type of Barcode coding.

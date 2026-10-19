@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H0Q5wdkMEeiojJsa6FYyew")]
 [DisplayName("Track Data")]
-public record TrackData2
+public partial record TrackData2
 {
     /// <summary>
     /// Track number of the card.

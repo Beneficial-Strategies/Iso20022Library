@@ -11,27 +11,46 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record CorporateActionNotificationV01 : ICorporateActionNotificationV01
 {
     IDocumentIdentification11 ICorporateActionNotificationV01.Identification => Identification;
-    ICorporateActionNotification2 ICorporateActionNotificationV01.NotificationGeneralInformation => NotificationGeneralInformation;
-    IDocumentIdentification15? ICorporateActionNotificationV01.PreviousNotificationIdentification => PreviousNotificationIdentification;
-    IDocumentIdentification9? ICorporateActionNotificationV01.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification13> ICorporateActionNotificationV01.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference1> ICorporateActionNotificationV01.EventsLinkage => EventsLinkage;
-    ICorporateActionGeneralInformation11 ICorporateActionNotificationV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    ICorporateActionNotification2 ICorporateActionNotificationV01.NotificationGeneralInformation =>
+        NotificationGeneralInformation;
+    IDocumentIdentification15? ICorporateActionNotificationV01.PreviousNotificationIdentification =>
+        PreviousNotificationIdentification;
+    IDocumentIdentification9? ICorporateActionNotificationV01.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification13> ICorporateActionNotificationV01.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference1> ICorporateActionNotificationV01.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionGeneralInformation11 ICorporateActionNotificationV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountIdentification7Choice ICorporateActionNotificationV01.AccountDetails => AccountDetails;
-    IFinancialInstrumentAttributes3? ICorporateActionNotificationV01.IntermediateSecurity => IntermediateSecurity;
-    ICorporateAction3? ICorporateActionNotificationV01.CorporateActionDetails => CorporateActionDetails;
-    IEnumerable<ICorporateActionOption3> ICorporateActionNotificationV01.CorporateActionOptionDetails => CorporateActionOptionDetails;
-    ICorporateActionNarrative11? ICorporateActionNotificationV01.AdditionalInformation => AdditionalInformation;
-    IPartyIdentification10Choice? ICorporateActionNotificationV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ICorporateActionNotificationV01.MessageRecipient => MessageRecipient;
-    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.SubPayingAgent => SubPayingAgent;
+    IFinancialInstrumentAttributes3? ICorporateActionNotificationV01.IntermediateSecurity =>
+        IntermediateSecurity;
+    ICorporateAction3? ICorporateActionNotificationV01.CorporateActionDetails =>
+        CorporateActionDetails;
+    IEnumerable<ICorporateActionOption3> ICorporateActionNotificationV01.CorporateActionOptionDetails =>
+        CorporateActionOptionDetails;
+    ICorporateActionNarrative11? ICorporateActionNotificationV01.AdditionalInformation =>
+        AdditionalInformation;
+    IPartyIdentification10Choice? ICorporateActionNotificationV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ICorporateActionNotificationV01.MessageRecipient =>
+        MessageRecipient;
+    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.SubPayingAgent =>
+        SubPayingAgent;
     IPartyIdentification10Choice? ICorporateActionNotificationV01.Registrar => Registrar;
-    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.ResellingAgent => ResellingAgent;
-    IPartyIdentification10Choice? ICorporateActionNotificationV01.PhysicalSecuritiesAgent => PhysicalSecuritiesAgent;
+    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.ResellingAgent =>
+        ResellingAgent;
+    IPartyIdentification10Choice? ICorporateActionNotificationV01.PhysicalSecuritiesAgent =>
+        PhysicalSecuritiesAgent;
     IPartyIdentification10Choice? ICorporateActionNotificationV01.DropAgent => DropAgent;
-    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.SolicitationAgent => SolicitationAgent;
-    IPartyIdentification10Choice? ICorporateActionNotificationV01.InformationAgent => InformationAgent;
+    IEnumerable<IPartyIdentification10Choice> ICorporateActionNotificationV01.SolicitationAgent =>
+        SolicitationAgent;
+    IPartyIdentification10Choice? ICorporateActionNotificationV01.InformationAgent =>
+        InformationAgent;
     IEnumerable<IExtension2> ICorporateActionNotificationV01.Extension => Extension;
 }

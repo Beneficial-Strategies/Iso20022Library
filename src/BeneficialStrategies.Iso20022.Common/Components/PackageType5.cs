@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ur-K4ZEGEe6Un9Rms6YuCg")]
 [DisplayName("Package Type5")]
-public record PackageType5
+public partial record PackageType5
 {
     /// <summary>
     /// Package Identification.

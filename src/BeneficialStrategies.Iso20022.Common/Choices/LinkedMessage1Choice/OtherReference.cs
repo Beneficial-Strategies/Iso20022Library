@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage1Choice
     [IsoId("_GnNaIQgKEeSFYfyUKDXKaw")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
-    public record OtherReference : LinkedMessage1Choice_
+    public partial record OtherReference : LinkedMessage1Choice_
     {
         /// <summary>
         /// Business reference of a message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.

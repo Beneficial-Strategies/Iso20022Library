@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// Provides status information related to a pending cancellation request.
 /// </summary>
 [IsoId("_oj4IuzQXEe2o-K1dwNg8Gg")]
-public interface IPendingCancellation : IInstructionCancellationRequestStatus15Choice, IIsoChoiceVariant
+public interface IPendingCancellation
+    : IInstructionCancellationRequestStatus15Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("PdgCxl")]

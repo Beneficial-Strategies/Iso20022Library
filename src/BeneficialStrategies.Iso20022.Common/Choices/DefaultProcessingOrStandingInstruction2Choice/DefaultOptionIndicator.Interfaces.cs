@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstruction2Choice;
 
-public partial record DefaultOptionIndicator : IDefaultOptionIndicator
-{
-}
+public partial record DefaultOptionIndicator : IDefaultOptionIndicator { }

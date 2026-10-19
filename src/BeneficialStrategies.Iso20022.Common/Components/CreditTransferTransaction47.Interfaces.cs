@@ -10,22 +10,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CreditTransferTransaction47 : ICreditTransferTransaction47
 {
-    IPaymentTypeInformation28? ICreditTransferTransaction47.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? ICreditTransferTransaction47.SettlementTimeIndication => SettlementTimeIndication;
-    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.InstructedAgent => InstructedAgent;
-    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.IntermediaryAgent1 => IntermediaryAgent1;
-    ICashAccount38? ICreditTransferTransaction47.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.IntermediaryAgent2 => IntermediaryAgent2;
-    ICashAccount38? ICreditTransferTransaction47.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.IntermediaryAgent3 => IntermediaryAgent3;
-    ICashAccount38? ICreditTransferTransaction47.IntermediaryAgent3Account => IntermediaryAgent3Account;
-    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.CreditorAgent => CreditorAgent;
+    IPaymentTypeInformation28? ICreditTransferTransaction47.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? ICreditTransferTransaction47.SettlementTimeIndication =>
+        SettlementTimeIndication;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.InstructedAgent =>
+        InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    ICashAccount38? ICreditTransferTransaction47.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    ICashAccount38? ICreditTransferTransaction47.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    ICashAccount38? ICreditTransferTransaction47.IntermediaryAgent3Account =>
+        IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.CreditorAgent =>
+        CreditorAgent;
     ICashAccount38? ICreditTransferTransaction47.CreditorAgentAccount => CreditorAgentAccount;
     IBranchAndFinancialInstitutionIdentification6 ICreditTransferTransaction47.Creditor => Creditor;
     ICashAccount38? ICreditTransferTransaction47.CreditorAccount => CreditorAccount;
-    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.UltimateCreditor => UltimateCreditor;
-    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction47.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IEnumerable<IDirectDebitTransactionInformation26> ICreditTransferTransaction47.DirectDebitTransactionInformation => DirectDebitTransactionInformation;
-    IEnumerable<ISupplementaryData1> ICreditTransferTransaction47.SupplementaryData => SupplementaryData;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction47.UltimateCreditor =>
+        UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction47.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IEnumerable<IDirectDebitTransactionInformation26> ICreditTransferTransaction47.DirectDebitTransactionInformation =>
+        DirectDebitTransactionInformation;
+    IEnumerable<ISupplementaryData1> ICreditTransferTransaction47.SupplementaryData =>
+        SupplementaryData;
 }

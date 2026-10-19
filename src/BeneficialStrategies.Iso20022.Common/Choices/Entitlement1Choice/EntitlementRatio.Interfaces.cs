@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Entitlement1Choice;
 
-public partial record EntitlementRatio : IEntitlementRatio
-{
-}
+public partial record EntitlementRatio : IEntitlementRatio { }

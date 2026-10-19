@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform6Choice
     /// Loyalty Request.
     /// </summary>
     [DisplayName("Loyalty Request")]
-    public record LoyaltyRequest : TransactionToPerform6Choice_
+    public partial record LoyaltyRequest : TransactionToPerform6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

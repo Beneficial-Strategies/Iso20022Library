@@ -16,17 +16,22 @@ public partial record TransactionDetails105 : ITransactionDetails105
     ISafeKeepingPlace1? ITransactionDetails105.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfTradeIdentification1? ITransactionDetails105.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification1? ITransactionDetails105.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification19 ITransactionDetails105.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails105.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity6Choice ITransactionDetails105.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection51? ITransactionDetails105.SettlementAmount => SettlementAmount;
     IDateAndDateTime2Choice? ITransactionDetails105.LateDeliveryDate => LateDeliveryDate;
-    IDateAndDateTime2Choice? ITransactionDetails105.ExpectedSettlementDate => ExpectedSettlementDate;
+    IDateAndDateTime2Choice? ITransactionDetails105.ExpectedSettlementDate =>
+        ExpectedSettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails105.ExpectedValueDate => ExpectedValueDate;
     ISettlementDate19Choice ITransactionDetails105.SettlementDate => SettlementDate;
     ITradeDate8Choice? ITransactionDetails105.TradeDate => TradeDate;
     ISettlementDetails143 ITransactionDetails105.SettlementParameters => SettlementParameters;
-    ISettlementParties40? ITransactionDetails105.ReceivingSettlementParties => ReceivingSettlementParties;
-    ISettlementParties40? ITransactionDetails105.DeliveringSettlementParties => DeliveringSettlementParties;
+    ISettlementParties40? ITransactionDetails105.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ISettlementParties40? ITransactionDetails105.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
     IPartyIdentification99? ITransactionDetails105.Investor => Investor;
-    IPartyIdentification100? ITransactionDetails105.QualifiedForeignIntermediary => QualifiedForeignIntermediary;
+    IPartyIdentification100? ITransactionDetails105.QualifiedForeignIntermediary =>
+        QualifiedForeignIntermediary;
 }

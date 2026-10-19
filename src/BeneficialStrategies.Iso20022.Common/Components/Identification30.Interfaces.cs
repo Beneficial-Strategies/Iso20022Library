@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Identification30 : IIdentification30
-{
-}
+public partial record Identification30 : IIdentification30 { }

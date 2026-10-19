@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record MarketClientSide5Choice_ : IMarketClientSide5Choice
-{
-}
+public abstract partial record MarketClientSide5Choice_ : IMarketClientSide5Choice { }

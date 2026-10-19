@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record DocumentNumber6Choice_ : IDocumentNumber6Choice
-{
-}
+public abstract partial record DocumentNumber6Choice_ : IDocumentNumber6Choice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record AmountAndDirection67 : IAmountAndDirection67
-{
-}
+public partial record AmountAndDirection67 : IAmountAndDirection67 { }

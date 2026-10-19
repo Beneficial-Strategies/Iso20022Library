@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(QuantitySearch2Choice.OriginalAndCurrentFace))]
     [JsonDerivedType(typeof(QuantitySearch2Choice.Quantity))]
     [JsonDerivedType(typeof(QuantitySearch2Choice.OriginalAndCurrentFace))]
-    public abstract record QuantitySearch2Choice_
+    public abstract partial record QuantitySearch2Choice_
     {
     }
 }

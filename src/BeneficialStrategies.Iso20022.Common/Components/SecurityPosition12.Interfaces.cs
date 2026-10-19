@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecurityPosition12 : ISecurityPosition12
 {
-    ISecurityIdentification19 ISecurityPosition12.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ISecurityPosition12.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IEnumerable<IEligiblePosition9> ISecurityPosition12.Position => Position;
 }

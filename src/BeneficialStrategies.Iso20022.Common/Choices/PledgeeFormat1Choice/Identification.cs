@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat1Choice
     [IsoId("_Tq_ecE9kEeSn2-3swbRbzg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public record Identification : PledgeeFormat1Choice_
+    public partial record Identification : PledgeeFormat1Choice_
     {
         /// <summary>
         /// Additional information about the entity to which the financial instruments are pledged.

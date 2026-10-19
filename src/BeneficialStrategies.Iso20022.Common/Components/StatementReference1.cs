@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VFEXo04jEeSGlfauTkCKIA")]
 [DisplayName("Statement Reference")]
-public record StatementReference1
+public partial record StatementReference1
 {
     /// <summary>
     /// Reference common to all pages of the statement for which the status advice is sent.

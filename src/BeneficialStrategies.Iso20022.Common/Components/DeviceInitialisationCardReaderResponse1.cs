@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4gUzkN7HEeiwsev40qZGEQ")]
 [DisplayName("Device Initialisation Card Reader Response")]
-public record DeviceInitialisationCardReaderResponse1
+public partial record DeviceInitialisationCardReaderResponse1
 {
     /// <summary>
     /// Payment instrument entry mode requested by the Sale System.

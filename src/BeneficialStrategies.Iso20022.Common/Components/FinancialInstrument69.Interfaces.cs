@@ -23,6 +23,8 @@ public partial record FinancialInstrument69 : IFinancialInstrument69
     IPaymentInstrument14? IFinancialInstrument69.PaymentDetails => PaymentDetails;
     ICrystallisation1? IFinancialInstrument69.CrystallisationDetails => CrystallisationDetails;
     ITax36? IFinancialInstrument69.TaxValuationPoint => TaxValuationPoint;
-    IFundSettlementParameters14? IFinancialInstrument69.SettlementPartiesDetails => SettlementPartiesDetails;
-    IEnumerable<IAdditionalInformation15> IFinancialInstrument69.AdditionalInformation => AdditionalInformation;
+    IFundSettlementParameters14? IFinancialInstrument69.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
+    IEnumerable<IAdditionalInformation15> IFinancialInstrument69.AdditionalInformation =>
+        AdditionalInformation;
 }

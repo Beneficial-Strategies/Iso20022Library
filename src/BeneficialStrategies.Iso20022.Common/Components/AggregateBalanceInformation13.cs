@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_K2BzaeaOEd-q8fx_Zl_34A")]
 [DisplayName("Aggregate Balance Information")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
-public record AggregateBalanceInformation13
+public partial record AggregateBalanceInformation13
 {
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

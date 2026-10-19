@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionIdentifications4 : ITransactionIdentifications4
 {
-    IReferences4Choice ITransactionIdentifications4.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
+    IReferences4Choice ITransactionIdentifications4.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
 }

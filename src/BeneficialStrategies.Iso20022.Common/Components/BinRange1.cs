@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qe2mAHC8Ee2bmOA3bkVsMg")]
 [DisplayName("Bin Range")]
-public record BinRange1
+public partial record BinRange1
 {
     /// <summary>
     /// Lower value of BIN in the range.

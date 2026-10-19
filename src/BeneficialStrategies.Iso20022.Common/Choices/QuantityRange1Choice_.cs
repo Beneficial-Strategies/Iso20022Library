@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(QuantityRange1Choice.FromToQuantity))]
     [JsonDerivedType(typeof(QuantityRange1Choice.EqualQuantity))]
     [JsonDerivedType(typeof(QuantityRange1Choice.NotEqualQuantity))]
-    public abstract record QuantityRange1Choice_
+    public abstract partial record QuantityRange1Choice_
     {
     }
 }

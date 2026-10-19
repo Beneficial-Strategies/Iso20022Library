@@ -12,7 +12,8 @@ public partial record AdditionalInformation9 : IAdditionalInformation9
 {
     IClassificationType1Choice? IAdditionalInformation9.ClassificationType => ClassificationType;
     ISecuritiesAccount13? IAdditionalInformation9.SafekeepingAccount => SafekeepingAccount;
-    ISecurityIdentification14? IAdditionalInformation9.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification14? IAdditionalInformation9.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IFinancialInstrumentQuantity1Choice? IAdditionalInformation9.Quantity => Quantity;
     IDateAndDateTimeChoice? IAdditionalInformation9.EffectiveDate => EffectiveDate;
     IDateAndDateTimeChoice? IAdditionalInformation9.ExpiryDate => ExpiryDate;

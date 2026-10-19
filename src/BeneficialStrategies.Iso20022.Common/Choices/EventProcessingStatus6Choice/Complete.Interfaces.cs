@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus6Choice;
 
-public partial record Complete : IComplete
-{
-}
+public partial record Complete : IComplete { }

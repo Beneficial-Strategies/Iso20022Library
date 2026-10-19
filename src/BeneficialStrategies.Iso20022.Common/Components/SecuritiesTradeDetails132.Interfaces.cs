@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTradeDetails132 : ISecuritiesTradeDetails132
 {
-    IEnumerable<RestrictedFINXMax52Text> ISecuritiesTradeDetails132.TradeIdentification => TradeIdentification;
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails132.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<RestrictedFINXMax52Text> ISecuritiesTradeDetails132.TradeIdentification =>
+        TradeIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails132.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification2? ISecuritiesTradeDetails132.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ISecuritiesTradeDetails132.PlaceOfClearing => PlaceOfClearing;
     ITradeDate9Choice? ISecuritiesTradeDetails132.TradeDate => TradeDate;
@@ -19,11 +21,13 @@ public partial record SecuritiesTradeDetails132 : ISecuritiesTradeDetails132
     IPrice11? ISecuritiesTradeDetails132.DealPrice => DealPrice;
     IOpeningClosing4Choice? ISecuritiesTradeDetails132.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting9Choice> ISecuritiesTradeDetails132.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails132.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails132.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity5Choice? ISecuritiesTradeDetails132.InvestorCapacity => InvestorCapacity;
     ITradeOriginator4Choice? ISecuritiesTradeDetails132.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice32Choice? ISecuritiesTradeDetails132.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails132.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails132.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus28Choice? ISecuritiesTradeDetails132.MatchingStatus => MatchingStatus;
     IAffirmationStatus9Choice? ISecuritiesTradeDetails132.AffirmationStatus => AffirmationStatus;
 }

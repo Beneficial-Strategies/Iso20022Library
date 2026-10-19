@@ -8,16 +8,26 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionStatusAdviceV01 : ISecuritiesSettlementTransactionStatusAdviceV01
+public partial record SecuritiesSettlementTransactionStatusAdviceV01
+    : ISecuritiesSettlementTransactionStatusAdviceV01
 {
-    IDocumentIdentification11 ISecuritiesSettlementTransactionStatusAdviceV01.Identification => Identification;
-    ITransactionIdentifications2 ISecuritiesSettlementTransactionStatusAdviceV01.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus1Choice? ISecuritiesSettlementTransactionStatusAdviceV01.ProcessingStatus => ProcessingStatus;
-    IMatchingStatus2Choice? ISecuritiesSettlementTransactionStatusAdviceV01.InferredMatchingStatus => InferredMatchingStatus;
-    IMatchingStatus2Choice? ISecuritiesSettlementTransactionStatusAdviceV01.MatchingStatus => MatchingStatus;
-    ISettlementStatus2Choice? ISecuritiesSettlementTransactionStatusAdviceV01.SettlementStatus => SettlementStatus;
-    ITransactionDetails5? ISecuritiesSettlementTransactionStatusAdviceV01.TransactionDetails => TransactionDetails;
-    IPartyIdentification10Choice? ISecuritiesSettlementTransactionStatusAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesSettlementTransactionStatusAdviceV01.MessageRecipient => MessageRecipient;
+    IDocumentIdentification11 ISecuritiesSettlementTransactionStatusAdviceV01.Identification =>
+        Identification;
+    ITransactionIdentifications2 ISecuritiesSettlementTransactionStatusAdviceV01.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus1Choice? ISecuritiesSettlementTransactionStatusAdviceV01.ProcessingStatus =>
+        ProcessingStatus;
+    IMatchingStatus2Choice? ISecuritiesSettlementTransactionStatusAdviceV01.InferredMatchingStatus =>
+        InferredMatchingStatus;
+    IMatchingStatus2Choice? ISecuritiesSettlementTransactionStatusAdviceV01.MatchingStatus =>
+        MatchingStatus;
+    ISettlementStatus2Choice? ISecuritiesSettlementTransactionStatusAdviceV01.SettlementStatus =>
+        SettlementStatus;
+    ITransactionDetails5? ISecuritiesSettlementTransactionStatusAdviceV01.TransactionDetails =>
+        TransactionDetails;
+    IPartyIdentification10Choice? ISecuritiesSettlementTransactionStatusAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesSettlementTransactionStatusAdviceV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ISecuritiesSettlementTransactionStatusAdviceV01.Extension => Extension;
 }

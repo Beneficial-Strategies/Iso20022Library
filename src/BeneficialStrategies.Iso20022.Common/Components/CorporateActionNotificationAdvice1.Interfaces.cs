@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionNotificationAdvice1 : ICorporateActionNotificationAdvice1
 {
-    ICorporateAction2 ICorporateActionNotificationAdvice1.CorporateActionDetails => CorporateActionDetails;
-    IEnumerable<ICorporateActionOption1> ICorporateActionNotificationAdvice1.CorporateActionOptionDetails => CorporateActionOptionDetails;
+    ICorporateAction2 ICorporateActionNotificationAdvice1.CorporateActionDetails =>
+        CorporateActionDetails;
+    IEnumerable<ICorporateActionOption1> ICorporateActionNotificationAdvice1.CorporateActionOptionDetails =>
+        CorporateActionOptionDetails;
 }

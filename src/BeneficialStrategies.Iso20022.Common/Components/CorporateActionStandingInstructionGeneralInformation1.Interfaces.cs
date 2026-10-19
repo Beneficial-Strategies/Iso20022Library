@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CorporateActionStandingInstructionGeneralInformation1 : ICorporateActionStandingInstructionGeneralInformation1
+public partial record CorporateActionStandingInstructionGeneralInformation1
+    : ICorporateActionStandingInstructionGeneralInformation1
 {
-    IEnumerable<ICorporateActionEventType2FormatChoice> ICorporateActionStandingInstructionGeneralInformation1.EventType => EventType;
-    IPartyIdentification2Choice ICorporateActionStandingInstructionGeneralInformation1.InstructingPartyIdentification => InstructingPartyIdentification;
-    IEnumerable<IIncludedAccount1> ICorporateActionStandingInstructionGeneralInformation1.AccountDetails => AccountDetails;
-    IFinancialInstrumentDescription3? ICorporateActionStandingInstructionGeneralInformation1.UnderlyingSecurity => UnderlyingSecurity;
+    IEnumerable<ICorporateActionEventType2FormatChoice> ICorporateActionStandingInstructionGeneralInformation1.EventType =>
+        EventType;
+    IPartyIdentification2Choice ICorporateActionStandingInstructionGeneralInformation1.InstructingPartyIdentification =>
+        InstructingPartyIdentification;
+    IEnumerable<IIncludedAccount1> ICorporateActionStandingInstructionGeneralInformation1.AccountDetails =>
+        AccountDetails;
+    IFinancialInstrumentDescription3? ICorporateActionStandingInstructionGeneralInformation1.UnderlyingSecurity =>
+        UnderlyingSecurity;
 }

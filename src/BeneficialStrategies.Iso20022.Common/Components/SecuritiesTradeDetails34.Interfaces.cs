@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails34 : ISecuritiesTradeDetails34
 {
     IEnumerable<Max35Text> ISecuritiesTradeDetails34.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails34.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails34.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IMarketIdentification78? ISecuritiesTradeDetails34.PlaceOfTrade => PlaceOfTrade;
     ITradeDate1Choice? ISecuritiesTradeDetails34.TradeDate => TradeDate;
     ISettlementDate1Choice? ISecuritiesTradeDetails34.SettlementDate => SettlementDate;
@@ -19,11 +20,13 @@ public partial record SecuritiesTradeDetails34 : ISecuritiesTradeDetails34
     IPrice2? ISecuritiesTradeDetails34.DealPrice => DealPrice;
     IOpeningClosing1Choice? ISecuritiesTradeDetails34.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting2Choice> ISecuritiesTradeDetails34.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails34.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails34.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity1Choice? ISecuritiesTradeDetails34.InvestorCapacity => InvestorCapacity;
     ITradeOriginator1Choice? ISecuritiesTradeDetails34.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice3Choice? ISecuritiesTradeDetails34.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails34.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails34.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus1Choice? ISecuritiesTradeDetails34.MatchingStatus => MatchingStatus;
     IAffirmationStatus1Choice? ISecuritiesTradeDetails34.AffirmationStatus => AffirmationStatus;
 }

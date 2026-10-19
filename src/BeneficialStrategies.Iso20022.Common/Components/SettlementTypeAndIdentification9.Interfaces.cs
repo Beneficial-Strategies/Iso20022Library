@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SettlementTypeAndIdentification9 : ISettlementTypeAndIdentification9
-{
-}
+public partial record SettlementTypeAndIdentification9 : ISettlementTypeAndIdentification9 { }

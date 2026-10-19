@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReceivedByIssuerOrOfferorStatus1 : IReceivedByIssuerOrOfferorStatus1
 {
-    IQuantity51Choice? IReceivedByIssuerOrOfferorStatus1.AcceptedByIssuerQuantity => AcceptedByIssuerQuantity;
-    INoSpecifiedReason1 IReceivedByIssuerOrOfferorStatus1.ReceivedByIssuerOrOfferorReason => ReceivedByIssuerOrOfferorReason;
+    IQuantity51Choice? IReceivedByIssuerOrOfferorStatus1.AcceptedByIssuerQuantity =>
+        AcceptedByIssuerQuantity;
+    INoSpecifiedReason1 IReceivedByIssuerOrOfferorStatus1.ReceivedByIssuerOrOfferorReason =>
+        ReceivedByIssuerOrOfferorReason;
 }

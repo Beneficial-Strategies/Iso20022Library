@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record GroupHeader109 : IGroupHeader109
 {
-    IBranchAndFinancialInstitutionIdentification8? IGroupHeader109.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification8? IGroupHeader109.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? IGroupHeader109.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification8? IGroupHeader109.InstructedAgent =>
+        InstructedAgent;
 }

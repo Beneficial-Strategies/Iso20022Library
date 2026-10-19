@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AXUwVNokEeC60axPepSq7g_2103610848")]
     [DisplayName("Trading Party Capacity 1 Choice")]
-    public abstract record TradingPartyCapacity1Choice_ { }
+    public abstract partial record TradingPartyCapacity1Choice_ { }
 }

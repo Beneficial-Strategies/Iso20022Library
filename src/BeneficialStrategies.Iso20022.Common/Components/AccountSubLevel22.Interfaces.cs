@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AccountSubLevel22 : IAccountSubLevel22
 {
-    IFinancialInstrumentQuantity18Choice? IAccountSubLevel22.NonDisclosedShareholdingQuantity => NonDisclosedShareholdingQuantity;
-    IFinancialInstrumentQuantity18Choice? IAccountSubLevel22.BelowThresholdShareholdingQuantity => BelowThresholdShareholdingQuantity;
+    IFinancialInstrumentQuantity18Choice? IAccountSubLevel22.NonDisclosedShareholdingQuantity =>
+        NonDisclosedShareholdingQuantity;
+    IFinancialInstrumentQuantity18Choice? IAccountSubLevel22.BelowThresholdShareholdingQuantity =>
+        BelowThresholdShareholdingQuantity;
     IEnumerable<IAccountSubLevel23> IAccountSubLevel22.Disclosure => Disclosure;
 }

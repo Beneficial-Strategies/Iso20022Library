@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between various statuses for an corporate action election cancellation.
 /// </summary>
 [IsoId("_RiiHwtp-Ed-ak6NoX_4Aeg_1698122957")]
-public interface IElectionCancellationStatus1Choice : IIsoChoice
-{
-}
+public interface IElectionCancellationStatus1Choice : IIsoChoice { }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UyjHA9p-Ed-ak6NoX_4Aeg_-1254942072")]
 [DisplayName("Custody Statement Of Holdings")]
-public record CustodyStatementOfHoldings1
+public partial record CustodyStatementOfHoldings1
 {
     /// <summary>
     /// Pagination of the message.

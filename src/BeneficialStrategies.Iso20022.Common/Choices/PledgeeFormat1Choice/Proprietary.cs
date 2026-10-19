@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat1Choice
     [IsoId("_z4ReQE9kEeSn2-3swbRbzg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PledgeeFormat1Choice_
+    public partial record Proprietary : PledgeeFormat1Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity.

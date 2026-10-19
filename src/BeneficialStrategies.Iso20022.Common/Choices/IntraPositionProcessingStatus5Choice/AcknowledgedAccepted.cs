@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus5Ch
     /// </summary>
     [IsoId("_ERMQ6TnuEeWfSKvvZlhRKg")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : IntraPositionProcessingStatus5Choice_
+    public partial record AcknowledgedAccepted : IntraPositionProcessingStatus5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AckdAccptd")]

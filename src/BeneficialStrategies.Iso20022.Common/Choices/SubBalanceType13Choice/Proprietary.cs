@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceType13Choice
     [IsoId("_5W52AZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SubBalanceType13Choice_
+    public partial record Proprietary : SubBalanceType13Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

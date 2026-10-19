@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CorporateActionDeactivationInstructionProcessingStatus1 : ICorporateActionDeactivationInstructionProcessingStatus1
+public partial record CorporateActionDeactivationInstructionProcessingStatus1
+    : ICorporateActionDeactivationInstructionProcessingStatus1
 {
-    IProcessedStatus6FormatChoice ICorporateActionDeactivationInstructionProcessingStatus1.Status => Status;
+    IProcessedStatus6FormatChoice ICorporateActionDeactivationInstructionProcessingStatus1.Status =>
+        Status;
 }

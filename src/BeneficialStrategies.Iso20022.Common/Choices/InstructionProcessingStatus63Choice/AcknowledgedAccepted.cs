@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus63Cho
     /// <summary>Instruction has been acknowledged by the account servicer.</summary>
     [IsoId("_9ENHuQNrEfG_3cM8uyJ20w")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : InstructionProcessingStatus63Choice_
+    public partial record AcknowledgedAccepted : InstructionProcessingStatus63Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AckdAccptd")]

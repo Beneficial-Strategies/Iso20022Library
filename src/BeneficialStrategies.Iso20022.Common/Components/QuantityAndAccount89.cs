@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kME3i_fXEeiNZp_PtLohLw")]
 [DisplayName("Quantity And Account")]
-public record QuantityAndAccount89
+public partial record QuantityAndAccount89
 {
     /// <summary>
     /// Total quantity of securities to be settled.

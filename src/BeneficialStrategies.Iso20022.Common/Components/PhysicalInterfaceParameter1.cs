@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jVcYQNqfEeearpaEPXv9UA")]
 [DisplayName("Physical Interface Parameter")]
-public record PhysicalInterfaceParameter1
+public partial record PhysicalInterfaceParameter1
 {
     /// <summary>
     /// Identification of the interface.

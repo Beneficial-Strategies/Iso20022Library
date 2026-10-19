@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XnUecXGwEe2TbaNWBpRZpQ")]
     [DisplayName("Transaction To Perform 5 Choice")]
-    public abstract record TransactionToPerform5Choice_ { }
+    public abstract partial record TransactionToPerform5Choice_ { }
 }

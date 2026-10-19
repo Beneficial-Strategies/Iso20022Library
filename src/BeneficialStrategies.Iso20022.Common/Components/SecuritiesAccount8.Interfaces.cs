@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesAccount8 : ISecuritiesAccount8
 {
-    IPartyIdentification2Choice? ISecuritiesAccount8.AccountOwnerIdentification => AccountOwnerIdentification;
+    IPartyIdentification2Choice? ISecuritiesAccount8.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
     ISecuritiesBalanceType10FormatChoice? ISecuritiesAccount8.BalanceType => BalanceType;
     ICorporateActionOption1FormatChoice? ISecuritiesAccount8.OptionType => OptionType;
     IStampDutyType1FormatChoice? ISecuritiesAccount8.StampDuty => StampDuty;

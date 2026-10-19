@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 
 /// <summary>Proprietary status related to an instruction cancellation request.</summary>
 [IsoId("_s9Gd5t8OEe-NrtAAlrBEgQ")]
-public interface IProprietaryStatus : IInstructionCancellationRequestStatus20Choice, IIsoChoiceVariant
+public interface IProprietaryStatus
+    : IInstructionCancellationRequestStatus20Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("PrtrySts")]

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesAccount6 : ISecuritiesAccount6
 {
     ISecurityIdentification7 ISecuritiesAccount6.SecurityIdentification => SecurityIdentification;
-    IPartyIdentification2Choice? ISecuritiesAccount6.AccountOwnerIdentification => AccountOwnerIdentification;
+    IPartyIdentification2Choice? ISecuritiesAccount6.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
     IPartyIdentification2Choice ISecuritiesAccount6.SafekeepingPlace => SafekeepingPlace;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Period1Choice;
 
-public partial record PeriodCode : IPeriodCode
-{
-}
+public partial record PeriodCode : IPeriodCode { }

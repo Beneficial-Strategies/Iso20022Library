@@ -30,9 +30,12 @@ public partial record CorporateActionDate2 : ICorporateActionDate2
     IDateFormat4Choice? ICorporateActionDate2.RedemptionDate => RedemptionDate;
     IDateFormat4Choice? ICorporateActionDate2.RegistrationDeadline => RegistrationDeadline;
     IDateFormat4Choice? ICorporateActionDate2.ProrationDate => ProrationDate;
-    IDateFormat4Choice? ICorporateActionDate2.DeadlineForTaxBreakdownInstruction => DeadlineForTaxBreakdownInstruction;
+    IDateFormat4Choice? ICorporateActionDate2.DeadlineForTaxBreakdownInstruction =>
+        DeadlineForTaxBreakdownInstruction;
     IDateFormat4Choice? ICorporateActionDate2.LapsedDate => LapsedDate;
-    IDateFormat4Choice? ICorporateActionDate2.GuaranteedParticipationDate => GuaranteedParticipationDate;
-    IDateFormat4Choice? ICorporateActionDate2.ElectionToCounterpartyDeadline => ElectionToCounterpartyDeadline;
+    IDateFormat4Choice? ICorporateActionDate2.GuaranteedParticipationDate =>
+        GuaranteedParticipationDate;
+    IDateFormat4Choice? ICorporateActionDate2.ElectionToCounterpartyDeadline =>
+        ElectionToCounterpartyDeadline;
     IDateFormat4Choice? ICorporateActionDate2.SpecialExDate => SpecialExDate;
 }

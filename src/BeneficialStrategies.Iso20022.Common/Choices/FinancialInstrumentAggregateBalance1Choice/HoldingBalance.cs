@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAggregateBala
     [IsoId("_oI2KMaCCEeOEyO7fCl8lLA")]
     [DisplayName("Holding Balance")]
     [IsoXmlTag("HldgBal")]
-    public record HoldingBalance : FinancialInstrumentAggregateBalance1Choice_
+    public partial record HoldingBalance : FinancialInstrumentAggregateBalance1Choice_
     {
         /// <summary>
         /// Balance of settled transactions.

@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionModificationRequestStatusAdviceV06 : ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06
+public partial record SecuritiesSettlementTransactionModificationRequestStatusAdviceV06
+    : ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06
 {
-    IPartyIdentification144? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ITransactionIdentifications33? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.TransactionIdentification => TransactionIdentification;
-    IModificationProcessingStatus10Choice ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.ModificationProcessingStatus => ModificationProcessingStatus;
-    ITransactionDetails155? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.SupplementaryData => SupplementaryData;
+    IPartyIdentification144? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ITransactionIdentifications33? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.TransactionIdentification =>
+        TransactionIdentification;
+    IModificationProcessingStatus10Choice ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.ModificationProcessingStatus =>
+        ModificationProcessingStatus;
+    ITransactionDetails155? ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionModificationRequestStatusAdviceV06.SupplementaryData =>
+        SupplementaryData;
 }

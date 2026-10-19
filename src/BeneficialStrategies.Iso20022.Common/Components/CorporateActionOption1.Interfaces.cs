@@ -11,20 +11,30 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionOption1 : ICorporateActionOption1
 {
     ICorporateActionOption1FormatChoice ICorporateActionOption1.OptionType => OptionType;
-    ICorporateActionEventStatus2FormatChoice ICorporateActionOption1.OptionAvailabilityStatus => OptionAvailabilityStatus;
-    IBeneficiaryCertificationType1FormatChoice? ICorporateActionOption1.CertificationType => CertificationType;
-    ISecurityIdentification7? ICorporateActionOption1.AssentedLineSecurityIdentification => AssentedLineSecurityIdentification;
-    IAccountIdentification2Choice? ICorporateActionOption1.AgentCashAccountIdentification => AgentCashAccountIdentification;
+    ICorporateActionEventStatus2FormatChoice ICorporateActionOption1.OptionAvailabilityStatus =>
+        OptionAvailabilityStatus;
+    IBeneficiaryCertificationType1FormatChoice? ICorporateActionOption1.CertificationType =>
+        CertificationType;
+    ISecurityIdentification7? ICorporateActionOption1.AssentedLineSecurityIdentification =>
+        AssentedLineSecurityIdentification;
+    IAccountIdentification2Choice? ICorporateActionOption1.AgentCashAccountIdentification =>
+        AgentCashAccountIdentification;
     IEnumerable<IOfferType1FormatChoice> ICorporateActionOption1.OfferType => OfferType;
-    IIntermediateSecurityDistributionType1FormatChoice? ICorporateActionOption1.IntermediateSecuritiesDistributionType => IntermediateSecuritiesDistributionType;
+    IIntermediateSecurityDistributionType1FormatChoice? ICorporateActionOption1.IntermediateSecuritiesDistributionType =>
+        IntermediateSecuritiesDistributionType;
     ICorporateActionDate4? ICorporateActionOption1.DateDetails => DateDetails;
     ICorporateActionRate2? ICorporateActionOption1.RateAndAmountDetails => RateAndAmountDetails;
     ICorporateActionPrice1? ICorporateActionOption1.PriceDetails => PriceDetails;
     ICorporateActionPeriod2? ICorporateActionOption1.PeriodDetails => PeriodDetails;
-    IEnumerable<ISecurityOption1> ICorporateActionOption1.SecuritiesMovementDetails => SecuritiesMovementDetails;
+    IEnumerable<ISecurityOption1> ICorporateActionOption1.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
     IEnumerable<ICashOption1> ICorporateActionOption1.CashMovementDetails => CashMovementDetails;
-    IEnumerable<ICorporateActionAgent1> ICorporateActionOption1.CorporateActionOtherAgentDetails => CorporateActionOtherAgentDetails;
-    IFractionDispositionType1FormatChoice? ICorporateActionOption1.FractionDisposition => FractionDisposition;
-    IEnumerable<IOptionFeatures1FormatChoice> ICorporateActionOption1.OptionFeatures => OptionFeatures;
-    ICorporateActionNarrative1? ICorporateActionOption1.CorporateActionAdditionalInformation => CorporateActionAdditionalInformation;
+    IEnumerable<ICorporateActionAgent1> ICorporateActionOption1.CorporateActionOtherAgentDetails =>
+        CorporateActionOtherAgentDetails;
+    IFractionDispositionType1FormatChoice? ICorporateActionOption1.FractionDisposition =>
+        FractionDisposition;
+    IEnumerable<IOptionFeatures1FormatChoice> ICorporateActionOption1.OptionFeatures =>
+        OptionFeatures;
+    ICorporateActionNarrative1? ICorporateActionOption1.CorporateActionAdditionalInformation =>
+        CorporateActionAdditionalInformation;
 }

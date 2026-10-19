@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W1EGwWdnEemMLeaDfmIfIA")]
 [DisplayName("Securities Modification Query Criteria1")]
-public record SecuritiesModificationQueryCriteria1
+public partial record SecuritiesModificationQueryCriteria1
 {
     /// <summary>
     /// Collective reference identifying a set of messages.

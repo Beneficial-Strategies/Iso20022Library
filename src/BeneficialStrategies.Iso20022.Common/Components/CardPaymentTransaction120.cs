@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qyA9wU3hEey_VecAUE-C9Q")]
 [DisplayName("Card Payment Transaction")]
-public record CardPaymentTransaction120
+public partial record CardPaymentTransaction120
 {
     /// <summary>
     /// Flag indicating whether the transaction data must be captured or not in addition to the message process.

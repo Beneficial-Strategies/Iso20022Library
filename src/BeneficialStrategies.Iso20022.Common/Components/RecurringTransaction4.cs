@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X2eMsU3UEey_VecAUE-C9Q")]
 [DisplayName("Recurring Transaction")]
-public record RecurringTransaction4
+public partial record RecurringTransaction4
 {
     /// <summary>
     /// Type of instalment plan.

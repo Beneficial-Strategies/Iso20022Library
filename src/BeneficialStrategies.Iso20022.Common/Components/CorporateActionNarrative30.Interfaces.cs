@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionNarrative30 : ICorporateActionNarrative30
 {
     IEnumerable<Max350Text> ICorporateActionNarrative30.RegistrationDetails => RegistrationDetails;
-    IEnumerable<Max350Text> ICorporateActionNarrative30.PartyContactNarrative => PartyContactNarrative;
-    IEnumerable<Max350Text> ICorporateActionNarrative30.CertificationBreakdown => CertificationBreakdown;
+    IEnumerable<Max350Text> ICorporateActionNarrative30.PartyContactNarrative =>
+        PartyContactNarrative;
+    IEnumerable<Max350Text> ICorporateActionNarrative30.CertificationBreakdown =>
+        CertificationBreakdown;
 }

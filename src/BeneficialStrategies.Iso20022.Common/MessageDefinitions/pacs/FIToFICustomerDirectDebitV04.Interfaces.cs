@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 public partial record FIToFICustomerDirectDebitV04 : IFIToFICustomerDirectDebitV04
 {
     IGroupHeader50 IFIToFICustomerDirectDebitV04.GroupHeader => GroupHeader;
-    IEnumerable<IDirectDebitTransactionInformation14> IFIToFICustomerDirectDebitV04.DirectDebitTransactionInformation => DirectDebitTransactionInformation;
-    IEnumerable<ISupplementaryData1> IFIToFICustomerDirectDebitV04.SupplementaryData => SupplementaryData;
+    IEnumerable<IDirectDebitTransactionInformation14> IFIToFICustomerDirectDebitV04.DirectDebitTransactionInformation =>
+        DirectDebitTransactionInformation;
+    IEnumerable<ISupplementaryData1> IFIToFICustomerDirectDebitV04.SupplementaryData =>
+        SupplementaryData;
 }

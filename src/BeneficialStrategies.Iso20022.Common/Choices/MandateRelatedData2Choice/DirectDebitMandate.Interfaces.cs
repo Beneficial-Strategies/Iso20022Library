@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData2Choice;
 
 public partial record DirectDebitMandate : IDirectDebitMandate
 {
-    IAmendmentInformationDetails14? IDirectDebitMandate.AmendmentInformationDetails => AmendmentInformationDetails;
+    IAmendmentInformationDetails14? IDirectDebitMandate.AmendmentInformationDetails =>
+        AmendmentInformationDetails;
     IFrequency36Choice? IDirectDebitMandate.Frequency => Frequency;
     IMandateSetupReason1Choice? IDirectDebitMandate.Reason => Reason;
 }

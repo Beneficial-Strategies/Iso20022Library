@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between E-money token settlement quantity and network fee quantity.</summary>
 [IsoId("_oLJNEJZdEfCShM_qO0U4ig")]
-public interface IQuantity83Choice : IIsoChoice
-{
-}
+public interface IQuantity83Choice : IIsoChoice { }

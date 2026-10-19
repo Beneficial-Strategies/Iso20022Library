@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus5Choice;
 
-public partial record Completed : ICompleted
-{
-}
+public partial record Completed : ICompleted { }

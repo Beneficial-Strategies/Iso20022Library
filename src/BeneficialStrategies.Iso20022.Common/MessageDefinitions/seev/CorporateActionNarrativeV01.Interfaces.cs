@@ -13,9 +13,12 @@ public partial record CorporateActionNarrativeV01 : ICorporateActionNarrativeV01
     IDocumentIdentification11 ICorporateActionNarrativeV01.Identification => Identification;
     IAccountIdentification9Choice? ICorporateActionNarrativeV01.AccountDetails => AccountDetails;
     IUnderlyingSecurity1? ICorporateActionNarrativeV01.UnderlyingSecurity => UnderlyingSecurity;
-    ICorporateActionGeneralInformation10 ICorporateActionNarrativeV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IUpdatedAdditionalInformation2 ICorporateActionNarrativeV01.AdditionalInformation => AdditionalInformation;
-    IPartyIdentification10Choice? ICorporateActionNarrativeV01.MessageOriginator => MessageOriginator;
+    ICorporateActionGeneralInformation10 ICorporateActionNarrativeV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IUpdatedAdditionalInformation2 ICorporateActionNarrativeV01.AdditionalInformation =>
+        AdditionalInformation;
+    IPartyIdentification10Choice? ICorporateActionNarrativeV01.MessageOriginator =>
+        MessageOriginator;
     IPartyIdentification10Choice? ICorporateActionNarrativeV01.MessageRecipient => MessageRecipient;
     IEnumerable<IExtension2> ICorporateActionNarrativeV01.Extension => Extension;
 }

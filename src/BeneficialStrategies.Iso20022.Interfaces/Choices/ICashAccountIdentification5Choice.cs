@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Unique identifier of an account, as assigned by the account servicer.
 /// </summary>
 [IsoId("_PdUHwtp-Ed-ak6NoX_4Aeg_-912371635")]
-public interface ICashAccountIdentification5Choice : IIsoChoice
-{
-}
+public interface ICashAccountIdentification5Choice : IIsoChoice { }

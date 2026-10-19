@@ -8,20 +8,35 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V09 : ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09
+public partial record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V09
+    : ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09
 {
-    IDocumentIdentification37 ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.MovementPreliminaryAdviceIdentification => MovementPreliminaryAdviceIdentification;
-    ICorporateActionGeneralInformation131 ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification43Choice ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.AccountDetails => AccountDetails;
-    ICorporateAction48? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.CorporateActionDetails => CorporateActionDetails;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.SubPayingAgent => SubPayingAgent;
-    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.Registrar => Registrar;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.ResellingAgent => ResellingAgent;
-    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.PhysicalSecuritiesAgent => PhysicalSecuritiesAgent;
-    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.DropAgent => DropAgent;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.SolicitationAgent => SolicitationAgent;
-    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.InformationAgent => InformationAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.SupplementaryData => SupplementaryData;
+    IDocumentIdentification37 ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.MovementPreliminaryAdviceIdentification =>
+        MovementPreliminaryAdviceIdentification;
+    ICorporateActionGeneralInformation131 ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification43Choice ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.AccountDetails =>
+        AccountDetails;
+    ICorporateAction48? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.CorporateActionDetails =>
+        CorporateActionDetails;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.SubPayingAgent =>
+        SubPayingAgent;
+    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.Registrar =>
+        Registrar;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.ResellingAgent =>
+        ResellingAgent;
+    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.PhysicalSecuritiesAgent =>
+        PhysicalSecuritiesAgent;
+    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.DropAgent =>
+        DropAgent;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.SolicitationAgent =>
+        SolicitationAgent;
+    IPartyIdentification137Choice? ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.InformationAgent =>
+        InformationAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V09.SupplementaryData =>
+        SupplementaryData;
 }

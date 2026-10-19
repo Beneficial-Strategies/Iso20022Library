@@ -10,11 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentification251 : IPartyIdentification251
 {
-    IPartyIdentification229Choice IPartyIdentification251.OwnerIdentification => OwnerIdentification;
-    IEnumerable<IAlternatePartyIdentification7> IPartyIdentification251.AlternateIdentification => AlternateIdentification;
+    IPartyIdentification229Choice IPartyIdentification251.OwnerIdentification =>
+        OwnerIdentification;
+    IEnumerable<IAlternatePartyIdentification7> IPartyIdentification251.AlternateIdentification =>
+        AlternateIdentification;
     IEnumerable<CountryCode> IPartyIdentification251.NonDomicileCountry => NonDomicileCountry;
-    IFinancialInstrumentQuantity33Choice IPartyIdentification251.OwnedSecuritiesQuantity => OwnedSecuritiesQuantity;
-    IEnumerable<IBeneficiaryCertificationType10Choice> IPartyIdentification251.CertificationType => CertificationType;
+    IFinancialInstrumentQuantity33Choice IPartyIdentification251.OwnedSecuritiesQuantity =>
+        OwnedSecuritiesQuantity;
+    IEnumerable<IBeneficiaryCertificationType10Choice> IPartyIdentification251.CertificationType =>
+        CertificationType;
     IRateAndAmountFormat37Choice? IPartyIdentification251.WithholdingTaxRate => WithholdingTaxRate;
-    IEnumerable<Max350Text> IPartyIdentification251.CertificationBreakdown => CertificationBreakdown;
+    IEnumerable<Max350Text> IPartyIdentification251.CertificationBreakdown =>
+        CertificationBreakdown;
 }

@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PriceFormat1Choice;
 
-public partial record AmountPricePerFinancialInstrumentQuantity : IAmountPricePerFinancialInstrumentQuantity
+public partial record AmountPricePerFinancialInstrumentQuantity
+    : IAmountPricePerFinancialInstrumentQuantity
 {
-    IAmountPriceType1FormatChoice IAmountPricePerFinancialInstrumentQuantity.AmountPriceType => AmountPriceType;
-    IUnitOrFaceAmount1Choice IAmountPricePerFinancialInstrumentQuantity.FinancialInstrumentQuantity => FinancialInstrumentQuantity;
+    IAmountPriceType1FormatChoice IAmountPricePerFinancialInstrumentQuantity.AmountPriceType =>
+        AmountPriceType;
+    IUnitOrFaceAmount1Choice IAmountPricePerFinancialInstrumentQuantity.FinancialInstrumentQuantity =>
+        FinancialInstrumentQuantity;
 }

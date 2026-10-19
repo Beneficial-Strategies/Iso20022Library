@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RatioFormat22Choice;
 
-public partial record QuantityToQuantity : IQuantityToQuantity
-{
-}
+public partial record QuantityToQuantity : IQuantityToQuantity { }

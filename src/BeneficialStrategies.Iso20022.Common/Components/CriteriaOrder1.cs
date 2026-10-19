@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1C028N6QEeiwsev40qZGEQ")]
 [DisplayName("Criteria Order")]
-public record CriteriaOrder1
+public partial record CriteriaOrder1
 {
     /// <summary>
     /// Identifier of target element.

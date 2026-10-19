@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTradeDetails142 : ISecuritiesTradeDetails142
 {
-    IEnumerable<Max35Text> ISecuritiesTradeDetails142.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails142.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification1? ISecuritiesTradeDetails142.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ISecuritiesTradeDetails142.PlaceOfClearing => PlaceOfClearing;
     ITradeDate8Choice? ISecuritiesTradeDetails142.TradeDate => TradeDate;
@@ -19,11 +20,13 @@ public partial record SecuritiesTradeDetails142 : ISecuritiesTradeDetails142
     IPrice10? ISecuritiesTradeDetails142.DealPrice => DealPrice;
     IOpeningClosing3Choice? ISecuritiesTradeDetails142.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting6Choice> ISecuritiesTradeDetails142.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails142.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails142.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity4Choice? ISecuritiesTradeDetails142.InvestorCapacity => InvestorCapacity;
     ITradeOriginator3Choice? ISecuritiesTradeDetails142.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice29Choice? ISecuritiesTradeDetails142.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails142.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails142.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus27Choice? ISecuritiesTradeDetails142.MatchingStatus => MatchingStatus;
     IAffirmationStatus8Choice? ISecuritiesTradeDetails142.AffirmationStatus => AffirmationStatus;
 }

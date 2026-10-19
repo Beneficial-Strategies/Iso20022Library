@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepairReason18Choice
     [IsoId("_8QddP5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RepairReason18Choice_
+    public partial record Proprietary : RepairReason18Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

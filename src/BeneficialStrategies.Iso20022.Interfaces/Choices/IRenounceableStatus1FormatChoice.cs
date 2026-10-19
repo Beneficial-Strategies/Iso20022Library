@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the renounceable status.
 /// </summary>
 [IsoId("_RoygwNp-Ed-ak6NoX_4Aeg_-1304409096")]
-public interface IRenounceableStatus1FormatChoice : IIsoChoice
-{
-}
+public interface IRenounceableStatus1FormatChoice : IIsoChoice { }

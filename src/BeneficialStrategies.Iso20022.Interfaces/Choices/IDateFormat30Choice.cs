@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an ISODate format or a date code.
 /// </summary>
 [IsoId("_X1sw4UECEeWVgfuHGaKtRQ")]
-public interface IDateFormat30Choice : IIsoChoice
-{
-}
+public interface IDateFormat30Choice : IIsoChoice { }

@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record BranchAndFinancialInstitutionIdentification8 : IBranchAndFinancialInstitutionIdentification8
+public partial record BranchAndFinancialInstitutionIdentification8
+    : IBranchAndFinancialInstitutionIdentification8
 {
-    IFinancialInstitutionIdentification23 IBranchAndFinancialInstitutionIdentification8.FinancialInstitutionIdentification => FinancialInstitutionIdentification;
-    IBranchData5? IBranchAndFinancialInstitutionIdentification8.BranchIdentification => BranchIdentification;
+    IFinancialInstitutionIdentification23 IBranchAndFinancialInstitutionIdentification8.FinancialInstitutionIdentification =>
+        FinancialInstitutionIdentification;
+    IBranchData5? IBranchAndFinancialInstitutionIdentification8.BranchIdentification =>
+        BranchIdentification;
 }

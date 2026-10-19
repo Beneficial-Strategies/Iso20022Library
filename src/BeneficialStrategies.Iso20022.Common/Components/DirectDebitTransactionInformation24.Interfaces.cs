@@ -10,33 +10,55 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DirectDebitTransactionInformation24 : IDirectDebitTransactionInformation24
 {
-    IPaymentIdentification7 IDirectDebitTransactionInformation24.PaymentIdentification => PaymentIdentification;
-    IPaymentTypeInformation27? IDirectDebitTransactionInformation24.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? IDirectDebitTransactionInformation24.SettlementTimeIndication => SettlementTimeIndication;
-    IEnumerable<ICharges7> IDirectDebitTransactionInformation24.ChargesInformation => ChargesInformation;
-    IDirectDebitTransaction10? IDirectDebitTransactionInformation24.DirectDebitTransaction => DirectDebitTransaction;
+    IPaymentIdentification7 IDirectDebitTransactionInformation24.PaymentIdentification =>
+        PaymentIdentification;
+    IPaymentTypeInformation27? IDirectDebitTransactionInformation24.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? IDirectDebitTransactionInformation24.SettlementTimeIndication =>
+        SettlementTimeIndication;
+    IEnumerable<ICharges7> IDirectDebitTransactionInformation24.ChargesInformation =>
+        ChargesInformation;
+    IDirectDebitTransaction10? IDirectDebitTransactionInformation24.DirectDebitTransaction =>
+        DirectDebitTransaction;
     IPartyIdentification135 IDirectDebitTransactionInformation24.Creditor => Creditor;
     ICashAccount38? IDirectDebitTransactionInformation24.CreditorAccount => CreditorAccount;
-    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation24.CreditorAgent => CreditorAgent;
-    ICashAccount38? IDirectDebitTransactionInformation24.CreditorAgentAccount => CreditorAgentAccount;
-    IPartyIdentification135? IDirectDebitTransactionInformation24.UltimateCreditor => UltimateCreditor;
-    IPartyIdentification135? IDirectDebitTransactionInformation24.InitiatingParty => InitiatingParty;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.InstructedAgent => InstructedAgent;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.IntermediaryAgent1 => IntermediaryAgent1;
-    ICashAccount38? IDirectDebitTransactionInformation24.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.IntermediaryAgent2 => IntermediaryAgent2;
-    ICashAccount38? IDirectDebitTransactionInformation24.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.IntermediaryAgent3 => IntermediaryAgent3;
-    ICashAccount38? IDirectDebitTransactionInformation24.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation24.CreditorAgent =>
+        CreditorAgent;
+    ICashAccount38? IDirectDebitTransactionInformation24.CreditorAgentAccount =>
+        CreditorAgentAccount;
+    IPartyIdentification135? IDirectDebitTransactionInformation24.UltimateCreditor =>
+        UltimateCreditor;
+    IPartyIdentification135? IDirectDebitTransactionInformation24.InitiatingParty =>
+        InitiatingParty;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.InstructedAgent =>
+        InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    ICashAccount38? IDirectDebitTransactionInformation24.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    ICashAccount38? IDirectDebitTransactionInformation24.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation24.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    ICashAccount38? IDirectDebitTransactionInformation24.IntermediaryAgent3Account =>
+        IntermediaryAgent3Account;
     IPartyIdentification135 IDirectDebitTransactionInformation24.Debtor => Debtor;
     ICashAccount38 IDirectDebitTransactionInformation24.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation24.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation24.DebtorAgent =>
+        DebtorAgent;
     ICashAccount38? IDirectDebitTransactionInformation24.DebtorAgentAccount => DebtorAgentAccount;
     IPartyIdentification135? IDirectDebitTransactionInformation24.UltimateDebtor => UltimateDebtor;
     IPurpose2Choice? IDirectDebitTransactionInformation24.Purpose => Purpose;
-    IEnumerable<IRegulatoryReporting3> IDirectDebitTransactionInformation24.RegulatoryReporting => RegulatoryReporting;
-    IEnumerable<IRemittanceLocation7> IDirectDebitTransactionInformation24.RelatedRemittanceInformation => RelatedRemittanceInformation;
-    IRemittanceInformation16? IDirectDebitTransactionInformation24.RemittanceInformation => RemittanceInformation;
-    IEnumerable<ISupplementaryData1> IDirectDebitTransactionInformation24.SupplementaryData => SupplementaryData;
+    IEnumerable<IRegulatoryReporting3> IDirectDebitTransactionInformation24.RegulatoryReporting =>
+        RegulatoryReporting;
+    IEnumerable<IRemittanceLocation7> IDirectDebitTransactionInformation24.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
+    IRemittanceInformation16? IDirectDebitTransactionInformation24.RemittanceInformation =>
+        RemittanceInformation;
+    IEnumerable<ISupplementaryData1> IDirectDebitTransactionInformation24.SupplementaryData =>
+        SupplementaryData;
 }

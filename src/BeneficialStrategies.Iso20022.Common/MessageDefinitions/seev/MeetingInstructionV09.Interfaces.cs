@@ -12,10 +12,14 @@ public partial record MeetingInstructionV09 : IMeetingInstructionV09
 {
     IPagination1? IMeetingInstructionV09.Pagination => Pagination;
     IMeetingReference10 IMeetingInstructionV09.MeetingReference => MeetingReference;
-    ISecurityIdentification19 IMeetingInstructionV09.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IEnumerable<IMeetingInstructionCancellation1> IMeetingInstructionV09.InstructionCancellationRequestIdentification => InstructionCancellationRequestIdentification;
-    IEnumerable<IMeetingInstructionIdentification1> IMeetingInstructionV09.CancelledInstructionIdentification => CancelledInstructionIdentification;
-    IEnumerable<IDocumentIdentification32> IMeetingInstructionV09.OtherDocumentIdentification => OtherDocumentIdentification;
+    ISecurityIdentification19 IMeetingInstructionV09.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IEnumerable<IMeetingInstructionCancellation1> IMeetingInstructionV09.InstructionCancellationRequestIdentification =>
+        InstructionCancellationRequestIdentification;
+    IEnumerable<IMeetingInstructionIdentification1> IMeetingInstructionV09.CancelledInstructionIdentification =>
+        CancelledInstructionIdentification;
+    IEnumerable<IDocumentIdentification32> IMeetingInstructionV09.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
     IEnumerable<IInstruction7> IMeetingInstructionV09.Instruction => Instruction;
     IEnumerable<ISupplementaryData1> IMeetingInstructionV09.SupplementaryData => SupplementaryData;
 }

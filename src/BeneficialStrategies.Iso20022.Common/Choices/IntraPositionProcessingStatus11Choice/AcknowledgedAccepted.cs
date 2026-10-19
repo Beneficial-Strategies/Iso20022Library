@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus11C
     /// <summary>Instruction has been acknowledged by the account servicer.</summary>
     [IsoId("6e7836d7-4a5d-4abc-b810-e1598cb8ea1b")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : IntraPositionProcessingStatus11Choice_
+    public partial record AcknowledgedAccepted : IntraPositionProcessingStatus11Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AckdAccptd")]

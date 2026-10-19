@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown3Choic
     /// </summary>
     [IsoId("_gdOxmc33Eee5nJBZsW8MFQ")]
     [DisplayName("Rate")]
-    public record Rate : PriceRateOrAmountOrUnknown3Choice_
+    public partial record Rate : PriceRateOrAmountOrUnknown3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

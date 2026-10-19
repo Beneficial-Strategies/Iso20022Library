@@ -14,7 +14,8 @@ public partial record VoteParameters2 : IVoteParameters2
     IDateFormat2Choice? IVoteParameters2.VoteSTPDeadline => VoteSTPDeadline;
     IDateFormat2Choice? IVoteParameters2.VoteMarketDeadline => VoteMarketDeadline;
     IVoteMethods? IVoteParameters2.VoteMethods => VoteMethods;
-    ICommunicationAddress4? IVoteParameters2.VotingBallotElectronicAddress => VotingBallotElectronicAddress;
+    ICommunicationAddress4? IVoteParameters2.VotingBallotElectronicAddress =>
+        VotingBallotElectronicAddress;
     IPostalAddress1? IVoteParameters2.VotingBallotRequestAddress => VotingBallotRequestAddress;
     IDateFormat2Choice? IVoteParameters2.RevocabilityDeadline => RevocabilityDeadline;
     IDateFormat2Choice? IVoteParameters2.RevocabilitySTPDeadline => RevocabilitySTPDeadline;
@@ -23,5 +24,6 @@ public partial record VoteParameters2 : IVoteParameters2
     IIncentivePremium3? IVoteParameters2.IncentivePremium => IncentivePremium;
     IDateFormat2Choice? IVoteParameters2.VoteWithPremiumDeadline => VoteWithPremiumDeadline;
     IDateFormat2Choice? IVoteParameters2.VoteWithPremiumSTPDeadline => VoteWithPremiumSTPDeadline;
-    IDateFormat2Choice? IVoteParameters2.VoteWithPremiumMarketDeadline => VoteWithPremiumMarketDeadline;
+    IDateFormat2Choice? IVoteParameters2.VoteWithPremiumMarketDeadline =>
+        VoteWithPremiumMarketDeadline;
 }

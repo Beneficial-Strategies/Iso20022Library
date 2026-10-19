@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 
 /// <summary>Proprietary status information.</summary>
 [IsoId("_Jg5gQa8xEfCx2aBifPEdRg")]
-public interface IProprietaryStatus : IMarketClaimCancellationRequestStatus3Choice, IIsoChoiceVariant
+public interface IProprietaryStatus
+    : IMarketClaimCancellationRequestStatus3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("PrtrySts")]

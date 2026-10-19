@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Participation4 : IParticipation4
 {
-    IUnitOrFaceAmount1Choice? IParticipation4.TotalNumberOfSecuritiesOutstanding => TotalNumberOfSecuritiesOutstanding;
+    IUnitOrFaceAmount1Choice? IParticipation4.TotalNumberOfSecuritiesOutstanding =>
+        TotalNumberOfSecuritiesOutstanding;
 }

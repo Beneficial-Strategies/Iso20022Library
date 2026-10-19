@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// Proprietary status related to an instruction cancellation request.
 /// </summary>
 [IsoId("_1Tcqatx4EeqESbVR5AloZQ")]
-public interface IProprietaryStatus : IMarketClaimCancellationRequestStatus1Choice, IIsoChoiceVariant
+public interface IProprietaryStatus
+    : IMarketClaimCancellationRequestStatus1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Proprietary identification of the status related to an instruction.

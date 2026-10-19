@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m_CFkvNBEeCuA5Tr22BnwA_780606232")]
 [DisplayName("Total Portfolio Valuation")]
-public record TotalPortfolioValuation1
+public partial record TotalPortfolioValuation1
 {
     /// <summary>
     /// Total value of the portfolio (sum of the assets, liabilities and unrealised gain/loss) calculated according to the accounting rules.

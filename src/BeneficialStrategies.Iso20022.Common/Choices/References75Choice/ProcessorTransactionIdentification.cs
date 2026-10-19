@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References75Choice
     /// </summary>
     [IsoId("_ccpnrzi8Eeydid5dcNPKvg")]
     [DisplayName("Processor Transaction Identification")]
-    public record ProcessorTransactionIdentification : References75Choice_
+    public partial record ProcessorTransactionIdentification : References75Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

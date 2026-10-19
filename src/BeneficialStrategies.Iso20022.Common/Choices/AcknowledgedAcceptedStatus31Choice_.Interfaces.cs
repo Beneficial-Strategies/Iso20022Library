@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record AcknowledgedAcceptedStatus31Choice_ : IAcknowledgedAcceptedStatus31Choice
-{
-}
+public abstract partial record AcknowledgedAcceptedStatus31Choice_
+    : IAcknowledgedAcceptedStatus31Choice { }

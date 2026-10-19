@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DgX_cY0SEeWRYffwL7E13A")]
 [DisplayName("Display Capabilities")]
-public record DisplayCapabilities4
+public partial record DisplayCapabilities4
 {
     /// <summary>
     /// Destination of the message to present.

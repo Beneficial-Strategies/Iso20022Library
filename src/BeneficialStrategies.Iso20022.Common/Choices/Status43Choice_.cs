@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Status43Choice.InferredMatchingStatus))]
     [JsonDerivedType(typeof(Status43Choice.SettlementStatus))]
     [JsonDerivedType(typeof(Status43Choice.InstructionProcessingStatus))]
-    public abstract record Status43Choice_
+    public abstract partial record Status43Choice_
     {
     }
 }

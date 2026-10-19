@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record VoteDetails4 : IVoteDetails4
 {
-    IVote13Choice IVoteDetails4.VoteInstructionForAgendaResolution => VoteInstructionForAgendaResolution;
-    IVoteInstructionForMeetingResolution3Choice? IVoteDetails4.VoteInstructionForMeetingResolution => VoteInstructionForMeetingResolution;
+    IVote13Choice IVoteDetails4.VoteInstructionForAgendaResolution =>
+        VoteInstructionForAgendaResolution;
+    IVoteInstructionForMeetingResolution3Choice? IVoteDetails4.VoteInstructionForMeetingResolution =>
+        VoteInstructionForMeetingResolution;
 }

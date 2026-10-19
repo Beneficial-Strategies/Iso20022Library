@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber1Choice;
 
-public partial record LongNumber : ILongNumber
-{
-}
+public partial record LongNumber : ILongNumber { }

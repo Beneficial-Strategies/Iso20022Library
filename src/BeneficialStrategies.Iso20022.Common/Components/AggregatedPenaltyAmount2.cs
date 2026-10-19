@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MwslMDkMEem897H7zB2RJg")]
 [DisplayName("Aggregated Penalty Amount2")]
-public record AggregatedPenaltyAmount2
+public partial record AggregatedPenaltyAmount2
 {
     /// <summary>
     /// Unique and unambiguous identification of the party for which the aggregated amounts are referred to.

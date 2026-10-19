@@ -12,12 +12,14 @@ public partial record AdditionalInformation13 : IAdditionalInformation13
 {
     IClassificationType32Choice? IAdditionalInformation13.ClassificationType => ClassificationType;
     ISecuritiesAccount19? IAdditionalInformation13.SafekeepingAccount => SafekeepingAccount;
-    ISecurityIdentification19? IAdditionalInformation13.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19? IAdditionalInformation13.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IFinancialInstrumentQuantity1Choice? IAdditionalInformation13.Quantity => Quantity;
     IDateAndDateTimeChoice? IAdditionalInformation13.EffectiveDate => EffectiveDate;
     IDateAndDateTimeChoice? IAdditionalInformation13.ExpiryDate => ExpiryDate;
     IDateAndDateTimeChoice? IAdditionalInformation13.CutOffDate => CutOffDate;
     IPartyIdentification100? IAdditionalInformation13.Investor => Investor;
-    IPartyIdentificationAndAccount117? IAdditionalInformation13.DeliveringParty1 => DeliveringParty1;
+    IPartyIdentificationAndAccount117? IAdditionalInformation13.DeliveringParty1 =>
+        DeliveringParty1;
     IPartyIdentificationAndAccount117? IAdditionalInformation13.ReceivingParty1 => ReceivingParty1;
 }

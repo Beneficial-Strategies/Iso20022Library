@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pAgPoZwxEeazcsnODTksnQ")]
     [DisplayName("Settlement Or Corporate Action Event 20 Choice")]
-    public abstract record SettlementOrCorporateActionEvent20Choice_ { }
+    public abstract partial record SettlementOrCorporateActionEvent20Choice_ { }
 }

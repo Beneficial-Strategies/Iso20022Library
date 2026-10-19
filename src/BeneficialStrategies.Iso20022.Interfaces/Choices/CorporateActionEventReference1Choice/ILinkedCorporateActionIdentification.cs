@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventReference1Ch
 /// Reference assigned by the account servicer to unambiguously identify a related corporate action event.
 /// </summary>
 [IsoId("_QxXJgNp-Ed-ak6NoX_4Aeg_-1898428206")]
-public interface ILinkedCorporateActionIdentification : ICorporateActionEventReference1Choice, IIsoChoiceVariant
+public interface ILinkedCorporateActionIdentification
+    : ICorporateActionEventReference1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

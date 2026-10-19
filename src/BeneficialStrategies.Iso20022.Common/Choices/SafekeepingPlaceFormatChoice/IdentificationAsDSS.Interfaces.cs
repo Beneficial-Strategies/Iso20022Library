@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice;
 
-public partial record IdentificationAsDSS : IIdentificationAsDSS
-{
-}
+public partial record IdentificationAsDSS : IIdentificationAsDSS { }

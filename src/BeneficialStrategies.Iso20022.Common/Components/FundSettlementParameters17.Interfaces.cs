@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FundSettlementParameters17 : IFundSettlementParameters17
 {
-    ISafekeepingPlaceFormat28Choice? IFundSettlementParameters17.SafekeepingPlace => SafekeepingPlace;
-    IEnumerable<ITradeTransactionCondition8Choice> IFundSettlementParameters17.TradeTransactionCondition => TradeTransactionCondition;
-    IEnumerable<ISettlementTransactionCondition30Choice> IFundSettlementParameters17.SettlementTransactionCondition => SettlementTransactionCondition;
+    ISafekeepingPlaceFormat28Choice? IFundSettlementParameters17.SafekeepingPlace =>
+        SafekeepingPlace;
+    IEnumerable<ITradeTransactionCondition8Choice> IFundSettlementParameters17.TradeTransactionCondition =>
+        TradeTransactionCondition;
+    IEnumerable<ISettlementTransactionCondition30Choice> IFundSettlementParameters17.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     ISettlementParties94? IFundSettlementParameters17.ReceivingSideDetails => ReceivingSideDetails;
-    ISettlementParties94? IFundSettlementParameters17.DeliveringSideDetails => DeliveringSideDetails;
+    ISettlementParties94? IFundSettlementParameters17.DeliveringSideDetails =>
+        DeliveringSideDetails;
 }

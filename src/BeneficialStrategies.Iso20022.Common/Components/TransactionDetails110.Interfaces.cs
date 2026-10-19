@@ -10,23 +10,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails110 : ITransactionDetails110
 {
-    IEnumerable<RestrictedFINXMax16Text> ITransactionDetails110.TradeIdentification => TradeIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ITransactionDetails110.TradeIdentification =>
+        TradeIdentification;
     IPartyIdentification119? ITransactionDetails110.AccountOwner => AccountOwner;
     ISecuritiesAccount30 ITransactionDetails110.SafekeepingAccount => SafekeepingAccount;
     ISafeKeepingPlace2? ITransactionDetails110.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfTradeIdentification2? ITransactionDetails110.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification1? ITransactionDetails110.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification20 ITransactionDetails110.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification20 ITransactionDetails110.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity10Choice ITransactionDetails110.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection67? ITransactionDetails110.SettlementAmount => SettlementAmount;
     IDateAndDateTime2Choice? ITransactionDetails110.LateDeliveryDate => LateDeliveryDate;
-    IDateAndDateTime2Choice? ITransactionDetails110.ExpectedSettlementDate => ExpectedSettlementDate;
+    IDateAndDateTime2Choice? ITransactionDetails110.ExpectedSettlementDate =>
+        ExpectedSettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails110.ExpectedValueDate => ExpectedValueDate;
     ISettlementDate32Choice ITransactionDetails110.SettlementDate => SettlementDate;
     ITradeDate9Choice? ITransactionDetails110.TradeDate => TradeDate;
     ISettlementDetails160 ITransactionDetails110.SettlementParameters => SettlementParameters;
-    ISettlementParties49? ITransactionDetails110.ReceivingSettlementParties => ReceivingSettlementParties;
-    ISettlementParties49? ITransactionDetails110.DeliveringSettlementParties => DeliveringSettlementParties;
+    ISettlementParties49? ITransactionDetails110.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ISettlementParties49? ITransactionDetails110.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
     IPartyIdentification110? ITransactionDetails110.Investor => Investor;
-    IPartyIdentification111? ITransactionDetails110.QualifiedForeignIntermediary => QualifiedForeignIntermediary;
+    IPartyIdentification111? ITransactionDetails110.QualifiedForeignIntermediary =>
+        QualifiedForeignIntermediary;
 }

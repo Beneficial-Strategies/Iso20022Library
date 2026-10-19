@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W5rM4N6iEeiwsev40qZGEQ")]
 [DisplayName("Device Send Application Protocol Data Unit Card Reader Response")]
-public record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
+public partial record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
 {
     /// <summary>
     /// Class field of the Application Protocol Data Unit command (CLA).

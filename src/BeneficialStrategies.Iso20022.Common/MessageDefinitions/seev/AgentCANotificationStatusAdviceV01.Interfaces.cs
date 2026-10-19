@@ -11,9 +11,14 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCANotificationStatusAdviceV01 : IAgentCANotificationStatusAdviceV01
 {
     IDocumentIdentification8 IAgentCANotificationStatusAdviceV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCANotificationStatusAdviceV01.AgentCANotificationAdviceIdentification => AgentCANotificationAdviceIdentification;
-    IDocumentIdentification8 IAgentCANotificationStatusAdviceV01.AgentCANotificationCancellationRequestIdentification => AgentCANotificationCancellationRequestIdentification;
-    ICorporateActionInformation2 IAgentCANotificationStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    INotificationCancellationRequestStatus1Choice IAgentCANotificationStatusAdviceV01.NotificationCancellationRequestStatus => NotificationCancellationRequestStatus;
-    INotificationAdviceStatus1Choice IAgentCANotificationStatusAdviceV01.NotificationAdviceStatus => NotificationAdviceStatus;
+    IDocumentIdentification8 IAgentCANotificationStatusAdviceV01.AgentCANotificationAdviceIdentification =>
+        AgentCANotificationAdviceIdentification;
+    IDocumentIdentification8 IAgentCANotificationStatusAdviceV01.AgentCANotificationCancellationRequestIdentification =>
+        AgentCANotificationCancellationRequestIdentification;
+    ICorporateActionInformation2 IAgentCANotificationStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    INotificationCancellationRequestStatus1Choice IAgentCANotificationStatusAdviceV01.NotificationCancellationRequestStatus =>
+        NotificationCancellationRequestStatus;
+    INotificationAdviceStatus1Choice IAgentCANotificationStatusAdviceV01.NotificationAdviceStatus =>
+        NotificationAdviceStatus;
 }

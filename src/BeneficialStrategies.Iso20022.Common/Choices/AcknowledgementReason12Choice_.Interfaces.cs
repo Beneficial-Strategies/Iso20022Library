@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record AcknowledgementReason12Choice_ : IAcknowledgementReason12Choice
-{
-}
+public abstract partial record AcknowledgementReason12Choice_ : IAcknowledgementReason12Choice { }

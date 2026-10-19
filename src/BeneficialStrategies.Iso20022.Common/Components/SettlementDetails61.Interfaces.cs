@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementDetails61 : ISettlementDetails61
 {
-    IEnumerable<ISettlementTransactionCondition7Choice> ISettlementDetails61.SettlementTransactionCondition => SettlementTransactionCondition;
+    IEnumerable<ISettlementTransactionCondition7Choice> ISettlementDetails61.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     ISettlingCapacity1Choice? ISettlementDetails61.SettlingCapacity => SettlingCapacity;
     IGenericIdentification20? ISettlementDetails61.StampDutyTaxBasis => StampDutyTaxBasis;
     ISecuritiesRTGS1Choice? ISettlementDetails61.SecuritiesRTGS => SecuritiesRTGS;
@@ -20,7 +21,8 @@ public partial record SettlementDetails61 : ISettlementDetails61
     IMarketClientSide1Choice? ISettlementDetails61.MarketClientSide => MarketClientSide;
     IBlockTrade1Choice? ISettlementDetails61.BlockTrade => BlockTrade;
     IRestriction1Choice? ISettlementDetails61.LegalRestrictions => LegalRestrictions;
-    ISettlementSystemMethod1Choice? ISettlementDetails61.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod1Choice? ISettlementDetails61.SettlementSystemMethod =>
+        SettlementSystemMethod;
     INettingEligibility1Choice? ISettlementDetails61.NettingEligibility => NettingEligibility;
     ICentralCounterPartyEligibility1Choice? ISettlementDetails61.CCPEligibility => CCPEligibility;
 }

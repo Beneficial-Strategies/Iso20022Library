@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MarketClaimCancellationRequestV01 : IMarketClaimCancellationRequestV01
 {
-    IDocumentIdentification9 IMarketClaimCancellationRequestV01.MarketClaimCreationIdentification => MarketClaimCreationIdentification;
+    IDocumentIdentification9 IMarketClaimCancellationRequestV01.MarketClaimCreationIdentification =>
+        MarketClaimCreationIdentification;
     IReferences26 IMarketClaimCancellationRequestV01.TransactionReference => TransactionReference;
-    ICorporateActionGeneralInformation157 IMarketClaimCancellationRequestV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    ICorporateActionGeneralInformation157 IMarketClaimCancellationRequestV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountIdentification46 IMarketClaimCancellationRequestV01.AccountDetails => AccountDetails;
-    IEnumerable<ISupplementaryData1> IMarketClaimCancellationRequestV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IMarketClaimCancellationRequestV01.SupplementaryData =>
+        SupplementaryData;
 }

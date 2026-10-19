@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus34Choi
     /// <summary>Specifies the reason of the acknowledged accepted status.</summary>
     [IsoId("_XJtf8Y5bEfC_4ZEXsY0Xyg")]
     [DisplayName("Reason")]
-    public record Reason : AcknowledgedAcceptedStatus34Choice_
+    public partial record Reason : AcknowledgedAcceptedStatus34Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rsn")]

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record CancellationReason17Choice_ : ICancellationReason17Choice
-{
-}
+public abstract partial record CancellationReason17Choice_ : ICancellationReason17Choice { }

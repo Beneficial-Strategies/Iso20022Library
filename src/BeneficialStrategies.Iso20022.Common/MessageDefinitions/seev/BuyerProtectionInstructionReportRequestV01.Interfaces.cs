@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record BuyerProtectionInstructionReportRequestV01 : IBuyerProtectionInstructionReportRequestV01
+public partial record BuyerProtectionInstructionReportRequestV01
+    : IBuyerProtectionInstructionReportRequestV01
 {
-    IBuyerProtectionSelectionCriteria1 IBuyerProtectionInstructionReportRequestV01.BuyerProtectionSelectionCriteria => BuyerProtectionSelectionCriteria;
-    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionReportRequestV01.SupplementaryData => SupplementaryData;
+    IBuyerProtectionSelectionCriteria1 IBuyerProtectionInstructionReportRequestV01.BuyerProtectionSelectionCriteria =>
+        BuyerProtectionSelectionCriteria;
+    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionReportRequestV01.SupplementaryData =>
+        SupplementaryData;
 }

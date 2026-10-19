@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7tZNMQxqEeqdx6buGpCCQw")]
 [DisplayName("Stored Value Request")]
-public record StoredValueRequest3
+public partial record StoredValueRequest3
 {
     /// <summary>
     /// Data related to the stored value card.

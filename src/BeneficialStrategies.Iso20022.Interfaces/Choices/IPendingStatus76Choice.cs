@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Pending Status76Choice.
 /// </summary>
 [IsoId("_xcgDIZzoEe-DHYbvdRjdbA")]
-public interface IPendingStatus76Choice : IIsoChoice
-{
-}
+public interface IPendingStatus76Choice : IIsoChoice { }

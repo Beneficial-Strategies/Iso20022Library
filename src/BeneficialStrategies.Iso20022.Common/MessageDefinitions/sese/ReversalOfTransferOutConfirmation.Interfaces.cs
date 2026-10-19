@@ -13,5 +13,6 @@ public partial record ReversalOfTransferOutConfirmation : IReversalOfTransferOut
     IAdditionalReference2 IReversalOfTransferOutConfirmation.PreviousReference => PreviousReference;
     IAdditionalReference2? IReversalOfTransferOutConfirmation.PoolReference => PoolReference;
     IAdditionalReference2? IReversalOfTransferOutConfirmation.RelatedReference => RelatedReference;
-    ITransferOut1? IReversalOfTransferOutConfirmation.TransferOutConfirmationToBeReversed => TransferOutConfirmationToBeReversed;
+    ITransferOut1? IReversalOfTransferOutConfirmation.TransferOutConfirmationToBeReversed =>
+        TransferOutConfirmationToBeReversed;
 }

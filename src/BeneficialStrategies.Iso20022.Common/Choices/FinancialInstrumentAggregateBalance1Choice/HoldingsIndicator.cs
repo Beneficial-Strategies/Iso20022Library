@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAggregateBala
     /// </summary>
     [IsoId("_nlciMKCCEeOEyO7fCl8lLA")]
     [DisplayName("Holdings Indicator")]
-    public record HoldingsIndicator : FinancialInstrumentAggregateBalance1Choice_
+    public partial record HoldingsIndicator : FinancialInstrumentAggregateBalance1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient15Choice
     /// Key Transport.
     /// </summary>
     [DisplayName("Key Transport")]
-    public record KeyTransport : Recipient15Choice_
+    public partial record KeyTransport : Recipient15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,12 +14,18 @@ public partial record PortfolioTransferConfirmationV03 : IPortfolioTransferConfi
     IAdditionalReference3? IPortfolioTransferConfirmationV03.PoolReference => PoolReference;
     IAdditionalReference3? IPortfolioTransferConfirmationV03.PreviousReference => PreviousReference;
     IAdditionalReference3? IPortfolioTransferConfirmationV03.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPortfolioTransferConfirmationV03.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPortfolioTransferConfirmationV03.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV03.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IPortfolioTransferConfirmationV03.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IPortfolioTransferConfirmationV03.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IPortfolioTransferConfirmationV03.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV03.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV03.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV03.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IPortfolioTransferConfirmationV03.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IPortfolioTransferConfirmationV03.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IPortfolioTransferConfirmationV03.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount5 IPortfolioTransferConfirmationV03.TransferorAccount => TransferorAccount;
     IAccount6? IPortfolioTransferConfirmationV03.NomineeAccount => NomineeAccount;
     IPartyIdentification2Choice IPortfolioTransferConfirmationV03.Transferee => Transferee;

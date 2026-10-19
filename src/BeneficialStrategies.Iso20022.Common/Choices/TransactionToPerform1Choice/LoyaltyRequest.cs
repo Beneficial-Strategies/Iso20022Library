@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform1Choice
     [IsoId("_57p-oNuREeiB5uLfkg9ZJA")]
     [DisplayName("Loyalty Request")]
     [IsoXmlTag("LltyReq")]
-    public record LoyaltyRequest : TransactionToPerform1Choice_
+    public partial record LoyaltyRequest : TransactionToPerform1Choice_
     {
         /// <summary>
         /// To retrieve Card Acquisition Data.

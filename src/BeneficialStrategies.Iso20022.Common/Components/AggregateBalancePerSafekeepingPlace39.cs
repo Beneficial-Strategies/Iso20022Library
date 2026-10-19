@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hXcvnyp6EeyR9JrVGfaMKw")]
 [DisplayName("Aggregate Balance Per Safekeeping Place")]
-public record AggregateBalancePerSafekeepingPlace39
+public partial record AggregateBalancePerSafekeepingPlace39
 {
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).

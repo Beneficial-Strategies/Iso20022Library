@@ -10,12 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes32 : IFinancialInstrumentAttributes32
 {
-    ISecurityIdentification14? IFinancialInstrumentAttributes32.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification14? IFinancialInstrumentAttributes32.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IMarketIdentification3Choice? IFinancialInstrumentAttributes32.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes32.DayCountBasis => DayCountBasis;
-    IClassificationType2Choice? IFinancialInstrumentAttributes32.ClassificationType => ClassificationType;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.MinimumExercisableQuantity => MinimumExercisableQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.MinimumExercisableMultipleQuantity => MinimumExercisableMultipleQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.ContractSize => ContractSize;
+    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes32.DayCountBasis =>
+        DayCountBasis;
+    IClassificationType2Choice? IFinancialInstrumentAttributes32.ClassificationType =>
+        ClassificationType;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.MinimumExercisableQuantity =>
+        MinimumExercisableQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.MinimumExercisableMultipleQuantity =>
+        MinimumExercisableMultipleQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes32.ContractSize =>
+        ContractSize;
 }

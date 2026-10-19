@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lL-bYZTpEe6I0daioYCMDA")]
 [DisplayName("Report Transaction Response6")]
-public record ReportTransactionResponse6
+public partial record ReportTransactionResponse6
 {
     /// <summary>
     /// Report Full Size.

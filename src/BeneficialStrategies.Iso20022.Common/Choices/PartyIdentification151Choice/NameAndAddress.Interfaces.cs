@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification151Choice;
 
-public partial record NameAndAddress : INameAndAddress
-{
-}
+public partial record NameAndAddress : INameAndAddress { }

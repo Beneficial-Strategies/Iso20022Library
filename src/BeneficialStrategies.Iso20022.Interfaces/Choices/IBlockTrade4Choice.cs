@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the block trade information.
 /// </summary>
 [IsoId("_1_5ugTqHEeWVrPy0StzzSg")]
-public interface IBlockTrade4Choice : IIsoChoice
-{
-}
+public interface IBlockTrade4Choice : IIsoChoice { }

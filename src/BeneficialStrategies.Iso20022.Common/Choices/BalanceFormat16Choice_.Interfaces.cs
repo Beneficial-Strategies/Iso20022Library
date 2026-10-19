@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record BalanceFormat16Choice_ : IBalanceFormat16Choice
-{
-}
+public abstract partial record BalanceFormat16Choice_ : IBalanceFormat16Choice { }

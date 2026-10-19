@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MovementInstruction1 : IMovementInstruction1
 {
-    ICorporateActionMovement1 IMovementInstruction1.MovementGeneralInformation => MovementGeneralInformation;
-    IEnumerable<IUnderlyingSecurityMovement1> IMovementInstruction1.UnderlyingSecuritiesMovementDetails => UnderlyingSecuritiesMovementDetails;
-    IEnumerable<ICashMovement2> IMovementInstruction1.UnderlyingCashMovementDetails => UnderlyingCashMovementDetails;
-    IEnumerable<IProceedsMovement1> IMovementInstruction1.ProceedsMovementDetails => ProceedsMovementDetails;
+    ICorporateActionMovement1 IMovementInstruction1.MovementGeneralInformation =>
+        MovementGeneralInformation;
+    IEnumerable<IUnderlyingSecurityMovement1> IMovementInstruction1.UnderlyingSecuritiesMovementDetails =>
+        UnderlyingSecuritiesMovementDetails;
+    IEnumerable<ICashMovement2> IMovementInstruction1.UnderlyingCashMovementDetails =>
+        UnderlyingCashMovementDetails;
+    IEnumerable<IProceedsMovement1> IMovementInstruction1.ProceedsMovementDetails =>
+        ProceedsMovementDetails;
 }

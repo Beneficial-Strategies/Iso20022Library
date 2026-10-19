@@ -12,8 +12,12 @@ public partial record BuyInRegulatoryAdviceResponseV01 : IBuyInRegulatoryAdviceR
 {
     IIdentification14 IBuyInRegulatoryAdviceResponseV01.AdviceReference => AdviceReference;
     IPartyIdentification144? IBuyInRegulatoryAdviceResponseV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? IBuyInRegulatoryAdviceResponseV01.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IBuyInAdviceDetails1> IBuyInRegulatoryAdviceResponseV01.BuyInAttributes => BuyInAttributes;
-    IProcessingStatus79Choice IBuyInRegulatoryAdviceResponseV01.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISupplementaryData1> IBuyInRegulatoryAdviceResponseV01.SupplementaryData => SupplementaryData;
+    ISecuritiesAccount19? IBuyInRegulatoryAdviceResponseV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IBuyInAdviceDetails1> IBuyInRegulatoryAdviceResponseV01.BuyInAttributes =>
+        BuyInAttributes;
+    IProcessingStatus79Choice IBuyInRegulatoryAdviceResponseV01.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISupplementaryData1> IBuyInRegulatoryAdviceResponseV01.SupplementaryData =>
+        SupplementaryData;
 }

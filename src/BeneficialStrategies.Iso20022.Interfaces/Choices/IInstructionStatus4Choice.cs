@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Status applying globally to the instruction received.
 /// </summary>
 [IsoId("_RCpGxdp-Ed-ak6NoX_4Aeg_-1718693015")]
-public interface IInstructionStatus4Choice : IIsoChoice
-{
-}
+public interface IInstructionStatus4Choice : IIsoChoice { }

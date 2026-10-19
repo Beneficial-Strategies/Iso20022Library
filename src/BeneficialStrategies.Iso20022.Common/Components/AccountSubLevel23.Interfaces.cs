@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record AccountSubLevel23 : IAccountSubLevel23
 {
     IPartyIdentification243 IAccountSubLevel23.AccountHolder => AccountHolder;
-    IEnumerable<IShareholdingBalance1> IAccountSubLevel23.ShareholdingBalance => ShareholdingBalance;
+    IEnumerable<IShareholdingBalance1> IAccountSubLevel23.ShareholdingBalance =>
+        ShareholdingBalance;
 }

@@ -13,5 +13,6 @@ public partial record ISATransfer28 : IISATransfer28
     IAdditionalReference7? IISATransfer28.ClientReference => ClientReference;
     IAdditionalReference7? IISATransfer28.CounterpartyReference => CounterpartyReference;
     IISAPortfolio2Choice? IISATransfer28.Portfolio => Portfolio;
-    IEnumerable<IFinancialInstrument65> IISATransfer28.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
+    IEnumerable<IFinancialInstrument65> IISATransfer28.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DocumentLineInformation2 : IDocumentLineInformation2
 {
-    IEnumerable<IDocumentLineIdentification1> IDocumentLineInformation2.Identification => Identification;
+    IEnumerable<IDocumentLineIdentification1> IDocumentLineInformation2.Identification =>
+        Identification;
     IRemittanceAmount4? IDocumentLineInformation2.Amount => Amount;
 }

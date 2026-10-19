@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SDCRMEVCEeea-M6VZkEPUw")]
 [DisplayName("Grace Period")]
-public record GracePeriod1
+public partial record GracePeriod1
 {
     /// <summary>
     /// Grace period time relative to the grace period unit type.

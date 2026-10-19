@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity34Choice;
 
-public partial record DigitalTokenUnit : IDigitalTokenUnit
-{
-}
+public partial record DigitalTokenUnit : IDigitalTokenUnit { }

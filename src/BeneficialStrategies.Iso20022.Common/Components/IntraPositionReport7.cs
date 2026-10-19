@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZL1JoWdCEemvNLufWGIVOQ")]
 [DisplayName("Intra Position Report7")]
-public record IntraPositionReport7
+public partial record IntraPositionReport7
 {
     /// <summary>
     /// Sequential number of the report.

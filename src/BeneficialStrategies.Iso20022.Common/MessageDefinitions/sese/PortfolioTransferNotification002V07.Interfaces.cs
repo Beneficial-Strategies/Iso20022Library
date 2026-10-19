@@ -11,9 +11,13 @@ namespace BeneficialStrategies.Iso20022.sese;
 public partial record PortfolioTransferNotification002V07 : IPortfolioTransferNotification002V07
 {
     IPagination1 IPortfolioTransferNotification002V07.Pagination => Pagination;
-    IStatement68 IPortfolioTransferNotification002V07.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement68 IPortfolioTransferNotification002V07.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? IPortfolioTransferNotification002V07.AccountOwner => AccountOwner;
-    ISecuritiesAccount30? IPortfolioTransferNotification002V07.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? IPortfolioTransferNotification002V07.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<ISecuritiesTradeDetails139> IPortfolioTransferNotification002V07.TransferNotificationDetails => TransferNotificationDetails;
+    ISecuritiesAccount30? IPortfolioTransferNotification002V07.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet7? IPortfolioTransferNotification002V07.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<ISecuritiesTradeDetails139> IPortfolioTransferNotification002V07.TransferNotificationDetails =>
+        TransferNotificationDetails;
 }

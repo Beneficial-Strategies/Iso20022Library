@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat38Choice;
 
-public partial record IndexPoints : IIndexPoints
-{
-}
+public partial record IndexPoints : IIndexPoints { }

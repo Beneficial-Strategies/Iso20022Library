@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9z5i4ds1Eee9e6xduATmQg")]
 [DisplayName("Parameter")]
-public record Parameter9
+public partial record Parameter9
 {
     /// <summary>
     /// Digest algorithm used in the mask generator function.

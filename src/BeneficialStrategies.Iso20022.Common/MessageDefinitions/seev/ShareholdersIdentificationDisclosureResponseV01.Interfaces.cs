@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record ShareholdersIdentificationDisclosureResponseV01 : IShareholdersIdentificationDisclosureResponseV01
+public partial record ShareholdersIdentificationDisclosureResponseV01
+    : IShareholdersIdentificationDisclosureResponseV01
 {
     IPagination1? IShareholdersIdentificationDisclosureResponseV01.Pagination => Pagination;
-    IDisclosureRequestIdentification1 IShareholdersIdentificationDisclosureResponseV01.IssuerDisclosureRequestReference => IssuerDisclosureRequestReference;
-    IPartyIdentification219 IShareholdersIdentificationDisclosureResponseV01.RespondingIntermediary => RespondingIntermediary;
-    IDisclosure1Choice IShareholdersIdentificationDisclosureResponseV01.DisclosureInformation => DisclosureInformation;
-    IEnumerable<ISupplementaryData1> IShareholdersIdentificationDisclosureResponseV01.SupplementaryData => SupplementaryData;
+    IDisclosureRequestIdentification1 IShareholdersIdentificationDisclosureResponseV01.IssuerDisclosureRequestReference =>
+        IssuerDisclosureRequestReference;
+    IPartyIdentification219 IShareholdersIdentificationDisclosureResponseV01.RespondingIntermediary =>
+        RespondingIntermediary;
+    IDisclosure1Choice IShareholdersIdentificationDisclosureResponseV01.DisclosureInformation =>
+        DisclosureInformation;
+    IEnumerable<ISupplementaryData1> IShareholdersIdentificationDisclosureResponseV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0byE8QxjEeqEbo60f0v6aw")]
 [DisplayName("Aggregation Transaction")]
-public record AggregationTransaction3
+public partial record AggregationTransaction3
 {
     /// <summary>
     /// Date and time of the first payment.

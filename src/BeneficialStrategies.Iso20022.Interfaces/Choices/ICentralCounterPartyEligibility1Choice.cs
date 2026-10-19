@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the CCP eligibility information.
 /// </summary>
 [IsoId("_Qvaox9p-Ed-ak6NoX_4Aeg_22450085")]
-public interface ICentralCounterPartyEligibility1Choice : IIsoChoice
-{
-}
+public interface ICentralCounterPartyEligibility1Choice : IIsoChoice { }

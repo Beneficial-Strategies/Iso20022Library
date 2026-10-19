@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("1805316d-164b-4aa1-806a-24ca06896315")]
 [DisplayName("Securities Transaction Pending Report V15")]
-public record SecuritiesTransactionPendingReportV15 : IOuterRecord
+public partial record SecuritiesTransactionPendingReportV15 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

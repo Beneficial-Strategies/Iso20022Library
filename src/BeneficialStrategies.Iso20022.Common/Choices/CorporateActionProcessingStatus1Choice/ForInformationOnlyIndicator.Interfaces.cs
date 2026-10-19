@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus1Choice;
 
-public partial record ForInformationOnlyIndicator : IForInformationOnlyIndicator
-{
-}
+public partial record ForInformationOnlyIndicator : IForInformationOnlyIndicator { }

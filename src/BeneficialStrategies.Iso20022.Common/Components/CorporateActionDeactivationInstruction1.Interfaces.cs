@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CorporateActionDeactivationInstruction1 : ICorporateActionDeactivationInstruction1
+public partial record CorporateActionDeactivationInstruction1
+    : ICorporateActionDeactivationInstruction1
 {
-    IEnumerable<ICorporateActionOption2> ICorporateActionDeactivationInstruction1.OptionDetails => OptionDetails;
+    IEnumerable<ICorporateActionOption2> ICorporateActionDeactivationInstruction1.OptionDetails =>
+        OptionDetails;
 }

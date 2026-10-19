@@ -13,8 +13,12 @@ public partial record CorporateActionPrice1 : ICorporateActionPrice1
     IPriceFormat4Choice? ICorporateActionPrice1.ExercisePrice => ExercisePrice;
     IPriceFormat2Choice? ICorporateActionPrice1.IssuePrice => IssuePrice;
     IPriceFormat2Choice? ICorporateActionPrice1.CashInLieuOfSharePrice => CashInLieuOfSharePrice;
-    IAmountPrice1? ICorporateActionPrice1.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
-    IPriceFormat1Choice? ICorporateActionPrice1.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
-    IPriceFormat2Choice? ICorporateActionPrice1.GenericCashPricePaidPerProduct => GenericCashPricePaidPerProduct;
-    IPriceFormat2Choice? ICorporateActionPrice1.OverSubscriptionDepositPrice => OverSubscriptionDepositPrice;
+    IAmountPrice1? ICorporateActionPrice1.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
+    IPriceFormat1Choice? ICorporateActionPrice1.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
+    IPriceFormat2Choice? ICorporateActionPrice1.GenericCashPricePaidPerProduct =>
+        GenericCashPricePaidPerProduct;
+    IPriceFormat2Choice? ICorporateActionPrice1.OverSubscriptionDepositPrice =>
+        OverSubscriptionDepositPrice;
 }

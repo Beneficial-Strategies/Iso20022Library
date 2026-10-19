@@ -8,21 +8,37 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionAllegementNotificationV06 : ISecuritiesSettlementTransactionAllegementNotificationV06
+public partial record SecuritiesSettlementTransactionAllegementNotificationV06
+    : ISecuritiesSettlementTransactionAllegementNotificationV06
 {
-    ISettlementTypeAndAdditionalParameters12 ISecuritiesSettlementTransactionAllegementNotificationV06.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
-    IIdentification14? ISecuritiesSettlementTransactionAllegementNotificationV06.MarketInfrastructureTransactionIdentification => MarketInfrastructureTransactionIdentification;
-    ISecuritiesTradeDetails54 ISecuritiesSettlementTransactionAllegementNotificationV06.TradeDetails => TradeDetails;
-    ISecurityIdentification19 ISecuritiesSettlementTransactionAllegementNotificationV06.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes64? ISecuritiesSettlementTransactionAllegementNotificationV06.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IQuantityAndAccount42 ISecuritiesSettlementTransactionAllegementNotificationV06.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISecuritiesFinancingTransactionDetails29? ISecuritiesSettlementTransactionAllegementNotificationV06.SecuritiesFinancingDetails => SecuritiesFinancingDetails;
-    ISettlementDetails125 ISecuritiesSettlementTransactionAllegementNotificationV06.SettlementParameters => SettlementParameters;
-    ISettlementParties36? ISecuritiesSettlementTransactionAllegementNotificationV06.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties36? ISecuritiesSettlementTransactionAllegementNotificationV06.ReceivingSettlementParties => ReceivingSettlementParties;
-    ICashParties25? ISecuritiesSettlementTransactionAllegementNotificationV06.CashParties => CashParties;
-    IAmountAndDirection48? ISecuritiesSettlementTransactionAllegementNotificationV06.SettlementAmount => SettlementAmount;
-    IOtherAmounts32? ISecuritiesSettlementTransactionAllegementNotificationV06.OtherAmounts => OtherAmounts;
-    IOtherParties28? ISecuritiesSettlementTransactionAllegementNotificationV06.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionAllegementNotificationV06.SupplementaryData => SupplementaryData;
+    ISettlementTypeAndAdditionalParameters12 ISecuritiesSettlementTransactionAllegementNotificationV06.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
+    IIdentification14? ISecuritiesSettlementTransactionAllegementNotificationV06.MarketInfrastructureTransactionIdentification =>
+        MarketInfrastructureTransactionIdentification;
+    ISecuritiesTradeDetails54 ISecuritiesSettlementTransactionAllegementNotificationV06.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification19 ISecuritiesSettlementTransactionAllegementNotificationV06.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes64? ISecuritiesSettlementTransactionAllegementNotificationV06.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IQuantityAndAccount42 ISecuritiesSettlementTransactionAllegementNotificationV06.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISecuritiesFinancingTransactionDetails29? ISecuritiesSettlementTransactionAllegementNotificationV06.SecuritiesFinancingDetails =>
+        SecuritiesFinancingDetails;
+    ISettlementDetails125 ISecuritiesSettlementTransactionAllegementNotificationV06.SettlementParameters =>
+        SettlementParameters;
+    ISettlementParties36? ISecuritiesSettlementTransactionAllegementNotificationV06.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties36? ISecuritiesSettlementTransactionAllegementNotificationV06.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ICashParties25? ISecuritiesSettlementTransactionAllegementNotificationV06.CashParties =>
+        CashParties;
+    IAmountAndDirection48? ISecuritiesSettlementTransactionAllegementNotificationV06.SettlementAmount =>
+        SettlementAmount;
+    IOtherAmounts32? ISecuritiesSettlementTransactionAllegementNotificationV06.OtherAmounts =>
+        OtherAmounts;
+    IOtherParties28? ISecuritiesSettlementTransactionAllegementNotificationV06.OtherBusinessParties =>
+        OtherBusinessParties;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionAllegementNotificationV06.SupplementaryData =>
+        SupplementaryData;
 }

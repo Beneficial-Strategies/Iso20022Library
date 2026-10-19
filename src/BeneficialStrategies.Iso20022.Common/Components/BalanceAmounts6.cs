@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WQRpSNp-Ed-ak6NoX_4Aeg_-87925160")]
 [DisplayName("Balance Amounts")]
-public record BalanceAmounts6
+public partial record BalanceAmounts6
 {
     /// <summary>
     /// Value of an individual financial instrument holding within a safekeeping account.

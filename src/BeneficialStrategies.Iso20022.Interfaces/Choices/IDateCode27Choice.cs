@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a proprietary code for a date code.
 /// </summary>
 [IsoId("_ctmkPZKQEeWHWpTQn1FFVg")]
-public interface IDateCode27Choice : IIsoChoice
-{
-}
+public interface IDateCode27Choice : IIsoChoice { }

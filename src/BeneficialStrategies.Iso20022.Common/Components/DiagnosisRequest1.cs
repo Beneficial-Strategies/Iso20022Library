@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_76gkoN6JEeiwsev40qZGEQ")]
 [DisplayName("Diagnosis Request")]
-public record DiagnosisRequest1
+public partial record DiagnosisRequest1
 {
     /// <summary>
     /// Indicates if Host Diagnosis are required.

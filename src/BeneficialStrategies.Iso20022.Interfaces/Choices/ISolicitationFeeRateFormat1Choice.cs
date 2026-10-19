@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a rate or an unspecified rate.
 /// </summary>
 [IsoId("_UOMcx9p-Ed-ak6NoX_4Aeg_-903069211")]
-public interface ISolicitationFeeRateFormat1Choice : IIsoChoice
-{
-}
+public interface ISolicitationFeeRateFormat1Choice : IIsoChoice { }

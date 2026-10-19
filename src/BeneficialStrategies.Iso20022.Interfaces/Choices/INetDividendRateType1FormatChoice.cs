@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the type of net dividend rate.
 /// </summary>
 [IsoId("_Rms2GNp-Ed-ak6NoX_4Aeg_-2087879060")]
-public interface INetDividendRateType1FormatChoice : IIsoChoice
-{
-}
+public interface INetDividendRateType1FormatChoice : IIsoChoice { }

@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionCancellationRequest002V10 : ICorporateActionInstructionCancellationRequest002V10
+public partial record CorporateActionInstructionCancellationRequest002V10
+    : ICorporateActionInstructionCancellationRequest002V10
 {
-    IDocumentIdentification37 ICorporateActionInstructionCancellationRequest002V10.InstructionIdentification => InstructionIdentification;
-    ICorporateActionGeneralInformation159 ICorporateActionInstructionCancellationRequest002V10.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification49 ICorporateActionInstructionCancellationRequest002V10.AccountDetails => AccountDetails;
-    ICorporateActionOption192 ICorporateActionInstructionCancellationRequest002V10.CorporateActionInstruction => CorporateActionInstruction;
-    IProtectInstruction7? ICorporateActionInstructionCancellationRequest002V10.ProtectInstruction => ProtectInstruction;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequest002V10.SupplementaryData => SupplementaryData;
+    IDocumentIdentification37 ICorporateActionInstructionCancellationRequest002V10.InstructionIdentification =>
+        InstructionIdentification;
+    ICorporateActionGeneralInformation159 ICorporateActionInstructionCancellationRequest002V10.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification49 ICorporateActionInstructionCancellationRequest002V10.AccountDetails =>
+        AccountDetails;
+    ICorporateActionOption192 ICorporateActionInstructionCancellationRequest002V10.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IProtectInstruction7? ICorporateActionInstructionCancellationRequest002V10.ProtectInstruction =>
+        ProtectInstruction;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequest002V10.SupplementaryData =>
+        SupplementaryData;
 }

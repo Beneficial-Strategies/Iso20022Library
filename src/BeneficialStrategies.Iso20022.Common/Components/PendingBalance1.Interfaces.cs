@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PendingBalance1 : IPendingBalance1
 {
     ISignedQuantityFormat2 IPendingBalance1.Balance => Balance;
-    IEnumerable<ISettlementTypeAndIdentification2> IPendingBalance1.PendingTransactions => PendingTransactions;
+    IEnumerable<ISettlementTypeAndIdentification2> IPendingBalance1.PendingTransactions =>
+        PendingTransactions;
 }

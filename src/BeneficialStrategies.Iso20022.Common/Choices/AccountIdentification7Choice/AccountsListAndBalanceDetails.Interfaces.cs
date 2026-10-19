@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification7Choice;
 public partial record AccountsListAndBalanceDetails : IAccountsListAndBalanceDetails
 {
     IPartyIdentification13Choice? IAccountsListAndBalanceDetails.AccountOwner => AccountOwner;
-    ISafekeepingPlaceFormat2Choice? IAccountsListAndBalanceDetails.SafekeepingPlace => SafekeepingPlace;
+    ISafekeepingPlaceFormat2Choice? IAccountsListAndBalanceDetails.SafekeepingPlace =>
+        SafekeepingPlace;
     ICorporateActionBalanceDetails1? IAccountsListAndBalanceDetails.Balance => Balance;
 }

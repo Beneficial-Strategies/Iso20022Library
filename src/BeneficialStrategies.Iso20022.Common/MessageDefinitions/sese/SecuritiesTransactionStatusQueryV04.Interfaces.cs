@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record SecuritiesTransactionStatusQueryV04 : ISecuritiesTransactionStatusQueryV04
 {
-    IDocumentNumber12 ISecuritiesTransactionStatusQueryV04.StatusAdviceRequested => StatusAdviceRequested;
+    IDocumentNumber12 ISecuritiesTransactionStatusQueryV04.StatusAdviceRequested =>
+        StatusAdviceRequested;
     IPartyIdentification98? ISecuritiesTransactionStatusQueryV04.AccountOwner => AccountOwner;
-    ISecuritiesAccount24 ISecuritiesTransactionStatusQueryV04.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQueryV04.SupplementaryData => SupplementaryData;
+    ISecuritiesAccount24 ISecuritiesTransactionStatusQueryV04.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQueryV04.SupplementaryData =>
+        SupplementaryData;
 }

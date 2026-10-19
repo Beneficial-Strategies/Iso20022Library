@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record ReversalOfTransferInConfirmationV03 : IReversalOfTransferInConfirmationV03
 {
-    IMessageIdentification1 IReversalOfTransferInConfirmationV03.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 IReversalOfTransferInConfirmationV03.MessageIdentification =>
+        MessageIdentification;
     IEnumerable<IReferences11> IReversalOfTransferInConfirmationV03.References => References;
-    ITransferReference2? IReversalOfTransferInConfirmationV03.ReversalByReference => ReversalByReference;
-    ITransferIn6? IReversalOfTransferInConfirmationV03.ReversalByTransferInConfirmationDetails => ReversalByTransferInConfirmationDetails;
+    ITransferReference2? IReversalOfTransferInConfirmationV03.ReversalByReference =>
+        ReversalByReference;
+    ITransferIn6? IReversalOfTransferInConfirmationV03.ReversalByTransferInConfirmationDetails =>
+        ReversalByTransferInConfirmationDetails;
     ICopyInformation2? IReversalOfTransferInConfirmationV03.CopyDetails => CopyDetails;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dacLQXG-Ee2TbaNWBpRZpQ")]
 [DisplayName("Payment Receipt")]
-public record PaymentReceipt5
+public partial record PaymentReceipt5
 {
     /// <summary>
     /// Qualification of the document to print to the Cashier or the Customer.

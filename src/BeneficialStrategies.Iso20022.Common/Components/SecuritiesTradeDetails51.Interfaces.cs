@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails51 : ISecuritiesTradeDetails51
 {
     IEnumerable<Max35Text> ISecuritiesTradeDetails51.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails51.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails51.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification1? ISecuritiesTradeDetails51.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification1? ISecuritiesTradeDetails51.PlaceOfClearing => PlaceOfClearing;
     ITradeDate5Choice? ISecuritiesTradeDetails51.TradeDate => TradeDate;
@@ -20,11 +21,13 @@ public partial record SecuritiesTradeDetails51 : ISecuritiesTradeDetails51
     IPrice2? ISecuritiesTradeDetails51.DealPrice => DealPrice;
     IOpeningClosing3Choice? ISecuritiesTradeDetails51.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting6Choice> ISecuritiesTradeDetails51.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails51.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails51.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity4Choice? ISecuritiesTradeDetails51.InvestorCapacity => InvestorCapacity;
     ITradeOriginator3Choice? ISecuritiesTradeDetails51.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice29Choice? ISecuritiesTradeDetails51.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails51.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails51.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus27Choice? ISecuritiesTradeDetails51.MatchingStatus => MatchingStatus;
     IAffirmationStatus8Choice? ISecuritiesTradeDetails51.AffirmationStatus => AffirmationStatus;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RPdawtp-Ed-ak6NoX_4Aeg_986842434")]
 [DisplayName("Accounting Statement Of Holdings")]
-public record AccountingStatementOfHoldings2
+public partial record AccountingStatementOfHoldings2
 {
     /// <summary>
     /// General information related to the custody statement of holdings that is being cancelled.

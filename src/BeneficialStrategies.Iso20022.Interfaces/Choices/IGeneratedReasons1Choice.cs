@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the generated reason.
 /// </summary>
 [IsoId("_UYxVFdp-Ed-ak6NoX_4Aeg_-1972160125")]
-public interface IGeneratedReasons1Choice : IIsoChoice
-{
-}
+public interface IGeneratedReasons1Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TaxTypeFormat2Choice;
 
-public partial record Unstructured : IUnstructured
-{
-}
+public partial record Unstructured : IUnstructured { }

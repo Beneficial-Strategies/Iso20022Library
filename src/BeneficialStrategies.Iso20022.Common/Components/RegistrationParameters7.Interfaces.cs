@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RegistrationParameters7 : IRegistrationParameters7
 {
-    IDateAndDateTime2Choice? IRegistrationParameters7.CertificationDateTime => CertificationDateTime;
-    IEnumerable<ISecuritiesCertificate5> IRegistrationParameters7.CertificateNumber => CertificateNumber;
+    IDateAndDateTime2Choice? IRegistrationParameters7.CertificationDateTime =>
+        CertificationDateTime;
+    IEnumerable<ISecuritiesCertificate5> IRegistrationParameters7.CertificateNumber =>
+        CertificateNumber;
 }

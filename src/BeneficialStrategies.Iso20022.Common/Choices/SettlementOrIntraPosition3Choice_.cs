@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SettlementOrIntraPosition3Choice.SettlementTransaction))]
     [JsonDerivedType(typeof(SettlementOrIntraPosition3Choice.IntraPositionMovement))]
     [JsonDerivedType(typeof(SettlementOrIntraPosition3Choice.SettlementTransaction))]
-    public abstract record SettlementOrIntraPosition3Choice_
+    public abstract partial record SettlementOrIntraPosition3Choice_
     {
     }
 }

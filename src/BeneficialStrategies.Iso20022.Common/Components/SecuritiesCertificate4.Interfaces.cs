@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesCertificate4 : ISecuritiesCertificate4
-{
-}
+public partial record SecuritiesCertificate4 : ISecuritiesCertificate4 { }

@@ -10,19 +10,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption112 : ISecuritiesOption112
 {
-    ISecurityIdentification19 ISecuritiesOption112.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    ITemporaryFinancialInstrumentIndicator3Choice? ISecuritiesOption112.TemporaryFinancialInstrumentIndicator => TemporaryFinancialInstrumentIndicator;
-    IIssuerOfferorTaxabilityIndicator2Choice? ISecuritiesOption112.IssuerOfferorTaxabilityIndicator => IssuerOfferorTaxabilityIndicator;
+    ISecurityIdentification19 ISecuritiesOption112.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    ITemporaryFinancialInstrumentIndicator3Choice? ISecuritiesOption112.TemporaryFinancialInstrumentIndicator =>
+        TemporaryFinancialInstrumentIndicator;
+    IIssuerOfferorTaxabilityIndicator2Choice? ISecuritiesOption112.IssuerOfferorTaxabilityIndicator =>
+        IssuerOfferorTaxabilityIndicator;
     IGenericIdentification30? ISecuritiesOption112.IncomeType => IncomeType;
     IEnumerable<IGenericIdentification30> ISecuritiesOption112.OtherIncomeType => OtherIncomeType;
     IEnumerable<IGenericIdentification30> ISecuritiesOption112.ExemptionType => ExemptionType;
     IQuantity51Choice ISecuritiesOption112.PostingQuantity => PostingQuantity;
     ISafekeepingPlaceFormat41Choice? ISecuritiesOption112.SafekeepingPlace => SafekeepingPlace;
-    IFractionDispositionType27Choice? ISecuritiesOption112.FractionDisposition => FractionDisposition;
+    IFractionDispositionType27Choice? ISecuritiesOption112.FractionDisposition =>
+        FractionDisposition;
     ISecurityDate25 ISecuritiesOption112.DateDetails => DateDetails;
     ICorporateActionRate125? ISecuritiesOption112.RateDetails => RateDetails;
     ICorporateActionPrice83? ISecuritiesOption112.PriceDetails => PriceDetails;
     ICorporateActionAmounts60? ISecuritiesOption112.AmountDetails => AmountDetails;
-    ISettlementParties129? ISecuritiesOption112.ReceivingSettlementParties => ReceivingSettlementParties;
-    ISettlementParties129? ISecuritiesOption112.DeliveringSettlementParties => DeliveringSettlementParties;
+    ISettlementParties129? ISecuritiesOption112.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ISettlementParties129? ISecuritiesOption112.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
 }

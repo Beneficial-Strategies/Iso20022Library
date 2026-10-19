@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kj0GwWp9EemmaZLSPtWX5A")]
 [DisplayName("Transaction Details126")]
-public record TransactionDetails126
+public partial record TransactionDetails126
 {
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

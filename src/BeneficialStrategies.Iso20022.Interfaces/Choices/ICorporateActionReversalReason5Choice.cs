@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the reason for the reversal.
 /// </summary>
 [IsoId("_ryV6pzQVEe2o-K1dwNg8Gg")]
-public interface ICorporateActionReversalReason5Choice : IIsoChoice
-{
-}
+public interface ICorporateActionReversalReason5Choice : IIsoChoice { }

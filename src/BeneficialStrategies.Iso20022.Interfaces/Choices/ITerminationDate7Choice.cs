@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the termination date.
 /// </summary>
 [IsoId("_5TocY83yEee5nJBZsW8MFQ")]
-public interface ITerminationDate7Choice : IIsoChoice
-{
-}
+public interface ITerminationDate7Choice : IIsoChoice { }

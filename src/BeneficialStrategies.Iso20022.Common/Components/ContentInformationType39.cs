@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZGfhoY-WEe6oobnCtR50kw")]
 [DisplayName("Content Information Type39")]
-public record ContentInformationType39
+public partial record ContentInformationType39
 {
     /// <summary>
     /// Content Type.

@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentification309 : IPartyIdentification309
 {
-    IClearingSystemMemberIdentification2Choice? IPartyIdentification309.ClearingSystemMemberIdentification => ClearingSystemMemberIdentification;
+    IClearingSystemMemberIdentification2Choice? IPartyIdentification309.ClearingSystemMemberIdentification =>
+        ClearingSystemMemberIdentification;
     INameAndAddress5? IPartyIdentification309.NameAndAddress => NameAndAddress;
-    IGenericIdentification1? IPartyIdentification309.ProprietaryIdentification => ProprietaryIdentification;
+    IGenericIdentification1? IPartyIdentification309.ProprietaryIdentification =>
+        ProprietaryIdentification;
 }

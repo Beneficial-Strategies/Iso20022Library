@@ -14,5 +14,6 @@ public partial record RelatedSettlementInstruction3 : IRelatedSettlementInstruct
     ISettlementDate17Choice IRelatedSettlementInstruction3.SettlementDate => SettlementDate;
     IQuantity51Choice IRelatedSettlementInstruction3.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection110? IRelatedSettlementInstruction3.SettlementAmount => SettlementAmount;
-    IPartyIdentification143? IRelatedSettlementInstruction3.CounterpartyDepository => CounterpartyDepository;
+    IPartyIdentification143? IRelatedSettlementInstruction3.CounterpartyDepository =>
+        CounterpartyDepository;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Default Processing Or Standing Instruction2Choice.
 /// </summary>
 [IsoId("_fiXWcYudEe-ia-YMBhg53w")]
-public interface IDefaultProcessingOrStandingInstruction2Choice : IIsoChoice
-{
-}
+public interface IDefaultProcessingOrStandingInstruction2Choice : IIsoChoice { }

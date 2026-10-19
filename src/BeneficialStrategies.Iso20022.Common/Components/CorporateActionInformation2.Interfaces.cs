@@ -10,10 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionInformation2 : ICorporateActionInformation2
 {
-    IPartyIdentification2Choice ICorporateActionInformation2.AgentIdentification => AgentIdentification;
+    IPartyIdentification2Choice ICorporateActionInformation2.AgentIdentification =>
+        AgentIdentification;
     ICorporateActionEventType2FormatChoice ICorporateActionInformation2.EventType => EventType;
-    ICorporateActionEventProcessingType1FormatChoice? ICorporateActionInformation2.EventProcessingType => EventProcessingType;
-    ICorporateActionMandatoryVoluntary1FormatChoice ICorporateActionInformation2.MandatoryVoluntaryEventType => MandatoryVoluntaryEventType;
-    IFinancialInstrumentDescription3 ICorporateActionInformation2.UnderlyingSecurity => UnderlyingSecurity;
-    IEnumerable<IFinancialInstrumentDescription3> ICorporateActionInformation2.OtherUnderlyingSecurity => OtherUnderlyingSecurity;
+    ICorporateActionEventProcessingType1FormatChoice? ICorporateActionInformation2.EventProcessingType =>
+        EventProcessingType;
+    ICorporateActionMandatoryVoluntary1FormatChoice ICorporateActionInformation2.MandatoryVoluntaryEventType =>
+        MandatoryVoluntaryEventType;
+    IFinancialInstrumentDescription3 ICorporateActionInformation2.UnderlyingSecurity =>
+        UnderlyingSecurity;
+    IEnumerable<IFinancialInstrumentDescription3> ICorporateActionInformation2.OtherUnderlyingSecurity =>
+        OtherUnderlyingSecurity;
 }

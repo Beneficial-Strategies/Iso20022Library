@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesEntitlement1 : ISecuritiesEntitlement1
 {
-    ISecurityIdentification7 ISecuritiesEntitlement1.SecurityIdentification => SecurityIdentification;
-    IUnitOrFaceAmount1Choice ISecuritiesEntitlement1.EntitledSecuritiesQuantity => EntitledSecuritiesQuantity;
+    ISecurityIdentification7 ISecuritiesEntitlement1.SecurityIdentification =>
+        SecurityIdentification;
+    IUnitOrFaceAmount1Choice ISecuritiesEntitlement1.EntitledSecuritiesQuantity =>
+        EntitledSecuritiesQuantity;
 }

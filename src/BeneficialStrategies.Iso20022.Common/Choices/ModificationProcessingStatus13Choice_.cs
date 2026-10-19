@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Modified), nameof(Modified))]
     [KnownType(typeof(Proprietary))]
     [JsonDerivedType(typeof(Proprietary), nameof(Proprietary))]
-    public abstract record ModificationProcessingStatus13Choice_;
+    public abstract partial record ModificationProcessingStatus13Choice_;
 }

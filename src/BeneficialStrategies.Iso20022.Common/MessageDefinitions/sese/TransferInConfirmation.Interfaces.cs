@@ -14,7 +14,8 @@ public partial record TransferInConfirmation : ITransferInConfirmation
     IAdditionalReference2? ITransferInConfirmation.PoolReference => PoolReference;
     IAdditionalReference2? ITransferInConfirmation.PreviousReference => PreviousReference;
     ITransfer4 ITransferInConfirmation.TransferDetails => TransferDetails;
-    IFinancialInstrument3 ITransferInConfirmation.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument3 ITransferInConfirmation.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IInvestmentAccount10 ITransferInConfirmation.AccountDetails => AccountDetails;
     IDeliverInformation2 ITransferInConfirmation.SettlementDetails => SettlementDetails;
     IEnumerable<IExtension1> ITransferInConfirmation.Extension => Extension;

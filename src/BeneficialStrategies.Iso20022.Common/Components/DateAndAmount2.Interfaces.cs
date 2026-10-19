@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DateAndAmount2 : IDateAndAmount2
-{
-}
+public partial record DateAndAmount2 : IDateAndAmount2 { }

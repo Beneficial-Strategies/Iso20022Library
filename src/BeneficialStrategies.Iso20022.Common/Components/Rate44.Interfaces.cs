@@ -11,12 +11,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record Rate44 : IRate44
 {
     IRateAndAmountFormat57Choice? IRate44.AdditionalTax => AdditionalTax;
-    IEnumerable<IGrossDividendRateFormat38Choice> IRate44.GrossDistributionRate => GrossDistributionRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat11Choice> IRate44.GrossInterestRateUsedForPayment => GrossInterestRateUsedForPayment;
+    IEnumerable<IGrossDividendRateFormat38Choice> IRate44.GrossDistributionRate =>
+        GrossDistributionRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat11Choice> IRate44.GrossInterestRateUsedForPayment =>
+        GrossInterestRateUsedForPayment;
     IEnumerable<IRateAndAmountFormat56Choice> IRate44.WithholdingTaxRate => WithholdingTaxRate;
     IEnumerable<IRateAndAmountFormat56Choice> IRate44.SecondLevelTax => SecondLevelTax;
     IRateAndAmountFormat57Choice? IRate44.ChargesFees => ChargesFees;
-    ISolicitationFeeRateFormat11Choice? IRate44.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    ISolicitationFeeRateFormat11Choice? IRate44.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateFormat24Choice? IRate44.FiscalStamp => FiscalStamp;
     IRateFormat26Choice? IRate44.ThirdPartyIncentiveRate => ThirdPartyIncentiveRate;
     IEnumerable<INetDividendRateFormat39Choice> IRate44.NetDistributionRate => NetDistributionRate;

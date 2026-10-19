@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Proprietary identification of the security assigned by an institution or organisation.</summary>
 [IsoId("4aeb15f2-9a90-4ce5-8ea9-a593e3e6532f")]
-public interface IOtherProprietaryIdentification : ISecurityIdentification46Choice, IIsoChoiceVariant
+public interface IOtherProprietaryIdentification
+    : ISecurityIdentification46Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("OthrPrtryId")]

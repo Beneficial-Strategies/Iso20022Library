@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus5Choice
     /// </summary>
     [IsoId("_klDTUTqqEeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public record Code : ResponseStatus5Choice_
+    public partial record Code : ResponseStatus5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

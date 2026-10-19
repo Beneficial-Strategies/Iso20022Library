@@ -10,11 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption84 : ISecuritiesOption84
 {
-    IFinancialInstrumentQuantity44Choice? ISecuritiesOption84.MaximumQuantityToInstruct => MaximumQuantityToInstruct;
-    IFinancialInstrumentQuantity44Choice? ISecuritiesOption84.MinimumQuantityToInstruct => MinimumQuantityToInstruct;
-    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.MinimumMultipleQuantityToInstruct => MinimumMultipleQuantityToInstruct;
-    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.NewBoardLotQuantity => NewBoardLotQuantity;
-    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.NewDenominationQuantity => NewDenominationQuantity;
-    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.FrontEndOddLotQuantity => FrontEndOddLotQuantity;
-    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.BackEndOddLotQuantity => BackEndOddLotQuantity;
+    IFinancialInstrumentQuantity44Choice? ISecuritiesOption84.MaximumQuantityToInstruct =>
+        MaximumQuantityToInstruct;
+    IFinancialInstrumentQuantity44Choice? ISecuritiesOption84.MinimumQuantityToInstruct =>
+        MinimumQuantityToInstruct;
+    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.MinimumMultipleQuantityToInstruct =>
+        MinimumMultipleQuantityToInstruct;
+    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.NewBoardLotQuantity =>
+        NewBoardLotQuantity;
+    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.NewDenominationQuantity =>
+        NewDenominationQuantity;
+    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.FrontEndOddLotQuantity =>
+        FrontEndOddLotQuantity;
+    IFinancialInstrumentQuantity43Choice? ISecuritiesOption84.BackEndOddLotQuantity =>
+        BackEndOddLotQuantity;
 }

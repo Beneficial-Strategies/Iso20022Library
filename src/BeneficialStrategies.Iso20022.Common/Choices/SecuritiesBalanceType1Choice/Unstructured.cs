@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType1Choice
     /// </summary>
     [IsoId("_U11Eh9p-Ed-ak6NoX_4Aeg_1406670923")]
     [DisplayName("Unstructured")]
-    public record Unstructured : SecuritiesBalanceType1Choice_
+    public partial record Unstructured : SecuritiesBalanceType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

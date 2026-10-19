@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason14Choice
     /// </summary>
     [IsoId("_ux5oJ1hpEeS8HfHHd4stCA")]
     [DisplayName("Pending Cancellation Reason")]
-    public record PendingCancellationReason : Reason14Choice_
+    public partial record PendingCancellationReason : Reason14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgCxlRsn")]

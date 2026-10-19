@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus61Cho
     /// <summary>Modification has been requested.</summary>
     [IsoId("f298bf94-acbb-45b5-a64e-2521801d5eda")]
     [DisplayName("Modification Requested")]
-    public record ModificationRequested : InstructionProcessingStatus61Choice_
+    public partial record ModificationRequested : InstructionProcessingStatus61Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("ModReqd")]

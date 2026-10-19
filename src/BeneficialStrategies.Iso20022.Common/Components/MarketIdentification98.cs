@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XVVrG4VYEe-Pv9KR9bv9IA")]
 [DisplayName("Market Identification98")]
-public record MarketIdentification98
+public partial record MarketIdentification98
 {
     /// <summary>
     /// Identification.

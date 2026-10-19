@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatusChoice;
 
-public partial record Reason : IReason
-{
-}
+public partial record Reason : IReason { }

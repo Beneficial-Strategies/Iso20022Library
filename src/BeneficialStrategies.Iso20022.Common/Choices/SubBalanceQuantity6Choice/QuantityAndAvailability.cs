@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity6Choice
     [IsoId("_Mp-n8znGEeWV5sr121Fc8A")]
     [DisplayName("Quantity And Availability")]
     [IsoXmlTag("QtyAndAvlbty")]
-    public record QuantityAndAvailability : SubBalanceQuantity6Choice_
+    public partial record QuantityAndAvailability : SubBalanceQuantity6Choice_
     {
         /// <summary>
         /// Quantity of securities in the sub-balance.

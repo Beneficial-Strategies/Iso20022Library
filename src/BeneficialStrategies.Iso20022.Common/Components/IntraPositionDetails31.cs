@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pkaxoR5hEeWE3PufGMdJ3w")]
 [DisplayName("Intra Position Details")]
-public record IntraPositionDetails31
+public partial record IntraPositionDetails31
 {
     /// <summary>
     /// Collective reference identifying a set of messages.

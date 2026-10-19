@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Status applying to the instruction cancellation request received.
 /// </summary>
 [IsoId("_iKIapLKfEemux5trsZcCpw")]
-public interface ICancellationStatus26Choice : IIsoChoice
-{
-}
+public interface ICancellationStatus26Choice : IIsoChoice { }

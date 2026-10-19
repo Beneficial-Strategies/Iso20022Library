@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the different statuses of a corporate action information advice.
 /// </summary>
 [IsoId("_RiPM0tp-Ed-ak6NoX_4Aeg_-923033281")]
-public interface ICorporateActionInformationStatus1Choice : IIsoChoice
-{
-}
+public interface ICorporateActionInformationStatus1Choice : IIsoChoice { }

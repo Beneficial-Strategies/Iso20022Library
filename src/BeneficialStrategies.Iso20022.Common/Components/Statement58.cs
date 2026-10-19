@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a-uBse0kEeWGZ8O9Moj6Zw")]
 [DisplayName("Statement58")]
-public record Statement58
+public partial record Statement58
 {
     /// <summary>
     /// Identification of the SecuritiesStatementQuery message sent to request this statement.

@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionModificationRequestStatusAdvice002V05 : ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05
+public partial record SecuritiesSettlementTransactionModificationRequestStatusAdvice002V05
+    : ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05
 {
-    IIdentification16 ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.ModificationRequestReference => ModificationRequestReference;
-    IPartyIdentification156? ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.AccountOwner => AccountOwner;
-    ISecuritiesAccount30 ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.SafekeepingAccount => SafekeepingAccount;
-    ITransactionIdentifications37? ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.TransactionIdentification => TransactionIdentification;
-    IModificationProcessingStatus8Choice ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.ModificationProcessingStatus => ModificationProcessingStatus;
-    ITransactionDetails141? ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.SupplementaryData => SupplementaryData;
+    IIdentification16 ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.ModificationRequestReference =>
+        ModificationRequestReference;
+    IPartyIdentification156? ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30 ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionIdentifications37? ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.TransactionIdentification =>
+        TransactionIdentification;
+    IModificationProcessingStatus8Choice ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.ModificationProcessingStatus =>
+        ModificationProcessingStatus;
+    ITransactionDetails141? ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V05.SupplementaryData =>
+        SupplementaryData;
 }

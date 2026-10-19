@@ -8,16 +8,27 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesFinancingModificationInstructionV04 : ISecuritiesFinancingModificationInstructionV04
+public partial record SecuritiesFinancingModificationInstructionV04
+    : ISecuritiesFinancingModificationInstructionV04
 {
-    ITransactionTypeAndAdditionalParameters7 ISecuritiesFinancingModificationInstructionV04.TransactionTypeAndModificationAdditionalParameters => TransactionTypeAndModificationAdditionalParameters;
-    ISecuritiesTradeDetails5 ISecuritiesFinancingModificationInstructionV04.TradeDetails => TradeDetails;
-    ISecurityIdentification14 ISecuritiesFinancingModificationInstructionV04.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IQuantityAndAccount16 ISecuritiesFinancingModificationInstructionV04.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISecuritiesFinancingTransactionDetails19 ISecuritiesFinancingModificationInstructionV04.SecuritiesFinancingAdditionalDetails => SecuritiesFinancingAdditionalDetails;
-    ISettlementDetails72? ISecuritiesFinancingModificationInstructionV04.SettlementParameters => SettlementParameters;
-    ISettlementParties10? ISecuritiesFinancingModificationInstructionV04.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties10? ISecuritiesFinancingModificationInstructionV04.ReceivingSettlementParties => ReceivingSettlementParties;
-    IAmountAndDirection10? ISecuritiesFinancingModificationInstructionV04.OpeningSettlementAmount => OpeningSettlementAmount;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingModificationInstructionV04.SupplementaryData => SupplementaryData;
+    ITransactionTypeAndAdditionalParameters7 ISecuritiesFinancingModificationInstructionV04.TransactionTypeAndModificationAdditionalParameters =>
+        TransactionTypeAndModificationAdditionalParameters;
+    ISecuritiesTradeDetails5 ISecuritiesFinancingModificationInstructionV04.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification14 ISecuritiesFinancingModificationInstructionV04.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IQuantityAndAccount16 ISecuritiesFinancingModificationInstructionV04.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISecuritiesFinancingTransactionDetails19 ISecuritiesFinancingModificationInstructionV04.SecuritiesFinancingAdditionalDetails =>
+        SecuritiesFinancingAdditionalDetails;
+    ISettlementDetails72? ISecuritiesFinancingModificationInstructionV04.SettlementParameters =>
+        SettlementParameters;
+    ISettlementParties10? ISecuritiesFinancingModificationInstructionV04.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties10? ISecuritiesFinancingModificationInstructionV04.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    IAmountAndDirection10? ISecuritiesFinancingModificationInstructionV04.OpeningSettlementAmount =>
+        OpeningSettlementAmount;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingModificationInstructionV04.SupplementaryData =>
+        SupplementaryData;
 }

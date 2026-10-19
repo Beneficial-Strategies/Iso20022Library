@@ -12,5 +12,6 @@ public partial record UnitPrice23 : IUnitPrice23
 {
     ITypeOfPrice46Choice IUnitPrice23.Type => Type;
     IPriceValue1 IUnitPrice23.Value => Value;
-    ITaxableIncomePerShareCalculated2Choice? IUnitPrice23.TaxableIncomePerShareCalculated => TaxableIncomePerShareCalculated;
+    ITaxableIncomePerShareCalculated2Choice? IUnitPrice23.TaxableIncomePerShareCalculated =>
+        TaxableIncomePerShareCalculated;
 }

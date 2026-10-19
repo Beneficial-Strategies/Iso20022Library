@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionNotification4 : ICorporateActionNotification4
 {
-    ICorporateActionProcessingStatus4Choice ICorporateActionNotification4.ProcessingStatus => ProcessingStatus;
+    ICorporateActionProcessingStatus4Choice ICorporateActionNotification4.ProcessingStatus =>
+        ProcessingStatus;
 }

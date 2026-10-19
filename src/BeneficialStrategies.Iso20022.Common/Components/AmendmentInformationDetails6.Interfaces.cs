@@ -10,11 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AmendmentInformationDetails6 : IAmendmentInformationDetails6
 {
-    IPartyIdentification32? IAmendmentInformationDetails6.OriginalCreditorSchemeIdentification => OriginalCreditorSchemeIdentification;
-    IBranchAndFinancialInstitutionIdentification4? IAmendmentInformationDetails6.OriginalCreditorAgent => OriginalCreditorAgent;
-    ICashAccount16? IAmendmentInformationDetails6.OriginalCreditorAgentAccount => OriginalCreditorAgentAccount;
+    IPartyIdentification32? IAmendmentInformationDetails6.OriginalCreditorSchemeIdentification =>
+        OriginalCreditorSchemeIdentification;
+    IBranchAndFinancialInstitutionIdentification4? IAmendmentInformationDetails6.OriginalCreditorAgent =>
+        OriginalCreditorAgent;
+    ICashAccount16? IAmendmentInformationDetails6.OriginalCreditorAgentAccount =>
+        OriginalCreditorAgentAccount;
     IPartyIdentification32? IAmendmentInformationDetails6.OriginalDebtor => OriginalDebtor;
     ICashAccount16? IAmendmentInformationDetails6.OriginalDebtorAccount => OriginalDebtorAccount;
-    IBranchAndFinancialInstitutionIdentification4? IAmendmentInformationDetails6.OriginalDebtorAgent => OriginalDebtorAgent;
-    ICashAccount16? IAmendmentInformationDetails6.OriginalDebtorAgentAccount => OriginalDebtorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification4? IAmendmentInformationDetails6.OriginalDebtorAgent =>
+        OriginalDebtorAgent;
+    ICashAccount16? IAmendmentInformationDetails6.OriginalDebtorAgentAccount =>
+        OriginalDebtorAgentAccount;
 }

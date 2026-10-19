@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hevo4S5KEeunNvJlR_vCbg")]
 [DisplayName("Device Response")]
-public record DeviceResponse4
+public partial record DeviceResponse4
 {
     /// <summary>
     /// Environment of the transaction.

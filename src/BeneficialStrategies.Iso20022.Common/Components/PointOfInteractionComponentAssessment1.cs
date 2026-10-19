@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0nUakAyQEeKa_56Jbsi1RQ")]
 [DisplayName("Point Of Interaction Component Assessment")]
-public record PointOfInteractionComponentAssessment1
+public partial record PointOfInteractionComponentAssessment1
 {
     /// <summary>
     /// Type of assessment of the component.

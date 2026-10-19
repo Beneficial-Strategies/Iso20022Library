@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
 /// Indicates whether the option, for example, currency option, will be selected by default if no instruction is provided by the account owner.
 /// </summary>
 [IsoId("_Q0VlA9p-Ed-ak6NoX_4Aeg_-887513505")]
-public interface IDefaultOptionIndicator : IDefaultProcessingOrStandingInstruction1Choice, IIsoChoiceVariant
+public interface IDefaultOptionIndicator
+    : IDefaultProcessingOrStandingInstruction1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

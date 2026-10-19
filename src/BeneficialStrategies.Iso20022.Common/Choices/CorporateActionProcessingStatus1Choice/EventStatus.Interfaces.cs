@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus1Choice;
 
-public partial record EventStatus : IEventStatus
-{
-}
+public partial record EventStatus : IEventStatus { }

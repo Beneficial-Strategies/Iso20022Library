@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record FormOfSecurity7Choice_ : IFormOfSecurity7Choice
-{
-}
+public abstract partial record FormOfSecurity7Choice_ : IFormOfSecurity7Choice { }

@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record MeetingInstructionV06 : IMeetingInstructionV06
 {
     IMeetingReference8 IMeetingInstructionV06.MeetingReference => MeetingReference;
-    ISecurityIdentification19 IMeetingInstructionV06.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 IMeetingInstructionV06.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IEnumerable<IInstruction4> IMeetingInstructionV06.Instruction => Instruction;
     IEnumerable<ISupplementaryData1> IMeetingInstructionV06.SupplementaryData => SupplementaryData;
 }

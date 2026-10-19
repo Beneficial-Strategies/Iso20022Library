@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Dg5V4TqqEeWyoP0PbocV1Q")]
     [DisplayName("Allocation Satus 3 Choice")]
-    public abstract record AllocationSatus3Choice_ { }
+    public abstract partial record AllocationSatus3Choice_ { }
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify whether the taxable income per share or per dividend is calculated.
 /// </summary>
 [IsoId("_c5WhE5KQEeWHWpTQn1FFVg")]
-public interface ITaxableIncomePerShareCalculatedFormat4Choice : IIsoChoice
-{
-}
+public interface ITaxableIncomePerShareCalculatedFormat4Choice : IIsoChoice { }

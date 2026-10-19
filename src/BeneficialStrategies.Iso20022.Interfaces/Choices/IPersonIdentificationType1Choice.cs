@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of personal identification type.
 /// </summary>
 [IsoId("_QEW5kdp-Ed-ak6NoX_4Aeg_-1681666932")]
-public interface IPersonIdentificationType1Choice : IIsoChoice
-{
-}
+public interface IPersonIdentificationType1Choice : IIsoChoice { }

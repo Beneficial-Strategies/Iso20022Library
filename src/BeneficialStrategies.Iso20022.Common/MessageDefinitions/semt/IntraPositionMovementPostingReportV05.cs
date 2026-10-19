@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_XVkgYwCUEeW_3KiG8SEjHA")]
 [DisplayName("Intra Position Movement Posting Report V")]
-public record IntraPositionMovementPostingReportV05 : IOuterRecord
+public partial record IntraPositionMovementPostingReportV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

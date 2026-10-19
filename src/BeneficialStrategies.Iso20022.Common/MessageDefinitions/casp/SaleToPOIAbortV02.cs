@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"The SaleToPOIAbort message is sent by a sale system to abort process on POI.")]
 [IsoId("_BckBgQ1SEeqjM-rxn3HuXQ")]
 [DisplayName("Sale To POI Abort V")]
-public record SaleToPOIAbortV02 : IOuterRecord
+public partial record SaleToPOIAbortV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

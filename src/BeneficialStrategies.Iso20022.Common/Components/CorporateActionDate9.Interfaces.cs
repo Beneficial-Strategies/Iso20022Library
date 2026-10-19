@@ -12,6 +12,7 @@ public partial record CorporateActionDate9 : ICorporateActionDate9
 {
     IDateFormat6Choice ICorporateActionDate9.PaymentDate => PaymentDate;
     IDateFormat11Choice? ICorporateActionDate9.ValueDate => ValueDate;
-    IDateFormat6Choice? ICorporateActionDate9.ForeignExchangeRateFixingDate => ForeignExchangeRateFixingDate;
+    IDateFormat6Choice? ICorporateActionDate9.ForeignExchangeRateFixingDate =>
+        ForeignExchangeRateFixingDate;
     IDateFormat6Choice? ICorporateActionDate9.EarliestPaymentDate => EarliestPaymentDate;
 }

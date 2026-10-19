@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FailingReason20Choice.Proprietary), nameof(FailingReason20Choice.Proprietary))]
     [IsoId("_0w8A0eSkEe-qVZLXW4RRBw")]
     [DisplayName("Failing Reason 20 Choice")]
-    public abstract record FailingReason20Choice_ { }
+    public abstract partial record FailingReason20Choice_ { }
 }

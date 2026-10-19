@@ -10,17 +10,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTradeDetails86 : ISecuritiesTradeDetails86
 {
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails86.TradeIdentification => TradeIdentification;
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails86.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails86.TradeIdentification =>
+        TradeIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails86.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification2? ISecuritiesTradeDetails86.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification1? ISecuritiesTradeDetails86.PlaceOfClearing => PlaceOfClearing;
     ITradeDate9Choice? ISecuritiesTradeDetails86.TradeDate => TradeDate;
     ISettlementDate20Choice? ISecuritiesTradeDetails86.SettlementDate => SettlementDate;
-    ISettlementDate22Choice ISecuritiesTradeDetails86.EffectiveSettlementDate => EffectiveSettlementDate;
+    ISettlementDate22Choice ISecuritiesTradeDetails86.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IPrice3? ISecuritiesTradeDetails86.DealPrice => DealPrice;
     IOpeningClosing4Choice? ISecuritiesTradeDetails86.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting9Choice> ISecuritiesTradeDetails86.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails86.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails86.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity5Choice? ISecuritiesTradeDetails86.InvestorCapacity => InvestorCapacity;
     ITradeOriginator4Choice? ISecuritiesTradeDetails86.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice32Choice? ISecuritiesTradeDetails86.TypeOfPrice => TypeOfPrice;

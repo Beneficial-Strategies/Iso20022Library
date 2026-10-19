@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Corporate Action Reversal Reason12Choice.
 /// </summary>
 [IsoId("_m45EE5t3Ee-wQIOX0djF2w")]
-public interface ICorporateActionReversalReason12Choice : IIsoChoice
-{
-}
+public interface ICorporateActionReversalReason12Choice : IIsoChoice { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the FX cancellation information.
 /// </summary>
 [IsoId("_QtVlIdp-Ed-ak6NoX_4Aeg_615585032")]
-public interface IFXCancellation1Choice : IIsoChoice
-{
-}
+public interface IFXCancellation1Choice : IIsoChoice { }

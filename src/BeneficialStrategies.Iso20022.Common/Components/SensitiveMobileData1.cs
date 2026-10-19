@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U6ri8NtoEeipuvJHTHIw9A")]
 [DisplayName("Sensitive Mobile Data")]
-public record SensitiveMobileData1
+public partial record SensitiveMobileData1
 {
     /// <summary>
     /// identifies the mobile - Mobile Subscriber Integrated Service Digital Network (The SIM identifier).

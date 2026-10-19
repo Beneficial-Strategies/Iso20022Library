@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iT97kDkbEem897H7zB2RJg")]
 [DisplayName("Penalty Amount Breakdown1")]
-public record PenaltyAmountBreakdown1
+public partial record PenaltyAmountBreakdown1
 {
     /// <summary>
     /// Penalty amount defined per amount type.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YaxgVWdnEemMLeaDfmIfIA")]
 [DisplayName("Securities Cancellation Query Criteria1")]
-public record SecuritiesCancellationQueryCriteria1
+public partial record SecuritiesCancellationQueryCriteria1
 {
     /// <summary>
     /// Collective reference identifying a set of messages.

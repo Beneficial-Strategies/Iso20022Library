@@ -10,12 +10,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StructuredRemittanceInformation18 : IStructuredRemittanceInformation18
 {
-    IEnumerable<IReferredDocumentInformation8> IStructuredRemittanceInformation18.ReferredDocumentInformation => ReferredDocumentInformation;
-    IRemittanceAmount4? IStructuredRemittanceInformation18.ReferredDocumentAmount => ReferredDocumentAmount;
-    ICreditorReferenceInformation3? IStructuredRemittanceInformation18.CreditorReferenceInformation => CreditorReferenceInformation;
+    IEnumerable<IReferredDocumentInformation8> IStructuredRemittanceInformation18.ReferredDocumentInformation =>
+        ReferredDocumentInformation;
+    IRemittanceAmount4? IStructuredRemittanceInformation18.ReferredDocumentAmount =>
+        ReferredDocumentAmount;
+    ICreditorReferenceInformation3? IStructuredRemittanceInformation18.CreditorReferenceInformation =>
+        CreditorReferenceInformation;
     IPartyIdentification272? IStructuredRemittanceInformation18.Invoicer => Invoicer;
     IPartyIdentification272? IStructuredRemittanceInformation18.Invoicee => Invoicee;
     ITaxData1? IStructuredRemittanceInformation18.TaxRemittance => TaxRemittance;
-    IGarnishment4? IStructuredRemittanceInformation18.GarnishmentRemittance => GarnishmentRemittance;
-    IEnumerable<Max140Text> IStructuredRemittanceInformation18.AdditionalRemittanceInformation => AdditionalRemittanceInformation;
+    IGarnishment4? IStructuredRemittanceInformation18.GarnishmentRemittance =>
+        GarnishmentRemittance;
+    IEnumerable<Max140Text> IStructuredRemittanceInformation18.AdditionalRemittanceInformation =>
+        AdditionalRemittanceInformation;
 }

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashOption44 : ICashOption44
 {
-    IGenericIdentification30? ICashOption44.IssuerOfferorTaxabilityIndicator => IssuerOfferorTaxabilityIndicator;
+    IGenericIdentification30? ICashOption44.IssuerOfferorTaxabilityIndicator =>
+        IssuerOfferorTaxabilityIndicator;
     IGenericIdentification30? ICashOption44.IncomeType => IncomeType;
     IEnumerable<IGenericIdentification30> ICashOption44.ExemptionType => ExemptionType;
     IAccount8Choice? ICashOption44.Account => Account;

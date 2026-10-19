@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status29Choice
     /// </summary>
     [IsoId("_IuIhjdB7EeihG9bKfarOOA")]
     [DisplayName("Inferred Matching Status")]
-    public record InferredMatchingStatus : Status29Choice_
+    public partial record InferredMatchingStatus : Status29Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IfrrdMtchgSts")]

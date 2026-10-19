@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat43Choice;
 /// <summary>
 /// Rate Type And Amount And Rate Status.
 /// </summary>
-public interface IRateTypeAndAmountAndRateStatus : IGrossDividendRateFormat43Choice, IIsoChoiceVariant
+public interface IRateTypeAndAmountAndRateStatus
+    : IGrossDividendRateFormat43Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

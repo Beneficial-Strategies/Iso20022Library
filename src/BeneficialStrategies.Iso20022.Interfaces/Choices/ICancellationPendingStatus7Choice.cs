@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the cancellation pending status.
 /// </summary>
 [IsoId("_mp9xQSY5EeW_ZNn8gbfY7Q")]
-public interface ICancellationPendingStatus7Choice : IIsoChoice
-{
-}
+public interface ICancellationPendingStatus7Choice : IIsoChoice { }

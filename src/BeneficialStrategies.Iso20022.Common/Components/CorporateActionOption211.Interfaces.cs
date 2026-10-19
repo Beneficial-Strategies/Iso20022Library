@@ -12,13 +12,16 @@ public partial record CorporateActionOption211 : ICorporateActionOption211
 {
     IOptionNumber1Choice ICorporateActionOption211.OptionNumber => OptionNumber;
     ICorporateActionOption33Choice ICorporateActionOption211.OptionType => OptionType;
-    IEnumerable<IOptionFeaturesFormat18Choice> ICorporateActionOption211.OptionFeatures => OptionFeatures;
-    IFractionDispositionType27Choice? ICorporateActionOption211.FractionDisposition => FractionDisposition;
+    IEnumerable<IOptionFeaturesFormat18Choice> ICorporateActionOption211.OptionFeatures =>
+        OptionFeatures;
+    IFractionDispositionType27Choice? ICorporateActionOption211.FractionDisposition =>
+        FractionDisposition;
     ICorporateActionDate88? ICorporateActionOption211.DateDetails => DateDetails;
     ICorporateActionPeriod13? ICorporateActionOption211.PeriodDetails => PeriodDetails;
     ICorporateActionRate107? ICorporateActionOption211.RateAndAmountDetails => RateAndAmountDetails;
     ICorporateActionPrice61? ICorporateActionOption211.PriceDetails => PriceDetails;
     IMarketIdentification84? ICorporateActionOption211.PlaceOfTrade => PlaceOfTrade;
-    IEnumerable<ISecuritiesOption93> ICorporateActionOption211.SecuritiesMovementDetails => SecuritiesMovementDetails;
+    IEnumerable<ISecuritiesOption93> ICorporateActionOption211.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
     IEnumerable<ICashOption85> ICorporateActionOption211.CashMovementDetails => CashMovementDetails;
 }

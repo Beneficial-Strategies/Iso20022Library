@@ -13,8 +13,11 @@ public partial record CorporateActionNarrative21 : ICorporateActionNarrative21
     IEnumerable<Max350Text> ICorporateActionNarrative21.AdditionalText => AdditionalText;
     IEnumerable<Max350Text> ICorporateActionNarrative21.NarrativeVersion => NarrativeVersion;
     IEnumerable<Max350Text> ICorporateActionNarrative21.RegistrationDetails => RegistrationDetails;
-    IEnumerable<Max350Text> ICorporateActionNarrative21.PartyContactNarrative => PartyContactNarrative;
+    IEnumerable<Max350Text> ICorporateActionNarrative21.PartyContactNarrative =>
+        PartyContactNarrative;
     IEnumerable<Max350Text> ICorporateActionNarrative21.Disclaimer => Disclaimer;
-    IEnumerable<Max350Text> ICorporateActionNarrative21.BasketOrIndexInformation => BasketOrIndexInformation;
-    IEnumerable<Max350Text> ICorporateActionNarrative21.CertificationBreakdown => CertificationBreakdown;
+    IEnumerable<Max350Text> ICorporateActionNarrative21.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
+    IEnumerable<Max350Text> ICorporateActionNarrative21.CertificationBreakdown =>
+        CertificationBreakdown;
 }

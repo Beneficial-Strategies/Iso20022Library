@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of modification status.
 /// </summary>
 [IsoId("_6QDrU5NLEeWGlc8L7oPDIg")]
-public interface IModificationStatus5Choice : IIsoChoice
-{
-}
+public interface IModificationStatus5Choice : IIsoChoice { }

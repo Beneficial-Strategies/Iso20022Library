@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CopyInformation4 : ICopyInformation4
-{
-}
+public partial record CopyInformation4 : ICopyInformation4 { }

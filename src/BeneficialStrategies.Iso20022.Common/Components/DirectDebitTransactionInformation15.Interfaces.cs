@@ -10,13 +10,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DirectDebitTransactionInformation15 : IDirectDebitTransactionInformation15
 {
-    IPaymentIdentification3 IDirectDebitTransactionInformation15.PaymentIdentification => PaymentIdentification;
-    IPaymentTypeInformation21? IDirectDebitTransactionInformation15.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementTimeRequest2? IDirectDebitTransactionInformation15.SettlementTimeRequest => SettlementTimeRequest;
-    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation15.UltimateDebtor => UltimateDebtor;
-    IBranchAndFinancialInstitutionIdentification5 IDirectDebitTransactionInformation15.Debtor => Debtor;
+    IPaymentIdentification3 IDirectDebitTransactionInformation15.PaymentIdentification =>
+        PaymentIdentification;
+    IPaymentTypeInformation21? IDirectDebitTransactionInformation15.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementTimeRequest2? IDirectDebitTransactionInformation15.SettlementTimeRequest =>
+        SettlementTimeRequest;
+    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation15.UltimateDebtor =>
+        UltimateDebtor;
+    IBranchAndFinancialInstitutionIdentification5 IDirectDebitTransactionInformation15.Debtor =>
+        Debtor;
     ICashAccount24? IDirectDebitTransactionInformation15.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation15.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation15.DebtorAgent =>
+        DebtorAgent;
     ICashAccount24? IDirectDebitTransactionInformation15.DebtorAgentAccount => DebtorAgentAccount;
-    IRemittanceInformation2? IDirectDebitTransactionInformation15.RemittanceInformation => RemittanceInformation;
+    IRemittanceInformation2? IDirectDebitTransactionInformation15.RemittanceInformation =>
+        RemittanceInformation;
 }

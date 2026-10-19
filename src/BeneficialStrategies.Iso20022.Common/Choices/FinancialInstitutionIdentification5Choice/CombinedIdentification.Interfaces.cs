@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 
 public partial record CombinedIdentification : ICombinedIdentification
 {
-    IClearingSystemMemberIdentification3Choice? ICombinedIdentification.ClearingSystemMemberIdentification => ClearingSystemMemberIdentification;
+    IClearingSystemMemberIdentification3Choice? ICombinedIdentification.ClearingSystemMemberIdentification =>
+        ClearingSystemMemberIdentification;
     IPostalAddress1? ICombinedIdentification.PostalAddress => PostalAddress;
-    IGenericIdentification3? ICombinedIdentification.ProprietaryIdentification => ProprietaryIdentification;
+    IGenericIdentification3? ICombinedIdentification.ProprietaryIdentification =>
+        ProprietaryIdentification;
 }

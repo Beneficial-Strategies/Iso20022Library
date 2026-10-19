@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails1 : ISecuritiesTradeDetails1
 {
     IEnumerable<Max35Text> ISecuritiesTradeDetails1.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails1.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails1.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IMarketIdentification4? ISecuritiesTradeDetails1.PlaceOfTrade => PlaceOfTrade;
     ITradeDate1Choice? ISecuritiesTradeDetails1.TradeDate => TradeDate;
     ISettlementDate1Choice ISecuritiesTradeDetails1.SettlementDate => SettlementDate;
@@ -19,11 +20,13 @@ public partial record SecuritiesTradeDetails1 : ISecuritiesTradeDetails1
     IPrice2? ISecuritiesTradeDetails1.DealPrice => DealPrice;
     IOpeningClosing1Choice? ISecuritiesTradeDetails1.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting2Choice> ISecuritiesTradeDetails1.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails1.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails1.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity1Choice? ISecuritiesTradeDetails1.InvestorCapacity => InvestorCapacity;
     ITradeOriginator1Choice? ISecuritiesTradeDetails1.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice3Choice? ISecuritiesTradeDetails1.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails1.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails1.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus1Choice? ISecuritiesTradeDetails1.MatchingStatus => MatchingStatus;
     IAffirmationStatus1Choice? ISecuritiesTradeDetails1.AffirmationStatus => AffirmationStatus;
 }

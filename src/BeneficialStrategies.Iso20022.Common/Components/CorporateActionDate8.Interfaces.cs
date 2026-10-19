@@ -16,7 +16,9 @@ public partial record CorporateActionDate8 : ICorporateActionDate8
     IDateFormat6Choice? ICorporateActionDate8.MarketDeadline => MarketDeadline;
     IDateFormat7Choice? ICorporateActionDate8.ResponseDeadline => ResponseDeadline;
     IDateFormat6Choice? ICorporateActionDate8.ExpiryDate => ExpiryDate;
-    IDateFormat6Choice? ICorporateActionDate8.SubscriptionCostDebitDate => SubscriptionCostDebitDate;
-    IDateFormat6Choice? ICorporateActionDate8.DepositoryCoverExpirationDate => DepositoryCoverExpirationDate;
+    IDateFormat6Choice? ICorporateActionDate8.SubscriptionCostDebitDate =>
+        SubscriptionCostDebitDate;
+    IDateFormat6Choice? ICorporateActionDate8.DepositoryCoverExpirationDate =>
+        DepositoryCoverExpirationDate;
     IDateFormat6Choice? ICorporateActionDate8.LeadPlaintiffDeadline => LeadPlaintiffDeadline;
 }

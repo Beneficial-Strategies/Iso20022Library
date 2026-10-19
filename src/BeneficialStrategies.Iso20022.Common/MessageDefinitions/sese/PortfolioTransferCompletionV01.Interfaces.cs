@@ -14,17 +14,25 @@ public partial record PortfolioTransferCompletionV01 : IPortfolioTransferComplet
     IAdditionalReference11? IPortfolioTransferCompletionV01.PoolReference => PoolReference;
     IAdditionalReference10? IPortfolioTransferCompletionV01.PreviousReference => PreviousReference;
     IAdditionalReference10? IPortfolioTransferCompletionV01.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPortfolioTransferCompletionV01.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
+    IIndividualPerson8? IPortfolioTransferCompletionV01.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
     IIndividualPerson8? IPortfolioTransferCompletionV01.RegisteredHolder => RegisteredHolder;
-    IIndividualPerson8? IPortfolioTransferCompletionV01.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPortfolioTransferCompletionV01.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation36? IPortfolioTransferCompletionV01.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation36? IPortfolioTransferCompletionV01.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation36> IPortfolioTransferCompletionV01.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPortfolioTransferCompletionV01.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPortfolioTransferCompletionV01.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation36? IPortfolioTransferCompletionV01.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation36? IPortfolioTransferCompletionV01.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation36> IPortfolioTransferCompletionV01.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IInvestmentAccount69 IPortfolioTransferCompletionV01.TransferorAccount => TransferorAccount;
     IInvestmentAccount69? IPortfolioTransferCompletionV01.NomineeAccount => NomineeAccount;
     IPartyIdentification309 IPortfolioTransferCompletionV01.Transferee => Transferee;
-    IEnumerable<IPortfolioTransfer13> IPortfolioTransferCompletionV01.ProductTransfer => ProductTransfer;
-    IMarketPracticeVersion1? IPortfolioTransferCompletionV01.MarketPracticeVersion => MarketPracticeVersion;
+    IEnumerable<IPortfolioTransfer13> IPortfolioTransferCompletionV01.ProductTransfer =>
+        ProductTransfer;
+    IMarketPracticeVersion1? IPortfolioTransferCompletionV01.MarketPracticeVersion =>
+        MarketPracticeVersion;
     IEnumerable<IExtension1> IPortfolioTransferCompletionV01.Extension => Extension;
 }

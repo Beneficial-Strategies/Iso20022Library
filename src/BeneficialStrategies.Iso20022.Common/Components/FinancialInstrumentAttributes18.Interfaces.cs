@@ -10,12 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes18 : IFinancialInstrumentAttributes18
 {
-    ISecurityIdentification14? IFinancialInstrumentAttributes18.SecurityIdentification => SecurityIdentification;
+    ISecurityIdentification14? IFinancialInstrumentAttributes18.SecurityIdentification =>
+        SecurityIdentification;
     IMarketIdentification2? IFinancialInstrumentAttributes18.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes18.DayCountBasis => DayCountBasis;
-    IClassificationType2Choice? IFinancialInstrumentAttributes18.ClassificationType => ClassificationType;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.MinimumExercisableQuantity => MinimumExercisableQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.MinimumExercisableMultipleQuantity => MinimumExercisableMultipleQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.ContractSize => ContractSize;
+    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes18.DayCountBasis =>
+        DayCountBasis;
+    IClassificationType2Choice? IFinancialInstrumentAttributes18.ClassificationType =>
+        ClassificationType;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.MinimumExercisableQuantity =>
+        MinimumExercisableQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.MinimumExercisableMultipleQuantity =>
+        MinimumExercisableMultipleQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes18.ContractSize =>
+        ContractSize;
 }

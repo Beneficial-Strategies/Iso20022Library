@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PowerOfAttorneyRequirements3 : IPowerOfAttorneyRequirements3
 {
-    IEnumerable<PowerOfAttorneyLegalisation1Code> IPowerOfAttorneyRequirements3.LegalRequirement => LegalRequirement;
-    IDateFormat29Choice? IPowerOfAttorneyRequirements3.DocumentSubmissionDeadline => DocumentSubmissionDeadline;
+    IEnumerable<PowerOfAttorneyLegalisation1Code> IPowerOfAttorneyRequirements3.LegalRequirement =>
+        LegalRequirement;
+    IDateFormat29Choice? IPowerOfAttorneyRequirements3.DocumentSubmissionDeadline =>
+        DocumentSubmissionDeadline;
 }

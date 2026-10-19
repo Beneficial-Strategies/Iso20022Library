@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JUhW8XGfEe2TbaNWBpRZpQ")]
 [DisplayName("Device Initialisation Card Reader Request")]
-public record DeviceInitialisationCardReaderRequest5
+public partial record DeviceInitialisationCardReaderRequest5
 {
     /// <summary>
     /// Flag to request a warm reset on a chip.

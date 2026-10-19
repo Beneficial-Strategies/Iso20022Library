@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedStatus8Choice
     [IsoId("_8VJv05NLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : GeneratedStatus8Choice_
+    public partial record Reason : GeneratedStatus8Choice_
     {
         /// <summary>
         /// Specifies the reason why the transaction was generated.

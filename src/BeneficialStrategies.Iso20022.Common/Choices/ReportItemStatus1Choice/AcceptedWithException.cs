@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice
     [IsoId("_TKSsQkitEeSlHoYg_EudVQ")]
     [DisplayName("Accepted With Exception")]
     [IsoXmlTag("AccptdWthXcptn")]
-    public record AcceptedWithException : ReportItemStatus1Choice_
+    public partial record AcceptedWithException : ReportItemStatus1Choice_
     {
         /// <summary>
         /// Reason for the exception status.

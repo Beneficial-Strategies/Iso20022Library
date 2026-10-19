@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateEventNarrative4 : ICorporateEventNarrative4
 {
     IEnumerable<ILanguageSpecifiedNarrative1> ICorporateEventNarrative4.Disclaimer => Disclaimer;
-    IEnumerable<Max8000Text> ICorporateEventNarrative4.ProcessingTextForNextIntermediary => ProcessingTextForNextIntermediary;
+    IEnumerable<Max8000Text> ICorporateEventNarrative4.ProcessingTextForNextIntermediary =>
+        ProcessingTextForNextIntermediary;
 }

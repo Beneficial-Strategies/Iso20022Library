@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TGSgXAEcEeCQm6a_G2yO_w_-983555179")]
 [DisplayName("TMS Trigger")]
-public record TMSTrigger1
+public partial record TMSTrigger1
 {
     /// <summary>
     /// Level of urgency in contacting the maintenance.

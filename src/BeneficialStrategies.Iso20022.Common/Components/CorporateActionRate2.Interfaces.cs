@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionRate2 : ICorporateActionRate2
 {
     IRateFormat1Choice? ICorporateActionRate2.WithholdingTax => WithholdingTax;
-    IRateAndAmountFormat1Choice? ICorporateActionRate2.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IRateAndAmountFormat1Choice? ICorporateActionRate2.WithholdingOfLocalTax => WithholdingOfLocalTax;
+    IRateAndAmountFormat1Choice? ICorporateActionRate2.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IRateAndAmountFormat1Choice? ICorporateActionRate2.WithholdingOfLocalTax =>
+        WithholdingOfLocalTax;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.GermanLocalTax1 => GermanLocalTax1;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.GermanLocalTax2 => GermanLocalTax2;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.GermanLocalTax3 => GermanLocalTax3;
@@ -23,13 +25,17 @@ public partial record CorporateActionRate2 : ICorporateActionRate2
     IRateFormat1Choice? ICorporateActionRate2.FiscalStamp => FiscalStamp;
     IRateFormat1Choice? ICorporateActionRate2.Proration => Proration;
     IRatioFormat2Choice? ICorporateActionRate2.NewToOld => NewToOld;
-    IRatioFormat2Choice? ICorporateActionRate2.NewSecuritiesToUnderlyingSecurities => NewSecuritiesToUnderlyingSecurities;
-    IRatioFormat1Choice? ICorporateActionRate2.AdditionalQuantityForExistingSecurities => AdditionalQuantityForExistingSecurities;
-    IRatioFormat1Choice? ICorporateActionRate2.AdditionalQuantityForSubscribedResultantSecurities => AdditionalQuantityForSubscribedResultantSecurities;
+    IRatioFormat2Choice? ICorporateActionRate2.NewSecuritiesToUnderlyingSecurities =>
+        NewSecuritiesToUnderlyingSecurities;
+    IRatioFormat1Choice? ICorporateActionRate2.AdditionalQuantityForExistingSecurities =>
+        AdditionalQuantityForExistingSecurities;
+    IRatioFormat1Choice? ICorporateActionRate2.AdditionalQuantityForSubscribedResultantSecurities =>
+        AdditionalQuantityForSubscribedResultantSecurities;
     IRelatedTaxType1? ICorporateActionRate2.RelatedTax => RelatedTax;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.NonResidentRate => NonResidentRate;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.Charges => Charges;
-    IRateAndAmountFormat1Choice? ICorporateActionRate2.InterestForUsedPayment => InterestForUsedPayment;
+    IRateAndAmountFormat1Choice? ICorporateActionRate2.InterestForUsedPayment =>
+        InterestForUsedPayment;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.IndexFactor => IndexFactor;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.FullyFranked => FullyFranked;
     IGrossDividendRate1Choice? ICorporateActionRate2.GrossDividend => GrossDividend;
@@ -38,7 +44,8 @@ public partial record CorporateActionRate2 : ICorporateActionRate2
     IAmountAndRateFormat2Choice? ICorporateActionRate2.ProvisionalDividend => ProvisionalDividend;
     IRateFormat1Choice? ICorporateActionRate2.CashIncentive => CashIncentive;
     IRateFormat1Choice? ICorporateActionRate2.SolicitationFee => SolicitationFee;
-    IRateFormat1Choice? ICorporateActionRate2.MaximumAllowedOversubscription => MaximumAllowedOversubscription;
+    IRateFormat1Choice? ICorporateActionRate2.MaximumAllowedOversubscription =>
+        MaximumAllowedOversubscription;
     IRateAndAmountFormat1Choice? ICorporateActionRate2.AdditionalTax => AdditionalTax;
     IForeignExchangeTerms8? ICorporateActionRate2.ExchangeRate => ExchangeRate;
     IRateFormat1Choice? ICorporateActionRate2.ApplicableRate => ApplicableRate;

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the consent type format required.
 /// </summary>
 [IsoId("_c5Whf5KQEeWHWpTQn1FFVg")]
-public interface IConsentTypeFormat5Choice : IIsoChoice
-{
-}
+public interface IConsentTypeFormat5Choice : IIsoChoice { }

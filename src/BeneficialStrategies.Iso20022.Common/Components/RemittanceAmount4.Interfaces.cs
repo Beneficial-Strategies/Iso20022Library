@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RemittanceAmount4 : IRemittanceAmount4
 {
-    IEnumerable<IDocumentAmount1> IRemittanceAmount4.RemittanceAmountAndType => RemittanceAmountAndType;
-    IEnumerable<IDocumentAdjustment1> IRemittanceAmount4.AdjustmentAmountAndReason => AdjustmentAmountAndReason;
+    IEnumerable<IDocumentAmount1> IRemittanceAmount4.RemittanceAmountAndType =>
+        RemittanceAmountAndType;
+    IEnumerable<IDocumentAdjustment1> IRemittanceAmount4.AdjustmentAmountAndReason =>
+        AdjustmentAmountAndReason;
 }

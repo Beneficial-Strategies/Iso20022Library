@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SecuritiesTransactionType21Choice_ : ISecuritiesTransactionType21Choice
-{
-}
+public abstract partial record SecuritiesTransactionType21Choice_
+    : ISecuritiesTransactionType21Choice { }

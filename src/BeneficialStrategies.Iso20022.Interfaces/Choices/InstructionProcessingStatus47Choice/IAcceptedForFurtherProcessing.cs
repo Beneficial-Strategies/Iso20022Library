@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus47Cho
 /// Provides status information related to an instruction request that is accepted. This means that the instruction has been received, is processable and has been validated for further processing.
 /// </summary>
 [IsoId("_KVKx3Rn1EeyroI8qKgB7Mg")]
-public interface IAcceptedForFurtherProcessing : IInstructionProcessingStatus47Choice, IIsoChoiceVariant
+public interface IAcceptedForFurtherProcessing
+    : IInstructionProcessingStatus47Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

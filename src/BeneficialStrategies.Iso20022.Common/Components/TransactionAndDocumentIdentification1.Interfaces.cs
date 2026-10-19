@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionAndDocumentIdentification1 : ITransactionAndDocumentIdentification1
 {
-    IDateAndDateTimeChoice? ITransactionAndDocumentIdentification1.CreationDateTime => CreationDateTime;
+    IDateAndDateTimeChoice? ITransactionAndDocumentIdentification1.CreationDateTime =>
+        CreationDateTime;
 }

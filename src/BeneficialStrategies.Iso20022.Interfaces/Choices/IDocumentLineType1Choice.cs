@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of the document line identification.
 /// </summary>
 [IsoId("__hXr4abkEeKvUvwX_r3tzA")]
-public interface IDocumentLineType1Choice : IIsoChoice
-{
-}
+public interface IDocumentLineType1Choice : IIsoChoice { }

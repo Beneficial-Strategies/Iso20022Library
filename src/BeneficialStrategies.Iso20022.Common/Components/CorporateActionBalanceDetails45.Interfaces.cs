@@ -11,19 +11,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionBalanceDetails45 : ICorporateActionBalanceDetails45
 {
     IBalanceFormat14Choice ICorporateActionBalanceDetails45.ConfirmedBalance => ConfirmedBalance;
-    ITotalEligibleBalanceFormat11? ICorporateActionBalanceDetails45.TotalEligibleBalance => TotalEligibleBalance;
+    ITotalEligibleBalanceFormat11? ICorporateActionBalanceDetails45.TotalEligibleBalance =>
+        TotalEligibleBalance;
     IBalanceFormat14Choice? ICorporateActionBalanceDetails45.BlockedBalance => BlockedBalance;
     IBalanceFormat14Choice? ICorporateActionBalanceDetails45.BorrowedBalance => BorrowedBalance;
-    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.CollateralInBalance => CollateralInBalance;
-    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.CollateralOutBalance => CollateralOutBalance;
+    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.CollateralInBalance =>
+        CollateralInBalance;
+    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.CollateralOutBalance =>
+        CollateralOutBalance;
     IBalanceFormat14Choice? ICorporateActionBalanceDetails45.OnLoanBalance => OnLoanBalance;
-    IEnumerable<IBalanceFormat16Choice> ICorporateActionBalanceDetails45.PendingDeliveryBalance => PendingDeliveryBalance;
-    IEnumerable<IBalanceFormat16Choice> ICorporateActionBalanceDetails45.PendingReceiptBalance => PendingReceiptBalance;
-    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.OutForRegistrationBalance => OutForRegistrationBalance;
-    IEnumerable<IBalanceFormat16Choice> ICorporateActionBalanceDetails45.SettlementPositionBalance => SettlementPositionBalance;
-    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.StreetPositionBalance => StreetPositionBalance;
-    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.TradeDatePositionBalance => TradeDatePositionBalance;
-    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.InTransshipmentBalance => InTransshipmentBalance;
+    IEnumerable<IBalanceFormat16Choice> ICorporateActionBalanceDetails45.PendingDeliveryBalance =>
+        PendingDeliveryBalance;
+    IEnumerable<IBalanceFormat16Choice> ICorporateActionBalanceDetails45.PendingReceiptBalance =>
+        PendingReceiptBalance;
+    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.OutForRegistrationBalance =>
+        OutForRegistrationBalance;
+    IEnumerable<IBalanceFormat16Choice> ICorporateActionBalanceDetails45.SettlementPositionBalance =>
+        SettlementPositionBalance;
+    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.StreetPositionBalance =>
+        StreetPositionBalance;
+    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.TradeDatePositionBalance =>
+        TradeDatePositionBalance;
+    IBalanceFormat14Choice? ICorporateActionBalanceDetails45.InTransshipmentBalance =>
+        InTransshipmentBalance;
     IBalanceFormat14Choice? ICorporateActionBalanceDetails45.RegisteredBalance => RegisteredBalance;
     IBalanceFormat14Choice? ICorporateActionBalanceDetails45.AffectedBalance => AffectedBalance;
     IBalanceFormat14Choice? ICorporateActionBalanceDetails45.UnaffectedBalance => UnaffectedBalance;

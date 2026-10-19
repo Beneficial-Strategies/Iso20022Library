@@ -11,10 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record QuantityAndAccount57 : IQuantityAndAccount57
 {
     IQuantity10Choice IQuantityAndAccount57.SettledQuantity => SettledQuantity;
-    IFinancialInstrumentQuantity15Choice? IQuantityAndAccount57.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity15Choice? IQuantityAndAccount57.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
+    IFinancialInstrumentQuantity15Choice? IQuantityAndAccount57.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity15Choice? IQuantityAndAccount57.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
     IAmountAndDirection57? IQuantityAndAccount57.PreviouslySettledAmount => PreviouslySettledAmount;
-    IAmountAndDirection57? IQuantityAndAccount57.RemainingToBeSettledAmount => RemainingToBeSettledAmount;
+    IAmountAndDirection57? IQuantityAndAccount57.RemainingToBeSettledAmount =>
+        RemainingToBeSettledAmount;
     IPartyIdentification119? IQuantityAndAccount57.AccountOwner => AccountOwner;
     ISecuritiesAccount27 IQuantityAndAccount57.SafekeepingAccount => SafekeepingAccount;
     ICashAccountIdentification6Choice? IQuantityAndAccount57.CashAccount => CashAccount;

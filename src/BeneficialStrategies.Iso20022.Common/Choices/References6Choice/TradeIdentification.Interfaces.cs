@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References6Choice;
 
-public partial record TradeIdentification : ITradeIdentification
-{
-}
+public partial record TradeIdentification : ITradeIdentification { }

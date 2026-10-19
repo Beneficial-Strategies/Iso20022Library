@@ -10,13 +10,22 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionQuantity15 : ICorporateActionQuantity15
 {
-    IFinancialInstrumentQuantity34Choice? ICorporateActionQuantity15.MaximumQuantity => MaximumQuantity;
-    IFinancialInstrumentQuantity34Choice? ICorporateActionQuantity15.MinimumQuantitySought => MinimumQuantitySought;
-    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.NewBoardLotQuantity => NewBoardLotQuantity;
-    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.NewDenominationQuantity => NewDenominationQuantity;
-    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.BaseDenomination => BaseDenomination;
-    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.IncrementalDenomination => IncrementalDenomination;
-    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.SecurityCalledQuantity => SecurityCalledQuantity;
-    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.NewOutstandingQuantity => NewOutstandingQuantity;
-    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.TotalOutstandingQuantity => TotalOutstandingQuantity;
+    IFinancialInstrumentQuantity34Choice? ICorporateActionQuantity15.MaximumQuantity =>
+        MaximumQuantity;
+    IFinancialInstrumentQuantity34Choice? ICorporateActionQuantity15.MinimumQuantitySought =>
+        MinimumQuantitySought;
+    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.NewBoardLotQuantity =>
+        NewBoardLotQuantity;
+    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.NewDenominationQuantity =>
+        NewDenominationQuantity;
+    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.BaseDenomination =>
+        BaseDenomination;
+    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.IncrementalDenomination =>
+        IncrementalDenomination;
+    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.SecurityCalledQuantity =>
+        SecurityCalledQuantity;
+    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.NewOutstandingQuantity =>
+        NewOutstandingQuantity;
+    IFinancialInstrumentQuantity35Choice? ICorporateActionQuantity15.TotalOutstandingQuantity =>
+        TotalOutstandingQuantity;
 }

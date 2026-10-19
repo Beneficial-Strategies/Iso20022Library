@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of status or event.
 /// </summary>
 [IsoId("_SVhIAdydEeqzDbuoooxhdw")]
-public interface ITransferStatusType3Choice : IIsoChoice
-{
-}
+public interface ITransferStatusType3Choice : IIsoChoice { }

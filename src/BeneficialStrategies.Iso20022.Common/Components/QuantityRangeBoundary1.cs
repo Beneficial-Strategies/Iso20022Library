@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jtRfFe5NEeCisYr99QEiWA_-1438940377")]
 [DisplayName("Quantity Range Boundary1")]
-public record QuantityRangeBoundary1
+public partial record QuantityRangeBoundary1
 {
     /// <summary>
     /// Quantity value of the range limit.

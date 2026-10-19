@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MeetingCancellationV02 : IMeetingCancellationV02
 {
-    IMessageIdentification1 IMeetingCancellationV02.CancellationIdentification => CancellationIdentification;
+    IMessageIdentification1 IMeetingCancellationV02.CancellationIdentification =>
+        CancellationIdentification;
     IAmendInformation1? IMeetingCancellationV02.MessageCancellation => MessageCancellation;
     IMeetingReference2 IMeetingCancellationV02.MeetingReference => MeetingReference;
     IPartyIdentification9Choice? IMeetingCancellationV02.NotifyingParty => NotifyingParty;

@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio1Choice;
 
 public partial record TaxEfficientProduct : ITaxEfficientProduct
 {
-    ITaxEfficientProductType1Choice ITaxEfficientProduct.TaxEfficientProductType => TaxEfficientProductType;
+    ITaxEfficientProductType1Choice ITaxEfficientProduct.TaxEfficientProductType =>
+        TaxEfficientProductType;
     IPreviousYear2Choice? ITaxEfficientProduct.PreviousYears => PreviousYears;
-    IEnumerable<IAdditionalInformation15> ITaxEfficientProduct.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> ITaxEfficientProduct.AdditionalInformation =>
+        AdditionalInformation;
 }

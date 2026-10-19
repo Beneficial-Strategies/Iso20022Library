@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BICSkZFFEe6reqfAp4CunQ")]
 [DisplayName("Currency Conversion30")]
-public record CurrencyConversion30
+public partial record CurrencyConversion30
 {
     /// <summary>
     /// Accepted By Cardholder.

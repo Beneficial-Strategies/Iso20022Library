@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentIdentification4Choice;
 
-public partial record AccountOwnerDocumentIdentification : IAccountOwnerDocumentIdentification
-{
-}
+public partial record AccountOwnerDocumentIdentification : IAccountOwnerDocumentIdentification { }

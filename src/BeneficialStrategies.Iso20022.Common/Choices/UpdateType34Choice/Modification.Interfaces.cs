@@ -10,20 +10,25 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType34Choice;
 
 public partial record Modification : IModification
 {
-    ISettlementTypeAndAdditionalParameters18? IModification.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters18? IModification.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages48> IModification.Linkages => Linkages;
     ISecuritiesTradeDetails133? IModification.TradeDetails => TradeDetails;
-    ISecurityIdentification20? IModification.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes97? IModification.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    ISecurityIdentification20? IModification.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes97? IModification.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IQuantityAndAccount94? IModification.QuantityAndAccountDetails => QuantityAndAccountDetails;
     ISettlementDetails195? IModification.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction17? IModification.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
+    IStandingSettlementInstruction17? IModification.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
     ISettlementParties81? IModification.DeliveringSettlementParties => DeliveringSettlementParties;
     ISettlementParties81? IModification.ReceivingSettlementParties => ReceivingSettlementParties;
     ICashParties38? IModification.CashParties => CashParties;
     IAmountAndDirection101? IModification.SettlementAmount => SettlementAmount;
     IOtherAmounts43? IModification.OtherAmounts => OtherAmounts;
     IOtherParties35? IModification.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters7? IModification.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
+    IRegistrationParameters7? IModification.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
     IEnumerable<ISupplementaryData1> IModification.SupplementaryData => SupplementaryData;
 }

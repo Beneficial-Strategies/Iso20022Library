@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UYeaItp-Ed-ak6NoX_4Aeg_-936948787")]
     [DisplayName("Settlement Condition Modification Status 1 Choice")]
-    public abstract record SettlementConditionModificationStatus1Choice_ { }
+    public abstract partial record SettlementConditionModificationStatus1Choice_ { }
 }

@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TransactionTypeAndAdditionalParameters21 : ITransactionTypeAndAdditionalParameters21
-{
-}
+public partial record TransactionTypeAndAdditionalParameters21
+    : ITransactionTypeAndAdditionalParameters21 { }

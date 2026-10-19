@@ -8,20 +8,35 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionMovementReversalAdvice002V14 : ICorporateActionMovementReversalAdvice002V14
+public partial record CorporateActionMovementReversalAdvice002V14
+    : ICorporateActionMovementReversalAdvice002V14
 {
-    IDocumentIdentification37 ICorporateActionMovementReversalAdvice002V14.MovementConfirmationIdentification => MovementConfirmationIdentification;
-    IEnumerable<IDocumentIdentification38> ICorporateActionMovementReversalAdvice002V14.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference4> ICorporateActionMovementReversalAdvice002V14.EventsLinkage => EventsLinkage;
-    ICorporateActionReversalReason7? ICorporateActionMovementReversalAdvice002V14.ReversalReason => ReversalReason;
-    ITransactionIdentification1? ICorporateActionMovementReversalAdvice002V14.TransactionIdentification => TransactionIdentification;
-    ICorporateActionGeneralInformation167 ICorporateActionMovementReversalAdvice002V14.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountAndBalance54 ICorporateActionMovementReversalAdvice002V14.AccountDetails => AccountDetails;
-    ICorporateAction78? ICorporateActionMovementReversalAdvice002V14.CorporateActionDetails => CorporateActionDetails;
-    ICorporateActionOption215 ICorporateActionMovementReversalAdvice002V14.CorporateActionConfirmationDetails => CorporateActionConfirmationDetails;
-    ICorporateActionNarrative35? ICorporateActionMovementReversalAdvice002V14.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementReversalAdvice002V14.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementReversalAdvice002V14.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementReversalAdvice002V14.SubPayingAgent => SubPayingAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionMovementReversalAdvice002V14.SupplementaryData => SupplementaryData;
+    IDocumentIdentification37 ICorporateActionMovementReversalAdvice002V14.MovementConfirmationIdentification =>
+        MovementConfirmationIdentification;
+    IEnumerable<IDocumentIdentification38> ICorporateActionMovementReversalAdvice002V14.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference4> ICorporateActionMovementReversalAdvice002V14.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionReversalReason7? ICorporateActionMovementReversalAdvice002V14.ReversalReason =>
+        ReversalReason;
+    ITransactionIdentification1? ICorporateActionMovementReversalAdvice002V14.TransactionIdentification =>
+        TransactionIdentification;
+    ICorporateActionGeneralInformation167 ICorporateActionMovementReversalAdvice002V14.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountAndBalance54 ICorporateActionMovementReversalAdvice002V14.AccountDetails =>
+        AccountDetails;
+    ICorporateAction78? ICorporateActionMovementReversalAdvice002V14.CorporateActionDetails =>
+        CorporateActionDetails;
+    ICorporateActionOption215 ICorporateActionMovementReversalAdvice002V14.CorporateActionConfirmationDetails =>
+        CorporateActionConfirmationDetails;
+    ICorporateActionNarrative35? ICorporateActionMovementReversalAdvice002V14.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementReversalAdvice002V14.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementReversalAdvice002V14.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification137Choice> ICorporateActionMovementReversalAdvice002V14.SubPayingAgent =>
+        SubPayingAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionMovementReversalAdvice002V14.SupplementaryData =>
+        SupplementaryData;
 }

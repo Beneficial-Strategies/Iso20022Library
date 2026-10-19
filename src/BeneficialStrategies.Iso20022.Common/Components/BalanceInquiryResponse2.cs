@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FM7pwQxrEeqdx6buGpCCQw")]
 [DisplayName("Balance Inquiry Response")]
-public record BalanceInquiryResponse2
+public partial record BalanceInquiryResponse2
 {
     /// <summary>
     /// Payment account information.

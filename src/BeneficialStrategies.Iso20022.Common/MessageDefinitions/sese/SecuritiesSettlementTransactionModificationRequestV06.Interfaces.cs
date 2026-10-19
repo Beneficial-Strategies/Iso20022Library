@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionModificationRequestV06 : ISecuritiesSettlementTransactionModificationRequestV06
+public partial record SecuritiesSettlementTransactionModificationRequestV06
+    : ISecuritiesSettlementTransactionModificationRequestV06
 {
-    ITransactionDetails106 ISecuritiesSettlementTransactionModificationRequestV06.ModifiedTransactionDetails => ModifiedTransactionDetails;
-    IEnumerable<IUpdateType27Choice> ISecuritiesSettlementTransactionModificationRequestV06.UpdateType => UpdateType;
+    ITransactionDetails106 ISecuritiesSettlementTransactionModificationRequestV06.ModifiedTransactionDetails =>
+        ModifiedTransactionDetails;
+    IEnumerable<IUpdateType27Choice> ISecuritiesSettlementTransactionModificationRequestV06.UpdateType =>
+        UpdateType;
 }

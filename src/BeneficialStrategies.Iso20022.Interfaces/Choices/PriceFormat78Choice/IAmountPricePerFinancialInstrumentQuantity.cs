@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat78Choice;
 /// <summary>
 /// Amount Price Per Financial Instrument Quantity.
 /// </summary>
-public interface IAmountPricePerFinancialInstrumentQuantity : IPriceFormat78Choice, IIsoChoiceVariant
+public interface IAmountPricePerFinancialInstrumentQuantity
+    : IPriceFormat78Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

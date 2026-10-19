@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// </summary>
 [IsoId("_bHSVoZUxEe62CMB9luireQ")]
 [DisplayName("Sale To POI Device Response V06")]
-public record SaleToPOIDeviceResponseV06 : IOuterRecord
+public partial record SaleToPOIDeviceResponseV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

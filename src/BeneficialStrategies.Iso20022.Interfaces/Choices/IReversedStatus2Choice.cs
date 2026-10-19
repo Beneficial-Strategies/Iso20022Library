@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the reversed status.
 /// </summary>
 [IsoId("_a4QdwSY5EeW_ZNn8gbfY7Q")]
-public interface IReversedStatus2Choice : IIsoChoice
-{
-}
+public interface IReversedStatus2Choice : IIsoChoice { }

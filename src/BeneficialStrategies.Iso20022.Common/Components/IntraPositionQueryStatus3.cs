@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dE2QUWdHEemVjsmmE4lqKA")]
 [DisplayName("Intra Position Query Status3")]
-public record IntraPositionQueryStatus3
+public partial record IntraPositionQueryStatus3
 {
     /// <summary>
     /// Defines the status type of query criteria.

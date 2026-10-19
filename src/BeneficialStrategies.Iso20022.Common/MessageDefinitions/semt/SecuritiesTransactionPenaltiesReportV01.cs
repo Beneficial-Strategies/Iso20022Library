@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_uNylw6gwEfCXwLUUylXgrQ")]
 [DisplayName("Securities Transaction Penalties Report V01")]
-public record SecuritiesTransactionPenaltiesReportV01 : IOuterRecord
+public partial record SecuritiesTransactionPenaltiesReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

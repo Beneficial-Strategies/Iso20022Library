@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UuhioNp-Ed-ak6NoX_4Aeg_400175868")]
     [DisplayName("Frequency Code And DSS Code Choice")]
-    public abstract record FrequencyCodeAndDSSCodeChoice_ { }
+    public abstract partial record FrequencyCodeAndDSSCodeChoice_ { }
 }

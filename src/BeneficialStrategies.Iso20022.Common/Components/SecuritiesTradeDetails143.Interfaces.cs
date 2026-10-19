@@ -10,16 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTradeDetails143 : ISecuritiesTradeDetails143
 {
-    IEnumerable<Max35Text> ISecuritiesTradeDetails143.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails143.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification1? ISecuritiesTradeDetails143.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ISecuritiesTradeDetails143.PlaceOfClearing => PlaceOfClearing;
     ITradeDate8Choice? ISecuritiesTradeDetails143.TradeDate => TradeDate;
     ISettlementDate17Choice? ISecuritiesTradeDetails143.SettlementDate => SettlementDate;
-    ISettlementDate18Choice ISecuritiesTradeDetails143.EffectiveSettlementDate => EffectiveSettlementDate;
+    ISettlementDate18Choice ISecuritiesTradeDetails143.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IPrice10? ISecuritiesTradeDetails143.DealPrice => DealPrice;
     IOpeningClosing3Choice? ISecuritiesTradeDetails143.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting6Choice> ISecuritiesTradeDetails143.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails143.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails143.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity4Choice? ISecuritiesTradeDetails143.InvestorCapacity => InvestorCapacity;
     ITradeOriginator3Choice? ISecuritiesTradeDetails143.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice29Choice? ISecuritiesTradeDetails143.TypeOfPrice => TypeOfPrice;

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber16Choice;
 
-public partial record ShortNumber : IShortNumber
-{
-}
+public partial record ShortNumber : IShortNumber { }

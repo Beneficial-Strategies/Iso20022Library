@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yiOENNuXEei2qvU6FBLZYA")]
 [DisplayName("Instalment Amount Details")]
-public record InstalmentAmountDetails1
+public partial record InstalmentAmountDetails1
 {
     /// <summary>
     /// Grace period unit type.

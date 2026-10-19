@@ -12,13 +12,17 @@ public partial record DeliverInformation17 : IDeliverInformation17
 {
     IPartyIdentification70Choice? IDeliverInformation17.Transferor => Transferor;
     IAccount19? IDeliverInformation17.TransferorRegisteredAccount => TransferorRegisteredAccount;
-    IEnumerable<IIntermediary34> IDeliverInformation17.IntermediaryInformation => IntermediaryInformation;
-    IDateAndDateTimeChoice? IDeliverInformation17.EffectiveSettlementDate => EffectiveSettlementDate;
+    IEnumerable<IIntermediary34> IDeliverInformation17.IntermediaryInformation =>
+        IntermediaryInformation;
+    IDateAndDateTimeChoice? IDeliverInformation17.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IEnumerable<ICharge29> IDeliverInformation17.ChargeDetails => ChargeDetails;
     IEnumerable<ICommission23> IDeliverInformation17.CommissionDetails => CommissionDetails;
     IEnumerable<ITax28> IDeliverInformation17.TaxDetails => TaxDetails;
-    IEnumerable<IForeignExchangeTerms26> IDeliverInformation17.ForeignExchangeDetails => ForeignExchangeDetails;
-    IDeliveringPartiesAndAccount13? IDeliverInformation17.SettlementPartiesDetails => SettlementPartiesDetails;
+    IEnumerable<IForeignExchangeTerms26> IDeliverInformation17.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IDeliveringPartiesAndAccount13? IDeliverInformation17.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters4? IDeliverInformation17.PhysicalTransferDetails => PhysicalTransferDetails;
     IAdditionalReference7? IDeliverInformation17.ClientReference => ClientReference;
 }

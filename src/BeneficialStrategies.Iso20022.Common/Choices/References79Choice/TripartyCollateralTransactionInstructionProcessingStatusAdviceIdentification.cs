@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References79Choice
     [DisplayName(
         "Triparty Collateral Transaction Instruction Processing Status Advice Identification"
     )]
-    public record TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification
+    public partial record TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification
         : References79Choice_
     {
         /// <summary>

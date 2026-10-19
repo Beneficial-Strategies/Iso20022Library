@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Vote6 : IVote6
-{
-}
+public partial record Vote6 : IVote6 { }

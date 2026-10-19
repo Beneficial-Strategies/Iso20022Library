@@ -12,5 +12,6 @@ public partial record StatusReasonInformation14 : IStatusReasonInformation14
 {
     IPartyIdentification272? IStatusReasonInformation14.Originator => Originator;
     IStatusReason6Choice? IStatusReasonInformation14.Reason => Reason;
-    IEnumerable<Max105Text> IStatusReasonInformation14.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> IStatusReasonInformation14.AdditionalInformation =>
+        AdditionalInformation;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType71Choice
     [IsoId("_pAgP5ZwxEeazcsnODTksnQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CorporateActionEventType71Choice_
+    public partial record Proprietary : CorporateActionEventType71Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

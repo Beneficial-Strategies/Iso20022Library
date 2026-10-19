@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TaxVoucher1 : ITaxVoucher1
 {
     IUnitOrFaceAmount1Choice ITaxVoucher1.RecordDateHolding => RecordDateHolding;
-    IPriceValue1? ITaxVoucher1.ScripDividendReinvestmentPricePerShare => ScripDividendReinvestmentPricePerShare;
+    IPriceValue1? ITaxVoucher1.ScripDividendReinvestmentPricePerShare =>
+        ScripDividendReinvestmentPricePerShare;
     IPriceValue1? ITaxVoucher1.AllotedSharesCost => AllotedSharesCost;
     IForeignExchangeTerms9? ITaxVoucher1.ForeignExchangeDetails => ForeignExchangeDetails;
 }

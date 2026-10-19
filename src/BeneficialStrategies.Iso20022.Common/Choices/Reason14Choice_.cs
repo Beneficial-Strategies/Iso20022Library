@@ -64,5 +64,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_uW-mvVhpEeS8HfHHd4stCA")]
     [DisplayName("Reason 14 Choice")]
-    public abstract record Reason14Choice_ { }
+    public abstract partial record Reason14Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LFaA0f8JEeCKBMQETXEXKQ")]
 [DisplayName("Intra Position Details")]
-public record IntraPositionDetails21
+public partial record IntraPositionDetails21
 {
     /// <summary>
     /// Specifies whether the transaction is to be executed with a high priority.

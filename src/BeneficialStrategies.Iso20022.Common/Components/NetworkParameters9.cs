@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5RKOsQ1DEeqjM-rxn3HuXQ")]
 [DisplayName("Network Parameters")]
-public record NetworkParameters9
+public partial record NetworkParameters9
 {
     /// <summary>
     /// Type of communication network.

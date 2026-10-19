@@ -8,13 +8,18 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesFinancingTransactionDetails45 : ISecuritiesFinancingTransactionDetails45
+public partial record SecuritiesFinancingTransactionDetails45
+    : ISecuritiesFinancingTransactionDetails45
 {
-    ITerminationDate6Choice? ISecuritiesFinancingTransactionDetails45.TerminationDate => TerminationDate;
+    ITerminationDate6Choice? ISecuritiesFinancingTransactionDetails45.TerminationDate =>
+        TerminationDate;
     IRateType35Choice? ISecuritiesFinancingTransactionDetails45.RateType => RateType;
-    ILegalFramework3Choice? ISecuritiesFinancingTransactionDetails45.LegalFramework => LegalFramework;
+    ILegalFramework3Choice? ISecuritiesFinancingTransactionDetails45.LegalFramework =>
+        LegalFramework;
     IRateName1? ISecuritiesFinancingTransactionDetails45.VariableRateSupport => VariableRateSupport;
     IRate2? ISecuritiesFinancingTransactionDetails45.RepurchaseRate => RepurchaseRate;
-    IAmountAndDirection21? ISecuritiesFinancingTransactionDetails45.AccruedInterestAmount => AccruedInterestAmount;
-    IAmountAndDirection21? ISecuritiesFinancingTransactionDetails45.TerminationTransactionAmount => TerminationTransactionAmount;
+    IAmountAndDirection21? ISecuritiesFinancingTransactionDetails45.AccruedInterestAmount =>
+        AccruedInterestAmount;
+    IAmountAndDirection21? ISecuritiesFinancingTransactionDetails45.TerminationTransactionAmount =>
+        TerminationTransactionAmount;
 }

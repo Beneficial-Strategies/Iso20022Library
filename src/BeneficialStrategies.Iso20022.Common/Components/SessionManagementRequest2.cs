@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_C8Um8YYBEemxIqbaFEE8-w")]
 [DisplayName("Session Management Request")]
-public record SessionManagementRequest2
+public partial record SessionManagementRequest2
 {
     /// <summary>
     /// Environment of the transaction.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References34Choice
     /// </summary>
     [IsoId("_jvDnx-5NEeCisYr99QEiWA_-1304332452")]
     [DisplayName("Securities Settlement Transaction Identification")]
-    public record SecuritiesSettlementTransactionIdentification : References34Choice_
+    public partial record SecuritiesSettlementTransactionIdentification : References34Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

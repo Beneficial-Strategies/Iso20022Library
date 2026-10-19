@@ -20,5 +20,6 @@ public partial record CorporateActionDate4 : ICorporateActionDate4
     IDateFormat4Choice? ICorporateActionDate4.DeadlineToSplit => DeadlineToSplit;
     IDateFormat4Choice? ICorporateActionDate4.ExpiryDate => ExpiryDate;
     IDateFormat4Choice? ICorporateActionDate4.QuotationSettingDate => QuotationSettingDate;
-    IDateFormat4Choice? ICorporateActionDate4.SubscriptionCostDebitDate => SubscriptionCostDebitDate;
+    IDateFormat4Choice? ICorporateActionDate4.SubscriptionCostDebitDate =>
+        SubscriptionCostDebitDate;
 }

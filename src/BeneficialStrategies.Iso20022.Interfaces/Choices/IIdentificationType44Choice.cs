@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code and a data source scheme to specify the type of alternate identification.
 /// </summary>
 [IsoId("_chc_CZKQEeWHWpTQn1FFVg")]
-public interface IIdentificationType44Choice : IIsoChoice
-{
-}
+public interface IIdentificationType44Choice : IIsoChoice { }

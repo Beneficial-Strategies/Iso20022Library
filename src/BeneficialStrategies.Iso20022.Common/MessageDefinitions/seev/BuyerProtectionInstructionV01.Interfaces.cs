@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record BuyerProtectionInstructionV01 : IBuyerProtectionInstructionV01
 {
-    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IRelatedSettlementInstruction3 IBuyerProtectionInstructionV01.RelatedSettlementInstruction => RelatedSettlementInstruction;
-    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionV01.AccountIdentification => AccountIdentification;
-    ICorporateActionElection4 IBuyerProtectionInstructionV01.CorporateActionElection => CorporateActionElection;
-    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionV01.SupplementaryData => SupplementaryData;
+    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IRelatedSettlementInstruction3 IBuyerProtectionInstructionV01.RelatedSettlementInstruction =>
+        RelatedSettlementInstruction;
+    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionV01.AccountIdentification =>
+        AccountIdentification;
+    ICorporateActionElection4 IBuyerProtectionInstructionV01.CorporateActionElection =>
+        CorporateActionElection;
+    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionV01.SupplementaryData =>
+        SupplementaryData;
 }

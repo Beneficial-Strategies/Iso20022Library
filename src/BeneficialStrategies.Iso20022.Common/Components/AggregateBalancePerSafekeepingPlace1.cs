@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VLcIKtp-Ed-ak6NoX_4Aeg_1774314000")]
 [DisplayName("Aggregate Balance Per Safekeeping Place")]
-public record AggregateBalancePerSafekeepingPlace1
+public partial record AggregateBalancePerSafekeepingPlace1
 {
     /// <summary>
     /// Total quantity of financial instrument for the referenced holding.

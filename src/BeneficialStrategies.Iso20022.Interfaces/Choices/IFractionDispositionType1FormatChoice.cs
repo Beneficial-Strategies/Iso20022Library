@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.
 /// </summary>
 [IsoId("_RmjsJdp-Ed-ak6NoX_4Aeg_-689292712")]
-public interface IFractionDispositionType1FormatChoice : IIsoChoice
-{
-}
+public interface IFractionDispositionType1FormatChoice : IIsoChoice { }

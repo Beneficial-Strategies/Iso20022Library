@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementConditionsModificationRequest002V08 : ISecuritiesSettlementConditionsModificationRequest002V08
+public partial record SecuritiesSettlementConditionsModificationRequest002V08
+    : ISecuritiesSettlementConditionsModificationRequest002V08
 {
-    IPartyIdentification156? ISecuritiesSettlementConditionsModificationRequest002V08.AccountOwner => AccountOwner;
-    ISecuritiesAccount30 ISecuritiesSettlementConditionsModificationRequest002V08.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IRequestDetails21> ISecuritiesSettlementConditionsModificationRequest002V08.RequestDetails => RequestDetails;
-    IEnumerable<IAdditionalInformation17> ISecuritiesSettlementConditionsModificationRequest002V08.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionsModificationRequest002V08.SupplementaryData => SupplementaryData;
+    IPartyIdentification156? ISecuritiesSettlementConditionsModificationRequest002V08.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30 ISecuritiesSettlementConditionsModificationRequest002V08.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IRequestDetails21> ISecuritiesSettlementConditionsModificationRequest002V08.RequestDetails =>
+        RequestDetails;
+    IEnumerable<IAdditionalInformation17> ISecuritiesSettlementConditionsModificationRequest002V08.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionsModificationRequest002V08.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountChoice;
 
-public partial record Amount : IAmount
-{
-}
+public partial record Amount : IAmount { }

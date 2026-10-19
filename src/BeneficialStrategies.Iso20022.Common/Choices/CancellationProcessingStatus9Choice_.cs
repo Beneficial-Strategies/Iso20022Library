@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_BlUUkeFfEeWIA4E9cYSxxQ")]
     [DisplayName("Cancellation Processing Status 9 Choice")]
-    public abstract record CancellationProcessingStatus9Choice_ { }
+    public abstract partial record CancellationProcessingStatus9Choice_ { }
 }

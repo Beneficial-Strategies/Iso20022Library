@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UtSF10ipEeSlHoYg_EudVQ")]
 [DisplayName("Number Of Items Per Status")]
-public record NumberOfItemsPerStatus1
+public partial record NumberOfItemsPerStatus1
 {
     /// <summary>
     /// Common status of the report items for which the number of report items is specified in NumberOfItems.

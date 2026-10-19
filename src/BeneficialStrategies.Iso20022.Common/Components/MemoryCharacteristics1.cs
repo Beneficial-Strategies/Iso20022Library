@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V7AH8Ax0EeKa_56Jbsi1RQ")]
 [DisplayName("Memory Characteristics")]
-public record MemoryCharacteristics1
+public partial record MemoryCharacteristics1
 {
     /// <summary>
     /// Identification or name of the memory.

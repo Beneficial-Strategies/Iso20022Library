@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record CorporateActionEventType13Choice_ : ICorporateActionEventType13Choice
-{
-}
+public abstract partial record CorporateActionEventType13Choice_
+    : ICorporateActionEventType13Choice { }

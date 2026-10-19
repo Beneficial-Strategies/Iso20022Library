@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat1Choice;
 
-public partial record ShortIdentification : IShortIdentification
-{
-}
+public partial record ShortIdentification : IShortIdentification { }

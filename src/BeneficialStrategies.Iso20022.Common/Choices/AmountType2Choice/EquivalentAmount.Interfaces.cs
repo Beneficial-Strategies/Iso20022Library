@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AmountType2Choice;
 
-public partial record EquivalentAmount : IEquivalentAmount
-{
-}
+public partial record EquivalentAmount : IEquivalentAmount { }

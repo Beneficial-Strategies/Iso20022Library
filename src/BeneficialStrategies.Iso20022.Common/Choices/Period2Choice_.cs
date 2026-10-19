@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Period2Choice.FromDateToDate), nameof(Period2Choice.FromDateToDate))]
     [IsoId("_T5exEdp-Ed-ak6NoX_4Aeg_913439020")]
     [DisplayName("Period 2 Choice")]
-    public abstract record Period2Choice_ { }
+    public abstract partial record Period2Choice_ { }
 }

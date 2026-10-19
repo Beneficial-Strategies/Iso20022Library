@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus99Choice
     /// <summary>Specifies the rejected status.</summary>
     [IsoId("_XHwYEY5bEfC_4ZEXsY0Xyg")]
     [DisplayName("Rejected")]
-    public record Rejected : ProcessingStatus99Choice_
+    public partial record Rejected : ProcessingStatus99Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

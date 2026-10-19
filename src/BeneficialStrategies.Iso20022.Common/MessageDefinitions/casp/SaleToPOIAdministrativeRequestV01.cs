@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"This message is a request for an Administrative service sent to POI System.")]
 [IsoId("_zWwx4YYBEemxIqbaFEE8-w")]
 [DisplayName("Sale To POI Administrative Request V")]
-public record SaleToPOIAdministrativeRequestV01 : IOuterRecord
+public partial record SaleToPOIAdministrativeRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

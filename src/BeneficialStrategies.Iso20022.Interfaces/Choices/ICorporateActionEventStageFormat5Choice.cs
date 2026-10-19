@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the event stage type.
 /// </summary>
 [IsoId("_oI9aESUfEeO8eOSw0QN9mA")]
-public interface ICorporateActionEventStageFormat5Choice : IIsoChoice
-{
-}
+public interface ICorporateActionEventStageFormat5Choice : IIsoChoice { }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__7K_AbZiEfCUZfsQO4rYeA")]
 [DisplayName("Recurring Transaction7")]
-public record RecurringTransaction7
+public partial record RecurringTransaction7
 {
     /// <summary>
     /// Identification of the recurring plan.

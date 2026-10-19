@@ -12,11 +12,15 @@ public partial record MeetingInstructionStatusV09 : IMeetingInstructionStatusV09
 {
     IInstructionType2Choice IMeetingInstructionStatusV09.InstructionType => InstructionType;
     IMeetingReference10 IMeetingInstructionStatusV09.MeetingReference => MeetingReference;
-    ISecurityIdentification19 IMeetingInstructionStatusV09.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IInstructionTypeStatus5Choice IMeetingInstructionStatusV09.InstructionTypeStatus => InstructionTypeStatus;
+    ISecurityIdentification19 IMeetingInstructionStatusV09.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IInstructionTypeStatus5Choice IMeetingInstructionStatusV09.InstructionTypeStatus =>
+        InstructionTypeStatus;
     IEligiblePosition17? IMeetingInstructionStatusV09.Position => Position;
     IPartyIdentification226Choice IMeetingInstructionStatusV09.ConfirmingParty => ConfirmingParty;
     IPartyIdentification226Choice IMeetingInstructionStatusV09.VoteCastingParty => VoteCastingParty;
-    IEnumerable<IPartyIdentification246Choice> IMeetingInstructionStatusV09.RightsHolder => RightsHolder;
-    IEnumerable<ISupplementaryData1> IMeetingInstructionStatusV09.SupplementaryData => SupplementaryData;
+    IEnumerable<IPartyIdentification246Choice> IMeetingInstructionStatusV09.RightsHolder =>
+        RightsHolder;
+    IEnumerable<ISupplementaryData1> IMeetingInstructionStatusV09.SupplementaryData =>
+        SupplementaryData;
 }

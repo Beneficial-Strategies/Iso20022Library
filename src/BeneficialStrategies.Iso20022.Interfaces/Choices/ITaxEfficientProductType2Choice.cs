@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of tax efficient product.
 /// </summary>
 [IsoId("_Ugn1YZNNEemQB_8XA98K0Q")]
-public interface ITaxEfficientProductType2Choice : IIsoChoice
-{
-}
+public interface ITaxEfficientProductType2Choice : IIsoChoice { }

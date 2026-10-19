@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_8bgPd5NLEeWGlc8L7oPDIg")]
     [DisplayName("Statement Basis 12 Choice")]
-    public abstract record StatementBasis12Choice_ { }
+    public abstract partial record StatementBasis12Choice_ { }
 }

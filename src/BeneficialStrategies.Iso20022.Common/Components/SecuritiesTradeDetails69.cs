@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D5OiQ5wyEeazcsnODTksnQ")]
 [DisplayName("Securities Trade Details")]
-public record SecuritiesTradeDetails69
+public partial record SecuritiesTradeDetails69
 {
     /// <summary>
     /// Identification of an account owner transaction that could potentially match with the allegement notified.

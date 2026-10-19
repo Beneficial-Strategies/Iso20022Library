@@ -10,11 +10,15 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferOutCancellationRequestV02 : ITransferOutCancellationRequestV02
 {
-    IMessageIdentification1 ITransferOutCancellationRequestV02.MessageIdentification => MessageIdentification;
-    IAdditionalReference2? ITransferOutCancellationRequestV02.PreviousReference => PreviousReference;
+    IMessageIdentification1 ITransferOutCancellationRequestV02.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference2? ITransferOutCancellationRequestV02.PreviousReference =>
+        PreviousReference;
     IAdditionalReference2? ITransferOutCancellationRequestV02.PoolReference => PoolReference;
     IAdditionalReference2? ITransferOutCancellationRequestV02.RelatedReference => RelatedReference;
-    ITransferReference1? ITransferOutCancellationRequestV02.CancellationByReference => CancellationByReference;
-    ITransferOut5? ITransferOutCancellationRequestV02.CancellationByTransferOutDetails => CancellationByTransferOutDetails;
+    ITransferReference1? ITransferOutCancellationRequestV02.CancellationByReference =>
+        CancellationByReference;
+    ITransferOut5? ITransferOutCancellationRequestV02.CancellationByTransferOutDetails =>
+        CancellationByTransferOutDetails;
     ICopyInformation2? ITransferOutCancellationRequestV02.CopyDetails => CopyDetails;
 }

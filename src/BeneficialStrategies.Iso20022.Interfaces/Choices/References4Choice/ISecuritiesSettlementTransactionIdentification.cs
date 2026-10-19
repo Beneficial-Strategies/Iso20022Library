@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References4Choice;
 /// Unambiguous identification of the securities settlement transaction.
 /// </summary>
 [IsoId("_UR6fLtp-Ed-ak6NoX_4Aeg_-255591591")]
-public interface ISecuritiesSettlementTransactionIdentification : IReferences4Choice, IIsoChoiceVariant
+public interface ISecuritiesSettlementTransactionIdentification
+    : IReferences4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Provides unambiguous transaction identification information.

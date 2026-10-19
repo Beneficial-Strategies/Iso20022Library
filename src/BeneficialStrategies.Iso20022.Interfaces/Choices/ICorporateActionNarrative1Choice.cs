@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code to specify the narrative type of corporate action.
 /// </summary>
 [IsoId("_Q10yxtp-Ed-ak6NoX_4Aeg_-1781540198")]
-public interface ICorporateActionNarrative1Choice : IIsoChoice
-{
-}
+public interface ICorporateActionNarrative1Choice : IIsoChoice { }

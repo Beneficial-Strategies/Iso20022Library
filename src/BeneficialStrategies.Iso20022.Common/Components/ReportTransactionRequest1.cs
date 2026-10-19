@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wej3AN6PEeiwsev40qZGEQ")]
 [DisplayName("Report Transaction Request")]
-public record ReportTransactionRequest1
+public partial record ReportTransactionRequest1
 {
     /// <summary>
     /// Eligibility parameters for a transaction to be part of transaction report.

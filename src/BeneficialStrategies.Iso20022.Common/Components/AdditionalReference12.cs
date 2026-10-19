@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y96v4f1QEeixXcHVEYIW2g")]
 [DisplayName("Additional Reference")]
-public record AdditionalReference12
+public partial record AdditionalReference12
 {
     /// <summary>
     /// Reference issued by a party to identify an instruction, transaction or a message.

@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_Magh_dFSEd-BzquC8wXy7w_1153922186")]
 [DisplayName("Custody Statement Of Holdings V")]
-public record CustodyStatementOfHoldingsV02 : IOuterRecord
+public partial record CustodyStatementOfHoldingsV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

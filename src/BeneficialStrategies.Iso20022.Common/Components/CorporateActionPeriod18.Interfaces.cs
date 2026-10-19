@@ -15,6 +15,8 @@ public partial record CorporateActionPeriod18 : ICorporateActionPeriod18
     IPeriod6Choice? ICorporateActionPeriod18.ActionPeriod => ActionPeriod;
     IPeriod6Choice? ICorporateActionPeriod18.RevocabilityPeriod => RevocabilityPeriod;
     IPeriod6Choice? ICorporateActionPeriod18.PrivilegeSuspensionPeriod => PrivilegeSuspensionPeriod;
-    IPeriod6Choice? ICorporateActionPeriod18.AccountServicerRevocabilityPeriod => AccountServicerRevocabilityPeriod;
-    IPeriod12Choice? ICorporateActionPeriod18.DepositorySuspensionPeriodForWithdrawal => DepositorySuspensionPeriodForWithdrawal;
+    IPeriod6Choice? ICorporateActionPeriod18.AccountServicerRevocabilityPeriod =>
+        AccountServicerRevocabilityPeriod;
+    IPeriod12Choice? ICorporateActionPeriod18.DepositorySuspensionPeriodForWithdrawal =>
+        DepositorySuspensionPeriodForWithdrawal;
 }

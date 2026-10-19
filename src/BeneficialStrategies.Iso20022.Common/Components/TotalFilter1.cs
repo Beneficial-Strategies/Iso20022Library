@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qu5qgN6TEeiwsev40qZGEQ")]
 [DisplayName("Total Filter")]
-public record TotalFilter1
+public partial record TotalFilter1
 {
     /// <summary>
     /// Identifier of the POI system performing a reconciliation.

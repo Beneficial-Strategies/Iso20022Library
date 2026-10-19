@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record NetDividendRateFormat43Choice_ : INetDividendRateFormat43Choice
-{
-}
+public abstract partial record NetDividendRateFormat43Choice_ : INetDividendRateFormat43Choice { }

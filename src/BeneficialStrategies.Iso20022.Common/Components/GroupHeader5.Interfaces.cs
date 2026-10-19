@@ -14,6 +14,7 @@ public partial record GroupHeader5 : IGroupHeader5
     IBranchAndFinancialInstitutionIdentification3? IGroupHeader5.ForwardingAgent => ForwardingAgent;
     IBranchAndFinancialInstitutionIdentification3? IGroupHeader5.DebtorAgent => DebtorAgent;
     IBranchAndFinancialInstitutionIdentification3? IGroupHeader5.CreditorAgent => CreditorAgent;
-    IBranchAndFinancialInstitutionIdentification3? IGroupHeader5.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification3? IGroupHeader5.InstructingAgent =>
+        InstructingAgent;
     IBranchAndFinancialInstitutionIdentification3? IGroupHeader5.InstructedAgent => InstructedAgent;
 }

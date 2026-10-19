@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails93 : ISecuritiesTradeDetails93
 {
     IEnumerable<Max52Text> ISecuritiesTradeDetails93.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails93.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails93.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification1? ISecuritiesTradeDetails93.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ISecuritiesTradeDetails93.PlaceOfClearing => PlaceOfClearing;
     ITradeDate8Choice? ISecuritiesTradeDetails93.TradeDate => TradeDate;
@@ -20,11 +21,13 @@ public partial record SecuritiesTradeDetails93 : ISecuritiesTradeDetails93
     IPrice7? ISecuritiesTradeDetails93.DealPrice => DealPrice;
     IOpeningClosing3Choice? ISecuritiesTradeDetails93.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting10Choice> ISecuritiesTradeDetails93.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails93.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails93.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity4Choice? ISecuritiesTradeDetails93.InvestorCapacity => InvestorCapacity;
     ITradeOriginator3Choice? ISecuritiesTradeDetails93.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice29Choice? ISecuritiesTradeDetails93.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails93.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails93.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus27Choice? ISecuritiesTradeDetails93.MatchingStatus => MatchingStatus;
     IAffirmationStatus8Choice? ISecuritiesTradeDetails93.AffirmationStatus => AffirmationStatus;
 }

@@ -12,6 +12,7 @@ public partial record PaymentReturnV09 : IPaymentReturnV09
 {
     IGroupHeader90 IPaymentReturnV09.GroupHeader => GroupHeader;
     IOriginalGroupHeader18? IPaymentReturnV09.OriginalGroupInformation => OriginalGroupInformation;
-    IEnumerable<IPaymentTransaction112> IPaymentReturnV09.TransactionInformation => TransactionInformation;
+    IEnumerable<IPaymentTransaction112> IPaymentReturnV09.TransactionInformation =>
+        TransactionInformation;
     IEnumerable<ISupplementaryData1> IPaymentReturnV09.SupplementaryData => SupplementaryData;
 }

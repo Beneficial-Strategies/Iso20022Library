@@ -8,14 +8,20 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesFinancingTransactionDetails3 : ISecuritiesFinancingTransactionDetails3
+public partial record SecuritiesFinancingTransactionDetails3
+    : ISecuritiesFinancingTransactionDetails3
 {
-    ITerminationDate2Choice? ISecuritiesFinancingTransactionDetails3.TerminationDate => TerminationDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails3.RateChangeDate => RateChangeDate;
+    ITerminationDate2Choice? ISecuritiesFinancingTransactionDetails3.TerminationDate =>
+        TerminationDate;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails3.RateChangeDate =>
+        RateChangeDate;
     IRateType5Choice? ISecuritiesFinancingTransactionDetails3.RateType => RateType;
-    IRevaluationIndicator1Choice? ISecuritiesFinancingTransactionDetails3.Revaluation => Revaluation;
-    ILegalFramework1Choice? ISecuritiesFinancingTransactionDetails3.LegalFramework => LegalFramework;
-    IInterestComputationMethodFormat1Choice? ISecuritiesFinancingTransactionDetails3.InterestComputationMethod => InterestComputationMethod;
+    IRevaluationIndicator1Choice? ISecuritiesFinancingTransactionDetails3.Revaluation =>
+        Revaluation;
+    ILegalFramework1Choice? ISecuritiesFinancingTransactionDetails3.LegalFramework =>
+        LegalFramework;
+    IInterestComputationMethodFormat1Choice? ISecuritiesFinancingTransactionDetails3.InterestComputationMethod =>
+        InterestComputationMethod;
     IRateName1? ISecuritiesFinancingTransactionDetails3.VariableRateSupport => VariableRateSupport;
     IRate2? ISecuritiesFinancingTransactionDetails3.RepurchaseRate => RepurchaseRate;
     IRate2? ISecuritiesFinancingTransactionDetails3.StockLoanMargin => StockLoanMargin;
@@ -23,9 +29,12 @@ public partial record SecuritiesFinancingTransactionDetails3 : ISecuritiesFinanc
     IRateOrName1Choice? ISecuritiesFinancingTransactionDetails3.PricingRate => PricingRate;
     IRate2? ISecuritiesFinancingTransactionDetails3.Spread => Spread;
     IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.DealAmount => DealAmount;
-    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.AccruedInterestAmount => AccruedInterestAmount;
+    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.AccruedInterestAmount =>
+        AccruedInterestAmount;
     IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.ForfeitAmount => ForfeitAmount;
     IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.PremiumAmount => PremiumAmount;
-    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.TerminationAmountPerPieceOfCollateral => TerminationAmountPerPieceOfCollateral;
-    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.TerminationTransactionAmount => TerminationTransactionAmount;
+    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.TerminationAmountPerPieceOfCollateral =>
+        TerminationAmountPerPieceOfCollateral;
+    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails3.TerminationTransactionAmount =>
+        TerminationTransactionAmount;
 }

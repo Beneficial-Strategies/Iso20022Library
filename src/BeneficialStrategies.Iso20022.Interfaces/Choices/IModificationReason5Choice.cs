@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the Modification reason.
 /// </summary>
 [IsoId("_6QDrcZNLEeWGlc8L7oPDIg")]
-public interface IModificationReason5Choice : IIsoChoice
-{
-}
+public interface IModificationReason5Choice : IIsoChoice { }

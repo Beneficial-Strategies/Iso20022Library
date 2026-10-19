@@ -13,15 +13,20 @@ public partial record SecuritiesTradeDetails148 : ISecuritiesTradeDetails148
     IPortfolioTransferStatus2Choice? ISecuritiesTradeDetails148.Status => Status;
     ITradeDate8Choice? ISecuritiesTradeDetails148.TradeDate => TradeDate;
     ISettlementDate17Choice ISecuritiesTradeDetails148.SettlementDate => SettlementDate;
-    ISecurityIdentification19 ISecuritiesTradeDetails148.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes111? ISecuritiesTradeDetails148.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    ISecurityIdentification19 ISecuritiesTradeDetails148.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes111? ISecuritiesTradeDetails148.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IEnumerable<IReporting7Choice> ISecuritiesTradeDetails148.Reporting => Reporting;
     IQuantity48 ISecuritiesTradeDetails148.QuantityDetails => QuantityDetails;
     ISettlementDetails100? ISecuritiesTradeDetails148.SettlementParameters => SettlementParameters;
-    ISettlementParties128? ISecuritiesTradeDetails148.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties128? ISecuritiesTradeDetails148.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties128? ISecuritiesTradeDetails148.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties128? ISecuritiesTradeDetails148.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IAmountAndDirection52? ISecuritiesTradeDetails148.SettlementAmount => SettlementAmount;
     IOtherAmounts29? ISecuritiesTradeDetails148.OtherAmounts => OtherAmounts;
     IOtherParties39? ISecuritiesTradeDetails148.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails148.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails148.SupplementaryData =>
+        SupplementaryData;
 }

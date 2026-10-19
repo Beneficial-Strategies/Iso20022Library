@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UaE20duVEeiB5uLfkg9ZJA")]
 [DisplayName("Action Message")]
-public record ActionMessage6
+public partial record ActionMessage6
 {
     /// <summary>
     /// Destination of the message.

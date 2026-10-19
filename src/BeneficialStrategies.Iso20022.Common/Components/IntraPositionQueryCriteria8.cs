@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4CLSkeSlEe-qVZLXW4RRBw")]
 [DisplayName("Intra Position Query Criteria8")]
-public record IntraPositionQueryCriteria8
+public partial record IntraPositionQueryCriteria8
 {
     /// <summary>
     /// Collective reference identifying a set of messages.

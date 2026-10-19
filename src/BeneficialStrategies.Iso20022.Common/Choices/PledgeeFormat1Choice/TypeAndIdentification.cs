@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat1Choice
     [IsoId("_bJdQkE9jEeSn2-3swbRbzg")]
     [DisplayName("Type And Identification")]
     [IsoXmlTag("TpAndId")]
-    public record TypeAndIdentification : PledgeeFormat1Choice_
+    public partial record TypeAndIdentification : PledgeeFormat1Choice_
     {
         /// <summary>
         /// Identification of the entity to which the financial instruments are pledged, expressed as a BIC.

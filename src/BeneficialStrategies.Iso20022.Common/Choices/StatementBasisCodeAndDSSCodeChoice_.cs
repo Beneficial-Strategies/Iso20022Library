@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q7Cp8Np-Ed-ak6NoX_4Aeg_-1357896034")]
     [DisplayName("Statement Basis Code And DSS Code Choice")]
-    public abstract record StatementBasisCodeAndDSSCodeChoice_ { }
+    public abstract partial record StatementBasisCodeAndDSSCodeChoice_ { }
 }

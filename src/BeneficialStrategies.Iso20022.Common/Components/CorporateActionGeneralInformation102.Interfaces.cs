@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionGeneralInformation102 : ICorporateActionGeneralInformation102
 {
-    ICorporateActionNarrative4Choice? ICorporateActionGeneralInformation102.NarrativeType => NarrativeType;
+    ICorporateActionNarrative4Choice? ICorporateActionGeneralInformation102.NarrativeType =>
+        NarrativeType;
 }

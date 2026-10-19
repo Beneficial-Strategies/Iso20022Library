@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of proprietary or domestic identification scheme that uniquely identifies a security.
 /// </summary>
 [IsoId("_RCMa1Np-Ed-ak6NoX_4Aeg_-823222621")]
-public interface IIdentificationSource1Choice : IIsoChoice
-{
-}
+public interface IIdentificationSource1Choice : IIsoChoice { }

@@ -10,9 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionEventDeadlines4 : ICorporateActionEventDeadlines4
 {
-    IDateFormat49Choice? ICorporateActionEventDeadlines4.EarlyResponseDeadline => EarlyResponseDeadline;
+    IDateFormat49Choice? ICorporateActionEventDeadlines4.EarlyResponseDeadline =>
+        EarlyResponseDeadline;
     IDateFormat54Choice? ICorporateActionEventDeadlines4.ResponseDeadline => ResponseDeadline;
     IDateFormat49Choice? ICorporateActionEventDeadlines4.MarketDeadline => MarketDeadline;
     IDateFormat49Choice? ICorporateActionEventDeadlines4.ProtectDeadline => ProtectDeadline;
-    IDateFormat49Choice? ICorporateActionEventDeadlines4.CoverProtectDeadline => CoverProtectDeadline;
+    IDateFormat49Choice? ICorporateActionEventDeadlines4.CoverProtectDeadline =>
+        CoverProtectDeadline;
 }

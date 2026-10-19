@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 public partial record PaymentReturnV01 : IPaymentReturnV01
 {
     IGroupHeader6 IPaymentReturnV01.GroupHeader => GroupHeader;
-    IOriginalGroupInformation2? IPaymentReturnV01.OriginalGroupInformation => OriginalGroupInformation;
-    IEnumerable<IPaymentTransactionInformation2> IPaymentReturnV01.TransactionInformation => TransactionInformation;
+    IOriginalGroupInformation2? IPaymentReturnV01.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IEnumerable<IPaymentTransactionInformation2> IPaymentReturnV01.TransactionInformation =>
+        TransactionInformation;
 }

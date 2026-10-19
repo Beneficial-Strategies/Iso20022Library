@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionQuantity9 : ICorporateActionQuantity9
 {
-    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity9.BaseDenomination => BaseDenomination;
-    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity9.IncrementalDenomination => IncrementalDenomination;
+    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity9.BaseDenomination =>
+        BaseDenomination;
+    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity9.IncrementalDenomination =>
+        IncrementalDenomination;
 }

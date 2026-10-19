@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
 /// Indicates whether an account owner has placed a standing order to select this corporate action option.
 /// </summary>
 [IsoId("_Q0VlBNp-Ed-ak6NoX_4Aeg_-857961387")]
-public interface IStandingInstructionIndicator : IDefaultProcessingOrStandingInstruction1Choice, IIsoChoiceVariant
+public interface IStandingInstructionIndicator
+    : IDefaultProcessingOrStandingInstruction1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

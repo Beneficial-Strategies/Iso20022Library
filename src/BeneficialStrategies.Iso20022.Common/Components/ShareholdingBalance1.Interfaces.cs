@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ShareholdingBalance1 : IShareholdingBalance1
 {
     IFinancialInstrumentQuantity18Choice IShareholdingBalance1.Quantity => Quantity;
-    IDateFormat57Choice? IShareholdingBalance1.InitialDateOfShareholding => InitialDateOfShareholding;
+    IDateFormat57Choice? IShareholdingBalance1.InitialDateOfShareholding =>
+        InitialDateOfShareholding;
     IEnumerable<IPartyIdentification218> IShareholdingBalance1.ThirdParty => ThirdParty;
     IEnumerable<ISupplementaryData1> IShareholdingBalance1.SupplementaryData => SupplementaryData;
 }

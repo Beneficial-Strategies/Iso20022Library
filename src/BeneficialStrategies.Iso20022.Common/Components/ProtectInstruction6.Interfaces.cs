@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ProtectInstruction6 : IProtectInstruction6
 {
-    IFinancialInstrumentQuantity31Choice? IProtectInstruction6.UncoveredProtectQuantity => UncoveredProtectQuantity;
+    IFinancialInstrumentQuantity31Choice? IProtectInstruction6.UncoveredProtectQuantity =>
+        UncoveredProtectQuantity;
 }

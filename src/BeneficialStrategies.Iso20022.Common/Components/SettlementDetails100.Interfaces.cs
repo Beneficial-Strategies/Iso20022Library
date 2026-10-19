@@ -10,11 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementDetails100 : ISettlementDetails100
 {
-    IEnumerable<ISettlementTransactionCondition19Choice> ISettlementDetails100.SettlementTransactionCondition => SettlementTransactionCondition;
+    IEnumerable<ISettlementTransactionCondition19Choice> ISettlementDetails100.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     IRegistration9Choice? ISettlementDetails100.Registration => Registration;
     IRestriction5Choice? ISettlementDetails100.LegalRestrictions => LegalRestrictions;
     ISecuritiesRTGS4Choice? ISettlementDetails100.SecuritiesRTGS => SecuritiesRTGS;
-    ISettlementSystemMethod4Choice? ISettlementDetails100.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod4Choice? ISettlementDetails100.SettlementSystemMethod =>
+        SettlementSystemMethod;
     ITaxCapacityParty4Choice? ISettlementDetails100.TaxCapacity => TaxCapacity;
     IGenericIdentification30? ISettlementDetails100.StampDutyTaxBasis => StampDutyTaxBasis;
 }

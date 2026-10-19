@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the setup of the mandate.
 /// </summary>
 [IsoId("_iQq8ND2OEeS6DKIV6SF6gw")]
-public interface IMandateSetupReason1Choice : IIsoChoice
-{
-}
+public interface IMandateSetupReason1Choice : IIsoChoice { }

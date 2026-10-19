@@ -8,15 +8,24 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionEventProcessingStatusAdviceV01 : ICorporateActionEventProcessingStatusAdviceV01
+public partial record CorporateActionEventProcessingStatusAdviceV01
+    : ICorporateActionEventProcessingStatusAdviceV01
 {
-    IDocumentIdentification11 ICorporateActionEventProcessingStatusAdviceV01.Identification => Identification;
-    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV01.NotificationIdentification => NotificationIdentification;
-    IEnumerable<IDocumentIdentification14> ICorporateActionEventProcessingStatusAdviceV01.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation9 ICorporateActionEventProcessingStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IEventProcessingStatus1Choice> ICorporateActionEventProcessingStatusAdviceV01.EventProcessingStatus => EventProcessingStatus;
-    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV01.AdditionalInformation => AdditionalInformation;
-    IPartyIdentification10Choice? ICorporateActionEventProcessingStatusAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ICorporateActionEventProcessingStatusAdviceV01.MessageRecipient => MessageRecipient;
+    IDocumentIdentification11 ICorporateActionEventProcessingStatusAdviceV01.Identification =>
+        Identification;
+    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV01.NotificationIdentification =>
+        NotificationIdentification;
+    IEnumerable<IDocumentIdentification14> ICorporateActionEventProcessingStatusAdviceV01.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation9 ICorporateActionEventProcessingStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IEventProcessingStatus1Choice> ICorporateActionEventProcessingStatusAdviceV01.EventProcessingStatus =>
+        EventProcessingStatus;
+    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV01.AdditionalInformation =>
+        AdditionalInformation;
+    IPartyIdentification10Choice? ICorporateActionEventProcessingStatusAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ICorporateActionEventProcessingStatusAdviceV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ICorporateActionEventProcessingStatusAdviceV01.Extension => Extension;
 }

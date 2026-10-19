@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O6T8EN7CEeiwsev40qZGEQ")]
 [DisplayName("Device Poweroff Card Reader Request")]
-public record DevicePoweroffCardReaderRequest1
+public partial record DevicePoweroffCardReaderRequest1
 {
     /// <summary>
     /// Maximum time to wait for the request processing in seconds.

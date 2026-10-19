@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency22Choice
     [IsoId("_Z-H2q_3-EeS5i-mwuUyZxw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Frequency22Choice_
+    public partial record Proprietary : Frequency22Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

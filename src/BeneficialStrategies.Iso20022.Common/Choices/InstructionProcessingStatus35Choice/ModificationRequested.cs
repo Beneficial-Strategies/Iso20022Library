@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus35Cho
     [IsoId("_iE4OmffZEeiNZp_PtLohLw")]
     [DisplayName("Modification Requested")]
     [IsoXmlTag("ModReqd")]
-    public record ModificationRequested : InstructionProcessingStatus35Choice_
+    public partial record ModificationRequested : InstructionProcessingStatus35Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

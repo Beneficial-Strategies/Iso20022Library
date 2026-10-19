@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record UpdateType5Choice_ : IUpdateType5Choice
-{
-}
+public abstract partial record UpdateType5Choice_ : IUpdateType5Choice { }

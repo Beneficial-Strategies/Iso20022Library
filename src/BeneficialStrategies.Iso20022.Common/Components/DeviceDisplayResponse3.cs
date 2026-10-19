@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Epv-Mc-iEfCjWv7IQMnzMg")]
 [DisplayName("Device Display Response3")]
-public record DeviceDisplayResponse3
+public partial record DeviceDisplayResponse3
 {
     /// <summary>
     /// Give result for display request.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8bg2V5NLEeWGlc8L7oPDIg")]
 [DisplayName("Price Information")]
-public record PriceInformation16
+public partial record PriceInformation16
 {
     /// <summary>
     /// Specifies the type of price and information about the price.

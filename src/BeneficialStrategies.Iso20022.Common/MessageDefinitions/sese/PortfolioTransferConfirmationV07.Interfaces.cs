@@ -14,18 +14,27 @@ public partial record PortfolioTransferConfirmationV07 : IPortfolioTransferConfi
     IAdditionalReference6? IPortfolioTransferConfirmationV07.PoolReference => PoolReference;
     IAdditionalReference6? IPortfolioTransferConfirmationV07.PreviousReference => PreviousReference;
     IAdditionalReference6? IPortfolioTransferConfirmationV07.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPortfolioTransferConfirmationV07.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPortfolioTransferConfirmationV07.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV07.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation21? IPortfolioTransferConfirmationV07.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation21? IPortfolioTransferConfirmationV07.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation21> IPortfolioTransferConfirmationV07.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV07.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV07.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV07.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation21? IPortfolioTransferConfirmationV07.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation21? IPortfolioTransferConfirmationV07.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation21> IPortfolioTransferConfirmationV07.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount19 IPortfolioTransferConfirmationV07.TransferorAccount => TransferorAccount;
     IAccount19? IPortfolioTransferConfirmationV07.NomineeAccount => NomineeAccount;
     IPartyIdentification70Choice IPortfolioTransferConfirmationV07.Transferee => Transferee;
-    IEnumerable<IIntermediary34> IPortfolioTransferConfirmationV07.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary34> IPortfolioTransferConfirmationV07.IntermediaryInformation =>
+        IntermediaryInformation;
     ICashAccount34? IPortfolioTransferConfirmationV07.CashAccount => CashAccount;
-    IEnumerable<IISATransfer26> IPortfolioTransferConfirmationV07.ProductTransfer => ProductTransfer;
-    IMarketPracticeVersion1? IPortfolioTransferConfirmationV07.MarketPracticeVersion => MarketPracticeVersion;
+    IEnumerable<IISATransfer26> IPortfolioTransferConfirmationV07.ProductTransfer =>
+        ProductTransfer;
+    IMarketPracticeVersion1? IPortfolioTransferConfirmationV07.MarketPracticeVersion =>
+        MarketPracticeVersion;
     IEnumerable<IExtension1> IPortfolioTransferConfirmationV07.Extension => Extension;
 }

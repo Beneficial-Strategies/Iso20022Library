@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat56Choice;
 /// Price expressed as a ratio: amount price per financial instrument quantity.
 /// </summary>
 [IsoId("_ckDm05KQEeWHWpTQn1FFVg")]
-public interface IAmountPricePerFinancialInstrumentQuantity : IPriceFormat56Choice, IIsoChoiceVariant
+public interface IAmountPricePerFinancialInstrumentQuantity
+    : IPriceFormat56Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Type of amount price.

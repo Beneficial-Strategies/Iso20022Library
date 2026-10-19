@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b4INoNwJEeeKpa-yxjuKzQ")]
 [DisplayName("Generic Information")]
-public record GenericInformation1
+public partial record GenericInformation1
 {
     /// <summary>
     /// Name of the generic information to exchange.

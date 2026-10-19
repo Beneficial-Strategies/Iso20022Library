@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7OgBINxCEeioifFt1dhnJA")]
 [DisplayName("Payment Response")]
-public record PaymentResponse1
+public partial record PaymentResponse1
 {
     /// <summary>
     /// Sale System identification of the transaction in an unambiguous way.

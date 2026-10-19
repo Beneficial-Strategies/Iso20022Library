@@ -10,9 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails181 : ITransactionDetails181
 {
-    ISettlementTypeAndIdentification18 ITransactionDetails181.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
+    ISettlementTypeAndIdentification18 ITransactionDetails181.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
     IPartyIdentification144? ITransactionDetails181.AccountOwner => AccountOwner;
     ISecuritiesAccount19? ITransactionDetails181.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ITransactionDetails181.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IBlockChainAddressWallet3? ITransactionDetails181.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     ITransactionDetails180? ITransactionDetails181.TransactionDetails => TransactionDetails;
 }

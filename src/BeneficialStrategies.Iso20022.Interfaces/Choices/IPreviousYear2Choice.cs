@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between selected investment plans issued during previous years or all investment plans.
 /// </summary>
 [IsoId("_dNZ_cbNBEeex65jrLOfSTw")]
-public interface IPreviousYear2Choice : IIsoChoice
-{
-}
+public interface IPreviousYear2Choice : IIsoChoice { }

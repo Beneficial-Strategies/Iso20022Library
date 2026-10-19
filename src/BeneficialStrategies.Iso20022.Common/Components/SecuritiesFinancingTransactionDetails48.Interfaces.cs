@@ -8,16 +8,24 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesFinancingTransactionDetails48 : ISecuritiesFinancingTransactionDetails48
+public partial record SecuritiesFinancingTransactionDetails48
+    : ISecuritiesFinancingTransactionDetails48
 {
-    ITerminationDate7Choice? ISecuritiesFinancingTransactionDetails48.TerminationDate => TerminationDate;
-    IDateAndDateTime2Choice? ISecuritiesFinancingTransactionDetails48.RateChangeDate => RateChangeDate;
-    IDateAndDateTime2Choice? ISecuritiesFinancingTransactionDetails48.EarliestCallBackDate => EarliestCallBackDate;
-    IDateAndDateTime2Choice? ISecuritiesFinancingTransactionDetails48.CommissionCalculationDate => CommissionCalculationDate;
+    ITerminationDate7Choice? ISecuritiesFinancingTransactionDetails48.TerminationDate =>
+        TerminationDate;
+    IDateAndDateTime2Choice? ISecuritiesFinancingTransactionDetails48.RateChangeDate =>
+        RateChangeDate;
+    IDateAndDateTime2Choice? ISecuritiesFinancingTransactionDetails48.EarliestCallBackDate =>
+        EarliestCallBackDate;
+    IDateAndDateTime2Choice? ISecuritiesFinancingTransactionDetails48.CommissionCalculationDate =>
+        CommissionCalculationDate;
     IRateType67Choice? ISecuritiesFinancingTransactionDetails48.RateType => RateType;
-    IRevaluationIndicator4Choice? ISecuritiesFinancingTransactionDetails48.Revaluation => Revaluation;
-    ILegalFramework4Choice? ISecuritiesFinancingTransactionDetails48.LegalFramework => LegalFramework;
-    IInterestComputationMethodFormat5Choice? ISecuritiesFinancingTransactionDetails48.InterestComputationMethod => InterestComputationMethod;
+    IRevaluationIndicator4Choice? ISecuritiesFinancingTransactionDetails48.Revaluation =>
+        Revaluation;
+    ILegalFramework4Choice? ISecuritiesFinancingTransactionDetails48.LegalFramework =>
+        LegalFramework;
+    IInterestComputationMethodFormat5Choice? ISecuritiesFinancingTransactionDetails48.InterestComputationMethod =>
+        InterestComputationMethod;
     IRateName2? ISecuritiesFinancingTransactionDetails48.VariableRateSupport => VariableRateSupport;
     IRate2? ISecuritiesFinancingTransactionDetails48.RepurchaseRate => RepurchaseRate;
     IRate2? ISecuritiesFinancingTransactionDetails48.StockLoanMargin => StockLoanMargin;
@@ -25,11 +33,15 @@ public partial record SecuritiesFinancingTransactionDetails48 : ISecuritiesFinan
     IRate2? ISecuritiesFinancingTransactionDetails48.ChargesRate => ChargesRate;
     IRateOrName2Choice? ISecuritiesFinancingTransactionDetails48.PricingRate => PricingRate;
     IRate2? ISecuritiesFinancingTransactionDetails48.Spread => Spread;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.LocalBrokerCommission => LocalBrokerCommission;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.LocalBrokerCommission =>
+        LocalBrokerCommission;
     IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.DealAmount => DealAmount;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.AccruedInterestAmount => AccruedInterestAmount;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.AccruedInterestAmount =>
+        AccruedInterestAmount;
     IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.ForfeitAmount => ForfeitAmount;
     IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.PremiumAmount => PremiumAmount;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.TerminationAmountPerPieceOfCollateral => TerminationAmountPerPieceOfCollateral;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.TerminationTransactionAmount => TerminationTransactionAmount;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.TerminationAmountPerPieceOfCollateral =>
+        TerminationAmountPerPieceOfCollateral;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails48.TerminationTransactionAmount =>
+        TerminationTransactionAmount;
 }

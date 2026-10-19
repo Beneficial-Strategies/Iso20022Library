@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZPfaOjmmEemla4muNfgRrg")]
 [DisplayName("Penalty Identification2")]
-public record PenaltyIdentification2
+public partial record PenaltyIdentification2
 {
     /// <summary>
     /// Identification as assigned by the market infrastructure to the penalty and that is common for both the failing and the non-failing participant.

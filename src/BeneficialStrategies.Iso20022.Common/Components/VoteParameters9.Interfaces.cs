@@ -10,17 +10,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record VoteParameters9 : IVoteParameters9
 {
-    IFinancialInstrumentQuantity18Choice? IVoteParameters9.SecuritiesQuantityRequiredToVote => SecuritiesQuantityRequiredToVote;
+    IFinancialInstrumentQuantity18Choice? IVoteParameters9.SecuritiesQuantityRequiredToVote =>
+        SecuritiesQuantityRequiredToVote;
     IDateFormat58Choice? IVoteParameters9.VoteDeadline => VoteDeadline;
     IDateFormat58Choice? IVoteParameters9.VoteMarketDeadline => VoteMarketDeadline;
     IVoteMethods5? IVoteParameters9.VoteMethods => VoteMethods;
-    ICommunicationAddress11? IVoteParameters9.VotingBallotElectronicAddress => VotingBallotElectronicAddress;
+    ICommunicationAddress11? IVoteParameters9.VotingBallotElectronicAddress =>
+        VotingBallotElectronicAddress;
     IPostalAddress1? IVoteParameters9.VotingBallotRequestAddress => VotingBallotRequestAddress;
     IDateFormat58Choice? IVoteParameters9.RevocabilityDeadline => RevocabilityDeadline;
     IDateFormat58Choice? IVoteParameters9.RevocabilityMarketDeadline => RevocabilityMarketDeadline;
     IIncentivePremium6? IVoteParameters9.EarlyIncentivePremium => EarlyIncentivePremium;
     IIncentivePremium6? IVoteParameters9.IncentivePremium => IncentivePremium;
-    IDateFormat58Choice? IVoteParameters9.EarlyVoteWithPremiumDeadline => EarlyVoteWithPremiumDeadline;
+    IDateFormat58Choice? IVoteParameters9.EarlyVoteWithPremiumDeadline =>
+        EarlyVoteWithPremiumDeadline;
     IDateFormat58Choice? IVoteParameters9.VoteWithPremiumDeadline => VoteWithPremiumDeadline;
-    IDateFormat58Choice? IVoteParameters9.VoteWithPremiumMarketDeadline => VoteWithPremiumMarketDeadline;
+    IDateFormat58Choice? IVoteParameters9.VoteWithPremiumMarketDeadline =>
+        VoteWithPremiumMarketDeadline;
 }

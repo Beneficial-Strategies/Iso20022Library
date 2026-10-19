@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
     /// </summary>
     [IsoId("_RCDQ5Np-Ed-ak6NoX_4Aeg_863703704")]
     [DisplayName("Local Market Place")]
-    public record LocalMarketPlace : PriceSourceFormatChoice_
+    public partial record LocalMarketPlace : PriceSourceFormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

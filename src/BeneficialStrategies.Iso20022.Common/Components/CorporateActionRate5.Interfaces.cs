@@ -15,24 +15,34 @@ public partial record CorporateActionRate5 : ICorporateActionRate5
     IRateAndAmountFormat4Choice? ICorporateActionRate5.FinalDividendRate => FinalDividendRate;
     IRateFormat2Choice? ICorporateActionRate5.FiscalStamp => FiscalStamp;
     IRateAndAmountFormat3Choice? ICorporateActionRate5.FullyFrankedRate => FullyFrankedRate;
-    IEnumerable<IGrossDividendRateFormat1Choice> ICorporateActionRate5.GrossDividendRate => GrossDividendRate;
+    IEnumerable<IGrossDividendRateFormat1Choice> ICorporateActionRate5.GrossDividendRate =>
+        GrossDividendRate;
     IRateFormat2Choice? ICorporateActionRate5.CashIncentiveRate => CashIncentiveRate;
     IRateAndAmountFormat3Choice? ICorporateActionRate5.IndexFactor => IndexFactor;
-    IEnumerable<IInterestRateUsedForPaymentFormat1Choice> ICorporateActionRate5.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IEnumerable<INetDividendRateFormat1Choice> ICorporateActionRate5.NetDividendRate => NetDividendRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat1Choice> ICorporateActionRate5.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IEnumerable<INetDividendRateFormat1Choice> ICorporateActionRate5.NetDividendRate =>
+        NetDividendRate;
     IRateAndAmountFormat3Choice? ICorporateActionRate5.NonResidentRate => NonResidentRate;
-    IRateFormat2Choice? ICorporateActionRate5.MaximumAllowedOversubscriptionRate => MaximumAllowedOversubscriptionRate;
-    IRateAndAmountFormat4Choice? ICorporateActionRate5.ProvisionalDividendRate => ProvisionalDividendRate;
+    IRateFormat2Choice? ICorporateActionRate5.MaximumAllowedOversubscriptionRate =>
+        MaximumAllowedOversubscriptionRate;
+    IRateAndAmountFormat4Choice? ICorporateActionRate5.ProvisionalDividendRate =>
+        ProvisionalDividendRate;
     IEnumerable<ITaxCreditRateFormat1Choice> ICorporateActionRate5.TaxCreditRate => TaxCreditRate;
     IRateFormat2Choice? ICorporateActionRate5.ProrationRate => ProrationRate;
-    ISolicitationFeeRateFormat1Choice? ICorporateActionRate5.SolicitationFeeRate => SolicitationFeeRate;
-    ISolicitationFeeRateFormat1Choice? ICorporateActionRate5.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    ISolicitationFeeRateFormat1Choice? ICorporateActionRate5.SolicitationFeeRate =>
+        SolicitationFeeRate;
+    ISolicitationFeeRateFormat1Choice? ICorporateActionRate5.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateFormat2Choice? ICorporateActionRate5.WithholdingTaxRate => WithholdingTaxRate;
     IRateFormat2Choice? ICorporateActionRate5.TaxOnIncome => TaxOnIncome;
     IRateFormat2Choice? ICorporateActionRate5.TaxOnProfits => TaxOnProfits;
     IRateFormat2Choice? ICorporateActionRate5.TaxReclaimRate => TaxReclaimRate;
-    IRateAndAmountFormat3Choice? ICorporateActionRate5.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IRateAndAmountFormat3Choice? ICorporateActionRate5.WithholdingOfLocalTax => WithholdingOfLocalTax;
-    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate5.TaxRelatedRate => TaxRelatedRate;
+    IRateAndAmountFormat3Choice? ICorporateActionRate5.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IRateAndAmountFormat3Choice? ICorporateActionRate5.WithholdingOfLocalTax =>
+        WithholdingOfLocalTax;
+    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate5.TaxRelatedRate =>
+        TaxRelatedRate;
     IRateFormat2Choice? ICorporateActionRate5.ApplicableRate => ApplicableRate;
 }

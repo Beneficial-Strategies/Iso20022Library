@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// <summary>
 /// Rate Type And Amount And Rate Status.
 /// </summary>
-public interface IRateTypeAndAmountAndRateStatus : IInterestRateUsedForPaymentFormat19Choice, IIsoChoiceVariant
+public interface IRateTypeAndAmountAndRateStatus
+    : IInterestRateUsedForPaymentFormat19Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

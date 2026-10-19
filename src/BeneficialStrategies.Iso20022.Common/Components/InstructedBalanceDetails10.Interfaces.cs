@@ -10,11 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InstructedBalanceDetails10 : IInstructedBalanceDetails10
 {
-    IBalanceFormat7Choice IInstructedBalanceDetails10.TotalInstructedBalance => TotalInstructedBalance;
-    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalAcceptedInstructionBalance => TotalAcceptedInstructionBalance;
-    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalCancelledInstructionBalance => TotalCancelledInstructionBalance;
-    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalPendingInstructionBalance => TotalPendingInstructionBalance;
-    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalRejectedInstructionBalance => TotalRejectedInstructionBalance;
-    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalProtectInstructionBalance => TotalProtectInstructionBalance;
-    IEnumerable<IInstructedCorporateActionOption11> IInstructedBalanceDetails10.OptionDetails => OptionDetails;
+    IBalanceFormat7Choice IInstructedBalanceDetails10.TotalInstructedBalance =>
+        TotalInstructedBalance;
+    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalAcceptedInstructionBalance =>
+        TotalAcceptedInstructionBalance;
+    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalCancelledInstructionBalance =>
+        TotalCancelledInstructionBalance;
+    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalPendingInstructionBalance =>
+        TotalPendingInstructionBalance;
+    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalRejectedInstructionBalance =>
+        TotalRejectedInstructionBalance;
+    ISignedQuantityFormat9? IInstructedBalanceDetails10.TotalProtectInstructionBalance =>
+        TotalProtectInstructionBalance;
+    IEnumerable<IInstructedCorporateActionOption11> IInstructedBalanceDetails10.OptionDetails =>
+        OptionDetails;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iUt-kQ03EeqUVL7sB4m7NA")]
 [DisplayName("Message Status Response Data")]
-public record MessageStatusResponseData3
+public partial record MessageStatusResponseData3
 {
     /// <summary>
     /// Identification of the requested previous message.

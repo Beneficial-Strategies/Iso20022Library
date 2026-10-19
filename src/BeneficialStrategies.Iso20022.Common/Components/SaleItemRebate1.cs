@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ifYlkNxOEeioifFt1dhnJA")]
 [DisplayName("Sale Item Rebate")]
-public record SaleItemRebate1
+public partial record SaleItemRebate1
 {
     /// <summary>
     /// Data of the Sale item.

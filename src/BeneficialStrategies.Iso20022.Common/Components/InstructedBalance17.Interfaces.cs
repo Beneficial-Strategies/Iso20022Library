@@ -11,10 +11,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record InstructedBalance17 : IInstructedBalance17
 {
     IBalanceFormat14Choice IInstructedBalance17.TotalInstructedBalance => TotalInstructedBalance;
-    ISignedQuantityFormat13? IInstructedBalance17.TotalAcceptedInstructionBalance => TotalAcceptedInstructionBalance;
-    ISignedQuantityFormat13? IInstructedBalance17.TotalCancelledInstructionBalance => TotalCancelledInstructionBalance;
-    ISignedQuantityFormat13? IInstructedBalance17.TotalPendingInstructionBalance => TotalPendingInstructionBalance;
-    ISignedQuantityFormat13? IInstructedBalance17.TotalRejectedInstructionBalance => TotalRejectedInstructionBalance;
-    ISignedQuantityFormat13? IInstructedBalance17.TotalProtectInstructionBalance => TotalProtectInstructionBalance;
-    IEnumerable<IInstructedCorporateActionOption18> IInstructedBalance17.OptionDetails => OptionDetails;
+    ISignedQuantityFormat13? IInstructedBalance17.TotalAcceptedInstructionBalance =>
+        TotalAcceptedInstructionBalance;
+    ISignedQuantityFormat13? IInstructedBalance17.TotalCancelledInstructionBalance =>
+        TotalCancelledInstructionBalance;
+    ISignedQuantityFormat13? IInstructedBalance17.TotalPendingInstructionBalance =>
+        TotalPendingInstructionBalance;
+    ISignedQuantityFormat13? IInstructedBalance17.TotalRejectedInstructionBalance =>
+        TotalRejectedInstructionBalance;
+    ISignedQuantityFormat13? IInstructedBalance17.TotalProtectInstructionBalance =>
+        TotalProtectInstructionBalance;
+    IEnumerable<IInstructedCorporateActionOption18> IInstructedBalance17.OptionDetails =>
+        OptionDetails;
 }

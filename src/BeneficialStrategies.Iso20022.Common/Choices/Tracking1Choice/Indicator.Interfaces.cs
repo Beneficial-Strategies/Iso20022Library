@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Tracking1Choice;
 
-public partial record Indicator : IIndicator
-{
-}
+public partial record Indicator : IIndicator { }

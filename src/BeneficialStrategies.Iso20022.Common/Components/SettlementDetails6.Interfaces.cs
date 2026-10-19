@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementDetails6 : ISettlementDetails6
 {
     IPriorityNumeric1Choice? ISettlementDetails6.Priority => Priority;
-    ISecuritiesTransactionType3Choice ISettlementDetails6.SecuritiesTransactionType => SecuritiesTransactionType;
-    IEnumerable<ISettlementTransactionCondition1Choice> ISettlementDetails6.SettlementTransactionCondition => SettlementTransactionCondition;
+    ISecuritiesTransactionType3Choice ISettlementDetails6.SecuritiesTransactionType =>
+        SecuritiesTransactionType;
+    IEnumerable<ISettlementTransactionCondition1Choice> ISettlementDetails6.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     IBeneficialOwnership1Choice? ISettlementDetails6.BeneficialOwnership => BeneficialOwnership;
     IBlockTrade1Choice? ISettlementDetails6.BlockTrade => BlockTrade;
     ICentralCounterPartyEligibility1Choice? ISettlementDetails6.CCPEligibility => CCPEligibility;
@@ -25,7 +27,8 @@ public partial record SettlementDetails6 : ISettlementDetails6
     IRestriction1Choice? ISettlementDetails6.LegalRestrictions => LegalRestrictions;
     ISecuritiesRTGS1Choice? ISettlementDetails6.SecuritiesRTGS => SecuritiesRTGS;
     ISettlingCapacity1Choice? ISettlementDetails6.SettlingCapacity => SettlingCapacity;
-    ISettlementSystemMethod1Choice? ISettlementDetails6.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod1Choice? ISettlementDetails6.SettlementSystemMethod =>
+        SettlementSystemMethod;
     ITaxCapacityParty1Choice? ISettlementDetails6.TaxCapacity => TaxCapacity;
     IGenericIdentification20? ISettlementDetails6.StampDutyTaxBasis => StampDutyTaxBasis;
     IAutomaticBorrowing1Choice? ISettlementDetails6.AutomaticBorrowing => AutomaticBorrowing;

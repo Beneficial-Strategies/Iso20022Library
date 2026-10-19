@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification1Choice;
 
-public partial record BICOrBEI : IBICOrBEI
-{
-}
+public partial record BICOrBEI : IBICOrBEI { }

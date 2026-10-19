@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TransactionTypeAndAdditionalParameters2 : ITransactionTypeAndAdditionalParameters2
+public partial record TransactionTypeAndAdditionalParameters2
+    : ITransactionTypeAndAdditionalParameters2
 {
-    IRepurchaseType2Choice? ITransactionTypeAndAdditionalParameters2.ModificationType => ModificationType;
+    IRepurchaseType2Choice? ITransactionTypeAndAdditionalParameters2.ModificationType =>
+        ModificationType;
 }

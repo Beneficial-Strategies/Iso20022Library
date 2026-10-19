@@ -12,5 +12,6 @@ public partial record OtherAsset2 : IOtherAsset2
 {
     IOtherAsset2Choice IOtherAsset2.OtherAssetType => OtherAssetType;
     IEnumerable<string> IOtherAsset2.OtherIdentification => OtherIdentification;
-    IEnumerable<IAdditionalInformation15> IOtherAsset2.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IOtherAsset2.AdditionalInformation =>
+        AdditionalInformation;
 }

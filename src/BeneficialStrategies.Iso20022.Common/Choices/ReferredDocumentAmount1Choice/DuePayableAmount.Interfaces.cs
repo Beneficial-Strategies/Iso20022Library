@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 
-public partial record DuePayableAmount : IDuePayableAmount
-{
-}
+public partial record DuePayableAmount : IDuePayableAmount { }

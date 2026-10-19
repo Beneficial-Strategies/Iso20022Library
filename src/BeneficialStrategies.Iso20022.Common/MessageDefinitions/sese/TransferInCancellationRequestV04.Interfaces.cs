@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferInCancellationRequestV04 : ITransferInCancellationRequestV04
 {
-    IMessageIdentification1 ITransferInCancellationRequestV04.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ITransferInCancellationRequestV04.MessageIdentification =>
+        MessageIdentification;
     IEnumerable<IReferences11> ITransferInCancellationRequestV04.References => References;
     ICancellation2Choice ITransferInCancellationRequestV04.Cancellation => Cancellation;
     ICopyInformation2? ITransferInCancellationRequestV04.CopyDetails => CopyDetails;

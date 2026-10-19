@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashOption91 : ICashOption91
 {
-    ICashAccountIdentification5Choice? ICashOption91.CashAccountIdentification => CashAccountIdentification;
-    IEnumerable<IRateAndAmountFormat40Choice> ICashOption91.WithholdingTaxRate => WithholdingTaxRate;
+    ICashAccountIdentification5Choice? ICashOption91.CashAccountIdentification =>
+        CashAccountIdentification;
+    IEnumerable<IRateAndAmountFormat40Choice> ICashOption91.WithholdingTaxRate =>
+        WithholdingTaxRate;
     IDateAndDateTime2Choice? ICashOption91.EarliestPaymentDate => EarliestPaymentDate;
     IDateFormat43Choice ICashOption91.PaymentDate => PaymentDate;
 }

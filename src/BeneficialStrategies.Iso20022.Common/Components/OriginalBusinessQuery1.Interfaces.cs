@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record OriginalBusinessQuery1 : IOriginalBusinessQuery1
-{
-}
+public partial record OriginalBusinessQuery1 : IOriginalBusinessQuery1 { }

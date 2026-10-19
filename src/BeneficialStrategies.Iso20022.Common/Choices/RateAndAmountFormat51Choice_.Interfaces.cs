@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RateAndAmountFormat51Choice_ : IRateAndAmountFormat51Choice
-{
-}
+public abstract partial record RateAndAmountFormat51Choice_ : IRateAndAmountFormat51Choice { }

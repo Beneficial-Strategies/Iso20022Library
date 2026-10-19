@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an accepted and a rejected status for the acceptance of a message.
 /// </summary>
 [IsoId("_f9a9gIeUEemJ1cSJJmVYRQ")]
-public interface IResponseProcessingStatus1Choice : IIsoChoice
-{
-}
+public interface IResponseProcessingStatus1Choice : IIsoChoice { }

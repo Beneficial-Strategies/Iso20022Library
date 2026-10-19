@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateMovementStatus2 : ICorporateMovementStatus2
 {
-    ICorporationActionMovementProcessingStatus2 ICorporateMovementStatus2.ProcessedStatus => ProcessedStatus;
-    ICorporateActionMovementRejectionStatus2 ICorporateMovementStatus2.RejectedStatus => RejectedStatus;
+    ICorporationActionMovementProcessingStatus2 ICorporateMovementStatus2.ProcessedStatus =>
+        ProcessedStatus;
+    ICorporateActionMovementRejectionStatus2 ICorporateMovementStatus2.RejectedStatus =>
+        RejectedStatus;
 }

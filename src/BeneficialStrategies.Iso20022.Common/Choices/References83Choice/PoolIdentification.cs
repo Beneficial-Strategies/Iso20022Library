@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice
     /// <summary>Specifies the pool identification.</summary>
     [IsoId("_Wt0M2KgzEfCXwLUUylXgrQ")]
     [DisplayName("Pool Identification")]
-    public record PoolIdentification : References83Choice_
+    public partial record PoolIdentification : References83Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PoolId")]

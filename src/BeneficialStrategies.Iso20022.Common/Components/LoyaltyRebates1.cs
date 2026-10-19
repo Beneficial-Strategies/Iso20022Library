@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M2VZgNxOEeioifFt1dhnJA")]
 [DisplayName("Loyalty Rebates")]
-public record LoyaltyRebates1
+public partial record LoyaltyRebates1
 {
     /// <summary>
     /// The global awarded amount that is not attached to an item.

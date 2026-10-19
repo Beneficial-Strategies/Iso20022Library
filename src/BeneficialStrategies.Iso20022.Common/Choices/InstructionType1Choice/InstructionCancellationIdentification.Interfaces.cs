@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice;
 
-public partial record InstructionCancellationIdentification : IInstructionCancellationIdentification
-{
-}
+public partial record InstructionCancellationIdentification
+    : IInstructionCancellationIdentification { }

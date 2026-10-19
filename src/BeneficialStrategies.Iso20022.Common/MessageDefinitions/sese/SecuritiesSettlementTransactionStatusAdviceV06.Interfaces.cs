@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionStatusAdviceV06 : ISecuritiesSettlementTransactionStatusAdviceV06
+public partial record SecuritiesSettlementTransactionStatusAdviceV06
+    : ISecuritiesSettlementTransactionStatusAdviceV06
 {
-    ITransactionIdentifications16 ISecuritiesSettlementTransactionStatusAdviceV06.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus37Choice? ISecuritiesSettlementTransactionStatusAdviceV06.ProcessingStatus => ProcessingStatus;
-    IMatchingStatus19Choice? ISecuritiesSettlementTransactionStatusAdviceV06.InferredMatchingStatus => InferredMatchingStatus;
-    IMatchingStatus19Choice? ISecuritiesSettlementTransactionStatusAdviceV06.MatchingStatus => MatchingStatus;
-    ISettlementStatus7Choice? ISecuritiesSettlementTransactionStatusAdviceV06.SettlementStatus => SettlementStatus;
-    ITransactionDetails70? ISecuritiesSettlementTransactionStatusAdviceV06.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionStatusAdviceV06.SupplementaryData => SupplementaryData;
+    ITransactionIdentifications16 ISecuritiesSettlementTransactionStatusAdviceV06.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus37Choice? ISecuritiesSettlementTransactionStatusAdviceV06.ProcessingStatus =>
+        ProcessingStatus;
+    IMatchingStatus19Choice? ISecuritiesSettlementTransactionStatusAdviceV06.InferredMatchingStatus =>
+        InferredMatchingStatus;
+    IMatchingStatus19Choice? ISecuritiesSettlementTransactionStatusAdviceV06.MatchingStatus =>
+        MatchingStatus;
+    ISettlementStatus7Choice? ISecuritiesSettlementTransactionStatusAdviceV06.SettlementStatus =>
+        SettlementStatus;
+    ITransactionDetails70? ISecuritiesSettlementTransactionStatusAdviceV06.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionStatusAdviceV06.SupplementaryData =>
+        SupplementaryData;
 }

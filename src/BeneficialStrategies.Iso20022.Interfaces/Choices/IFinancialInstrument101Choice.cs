@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of financial instrument.
 /// </summary>
 [IsoId("031f41a7-4ff4-4ed2-8e28-9371c92c1cc2")]
-public interface IFinancialInstrument101Choice : IIsoChoice
-{
-}
+public interface IFinancialInstrument101Choice : IIsoChoice { }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SpecificInstructionRequest4 : ISpecificInstructionRequest4
 {
-    IParticipationMethod3Choice? ISpecificInstructionRequest4.ParticipationMethod => ParticipationMethod;
+    IParticipationMethod3Choice? ISpecificInstructionRequest4.ParticipationMethod =>
+        ParticipationMethod;
 }

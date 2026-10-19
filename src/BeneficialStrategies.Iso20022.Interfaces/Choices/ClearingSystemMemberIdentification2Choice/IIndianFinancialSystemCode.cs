@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Indian Financial System Code - identifies Indian financial institutions on the Indian local clearing system.
 /// </summary>
 [IsoId("_TDPFgtp-Ed-ak6NoX_4Aeg_2074902177")]
-public interface IIndianFinancialSystemCode : IClearingSystemMemberIdentification2Choice, IIsoChoiceVariant
+public interface IIndianFinancialSystemCode
+    : IClearingSystemMemberIdentification2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

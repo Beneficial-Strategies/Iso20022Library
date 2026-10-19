@@ -12,12 +12,20 @@ public partial record InstructedCorporateActionOption16 : IInstructedCorporateAc
 {
     ICorporateActionOption36Choice IInstructedCorporateActionOption16.OptionType => OptionType;
     IBalanceFormat7Choice IInstructedCorporateActionOption16.InstructedBalance => InstructedBalance;
-    IDefaultProcessingOrStandingInstruction1Choice? IInstructedCorporateActionOption16.DefaultAction => DefaultAction;
-    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionAcceptedInstructedBalance => OptionAcceptedInstructedBalance;
-    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionCancelledInstructionBalance => OptionCancelledInstructionBalance;
-    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionPendingInstructionBalance => OptionPendingInstructionBalance;
-    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionRejectedInstructionBalance => OptionRejectedInstructionBalance;
-    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionProtectInstructionBalance => OptionProtectInstructionBalance;
-    ICorporateActionEventDeadlines4 IInstructedCorporateActionOption16.EventDeadlines => EventDeadlines;
-    IEnumerable<IOptionInstructionDetails6> IInstructedCorporateActionOption16.OptionInstructionDetails => OptionInstructionDetails;
+    IDefaultProcessingOrStandingInstruction1Choice? IInstructedCorporateActionOption16.DefaultAction =>
+        DefaultAction;
+    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionAcceptedInstructedBalance =>
+        OptionAcceptedInstructedBalance;
+    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionCancelledInstructionBalance =>
+        OptionCancelledInstructionBalance;
+    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionPendingInstructionBalance =>
+        OptionPendingInstructionBalance;
+    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionRejectedInstructionBalance =>
+        OptionRejectedInstructionBalance;
+    ISignedQuantityFormat9? IInstructedCorporateActionOption16.OptionProtectInstructionBalance =>
+        OptionProtectInstructionBalance;
+    ICorporateActionEventDeadlines4 IInstructedCorporateActionOption16.EventDeadlines =>
+        EventDeadlines;
+    IEnumerable<IOptionInstructionDetails6> IInstructedCorporateActionOption16.OptionInstructionDetails =>
+        OptionInstructionDetails;
 }

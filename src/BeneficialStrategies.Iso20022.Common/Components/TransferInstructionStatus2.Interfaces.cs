@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TransferInstructionStatus2 : ITransferInstructionStatus2
-{
-}
+public partial record TransferInstructionStatus2 : ITransferInstructionStatus2 { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_gwUucTnvEeWfSKvvZlhRKg")]
-public interface IAcknowledgedAcceptedStatus21Choice : IIsoChoice
-{
-}
+public interface IAcknowledgedAcceptedStatus21Choice : IIsoChoice { }

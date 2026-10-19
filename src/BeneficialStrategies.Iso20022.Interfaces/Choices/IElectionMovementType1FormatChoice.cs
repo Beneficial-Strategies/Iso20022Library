@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the effect on the holdings of electing a Corporate Action option.
 /// </summary>
 [IsoId("_RmZ7KNp-Ed-ak6NoX_4Aeg_-162374366")]
-public interface IElectionMovementType1FormatChoice : IIsoChoice
-{
-}
+public interface IElectionMovementType1FormatChoice : IIsoChoice { }

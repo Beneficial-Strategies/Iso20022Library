@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IRYb8Nj-EeiojJsa6FYyew")]
 [DisplayName("Geolocation UTM Coordinates")]
-public record GeolocationUTMCoordinates1
+public partial record GeolocationUTMCoordinates1
 {
     /// <summary>
     /// UTM grid zone combination of the longitude zone (1 to 60) and the latitude band (C to X, excluding I and O).

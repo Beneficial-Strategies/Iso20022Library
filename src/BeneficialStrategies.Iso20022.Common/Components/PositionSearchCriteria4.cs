@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EpRYIQweEfG65oVFfOF9vw")]
 [DisplayName("Position Search Criteria4")]
-public record PositionSearchCriteria4
+public partial record PositionSearchCriteria4
 {
     /// <summary>
     /// Party that legally owns the account.

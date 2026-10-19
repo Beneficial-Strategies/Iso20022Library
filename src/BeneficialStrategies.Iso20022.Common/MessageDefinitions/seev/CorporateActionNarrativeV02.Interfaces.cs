@@ -12,7 +12,10 @@ public partial record CorporateActionNarrativeV02 : ICorporateActionNarrativeV02
 {
     IAccountIdentification14Choice? ICorporateActionNarrativeV02.AccountDetails => AccountDetails;
     IUnderlyingSecurity3? ICorporateActionNarrativeV02.UnderlyingSecurity => UnderlyingSecurity;
-    ICorporateActionGeneralInformation10 ICorporateActionNarrativeV02.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IUpdatedAdditionalInformation2 ICorporateActionNarrativeV02.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionNarrativeV02.SupplementaryData => SupplementaryData;
+    ICorporateActionGeneralInformation10 ICorporateActionNarrativeV02.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IUpdatedAdditionalInformation2 ICorporateActionNarrativeV02.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionNarrativeV02.SupplementaryData =>
+        SupplementaryData;
 }

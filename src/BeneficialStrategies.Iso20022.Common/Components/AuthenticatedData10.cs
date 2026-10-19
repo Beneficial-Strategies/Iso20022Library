@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kXtJcY-REe6oobnCtR50kw")]
 [DisplayName("Authenticated Data10")]
-public record AuthenticatedData10
+public partial record AuthenticatedData10
 {
     /// <summary>
     /// Version.

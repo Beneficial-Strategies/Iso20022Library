@@ -10,11 +10,15 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MarketClaimStatusAdviceV02 : IMarketClaimStatusAdviceV02
 {
-    IDocumentIdentification9? IMarketClaimStatusAdviceV02.MarketClaimCreationIdentification => MarketClaimCreationIdentification;
+    IDocumentIdentification9? IMarketClaimStatusAdviceV02.MarketClaimCreationIdentification =>
+        MarketClaimCreationIdentification;
     IReferences26 IMarketClaimStatusAdviceV02.TransactionReference => TransactionReference;
-    ICorporateActionGeneralInformation157 IMarketClaimStatusAdviceV02.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    ICorporateActionGeneralInformation157 IMarketClaimStatusAdviceV02.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountIdentification46? IMarketClaimStatusAdviceV02.AccountDetails => AccountDetails;
-    IMarketClaimProcessingStatus1Choice IMarketClaimStatusAdviceV02.MarketClaimProcessingStatus => MarketClaimProcessingStatus;
+    IMarketClaimProcessingStatus1Choice IMarketClaimStatusAdviceV02.MarketClaimProcessingStatus =>
+        MarketClaimProcessingStatus;
     ICorporateActionOption217? IMarketClaimStatusAdviceV02.MarketClaimDetails => MarketClaimDetails;
-    IEnumerable<ISupplementaryData1> IMarketClaimStatusAdviceV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IMarketClaimStatusAdviceV02.SupplementaryData =>
+        SupplementaryData;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__XpcEOCwEee83LAjB5Kqdw")]
 [DisplayName("Originator Information")]
-public record OriginatorInformation1
+public partial record OriginatorInformation1
 {
     /// <summary>
     /// It may contain originator certificates associated with several different key management algorithms.

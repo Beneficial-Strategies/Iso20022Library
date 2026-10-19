@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between securities quantities or an amount.
 /// </summary>
 [IsoId("_qY_3qffREeiNZp_PtLohLw")]
-public interface ISecuritiesQuantityOrAmount5Choice : IIsoChoice
-{
-}
+public interface ISecuritiesQuantityOrAmount5Choice : IIsoChoice { }

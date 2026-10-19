@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status or statement that is requested.
 /// </summary>
 [IsoId("_Qrz5Jzs-EeWRTLSN0i0tng")]
-public interface IStatusOrStatement7Choice : IIsoChoice
-{
-}
+public interface IStatusOrStatement7Choice : IIsoChoice { }

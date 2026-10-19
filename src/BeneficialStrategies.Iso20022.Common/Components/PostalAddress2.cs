@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QGSzTdp-Ed-ak6NoX_4Aeg_-931927041")]
 [DisplayName("Postal Address")]
-public record PostalAddress2
+public partial record PostalAddress2
 {
     /// <summary>
     /// Name of a street or thoroughfare.

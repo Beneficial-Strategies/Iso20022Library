@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Returned Status1Choice.
 /// </summary>
 [IsoId("_ohK2U4S_Ee-1WeOqsw_6eA")]
-public interface IReturnedStatus1Choice : IIsoChoice
-{
-}
+public interface IReturnedStatus1Choice : IIsoChoice { }

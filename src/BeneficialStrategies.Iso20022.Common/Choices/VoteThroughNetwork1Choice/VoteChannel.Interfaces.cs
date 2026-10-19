@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.VoteThroughNetwork1Choice;
 
-public partial record VoteChannel : IVoteChannel
-{
-}
+public partial record VoteChannel : IVoteChannel { }

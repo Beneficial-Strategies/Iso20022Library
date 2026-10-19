@@ -13,5 +13,6 @@ public partial record EntitlementAdvice1 : IEntitlementAdvice1
     ICorporateActionOption1FormatChoice IEntitlementAdvice1.OptionType => OptionType;
     IDateFormat4Choice? IEntitlementAdvice1.RecordDate => RecordDate;
     IDateFormat4Choice? IEntitlementAdvice1.PaymentDate => PaymentDate;
-    IEnumerable<IEntitlement1> IEntitlementAdvice1.AccountAndDistributionDetails => AccountAndDistributionDetails;
+    IEnumerable<IEntitlement1> IEntitlementAdvice1.AccountAndDistributionDetails =>
+        AccountAndDistributionDetails;
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QtCDJtp-Ed-ak6NoX_4Aeg_1544987525")]
     [DisplayName("Securities Balance Type 3 Choice")]
-    public abstract record SecuritiesBalanceType3Choice_ { }
+    public abstract partial record SecuritiesBalanceType3Choice_ { }
 }

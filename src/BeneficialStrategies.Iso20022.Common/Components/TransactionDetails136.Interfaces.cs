@@ -12,12 +12,15 @@ public partial record TransactionDetails136 : ITransactionDetails136
 {
     IPartyIdentification144? ITransactionDetails136.AccountOwner => AccountOwner;
     ISecuritiesAccount19 ITransactionDetails136.SafekeepingAccount => SafekeepingAccount;
-    ISecurityIdentification19 ITransactionDetails136.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails136.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity6Choice ITransactionDetails136.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection51? ITransactionDetails136.SettlementAmount => SettlementAmount;
     ITradeDate8Choice? ITransactionDetails136.TradeDate => TradeDate;
     ISettlementDate19Choice ITransactionDetails136.SettlementDate => SettlementDate;
-    ISettlementParties78? ITransactionDetails136.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties78? ITransactionDetails136.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties78? ITransactionDetails136.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties78? ITransactionDetails136.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IPartyIdentification149? ITransactionDetails136.Investor => Investor;
 }

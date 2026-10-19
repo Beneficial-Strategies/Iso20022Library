@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0w3vwb3QEeO2FLWuu_JIqg")]
     [DisplayName("Report Item Status 1 Choice")]
-    public abstract record ReportItemStatus1Choice_ { }
+    public abstract partial record ReportItemStatus1Choice_ { }
 }

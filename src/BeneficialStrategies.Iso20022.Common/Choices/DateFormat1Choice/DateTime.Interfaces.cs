@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateFormat1Choice;
 
-public partial record DateTime : IDateTime
-{
-}
+public partial record DateTime : IDateTime { }

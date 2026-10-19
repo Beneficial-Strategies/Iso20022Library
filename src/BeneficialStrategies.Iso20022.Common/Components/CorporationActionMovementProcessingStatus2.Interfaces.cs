@@ -8,7 +8,8 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CorporationActionMovementProcessingStatus2 : ICorporationActionMovementProcessingStatus2
+public partial record CorporationActionMovementProcessingStatus2
+    : ICorporationActionMovementProcessingStatus2
 {
     IProcessedStatus2FormatChoice ICorporationActionMovementProcessingStatus2.Status => Status;
 }

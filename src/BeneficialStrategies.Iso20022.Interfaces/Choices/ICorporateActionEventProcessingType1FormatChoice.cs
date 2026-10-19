@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the type of event processing.
 /// </summary>
 [IsoId("_RmHAMdp-Ed-ak6NoX_4Aeg_699190436")]
-public interface ICorporateActionEventProcessingType1FormatChoice : IIsoChoice
-{
-}
+public interface ICorporateActionEventProcessingType1FormatChoice : IIsoChoice { }

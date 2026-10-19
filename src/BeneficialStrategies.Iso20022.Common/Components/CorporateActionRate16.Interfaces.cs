@@ -17,5 +17,6 @@ public partial record CorporateActionRate16 : ICorporateActionRate16
     IRateAndAmountFormat14Choice? ICorporateActionRate16.BidInterval => BidInterval;
     IRateFormat3Choice? ICorporateActionRate16.PreviousFactor => PreviousFactor;
     IRateFormat3Choice? ICorporateActionRate16.NextFactor => NextFactor;
-    IRateFormat6Choice? ICorporateActionRate16.ReinvestmentDiscountRateToMarket => ReinvestmentDiscountRateToMarket;
+    IRateFormat6Choice? ICorporateActionRate16.ReinvestmentDiscountRateToMarket =>
+        ReinvestmentDiscountRateToMarket;
 }

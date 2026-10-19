@@ -12,14 +12,19 @@ public partial record TransactionDetails178 : ITransactionDetails178
 {
     IPartyIdentification144? ITransactionDetails178.AccountOwner => AccountOwner;
     ISecuritiesAccount19? ITransactionDetails178.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ITransactionDetails178.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ISecurityIdentification19 ITransactionDetails178.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IBlockChainAddressWallet3? ITransactionDetails178.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ISecurityIdentification19 ITransactionDetails178.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity51Choice ITransactionDetails178.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection51? ITransactionDetails178.SettlementAmount => SettlementAmount;
-    IDigitalPaymentSettlement2? ITransactionDetails178.DigitalPaymentSettlement => DigitalPaymentSettlement;
+    IDigitalPaymentSettlement2? ITransactionDetails178.DigitalPaymentSettlement =>
+        DigitalPaymentSettlement;
     ITradeDate8Choice? ITransactionDetails178.TradeDate => TradeDate;
     ISettlementDate19Choice ITransactionDetails178.SettlementDate => SettlementDate;
-    ISettlementParties125? ITransactionDetails178.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties125? ITransactionDetails178.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties125? ITransactionDetails178.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties125? ITransactionDetails178.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IPartyIdentification149? ITransactionDetails178.Investor => Investor;
 }

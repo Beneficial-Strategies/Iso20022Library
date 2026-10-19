@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record OptionFeatures1FormatChoice_ : IOptionFeatures1FormatChoice
-{
-}
+public abstract partial record OptionFeatures1FormatChoice_ : IOptionFeatures1FormatChoice { }

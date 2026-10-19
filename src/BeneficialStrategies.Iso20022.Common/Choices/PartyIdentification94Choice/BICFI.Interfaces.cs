@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification94Choice;
 
-public partial record BICFI : IBICFI
-{
-}
+public partial record BICFI : IBICFI { }

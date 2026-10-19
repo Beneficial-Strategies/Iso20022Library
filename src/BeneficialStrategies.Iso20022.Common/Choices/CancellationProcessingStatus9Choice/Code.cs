@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus9Cho
     /// </summary>
     [IsoId("_BxXzkeFfEeWIA4E9cYSxxQ")]
     [DisplayName("Code")]
-    public record Code : CancellationProcessingStatus9Choice_
+    public partial record Code : CancellationProcessingStatus9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

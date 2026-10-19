@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Participation5 : IParticipation5
 {
-    IFinancialInstrumentQuantity18Choice? IParticipation5.TotalNumberOfSecuritiesOutstanding => TotalNumberOfSecuritiesOutstanding;
+    IFinancialInstrumentQuantity18Choice? IParticipation5.TotalNumberOfSecuritiesOutstanding =>
+        TotalNumberOfSecuritiesOutstanding;
 }

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferCancellationStatusReport : ITransferCancellationStatusReport
 {
-    IEnumerable<IAdditionalReference2> ITransferCancellationStatusReport.RelatedReference => RelatedReference;
+    IEnumerable<IAdditionalReference2> ITransferCancellationStatusReport.RelatedReference =>
+        RelatedReference;
     IAdditionalReference2 ITransferCancellationStatusReport.OtherReference => OtherReference;
     ICancellationStatusAndReason ITransferCancellationStatusReport.StatusReport => StatusReport;
 }

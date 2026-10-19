@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UnderlyingSecurityMovement1 : IUnderlyingSecurityMovement1
 {
-    ISecurityIdentification7 IUnderlyingSecurityMovement1.SecurityIdentification => SecurityIdentification;
+    ISecurityIdentification7 IUnderlyingSecurityMovement1.SecurityIdentification =>
+        SecurityIdentification;
     IUnitOrFaceAmount1Choice IUnderlyingSecurityMovement1.SecuritiesQuantity => SecuritiesQuantity;
     IEnumerable<ISecuritiesAccount8> IUnderlyingSecurityMovement1.AccountDetails => AccountDetails;
 }

@@ -8,14 +8,22 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionStatusAdvice002V12 : ISecuritiesSettlementTransactionStatusAdvice002V12
+public partial record SecuritiesSettlementTransactionStatusAdvice002V12
+    : ISecuritiesSettlementTransactionStatusAdvice002V12
 {
-    ITransactionIdentifications49 ISecuritiesSettlementTransactionStatusAdvice002V12.TransactionIdentification => TransactionIdentification;
+    ITransactionIdentifications49 ISecuritiesSettlementTransactionStatusAdvice002V12.TransactionIdentification =>
+        TransactionIdentification;
     ILinkages50? ISecuritiesSettlementTransactionStatusAdvice002V12.Linkages => Linkages;
-    IProcessingStatus94Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.ProcessingStatus => ProcessingStatus;
-    IMatchingStatus32Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.InferredMatchingStatus => InferredMatchingStatus;
-    IMatchingStatus32Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.MatchingStatus => MatchingStatus;
-    ISettlementStatus31Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.SettlementStatus => SettlementStatus;
-    ITransactionDetails161? ISecuritiesSettlementTransactionStatusAdvice002V12.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionStatusAdvice002V12.SupplementaryData => SupplementaryData;
+    IProcessingStatus94Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.ProcessingStatus =>
+        ProcessingStatus;
+    IMatchingStatus32Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.InferredMatchingStatus =>
+        InferredMatchingStatus;
+    IMatchingStatus32Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.MatchingStatus =>
+        MatchingStatus;
+    ISettlementStatus31Choice? ISecuritiesSettlementTransactionStatusAdvice002V12.SettlementStatus =>
+        SettlementStatus;
+    ITransactionDetails161? ISecuritiesSettlementTransactionStatusAdvice002V12.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionStatusAdvice002V12.SupplementaryData =>
+        SupplementaryData;
 }

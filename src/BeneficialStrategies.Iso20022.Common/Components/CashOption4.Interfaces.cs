@@ -10,11 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashOption4 : ICashOption4
 {
-    INonEligibleProceedsIndicator1Choice? ICashOption4.NonEligibleProceedsIndicator => NonEligibleProceedsIndicator;
+    INonEligibleProceedsIndicator1Choice? ICashOption4.NonEligibleProceedsIndicator =>
+        NonEligibleProceedsIndicator;
     IGenericIdentification20? ICashOption4.IncomeType => IncomeType;
-    ICashAccountIdentification5Choice? ICashOption4.CashAccountIdentification => CashAccountIdentification;
+    ICashAccountIdentification5Choice? ICashOption4.CashAccountIdentification =>
+        CashAccountIdentification;
     ICorporateActionAmounts4? ICashOption4.AmountDetails => AmountDetails;
     ICorporateActionDate9 ICashOption4.DateDetails => DateDetails;
     IForeignExchangeTerms11? ICashOption4.ForeignExchangeDetails => ForeignExchangeDetails;
-    IPriceFormat10Choice? ICashOption4.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
+    IPriceFormat10Choice? ICashOption4.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
 }

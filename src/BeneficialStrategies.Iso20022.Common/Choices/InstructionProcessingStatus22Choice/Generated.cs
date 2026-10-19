@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus22Cho
     /// </summary>
     [IsoId("_hlFowTnuEeWfSKvvZlhRKg")]
     [DisplayName("Generated")]
-    public record Generated : InstructionProcessingStatus22Choice_
+    public partial record Generated : InstructionProcessingStatus22Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Gnrtd")]

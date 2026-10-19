@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FotEkZFJEe6reqfAp4CunQ")]
 [DisplayName("Action15")]
-public record Action15
+public partial record Action15
 {
     /// <summary>
     /// Action Type.

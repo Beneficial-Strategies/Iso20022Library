@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code to specify the type of corporate action options.
 /// </summary>
 [IsoId("_1-Ji1_ogEeC7qvRLUh5UBA")]
-public interface ICorporateActionOption10Choice : IIsoChoice
-{
-}
+public interface ICorporateActionOption10Choice : IIsoChoice { }

@@ -13,6 +13,7 @@ public partial record GlobalDistributionRequest1 : IGlobalDistributionRequest1
     ICorporateActionOption1FormatChoice IGlobalDistributionRequest1.OptionType => OptionType;
     IDateFormat4Choice IGlobalDistributionRequest1.RecordDate => RecordDate;
     IDateFormat4Choice IGlobalDistributionRequest1.PaymentDate => PaymentDate;
-    IEnumerable<ISecurityMovement1> IGlobalDistributionRequest1.SecuritiesMovement => SecuritiesMovement;
+    IEnumerable<ISecurityMovement1> IGlobalDistributionRequest1.SecuritiesMovement =>
+        SecuritiesMovement;
     IEnumerable<ICashMovement1> IGlobalDistributionRequest1.CashMovement => CashMovement;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record Frequency36Choice_ : IFrequency36Choice
-{
-}
+public abstract partial record Frequency36Choice_ : IFrequency36Choice { }

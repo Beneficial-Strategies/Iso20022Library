@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCADeactivationInstructionV01 : IAgentCADeactivationInstructionV01
 {
     IDocumentIdentification8 IAgentCADeactivationInstructionV01.Identification => Identification;
-    ICorporateActionInformation1 IAgentCADeactivationInstructionV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    ICorporateActionDeactivationInstruction1 IAgentCADeactivationInstructionV01.DeactivationDetails => DeactivationDetails;
+    ICorporateActionInformation1 IAgentCADeactivationInstructionV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    ICorporateActionDeactivationInstruction1 IAgentCADeactivationInstructionV01.DeactivationDetails =>
+        DeactivationDetails;
 }

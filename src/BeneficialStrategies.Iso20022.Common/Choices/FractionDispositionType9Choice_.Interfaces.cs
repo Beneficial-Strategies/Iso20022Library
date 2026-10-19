@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record FractionDispositionType9Choice_ : IFractionDispositionType9Choice
-{
-}
+public abstract partial record FractionDispositionType9Choice_ : IFractionDispositionType9Choice { }

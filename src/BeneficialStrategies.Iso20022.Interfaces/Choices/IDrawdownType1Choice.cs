@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of drawdown.
 /// </summary>
 [IsoId("_NHMP4FNdEeijdq8ilaxyOA")]
-public interface IDrawdownType1Choice : IIsoChoice
-{
-}
+public interface IDrawdownType1Choice : IIsoChoice { }

@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References82Choice
     /// <summary>Specifies the account owner transaction identification.</summary>
     [IsoId("_4SiCweSlEe-qVZLXW4RRBw")]
     [DisplayName("Account Owner Transaction Identification")]
-    public record AccountOwnerTransactionIdentification : References82Choice_
+    public partial record AccountOwnerTransactionIdentification : References82Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AcctOwnrTxId")]

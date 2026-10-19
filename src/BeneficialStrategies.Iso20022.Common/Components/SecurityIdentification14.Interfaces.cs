@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecurityIdentification14 : ISecurityIdentification14
 {
-    IEnumerable<IOtherIdentification1> ISecurityIdentification14.OtherIdentification => OtherIdentification;
+    IEnumerable<IOtherIdentification1> ISecurityIdentification14.OtherIdentification =>
+        OtherIdentification;
 }

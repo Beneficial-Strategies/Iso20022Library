@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kn8rsdzqEd-tnM7aRm4nqg")]
 [DisplayName("Additional Parameters")]
-public record AdditionalParameters8
+public partial record AdditionalParameters8
 {
     /// <summary>
     /// Specifies partial settlement information.

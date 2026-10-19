@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.LocationFormat1Choice;
 
-public partial record LocationCode : ILocationCode
-{
-}
+public partial record LocationCode : ILocationCode { }

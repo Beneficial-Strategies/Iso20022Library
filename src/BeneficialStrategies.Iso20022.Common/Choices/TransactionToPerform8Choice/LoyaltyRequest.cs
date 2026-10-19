@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform8Choice
     /// <summary>Transaction to perform expressed as a loyalty request.</summary>
     [IsoId("_By-kR7ZaEfCUZfsQO4rYeA")]
     [DisplayName("Loyalty Request")]
-    public record LoyaltyRequest : TransactionToPerform8Choice_
+    public partial record LoyaltyRequest : TransactionToPerform8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("LltyReq")]

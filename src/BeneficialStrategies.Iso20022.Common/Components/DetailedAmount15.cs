@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__KPDEZZ8EeWuSaWgzo19MQ")]
 [DisplayName("Detailed Amount")]
-public record DetailedAmount15
+public partial record DetailedAmount15
 {
     /// <summary>
     /// Amount of purchase goods and services without tax.

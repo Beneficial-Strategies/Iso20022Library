@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BuyerProtectionInstructionDetails1 : IBuyerProtectionInstructionDetails1
 {
-    IDocumentIdentification57 IBuyerProtectionInstructionDetails1.BuyerProtectionInstructionIdentification => BuyerProtectionInstructionIdentification;
-    IRelatedSettlementInstruction4 IBuyerProtectionInstructionDetails1.RelatedSettlementInstructionIdentification => RelatedSettlementInstructionIdentification;
-    IPartyIdentification143? IBuyerProtectionInstructionDetails1.CounterpartyDepository => CounterpartyDepository;
-    ISecuritiesAccountIdentification1Choice IBuyerProtectionInstructionDetails1.AccountIdentification => AccountIdentification;
-    IInstructionProcessingStatus59Choice IBuyerProtectionInstructionDetails1.InstructionProcessingStatus => InstructionProcessingStatus;
+    IDocumentIdentification57 IBuyerProtectionInstructionDetails1.BuyerProtectionInstructionIdentification =>
+        BuyerProtectionInstructionIdentification;
+    IRelatedSettlementInstruction4 IBuyerProtectionInstructionDetails1.RelatedSettlementInstructionIdentification =>
+        RelatedSettlementInstructionIdentification;
+    IPartyIdentification143? IBuyerProtectionInstructionDetails1.CounterpartyDepository =>
+        CounterpartyDepository;
+    ISecuritiesAccountIdentification1Choice IBuyerProtectionInstructionDetails1.AccountIdentification =>
+        AccountIdentification;
+    IInstructionProcessingStatus59Choice IBuyerProtectionInstructionDetails1.InstructionProcessingStatus =>
+        InstructionProcessingStatus;
 }

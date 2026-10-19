@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of lottery.
 /// </summary>
 [IsoId("_Q3BFmtp-Ed-ak6NoX_4Aeg_-29945278")]
-public interface ILotteryTypeFormat1Choice : IIsoChoice
-{
-}
+public interface ILotteryTypeFormat1Choice : IIsoChoice { }

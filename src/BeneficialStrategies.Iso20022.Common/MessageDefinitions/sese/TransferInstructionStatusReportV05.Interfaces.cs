@@ -10,10 +10,13 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferInstructionStatusReportV05 : ITransferInstructionStatusReportV05
 {
-    IMessageIdentification1 ITransferInstructionStatusReportV05.MessageIdentification => MessageIdentification;
-    IAdditionalReference7? ITransferInstructionStatusReportV05.CounterpartyReference => CounterpartyReference;
+    IMessageIdentification1 ITransferInstructionStatusReportV05.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference7? ITransferInstructionStatusReportV05.CounterpartyReference =>
+        CounterpartyReference;
     IReferences49Choice? ITransferInstructionStatusReportV05.Reference => Reference;
     ITransferStatusAndReason4 ITransferInstructionStatusReportV05.StatusReport => StatusReport;
-    IMarketPracticeVersion1? ITransferInstructionStatusReportV05.MarketPracticeVersion => MarketPracticeVersion;
+    IMarketPracticeVersion1? ITransferInstructionStatusReportV05.MarketPracticeVersion =>
+        MarketPracticeVersion;
     IEnumerable<IExtension1> ITransferInstructionStatusReportV05.Extension => Extension;
 }

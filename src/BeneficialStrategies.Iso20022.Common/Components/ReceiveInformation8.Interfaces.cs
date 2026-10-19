@@ -14,6 +14,7 @@ public partial record ReceiveInformation8 : IReceiveInformation8
     IEnumerable<ICharge20> IReceiveInformation8.ChargeDetails => ChargeDetails;
     IEnumerable<ICommission12> IReceiveInformation8.CommissionDetails => CommissionDetails;
     IEnumerable<ITax15> IReceiveInformation8.TaxDetails => TaxDetails;
-    IReceivingPartiesAndAccount8 IReceiveInformation8.SettlementPartiesDetails => SettlementPartiesDetails;
+    IReceivingPartiesAndAccount8 IReceiveInformation8.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters4? IReceiveInformation8.PhysicalTransferDetails => PhysicalTransferDetails;
 }

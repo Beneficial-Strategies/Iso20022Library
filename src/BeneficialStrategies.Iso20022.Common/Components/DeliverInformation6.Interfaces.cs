@@ -14,6 +14,7 @@ public partial record DeliverInformation6 : IDeliverInformation6
     IEnumerable<ICharge20> IDeliverInformation6.ChargeDetails => ChargeDetails;
     IEnumerable<ICommission12> IDeliverInformation6.CommissionDetails => CommissionDetails;
     IEnumerable<ITax15> IDeliverInformation6.TaxDetails => TaxDetails;
-    IDeliveringPartiesAndAccount8 IDeliverInformation6.SettlementPartiesDetails => SettlementPartiesDetails;
+    IDeliveringPartiesAndAccount8 IDeliverInformation6.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters4? IDeliverInformation6.PhysicalTransferDetails => PhysicalTransferDetails;
 }

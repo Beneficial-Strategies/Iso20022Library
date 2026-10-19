@@ -10,10 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate20 : ICorporateActionRate20
 {
-    IEnumerable<IGrossDividendRateFormat2Choice> ICorporateActionRate20.GrossDividendRate => GrossDividendRate;
+    IEnumerable<IGrossDividendRateFormat2Choice> ICorporateActionRate20.GrossDividendRate =>
+        GrossDividendRate;
     IRateAndAmountFormat5Choice? ICorporateActionRate20.IndexFactor => IndexFactor;
-    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> ICorporateActionRate20.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate20.TaxRelatedRate => TaxRelatedRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> ICorporateActionRate20.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate20.TaxRelatedRate =>
+        TaxRelatedRate;
     IRateAndAmountFormat5Choice? ICorporateActionRate20.AdditionalTax => AdditionalTax;
-    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate20.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
+    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate20.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of quantity of assets to be transferred in percentage rate or units.
 /// </summary>
 [IsoId("_pzAI0a5xEeeMy7TnJ3e__g")]
-public interface IQuantity43Choice : IIsoChoice
-{
-}
+public interface IQuantity43Choice : IIsoChoice { }

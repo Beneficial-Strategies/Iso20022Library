@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SNfVUN7IEeiwsev40qZGEQ")]
 [DisplayName("ICC Reset Data")]
-public record ICCResetData1
+public partial record ICCResetData1
 {
     /// <summary>
     /// Value of the Answer To Reset of a chip card.

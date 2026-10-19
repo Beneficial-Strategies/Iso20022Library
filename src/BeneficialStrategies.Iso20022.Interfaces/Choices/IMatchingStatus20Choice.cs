@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the matching status.
 /// </summary>
 [IsoId("_YN9u4SwjEeOEV5XHD-BKpw")]
-public interface IMatchingStatus20Choice : IIsoChoice
-{
-}
+public interface IMatchingStatus20Choice : IIsoChoice { }

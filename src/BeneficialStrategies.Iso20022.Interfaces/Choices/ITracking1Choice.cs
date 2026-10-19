@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the tracking information.
 /// </summary>
 [IsoId("_Qt7bCNp-Ed-ak6NoX_4Aeg_-1227011207")]
-public interface ITracking1Choice : IIsoChoice
-{
-}
+public interface ITracking1Choice : IIsoChoice { }

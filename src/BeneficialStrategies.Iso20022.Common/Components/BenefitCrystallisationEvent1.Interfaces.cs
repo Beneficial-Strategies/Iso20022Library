@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record BenefitCrystallisationEvent1 : IBenefitCrystallisationEvent1
 {
     IDrawdownEventType1Choice? IBenefitCrystallisationEvent1.EventType => EventType;
-    IEnumerable<IAdditionalInformation15> IBenefitCrystallisationEvent1.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IBenefitCrystallisationEvent1.AdditionalInformation =>
+        AdditionalInformation;
 }

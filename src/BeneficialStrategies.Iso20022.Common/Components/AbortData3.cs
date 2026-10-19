@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W8CNUS81Eeu125Ip9zFcsQ")]
 [DisplayName("Abort Data")]
-public record AbortData3
+public partial record AbortData3
 {
     /// <summary>
     /// Message identifier.

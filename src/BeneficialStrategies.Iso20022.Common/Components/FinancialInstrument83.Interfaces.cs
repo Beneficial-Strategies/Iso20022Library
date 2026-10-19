@@ -21,12 +21,17 @@ public partial record FinancialInstrument83 : IFinancialInstrument83
     IDateAndAmount2? IFinancialInstrument83.LatestValuation => LatestValuation;
     IAccount28? IFinancialInstrument83.TransfereeAccount => TransfereeAccount;
     IAccount28? IFinancialInstrument83.Transferor => Transferor;
-    IEnumerable<IIntermediary43> IFinancialInstrument83.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary43> IFinancialInstrument83.IntermediaryInformation =>
+        IntermediaryInformation;
     IDateAndDateTime2Choice? IFinancialInstrument83.EffectiveTransferDate => EffectiveTransferDate;
-    IDateAndDateTime2Choice? IFinancialInstrument83.EffectiveSettlementDate => EffectiveSettlementDate;
+    IDateAndDateTime2Choice? IFinancialInstrument83.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IPaymentInstrument14? IFinancialInstrument83.PaymentDetails => PaymentDetails;
-    IEnumerable<ICrystallisation2> IFinancialInstrument83.CrystallisationDetails => CrystallisationDetails;
+    IEnumerable<ICrystallisation2> IFinancialInstrument83.CrystallisationDetails =>
+        CrystallisationDetails;
     ITax36? IFinancialInstrument83.TaxValuationPoint => TaxValuationPoint;
-    IFundSettlementParameters17? IFinancialInstrument83.SettlementPartiesDetails => SettlementPartiesDetails;
-    IEnumerable<IAdditionalInformation15> IFinancialInstrument83.AdditionalInformation => AdditionalInformation;
+    IFundSettlementParameters17? IFinancialInstrument83.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
+    IEnumerable<IAdditionalInformation15> IFinancialInstrument83.AdditionalInformation =>
+        AdditionalInformation;
 }

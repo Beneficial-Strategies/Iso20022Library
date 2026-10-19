@@ -10,12 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails151 : ITransactionDetails151
 {
-    ISecurityIdentification19 ITransactionDetails151.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails151.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     ITradeDate8Choice? ITransactionDetails151.TradeDate => TradeDate;
     ISettlementDate17Choice ITransactionDetails151.SettlementDate => SettlementDate;
     IQuantity51Choice ITransactionDetails151.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection51? ITransactionDetails151.SettlementAmount => SettlementAmount;
-    ISettlementParties97? ITransactionDetails151.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties97? ITransactionDetails151.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties97? ITransactionDetails151.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties97? ITransactionDetails151.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IPartyIdentification149? ITransactionDetails151.Investor => Investor;
 }

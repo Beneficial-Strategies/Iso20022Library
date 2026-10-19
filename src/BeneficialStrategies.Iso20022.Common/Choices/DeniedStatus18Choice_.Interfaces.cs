@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record DeniedStatus18Choice_ : IDeniedStatus18Choice
-{
-}
+public abstract partial record DeniedStatus18Choice_ : IDeniedStatus18Choice { }

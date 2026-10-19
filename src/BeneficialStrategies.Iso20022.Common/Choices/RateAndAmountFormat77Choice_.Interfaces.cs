@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RateAndAmountFormat77Choice_ : IRateAndAmountFormat77Choice
-{
-}
+public abstract partial record RateAndAmountFormat77Choice_ : IRateAndAmountFormat77Choice { }

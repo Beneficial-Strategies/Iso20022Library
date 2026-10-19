@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References79Choice
     /// </summary>
     [IsoId("_Wkm3lUfGEey6Is2iMqV8fg")]
     [DisplayName("Securities Settlement Transaction Allegement Report Identification")]
-    public record SecuritiesSettlementTransactionAllegementReportIdentification
+    public partial record SecuritiesSettlementTransactionAllegementReportIdentification
         : References79Choice_
     {
         /// <summary>

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P3Lkwag2EfCXwLUUylXgrQ")]
 [DisplayName("Aggregate Balance Per Safekeeping Place44")]
-public record AggregateBalancePerSafekeepingPlace44
+public partial record AggregateBalancePerSafekeepingPlace44
 {
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally.

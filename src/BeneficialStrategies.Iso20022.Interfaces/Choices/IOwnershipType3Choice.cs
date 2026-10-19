@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the owner type.
 /// </summary>
 [IsoId("_ZExBAIzhEemXJvzC2Wyt1g")]
-public interface IOwnershipType3Choice : IIsoChoice
-{
-}
+public interface IOwnershipType3Choice : IIsoChoice { }

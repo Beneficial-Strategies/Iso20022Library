@@ -10,10 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionQuantity8 : ICorporateActionQuantity8
 {
-    IFinancialInstrumentQuantity21Choice? ICorporateActionQuantity8.MaximumQuantity => MaximumQuantity;
-    IFinancialInstrumentQuantity21Choice? ICorporateActionQuantity8.MinimumQuantitySought => MinimumQuantitySought;
-    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.NewBoardLotQuantity => NewBoardLotQuantity;
-    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.NewDenominationQuantity => NewDenominationQuantity;
-    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.BaseDenomination => BaseDenomination;
-    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.IncrementalDenomination => IncrementalDenomination;
+    IFinancialInstrumentQuantity21Choice? ICorporateActionQuantity8.MaximumQuantity =>
+        MaximumQuantity;
+    IFinancialInstrumentQuantity21Choice? ICorporateActionQuantity8.MinimumQuantitySought =>
+        MinimumQuantitySought;
+    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.NewBoardLotQuantity =>
+        NewBoardLotQuantity;
+    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.NewDenominationQuantity =>
+        NewDenominationQuantity;
+    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.BaseDenomination =>
+        BaseDenomination;
+    IFinancialInstrumentQuantity22Choice? ICorporateActionQuantity8.IncrementalDenomination =>
+        IncrementalDenomination;
 }

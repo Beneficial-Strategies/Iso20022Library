@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason or no reason for the corporate action instruction processing accepted status.
 /// </summary>
 [IsoId("_OM_NkSqAEeO3oOoGGWHH4A")]
-public interface IAcceptedStatus3Choice : IIsoChoice
-{
-}
+public interface IAcceptedStatus3Choice : IIsoChoice { }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status19Choice
     /// </summary>
     [IsoId("_9HwppTqpEeWyoP0PbocV1Q")]
     [DisplayName("Response Status")]
-    public record ResponseStatus : Status19Choice_
+    public partial record ResponseStatus : Status19Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RspnSts")]

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification10Choice;
 
-public partial record IBAN : IIBAN
-{
-}
+public partial record IBAN : IIBAN { }

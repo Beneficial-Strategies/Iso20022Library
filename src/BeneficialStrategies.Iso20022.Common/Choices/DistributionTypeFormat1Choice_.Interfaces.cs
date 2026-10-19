@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record DistributionTypeFormat1Choice_ : IDistributionTypeFormat1Choice
-{
-}
+public abstract partial record DistributionTypeFormat1Choice_ : IDistributionTypeFormat1Choice { }

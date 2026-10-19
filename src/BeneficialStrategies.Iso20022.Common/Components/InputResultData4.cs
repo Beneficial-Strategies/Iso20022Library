@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F-SBQVFEEeyApZmLzm74zA")]
 [DisplayName("Input Result Data")]
-public record InputResultData4
+public partial record InputResultData4
 {
     /// <summary>
     /// Type of processed input.

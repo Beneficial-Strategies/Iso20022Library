@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u3iR9R-DEeuwwezkzufkMw")]
 [DisplayName("Penalty Status Reason2")]
-public record PenaltyStatusReason2
+public partial record PenaltyStatusReason2
 {
     /// <summary>
     /// Provides the reason for the penalty status.

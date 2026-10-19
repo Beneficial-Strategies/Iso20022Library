@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record BuyerProtectionInstructionAllegementNotificationV01 : IBuyerProtectionInstructionAllegementNotificationV01
+public partial record BuyerProtectionInstructionAllegementNotificationV01
+    : IBuyerProtectionInstructionAllegementNotificationV01
 {
-    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionAllegementNotificationV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IRelatedSettlementInstruction3 IBuyerProtectionInstructionAllegementNotificationV01.RelatedSettlementInstruction => RelatedSettlementInstruction;
-    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionAllegementNotificationV01.AccountIdentification => AccountIdentification;
-    ICorporateActionElection4 IBuyerProtectionInstructionAllegementNotificationV01.CorporateActionElection => CorporateActionElection;
-    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionAllegementNotificationV01.SupplementaryData => SupplementaryData;
+    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionAllegementNotificationV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IRelatedSettlementInstruction3 IBuyerProtectionInstructionAllegementNotificationV01.RelatedSettlementInstruction =>
+        RelatedSettlementInstruction;
+    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionAllegementNotificationV01.AccountIdentification =>
+        AccountIdentification;
+    ICorporateActionElection4 IBuyerProtectionInstructionAllegementNotificationV01.CorporateActionElection =>
+        CorporateActionElection;
+    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionAllegementNotificationV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0_NKkaEqEe-MRKYsaX6JDg")]
 [DisplayName("Administrative Response8")]
-public record AdministrativeResponse8
+public partial record AdministrativeResponse8
 {
     /// <summary>
     /// Environment.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xQ97UagzEfCXwLUUylXgrQ")]
 [DisplayName("Penalty Per Counterparty4")]
-public record PenaltyPerCounterparty4
+public partial record PenaltyPerCounterparty4
 {
     /// <summary>
     /// Party that manages the sub-level account on behalf of the account owner.

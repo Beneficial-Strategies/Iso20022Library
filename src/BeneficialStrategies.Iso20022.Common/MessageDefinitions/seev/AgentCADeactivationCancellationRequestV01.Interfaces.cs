@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record AgentCADeactivationCancellationRequestV01 : IAgentCADeactivationCancellationRequestV01
+public partial record AgentCADeactivationCancellationRequestV01
+    : IAgentCADeactivationCancellationRequestV01
 {
-    IDocumentIdentification8 IAgentCADeactivationCancellationRequestV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCADeactivationCancellationRequestV01.AgentCADeactivationInstructionIdentification => AgentCADeactivationInstructionIdentification;
-    ICorporateActionInformation1 IAgentCADeactivationCancellationRequestV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    ICorporateActionDeactivationInstruction1? IAgentCADeactivationCancellationRequestV01.DeactivationInstructionDetails => DeactivationInstructionDetails;
+    IDocumentIdentification8 IAgentCADeactivationCancellationRequestV01.Identification =>
+        Identification;
+    IDocumentIdentification8 IAgentCADeactivationCancellationRequestV01.AgentCADeactivationInstructionIdentification =>
+        AgentCADeactivationInstructionIdentification;
+    ICorporateActionInformation1 IAgentCADeactivationCancellationRequestV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    ICorporateActionDeactivationInstruction1? IAgentCADeactivationCancellationRequestV01.DeactivationInstructionDetails =>
+        DeactivationInstructionDetails;
 }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SafeKeepingPlace2 : ISafeKeepingPlace2
 {
-    ISafekeepingPlaceFormat17Choice? ISafeKeepingPlace2.SafekeepingPlaceFormat => SafekeepingPlaceFormat;
+    ISafekeepingPlaceFormat17Choice? ISafeKeepingPlace2.SafekeepingPlaceFormat =>
+        SafekeepingPlaceFormat;
 }

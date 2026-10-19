@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Swiss Bank Code - identifies Swiss institutions on the Swiss national clearing system.
 /// </summary>
 [IsoId("_VwSCa7NIEeejueAciesPMA")]
-public interface ISwissBCIdentification : IClearingSystemMemberIdentification4Choice, IIsoChoiceVariant
+public interface ISwissBCIdentification
+    : IClearingSystemMemberIdentification4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

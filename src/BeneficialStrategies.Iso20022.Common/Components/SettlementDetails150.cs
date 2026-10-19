@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qxYEka3MEeey8N0JWnVPUw")]
 [DisplayName("Settlement Details")]
-public record SettlementDetails150
+public partial record SettlementDetails150
 {
     /// <summary>
     /// Conditions under which the order/trade is to be settled.

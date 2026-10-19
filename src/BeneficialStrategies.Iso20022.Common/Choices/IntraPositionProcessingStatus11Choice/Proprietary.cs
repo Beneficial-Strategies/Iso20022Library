@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus11C
     /// <summary>Specifies a choice of status for the processing of an intra-position movement.</summary>
     [IsoId("8f055fd3-1d3a-40d3-8ddb-516a3a87752a")]
     [DisplayName("Proprietary")]
-    public record Proprietary : IntraPositionProcessingStatus11Choice_
+    public partial record Proprietary : IntraPositionProcessingStatus11Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

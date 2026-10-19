@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the name and identification of an account.
 /// </summary>
 [IsoId("_dADsIanOEfC5VNwixU6YfQ")]
-public interface IAccountIdentification84Choice : IIsoChoice
-{
-}
+public interface IAccountIdentification84Choice : IIsoChoice { }

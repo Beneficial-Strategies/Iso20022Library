@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType43Choice
     [IsoId("_gsSfp4MEEeWhGPRU7TIQwQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : IdentificationType43Choice_
+    public partial record Proprietary : IdentificationType43Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

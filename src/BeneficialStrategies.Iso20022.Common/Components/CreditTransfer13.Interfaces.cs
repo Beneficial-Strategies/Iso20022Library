@@ -14,10 +14,14 @@ public partial record CreditTransfer13 : ICreditTransfer13
     IAccountIdentificationAndName9? ICreditTransfer13.DebtorAccount => DebtorAccount;
     IFinancialInstitutionIdentification16? ICreditTransfer13.DebtorAgent => DebtorAgent;
     IAccountIdentificationAndName9? ICreditTransfer13.DebtorAgentAccount => DebtorAgentAccount;
-    IFinancialInstitutionIdentification16? ICreditTransfer13.IntermediaryAgent1 => IntermediaryAgent1;
-    IAccountIdentificationAndName9? ICreditTransfer13.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IFinancialInstitutionIdentification16? ICreditTransfer13.IntermediaryAgent2 => IntermediaryAgent2;
-    IAccountIdentificationAndName9? ICreditTransfer13.IntermediaryAgent2Account => IntermediaryAgent2Account;
+    IFinancialInstitutionIdentification16? ICreditTransfer13.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    IAccountIdentificationAndName9? ICreditTransfer13.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IFinancialInstitutionIdentification16? ICreditTransfer13.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    IAccountIdentificationAndName9? ICreditTransfer13.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
     IFinancialInstitutionIdentification16 ICreditTransfer13.CreditorAgent => CreditorAgent;
     IAccountIdentificationAndName9? ICreditTransfer13.CreditorAgentAccount => CreditorAgentAccount;
     IPartyIdentification132? ICreditTransfer13.Creditor => Creditor;

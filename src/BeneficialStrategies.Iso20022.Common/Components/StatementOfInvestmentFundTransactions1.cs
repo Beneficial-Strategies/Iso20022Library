@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U2krYNp-Ed-ak6NoX_4Aeg_1424253677")]
 [DisplayName("Statement Of Investment Fund Transactions")]
-public record StatementOfInvestmentFundTransactions1
+public partial record StatementOfInvestmentFundTransactions1
 {
     /// <summary>
     /// Pagination of the message.

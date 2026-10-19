@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a period or a period code.</summary>
 [IsoId("_qOnkwatmEfCqjuqNaaNXgw")]
-public interface IPeriod12Choice : IIsoChoice
-{
-}
+public interface IPeriod12Choice : IIsoChoice { }

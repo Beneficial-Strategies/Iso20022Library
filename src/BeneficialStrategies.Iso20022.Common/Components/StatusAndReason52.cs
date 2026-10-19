@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8-dsEQNrEfG_3cM8uyJ20w")]
 [DisplayName("Status And Reason52")]
-public record StatusAndReason52
+public partial record StatusAndReason52
 {
     /// <summary>
     /// Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).

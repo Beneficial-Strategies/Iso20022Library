@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Number22Choice;
 
-public partial record Short : IShort
-{
-}
+public partial record Short : IShort { }

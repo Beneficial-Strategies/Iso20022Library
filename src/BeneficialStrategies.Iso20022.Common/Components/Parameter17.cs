@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0hv94Y-LEe6oobnCtR50kw")]
 [DisplayName("Parameter17")]
-public record Parameter17
+public partial record Parameter17
 {
     /// <summary>
     /// Encryption Format.

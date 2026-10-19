@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat7Choice;
 
-public partial record NotSpecifiedRate : INotSpecifiedRate
-{
-}
+public partial record NotSpecifiedRate : INotSpecifiedRate { }

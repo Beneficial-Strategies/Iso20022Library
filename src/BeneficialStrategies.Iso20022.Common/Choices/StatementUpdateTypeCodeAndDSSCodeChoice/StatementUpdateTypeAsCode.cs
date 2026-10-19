@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
     /// </summary>
     [IsoId("_Q7Cp9Np-Ed-ak6NoX_4Aeg_-2092497455")]
     [DisplayName("Statement Update Type As Code")]
-    public record StatementUpdateTypeAsCode : StatementUpdateTypeCodeAndDSSCodeChoice_
+    public partial record StatementUpdateTypeAsCode : StatementUpdateTypeCodeAndDSSCodeChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

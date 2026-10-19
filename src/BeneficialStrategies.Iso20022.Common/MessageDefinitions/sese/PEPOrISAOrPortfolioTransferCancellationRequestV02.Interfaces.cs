@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record PEPOrISAOrPortfolioTransferCancellationRequestV02 : IPEPOrISAOrPortfolioTransferCancellationRequestV02
+public partial record PEPOrISAOrPortfolioTransferCancellationRequestV02
+    : IPEPOrISAOrPortfolioTransferCancellationRequestV02
 {
-    IMessageIdentification1 IPEPOrISAOrPortfolioTransferCancellationRequestV02.MessageReference => MessageReference;
-    IAdditionalReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.PoolReference => PoolReference;
-    IAdditionalReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.PreviousReference => PreviousReference;
-    IAdditionalReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.RelatedReference => RelatedReference;
-    IPEPISATransfer7? IPEPOrISAOrPortfolioTransferCancellationRequestV02.CancellationByTransferInstructionDetails => CancellationByTransferInstructionDetails;
-    ITransferReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.CancellationByReference => CancellationByReference;
+    IMessageIdentification1 IPEPOrISAOrPortfolioTransferCancellationRequestV02.MessageReference =>
+        MessageReference;
+    IAdditionalReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.PoolReference =>
+        PoolReference;
+    IAdditionalReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.RelatedReference =>
+        RelatedReference;
+    IPEPISATransfer7? IPEPOrISAOrPortfolioTransferCancellationRequestV02.CancellationByTransferInstructionDetails =>
+        CancellationByTransferInstructionDetails;
+    ITransferReference3? IPEPOrISAOrPortfolioTransferCancellationRequestV02.CancellationByReference =>
+        CancellationByReference;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AssuIbZZEfCUZfsQO4rYeA")]
 [DisplayName("Stored Value Request9")]
-public record StoredValueRequest9
+public partial record StoredValueRequest9
 {
     /// <summary>
     /// Sale System identification of the transaction in an unambiguous way.

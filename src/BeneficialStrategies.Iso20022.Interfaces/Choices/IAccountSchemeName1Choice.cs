@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Sets of elements to identify a name of the identification scheme.
 /// </summary>
 [IsoId("_P_4pQNp-Ed-ak6NoX_4Aeg_-240227306")]
-public interface IAccountSchemeName1Choice : IIsoChoice
-{
-}
+public interface IAccountSchemeName1Choice : IIsoChoice { }

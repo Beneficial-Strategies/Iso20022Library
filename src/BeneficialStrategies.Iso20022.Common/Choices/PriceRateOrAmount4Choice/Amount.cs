@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmount4Choice
     /// <summary>Specifies the price as an amount.</summary>
     [IsoId("_JFkB4zmpEemla4muNfgRrg")]
     [DisplayName("Amount")]
-    public record Amount : PriceRateOrAmount4Choice_
+    public partial record Amount : PriceRateOrAmount4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Amt")]

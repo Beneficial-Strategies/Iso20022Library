@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the tax capacity information.
 /// </summary>
 [IsoId("_PeuuwTqHEeWVrPy0StzzSg")]
-public interface ITaxCapacityParty4Choice : IIsoChoice
-{
-}
+public interface ITaxCapacityParty4Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record StatusOrStatement14Choice_ : IStatusOrStatement14Choice
-{
-}
+public abstract partial record StatusOrStatement14Choice_ : IStatusOrStatement14Choice { }

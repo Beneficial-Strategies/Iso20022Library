@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the repurchase agreement call acknowledgement.
 /// </summary>
 [IsoId("_3eDsYTp4EeWVrPy0StzzSg")]
-public interface IRepoCallRequestStatus7Choice : IIsoChoice
-{
-}
+public interface IRepoCallRequestStatus7Choice : IIsoChoice { }

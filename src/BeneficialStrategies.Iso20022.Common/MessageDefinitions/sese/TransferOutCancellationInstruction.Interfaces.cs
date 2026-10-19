@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferOutCancellationInstruction : ITransferOutCancellationInstruction
 {
-    IAdditionalReference2 ITransferOutCancellationInstruction.PreviousReference => PreviousReference;
+    IAdditionalReference2 ITransferOutCancellationInstruction.PreviousReference =>
+        PreviousReference;
     IAdditionalReference2? ITransferOutCancellationInstruction.PoolReference => PoolReference;
     IAdditionalReference2? ITransferOutCancellationInstruction.RelatedReference => RelatedReference;
-    ITransferOut2? ITransferOutCancellationInstruction.TransferOutToBeCancelled => TransferOutToBeCancelled;
+    ITransferOut2? ITransferOutCancellationInstruction.TransferOutToBeCancelled =>
+        TransferOutToBeCancelled;
 }

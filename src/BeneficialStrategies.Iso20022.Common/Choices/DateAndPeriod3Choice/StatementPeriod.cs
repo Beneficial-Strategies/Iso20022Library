@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndPeriod3Choice
     /// </summary>
     [IsoId("_x7SLOQzJEeuTPv2wqaotHg")]
     [DisplayName("Statement Period")]
-    public record StatementPeriod : DateAndPeriod3Choice_
+    public partial record StatementPeriod : DateAndPeriod3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("StmtPrd")]

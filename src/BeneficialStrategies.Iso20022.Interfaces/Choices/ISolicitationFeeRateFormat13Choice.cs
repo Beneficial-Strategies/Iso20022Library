@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Solicitation Fee Rate Format13Choice.
 /// </summary>
 [IsoId("_kv_dq5t3Ee-wQIOX0djF2w")]
-public interface ISolicitationFeeRateFormat13Choice : IIsoChoice
-{
-}
+public interface ISolicitationFeeRateFormat13Choice : IIsoChoice { }

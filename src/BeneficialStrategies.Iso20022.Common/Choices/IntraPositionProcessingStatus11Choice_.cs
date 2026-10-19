@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(IntraPositionProcessingStatus11Choice.Proprietary), nameof(IntraPositionProcessingStatus11Choice.Proprietary))]
     [IsoId("999c835c-c42b-4914-995f-f4b19e8f80af")]
     [DisplayName("Intra Position Processing Status 11 Choice")]
-    public abstract record IntraPositionProcessingStatus11Choice_ { }
+    public abstract partial record IntraPositionProcessingStatus11Choice_ { }
 }

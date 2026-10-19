@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Bpy0cZFIEe6reqfAp4CunQ")]
 [DisplayName("Abort Data6")]
-public record AbortData6
+public partial record AbortData6
 {
     /// <summary>
     /// Exchange Identification.

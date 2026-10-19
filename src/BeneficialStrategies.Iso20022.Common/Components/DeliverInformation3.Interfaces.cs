@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DeliverInformation3 : IDeliverInformation3
 {
-    IDeliveringPartiesAndAccount4 IDeliverInformation3.SettlementPartiesDetails => SettlementPartiesDetails;
+    IDeliveringPartiesAndAccount4 IDeliverInformation3.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IEnumerable<ICharge20> IDeliverInformation3.ChargeDetails => ChargeDetails;
     IEnumerable<ICommission12> IDeliverInformation3.CommissionDetails => CommissionDetails;
     IEnumerable<ITax15> IDeliverInformation3.TaxDetails => TaxDetails;

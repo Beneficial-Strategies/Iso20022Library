@@ -12,6 +12,8 @@ public partial record AdditionalRights1 : IAdditionalRights1
 {
     IAdditionalRightCode1Choice IAdditionalRights1.AdditionalRight => AdditionalRight;
     IDateFormat2Choice? IAdditionalRights1.AdditionalRightDeadline => AdditionalRightDeadline;
-    IDateFormat2Choice? IAdditionalRights1.AdditionalRightMarketDeadline => AdditionalRightMarketDeadline;
-    IAdditionalRightThreshold1Choice? IAdditionalRights1.AdditionalRightThreshold => AdditionalRightThreshold;
+    IDateFormat2Choice? IAdditionalRights1.AdditionalRightMarketDeadline =>
+        AdditionalRightMarketDeadline;
+    IAdditionalRightThreshold1Choice? IAdditionalRights1.AdditionalRightThreshold =>
+        AdditionalRightThreshold;
 }

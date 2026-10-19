@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegistrationProcessingStatus3Cho
     [IsoId("_giL62TqqEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RegistrationProcessingStatus3Choice_
+    public partial record Proprietary : RegistrationProcessingStatus3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

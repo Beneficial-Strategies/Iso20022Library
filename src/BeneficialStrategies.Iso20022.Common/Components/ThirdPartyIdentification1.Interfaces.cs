@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ThirdPartyIdentification1 : IThirdPartyIdentification1
 {
-    IPartyIdentification221? IThirdPartyIdentification1.LegalPersonIdentification => LegalPersonIdentification;
+    IPartyIdentification221? IThirdPartyIdentification1.LegalPersonIdentification =>
+        LegalPersonIdentification;
 }

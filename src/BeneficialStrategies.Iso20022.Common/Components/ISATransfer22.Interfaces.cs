@@ -14,5 +14,6 @@ public partial record ISATransfer22 : IISATransfer22
     IAdditionalReference7? IISATransfer22.CounterpartyReference => CounterpartyReference;
     IDateFormat1Choice? IISATransfer22.RequestedTransferDate => RequestedTransferDate;
     IISAPortfolio1Choice? IISATransfer22.Portfolio => Portfolio;
-    IEnumerable<IFinancialInstrument46> IISATransfer22.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
+    IEnumerable<IFinancialInstrument46> IISATransfer22.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
 }

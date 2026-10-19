@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(GeneratedStatus7Choice.Reason), nameof(GeneratedStatus7Choice.Reason))]
     [IsoId("_O8oP2TqeEeWyoP0PbocV1Q")]
     [DisplayName("Generated Status 7 Choice")]
-    public abstract record GeneratedStatus7Choice_ { }
+    public abstract partial record GeneratedStatus7Choice_ { }
 }

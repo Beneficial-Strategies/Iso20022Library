@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the type of conversion.
 /// </summary>
 [IsoId("_Rl9PMNp-Ed-ak6NoX_4Aeg_-1506659145")]
-public interface IConversionType1FormatChoice : IIsoChoice
-{
-}
+public interface IConversionType1FormatChoice : IIsoChoice { }

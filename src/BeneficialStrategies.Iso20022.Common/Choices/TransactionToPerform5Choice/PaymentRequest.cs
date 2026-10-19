@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform5Choice
     [IsoId("_Xt0vEXGwEe2TbaNWBpRZpQ")]
     [DisplayName("Payment Request")]
     [IsoXmlTag("PmtReq")]
-    public record PaymentRequest : TransactionToPerform5Choice_
+    public partial record PaymentRequest : TransactionToPerform5Choice_
     {
         /// <summary>
         /// Data associated with the Transaction.

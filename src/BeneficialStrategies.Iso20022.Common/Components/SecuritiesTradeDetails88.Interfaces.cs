@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTradeDetails88 : ISecuritiesTradeDetails88
 {
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails88.TradeIdentification => TradeIdentification;
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails88.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails88.TradeIdentification =>
+        TradeIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails88.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification2? ISecuritiesTradeDetails88.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification1? ISecuritiesTradeDetails88.PlaceOfClearing => PlaceOfClearing;
     ITradeDate9Choice? ISecuritiesTradeDetails88.TradeDate => TradeDate;
@@ -20,11 +22,13 @@ public partial record SecuritiesTradeDetails88 : ISecuritiesTradeDetails88
     IPrice3? ISecuritiesTradeDetails88.DealPrice => DealPrice;
     IOpeningClosing4Choice? ISecuritiesTradeDetails88.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting9Choice> ISecuritiesTradeDetails88.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails88.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails88.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity5Choice? ISecuritiesTradeDetails88.InvestorCapacity => InvestorCapacity;
     ITradeOriginator4Choice? ISecuritiesTradeDetails88.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice32Choice? ISecuritiesTradeDetails88.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails88.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails88.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus28Choice? ISecuritiesTradeDetails88.MatchingStatus => MatchingStatus;
     IAffirmationStatus9Choice? ISecuritiesTradeDetails88.AffirmationStatus => AffirmationStatus;
 }

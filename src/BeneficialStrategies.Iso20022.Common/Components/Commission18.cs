@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_z7QP4UevEeODR7vDcYOqmg")]
 [DisplayName("Commission")]
-public record Commission18
+public partial record Commission18
 {
     /// <summary>
     /// Commission expressed as a percentage.

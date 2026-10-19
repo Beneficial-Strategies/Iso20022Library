@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantitySearc
     /// <summary>Quantity expressed as a number, for example a number of shares.</summary>
     [IsoId("_emN9kWqWEemz04WrKJaMEA")]
     [DisplayName("Unit")]
-    public record Unit : FinancialInstrumentQuantitySearch2Choice_
+    public partial record Unit : FinancialInstrumentQuantitySearch2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Unit")]

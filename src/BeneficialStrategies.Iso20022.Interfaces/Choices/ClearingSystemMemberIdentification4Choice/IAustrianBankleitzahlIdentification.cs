@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Austrian Bankleitzahl - identifies Austrian financial institutions on the Austrian national clearing system.
 /// </summary>
 [IsoId("_VwSCdbNIEeejueAciesPMA")]
-public interface IAustrianBankleitzahlIdentification : IClearingSystemMemberIdentification4Choice, IIsoChoiceVariant
+public interface IAustrianBankleitzahlIdentification
+    : IClearingSystemMemberIdentification4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

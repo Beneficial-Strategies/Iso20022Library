@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of cash premium paid to the security holder when voting.
 /// </summary>
 [IsoId("_ui4e-_NBEeqRfth943bvEA")]
-public interface IIncentivePremiumType2Choice : IIsoChoice
-{
-}
+public interface IIncentivePremiumType2Choice : IIsoChoice { }

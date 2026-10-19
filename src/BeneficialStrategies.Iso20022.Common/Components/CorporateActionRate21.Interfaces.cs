@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate21 : ICorporateActionRate21
 {
-    IRatioFormat3Choice? ICorporateActionRate21.AdditionalQuantityForSubscribedResultantSecurities => AdditionalQuantityForSubscribedResultantSecurities;
-    IRatioFormat3Choice? ICorporateActionRate21.AdditionalQuantityForExistingSecurities => AdditionalQuantityForExistingSecurities;
+    IRatioFormat3Choice? ICorporateActionRate21.AdditionalQuantityForSubscribedResultantSecurities =>
+        AdditionalQuantityForSubscribedResultantSecurities;
+    IRatioFormat3Choice? ICorporateActionRate21.AdditionalQuantityForExistingSecurities =>
+        AdditionalQuantityForExistingSecurities;
     IRatioFormat4Choice? ICorporateActionRate21.NewToOld => NewToOld;
 }

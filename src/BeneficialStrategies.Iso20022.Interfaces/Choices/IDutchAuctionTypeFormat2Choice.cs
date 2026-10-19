@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Dutch Auction Type Format2Choice.
 /// </summary>
 [IsoId("_t5KOQaAUEe-BUYcGJFWBWA")]
-public interface IDutchAuctionTypeFormat2Choice : IIsoChoice
-{
-}
+public interface IDutchAuctionTypeFormat2Choice : IIsoChoice { }

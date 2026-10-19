@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the market/client side information.
 /// </summary>
 [IsoId("_QvuKxdp-Ed-ak6NoX_4Aeg_-2065696030")]
-public interface IMarketClientSide1Choice : IIsoChoice
-{
-}
+public interface IMarketClientSide1Choice : IIsoChoice { }

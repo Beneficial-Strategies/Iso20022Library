@@ -13,6 +13,8 @@ public partial record FinancialInstrument31 : IFinancialInstrument31
     ISecurityIdentification3Choice IFinancialInstrument31.Identification => Identification;
     IQuantity12Choice? IFinancialInstrument31.Quantity => Quantity;
     IAccount6? IFinancialInstrument31.TransfereeAccount => TransfereeAccount;
-    IPartyIdentificationAndAccount93? IFinancialInstrument31.ReceivingAgentDetails => ReceivingAgentDetails;
-    IPartyIdentificationAndAccount93? IFinancialInstrument31.DeliveringAgentDetails => DeliveringAgentDetails;
+    IPartyIdentificationAndAccount93? IFinancialInstrument31.ReceivingAgentDetails =>
+        ReceivingAgentDetails;
+    IPartyIdentificationAndAccount93? IFinancialInstrument31.DeliveringAgentDetails =>
+        DeliveringAgentDetails;
 }

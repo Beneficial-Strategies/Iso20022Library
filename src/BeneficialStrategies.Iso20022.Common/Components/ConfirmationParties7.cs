@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WPktUwasEe2phaVG0lYKTw")]
 [DisplayName("Confirmation Parties")]
-public record ConfirmationParties7
+public partial record ConfirmationParties7
 {
     /// <summary>
     /// Party that buys goods or services, or a financial instrument.

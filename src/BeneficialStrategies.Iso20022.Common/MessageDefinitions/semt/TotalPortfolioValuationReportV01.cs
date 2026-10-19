@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_Fyx0CdHWEd-BzquC8wXy7w_-475830186")]
 [DisplayName("Total Portfolio Valuation Report V")]
-public record TotalPortfolioValuationReportV01 : IOuterRecord
+public partial record TotalPortfolioValuationReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

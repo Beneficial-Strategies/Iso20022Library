@@ -11,11 +11,18 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCAElectionStatusAdviceV01 : IAgentCAElectionStatusAdviceV01
 {
     IDocumentIdentification8 IAgentCAElectionStatusAdviceV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCAElectionStatusAdviceV01.AgentCAElectionAdviceIdentification => AgentCAElectionAdviceIdentification;
-    IDocumentIdentification8 IAgentCAElectionStatusAdviceV01.AgentCAElectionCancellationRequestIdentification => AgentCAElectionCancellationRequestIdentification;
-    IDocumentIdentification8 IAgentCAElectionStatusAdviceV01.AgentCAElectionAmendmentRequestIdentification => AgentCAElectionAmendmentRequestIdentification;
-    ICorporateActionInformation1 IAgentCAElectionStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IElectionAdviceStatus1Choice IAgentCAElectionStatusAdviceV01.ElectionAdviceStatus => ElectionAdviceStatus;
-    IElectionCancellationStatus1Choice IAgentCAElectionStatusAdviceV01.ElectionCancellationRequestStatus => ElectionCancellationRequestStatus;
-    IElectionAmendmentStatus1Choice IAgentCAElectionStatusAdviceV01.ElectionAmendmentRequestStatus => ElectionAmendmentRequestStatus;
+    IDocumentIdentification8 IAgentCAElectionStatusAdviceV01.AgentCAElectionAdviceIdentification =>
+        AgentCAElectionAdviceIdentification;
+    IDocumentIdentification8 IAgentCAElectionStatusAdviceV01.AgentCAElectionCancellationRequestIdentification =>
+        AgentCAElectionCancellationRequestIdentification;
+    IDocumentIdentification8 IAgentCAElectionStatusAdviceV01.AgentCAElectionAmendmentRequestIdentification =>
+        AgentCAElectionAmendmentRequestIdentification;
+    ICorporateActionInformation1 IAgentCAElectionStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IElectionAdviceStatus1Choice IAgentCAElectionStatusAdviceV01.ElectionAdviceStatus =>
+        ElectionAdviceStatus;
+    IElectionCancellationStatus1Choice IAgentCAElectionStatusAdviceV01.ElectionCancellationRequestStatus =>
+        ElectionCancellationRequestStatus;
+    IElectionAmendmentStatus1Choice IAgentCAElectionStatusAdviceV01.ElectionAmendmentRequestStatus =>
+        ElectionAmendmentRequestStatus;
 }

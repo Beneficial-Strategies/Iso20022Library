@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Unit1Choice;
 
-public partial record UnitsNumber : IUnitsNumber
-{
-}
+public partial record UnitsNumber : IUnitsNumber { }

@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Canadian Payments Association Routing Number - identifies Canadian financial institutions on the Canadian national clearing system.
 /// </summary>
 [IsoId("_TDY2idp-Ed-ak6NoX_4Aeg_-896562587")]
-public interface ICanadianPaymentsAssociationRoutingNumberIdentification : IClearingSystemMemberIdentificationChoice, IIsoChoiceVariant
+public interface ICanadianPaymentsAssociationRoutingNumberIdentification
+    : IClearingSystemMemberIdentificationChoice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

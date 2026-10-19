@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oiKBEQueEeqw5uEXxQ9H4g")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification176
+public partial record GenericIdentification176
 {
     /// <summary>
     /// Identification of the entity.

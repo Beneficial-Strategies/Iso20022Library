@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionGeneralInformation7 : ICorporateActionGeneralInformation7
 {
     ICorporateActionEventType3Choice ICorporateActionGeneralInformation7.EventType => EventType;
-    ISecurityIdentification11? ICorporateActionGeneralInformation7.UnderlyingSecurityIdentification => UnderlyingSecurityIdentification;
+    ISecurityIdentification11? ICorporateActionGeneralInformation7.UnderlyingSecurityIdentification =>
+        UnderlyingSecurityIdentification;
 }

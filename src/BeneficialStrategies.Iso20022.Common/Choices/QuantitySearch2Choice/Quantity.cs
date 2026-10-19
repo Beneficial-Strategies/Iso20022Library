@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantitySearch2Choice
     /// <summary>Specifies the quantity.</summary>
     [IsoId("_eaw7gWqWEemz04WrKJaMEA")]
     [DisplayName("Quantity")]
-    public record Quantity : QuantitySearch2Choice_
+    public partial record Quantity : QuantitySearch2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Qty")]

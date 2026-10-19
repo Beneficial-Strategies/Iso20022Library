@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UpdatedAdditionalInformation13 : IUpdatedAdditionalInformation13
 {
-    IEnumerable<string> IUpdatedAdditionalInformation13.AdditionalInformation => AdditionalInformation;
+    IEnumerable<string> IUpdatedAdditionalInformation13.AdditionalInformation =>
+        AdditionalInformation;
 }

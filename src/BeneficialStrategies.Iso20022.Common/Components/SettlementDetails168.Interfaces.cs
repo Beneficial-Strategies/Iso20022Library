@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementDetails168 : ISettlementDetails168
 {
-    ISecuritiesTransactionType45Choice ISettlementDetails168.SecuritiesTransactionType => SecuritiesTransactionType;
-    IEnumerable<ISettlementTransactionCondition17Choice> ISettlementDetails168.SettlementTransactionCondition => SettlementTransactionCondition;
+    ISecuritiesTransactionType45Choice ISettlementDetails168.SecuritiesTransactionType =>
+        SecuritiesTransactionType;
+    IEnumerable<ISettlementTransactionCondition17Choice> ISettlementDetails168.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     IBeneficialOwnership4Choice? ISettlementDetails168.BeneficialOwnership => BeneficialOwnership;
     ICashSettlementSystem4Choice? ISettlementDetails168.CashClearingSystem => CashClearingSystem;
     IMarketClientSide6Choice? ISettlementDetails168.MarketClientSide => MarketClientSide;

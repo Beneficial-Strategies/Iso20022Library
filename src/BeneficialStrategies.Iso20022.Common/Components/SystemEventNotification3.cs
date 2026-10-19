@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7jfqcQ1TEeqjM-rxn3HuXQ")]
 [DisplayName("System Event Notification")]
-public record SystemEventNotification3
+public partial record SystemEventNotification3
 {
     /// <summary>
     /// Environment of the transaction.

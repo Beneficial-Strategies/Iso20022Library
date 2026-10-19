@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AXBpQdLDEeiN28wlpBQScw")]
 [DisplayName("Intermediary")]
-public record Intermediary44
+public partial record Intermediary44
 {
     /// <summary>
     /// Unique and unambiguous identifier of the intermediary.

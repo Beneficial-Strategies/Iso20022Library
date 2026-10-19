@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.UnitOrFaceAmount1Choice;
 
-public partial record FaceAmount : IFaceAmount
-{
-}
+public partial record FaceAmount : IFaceAmount { }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VDGEeNp-Ed-ak6NoX_4Aeg_-804817465")]
 [DisplayName("Additional Balance Information")]
-public record AdditionalBalanceInformation
+public partial record AdditionalBalanceInformation
 {
     /// <summary>
     /// Quantity of securities in the sub-balance.

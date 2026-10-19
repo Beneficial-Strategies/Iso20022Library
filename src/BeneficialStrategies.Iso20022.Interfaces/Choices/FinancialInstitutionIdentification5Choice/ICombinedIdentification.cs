@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Unique and unambiguous identification of a financial institution, through a combimation of globally recognised or proprietary identification scheme.
 /// </summary>
 [IsoId("_TFnrItp-Ed-ak6NoX_4Aeg_1781480692")]
-public interface ICombinedIdentification : IFinancialInstitutionIdentification5Choice, IIsoChoiceVariant
+public interface ICombinedIdentification
+    : IFinancialInstitutionIdentification5Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

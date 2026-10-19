@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for a transfer reason.
 /// </summary>
 [IsoId("_hPw_oa51EeeMy7TnJ3e__g")]
-public interface ITransferReason1Choice : IIsoChoice
-{
-}
+public interface ITransferReason1Choice : IIsoChoice { }

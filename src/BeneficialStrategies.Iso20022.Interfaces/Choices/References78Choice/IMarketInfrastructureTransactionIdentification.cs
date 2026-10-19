@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References78Choice;
 /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
 /// </summary>
 [IsoId("_d_pEeTi8Eeydid5dcNPKvg")]
-public interface IMarketInfrastructureTransactionIdentification : IReferences78Choice, IIsoChoiceVariant
+public interface IMarketInfrastructureTransactionIdentification
+    : IReferences78Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

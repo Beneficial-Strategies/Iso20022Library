@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Cancellation Status32Choice.
 /// </summary>
 [IsoId("_pvZB0YYQEe-9jM3-w7OB3g")]
-public interface ICancellationStatus32Choice : IIsoChoice
-{
-}
+public interface ICancellationStatus32Choice : IIsoChoice { }

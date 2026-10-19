@@ -12,6 +12,8 @@ public partial record GroupHeader89 : IGroupHeader89
 {
     IEnumerable<IAuthorisation1Choice> IGroupHeader89.Authorisation => Authorisation;
     ISettlementInstruction7 IGroupHeader89.SettlementInformation => SettlementInformation;
-    IBranchAndFinancialInstitutionIdentification6? IGroupHeader89.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification6? IGroupHeader89.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? IGroupHeader89.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? IGroupHeader89.InstructedAgent =>
+        InstructedAgent;
 }

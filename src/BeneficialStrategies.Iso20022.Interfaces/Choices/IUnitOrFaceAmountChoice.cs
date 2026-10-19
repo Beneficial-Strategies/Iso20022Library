@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a unit in decimal number or a face amount in currency and amount.
 /// </summary>
 [IsoId("_SoH20dp-Ed-ak6NoX_4Aeg_144255606")]
-public interface IUnitOrFaceAmountChoice : IIsoChoice
-{
-}
+public interface IUnitOrFaceAmountChoice : IIsoChoice { }

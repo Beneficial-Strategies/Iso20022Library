@@ -13,6 +13,8 @@ public partial record GroupHeader94 : IGroupHeader94
     IEnumerable<IAuthorisation1Choice> IGroupHeader94.Authorisation => Authorisation;
     ISettlementInstruction8 IGroupHeader94.SettlementInformation => SettlementInformation;
     IPaymentTypeInformation27? IGroupHeader94.PaymentTypeInformation => PaymentTypeInformation;
-    IBranchAndFinancialInstitutionIdentification6? IGroupHeader94.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification6? IGroupHeader94.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? IGroupHeader94.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? IGroupHeader94.InstructedAgent =>
+        InstructedAgent;
 }

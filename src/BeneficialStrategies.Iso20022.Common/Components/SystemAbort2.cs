@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_98rIAYX-EemxIqbaFEE8-w")]
 [DisplayName("System Abort")]
-public record SystemAbort2
+public partial record SystemAbort2
 {
     /// <summary>
     /// Environment of the transaction.

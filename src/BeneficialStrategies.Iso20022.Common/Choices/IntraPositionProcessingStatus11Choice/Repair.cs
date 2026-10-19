@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus11C
     /// <summary>Instruction is accepted but in repair.</summary>
     [IsoId("0b5d2d78-6645-4b7a-98ab-650f83dd5797")]
     [DisplayName("Repair")]
-    public record Repair : IntraPositionProcessingStatus11Choice_
+    public partial record Repair : IntraPositionProcessingStatus11Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rpr")]

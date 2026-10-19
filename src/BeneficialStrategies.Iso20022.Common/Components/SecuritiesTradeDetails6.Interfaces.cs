@@ -13,10 +13,12 @@ public partial record SecuritiesTradeDetails6 : ISecuritiesTradeDetails6
     IMarketIdentification4? ISecuritiesTradeDetails6.PlaceOfTrade => PlaceOfTrade;
     ITradeDate1Choice? ISecuritiesTradeDetails6.TradeDate => TradeDate;
     ISettlementDate1Choice? ISecuritiesTradeDetails6.SettlementDate => SettlementDate;
-    ISettlementDate3Choice ISecuritiesTradeDetails6.EffectiveSettlementDate => EffectiveSettlementDate;
+    ISettlementDate3Choice ISecuritiesTradeDetails6.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IPrice2? ISecuritiesTradeDetails6.DealPrice => DealPrice;
     IEnumerable<IReporting2Choice> ISecuritiesTradeDetails6.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails6.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails6.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity1Choice? ISecuritiesTradeDetails6.InvestorCapacity => InvestorCapacity;
     ITradeOriginator1Choice? ISecuritiesTradeDetails6.TradeOriginatorRole => TradeOriginatorRole;
 }

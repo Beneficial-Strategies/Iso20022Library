@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation3Choice;
 
 public partial record CancellationByReference : ICancellationByReference
 {
-    IEnumerable<ITransferReference4> ICancellationByReference.TransferReferences => TransferReferences;
+    IEnumerable<ITransferReference4> ICancellationByReference.TransferReferences =>
+        TransferReferences;
 }

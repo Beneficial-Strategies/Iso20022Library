@@ -12,5 +12,6 @@ public partial record MessageAndBusinessReference12 : IMessageAndBusinessReferen
 {
     IReferences68Choice? IMessageAndBusinessReference12.Reference => Reference;
     IAdditionalReference10? IMessageAndBusinessReference12.ClientReference => ClientReference;
-    IInvestmentAccount72? IMessageAndBusinessReference12.InvestmentAccountDetails => InvestmentAccountDetails;
+    IInvestmentAccount72? IMessageAndBusinessReference12.InvestmentAccountDetails =>
+        InvestmentAccountDetails;
 }

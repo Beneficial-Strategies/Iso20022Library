@@ -10,12 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate141 : ICorporateActionRate141
 {
-    IEnumerable<IGrossDividendRateFormat35Choice> ICorporateActionRate141.GrossDistributionRate => GrossDistributionRate;
-    IEnumerable<INetDividendRateFormat37Choice> ICorporateActionRate141.NetDistributionRate => NetDistributionRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat12Choice> ICorporateActionRate141.GrossInterestRateUsedForPayment => GrossInterestRateUsedForPayment;
+    IEnumerable<IGrossDividendRateFormat35Choice> ICorporateActionRate141.GrossDistributionRate =>
+        GrossDistributionRate;
+    IEnumerable<INetDividendRateFormat37Choice> ICorporateActionRate141.NetDistributionRate =>
+        NetDistributionRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat12Choice> ICorporateActionRate141.GrossInterestRateUsedForPayment =>
+        GrossInterestRateUsedForPayment;
     IRateFormat32Choice? ICorporateActionRate141.ProrationRate => ProrationRate;
-    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate141.WithholdingTaxRate => WithholdingTaxRate;
-    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate141.SecondLevelTax => SecondLevelTax;
+    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate141.WithholdingTaxRate =>
+        WithholdingTaxRate;
+    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate141.SecondLevelTax =>
+        SecondLevelTax;
     IRateAndAmountFormat59Choice? ICorporateActionRate141.AdditionalTax => AdditionalTax;
-    IEnumerable<IRateTypeAndAmountAndStatus26> ICorporateActionRate141.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
+    IEnumerable<IRateTypeAndAmountAndStatus26> ICorporateActionRate141.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
 }

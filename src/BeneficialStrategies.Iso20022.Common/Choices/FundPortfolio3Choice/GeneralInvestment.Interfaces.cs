@@ -12,5 +12,6 @@ public partial record GeneralInvestment : IGeneralInvestment
 {
     IGeneralInvestmentAccountType1Choice? IGeneralInvestment.Type => Type;
     IDateAndAmount2? IGeneralInvestment.EstimatedValue => EstimatedValue;
-    IEnumerable<IAdditionalInformation15> IGeneralInvestment.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IGeneralInvestment.AdditionalInformation =>
+        AdditionalInformation;
 }

@@ -10,19 +10,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes48 : IFinancialInstrumentAttributes48
 {
-    ISecurityIdentification14 IFinancialInstrumentAttributes48.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification14 IFinancialInstrumentAttributes48.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IMarketIdentification3Choice? IFinancialInstrumentAttributes48.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes48.DayCountBasis => DayCountBasis;
-    IClassificationType2Choice? IFinancialInstrumentAttributes48.ClassificationType => ClassificationType;
+    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes48.DayCountBasis =>
+        DayCountBasis;
+    IClassificationType2Choice? IFinancialInstrumentAttributes48.ClassificationType =>
+        ClassificationType;
     IOptionStyle4Choice? IFinancialInstrumentAttributes48.OptionStyle => OptionStyle;
     IRateFormat3Choice? IFinancialInstrumentAttributes48.InterestRate => InterestRate;
     IRateFormat3Choice? IFinancialInstrumentAttributes48.NextInterestRate => NextInterestRate;
-    IRateFormat3Choice? IFinancialInstrumentAttributes48.PercentageOfDebtClaim => PercentageOfDebtClaim;
+    IRateFormat3Choice? IFinancialInstrumentAttributes48.PercentageOfDebtClaim =>
+        PercentageOfDebtClaim;
     IRateFormat12Choice? IFinancialInstrumentAttributes48.PreviousFactor => PreviousFactor;
     IRateFormat12Choice? IFinancialInstrumentAttributes48.NextFactor => NextFactor;
     IQuantityToQuantityRatio1? IFinancialInstrumentAttributes48.WarrantParity => WarrantParity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.MinimumExercisableQuantity => MinimumExercisableQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.MinimumExercisableMultipleQuantity => MinimumExercisableMultipleQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.ContractSize => ContractSize;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.MinimumExercisableQuantity =>
+        MinimumExercisableQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.MinimumExercisableMultipleQuantity =>
+        MinimumExercisableMultipleQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes48.ContractSize =>
+        ContractSize;
 }

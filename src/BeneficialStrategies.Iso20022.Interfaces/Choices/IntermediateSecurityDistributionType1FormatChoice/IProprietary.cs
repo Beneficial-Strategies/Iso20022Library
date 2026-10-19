@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecurityDistribution
 /// Proprietary code to express the type of intermediate security distribution.
 /// </summary>
 [IsoId("_Rms2FNp-Ed-ak6NoX_4Aeg_1911197103")]
-public interface IProprietary : IIntermediateSecurityDistributionType1FormatChoice, IIsoChoiceVariant
+public interface IProprietary
+    : IIntermediateSecurityDistributionType1FormatChoice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Identification assigned by an institution.

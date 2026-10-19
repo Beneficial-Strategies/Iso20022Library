@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wkqgEC8DEeu125Ip9zFcsQ")]
 [DisplayName("Resource Content")]
-public record ResourceContent1
+public partial record ResourceContent1
 {
     /// <summary>
     /// Type of media resource.

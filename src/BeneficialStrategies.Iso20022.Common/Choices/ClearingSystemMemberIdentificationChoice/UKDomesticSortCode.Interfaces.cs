@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificationChoice;
 
-public partial record UKDomesticSortCode : IUKDomesticSortCode
-{
-}
+public partial record UKDomesticSortCode : IUKDomesticSortCode { }

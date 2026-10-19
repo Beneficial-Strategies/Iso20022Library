@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record NaturalPersonIdentification1 : INaturalPersonIdentification1
 {
-    IIdentificationType45Choice? INaturalPersonIdentification1.IdentificationType => IdentificationType;
+    IIdentificationType45Choice? INaturalPersonIdentification1.IdentificationType =>
+        IdentificationType;
 }

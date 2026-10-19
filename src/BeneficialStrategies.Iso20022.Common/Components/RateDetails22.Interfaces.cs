@@ -11,12 +11,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RateDetails22 : IRateDetails22
 {
     IRateAndAmountFormat37Choice? IRateDetails22.AdditionalTax => AdditionalTax;
-    IEnumerable<IGrossDividendRateFormat20Choice> IRateDetails22.GrossDividendRate => GrossDividendRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat8Choice> IRateDetails22.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IEnumerable<IRateAndAmountFormat41Choice> IRateDetails22.WithholdingTaxRate => WithholdingTaxRate;
+    IEnumerable<IGrossDividendRateFormat20Choice> IRateDetails22.GrossDividendRate =>
+        GrossDividendRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat8Choice> IRateDetails22.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IEnumerable<IRateAndAmountFormat41Choice> IRateDetails22.WithholdingTaxRate =>
+        WithholdingTaxRate;
     IEnumerable<IRateAndAmountFormat41Choice> IRateDetails22.SecondLevelTax => SecondLevelTax;
     IRateAndAmountFormat37Choice? IRateDetails22.ChargesFees => ChargesFees;
-    ISolicitationFeeRateFormat7Choice? IRateDetails22.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    ISolicitationFeeRateFormat7Choice? IRateDetails22.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateFormat3Choice? IRateDetails22.FiscalStamp => FiscalStamp;
     IRateAndAmountFormat37Choice? IRateDetails22.FullyFrankedRate => FullyFrankedRate;
     IRateFormat20Choice? IRateDetails22.ThirdPartyIncentiveRate => ThirdPartyIncentiveRate;

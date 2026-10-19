@@ -13,7 +13,8 @@ public partial record CorporateActionRate1 : ICorporateActionRate1
     IRateAndAmountFormat1Choice? ICorporateActionRate1.Interest => Interest;
     IRateFormat1Choice? ICorporateActionRate1.RelatedIndex => RelatedIndex;
     IRateFormat1Choice? ICorporateActionRate1.PercentageSought => PercentageSought;
-    IRateFormat1Choice? ICorporateActionRate1.ReinvestmentDiscountToMarket => ReinvestmentDiscountToMarket;
+    IRateFormat1Choice? ICorporateActionRate1.ReinvestmentDiscountToMarket =>
+        ReinvestmentDiscountToMarket;
     IRateFormat1Choice? ICorporateActionRate1.Spread => Spread;
     IAmountAndRateFormat3Choice? ICorporateActionRate1.BidInterval => BidInterval;
     IRateAndAmountFormat1Choice? ICorporateActionRate1.Charges => Charges;

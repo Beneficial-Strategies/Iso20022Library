@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record DateAndDateTime2Choice_ : IDateAndDateTime2Choice
-{
-}
+public abstract partial record DateAndDateTime2Choice_ : IDateAndDateTime2Choice { }

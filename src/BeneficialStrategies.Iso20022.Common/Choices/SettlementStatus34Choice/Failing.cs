@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus34Choice
     /// <summary>Settlement status expressed as a failing status.</summary>
     [IsoId("_XtOZ--SkEe-qVZLXW4RRBw")]
     [DisplayName("Failing")]
-    public record Failing : SettlementStatus34Choice_
+    public partial record Failing : SettlementStatus34Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Flng")]

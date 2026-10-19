@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus13Ch
     /// <summary>Modification request will not be executed.</summary>
     [IsoId("cfdd792f-3676-48ef-be7b-a4cdcffc4698")]
     [DisplayName("Denied")]
-    public record Denied : ModificationProcessingStatus13Choice_
+    public partial record Denied : ModificationProcessingStatus13Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dnd")]

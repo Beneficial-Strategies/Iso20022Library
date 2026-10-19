@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eiAfMS9AEeu125Ip9zFcsQ")]
 [DisplayName("Enable Service Request")]
-public record EnableServiceRequest3
+public partial record EnableServiceRequest3
 {
     /// <summary>
     /// Action to realise on a transaction.

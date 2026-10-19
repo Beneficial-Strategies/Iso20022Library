@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record SecuritiesTransactionStatusQueryV07 : ISecuritiesTransactionStatusQueryV07
 {
-    IDocumentNumber20 ISecuritiesTransactionStatusQueryV07.StatusAdviceRequested => StatusAdviceRequested;
+    IDocumentNumber20 ISecuritiesTransactionStatusQueryV07.StatusAdviceRequested =>
+        StatusAdviceRequested;
     IPartyIdentification144? ISecuritiesTransactionStatusQueryV07.AccountOwner => AccountOwner;
-    ISecuritiesAccount22? ISecuritiesTransactionStatusQueryV07.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesTransactionStatusQueryV07.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQueryV07.SupplementaryData => SupplementaryData;
+    ISecuritiesAccount22? ISecuritiesTransactionStatusQueryV07.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesTransactionStatusQueryV07.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQueryV07.SupplementaryData =>
+        SupplementaryData;
 }

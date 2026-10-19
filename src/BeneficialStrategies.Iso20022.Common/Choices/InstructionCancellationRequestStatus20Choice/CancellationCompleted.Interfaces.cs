@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestStatus20Choice;
 
-public partial record CancellationCompleted : ICancellationCompleted
-{
-}
+public partial record CancellationCompleted : ICancellationCompleted { }

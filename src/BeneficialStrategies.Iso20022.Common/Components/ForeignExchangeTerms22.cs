@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FCeb_R5dEeWE3PufGMdJ3w")]
 [DisplayName("Foreign Exchange Terms")]
-public record ForeignExchangeTerms22
+public partial record ForeignExchangeTerms22
 {
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.

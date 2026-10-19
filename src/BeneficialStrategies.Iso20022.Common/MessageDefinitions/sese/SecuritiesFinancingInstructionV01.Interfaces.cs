@@ -10,24 +10,37 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record SecuritiesFinancingInstructionV01 : ISecuritiesFinancingInstructionV01
 {
-    ITransactionAndDocumentIdentification1 ISecuritiesFinancingInstructionV01.Identification => Identification;
-    ITransactionTypeAndAdditionalParameters1 ISecuritiesFinancingInstructionV01.TransactionTypeAndAdditionalParameters => TransactionTypeAndAdditionalParameters;
+    ITransactionAndDocumentIdentification1 ISecuritiesFinancingInstructionV01.Identification =>
+        Identification;
+    ITransactionTypeAndAdditionalParameters1 ISecuritiesFinancingInstructionV01.TransactionTypeAndAdditionalParameters =>
+        TransactionTypeAndAdditionalParameters;
     INumberCount1Choice? ISecuritiesFinancingInstructionV01.NumberCounts => NumberCounts;
     IEnumerable<ILinkages1> ISecuritiesFinancingInstructionV01.Linkages => Linkages;
     ISecuritiesTradeDetails3 ISecuritiesFinancingInstructionV01.TradeDetails => TradeDetails;
-    ISecurityIdentification11 ISecuritiesFinancingInstructionV01.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes8? ISecuritiesFinancingInstructionV01.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IQuantityAndAccount1 ISecuritiesFinancingInstructionV01.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISecuritiesFinancingTransactionDetails1 ISecuritiesFinancingInstructionV01.SecuritiesFinancingDetails => SecuritiesFinancingDetails;
-    ISettlementDetails3? ISecuritiesFinancingInstructionV01.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction1? ISecuritiesFinancingInstructionV01.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
-    ISettlementParties5? ISecuritiesFinancingInstructionV01.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties5? ISecuritiesFinancingInstructionV01.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISecurityIdentification11 ISecuritiesFinancingInstructionV01.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes8? ISecuritiesFinancingInstructionV01.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IQuantityAndAccount1 ISecuritiesFinancingInstructionV01.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISecuritiesFinancingTransactionDetails1 ISecuritiesFinancingInstructionV01.SecuritiesFinancingDetails =>
+        SecuritiesFinancingDetails;
+    ISettlementDetails3? ISecuritiesFinancingInstructionV01.SettlementParameters =>
+        SettlementParameters;
+    IStandingSettlementInstruction1? ISecuritiesFinancingInstructionV01.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
+    ISettlementParties5? ISecuritiesFinancingInstructionV01.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties5? ISecuritiesFinancingInstructionV01.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     ICashParties3? ISecuritiesFinancingInstructionV01.CashParties => CashParties;
-    IAmountAndDirection2? ISecuritiesFinancingInstructionV01.OpeningSettlementAmount => OpeningSettlementAmount;
+    IAmountAndDirection2? ISecuritiesFinancingInstructionV01.OpeningSettlementAmount =>
+        OpeningSettlementAmount;
     IOtherAmounts3? ISecuritiesFinancingInstructionV01.OtherAmounts => OtherAmounts;
     IOtherParties2? ISecuritiesFinancingInstructionV01.OtherBusinessParties => OtherBusinessParties;
-    IPartyIdentification10Choice? ISecuritiesFinancingInstructionV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesFinancingInstructionV01.MessageRecipient => MessageRecipient;
+    IPartyIdentification10Choice? ISecuritiesFinancingInstructionV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesFinancingInstructionV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ISecuritiesFinancingInstructionV01.Extension => Extension;
 }

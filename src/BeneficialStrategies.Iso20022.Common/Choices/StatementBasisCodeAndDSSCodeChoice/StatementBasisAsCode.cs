@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasisCodeAndDSSCodeChoi
     /// </summary>
     [IsoId("_Q7Cp8dp-Ed-ak6NoX_4Aeg_-1663061250")]
     [DisplayName("Statement Basis As Code")]
-    public record StatementBasisAsCode : StatementBasisCodeAndDSSCodeChoice_
+    public partial record StatementBasisAsCode : StatementBasisCodeAndDSSCodeChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

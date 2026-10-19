@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity5Choice
     /// </summary>
     [IsoId("_1BQsY4jvEeONZKAAW4pOaQ")]
     [DisplayName("Quantity")]
-    public record Quantity : SubBalanceQuantity5Choice_
+    public partial record Quantity : SubBalanceQuantity5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Qty")]

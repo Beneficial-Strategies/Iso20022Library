@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ShareRanking1FormatChoice_ : IShareRanking1FormatChoice
-{
-}
+public abstract partial record ShareRanking1FormatChoice_ : IShareRanking1FormatChoice { }

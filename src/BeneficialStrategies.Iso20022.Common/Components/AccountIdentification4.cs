@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WO8MiNp-Ed-ak6NoX_4Aeg_672442635")]
 [DisplayName("Account Identification")]
-public record AccountIdentification4
+public partial record AccountIdentification4
 {
     /// <summary>
     /// Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.

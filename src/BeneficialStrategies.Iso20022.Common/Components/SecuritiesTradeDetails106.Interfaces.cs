@@ -10,17 +10,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTradeDetails106 : ISecuritiesTradeDetails106
 {
-    IEnumerable<RestrictedFINXMax52Text> ISecuritiesTradeDetails106.TradeIdentification => TradeIdentification;
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails106.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<RestrictedFINXMax52Text> ISecuritiesTradeDetails106.TradeIdentification =>
+        TradeIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails106.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IPlaceOfTradeIdentification2? ISecuritiesTradeDetails106.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ISecuritiesTradeDetails106.PlaceOfClearing => PlaceOfClearing;
     ITradeDate9Choice? ISecuritiesTradeDetails106.TradeDate => TradeDate;
     ISettlementDate20Choice? ISecuritiesTradeDetails106.SettlementDate => SettlementDate;
-    ISettlementDate22Choice ISecuritiesTradeDetails106.EffectiveSettlementDate => EffectiveSettlementDate;
+    ISettlementDate22Choice ISecuritiesTradeDetails106.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IPrice3? ISecuritiesTradeDetails106.DealPrice => DealPrice;
     IOpeningClosing4Choice? ISecuritiesTradeDetails106.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting11Choice> ISecuritiesTradeDetails106.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails106.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails106.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity5Choice? ISecuritiesTradeDetails106.InvestorCapacity => InvestorCapacity;
     ITradeOriginator4Choice? ISecuritiesTradeDetails106.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice32Choice? ISecuritiesTradeDetails106.TypeOfPrice => TypeOfPrice;

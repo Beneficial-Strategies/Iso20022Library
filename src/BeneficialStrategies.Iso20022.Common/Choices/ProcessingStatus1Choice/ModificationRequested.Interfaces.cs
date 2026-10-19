@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus1Choice;
 
-public partial record ModificationRequested : IModificationRequested
-{
-}
+public partial record ModificationRequested : IModificationRequested { }

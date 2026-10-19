@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesAccount2Choice.Account))]
     [JsonDerivedType(typeof(SecuritiesAccount2Choice.Range))]
     [JsonDerivedType(typeof(SecuritiesAccount2Choice.Account))]
-    public abstract record SecuritiesAccount2Choice_
+    public abstract partial record SecuritiesAccount2Choice_
     {
     }
 }

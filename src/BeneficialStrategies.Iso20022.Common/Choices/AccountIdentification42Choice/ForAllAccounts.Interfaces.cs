@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification42Choice;
 
-public partial record ForAllAccounts : IForAllAccounts
-{
-}
+public partial record ForAllAccounts : IForAllAccounts { }

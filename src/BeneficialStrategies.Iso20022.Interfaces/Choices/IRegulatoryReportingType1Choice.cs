@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a code or proprietary format for regulatory reporting type.</summary>
 [IsoId("_JVOXAHeLEfCdoODv2ypKfw")]
-public interface IRegulatoryReportingType1Choice : IIsoChoice
-{
-}
+public interface IRegulatoryReportingType1Choice : IIsoChoice { }

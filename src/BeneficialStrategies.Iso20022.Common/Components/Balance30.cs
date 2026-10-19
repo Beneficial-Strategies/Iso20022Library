@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zBB40ag1EfCXwLUUylXgrQ")]
 [DisplayName("Balance30")]
-public record Balance30
+public partial record Balance30
 {
     /// <summary>
     /// Account to or from which a securities entry is made.

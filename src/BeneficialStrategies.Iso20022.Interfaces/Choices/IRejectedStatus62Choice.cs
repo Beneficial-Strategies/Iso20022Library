@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between no specified reason and a reason for rejected status.</summary>
 [IsoId("_jxvsEd8PEe-NrtAAlrBEgQ")]
-public interface IRejectedStatus62Choice : IIsoChoice
-{
-}
+public interface IRejectedStatus62Choice : IIsoChoice { }

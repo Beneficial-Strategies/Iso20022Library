@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M-bRUXGpEe2TbaNWBpRZpQ")]
 [DisplayName("Device Input Response")]
-public record DeviceInputResponse5
+public partial record DeviceInputResponse5
 {
     /// <summary>
     /// Result of display request.

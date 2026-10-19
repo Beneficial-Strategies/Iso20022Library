@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MeetingEventReference1 : IMeetingEventReference1
 {
-    IMeetingEventReference1Choice IMeetingEventReference1.EventIdentification => EventIdentification;
+    IMeetingEventReference1Choice IMeetingEventReference1.EventIdentification =>
+        EventIdentification;
 }

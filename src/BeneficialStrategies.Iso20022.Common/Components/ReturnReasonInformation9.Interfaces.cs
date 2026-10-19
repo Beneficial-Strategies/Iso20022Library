@@ -12,5 +12,6 @@ public partial record ReturnReasonInformation9 : IReturnReasonInformation9
 {
     IPartyIdentification32? IReturnReasonInformation9.Originator => Originator;
     IReturnReason5Choice? IReturnReasonInformation9.Reason => Reason;
-    IEnumerable<Max105Text> IReturnReasonInformation9.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> IReturnReasonInformation9.AdditionalInformation =>
+        AdditionalInformation;
 }

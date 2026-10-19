@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nDDUWYybEe-PVZsedaAGaA")]
 [DisplayName("Intra Position Details66")]
-public record IntraPositionDetails66
+public partial record IntraPositionDetails66
 {
     /// <summary>
     /// Safekeeping Place.

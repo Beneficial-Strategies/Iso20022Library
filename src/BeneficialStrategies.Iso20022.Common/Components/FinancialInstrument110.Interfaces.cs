@@ -19,9 +19,13 @@ public partial record FinancialInstrument110 : IFinancialInstrument110
     IDateAndAmount2? IFinancialInstrument110.LatestValuation => LatestValuation;
     IAccount37? IFinancialInstrument110.TransfereeAccount => TransfereeAccount;
     IEnumerable<IAccount37> IFinancialInstrument110.Transferor => Transferor;
-    IEnumerable<IIntermediary43> IFinancialInstrument110.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<ICrystallisation2> IFinancialInstrument110.CrystallisationDetails => CrystallisationDetails;
+    IEnumerable<IIntermediary43> IFinancialInstrument110.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<ICrystallisation2> IFinancialInstrument110.CrystallisationDetails =>
+        CrystallisationDetails;
     ITax36? IFinancialInstrument110.TaxValuationPoint => TaxValuationPoint;
-    IEnumerable<IFundSettlementParameters24> IFinancialInstrument110.SettlementPartiesDetails => SettlementPartiesDetails;
-    IEnumerable<IAdditionalInformation15> IFinancialInstrument110.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IFundSettlementParameters24> IFinancialInstrument110.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
+    IEnumerable<IAdditionalInformation15> IFinancialInstrument110.AdditionalInformation =>
+        AdditionalInformation;
 }

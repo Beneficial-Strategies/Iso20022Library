@@ -16,7 +16,8 @@ public partial record CorporateActionDate96 : ICorporateActionDate96
     IDateFormat49Choice? ICorporateActionDate96.EarlyClosingDate => EarlyClosingDate;
     IDateFormat41Choice? ICorporateActionDate96.EffectiveDate => EffectiveDate;
     IDateFormat41Choice? ICorporateActionDate96.EqualisationDate => EqualisationDate;
-    IDateFormat49Choice? ICorporateActionDate96.FurtherDetailedAnnouncementDate => FurtherDetailedAnnouncementDate;
+    IDateFormat49Choice? ICorporateActionDate96.FurtherDetailedAnnouncementDate =>
+        FurtherDetailedAnnouncementDate;
     IDateFormat49Choice? ICorporateActionDate96.FixingDate => FixingDate;
     IDateFormat41Choice? ICorporateActionDate96.LotteryDate => LotteryDate;
     IDateFormat41Choice? ICorporateActionDate96.NewMaturityDate => NewMaturityDate;
@@ -27,21 +28,27 @@ public partial record CorporateActionDate96 : ICorporateActionDate96
     IDateFormat49Choice? ICorporateActionDate96.RegistrationDeadline => RegistrationDeadline;
     IDateFormat49Choice? ICorporateActionDate96.ResultsPublicationDate => ResultsPublicationDate;
     IDateFormat49Choice? ICorporateActionDate96.DeadlineToSplit => DeadlineToSplit;
-    IDateFormat49Choice? ICorporateActionDate96.DeadlineForTaxBreakdownInstruction => DeadlineForTaxBreakdownInstruction;
+    IDateFormat49Choice? ICorporateActionDate96.DeadlineForTaxBreakdownInstruction =>
+        DeadlineForTaxBreakdownInstruction;
     IDateFormat49Choice? ICorporateActionDate96.TradingSuspendedDate => TradingSuspendedDate;
     IDateFormat41Choice? ICorporateActionDate96.UnconditionalDate => UnconditionalDate;
     IDateFormat41Choice? ICorporateActionDate96.WhollyUnconditionalDate => WhollyUnconditionalDate;
     IDateFormat41Choice? ICorporateActionDate96.ExDividendDate => ExDividendDate;
-    IDateFormat49Choice? ICorporateActionDate96.OfficialAnnouncementPublicationDate => OfficialAnnouncementPublicationDate;
+    IDateFormat49Choice? ICorporateActionDate96.OfficialAnnouncementPublicationDate =>
+        OfficialAnnouncementPublicationDate;
     IDateFormat41Choice? ICorporateActionDate96.SpecialExDate => SpecialExDate;
-    IDateFormat41Choice? ICorporateActionDate96.GuaranteedParticipationDate => GuaranteedParticipationDate;
-    IDateFormat49Choice? ICorporateActionDate96.ElectionToCounterpartyMarketDeadline => ElectionToCounterpartyMarketDeadline;
-    IDateFormat49Choice? ICorporateActionDate96.ElectionToCounterpartyResponseDeadline => ElectionToCounterpartyResponseDeadline;
+    IDateFormat41Choice? ICorporateActionDate96.GuaranteedParticipationDate =>
+        GuaranteedParticipationDate;
+    IDateFormat49Choice? ICorporateActionDate96.ElectionToCounterpartyMarketDeadline =>
+        ElectionToCounterpartyMarketDeadline;
+    IDateFormat49Choice? ICorporateActionDate96.ElectionToCounterpartyResponseDeadline =>
+        ElectionToCounterpartyResponseDeadline;
     IDateFormat41Choice? ICorporateActionDate96.LapsedDate => LapsedDate;
     IDateFormat41Choice? ICorporateActionDate96.PaymentDate => PaymentDate;
     IDateFormat49Choice? ICorporateActionDate96.ThirdPartyDeadline => ThirdPartyDeadline;
     IDateFormat49Choice? ICorporateActionDate96.EarlyThirdPartyDeadline => EarlyThirdPartyDeadline;
-    IDateFormat41Choice? ICorporateActionDate96.MarketClaimTrackingEndDate => MarketClaimTrackingEndDate;
+    IDateFormat41Choice? ICorporateActionDate96.MarketClaimTrackingEndDate =>
+        MarketClaimTrackingEndDate;
     IDateFormat49Choice? ICorporateActionDate96.LeadPlaintiffDeadline => LeadPlaintiffDeadline;
     IDateFormat41Choice? ICorporateActionDate96.FilingDate => FilingDate;
     IDateFormat41Choice? ICorporateActionDate96.HearingDate => HearingDate;

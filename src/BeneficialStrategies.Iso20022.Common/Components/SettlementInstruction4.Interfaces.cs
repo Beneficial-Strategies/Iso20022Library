@@ -12,10 +12,16 @@ public partial record SettlementInstruction4 : ISettlementInstruction4
 {
     ICashAccount24? ISettlementInstruction4.SettlementAccount => SettlementAccount;
     IClearingSystemIdentification3Choice? ISettlementInstruction4.ClearingSystem => ClearingSystem;
-    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.InstructingReimbursementAgent => InstructingReimbursementAgent;
-    ICashAccount24? ISettlementInstruction4.InstructingReimbursementAgentAccount => InstructingReimbursementAgentAccount;
-    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.InstructedReimbursementAgent => InstructedReimbursementAgent;
-    ICashAccount24? ISettlementInstruction4.InstructedReimbursementAgentAccount => InstructedReimbursementAgentAccount;
-    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.ThirdReimbursementAgent => ThirdReimbursementAgent;
-    ICashAccount24? ISettlementInstruction4.ThirdReimbursementAgentAccount => ThirdReimbursementAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.InstructingReimbursementAgent =>
+        InstructingReimbursementAgent;
+    ICashAccount24? ISettlementInstruction4.InstructingReimbursementAgentAccount =>
+        InstructingReimbursementAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.InstructedReimbursementAgent =>
+        InstructedReimbursementAgent;
+    ICashAccount24? ISettlementInstruction4.InstructedReimbursementAgentAccount =>
+        InstructedReimbursementAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.ThirdReimbursementAgent =>
+        ThirdReimbursementAgent;
+    ICashAccount24? ISettlementInstruction4.ThirdReimbursementAgentAccount =>
+        ThirdReimbursementAgentAccount;
 }

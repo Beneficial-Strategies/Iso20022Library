@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VSF1oagzEfCXwLUUylXgrQ")]
 [DisplayName("Settlement Instruction Query Definition4")]
-public record SettlementInstructionQueryDefinition4
+public partial record SettlementInstructionQueryDefinition4
 {
     /// <summary>
     /// Defines the type of query.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_havMI73REeO2FLWuu_JIqg")]
     [DisplayName("Report Item Rejection Reason 1 Choice")]
-    public abstract record ReportItemRejectionReason1Choice_ { }
+    public abstract partial record ReportItemRejectionReason1Choice_ { }
 }

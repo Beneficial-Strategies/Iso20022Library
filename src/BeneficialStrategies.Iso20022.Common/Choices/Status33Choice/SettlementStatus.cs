@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status33Choice
     /// </summary>
     [IsoId("_waWGBSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Settlement Status")]
-    public record SettlementStatus : Status33Choice_
+    public partial record SettlementStatus : Status33Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("SttlmSts")]

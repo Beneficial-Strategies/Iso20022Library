@@ -12,10 +12,13 @@ public partial record Rate41 : IRate41
 {
     IRateAndAmountFormat59Choice? IRate41.AdditionalTax => AdditionalTax;
     IRateAndAmountFormat59Choice? IRate41.ChargesFees => ChargesFees;
-    IEnumerable<IGrossDividendRateFormat37Choice> IRate41.GrossDistributionRate => GrossDistributionRate;
-    ISolicitationFeeRateFormat12Choice? IRate41.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    IEnumerable<IGrossDividendRateFormat37Choice> IRate41.GrossDistributionRate =>
+        GrossDistributionRate;
+    ISolicitationFeeRateFormat12Choice? IRate41.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateAndAmountFormat59Choice? IRate41.ThirdPartyIncentiveRate => ThirdPartyIncentiveRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat12Choice> IRate41.GrossInterestRateUsedForPayment => GrossInterestRateUsedForPayment;
+    IEnumerable<IInterestRateUsedForPaymentFormat12Choice> IRate41.GrossInterestRateUsedForPayment =>
+        GrossInterestRateUsedForPayment;
     IEnumerable<INetDividendRateFormat40Choice> IRate41.NetDistributionRate => NetDistributionRate;
     ISolicitationFeeRateFormat12Choice? IRate41.SolicitationFeeRate => SolicitationFeeRate;
     IRateFormat27Choice? IRate41.TaxCreditRate => TaxCreditRate;

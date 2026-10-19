@@ -11,14 +11,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionRate25 : ICorporateActionRate25
 {
     IRateAndAmountFormat14Choice? ICorporateActionRate25.AdditionalTax => AdditionalTax;
-    IEnumerable<IGrossDividendRateFormat5Choice> ICorporateActionRate25.GrossDividendRate => GrossDividendRate;
-    IEnumerable<INetDividendRateFormat5Choice> ICorporateActionRate25.NetDividendRate => NetDividendRate;
+    IEnumerable<IGrossDividendRateFormat5Choice> ICorporateActionRate25.GrossDividendRate =>
+        GrossDividendRate;
+    IEnumerable<INetDividendRateFormat5Choice> ICorporateActionRate25.NetDividendRate =>
+        NetDividendRate;
     IRateAndAmountFormat14Choice? ICorporateActionRate25.IndexFactor => IndexFactor;
-    IEnumerable<IInterestRateUsedForPaymentFormat5Choice> ICorporateActionRate25.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IRateFormat6Choice? ICorporateActionRate25.MaximumAllowedOversubscriptionRate => MaximumAllowedOversubscriptionRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat5Choice> ICorporateActionRate25.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IRateFormat6Choice? ICorporateActionRate25.MaximumAllowedOversubscriptionRate =>
+        MaximumAllowedOversubscriptionRate;
     IRateFormat6Choice? ICorporateActionRate25.ProrationRate => ProrationRate;
     IRateFormat6Choice? ICorporateActionRate25.WithholdingTaxRate => WithholdingTaxRate;
-    IRateAndAmountFormat14Choice? ICorporateActionRate25.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate25.TaxRelatedRate => TaxRelatedRate;
-    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate25.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
+    IRateAndAmountFormat14Choice? ICorporateActionRate25.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate25.TaxRelatedRate =>
+        TaxRelatedRate;
+    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate25.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
 }

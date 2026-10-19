@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nC2q8ZdOEeWhUvuI1bSHSA")]
 [DisplayName("Vehicle")]
-public record Vehicle2
+public partial record Vehicle2
 {
     /// <summary>
     /// Type of information related to the vehicle.

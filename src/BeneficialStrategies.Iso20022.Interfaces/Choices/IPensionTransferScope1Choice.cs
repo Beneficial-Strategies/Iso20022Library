@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the scope of a pension transfer.
 /// </summary>
 [IsoId("_REBa0E4YEeiQHa-q1Uephw")]
-public interface IPensionTransferScope1Choice : IIsoChoice
-{
-}
+public interface IPensionTransferScope1Choice : IIsoChoice { }

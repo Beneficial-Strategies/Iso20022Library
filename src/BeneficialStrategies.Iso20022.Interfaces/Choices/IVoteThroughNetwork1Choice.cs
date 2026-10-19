@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between voting directly to issuers or voting via alternate network channels.
 /// </summary>
 [IsoId("_qNpVMDT7Ee2tRf29bleifQ")]
-public interface IVoteThroughNetwork1Choice : IIsoChoice
-{
-}
+public interface IVoteThroughNetwork1Choice : IIsoChoice { }

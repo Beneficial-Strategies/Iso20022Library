@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status43Choice
     /// <summary>Status expressed as an inferred matching status.</summary>
     [IsoId("b8b4b0f9-0bda-4676-84c5-fb4dc8ce97e4")]
     [DisplayName("Inferred Matching Status")]
-    public record InferredMatchingStatus : Status43Choice_
+    public partial record InferredMatchingStatus : Status43Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IfrrdMtchgSts")]

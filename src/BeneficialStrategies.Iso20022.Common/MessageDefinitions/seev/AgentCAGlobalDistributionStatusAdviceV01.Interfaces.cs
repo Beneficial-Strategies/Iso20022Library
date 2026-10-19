@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record AgentCAGlobalDistributionStatusAdviceV01 : IAgentCAGlobalDistributionStatusAdviceV01
+public partial record AgentCAGlobalDistributionStatusAdviceV01
+    : IAgentCAGlobalDistributionStatusAdviceV01
 {
-    IDocumentIdentification8 IAgentCAGlobalDistributionStatusAdviceV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCAGlobalDistributionStatusAdviceV01.AgentCAGlobalDistributionAuthorisationRequestIdentification => AgentCAGlobalDistributionAuthorisationRequestIdentification;
-    ICorporateActionInformation1 IAgentCAGlobalDistributionStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IGlobalDistributionStatus1 IAgentCAGlobalDistributionStatusAdviceV01.GlobalMovementStatus => GlobalMovementStatus;
-    IEnumerable<IIndividualMovementStatus1> IAgentCAGlobalDistributionStatusAdviceV01.IndividualMovementStatus => IndividualMovementStatus;
+    IDocumentIdentification8 IAgentCAGlobalDistributionStatusAdviceV01.Identification =>
+        Identification;
+    IDocumentIdentification8 IAgentCAGlobalDistributionStatusAdviceV01.AgentCAGlobalDistributionAuthorisationRequestIdentification =>
+        AgentCAGlobalDistributionAuthorisationRequestIdentification;
+    ICorporateActionInformation1 IAgentCAGlobalDistributionStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IGlobalDistributionStatus1 IAgentCAGlobalDistributionStatusAdviceV01.GlobalMovementStatus =>
+        GlobalMovementStatus;
+    IEnumerable<IIndividualMovementStatus1> IAgentCAGlobalDistributionStatusAdviceV01.IndividualMovementStatus =>
+        IndividualMovementStatus;
 }

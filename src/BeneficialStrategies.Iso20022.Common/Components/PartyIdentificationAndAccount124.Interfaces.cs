@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentificationAndAccount124 : IPartyIdentificationAndAccount124
 {
-    IPartyIdentification70Choice IPartyIdentificationAndAccount124.PartyIdentification => PartyIdentification;
+    IPartyIdentification70Choice IPartyIdentificationAndAccount124.PartyIdentification =>
+        PartyIdentification;
     IDateAndDateTimeChoice? IPartyIdentificationAndAccount124.ProcessingDate => ProcessingDate;
 }

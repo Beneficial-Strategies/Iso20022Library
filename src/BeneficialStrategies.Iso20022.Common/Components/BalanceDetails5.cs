@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m9_jw_NBEeCuA5Tr22BnwA_-1587495854")]
 [DisplayName("Balance Details")]
-public record BalanceDetails5
+public partial record BalanceDetails5
 {
     /// <summary>
     /// Balance type.

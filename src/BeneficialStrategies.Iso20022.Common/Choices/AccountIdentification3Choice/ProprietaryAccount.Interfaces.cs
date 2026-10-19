@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification3Choice;
 
-public partial record ProprietaryAccount : IProprietaryAccount
-{
-}
+public partial record ProprietaryAccount : IProprietaryAccount { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason or no reason for the corporate action instruction processing pending status.
 /// </summary>
 [IsoId("_Bsuk0UGVEeWqy4niLuXETA")]
-public interface IPendingStatus42Choice : IIsoChoice
-{
-}
+public interface IPendingStatus42Choice : IIsoChoice { }

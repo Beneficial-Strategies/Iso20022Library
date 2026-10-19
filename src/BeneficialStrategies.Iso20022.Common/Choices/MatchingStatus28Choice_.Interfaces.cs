@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record MatchingStatus28Choice_ : IMatchingStatus28Choice
-{
-}
+public abstract partial record MatchingStatus28Choice_ : IMatchingStatus28Choice { }

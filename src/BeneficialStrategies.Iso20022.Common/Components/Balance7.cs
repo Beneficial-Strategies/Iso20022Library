@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PCn6QTnGEeWV5sr121Fc8A")]
 [DisplayName("Balance")]
-public record Balance7
+public partial record Balance7
 {
     /// <summary>
     /// Indication that the position is short or long.

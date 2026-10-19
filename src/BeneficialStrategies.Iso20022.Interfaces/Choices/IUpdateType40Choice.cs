@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between addition, deletion, or modification of securities settlement transaction details.</summary>
 [IsoId("_Y5QzEZaMEfC2_67yGLymgA")]
-public interface IUpdateType40Choice : IIsoChoice
-{
-}
+public interface IUpdateType40Choice : IIsoChoice { }

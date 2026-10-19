@@ -10,14 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption26 : ISecuritiesOption26
 {
-    ISecurityIdentification14 ISecuritiesOption26.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    ITemporaryFinancialInstrumentIndicator1Choice? ISecuritiesOption26.TemporaryFinancialInstrumentIndicator => TemporaryFinancialInstrumentIndicator;
+    ISecurityIdentification14 ISecuritiesOption26.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    ITemporaryFinancialInstrumentIndicator1Choice? ISecuritiesOption26.TemporaryFinancialInstrumentIndicator =>
+        TemporaryFinancialInstrumentIndicator;
     IQuantity6Choice ISecuritiesOption26.PostingQuantity => PostingQuantity;
     ISafekeepingPlaceFormat3Choice? ISecuritiesOption26.SafekeepingPlace => SafekeepingPlace;
     IFractionDispositionType4Choice? ISecuritiesOption26.FractionDisposition => FractionDisposition;
     ISecurityDate6 ISecuritiesOption26.DateDetails => DateDetails;
     ICorporateActionRate29? ISecuritiesOption26.RateDetails => RateDetails;
     ICorporateActionPrice27? ISecuritiesOption26.PriceDetails => PriceDetails;
-    ISettlementParties24? ISecuritiesOption26.ReceivingSettlementParties => ReceivingSettlementParties;
-    ISettlementParties24? ISecuritiesOption26.DeliveringSettlementParties => DeliveringSettlementParties;
+    ISettlementParties24? ISecuritiesOption26.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ISettlementParties24? ISecuritiesOption26.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
 }

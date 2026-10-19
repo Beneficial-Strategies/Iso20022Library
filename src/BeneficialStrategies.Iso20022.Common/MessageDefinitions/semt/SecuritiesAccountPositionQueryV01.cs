@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_OieywQJ3EfGAP_FOfstLIw")]
 [DisplayName("Securities Account Position Query V01")]
-public record SecuritiesAccountPositionQueryV01 : IOuterRecord
+public partial record SecuritiesAccountPositionQueryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

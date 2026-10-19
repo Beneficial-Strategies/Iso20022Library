@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T_rQYZ9nEe-nbM0aSPcoiQ")]
 [DisplayName("TMS Action Identification10")]
-public record TMSActionIdentification10
+public partial record TMSActionIdentification10
 {
     /// <summary>
     /// Action Type.

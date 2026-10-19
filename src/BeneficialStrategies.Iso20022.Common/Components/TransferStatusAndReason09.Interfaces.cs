@@ -12,20 +12,24 @@ public partial record TransferStatusAndReason09 : ITransferStatusAndReason09
 {
     IAdditionalReference10 ITransferStatusAndReason09.TransferReference => TransferReference;
     IAdditionalReference10? ITransferStatusAndReason09.ClientReference => ClientReference;
-    IEnumerable<ITransferStatusType3Choice> ITransferStatusAndReason09.TransferEventType => TransferEventType;
+    IEnumerable<ITransferStatusType3Choice> ITransferStatusAndReason09.TransferEventType =>
+        TransferEventType;
     ITransferStatus5Choice ITransferStatusAndReason09.TransferStatus => TransferStatus;
     IFinancialInstrument101Choice? ITransferStatusAndReason09.Instrument => Instrument;
     IAccount36? ITransferStatusAndReason09.InvestmentAccountDetails => InvestmentAccountDetails;
-    IEnumerable<IIntermediary48> ITransferStatusAndReason09.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary48> ITransferStatusAndReason09.IntermediaryInformation =>
+        IntermediaryInformation;
     IEnumerable<IUnit14> ITransferStatusAndReason09.UnitsDetails => UnitsDetails;
     IConversion4? ITransferStatusAndReason09.Conversion => Conversion;
     IEnumerable<IPaymentInstrument23> ITransferStatusAndReason09.PaymentDetails => PaymentDetails;
-    IEnumerable<IBenefitCrystallisationEvent2> ITransferStatusAndReason09.BenefitCrystallisationEvent => BenefitCrystallisationEvent;
+    IEnumerable<IBenefitCrystallisationEvent2> ITransferStatusAndReason09.BenefitCrystallisationEvent =>
+        BenefitCrystallisationEvent;
     IEnumerable<IDrawdown04> ITransferStatusAndReason09.DrawdownTranche => DrawdownTranche;
     IDrawdown3? ITransferStatusAndReason09.OtherDrawdownInformation => OtherDrawdownInformation;
     IEnumerable<Max350Text> ITransferStatusAndReason09.QueryResponse => QueryResponse;
     IPartyIdentification139? ITransferStatusAndReason09.StatusInitiator => StatusInitiator;
     IPartyIdentification139? ITransferStatusAndReason09.StatusIssuer => StatusIssuer;
     IPartyIdentification139? ITransferStatusAndReason09.StatusRecipient => StatusRecipient;
-    IEnumerable<IAdditionalInformation15> ITransferStatusAndReason09.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> ITransferStatusAndReason09.AdditionalInformation =>
+        AdditionalInformation;
 }

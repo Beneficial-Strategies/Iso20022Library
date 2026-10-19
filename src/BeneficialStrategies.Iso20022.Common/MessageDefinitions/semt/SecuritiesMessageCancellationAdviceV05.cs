@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_XVkhfwCUEeW_3KiG8SEjHA")]
 [DisplayName("Securities Message Cancellation Advice V")]
-public record SecuritiesMessageCancellationAdviceV05 : IOuterRecord
+public partial record SecuritiesMessageCancellationAdviceV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

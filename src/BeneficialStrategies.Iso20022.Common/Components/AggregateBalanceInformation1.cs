@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VK_cO9p-Ed-ak6NoX_4Aeg_1813959824")]
 [DisplayName("Aggregate Balance Information")]
-public record AggregateBalanceInformation1
+public partial record AggregateBalanceInformation1
 {
     /// <summary>
     /// Total quantity of financial instrument for the referenced holding.

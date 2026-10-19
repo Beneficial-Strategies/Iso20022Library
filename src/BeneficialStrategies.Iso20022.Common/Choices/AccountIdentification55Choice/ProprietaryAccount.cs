@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification55Choice
     [IsoId("_e6Hl9watEe2phaVG0lYKTw")]
     [DisplayName("Proprietary Account")]
     [IsoXmlTag("PrtryAcct")]
-    public record ProprietaryAccount : AccountIdentification55Choice_
+    public partial record ProprietaryAccount : AccountIdentification55Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.

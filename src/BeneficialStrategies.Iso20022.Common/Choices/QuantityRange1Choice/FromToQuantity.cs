@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityRange1Choice
     /// <summary>Specifies the from to quantity range.</summary>
     [IsoId("_jtRfEu5NEeCisYr99QEiWA_-1639886527")]
     [DisplayName("From To Quantity")]
-    public record FromToQuantity : QuantityRange1Choice_
+    public partial record FromToQuantity : QuantityRange1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FrToQty")]

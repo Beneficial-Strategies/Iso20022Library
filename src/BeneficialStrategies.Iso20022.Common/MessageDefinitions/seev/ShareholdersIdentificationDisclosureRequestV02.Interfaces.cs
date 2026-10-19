@@ -8,14 +8,22 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record ShareholdersIdentificationDisclosureRequestV02 : IShareholdersIdentificationDisclosureRequestV02
+public partial record ShareholdersIdentificationDisclosureRequestV02
+    : IShareholdersIdentificationDisclosureRequestV02
 {
-    ISecurityIdentification19 IShareholdersIdentificationDisclosureRequestV02.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IDateFormat46Choice IShareholdersIdentificationDisclosureRequestV02.ShareholdersDisclosureRecordDate => ShareholdersDisclosureRecordDate;
-    IRequestShareHeldDate1Choice? IShareholdersIdentificationDisclosureRequestV02.RequestShareHeldDate => RequestShareHeldDate;
-    IPartyIdentification214 IShareholdersIdentificationDisclosureRequestV02.DisclosureResponseRecipient => DisclosureResponseRecipient;
-    IDateFormat46Choice IShareholdersIdentificationDisclosureRequestV02.IssuerDisclosureDeadline => IssuerDisclosureDeadline;
-    IDateFormat46Choice? IShareholdersIdentificationDisclosureRequestV02.DisclosureResponseDeadline => DisclosureResponseDeadline;
+    ISecurityIdentification19 IShareholdersIdentificationDisclosureRequestV02.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IDateFormat46Choice IShareholdersIdentificationDisclosureRequestV02.ShareholdersDisclosureRecordDate =>
+        ShareholdersDisclosureRecordDate;
+    IRequestShareHeldDate1Choice? IShareholdersIdentificationDisclosureRequestV02.RequestShareHeldDate =>
+        RequestShareHeldDate;
+    IPartyIdentification214 IShareholdersIdentificationDisclosureRequestV02.DisclosureResponseRecipient =>
+        DisclosureResponseRecipient;
+    IDateFormat46Choice IShareholdersIdentificationDisclosureRequestV02.IssuerDisclosureDeadline =>
+        IssuerDisclosureDeadline;
+    IDateFormat46Choice? IShareholdersIdentificationDisclosureRequestV02.DisclosureResponseDeadline =>
+        DisclosureResponseDeadline;
     IPartyIdentification129Choice? IShareholdersIdentificationDisclosureRequestV02.Issuer => Issuer;
-    IEnumerable<ISupplementaryData1> IShareholdersIdentificationDisclosureRequestV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IShareholdersIdentificationDisclosureRequestV02.SupplementaryData =>
+        SupplementaryData;
 }

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason21Choice
     /// <summary>Specifies the repair reason.</summary>
     [IsoId("f18cb7f0-7ca3-469f-a99f-f26ad2e3aefa")]
     [DisplayName("Repair Reason")]
-    public record RepairReason : Reason21Choice_
+    public partial record RepairReason : Reason21Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RprRsn")]

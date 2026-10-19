@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References50Choice;
 /// Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).
 /// </summary>
 [IsoId("_5Pat35NLEeWGlc8L7oPDIg")]
-public interface ISecuritiesSettlementTransactionIdentification : IReferences50Choice, IIsoChoiceVariant
+public interface ISecuritiesSettlementTransactionIdentification
+    : IReferences50Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

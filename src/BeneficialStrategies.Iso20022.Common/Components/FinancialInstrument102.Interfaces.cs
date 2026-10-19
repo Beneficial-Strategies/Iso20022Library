@@ -20,10 +20,14 @@ public partial record FinancialInstrument102 : IFinancialInstrument102
     IDateAndAmount2? IFinancialInstrument102.TotalBookValue => TotalBookValue;
     IAccount28? IFinancialInstrument102.TransfereeAccount => TransfereeAccount;
     IAccount28? IFinancialInstrument102.Transferor => Transferor;
-    IEnumerable<IIntermediary43> IFinancialInstrument102.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary43> IFinancialInstrument102.IntermediaryInformation =>
+        IntermediaryInformation;
     IPaymentInstrument14? IFinancialInstrument102.PaymentDetails => PaymentDetails;
-    IEnumerable<ICrystallisation2> IFinancialInstrument102.CrystallisationDetails => CrystallisationDetails;
+    IEnumerable<ICrystallisation2> IFinancialInstrument102.CrystallisationDetails =>
+        CrystallisationDetails;
     ITax36? IFinancialInstrument102.TaxValuationPoint => TaxValuationPoint;
-    IFundSettlementParameters17? IFinancialInstrument102.SettlementPartiesDetails => SettlementPartiesDetails;
-    IEnumerable<IAdditionalInformation15> IFinancialInstrument102.AdditionalInformation => AdditionalInformation;
+    IFundSettlementParameters17? IFinancialInstrument102.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
+    IEnumerable<IAdditionalInformation15> IFinancialInstrument102.AdditionalInformation =>
+        AdditionalInformation;
 }

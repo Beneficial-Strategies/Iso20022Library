@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InvestmentAccount11 : IInvestmentAccount11
 {
-    IEnumerable<IPartyIdentification1Choice> IInvestmentAccount11.OwnerIdentification => OwnerIdentification;
+    IEnumerable<IPartyIdentification1Choice> IInvestmentAccount11.OwnerIdentification =>
+        OwnerIdentification;
     IAccountIdentification1 IInvestmentAccount11.AccountIdentification => AccountIdentification;
-    IEnumerable<IIntermediary1> IInvestmentAccount11.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary1> IInvestmentAccount11.IntermediaryInformation =>
+        IntermediaryInformation;
     IPartyIdentification1Choice? IInvestmentAccount11.AccountServicer => AccountServicer;
 }

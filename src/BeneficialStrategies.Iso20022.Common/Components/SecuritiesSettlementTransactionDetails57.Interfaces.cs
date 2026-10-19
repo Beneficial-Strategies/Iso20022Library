@@ -8,22 +8,36 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesSettlementTransactionDetails57 : ISecuritiesSettlementTransactionDetails57
+public partial record SecuritiesSettlementTransactionDetails57
+    : ISecuritiesSettlementTransactionDetails57
 {
-    ISettlementTypeAndAdditionalParameters14? ISecuritiesSettlementTransactionDetails57.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters14? ISecuritiesSettlementTransactionDetails57.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages63> ISecuritiesSettlementTransactionDetails57.Linkages => Linkages;
-    ISecuritiesTradeDetails147? ISecuritiesSettlementTransactionDetails57.TradeDetails => TradeDetails;
-    ISecurityIdentification19? ISecuritiesSettlementTransactionDetails57.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes111? ISecuritiesSettlementTransactionDetails57.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IQuantityAndAccount113? ISecuritiesSettlementTransactionDetails57.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISettlementDetails218? ISecuritiesSettlementTransactionDetails57.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction20? ISecuritiesSettlementTransactionDetails57.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
-    ISettlementParties126? ISecuritiesSettlementTransactionDetails57.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties126? ISecuritiesSettlementTransactionDetails57.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISecuritiesTradeDetails147? ISecuritiesSettlementTransactionDetails57.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification19? ISecuritiesSettlementTransactionDetails57.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes111? ISecuritiesSettlementTransactionDetails57.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IQuantityAndAccount113? ISecuritiesSettlementTransactionDetails57.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISettlementDetails218? ISecuritiesSettlementTransactionDetails57.SettlementParameters =>
+        SettlementParameters;
+    IStandingSettlementInstruction20? ISecuritiesSettlementTransactionDetails57.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
+    ISettlementParties126? ISecuritiesSettlementTransactionDetails57.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties126? ISecuritiesSettlementTransactionDetails57.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     ICashParties41? ISecuritiesSettlementTransactionDetails57.CashParties => CashParties;
-    IAmountAndDirection95? ISecuritiesSettlementTransactionDetails57.SettlementAmount => SettlementAmount;
+    IAmountAndDirection95? ISecuritiesSettlementTransactionDetails57.SettlementAmount =>
+        SettlementAmount;
     IOtherAmounts39? ISecuritiesSettlementTransactionDetails57.OtherAmounts => OtherAmounts;
-    IOtherParties43? ISecuritiesSettlementTransactionDetails57.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters6? ISecuritiesSettlementTransactionDetails57.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionDetails57.SupplementaryData => SupplementaryData;
+    IOtherParties43? ISecuritiesSettlementTransactionDetails57.OtherBusinessParties =>
+        OtherBusinessParties;
+    IRegistrationParameters6? ISecuritiesSettlementTransactionDetails57.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionDetails57.SupplementaryData =>
+        SupplementaryData;
 }

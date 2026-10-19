@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(References83Choice.CommonIdentification))]
     [JsonDerivedType(typeof(References83Choice.TradeIdentification))]
     [JsonDerivedType(typeof(References83Choice.CorporateActionEventIdentification))]
-    public abstract record References83Choice_
+    public abstract partial record References83Choice_
     {
     }
 }

@@ -10,21 +10,32 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record SecuritiesFinancingInstructionV02 : ISecuritiesFinancingInstructionV02
 {
-    ITransactionTypeAndAdditionalParameters1 ISecuritiesFinancingInstructionV02.TransactionTypeAndAdditionalParameters => TransactionTypeAndAdditionalParameters;
+    ITransactionTypeAndAdditionalParameters1 ISecuritiesFinancingInstructionV02.TransactionTypeAndAdditionalParameters =>
+        TransactionTypeAndAdditionalParameters;
     INumberCount1Choice? ISecuritiesFinancingInstructionV02.NumberCounts => NumberCounts;
     IEnumerable<ILinkages9> ISecuritiesFinancingInstructionV02.Linkages => Linkages;
     ISecuritiesTradeDetails3 ISecuritiesFinancingInstructionV02.TradeDetails => TradeDetails;
-    ISecurityIdentification14 ISecuritiesFinancingInstructionV02.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes20? ISecuritiesFinancingInstructionV02.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IQuantityAndAccount17 ISecuritiesFinancingInstructionV02.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISecuritiesFinancingTransactionDetails1 ISecuritiesFinancingInstructionV02.SecuritiesFinancingDetails => SecuritiesFinancingDetails;
-    ISettlementDetails31? ISecuritiesFinancingInstructionV02.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction3? ISecuritiesFinancingInstructionV02.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
-    ISettlementParties10? ISecuritiesFinancingInstructionV02.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties10? ISecuritiesFinancingInstructionV02.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISecurityIdentification14 ISecuritiesFinancingInstructionV02.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes20? ISecuritiesFinancingInstructionV02.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IQuantityAndAccount17 ISecuritiesFinancingInstructionV02.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISecuritiesFinancingTransactionDetails1 ISecuritiesFinancingInstructionV02.SecuritiesFinancingDetails =>
+        SecuritiesFinancingDetails;
+    ISettlementDetails31? ISecuritiesFinancingInstructionV02.SettlementParameters =>
+        SettlementParameters;
+    IStandingSettlementInstruction3? ISecuritiesFinancingInstructionV02.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
+    ISettlementParties10? ISecuritiesFinancingInstructionV02.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties10? ISecuritiesFinancingInstructionV02.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     ICashParties7? ISecuritiesFinancingInstructionV02.CashParties => CashParties;
-    IAmountAndDirection2? ISecuritiesFinancingInstructionV02.OpeningSettlementAmount => OpeningSettlementAmount;
+    IAmountAndDirection2? ISecuritiesFinancingInstructionV02.OpeningSettlementAmount =>
+        OpeningSettlementAmount;
     IOtherAmounts3? ISecuritiesFinancingInstructionV02.OtherAmounts => OtherAmounts;
     IOtherParties9? ISecuritiesFinancingInstructionV02.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingInstructionV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingInstructionV02.SupplementaryData =>
+        SupplementaryData;
 }

@@ -10,25 +10,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails161 : ITransactionDetails161
 {
-    IEnumerable<RestrictedFINXMax52Text> ITransactionDetails161.TradeIdentification => TradeIdentification;
+    IEnumerable<RestrictedFINXMax52Text> ITransactionDetails161.TradeIdentification =>
+        TradeIdentification;
     IPartyIdentification156? ITransactionDetails161.AccountOwner => AccountOwner;
     ISecuritiesAccount30? ITransactionDetails161.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? ITransactionDetails161.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IBlockChainAddressWallet7? ITransactionDetails161.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     ISafeKeepingPlace4? ITransactionDetails161.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfTradeIdentification2? ITransactionDetails161.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ITransactionDetails161.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification20 ITransactionDetails161.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification20 ITransactionDetails161.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity54Choice ITransactionDetails161.SettlementQuantity => SettlementQuantity;
-    IQuantity54Choice? ITransactionDetails161.PartiallyReleasedQuantity => PartiallyReleasedQuantity;
+    IQuantity54Choice? ITransactionDetails161.PartiallyReleasedQuantity =>
+        PartiallyReleasedQuantity;
     IAmountAndDirection67? ITransactionDetails161.SettlementAmount => SettlementAmount;
     IDateAndDateTime2Choice? ITransactionDetails161.LateDeliveryDate => LateDeliveryDate;
-    IDateAndDateTime2Choice? ITransactionDetails161.ExpectedSettlementDate => ExpectedSettlementDate;
+    IDateAndDateTime2Choice? ITransactionDetails161.ExpectedSettlementDate =>
+        ExpectedSettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails161.ExpectedValueDate => ExpectedValueDate;
     ISettlementDate32Choice ITransactionDetails161.SettlementDate => SettlementDate;
     ITradeDate9Choice? ITransactionDetails161.TradeDate => TradeDate;
     ISettlementDetails210 ITransactionDetails161.SettlementParameters => SettlementParameters;
-    ISettlementParties109? ITransactionDetails161.ReceivingSettlementParties => ReceivingSettlementParties;
-    ISettlementParties109? ITransactionDetails161.DeliveringSettlementParties => DeliveringSettlementParties;
+    ISettlementParties109? ITransactionDetails161.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ISettlementParties109? ITransactionDetails161.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
     IPartyIdentification170? ITransactionDetails161.Investor => Investor;
-    IPartyIdentification157? ITransactionDetails161.QualifiedForeignIntermediary => QualifiedForeignIntermediary;
+    IPartyIdentification157? ITransactionDetails161.QualifiedForeignIntermediary =>
+        QualifiedForeignIntermediary;
 }

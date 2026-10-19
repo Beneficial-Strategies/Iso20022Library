@@ -8,25 +8,45 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionGenerationNotificationV13 : ISecuritiesSettlementTransactionGenerationNotificationV13
+public partial record SecuritiesSettlementTransactionGenerationNotificationV13
+    : ISecuritiesSettlementTransactionGenerationNotificationV13
 {
-    ISettlementTypeAndIdentification29 ISecuritiesSettlementTransactionGenerationNotificationV13.TransactionIdentificationDetails => TransactionIdentificationDetails;
-    INumberCount2Choice? ISecuritiesSettlementTransactionGenerationNotificationV13.NumberCounts => NumberCounts;
-    IEnumerable<ILinkages81> ISecuritiesSettlementTransactionGenerationNotificationV13.Linkages => Linkages;
-    ISecuritiesTradeDetails153 ISecuritiesSettlementTransactionGenerationNotificationV13.TradeDetails => TradeDetails;
-    ISecurityIdentification19 ISecuritiesSettlementTransactionGenerationNotificationV13.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes111? ISecuritiesSettlementTransactionGenerationNotificationV13.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IEnumerable<IQuantityAndAccount117> ISecuritiesSettlementTransactionGenerationNotificationV13.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISettlementDetails225 ISecuritiesSettlementTransactionGenerationNotificationV13.SettlementParameters => SettlementParameters;
-    ISettlementParties126? ISecuritiesSettlementTransactionGenerationNotificationV13.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties126? ISecuritiesSettlementTransactionGenerationNotificationV13.ReceivingSettlementParties => ReceivingSettlementParties;
-    ICashParties41? ISecuritiesSettlementTransactionGenerationNotificationV13.CashParties => CashParties;
-    IAmountAndDirection94? ISecuritiesSettlementTransactionGenerationNotificationV13.SettlementAmount => SettlementAmount;
-    IOtherAmounts45? ISecuritiesSettlementTransactionGenerationNotificationV13.OtherAmounts => OtherAmounts;
-    IEnumerable<IDigitalPaymentSettlement1> ISecuritiesSettlementTransactionGenerationNotificationV13.DigitalPaymentSettlement => DigitalPaymentSettlement;
-    IOtherParties43? ISecuritiesSettlementTransactionGenerationNotificationV13.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters6? ISecuritiesSettlementTransactionGenerationNotificationV13.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
-    IEnumerable<IGeneratedReason5> ISecuritiesSettlementTransactionGenerationNotificationV13.GeneratedReason => GeneratedReason;
-    IStatusAndReason50? ISecuritiesSettlementTransactionGenerationNotificationV13.StatusAndReason => StatusAndReason;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionGenerationNotificationV13.SupplementaryData => SupplementaryData;
+    ISettlementTypeAndIdentification29 ISecuritiesSettlementTransactionGenerationNotificationV13.TransactionIdentificationDetails =>
+        TransactionIdentificationDetails;
+    INumberCount2Choice? ISecuritiesSettlementTransactionGenerationNotificationV13.NumberCounts =>
+        NumberCounts;
+    IEnumerable<ILinkages81> ISecuritiesSettlementTransactionGenerationNotificationV13.Linkages =>
+        Linkages;
+    ISecuritiesTradeDetails153 ISecuritiesSettlementTransactionGenerationNotificationV13.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification19 ISecuritiesSettlementTransactionGenerationNotificationV13.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes111? ISecuritiesSettlementTransactionGenerationNotificationV13.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IEnumerable<IQuantityAndAccount117> ISecuritiesSettlementTransactionGenerationNotificationV13.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISettlementDetails225 ISecuritiesSettlementTransactionGenerationNotificationV13.SettlementParameters =>
+        SettlementParameters;
+    ISettlementParties126? ISecuritiesSettlementTransactionGenerationNotificationV13.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties126? ISecuritiesSettlementTransactionGenerationNotificationV13.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ICashParties41? ISecuritiesSettlementTransactionGenerationNotificationV13.CashParties =>
+        CashParties;
+    IAmountAndDirection94? ISecuritiesSettlementTransactionGenerationNotificationV13.SettlementAmount =>
+        SettlementAmount;
+    IOtherAmounts45? ISecuritiesSettlementTransactionGenerationNotificationV13.OtherAmounts =>
+        OtherAmounts;
+    IEnumerable<IDigitalPaymentSettlement1> ISecuritiesSettlementTransactionGenerationNotificationV13.DigitalPaymentSettlement =>
+        DigitalPaymentSettlement;
+    IOtherParties43? ISecuritiesSettlementTransactionGenerationNotificationV13.OtherBusinessParties =>
+        OtherBusinessParties;
+    IRegistrationParameters6? ISecuritiesSettlementTransactionGenerationNotificationV13.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
+    IEnumerable<IGeneratedReason5> ISecuritiesSettlementTransactionGenerationNotificationV13.GeneratedReason =>
+        GeneratedReason;
+    IStatusAndReason50? ISecuritiesSettlementTransactionGenerationNotificationV13.StatusAndReason =>
+        StatusAndReason;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionGenerationNotificationV13.SupplementaryData =>
+        SupplementaryData;
 }

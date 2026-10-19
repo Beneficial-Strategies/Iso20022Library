@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zHJIAag1EfCXwLUUylXgrQ")]
 [DisplayName("Aggregate Balance Information47")]
-public record AggregateBalanceInformation47
+public partial record AggregateBalanceInformation47
 {
     /// <summary>
     /// Specifies the date of the balance position.

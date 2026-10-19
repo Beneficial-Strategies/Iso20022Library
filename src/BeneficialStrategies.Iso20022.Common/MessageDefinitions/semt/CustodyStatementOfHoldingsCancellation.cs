@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_MXYVe9FSEd-BzquC8wXy7w_1108713826")]
 [DisplayName("Custody Statement Of Holdings Cancellation")]
-public record CustodyStatementOfHoldingsCancellation : IOuterRecord
+public partial record CustodyStatementOfHoldingsCancellation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

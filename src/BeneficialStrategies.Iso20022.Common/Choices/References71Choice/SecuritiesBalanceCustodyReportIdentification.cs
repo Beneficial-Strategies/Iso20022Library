@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References71Choice
     /// </summary>
     [IsoId("_KDxvuyAaEeu4a6pNulzZ4Q")]
     [DisplayName("Securities Balance Custody Report Identification")]
-    public record SecuritiesBalanceCustodyReportIdentification : References71Choice_
+    public partial record SecuritiesBalanceCustodyReportIdentification : References71Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

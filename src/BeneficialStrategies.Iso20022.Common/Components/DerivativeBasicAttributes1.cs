@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UAL18Np-Ed-ak6NoX_4Aeg_-764187089")]
 [DisplayName("Derivative Basic Attributes")]
-public record DerivativeBasicAttributes1
+public partial record DerivativeBasicAttributes1
 {
     /// <summary>
     /// Amount underlying a financial derivatives contract necessary for calculating payments or receipts.

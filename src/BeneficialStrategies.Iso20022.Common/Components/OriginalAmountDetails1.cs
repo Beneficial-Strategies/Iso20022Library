@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H_Dk4K_TEeaepNKtQMrGAQ")]
 [DisplayName("Original Amount Details")]
-public record OriginalAmountDetails1
+public partial record OriginalAmountDetails1
 {
     /// <summary>
     /// Actual amount to be converted.

@@ -12,6 +12,7 @@ public partial record ReceiveInformation2 : IReceiveInformation2
 {
     IEnumerable<ICharge4> IReceiveInformation2.ChargeDetails => ChargeDetails;
     IEnumerable<ITax3> IReceiveInformation2.TaxDetails => TaxDetails;
-    IReceivingPartiesAndAccount1 IReceiveInformation2.SettlementPartiesDetails => SettlementPartiesDetails;
+    IReceivingPartiesAndAccount1 IReceiveInformation2.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters2? IReceiveInformation2.PhysicalTransferDetails => PhysicalTransferDetails;
 }

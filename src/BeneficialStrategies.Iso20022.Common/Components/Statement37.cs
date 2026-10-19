@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JbLJ45rhEeOu4p9bQU8tNA")]
 [DisplayName("Statement")]
-public record Statement37
+public partial record Statement37
 {
     /// <summary>
     /// Sequential number of the report.

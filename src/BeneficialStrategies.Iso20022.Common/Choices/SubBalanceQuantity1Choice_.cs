@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QYn5aNp-Ed-ak6NoX_4Aeg_-1945125702")]
     [DisplayName("Sub Balance Quantity 1 Choice")]
-    public abstract record SubBalanceQuantity1Choice_ { }
+    public abstract partial record SubBalanceQuantity1Choice_ { }
 }

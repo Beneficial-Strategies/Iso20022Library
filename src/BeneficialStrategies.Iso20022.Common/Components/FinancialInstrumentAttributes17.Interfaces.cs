@@ -10,14 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes17 : IFinancialInstrumentAttributes17
 {
-    ISecurityIdentification14 IFinancialInstrumentAttributes17.SecurityIdentification => SecurityIdentification;
-    IRenounceableEntitlementStatusTypeFormat1Choice? IFinancialInstrumentAttributes17.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
-    IFractionDispositionType9Choice? IFinancialInstrumentAttributes17.FractionDisposition => FractionDisposition;
-    IQuantityToQuantityRatio1? IFinancialInstrumentAttributes17.IntermediateSecuritiesToUnderlyingRatio => IntermediateSecuritiesToUnderlyingRatio;
+    ISecurityIdentification14 IFinancialInstrumentAttributes17.SecurityIdentification =>
+        SecurityIdentification;
+    IRenounceableEntitlementStatusTypeFormat1Choice? IFinancialInstrumentAttributes17.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
+    IFractionDispositionType9Choice? IFinancialInstrumentAttributes17.FractionDisposition =>
+        FractionDisposition;
+    IQuantityToQuantityRatio1? IFinancialInstrumentAttributes17.IntermediateSecuritiesToUnderlyingRatio =>
+        IntermediateSecuritiesToUnderlyingRatio;
     IAmountPrice2? IFinancialInstrumentAttributes17.MarketPrice => MarketPrice;
     IDateFormat16Choice IFinancialInstrumentAttributes17.ExpiryDate => ExpiryDate;
     IDateFormat16Choice IFinancialInstrumentAttributes17.PostingDate => PostingDate;
     IPeriod4? IFinancialInstrumentAttributes17.TradingPeriod => TradingPeriod;
-    IBalanceFormat1Choice? IFinancialInstrumentAttributes17.UninstructedBalance => UninstructedBalance;
+    IBalanceFormat1Choice? IFinancialInstrumentAttributes17.UninstructedBalance =>
+        UninstructedBalance;
     IBalanceFormat1Choice? IFinancialInstrumentAttributes17.InstructedBalance => InstructedBalance;
 }

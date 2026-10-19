@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References18Choice
     [IsoId("_9EijVT9mEeCuVfEpWlZb5g")]
     [DisplayName("Securities Financing Confirmation Identification")]
     [IsoXmlTag("SctiesFincgConfId")]
-    public record SecuritiesFinancingConfirmationIdentification : References18Choice_
+    public partial record SecuritiesFinancingConfirmationIdentification : References18Choice_
     {
         /// <summary>
         /// Provides unambiguous transaction identification information.

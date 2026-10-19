@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dY9X8NxGEeioifFt1dhnJA")]
 [DisplayName("Captured Signature")]
-public record CapturedSignature1
+public partial record CapturedSignature1
 {
     /// <summary>
     /// Format of the image.

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ContactPerson1 : IContactPerson1
 {
     IContactIdentification4 IContactPerson1.ContactPerson => ContactPerson;
-    IPartyIdentification2Choice? IContactPerson1.InstitutionIdentification => InstitutionIdentification;
+    IPartyIdentification2Choice? IContactPerson1.InstitutionIdentification =>
+        InstitutionIdentification;
 }

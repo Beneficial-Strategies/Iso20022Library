@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionType2Choice;
 
-public partial record InstructionIdentification : IInstructionIdentification
-{
-}
+public partial record InstructionIdentification : IInstructionIdentification { }

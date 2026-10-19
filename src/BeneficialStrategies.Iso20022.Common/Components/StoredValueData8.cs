@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YKJAUZ9UEe-nbM0aSPcoiQ")]
 [DisplayName("Stored Value Data8")]
-public record StoredValueData8
+public partial record StoredValueData8
 {
     /// <summary>
     /// Provider.

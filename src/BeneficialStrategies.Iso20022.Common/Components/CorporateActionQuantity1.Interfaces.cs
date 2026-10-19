@@ -10,12 +10,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionQuantity1 : ICorporateActionQuantity1
 {
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.MinimumExercisableQuantity => MinimumExercisableQuantity;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.MinimumExercisableMultipleQuantity => MinimumExercisableMultipleQuantity;
-    IFinancialInstrumentQuantity2Choice? ICorporateActionQuantity1.MaximumQuantity => MaximumQuantity;
-    IFinancialInstrumentQuantity2Choice? ICorporateActionQuantity1.MinimumQuantitySought => MinimumQuantitySought;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.NewBoardLotQuantity => NewBoardLotQuantity;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.NewDenominationQuantity => NewDenominationQuantity;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.BaseDenomination => BaseDenomination;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.IncrementalDenomination => IncrementalDenomination;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.MinimumExercisableQuantity =>
+        MinimumExercisableQuantity;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.MinimumExercisableMultipleQuantity =>
+        MinimumExercisableMultipleQuantity;
+    IFinancialInstrumentQuantity2Choice? ICorporateActionQuantity1.MaximumQuantity =>
+        MaximumQuantity;
+    IFinancialInstrumentQuantity2Choice? ICorporateActionQuantity1.MinimumQuantitySought =>
+        MinimumQuantitySought;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.NewBoardLotQuantity =>
+        NewBoardLotQuantity;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.NewDenominationQuantity =>
+        NewDenominationQuantity;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.BaseDenomination =>
+        BaseDenomination;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity1.IncrementalDenomination =>
+        IncrementalDenomination;
 }

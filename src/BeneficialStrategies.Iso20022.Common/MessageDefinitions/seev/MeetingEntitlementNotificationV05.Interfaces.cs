@@ -14,5 +14,6 @@ public partial record MeetingEntitlementNotificationV05 : IMeetingEntitlementNot
     IMeetingReference7 IMeetingEntitlementNotificationV05.MeetingReference => MeetingReference;
     IEnumerable<ISecurityPosition9> IMeetingEntitlementNotificationV05.Security => Security;
     IEligibilityDates1 IMeetingEntitlementNotificationV05.Eligibility => Eligibility;
-    IEnumerable<ISupplementaryData1> IMeetingEntitlementNotificationV05.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IMeetingEntitlementNotificationV05.SupplementaryData =>
+        SupplementaryData;
 }

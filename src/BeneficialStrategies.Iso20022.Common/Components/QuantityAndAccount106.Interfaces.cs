@@ -10,10 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record QuantityAndAccount106 : IQuantityAndAccount106
 {
-    IFinancialInstrumentQuantity36Choice IQuantityAndAccount106.SettlementQuantity => SettlementQuantity;
+    IFinancialInstrumentQuantity36Choice IQuantityAndAccount106.SettlementQuantity =>
+        SettlementQuantity;
     IPartyIdentification156? IQuantityAndAccount106.AccountOwner => AccountOwner;
     ISecuritiesAccount30? IQuantityAndAccount106.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? IQuantityAndAccount106.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IBlockChainAddressWallet7? IQuantityAndAccount106.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     ICashAccountIdentification6Choice? IQuantityAndAccount106.CashAccount => CashAccount;
     IEnumerable<IQuantityBreakdown69> IQuantityAndAccount106.QuantityBreakdown => QuantityBreakdown;
     ISafeKeepingPlace4? IQuantityAndAccount106.SafekeepingPlace => SafekeepingPlace;

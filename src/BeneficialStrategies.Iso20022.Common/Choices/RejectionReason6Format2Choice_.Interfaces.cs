@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RejectionReason6Format2Choice_ : IRejectionReason6Format2Choice
-{
-}
+public abstract partial record RejectionReason6Format2Choice_ : IRejectionReason6Format2Choice { }

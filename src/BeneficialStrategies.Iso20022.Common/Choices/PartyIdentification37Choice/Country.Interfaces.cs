@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification37Choice;
 
-public partial record Country : ICountry
-{
-}
+public partial record Country : ICountry { }

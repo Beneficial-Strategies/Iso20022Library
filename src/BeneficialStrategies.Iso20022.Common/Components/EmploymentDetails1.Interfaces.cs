@@ -13,5 +13,6 @@ public partial record EmploymentDetails1 : IEmploymentDetails1
     IGenericIdentification36? IEmploymentDetails1.TaxCode => TaxCode;
     IDateFormat42Choice? IEmploymentDetails1.StartDate => StartDate;
     IDateFormat42Choice? IEmploymentDetails1.EndDate => EndDate;
-    IEnumerable<IAdditionalInformation15> IEmploymentDetails1.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IEmploymentDetails1.AdditionalInformation =>
+        AdditionalInformation;
 }

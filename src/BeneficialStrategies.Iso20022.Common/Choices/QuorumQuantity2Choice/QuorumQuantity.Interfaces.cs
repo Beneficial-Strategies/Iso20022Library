@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.QuorumQuantity2Choice;
 
-public partial record QuorumQuantity : IQuorumQuantity
-{
-}
+public partial record QuorumQuantity : IQuorumQuantity { }

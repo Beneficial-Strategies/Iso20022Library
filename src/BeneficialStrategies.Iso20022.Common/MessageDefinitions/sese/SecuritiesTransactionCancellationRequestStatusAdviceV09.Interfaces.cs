@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionCancellationRequestStatusAdviceV09 : ISecuritiesTransactionCancellationRequestStatusAdviceV09
+public partial record SecuritiesTransactionCancellationRequestStatusAdviceV09
+    : ISecuritiesTransactionCancellationRequestStatusAdviceV09
 {
-    ITransactionIdentifications52? ISecuritiesTransactionCancellationRequestStatusAdviceV09.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus105Choice ISecuritiesTransactionCancellationRequestStatusAdviceV09.ProcessingStatus => ProcessingStatus;
-    ITransactionDetails178? ISecuritiesTransactionCancellationRequestStatusAdviceV09.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestStatusAdviceV09.SupplementaryData => SupplementaryData;
+    ITransactionIdentifications52? ISecuritiesTransactionCancellationRequestStatusAdviceV09.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus105Choice ISecuritiesTransactionCancellationRequestStatusAdviceV09.ProcessingStatus =>
+        ProcessingStatus;
+    ITransactionDetails178? ISecuritiesTransactionCancellationRequestStatusAdviceV09.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestStatusAdviceV09.SupplementaryData =>
+        SupplementaryData;
 }

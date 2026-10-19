@@ -12,10 +12,14 @@ public partial record PortfolioTransferNotificationV01 : IPortfolioTransferNotif
 {
     IDocumentIdentification11 IPortfolioTransferNotificationV01.Identification => Identification;
     IPagination IPortfolioTransferNotificationV01.Pagination => Pagination;
-    IStatement19 IPortfolioTransferNotificationV01.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement19 IPortfolioTransferNotificationV01.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification13Choice? IPortfolioTransferNotificationV01.AccountOwner => AccountOwner;
     ISecuritiesAccount13 IPortfolioTransferNotificationV01.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISecuritiesTradeDetails7> IPortfolioTransferNotificationV01.TransferNotificationDetails => TransferNotificationDetails;
-    IPartyIdentification10Choice? IPortfolioTransferNotificationV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? IPortfolioTransferNotificationV01.MessageRecipient => MessageRecipient;
+    IEnumerable<ISecuritiesTradeDetails7> IPortfolioTransferNotificationV01.TransferNotificationDetails =>
+        TransferNotificationDetails;
+    IPartyIdentification10Choice? IPortfolioTransferNotificationV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? IPortfolioTransferNotificationV01.MessageRecipient =>
+        MessageRecipient;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0MLVEQ1HEeqjM-rxn3HuXQ")]
 [DisplayName("Retailer Payment Result")]
-public record RetailerPaymentResult2
+public partial record RetailerPaymentResult2
 {
     /// <summary>
     /// Type of payment transaction.

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record Party40Choice_ : IParty40Choice
-{
-}
+public abstract partial record Party40Choice_ : IParty40Choice { }

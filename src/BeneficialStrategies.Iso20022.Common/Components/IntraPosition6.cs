@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TgKYgWp9EemmaZLSPtWX5A")]
 [DisplayName("Intra Position6")]
-public record IntraPosition6
+public partial record IntraPosition6
 {
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

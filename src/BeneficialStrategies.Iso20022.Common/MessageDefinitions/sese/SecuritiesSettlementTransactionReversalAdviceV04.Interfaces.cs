@@ -8,23 +8,39 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionReversalAdviceV04 : ISecuritiesSettlementTransactionReversalAdviceV04
+public partial record SecuritiesSettlementTransactionReversalAdviceV04
+    : ISecuritiesSettlementTransactionReversalAdviceV04
 {
-    ISettlementTypeAndIdentification15 ISecuritiesSettlementTransactionReversalAdviceV04.TransactionIdentificationDetails => TransactionIdentificationDetails;
-    IIdentification1 ISecuritiesSettlementTransactionReversalAdviceV04.ConfirmationReference => ConfirmationReference;
-    IAdditionalParameters14? ISecuritiesSettlementTransactionReversalAdviceV04.AdditionalParameters => AdditionalParameters;
-    ISecuritiesTradeDetails31 ISecuritiesSettlementTransactionReversalAdviceV04.TradeDetails => TradeDetails;
-    ISecurityIdentification14 ISecuritiesSettlementTransactionReversalAdviceV04.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes35? ISecuritiesSettlementTransactionReversalAdviceV04.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IQuantityAndAccount28 ISecuritiesSettlementTransactionReversalAdviceV04.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISettlementDetails70 ISecuritiesSettlementTransactionReversalAdviceV04.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction5? ISecuritiesSettlementTransactionReversalAdviceV04.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
-    ISettlementParties14? ISecuritiesSettlementTransactionReversalAdviceV04.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties14? ISecuritiesSettlementTransactionReversalAdviceV04.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementTypeAndIdentification15 ISecuritiesSettlementTransactionReversalAdviceV04.TransactionIdentificationDetails =>
+        TransactionIdentificationDetails;
+    IIdentification1 ISecuritiesSettlementTransactionReversalAdviceV04.ConfirmationReference =>
+        ConfirmationReference;
+    IAdditionalParameters14? ISecuritiesSettlementTransactionReversalAdviceV04.AdditionalParameters =>
+        AdditionalParameters;
+    ISecuritiesTradeDetails31 ISecuritiesSettlementTransactionReversalAdviceV04.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification14 ISecuritiesSettlementTransactionReversalAdviceV04.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes35? ISecuritiesSettlementTransactionReversalAdviceV04.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IQuantityAndAccount28 ISecuritiesSettlementTransactionReversalAdviceV04.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISettlementDetails70 ISecuritiesSettlementTransactionReversalAdviceV04.SettlementParameters =>
+        SettlementParameters;
+    IStandingSettlementInstruction5? ISecuritiesSettlementTransactionReversalAdviceV04.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
+    ISettlementParties14? ISecuritiesSettlementTransactionReversalAdviceV04.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties14? ISecuritiesSettlementTransactionReversalAdviceV04.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     ICashParties9? ISecuritiesSettlementTransactionReversalAdviceV04.CashParties => CashParties;
-    IAmountAndDirection36? ISecuritiesSettlementTransactionReversalAdviceV04.SettledAmount => SettledAmount;
+    IAmountAndDirection36? ISecuritiesSettlementTransactionReversalAdviceV04.SettledAmount =>
+        SettledAmount;
     IOtherAmounts18? ISecuritiesSettlementTransactionReversalAdviceV04.OtherAmounts => OtherAmounts;
-    IOtherParties19? ISecuritiesSettlementTransactionReversalAdviceV04.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters1? ISecuritiesSettlementTransactionReversalAdviceV04.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionReversalAdviceV04.SupplementaryData => SupplementaryData;
+    IOtherParties19? ISecuritiesSettlementTransactionReversalAdviceV04.OtherBusinessParties =>
+        OtherBusinessParties;
+    IRegistrationParameters1? ISecuritiesSettlementTransactionReversalAdviceV04.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionReversalAdviceV04.SupplementaryData =>
+        SupplementaryData;
 }

@@ -11,14 +11,22 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionNarrative42 : ICorporateActionNarrative42
 {
     IUpdatedAdditionalInformation8? ICorporateActionNarrative42.AdditionalText => AdditionalText;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.NarrativeVersion => NarrativeVersion;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.InformationConditions => InformationConditions;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.InformationToComplyWith => InformationToComplyWith;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.TaxationConditions => TaxationConditions;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.NarrativeVersion =>
+        NarrativeVersion;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.InformationConditions =>
+        InformationConditions;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.InformationToComplyWith =>
+        InformationToComplyWith;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.TaxationConditions =>
+        TaxationConditions;
     IUpdatedAdditionalInformation8? ICorporateActionNarrative42.Disclaimer => Disclaimer;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.PartyContactNarrative => PartyContactNarrative;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.RegistrationDetails => RegistrationDetails;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.BasketOrIndexInformation => BasketOrIndexInformation;
-    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.CertificationBreakdown => CertificationBreakdown;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.PartyContactNarrative =>
+        PartyContactNarrative;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.RegistrationDetails =>
+        RegistrationDetails;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
+    IUpdatedAdditionalInformation8? ICorporateActionNarrative42.CertificationBreakdown =>
+        CertificationBreakdown;
     IEnumerable<Max2048Text> ICorporateActionNarrative42.URLAddress => URLAddress;
 }

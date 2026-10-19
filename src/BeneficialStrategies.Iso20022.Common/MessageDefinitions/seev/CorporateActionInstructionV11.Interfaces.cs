@@ -10,15 +10,24 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record CorporateActionInstructionV11 : ICorporateActionInstructionV11
 {
-    IDocumentIdentification31? ICorporateActionInstructionV11.CancelledInstructionIdentification => CancelledInstructionIdentification;
-    IDocumentIdentification31? ICorporateActionInstructionV11.InstructionCancellationRequestIdentification => InstructionCancellationRequestIdentification;
-    IEnumerable<IDocumentIdentification32> ICorporateActionInstructionV11.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference3> ICorporateActionInstructionV11.EventsLinkage => EventsLinkage;
-    ICorporateActionGeneralInformation156 ICorporateActionInstructionV11.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    IDocumentIdentification31? ICorporateActionInstructionV11.CancelledInstructionIdentification =>
+        CancelledInstructionIdentification;
+    IDocumentIdentification31? ICorporateActionInstructionV11.InstructionCancellationRequestIdentification =>
+        InstructionCancellationRequestIdentification;
+    IEnumerable<IDocumentIdentification32> ICorporateActionInstructionV11.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference3> ICorporateActionInstructionV11.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionGeneralInformation156 ICorporateActionInstructionV11.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountAndBalance41 ICorporateActionInstructionV11.AccountDetails => AccountDetails;
-    IEnumerable<IPartyIdentification236> ICorporateActionInstructionV11.BeneficialOwnerDetails => BeneficialOwnerDetails;
-    ICorporateActionOption180 ICorporateActionInstructionV11.CorporateActionInstruction => CorporateActionInstruction;
+    IEnumerable<IPartyIdentification236> ICorporateActionInstructionV11.BeneficialOwnerDetails =>
+        BeneficialOwnerDetails;
+    ICorporateActionOption180 ICorporateActionInstructionV11.CorporateActionInstruction =>
+        CorporateActionInstruction;
     IProtectInstruction1? ICorporateActionInstructionV11.ProtectInstruction => ProtectInstruction;
-    ICorporateActionNarrative30? ICorporateActionInstructionV11.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionV11.SupplementaryData => SupplementaryData;
+    ICorporateActionNarrative30? ICorporateActionInstructionV11.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionV11.SupplementaryData =>
+        SupplementaryData;
 }

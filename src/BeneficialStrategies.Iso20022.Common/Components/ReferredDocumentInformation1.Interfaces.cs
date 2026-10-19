@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReferredDocumentInformation1 : IReferredDocumentInformation1
 {
-    IReferredDocumentType1? IReferredDocumentInformation1.ReferredDocumentType => ReferredDocumentType;
+    IReferredDocumentType1? IReferredDocumentInformation1.ReferredDocumentType =>
+        ReferredDocumentType;
 }

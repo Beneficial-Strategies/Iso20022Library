@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RIAu89p-Ed-ak6NoX_4Aeg_-1267402499")]
 [DisplayName("Query Reference")]
-public record QueryReference
+public partial record QueryReference
 {
     /// <summary>
     /// Unique and unambiguous identification of the query.

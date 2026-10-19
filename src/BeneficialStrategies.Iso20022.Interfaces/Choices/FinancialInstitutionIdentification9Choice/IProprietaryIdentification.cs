@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 /// </summary>
 [IsoId("__ZJy57NIEeejueAciesPMA")]
-public interface IProprietaryIdentification : IFinancialInstitutionIdentification9Choice, IIsoChoiceVariant
+public interface IProprietaryIdentification
+    : IFinancialInstitutionIdentification9Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

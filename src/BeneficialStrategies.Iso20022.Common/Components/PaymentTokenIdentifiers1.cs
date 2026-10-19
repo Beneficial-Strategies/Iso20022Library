@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PxXUcGkhEeSTIuB9A-QJ6g")]
 [DisplayName("Payment Token Identifiers")]
-public record PaymentTokenIdentifiers1
+public partial record PaymentTokenIdentifiers1
 {
     /// <summary>
     /// Identifier of the token provider.

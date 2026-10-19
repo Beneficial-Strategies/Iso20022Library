@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record OpeningClosing4Choice_ : IOpeningClosing4Choice
-{
-}
+public abstract partial record OpeningClosing4Choice_ : IOpeningClosing4Choice { }

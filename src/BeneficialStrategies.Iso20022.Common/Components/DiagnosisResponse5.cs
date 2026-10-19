@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FfokQXJIEe299ZbWCkdR_w")]
 [DisplayName("Diagnosis Response")]
-public record DiagnosisResponse5
+public partial record DiagnosisResponse5
 {
     /// <summary>
     /// Sale Terminal logged to.

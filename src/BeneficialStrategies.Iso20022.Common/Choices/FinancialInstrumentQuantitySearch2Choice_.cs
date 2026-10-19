@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FinancialInstrumentQuantitySearch2Choice.AmortisedValue), nameof(FinancialInstrumentQuantitySearch2Choice.AmortisedValue))]
     [IsoId("_eayJoWqWEemz04WrKJaMEA")]
     [DisplayName("Financial Instrument Quantity Search 2 Choice")]
-    public abstract record FinancialInstrumentQuantitySearch2Choice_ { }
+    public abstract partial record FinancialInstrumentQuantitySearch2Choice_ { }
 }

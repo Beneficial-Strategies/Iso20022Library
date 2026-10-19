@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementAllegementRemovalAdvice002V04 : ISecuritiesSettlementAllegementRemovalAdvice002V04
+public partial record SecuritiesSettlementAllegementRemovalAdvice002V04
+    : ISecuritiesSettlementAllegementRemovalAdvice002V04
 {
-    ISettlementTypeAndIdentification22 ISecuritiesSettlementAllegementRemovalAdvice002V04.AccountServicerTransactionIdentification => AccountServicerTransactionIdentification;
-    IIdentification16? ISecuritiesSettlementAllegementRemovalAdvice002V04.MarketInfrastructureTransactionIdentification => MarketInfrastructureTransactionIdentification;
-    IPartyIdentification109? ISecuritiesSettlementAllegementRemovalAdvice002V04.AccountOwner => AccountOwner;
-    ISecuritiesAccount30 ISecuritiesSettlementAllegementRemovalAdvice002V04.SafekeepingAccount => SafekeepingAccount;
-    ITransactionDetails83? ISecuritiesSettlementAllegementRemovalAdvice002V04.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdvice002V04.SupplementaryData => SupplementaryData;
+    ISettlementTypeAndIdentification22 ISecuritiesSettlementAllegementRemovalAdvice002V04.AccountServicerTransactionIdentification =>
+        AccountServicerTransactionIdentification;
+    IIdentification16? ISecuritiesSettlementAllegementRemovalAdvice002V04.MarketInfrastructureTransactionIdentification =>
+        MarketInfrastructureTransactionIdentification;
+    IPartyIdentification109? ISecuritiesSettlementAllegementRemovalAdvice002V04.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30 ISecuritiesSettlementAllegementRemovalAdvice002V04.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionDetails83? ISecuritiesSettlementAllegementRemovalAdvice002V04.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdvice002V04.SupplementaryData =>
+        SupplementaryData;
 }

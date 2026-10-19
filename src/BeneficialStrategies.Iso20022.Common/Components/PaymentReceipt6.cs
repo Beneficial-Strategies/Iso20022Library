@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PPvBIJEFEe6Un9Rms6YuCg")]
 [DisplayName("Payment Receipt6")]
-public record PaymentReceipt6
+public partial record PaymentReceipt6
 {
     /// <summary>
     /// Document Qualifier.

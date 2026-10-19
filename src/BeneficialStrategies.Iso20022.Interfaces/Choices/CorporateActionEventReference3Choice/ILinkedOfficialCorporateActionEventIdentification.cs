@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventReference3Ch
 /// Official and unique reference assigned by the official central body/ entity within each market at the beginning of a corporate action event.
 /// </summary>
 [IsoId("_4h3LozncEeWLJsP1cO-amg")]
-public interface ILinkedOfficialCorporateActionEventIdentification : ICorporateActionEventReference3Choice, IIsoChoiceVariant
+public interface ILinkedOfficialCorporateActionEventIdentification
+    : ICorporateActionEventReference3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

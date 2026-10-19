@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the charge type.
 /// </summary>
 [IsoId("_tjJEUVkyEeGeoaLUQk__nA_-594962709")]
-public interface IChargeType3Choice : IIsoChoice
-{
-}
+public interface IChargeType3Choice : IIsoChoice { }

@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_O3sLVZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Implied Currency Amount Range 1 Choice")]
-    public abstract record ImpliedCurrencyAmountRange1Choice_ { }
+    public abstract partial record ImpliedCurrencyAmountRange1Choice_ { }
 }

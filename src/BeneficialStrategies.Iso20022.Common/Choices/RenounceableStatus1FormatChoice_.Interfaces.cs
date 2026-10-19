@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RenounceableStatus1FormatChoice_ : IRenounceableStatus1FormatChoice
-{
-}
+public abstract partial record RenounceableStatus1FormatChoice_
+    : IRenounceableStatus1FormatChoice { }

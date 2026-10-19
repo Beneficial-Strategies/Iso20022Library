@@ -11,12 +11,16 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record MarketClaimCreationV01 : IMarketClaimCreationV01
 {
     IReferences25 IMarketClaimCreationV01.TransactionReference => TransactionReference;
-    ICorporateActionGeneralInformation157 IMarketClaimCreationV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IRelatedSettlementInstruction1 IMarketClaimCreationV01.RelatedSettlementInstructionDetails => RelatedSettlementInstructionDetails;
+    ICorporateActionGeneralInformation157 IMarketClaimCreationV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IRelatedSettlementInstruction1 IMarketClaimCreationV01.RelatedSettlementInstructionDetails =>
+        RelatedSettlementInstructionDetails;
     IAccountIdentification46 IMarketClaimCreationV01.AccountDetails => AccountDetails;
     ICorporateAction59? IMarketClaimCreationV01.CorporateActionDetails => CorporateActionDetails;
     ICorporateActionOption185 IMarketClaimCreationV01.MarketClaimDetails => MarketClaimDetails;
-    ISettlementParties75? IMarketClaimCreationV01.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties75? IMarketClaimCreationV01.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties75? IMarketClaimCreationV01.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties75? IMarketClaimCreationV01.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IEnumerable<ISupplementaryData1> IMarketClaimCreationV01.SupplementaryData => SupplementaryData;
 }

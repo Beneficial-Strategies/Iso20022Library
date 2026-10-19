@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OzIeQS8OEeu125Ip9zFcsQ")]
 [DisplayName("Output Result")]
-public record OutputResult2
+public partial record OutputResult2
 {
     /// <summary>
     /// Logical device located on a Sale Terminal or a POI Terminal, in term of class of information to output.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RaEtAdByEeihG9bKfarOOA")]
 [DisplayName("Status And Reason")]
-public record StatusAndReason36
+public partial record StatusAndReason36
 {
     /// <summary>
     /// Status and reason for the transaction.

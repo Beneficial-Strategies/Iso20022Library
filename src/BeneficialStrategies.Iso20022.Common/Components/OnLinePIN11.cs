@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ICLSwY-bEe6oobnCtR50kw")]
 [DisplayName("On Line PIN11")]
-public record OnLinePIN11
+public partial record OnLinePIN11
 {
     /// <summary>
     /// Encrypted PIN Block.

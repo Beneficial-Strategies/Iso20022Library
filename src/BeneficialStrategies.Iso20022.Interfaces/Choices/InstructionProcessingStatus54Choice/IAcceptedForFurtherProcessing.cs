@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus54Cho
 /// <summary>
 /// Accepted For Further Processing.
 /// </summary>
-public interface IAcceptedForFurtherProcessing : IInstructionProcessingStatus54Choice, IIsoChoiceVariant
+public interface IAcceptedForFurtherProcessing
+    : IInstructionProcessingStatus54Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -11,13 +11,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails94 : ISecuritiesTradeDetails94
 {
     IEnumerable<Max52Text> ISecuritiesTradeDetails94.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails94.CollateralTransactionIdentification => CollateralTransactionIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails94.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails94.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails94.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
     IPlaceOfTradeIdentification1? ISecuritiesTradeDetails94.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ISecuritiesTradeDetails94.PlaceOfClearing => PlaceOfClearing;
     ITradeDate8Choice? ISecuritiesTradeDetails94.TradeDate => TradeDate;
     ISettlementDate17Choice ISecuritiesTradeDetails94.SettlementDate => SettlementDate;
     IPrice7? ISecuritiesTradeDetails94.DealPrice => DealPrice;
-    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails94.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails94.TradeTransactionCondition =>
+        TradeTransactionCondition;
     ITypeOfPrice29Choice? ISecuritiesTradeDetails94.TypeOfPrice => TypeOfPrice;
 }

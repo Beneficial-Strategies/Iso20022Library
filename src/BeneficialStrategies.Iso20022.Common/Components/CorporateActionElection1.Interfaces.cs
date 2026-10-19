@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionElection1 : ICorporateActionElection1
 {
     ICorporateActionOption1FormatChoice ICorporateActionElection1.OptionType => OptionType;
-    IUnitOrFaceAmount1Choice ICorporateActionElection1.OriginalInstructedQuantity => OriginalInstructedQuantity;
+    IUnitOrFaceAmount1Choice ICorporateActionElection1.OriginalInstructedQuantity =>
+        OriginalInstructedQuantity;
     IUnitOrFaceAmount1Choice ICorporateActionElection1.RemainingQuantity => RemainingQuantity;
 }

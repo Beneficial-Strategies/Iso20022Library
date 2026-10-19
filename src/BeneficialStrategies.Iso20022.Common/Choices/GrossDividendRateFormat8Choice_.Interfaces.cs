@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record GrossDividendRateFormat8Choice_ : IGrossDividendRateFormat8Choice
-{
-}
+public abstract partial record GrossDividendRateFormat8Choice_ : IGrossDividendRateFormat8Choice { }

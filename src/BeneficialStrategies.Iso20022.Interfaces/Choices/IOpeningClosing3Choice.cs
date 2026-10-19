@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the opening closing information.
 /// </summary>
 [IsoId("_gj_VkTtCEeWRTLSN0i0tng")]
-public interface IOpeningClosing3Choice : IIsoChoice
-{
-}
+public interface IOpeningClosing3Choice : IIsoChoice { }

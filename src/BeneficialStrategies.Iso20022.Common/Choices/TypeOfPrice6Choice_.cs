@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qwdxpdp-Ed-ak6NoX_4Aeg_-1053429608")]
     [DisplayName("Type Of Price 6 Choice")]
-    public abstract record TypeOfPrice6Choice_ { }
+    public abstract partial record TypeOfPrice6Choice_ { }
 }

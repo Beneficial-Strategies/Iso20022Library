@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantityChoic
     /// </summary>
     [IsoId("_Sn-F2tp-Ed-ak6NoX_4Aeg_1583790387")]
     [DisplayName("Face Amount")]
-    public record FaceAmount : FinancialInstrumentQuantityChoice_
+    public partial record FaceAmount : FinancialInstrumentQuantityChoice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FaceAmt")]

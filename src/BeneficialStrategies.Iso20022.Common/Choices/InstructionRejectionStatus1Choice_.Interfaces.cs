@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record InstructionRejectionStatus1Choice_ : IInstructionRejectionStatus1Choice
-{
-}
+public abstract partial record InstructionRejectionStatus1Choice_
+    : IInstructionRejectionStatus1Choice { }

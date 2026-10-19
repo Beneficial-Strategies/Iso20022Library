@@ -17,9 +17,11 @@ public partial record Pension : IPension
     IDrawdownStatus1Choice? IPension.DrawdownStatus => DrawdownStatus;
     IDateAndAmount2? IPension.EstimatedValue => EstimatedValue;
     IDateAndAmount2? IPension.TaxFreeCashAmount => TaxFreeCashAmount;
-    IDateAndAmount2? IPension.ValueOfPensionPolicyOrPlanOrScheme => ValueOfPensionPolicyOrPlanOrScheme;
+    IDateAndAmount2? IPension.ValueOfPensionPolicyOrPlanOrScheme =>
+        ValueOfPensionPolicyOrPlanOrScheme;
     IEnumerable<ILumpSumType1Choice> IPension.LumpSumType => LumpSumType;
     IEnumerable<IPensionOrder1> IPension.PensionOrder => PensionOrder;
-    IMoneyPurchaseAnnualAllowance1? IPension.MoneyPurchaseAnnualAllowance => MoneyPurchaseAnnualAllowance;
+    IMoneyPurchaseAnnualAllowance1? IPension.MoneyPurchaseAnnualAllowance =>
+        MoneyPurchaseAnnualAllowance;
     IEnumerable<IAdditionalInformation15> IPension.AdditionalInformation => AdditionalInformation;
 }

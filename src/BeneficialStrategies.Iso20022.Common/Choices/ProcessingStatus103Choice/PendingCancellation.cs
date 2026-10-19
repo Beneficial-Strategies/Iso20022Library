@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus103Choice
     /// <summary>Specifies the pending cancellation status.</summary>
     [IsoId("d26764fb-9242-4828-8e07-d6e890afd280")]
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : ProcessingStatus103Choice_
+    public partial record PendingCancellation : ProcessingStatus103Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgCxl")]

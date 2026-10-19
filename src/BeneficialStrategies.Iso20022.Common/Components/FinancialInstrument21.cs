@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SbwOyNp-Ed-ak6NoX_4Aeg_-1299179113")]
 [DisplayName("Financial Instrument")]
-public record FinancialInstrument21
+public partial record FinancialInstrument21
 {
     /// <summary>
     /// Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, eg, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, for example, &apos;Class A&apos;, &apos;Class 2&apos;.

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus5Choice;
 
-public partial record NotSpecifiedReason : INotSpecifiedReason
-{
-}
+public partial record NotSpecifiedReason : INotSpecifiedReason { }

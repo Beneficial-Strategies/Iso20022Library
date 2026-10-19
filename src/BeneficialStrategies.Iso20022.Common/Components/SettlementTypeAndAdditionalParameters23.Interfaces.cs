@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SettlementTypeAndAdditionalParameters23 : ISettlementTypeAndAdditionalParameters23
-{
-}
+public partial record SettlementTypeAndAdditionalParameters23
+    : ISettlementTypeAndAdditionalParameters23 { }

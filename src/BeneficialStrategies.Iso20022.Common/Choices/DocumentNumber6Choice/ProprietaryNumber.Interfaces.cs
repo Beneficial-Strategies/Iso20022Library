@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber6Choice;
 
-public partial record ProprietaryNumber : IProprietaryNumber
-{
-}
+public partial record ProprietaryNumber : IProprietaryNumber { }

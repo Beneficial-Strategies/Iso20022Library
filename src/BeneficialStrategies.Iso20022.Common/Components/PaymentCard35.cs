@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__UZVMY-YEe6oobnCtR50kw")]
 [DisplayName("Payment Card35")]
-public record PaymentCard35
+public partial record PaymentCard35
 {
     /// <summary>
     /// Protected Card Data.

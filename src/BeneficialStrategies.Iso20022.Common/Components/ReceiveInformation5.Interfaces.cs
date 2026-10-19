@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReceiveInformation5 : IReceiveInformation5
 {
-    IReceivingPartiesAndAccount8 IReceiveInformation5.SettlementPartiesDetails => SettlementPartiesDetails;
+    IReceivingPartiesAndAccount8 IReceiveInformation5.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IEnumerable<ICharge20> IReceiveInformation5.ChargeDetails => ChargeDetails;
     IEnumerable<ICommission12> IReceiveInformation5.CommissionDetails => CommissionDetails;
     IEnumerable<ITax15> IReceiveInformation5.TaxDetails => TaxDetails;

@@ -12,5 +12,6 @@ public partial record Conversion4 : IConversion4
 {
     IFinancialInstrumentIdentification7 IConversion4.SourceSecurity => SourceSecurity;
     IEnumerable<IUnit15> IConversion4.UnitsDetails => UnitsDetails;
-    IEnumerable<IAdditionalInformation15> IConversion4.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IConversion4.AdditionalInformation =>
+        AdditionalInformation;
 }

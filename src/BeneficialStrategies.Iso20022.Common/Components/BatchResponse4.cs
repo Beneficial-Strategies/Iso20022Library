@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3Y34MU0_Eeybj420QgWBkA")]
 [DisplayName("Batch Response")]
-public record BatchResponse4
+public partial record BatchResponse4
 {
     /// <summary>
     /// Sale System identification of the bacth in an unambiguous way.

@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Role6Choice.Text), nameof(Role6Choice.Text))]
     [IsoId("_eSQcQTm9EeWV5sr121Fc8A")]
     [DisplayName("Role 6 Choice")]
-    public abstract record Role6Choice_ { }
+    public abstract partial record Role6Choice_ { }
 }

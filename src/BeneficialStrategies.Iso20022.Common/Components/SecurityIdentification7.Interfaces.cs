@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecurityIdentification7 : ISecurityIdentification7
 {
-    IAlternateSecurityIdentification3 ISecurityIdentification7.OtherIdentification => OtherIdentification;
+    IAlternateSecurityIdentification3 ISecurityIdentification7.OtherIdentification =>
+        OtherIdentification;
 }

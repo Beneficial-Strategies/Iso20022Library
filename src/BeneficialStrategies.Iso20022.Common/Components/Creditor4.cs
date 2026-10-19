@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3roEUdgxEeipBO1pkKK6zg")]
 [DisplayName("Creditor")]
-public record Creditor4
+public partial record Creditor4
 {
     /// <summary>
     /// Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.

@@ -8,24 +8,39 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesFinancingTransactionDetails24 : ISecuritiesFinancingTransactionDetails24
+public partial record SecuritiesFinancingTransactionDetails24
+    : ISecuritiesFinancingTransactionDetails24
 {
-    IPartyIdentification36Choice? ISecuritiesFinancingTransactionDetails24.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 ISecuritiesFinancingTransactionDetails24.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat3Choice? ISecuritiesFinancingTransactionDetails24.SafekeepingPlace => SafekeepingPlace;
+    IPartyIdentification36Choice? ISecuritiesFinancingTransactionDetails24.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 ISecuritiesFinancingTransactionDetails24.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat3Choice? ISecuritiesFinancingTransactionDetails24.SafekeepingPlace =>
+        SafekeepingPlace;
     IMarketIdentification78? ISecuritiesFinancingTransactionDetails24.PlaceOfTrade => PlaceOfTrade;
-    ISecurityIdentification14 ISecuritiesFinancingTransactionDetails24.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IQuantity6Choice ISecuritiesFinancingTransactionDetails24.SettlementQuantity => SettlementQuantity;
-    IAmountAndDirection8? ISecuritiesFinancingTransactionDetails24.OpeningSettlementAmount => OpeningSettlementAmount;
-    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails24.TerminationTransactionAmount => TerminationTransactionAmount;
-    ISettlementDate2Choice ISecuritiesFinancingTransactionDetails24.OpeningSettlementDate => OpeningSettlementDate;
-    ITerminationDate2Choice? ISecuritiesFinancingTransactionDetails24.TerminationDate => TerminationDate;
+    ISecurityIdentification14 ISecuritiesFinancingTransactionDetails24.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IQuantity6Choice ISecuritiesFinancingTransactionDetails24.SettlementQuantity =>
+        SettlementQuantity;
+    IAmountAndDirection8? ISecuritiesFinancingTransactionDetails24.OpeningSettlementAmount =>
+        OpeningSettlementAmount;
+    IAmountAndDirection4? ISecuritiesFinancingTransactionDetails24.TerminationTransactionAmount =>
+        TerminationTransactionAmount;
+    ISettlementDate2Choice ISecuritiesFinancingTransactionDetails24.OpeningSettlementDate =>
+        OpeningSettlementDate;
+    ITerminationDate2Choice? ISecuritiesFinancingTransactionDetails24.TerminationDate =>
+        TerminationDate;
     ITradeDate1Choice? ISecuritiesFinancingTransactionDetails24.TradeDate => TradeDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.ExpectedSettlementDate => ExpectedSettlementDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.ExpectedValueDate => ExpectedValueDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.LateDeliveryDate => LateDeliveryDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.RateChangeDate => RateChangeDate;
-    ISettlementDetails73? ISecuritiesFinancingTransactionDetails24.SettlementParameters => SettlementParameters;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.ExpectedSettlementDate =>
+        ExpectedSettlementDate;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.ExpectedValueDate =>
+        ExpectedValueDate;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.LateDeliveryDate =>
+        LateDeliveryDate;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails24.RateChangeDate =>
+        RateChangeDate;
+    ISettlementDetails73? ISecuritiesFinancingTransactionDetails24.SettlementParameters =>
+        SettlementParameters;
     IRateType5Choice? ISecuritiesFinancingTransactionDetails24.RateType => RateType;
     IRateName1? ISecuritiesFinancingTransactionDetails24.VariableRateSupport => VariableRateSupport;
     IRate2? ISecuritiesFinancingTransactionDetails24.RepurchaseRate => RepurchaseRate;
@@ -33,7 +48,9 @@ public partial record SecuritiesFinancingTransactionDetails24 : ISecuritiesFinan
     IRate2? ISecuritiesFinancingTransactionDetails24.SecuritiesHaircut => SecuritiesHaircut;
     IRateOrName1Choice? ISecuritiesFinancingTransactionDetails24.PricingRate => PricingRate;
     IRate2? ISecuritiesFinancingTransactionDetails24.Spread => Spread;
-    ISettlementParties11? ISecuritiesFinancingTransactionDetails24.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties11? ISecuritiesFinancingTransactionDetails24.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties11? ISecuritiesFinancingTransactionDetails24.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties11? ISecuritiesFinancingTransactionDetails24.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IPartyIdentification37Choice? ISecuritiesFinancingTransactionDetails24.Investor => Investor;
 }

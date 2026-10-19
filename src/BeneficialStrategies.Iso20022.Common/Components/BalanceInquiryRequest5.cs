@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vaJ1cU4AEey_VecAUE-C9Q")]
 [DisplayName("Balance Inquiry Request")]
-public record BalanceInquiryRequest5
+public partial record BalanceInquiryRequest5
 {
     /// <summary>
     /// Sale System identification of the transaction in an unambiguous way.

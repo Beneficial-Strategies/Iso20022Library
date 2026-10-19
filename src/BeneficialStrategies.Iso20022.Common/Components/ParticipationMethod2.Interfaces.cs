@@ -12,5 +12,6 @@ public partial record ParticipationMethod2 : IParticipationMethod2
 {
     IParticipationMethod3Choice IParticipationMethod2.ParticipationMethod => ParticipationMethod;
     IDateFormat58Choice IParticipationMethod2.IssuerDeadlineForVoting => IssuerDeadlineForVoting;
-    IDateFormat58Choice? IParticipationMethod2.ResponseDeadlineForVoting => ResponseDeadlineForVoting;
+    IDateFormat58Choice? IParticipationMethod2.ResponseDeadlineForVoting =>
+        ResponseDeadlineForVoting;
 }

@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionCancellationRequest002V13 : ICorporateActionInstructionCancellationRequest002V13
+public partial record CorporateActionInstructionCancellationRequest002V13
+    : ICorporateActionInstructionCancellationRequest002V13
 {
-    IDocumentIdentification37 ICorporateActionInstructionCancellationRequest002V13.InstructionIdentification => InstructionIdentification;
-    ICorporateActionGeneralInformation187 ICorporateActionInstructionCancellationRequest002V13.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification73 ICorporateActionInstructionCancellationRequest002V13.AccountDetails => AccountDetails;
-    ICorporateActionOption202 ICorporateActionInstructionCancellationRequest002V13.CorporateActionInstruction => CorporateActionInstruction;
-    IProtectInstruction7? ICorporateActionInstructionCancellationRequest002V13.ProtectInstruction => ProtectInstruction;
-    ICorporateActionNarrative19? ICorporateActionInstructionCancellationRequest002V13.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequest002V13.SupplementaryData => SupplementaryData;
+    IDocumentIdentification37 ICorporateActionInstructionCancellationRequest002V13.InstructionIdentification =>
+        InstructionIdentification;
+    ICorporateActionGeneralInformation187 ICorporateActionInstructionCancellationRequest002V13.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification73 ICorporateActionInstructionCancellationRequest002V13.AccountDetails =>
+        AccountDetails;
+    ICorporateActionOption202 ICorporateActionInstructionCancellationRequest002V13.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IProtectInstruction7? ICorporateActionInstructionCancellationRequest002V13.ProtectInstruction =>
+        ProtectInstruction;
+    ICorporateActionNarrative19? ICorporateActionInstructionCancellationRequest002V13.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequest002V13.SupplementaryData =>
+        SupplementaryData;
 }

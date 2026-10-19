@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus1Ch
     [IsoId("_UW_MZNp-Ed-ak6NoX_4Aeg_1717640679")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : IntraPositionProcessingStatus1Choice_
+    public partial record Proprietary : IntraPositionProcessingStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

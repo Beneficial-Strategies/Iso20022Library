@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between balance, eligible balance and not eligible balance formats.
 /// </summary>
 [IsoId("_cjzu3ZKQEeWHWpTQn1FFVg")]
-public interface IBalanceFormat10Choice : IIsoChoice
-{
-}
+public interface IBalanceFormat10Choice : IIsoChoice { }

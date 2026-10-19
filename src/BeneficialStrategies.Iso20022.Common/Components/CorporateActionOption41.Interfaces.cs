@@ -15,9 +15,11 @@ public partial record CorporateActionOption41 : ICorporateActionOption41
     IPartyIdentification36Choice? ICorporateActionOption41.AccountOwner => AccountOwner;
     ICashAccountIdentification5Choice? ICorporateActionOption41.CashAccount => CashAccount;
     ISafekeepingPlaceFormat2Choice? ICorporateActionOption41.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification14? ICorporateActionOption41.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification14? ICorporateActionOption41.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     ISignedQuantityFormat1? ICorporateActionOption41.TotalEligibleBalance => TotalEligibleBalance;
     ISignedQuantityFormat1? ICorporateActionOption41.InstructedBalance => InstructedBalance;
     ISignedQuantityFormat1? ICorporateActionOption41.UninstructedBalance => UninstructedBalance;
-    IStatusOrQuantityToReceive1Choice? ICorporateActionOption41.StatusQuantityOrQuantityToReceive => StatusQuantityOrQuantityToReceive;
+    IStatusOrQuantityToReceive1Choice? ICorporateActionOption41.StatusQuantityOrQuantityToReceive =>
+        StatusQuantityOrQuantityToReceive;
 }

@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Entitlement1 : IEntitlement1
 {
-    IPartyIdentification2Choice? IEntitlement1.AccountOwnerIdentification => AccountOwnerIdentification;
-    IEnumerable<ISecuritiesEntitlement1> IEntitlement1.SecuritiesDistributionDetails => SecuritiesDistributionDetails;
+    IPartyIdentification2Choice? IEntitlement1.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
+    IEnumerable<ISecuritiesEntitlement1> IEntitlement1.SecuritiesDistributionDetails =>
+        SecuritiesDistributionDetails;
     IEnumerable<ICashEntitlement1> IEntitlement1.CashDistributionDetails => CashDistributionDetails;
 }

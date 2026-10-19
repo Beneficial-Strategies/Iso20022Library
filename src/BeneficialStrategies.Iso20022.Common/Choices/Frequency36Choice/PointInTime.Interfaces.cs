@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice;
 
-public partial record PointInTime : IPointInTime
-{
-}
+public partial record PointInTime : IPointInTime { }

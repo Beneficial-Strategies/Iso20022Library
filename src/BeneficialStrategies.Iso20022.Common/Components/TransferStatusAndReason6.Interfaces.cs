@@ -11,11 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransferStatusAndReason6 : ITransferStatusAndReason6
 {
     IAdditionalReference10? ITransferStatusAndReason6.ClientReference => ClientReference;
-    IEnumerable<ITransferStatusType1Choice> ITransferStatusAndReason6.TransferEventType => TransferEventType;
+    IEnumerable<ITransferStatusType1Choice> ITransferStatusAndReason6.TransferEventType =>
+        TransferEventType;
     ITransferStatus3Choice ITransferStatusAndReason6.TransferStatus => TransferStatus;
     IEnumerable<IUnit11> ITransferStatusAndReason6.UnitsDetails => UnitsDetails;
     IEnumerable<IPaymentInstrument15> ITransferStatusAndReason6.PaymentDetails => PaymentDetails;
-    IEnumerable<IBenefitCrystallisationEvent1> ITransferStatusAndReason6.BenefitCrystallisationEvent => BenefitCrystallisationEvent;
+    IEnumerable<IBenefitCrystallisationEvent1> ITransferStatusAndReason6.BenefitCrystallisationEvent =>
+        BenefitCrystallisationEvent;
     IEnumerable<IDrawdown1> ITransferStatusAndReason6.DrawdownTranche => DrawdownTranche;
     IPartyIdentification139? ITransferStatusAndReason6.StatusInitiator => StatusInitiator;
     IPartyIdentification139? ITransferStatusAndReason6.StatusIssuer => StatusIssuer;

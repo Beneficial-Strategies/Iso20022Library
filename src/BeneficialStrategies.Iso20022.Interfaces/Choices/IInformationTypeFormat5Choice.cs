@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the information type format required.
 /// </summary>
 [IsoId("_c5Whl5KQEeWHWpTQn1FFVg")]
-public interface IInformationTypeFormat5Choice : IIsoChoice
-{
-}
+public interface IInformationTypeFormat5Choice : IIsoChoice { }

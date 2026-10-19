@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Rate Format27Choice.
 /// </summary>
 [IsoId("_KbcyIYV-Ee-ufOxNNkEXmg")]
-public interface IRateFormat27Choice : IIsoChoice
-{
-}
+public interface IRateFormat27Choice : IIsoChoice { }

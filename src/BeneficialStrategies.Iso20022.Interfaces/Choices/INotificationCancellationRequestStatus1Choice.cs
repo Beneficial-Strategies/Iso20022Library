@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between various statuses.
 /// </summary>
 [IsoId("_RiYWw9p-Ed-ak6NoX_4Aeg_-987032957")]
-public interface INotificationCancellationRequestStatus1Choice : IIsoChoice
-{
-}
+public interface INotificationCancellationRequestStatus1Choice : IIsoChoice { }

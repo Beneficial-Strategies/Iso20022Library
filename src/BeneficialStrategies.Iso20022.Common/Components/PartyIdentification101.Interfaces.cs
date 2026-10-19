@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentification101 : IPartyIdentification101
 {
-    IPartyIdentification104Choice IPartyIdentification101.OwnerIdentification => OwnerIdentification;
-    IEnumerable<IAlternatePartyIdentification9> IPartyIdentification101.AlternateIdentification => AlternateIdentification;
+    IPartyIdentification104Choice IPartyIdentification101.OwnerIdentification =>
+        OwnerIdentification;
+    IEnumerable<IAlternatePartyIdentification9> IPartyIdentification101.AlternateIdentification =>
+        AlternateIdentification;
     IEnumerable<CountryCode> IPartyIdentification101.NonDomicileCountry => NonDomicileCountry;
-    IFinancialInstrumentQuantity15Choice IPartyIdentification101.OwnedSecuritiesQuantity => OwnedSecuritiesQuantity;
-    IEnumerable<IBeneficiaryCertificationType11Choice> IPartyIdentification101.CertificationType => CertificationType;
+    IFinancialInstrumentQuantity15Choice IPartyIdentification101.OwnedSecuritiesQuantity =>
+        OwnedSecuritiesQuantity;
+    IEnumerable<IBeneficiaryCertificationType11Choice> IPartyIdentification101.CertificationType =>
+        CertificationType;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_grZ50NkJEeiojJsa6FYyew")]
 [DisplayName("Check")]
-public record Check1
+public partial record Check1
 {
     /// <summary>
     /// Identification of the institution (bank) issuing the check.

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TerminationDate5Choice_ : ITerminationDate5Choice
-{
-}
+public abstract partial record TerminationDate5Choice_ : ITerminationDate5Choice { }

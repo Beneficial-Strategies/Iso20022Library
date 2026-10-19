@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PendingStatus20Choice;
 
-public partial record UnderInvestigation : IUnderInvestigation
-{
-}
+public partial record UnderInvestigation : IUnderInvestigation { }

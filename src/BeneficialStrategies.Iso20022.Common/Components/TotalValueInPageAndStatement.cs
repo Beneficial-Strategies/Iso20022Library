@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q7Cp9tp-Ed-ak6NoX_4Aeg_-277574684")]
 [DisplayName("Total Value In Page And Statement")]
-public record TotalValueInPageAndStatement
+public partial record TotalValueInPageAndStatement
 {
     /// <summary>
     /// Total value of positions reported in this message.

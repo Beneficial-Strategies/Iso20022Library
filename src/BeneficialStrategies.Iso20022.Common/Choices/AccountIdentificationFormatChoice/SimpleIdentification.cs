@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
     [IsoId("_RBvu5tp-Ed-ak6NoX_4Aeg_1757395821")]
     [DisplayName("Simple Identification")]
     [IsoXmlTag("SmplId")]
-    public record SimpleIdentification : AccountIdentificationFormatChoice_
+    public partial record SimpleIdentification : AccountIdentificationFormatChoice_
     {
         /// <summary>
         /// Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.

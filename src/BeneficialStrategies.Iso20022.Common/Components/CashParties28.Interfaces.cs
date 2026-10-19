@@ -12,5 +12,6 @@ public partial record CashParties28 : ICashParties28
 {
     IPartyIdentificationAndAccount120? ICashParties28.Creditor => Creditor;
     IPartyIdentificationAndAccount121? ICashParties28.CreditorAgent => CreditorAgent;
-    IPartyIdentificationAndAccount120? ICashParties28.MarketClaimCounterparty => MarketClaimCounterparty;
+    IPartyIdentificationAndAccount120? ICashParties28.MarketClaimCounterparty =>
+        MarketClaimCounterparty;
 }

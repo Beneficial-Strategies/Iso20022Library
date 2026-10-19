@@ -14,17 +14,24 @@ public partial record PortfolioTransferInstructionV06 : IPortfolioTransferInstru
     IAdditionalReference3? IPortfolioTransferInstructionV06.PoolReference => PoolReference;
     IAdditionalReference3? IPortfolioTransferInstructionV06.PreviousReference => PreviousReference;
     IAdditionalReference3? IPortfolioTransferInstructionV06.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPortfolioTransferInstructionV06.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPortfolioTransferInstructionV06.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPortfolioTransferInstructionV06.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IPortfolioTransferInstructionV06.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IPortfolioTransferInstructionV06.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IPortfolioTransferInstructionV06.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPortfolioTransferInstructionV06.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IPortfolioTransferInstructionV06.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPortfolioTransferInstructionV06.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IPortfolioTransferInstructionV06.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IPortfolioTransferInstructionV06.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IPortfolioTransferInstructionV06.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount15 IPortfolioTransferInstructionV06.TransferorAccount => TransferorAccount;
     IAccount16? IPortfolioTransferInstructionV06.NomineeAccount => NomineeAccount;
     IPartyIdentification2Choice IPortfolioTransferInstructionV06.Transferee => Transferee;
     ICashAccount29? IPortfolioTransferInstructionV06.CashAccount => CashAccount;
     IEnumerable<IISATransfer18> IPortfolioTransferInstructionV06.ProductTransfer => ProductTransfer;
-    IMarketPracticeVersion1? IPortfolioTransferInstructionV06.MarketPracticeVersion => MarketPracticeVersion;
+    IMarketPracticeVersion1? IPortfolioTransferInstructionV06.MarketPracticeVersion =>
+        MarketPracticeVersion;
     IEnumerable<IExtension1> IPortfolioTransferInstructionV06.Extension => Extension;
 }

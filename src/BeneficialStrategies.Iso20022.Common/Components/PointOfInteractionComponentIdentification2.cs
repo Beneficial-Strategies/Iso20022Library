@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fu8XwS8REeu125Ip9zFcsQ")]
 [DisplayName("Point Of Interaction Component Identification")]
-public record PointOfInteractionComponentIdentification2
+public partial record PointOfInteractionComponentIdentification2
 {
     /// <summary>
     /// Hierarchical identification of a hardware component inside all the hardware component of the POI. It is composed of all item numbers of the upper level components, separated by the &apos;.&apos; character, ended by the item number of the current component.

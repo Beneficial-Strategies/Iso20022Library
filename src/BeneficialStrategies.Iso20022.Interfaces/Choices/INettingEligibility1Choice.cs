@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the netting eligibility information.
 /// </summary>
 [IsoId("_QvkZwdp-Ed-ak6NoX_4Aeg_-841042953")]
-public interface INettingEligibility1Choice : IIsoChoice
-{
-}
+public interface INettingEligibility1Choice : IIsoChoice { }

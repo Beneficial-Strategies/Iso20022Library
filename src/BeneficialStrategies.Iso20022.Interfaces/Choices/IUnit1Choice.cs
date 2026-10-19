@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for a quantity unit.</summary>
 [IsoId("29148de0-e75a-40ff-92d1-cdca9ae069d9")]
-public interface IUnit1Choice : IIsoChoice
-{
-}
+public interface IUnit1Choice : IIsoChoice { }

@@ -11,9 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PaymentTransaction45 : IPaymentTransaction45
 {
     IEnumerable<ICharges2> IPaymentTransaction45.ChargesInformation => ChargesInformation;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction45.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction45.InstructedAgent => InstructedAgent;
-    IEnumerable<IPaymentReversalReason7> IPaymentTransaction45.ReversalReasonInformation => ReversalReasonInformation;
-    IOriginalTransactionReference16? IPaymentTransaction45.OriginalTransactionReference => OriginalTransactionReference;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction45.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction45.InstructedAgent =>
+        InstructedAgent;
+    IEnumerable<IPaymentReversalReason7> IPaymentTransaction45.ReversalReasonInformation =>
+        ReversalReasonInformation;
+    IOriginalTransactionReference16? IPaymentTransaction45.OriginalTransactionReference =>
+        OriginalTransactionReference;
     IEnumerable<ISupplementaryData1> IPaymentTransaction45.SupplementaryData => SupplementaryData;
 }

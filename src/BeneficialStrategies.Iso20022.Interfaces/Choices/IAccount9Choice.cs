@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a cash account, a charges account or a tax account.
 /// </summary>
 [IsoId("_XY2a49p-Ed-ak6NoX_4Aeg_-2005416600")]
-public interface IAccount9Choice : IIsoChoice
-{
-}
+public interface IAccount9Choice : IIsoChoice { }

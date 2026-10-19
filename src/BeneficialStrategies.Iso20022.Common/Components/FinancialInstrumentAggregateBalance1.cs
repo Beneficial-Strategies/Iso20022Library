@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1TSje4jiEeONZKAAW4pOaQ")]
 [DisplayName("Financial Instrument Aggregate Balance")]
-public record FinancialInstrumentAggregateBalance1
+public partial record FinancialInstrumentAggregateBalance1
 {
     /// <summary>
     /// Date of the line of holding in the statement.

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record Quantity13Choice_ : IQuantity13Choice
-{
-}
+public abstract partial record Quantity13Choice_ : IQuantity13Choice { }

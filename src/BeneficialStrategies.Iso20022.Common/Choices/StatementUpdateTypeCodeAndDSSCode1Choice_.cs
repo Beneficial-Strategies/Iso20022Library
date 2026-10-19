@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_sFNQkQaUEe2-DuDrUXkg2w")]
     [DisplayName("Statement Update Type Code And DSS Code 1 Choice")]
-    public abstract record StatementUpdateTypeCodeAndDSSCode1Choice_ { }
+    public abstract partial record StatementUpdateTypeCodeAndDSSCode1Choice_ { }
 }

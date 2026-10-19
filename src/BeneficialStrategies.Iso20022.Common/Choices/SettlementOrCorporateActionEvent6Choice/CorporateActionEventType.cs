@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrCorporateActionEvent
     /// </summary>
     [IsoId("_fw8YD_vmEeCBQp5TnX1XKQ")]
     [DisplayName("Corporate Action Event Type")]
-    public record CorporateActionEventType : SettlementOrCorporateActionEvent6Choice_
+    public partial record CorporateActionEventType : SettlementOrCorporateActionEvent6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CorpActnEvtTp")]

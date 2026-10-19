@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Registration1Choice;
 
-public partial record Proprietary : IProprietary
-{
-}
+public partial record Proprietary : IProprietary { }

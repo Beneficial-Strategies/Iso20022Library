@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Rejected Reason58Choice.
 /// </summary>
 [IsoId("_JqYgqWwCEe6-uamPcUrBKg")]
-public interface IRejectedReason58Choice : IIsoChoice
-{
-}
+public interface IRejectedReason58Choice : IIsoChoice { }

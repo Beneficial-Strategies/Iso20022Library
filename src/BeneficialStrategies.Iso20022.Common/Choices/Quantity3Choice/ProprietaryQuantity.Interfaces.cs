@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Quantity3Choice;
 
-public partial record ProprietaryQuantity : IProprietaryQuantity
-{
-}
+public partial record ProprietaryQuantity : IProprietaryQuantity { }

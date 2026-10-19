@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a threshold basis defined as a predefined code or as a proprietary value.
 /// </summary>
 [IsoId("_wlX_cBuMEeyhRdHRjakS2w")]
-public interface IThresholdBasis1Choice : IIsoChoice
-{
-}
+public interface IThresholdBasis1Choice : IIsoChoice { }

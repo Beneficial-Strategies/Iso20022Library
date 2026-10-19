@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record FundPortfolio7Choice_ : IFundPortfolio7Choice
-{
-}
+public abstract partial record FundPortfolio7Choice_ : IFundPortfolio7Choice { }

@@ -11,15 +11,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails2 : ISecuritiesTradeDetails2
 {
     IEnumerable<Max35Text> ISecuritiesTradeDetails2.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails2.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails2.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IMarketIdentification4? ISecuritiesTradeDetails2.PlaceOfTrade => PlaceOfTrade;
     ITradeDate1Choice? ISecuritiesTradeDetails2.TradeDate => TradeDate;
     ISettlementDate1Choice? ISecuritiesTradeDetails2.SettlementDate => SettlementDate;
-    ISettlementDate3Choice ISecuritiesTradeDetails2.EffectiveSettlementDate => EffectiveSettlementDate;
+    ISettlementDate3Choice ISecuritiesTradeDetails2.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IPrice2? ISecuritiesTradeDetails2.DealPrice => DealPrice;
     IOpeningClosing1Choice? ISecuritiesTradeDetails2.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting2Choice> ISecuritiesTradeDetails2.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails2.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails2.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity1Choice? ISecuritiesTradeDetails2.InvestorCapacity => InvestorCapacity;
     ITradeOriginator1Choice? ISecuritiesTradeDetails2.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice3Choice? ISecuritiesTradeDetails2.TypeOfPrice => TypeOfPrice;

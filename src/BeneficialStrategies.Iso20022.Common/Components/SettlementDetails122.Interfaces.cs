@@ -10,14 +10,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementDetails122 : ISettlementDetails122
 {
-    ISecuritiesTransactionType32Choice? ISettlementDetails122.SecuritiesTransactionType => SecuritiesTransactionType;
-    IEnumerable<ISettlementTransactionCondition16Choice> ISettlementDetails122.SettlementTransactionCondition => SettlementTransactionCondition;
+    ISecuritiesTransactionType32Choice? ISettlementDetails122.SecuritiesTransactionType =>
+        SecuritiesTransactionType;
+    IEnumerable<ISettlementTransactionCondition16Choice> ISettlementDetails122.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     IBeneficialOwnership4Choice? ISettlementDetails122.BeneficialOwnership => BeneficialOwnership;
     ICentralCounterPartyEligibility4Choice? ISettlementDetails122.CCPEligibility => CCPEligibility;
     IDeliveryReturn3Choice? ISettlementDetails122.DeliveryReturnReason => DeliveryReturnReason;
     ICashSettlementSystem4Choice? ISettlementDetails122.CashClearingSystem => CashClearingSystem;
     IExposureType16Choice? ISettlementDetails122.ExposureType => ExposureType;
-    IFXStandingInstruction4Choice? ISettlementDetails122.FXStandingInstruction => FXStandingInstruction;
+    IFXStandingInstruction4Choice? ISettlementDetails122.FXStandingInstruction =>
+        FXStandingInstruction;
     IMarketClientSide4Choice? ISettlementDetails122.MarketClientSide => MarketClientSide;
     INettingEligibility4Choice? ISettlementDetails122.NettingEligibility => NettingEligibility;
     IRegistration9Choice? ISettlementDetails122.Registration => Registration;
@@ -27,7 +30,9 @@ public partial record SettlementDetails122 : ISettlementDetails122
     IGenericIdentification30? ISettlementDetails122.StampDutyTaxBasis => StampDutyTaxBasis;
     ITracking4Choice? ISettlementDetails122.Tracking => Tracking;
     ILetterOfGuarantee4Choice? ISettlementDetails122.LetterOfGuarantee => LetterOfGuarantee;
-    IModificationCancellationAllowed4Choice? ISettlementDetails122.ModificationCancellationAllowed => ModificationCancellationAllowed;
-    IGenericIdentification30? ISettlementDetails122.SecuritiesSubBalanceType => SecuritiesSubBalanceType;
+    IModificationCancellationAllowed4Choice? ISettlementDetails122.ModificationCancellationAllowed =>
+        ModificationCancellationAllowed;
+    IGenericIdentification30? ISettlementDetails122.SecuritiesSubBalanceType =>
+        SecuritiesSubBalanceType;
     IGenericIdentification30? ISettlementDetails122.CashSubBalanceType => CashSubBalanceType;
 }

@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_LWuZEbQCEee1Ke-6rZgsrA")]
     [DisplayName("Price Rate Or Amount Or Unknown 2 Choice")]
-    public abstract record PriceRateOrAmountOrUnknown2Choice_ { }
+    public abstract partial record PriceRateOrAmountOrUnknown2Choice_ { }
 }

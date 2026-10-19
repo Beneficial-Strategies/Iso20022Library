@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code to indicate if a corporate action event is mandatory or not.
 /// </summary>
 [IsoId("_e9j1tzndEeWLJsP1cO-amg")]
-public interface ICorporateActionMandatoryVoluntary3Choice : IIsoChoice
-{
-}
+public interface ICorporateActionMandatoryVoluntary3Choice : IIsoChoice { }

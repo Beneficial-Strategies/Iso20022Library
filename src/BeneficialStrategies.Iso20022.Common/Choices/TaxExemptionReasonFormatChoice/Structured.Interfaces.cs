@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TaxExemptionReasonFormatChoice;
 
-public partial record Structured : IStructured
-{
-}
+public partial record Structured : IStructured { }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RemittanceLocation1 : IRemittanceLocation1
 {
-    INameAndAddress3? IRemittanceLocation1.RemittanceLocationPostalAddress => RemittanceLocationPostalAddress;
+    INameAndAddress3? IRemittanceLocation1.RemittanceLocationPostalAddress =>
+        RemittanceLocationPostalAddress;
 }

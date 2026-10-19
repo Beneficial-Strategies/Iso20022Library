@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus49Choice;
 
-public partial record StandingInstruction : IStandingInstruction
-{
-}
+public partial record StandingInstruction : IStandingInstruction { }

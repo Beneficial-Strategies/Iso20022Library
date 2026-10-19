@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Hellenic Bank Identification Code - identifies Hellenic financial institutions on the Hellenic national clearing system.
 /// </summary>
 [IsoId("_TDPFg9p-Ed-ak6NoX_4Aeg_-1906990554")]
-public interface IHellenicBankIdentificationCode : IClearingSystemMemberIdentification2Choice, IIsoChoiceVariant
+public interface IHellenicBankIdentificationCode
+    : IClearingSystemMemberIdentification2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

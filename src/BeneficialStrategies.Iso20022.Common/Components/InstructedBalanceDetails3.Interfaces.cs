@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InstructedBalanceDetails3 : IInstructedBalanceDetails3
 {
-    IBalanceFormat1Choice IInstructedBalanceDetails3.TotalInstructedBalance => TotalInstructedBalance;
-    IEnumerable<IInstructedCorporateActionOption4> IInstructedBalanceDetails3.OptionDetails => OptionDetails;
+    IBalanceFormat1Choice IInstructedBalanceDetails3.TotalInstructedBalance =>
+        TotalInstructedBalance;
+    IEnumerable<IInstructedCorporateActionOption4> IInstructedBalanceDetails3.OptionDetails =>
+        OptionDetails;
 }

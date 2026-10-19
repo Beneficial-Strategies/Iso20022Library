@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the waiving instruction.
 /// </summary>
 [IsoId("_Ox8_UViPEeaMNZxYNthMeA")]
-public interface IWaivingInstruction2Choice : IIsoChoice
-{
-}
+public interface IWaivingInstruction2Choice : IIsoChoice { }

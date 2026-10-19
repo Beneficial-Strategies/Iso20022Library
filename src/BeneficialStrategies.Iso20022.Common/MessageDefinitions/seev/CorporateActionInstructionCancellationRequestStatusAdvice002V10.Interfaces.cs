@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionCancellationRequestStatusAdvice002V10 : ICorporateActionInstructionCancellationRequestStatusAdvice002V10
+public partial record CorporateActionInstructionCancellationRequestStatusAdvice002V10
+    : ICorporateActionInstructionCancellationRequestStatusAdvice002V10
 {
-    IDocumentIdentification17? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.InstructionCancellationRequestIdentification => InstructionCancellationRequestIdentification;
-    IEnumerable<IDocumentIdentification34> ICorporateActionInstructionCancellationRequestStatusAdvice002V10.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation144 ICorporateActionInstructionCancellationRequestStatusAdvice002V10.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IInstructionCancellationRequestStatus12Choice> ICorporateActionInstructionCancellationRequestStatusAdvice002V10.InstructionCancellationRequestStatus => InstructionCancellationRequestStatus;
-    ICorporateActionOption169? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.CorporateActionInstruction => CorporateActionInstruction;
-    IProtectInstruction8? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.ProtectInstruction => ProtectInstruction;
-    ICorporateActionNarrative19? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestStatusAdvice002V10.SupplementaryData => SupplementaryData;
+    IDocumentIdentification17? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.InstructionCancellationRequestIdentification =>
+        InstructionCancellationRequestIdentification;
+    IEnumerable<IDocumentIdentification34> ICorporateActionInstructionCancellationRequestStatusAdvice002V10.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation144 ICorporateActionInstructionCancellationRequestStatusAdvice002V10.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IInstructionCancellationRequestStatus12Choice> ICorporateActionInstructionCancellationRequestStatusAdvice002V10.InstructionCancellationRequestStatus =>
+        InstructionCancellationRequestStatus;
+    ICorporateActionOption169? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IProtectInstruction8? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.ProtectInstruction =>
+        ProtectInstruction;
+    ICorporateActionNarrative19? ICorporateActionInstructionCancellationRequestStatusAdvice002V10.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestStatusAdvice002V10.SupplementaryData =>
+        SupplementaryData;
 }

@@ -12,5 +12,6 @@ public partial record CorporateActionOption21 : ICorporateActionOption21
 {
     IOptionNumber1Choice ICorporateActionOption21.OptionNumber => OptionNumber;
     ICorporateActionOption4Choice ICorporateActionOption21.OptionType => OptionType;
-    IInstructedOrQuantityToReceive1Choice ICorporateActionOption21.InstructedOrQuantityToReceive => InstructedOrQuantityToReceive;
+    IInstructedOrQuantityToReceive1Choice ICorporateActionOption21.InstructedOrQuantityToReceive =>
+        InstructedOrQuantityToReceive;
 }

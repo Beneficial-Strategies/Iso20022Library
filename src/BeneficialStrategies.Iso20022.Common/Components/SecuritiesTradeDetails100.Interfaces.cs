@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails100 : ISecuritiesTradeDetails100
 {
     IDateAndDateTime2Choice? ISecuritiesTradeDetails100.TradeDate => TradeDate;
-    IDateAndDateTime2Choice ISecuritiesTradeDetails100.OpeningSettlementDate => OpeningSettlementDate;
+    IDateAndDateTime2Choice ISecuritiesTradeDetails100.OpeningSettlementDate =>
+        OpeningSettlementDate;
 }

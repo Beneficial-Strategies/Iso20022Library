@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
-public partial record DTI : IDTI
-{
-}
+public partial record DTI : IDTI { }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U_eg0U7ZEeyGi9JAv6wq7Q")]
 [DisplayName("Merchant Token")]
-public record MerchantToken2
+public partial record MerchantToken2
 {
     /// <summary>
     /// Surrogate value of the PAN.

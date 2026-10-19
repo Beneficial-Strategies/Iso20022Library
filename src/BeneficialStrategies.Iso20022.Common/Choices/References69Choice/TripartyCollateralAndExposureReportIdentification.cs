@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice
     /// </summary>
     [IsoId("_OXngkAzYEeuUZuaHWzkTew")]
     [DisplayName("Triparty Collateral And Exposure Report Identification")]
-    public record TripartyCollateralAndExposureReportIdentification : References69Choice_
+    public partial record TripartyCollateralAndExposureReportIdentification : References69Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

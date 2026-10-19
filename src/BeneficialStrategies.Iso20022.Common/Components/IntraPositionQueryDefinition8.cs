@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_34wQ0eSlEe-qVZLXW4RRBw")]
 [DisplayName("Intra Position Query Definition8")]
-public record IntraPositionQueryDefinition8
+public partial record IntraPositionQueryDefinition8
 {
     /// <summary>
     /// Defines the type of query.

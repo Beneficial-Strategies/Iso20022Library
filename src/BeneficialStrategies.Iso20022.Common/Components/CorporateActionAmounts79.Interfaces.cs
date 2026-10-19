@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CorporateActionAmounts79 : ICorporateActionAmounts79
-{
-}
+public partial record CorporateActionAmounts79 : ICorporateActionAmounts79 { }

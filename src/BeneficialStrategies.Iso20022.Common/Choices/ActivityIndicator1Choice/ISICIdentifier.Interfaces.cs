@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ActivityIndicator1Choice;
 
-public partial record ISICIdentifier : IISICIdentifier
-{
-}
+public partial record ISICIdentifier : IISICIdentifier { }

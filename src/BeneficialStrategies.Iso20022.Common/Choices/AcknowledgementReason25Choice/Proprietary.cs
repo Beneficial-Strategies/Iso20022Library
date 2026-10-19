@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason25Choice
     /// <summary>Specifies additional information about the processed instruction.</summary>
     [IsoId("_XNInWY5bEfC_4ZEXsY0Xyg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : AcknowledgementReason25Choice_
+    public partial record Proprietary : AcknowledgementReason25Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

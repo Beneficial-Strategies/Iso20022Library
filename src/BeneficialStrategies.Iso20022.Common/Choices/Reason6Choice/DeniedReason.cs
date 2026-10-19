@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason6Choice
     /// </summary>
     [IsoId("_itAn9EAAEeCaq78Ig8ATcA")]
     [DisplayName("Denied Reason")]
-    public record DeniedReason : Reason6Choice_
+    public partial record DeniedReason : Reason6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DndRsn")]

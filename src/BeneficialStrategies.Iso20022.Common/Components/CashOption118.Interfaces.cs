@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashOption118 : ICashOption118
 {
-    IIssuerOfferorTaxabilityIndicator2Choice? ICashOption118.IssuerOfferorTaxabilityIndicator => IssuerOfferorTaxabilityIndicator;
+    IIssuerOfferorTaxabilityIndicator2Choice? ICashOption118.IssuerOfferorTaxabilityIndicator =>
+        IssuerOfferorTaxabilityIndicator;
     IGenericIdentification30? ICashOption118.IncomeType => IncomeType;
     IEnumerable<IGenericIdentification30> ICashOption118.OtherIncomeType => OtherIncomeType;
     IEnumerable<IGenericIdentification30> ICashOption118.ExemptionType => ExemptionType;
@@ -18,7 +19,8 @@ public partial record CashOption118 : ICashOption118
     ICashParties43? ICashOption118.CashParties => CashParties;
     ICorporateActionAmounts79 ICashOption118.AmountDetails => AmountDetails;
     ICorporateActionDate99 ICashOption118.DateDetails => DateDetails;
-    IEnumerable<IForeignExchangeTerms40> ICashOption118.ForeignExchangeDetails => ForeignExchangeDetails;
+    IEnumerable<IForeignExchangeTerms40> ICashOption118.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
     ITaxVoucher6? ICashOption118.TaxDocumentationDetails => TaxDocumentationDetails;
     IRate51? ICashOption118.RateAndAmountDetails => RateAndAmountDetails;
     IPriceDetails37? ICashOption118.PriceDetails => PriceDetails;

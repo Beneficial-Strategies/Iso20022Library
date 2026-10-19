@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the preference to income.
 /// </summary>
 [IsoId("_Qu-j49p-Ed-ak6NoX_4Aeg_306435769")]
-public interface IPreferenceToIncome2Choice : IIsoChoice
-{
-}
+public interface IPreferenceToIncome2Choice : IIsoChoice { }

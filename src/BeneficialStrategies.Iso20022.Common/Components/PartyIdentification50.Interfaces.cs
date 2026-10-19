@@ -11,8 +11,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PartyIdentification50 : IPartyIdentification50
 {
     IPartyIdentification48Choice IPartyIdentification50.OwnerIdentification => OwnerIdentification;
-    IEnumerable<IAlternatePartyIdentification2> IPartyIdentification50.AlternateIdentification => AlternateIdentification;
+    IEnumerable<IAlternatePartyIdentification2> IPartyIdentification50.AlternateIdentification =>
+        AlternateIdentification;
     IEnumerable<CountryCode> IPartyIdentification50.NonDomicileCountry => NonDomicileCountry;
-    IFinancialInstrumentQuantity1Choice IPartyIdentification50.OwnedSecuritiesQuantity => OwnedSecuritiesQuantity;
-    IEnumerable<IBeneficiaryCertificationType2Choice> IPartyIdentification50.CertificationType => CertificationType;
+    IFinancialInstrumentQuantity1Choice IPartyIdentification50.OwnedSecuritiesQuantity =>
+        OwnedSecuritiesQuantity;
+    IEnumerable<IBeneficiaryCertificationType2Choice> IPartyIdentification50.CertificationType =>
+        CertificationType;
 }

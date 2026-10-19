@@ -10,11 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DeliverInformation14 : IDeliverInformation14
 {
-    IDateAndDateTimeChoice? IDeliverInformation14.EffectiveSettlementDate => EffectiveSettlementDate;
+    IDateAndDateTimeChoice? IDeliverInformation14.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IEnumerable<ICharge27> IDeliverInformation14.ChargeDetails => ChargeDetails;
     IEnumerable<ICommission22> IDeliverInformation14.CommissionDetails => CommissionDetails;
     IEnumerable<ITax25> IDeliverInformation14.TaxDetails => TaxDetails;
-    IEnumerable<IForeignExchangeTerms7> IDeliverInformation14.ForeignExchangeDetails => ForeignExchangeDetails;
-    IDeliveringPartiesAndAccount9? IDeliverInformation14.SettlementPartiesDetails => SettlementPartiesDetails;
+    IEnumerable<IForeignExchangeTerms7> IDeliverInformation14.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IDeliveringPartiesAndAccount9? IDeliverInformation14.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters4? IDeliverInformation14.PhysicalTransferDetails => PhysicalTransferDetails;
 }

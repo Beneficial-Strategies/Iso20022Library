@@ -20,13 +20,20 @@ public partial record CorporateAction40 : ICorporateAction40
     IConversionTypeFormat4Choice? ICorporateAction40.ConversionType => ConversionType;
     IDistributionTypeFormat8Choice? ICorporateAction40.OccurrenceType => OccurrenceType;
     IEnumerable<IOfferTypeFormat11Choice> ICorporateAction40.OfferType => OfferType;
-    IRenounceableEntitlementStatusTypeFormat4Choice? ICorporateAction40.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
-    IEnumerable<ICorporateActionEventStageFormat20Choice> ICorporateAction40.EventStage => EventStage;
-    IEnumerable<IAdditionalBusinessProcessFormat12Choice> ICorporateAction40.AdditionalBusinessProcessIndicator => AdditionalBusinessProcessIndicator;
-    IEnumerable<ICorporateActionChangeTypeFormat8Choice> ICorporateAction40.ChangeType => ChangeType;
-    IIntermediateSecuritiesDistributionTypeFormat18Choice? ICorporateAction40.IntermediateSecuritiesDistributionType => IntermediateSecuritiesDistributionType;
-    ICapitalGainFormat4Choice? ICorporateAction40.CapitalGainInOutIndicator => CapitalGainInOutIndicator;
-    ITaxableIncomePerShareCalculatedFormat4Choice? ICorporateAction40.TaxableIncomePerShareCalculated => TaxableIncomePerShareCalculated;
+    IRenounceableEntitlementStatusTypeFormat4Choice? ICorporateAction40.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
+    IEnumerable<ICorporateActionEventStageFormat20Choice> ICorporateAction40.EventStage =>
+        EventStage;
+    IEnumerable<IAdditionalBusinessProcessFormat12Choice> ICorporateAction40.AdditionalBusinessProcessIndicator =>
+        AdditionalBusinessProcessIndicator;
+    IEnumerable<ICorporateActionChangeTypeFormat8Choice> ICorporateAction40.ChangeType =>
+        ChangeType;
+    IIntermediateSecuritiesDistributionTypeFormat18Choice? ICorporateAction40.IntermediateSecuritiesDistributionType =>
+        IntermediateSecuritiesDistributionType;
+    ICapitalGainFormat4Choice? ICorporateAction40.CapitalGainInOutIndicator =>
+        CapitalGainInOutIndicator;
+    ITaxableIncomePerShareCalculatedFormat4Choice? ICorporateAction40.TaxableIncomePerShareCalculated =>
+        TaxableIncomePerShareCalculated;
     IElectionTypeFormat4Choice? ICorporateAction40.ElectionType => ElectionType;
     ILotteryTypeFormat5Choice? ICorporateAction40.LotteryType => LotteryType;
     ICertificationTypeFormat4Choice? ICorporateAction40.CertificationType => CertificationType;

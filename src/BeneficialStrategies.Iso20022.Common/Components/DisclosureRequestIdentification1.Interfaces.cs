@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DisclosureRequestIdentification1 : IDisclosureRequestIdentification1
 {
-    ISecurityIdentification19 IDisclosureRequestIdentification1.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IDateFormat46Choice IDisclosureRequestIdentification1.ShareholdersDisclosureRecordDate => ShareholdersDisclosureRecordDate;
+    ISecurityIdentification19 IDisclosureRequestIdentification1.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IDateFormat46Choice IDisclosureRequestIdentification1.ShareholdersDisclosureRecordDate =>
+        ShareholdersDisclosureRecordDate;
 }

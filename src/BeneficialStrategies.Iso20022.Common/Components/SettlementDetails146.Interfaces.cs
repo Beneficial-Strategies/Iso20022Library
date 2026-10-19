@@ -10,14 +10,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementDetails146 : ISettlementDetails146
 {
-    ISecuritiesTransactionType37Choice? ISettlementDetails146.SecuritiesTransactionType => SecuritiesTransactionType;
-    IEnumerable<ISettlementTransactionCondition16Choice> ISettlementDetails146.SettlementTransactionCondition => SettlementTransactionCondition;
+    ISecuritiesTransactionType37Choice? ISettlementDetails146.SecuritiesTransactionType =>
+        SecuritiesTransactionType;
+    IEnumerable<ISettlementTransactionCondition16Choice> ISettlementDetails146.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     IBeneficialOwnership4Choice? ISettlementDetails146.BeneficialOwnership => BeneficialOwnership;
     ICentralCounterPartyEligibility4Choice? ISettlementDetails146.CCPEligibility => CCPEligibility;
     IDeliveryReturn3Choice? ISettlementDetails146.DeliveryReturnReason => DeliveryReturnReason;
     ICashSettlementSystem4Choice? ISettlementDetails146.CashClearingSystem => CashClearingSystem;
     IExposureType16Choice? ISettlementDetails146.ExposureType => ExposureType;
-    IFXStandingInstruction4Choice? ISettlementDetails146.FXStandingInstruction => FXStandingInstruction;
+    IFXStandingInstruction4Choice? ISettlementDetails146.FXStandingInstruction =>
+        FXStandingInstruction;
     IMarketClientSide6Choice? ISettlementDetails146.MarketClientSide => MarketClientSide;
     INettingEligibility4Choice? ISettlementDetails146.NettingEligibility => NettingEligibility;
     IRegistration9Choice? ISettlementDetails146.Registration => Registration;
@@ -27,7 +30,9 @@ public partial record SettlementDetails146 : ISettlementDetails146
     IGenericIdentification30? ISettlementDetails146.StampDutyTaxBasis => StampDutyTaxBasis;
     ITracking4Choice? ISettlementDetails146.Tracking => Tracking;
     ILetterOfGuarantee4Choice? ISettlementDetails146.LetterOfGuarantee => LetterOfGuarantee;
-    IModificationCancellationAllowed4Choice? ISettlementDetails146.ModificationCancellationAllowed => ModificationCancellationAllowed;
-    IGenericIdentification30? ISettlementDetails146.SecuritiesSubBalanceType => SecuritiesSubBalanceType;
+    IModificationCancellationAllowed4Choice? ISettlementDetails146.ModificationCancellationAllowed =>
+        ModificationCancellationAllowed;
+    IGenericIdentification30? ISettlementDetails146.SecuritiesSubBalanceType =>
+        SecuritiesSubBalanceType;
     IGenericIdentification30? ISettlementDetails146.CashSubBalanceType => CashSubBalanceType;
 }

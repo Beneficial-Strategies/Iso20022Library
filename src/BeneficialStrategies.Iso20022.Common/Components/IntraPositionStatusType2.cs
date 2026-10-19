@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ceohpeWXEeWvh8HbDeFFMA")]
 [DisplayName("Intra Position Status Type2")]
-public record IntraPositionStatusType2
+public partial record IntraPositionStatusType2
 {
     /// <summary>
     /// Provides details on the processing status of the transaction.

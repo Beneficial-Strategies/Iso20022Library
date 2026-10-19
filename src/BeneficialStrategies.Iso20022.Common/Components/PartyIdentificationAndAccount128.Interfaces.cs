@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentificationAndAccount128 : IPartyIdentificationAndAccount128
 {
-    IPartyIdentification104Choice IPartyIdentificationAndAccount128.Identification => Identification;
-    IEnumerable<IAlternatePartyIdentification9> IPartyIdentificationAndAccount128.AlternateIdentification => AlternateIdentification;
+    IPartyIdentification104Choice IPartyIdentificationAndAccount128.Identification =>
+        Identification;
+    IEnumerable<IAlternatePartyIdentification9> IPartyIdentificationAndAccount128.AlternateIdentification =>
+        AlternateIdentification;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZBRJsZ9hEe-nbM0aSPcoiQ")]
 [DisplayName("Point Of Interaction Component17")]
-public record PointOfInteractionComponent17
+public partial record PointOfInteractionComponent17
 {
     /// <summary>
     /// Type.

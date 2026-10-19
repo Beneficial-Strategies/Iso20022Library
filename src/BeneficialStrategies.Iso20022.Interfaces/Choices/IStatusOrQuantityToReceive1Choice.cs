@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a status quantity or a quantity to receive for the quantity of financial instrument.
 /// </summary>
 [IsoId("_UGl_-tp-Ed-ak6NoX_4Aeg_1067930232")]
-public interface IStatusOrQuantityToReceive1Choice : IIsoChoice
-{
-}
+public interface IStatusOrQuantityToReceive1Choice : IIsoChoice { }

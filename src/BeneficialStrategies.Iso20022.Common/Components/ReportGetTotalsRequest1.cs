@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mY7jcN6SEeiwsev40qZGEQ")]
 [DisplayName("Report Get Totals Request")]
-public record ReportGetTotalsRequest1
+public partial record ReportGetTotalsRequest1
 {
     /// <summary>
     /// Indicates the hierarchical structure of the report.

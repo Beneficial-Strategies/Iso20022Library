@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vPij8aEoEe-MRKYsaX6JDg")]
 [DisplayName("System Abort8")]
-public record SystemAbort8
+public partial record SystemAbort8
 {
     /// <summary>
     /// Environment.

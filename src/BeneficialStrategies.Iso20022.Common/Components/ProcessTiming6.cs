@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-WUSYTAREeugIJ3Gvoevmg")]
 [DisplayName("Process Timing")]
-public record ProcessTiming6
+public partial record ProcessTiming6
 {
     /// <summary>
     /// Date and time to start the action.

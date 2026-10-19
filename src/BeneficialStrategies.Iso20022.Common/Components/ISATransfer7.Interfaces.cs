@@ -12,5 +12,6 @@ public partial record ISATransfer7 : IISATransfer7
 {
     IDateFormat1Choice? IISATransfer7.RequestedTransferDate => RequestedTransferDate;
     IISAPortfolio1Choice IISATransfer7.Portfolio => Portfolio;
-    IEnumerable<IFinancialInstrument31> IISATransfer7.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
+    IEnumerable<IFinancialInstrument31> IISATransfer7.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
 }

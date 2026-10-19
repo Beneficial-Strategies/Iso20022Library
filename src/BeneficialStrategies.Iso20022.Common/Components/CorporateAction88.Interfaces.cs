@@ -17,22 +17,32 @@ public partial record CorporateAction88 : ICorporateAction88
     ICorporateActionRate122? ICorporateAction88.RateAndAmountDetails => RateAndAmountDetails;
     ICorporateActionPrice85? ICorporateAction88.PriceDetails => PriceDetails;
     ICorporateActionQuantity15? ICorporateAction88.SecuritiesQuantity => SecuritiesQuantity;
-    ICorporateActionSupplementaryIndicators2? ICorporateAction88.SupplementaryIndicators => SupplementaryIndicators;
+    ICorporateActionSupplementaryIndicators2? ICorporateAction88.SupplementaryIndicators =>
+        SupplementaryIndicators;
     IDividendTypeFormat9Choice? ICorporateAction88.DividendType => DividendType;
     IDistributionTypeFormat7Choice? ICorporateAction88.OccurrenceType => OccurrenceType;
     IEnumerable<IOfferTypeFormat18Choice> ICorporateAction88.OfferType => OfferType;
-    IRenounceableEntitlementStatusTypeFormat3Choice? ICorporateAction88.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
-    IEnumerable<ICorporateActionEventStageFormat13Choice> ICorporateAction88.EventStage => EventStage;
-    IEnumerable<IAdditionalBusinessProcessFormat25Choice> ICorporateAction88.AdditionalBusinessProcessIndicator => AdditionalBusinessProcessIndicator;
-    IEnumerable<ICorporateActionChangeTypeFormat5Choice> ICorporateAction88.ChangeType => ChangeType;
-    IIntermediateSecuritiesDistributionTypeFormat19Choice? ICorporateAction88.FollowingEventTypeIndicator => FollowingEventTypeIndicator;
-    ICapitalGainFormat3Choice? ICorporateAction88.CapitalGainInOutIndicator => CapitalGainInOutIndicator;
-    ITaxableIncomePerShareCalculatedFormat3Choice? ICorporateAction88.TaxableIncomePerShareCalculated => TaxableIncomePerShareCalculated;
-    ICorporateActionLotteryEvent1? ICorporateAction88.LotteryEventInformation => LotteryEventInformation;
+    IRenounceableEntitlementStatusTypeFormat3Choice? ICorporateAction88.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
+    IEnumerable<ICorporateActionEventStageFormat13Choice> ICorporateAction88.EventStage =>
+        EventStage;
+    IEnumerable<IAdditionalBusinessProcessFormat25Choice> ICorporateAction88.AdditionalBusinessProcessIndicator =>
+        AdditionalBusinessProcessIndicator;
+    IEnumerable<ICorporateActionChangeTypeFormat5Choice> ICorporateAction88.ChangeType =>
+        ChangeType;
+    IIntermediateSecuritiesDistributionTypeFormat19Choice? ICorporateAction88.FollowingEventTypeIndicator =>
+        FollowingEventTypeIndicator;
+    ICapitalGainFormat3Choice? ICorporateAction88.CapitalGainInOutIndicator =>
+        CapitalGainInOutIndicator;
+    ITaxableIncomePerShareCalculatedFormat3Choice? ICorporateAction88.TaxableIncomePerShareCalculated =>
+        TaxableIncomePerShareCalculated;
+    ICorporateActionLotteryEvent1? ICorporateAction88.LotteryEventInformation =>
+        LotteryEventInformation;
     ICertificationTypeFormat3Choice? ICorporateAction88.CertificationType => CertificationType;
     IConsentTypeFormat4Choice? ICorporateAction88.ConsentType => ConsentType;
     IInformationTypeFormat4Choice? ICorporateAction88.InformationType => InformationType;
-    IEnumerable<IGenericIdentification30> ICorporateAction88.TaxOnNonDistributedProceedsIndicator => TaxOnNonDistributedProceedsIndicator;
+    IEnumerable<IGenericIdentification30> ICorporateAction88.TaxOnNonDistributedProceedsIndicator =>
+        TaxOnNonDistributedProceedsIndicator;
     IDutchAuctionTypeFormat1Choice? ICorporateAction88.DutchAuctionType => DutchAuctionType;
     IEnumerable<ICorporateActionSD26> ICorporateAction88.CertificateDetails => CertificateDetails;
     ICorporateActionNarrative58? ICorporateAction88.AdditionalInformation => AdditionalInformation;

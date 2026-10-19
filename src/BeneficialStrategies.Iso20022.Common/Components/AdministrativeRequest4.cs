@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EZpiAS5KEeunNvJlR_vCbg")]
 [DisplayName("Administrative Request")]
-public record AdministrativeRequest4
+public partial record AdministrativeRequest4
 {
     /// <summary>
     /// Environment of the transaction.

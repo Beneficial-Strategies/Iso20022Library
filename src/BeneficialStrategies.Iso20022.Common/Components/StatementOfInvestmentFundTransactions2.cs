@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ROHW-tp-Ed-ak6NoX_4Aeg_-1658317001")]
 [DisplayName("Statement Of Investment Fund Transactions")]
-public record StatementOfInvestmentFundTransactions2
+public partial record StatementOfInvestmentFundTransactions2
 {
     /// <summary>
     /// General information related to the investment fund statement of transactions that is being cancelled.

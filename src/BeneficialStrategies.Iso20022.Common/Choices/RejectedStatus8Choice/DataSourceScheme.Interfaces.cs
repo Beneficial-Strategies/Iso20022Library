@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus8Choice;
 
-public partial record DataSourceScheme : IDataSourceScheme
-{
-}
+public partial record DataSourceScheme : IDataSourceScheme { }

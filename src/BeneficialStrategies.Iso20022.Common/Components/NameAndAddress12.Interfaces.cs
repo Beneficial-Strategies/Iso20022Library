@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NameAndAddress12 : INameAndAddress12
-{
-}
+public partial record NameAndAddress12 : INameAndAddress12 { }

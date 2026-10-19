@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PreviousYear2Choice;
 
-public partial record SpecificPreviousYears : ISpecificPreviousYears
-{
-}
+public partial record SpecificPreviousYears : ISpecificPreviousYears { }

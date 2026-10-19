@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PowerOfAttorneyRequirements2 : IPowerOfAttorneyRequirements2
 {
-    IEnumerable<PowerOfAttorneyLegalisation1Code> IPowerOfAttorneyRequirements2.LegalRequirement => LegalRequirement;
+    IEnumerable<PowerOfAttorneyLegalisation1Code> IPowerOfAttorneyRequirements2.LegalRequirement =>
+        LegalRequirement;
 }

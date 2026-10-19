@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice
     /// <summary>Specifies the processor transaction identification.</summary>
     [IsoId("_Wt0M1qgzEfCXwLUUylXgrQ")]
     [DisplayName("Processor Transaction Identification")]
-    public record ProcessorTransactionIdentification : References83Choice_
+    public partial record ProcessorTransactionIdentification : References83Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PrcrTxId")]

@@ -19,5 +19,6 @@ public partial record Transfer37 : ITransfer37
     IEnumerable<HoldingsPlanType1Code> ITransfer37.HoldingsPlanType => HoldingsPlanType;
     IFinancialInstrument88 ITransfer37.FinancialInstrumentDetails => FinancialInstrumentDetails;
     IEnumerable<IUnit12> ITransfer37.UnitsDetails => UnitsDetails;
-    IChargePaymentMethod1Choice? ITransfer37.TransferExpensesPaymentType => TransferExpensesPaymentType;
+    IChargePaymentMethod1Choice? ITransfer37.TransferExpensesPaymentType =>
+        TransferExpensesPaymentType;
 }

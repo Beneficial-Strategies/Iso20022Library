@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_R9Wbh9p-Ed-ak6NoX_4Aeg_-1067705678")]
     [DisplayName("Opening Balance 1 Choice")]
-    public abstract record OpeningBalance1Choice_ { }
+    public abstract partial record OpeningBalance1Choice_ { }
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a document identification provided either by the account owner or by the account servicer.
 /// </summary>
 [IsoId("_ThCb1dp-Ed-ak6NoX_4Aeg_1840824208")]
-public interface IDocumentIdentification1Choice : IIsoChoice
-{
-}
+public interface IDocumentIdentification1Choice : IIsoChoice { }

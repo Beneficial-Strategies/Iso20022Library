@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Safekeeping Place Format45Choice.
 /// </summary>
 [IsoId("_jucghJt3Ee-wQIOX0djF2w")]
-public interface ISafekeepingPlaceFormat45Choice : IIsoChoice
-{
-}
+public interface ISafekeepingPlaceFormat45Choice : IIsoChoice { }

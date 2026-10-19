@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Specifies whether the status is provided with a reason or not.</summary>
 [IsoId("b9005a97-e5d0-49c4-9ac3-3ebff8d20b2c")]
-public interface IPendingStatus81Choice : IIsoChoice
-{
-}
+public interface IPendingStatus81Choice : IIsoChoice { }

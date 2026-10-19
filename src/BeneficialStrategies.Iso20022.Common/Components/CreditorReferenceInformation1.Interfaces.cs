@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CreditorReferenceInformation1 : ICreditorReferenceInformation1
 {
-    ICreditorReferenceType1? ICreditorReferenceInformation1.CreditorReferenceType => CreditorReferenceType;
+    ICreditorReferenceType1? ICreditorReferenceInformation1.CreditorReferenceType =>
+        CreditorReferenceType;
 }

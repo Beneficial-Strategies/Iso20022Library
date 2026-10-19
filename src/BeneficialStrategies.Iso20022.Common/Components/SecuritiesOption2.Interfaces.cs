@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption2 : ISecuritiesOption2
 {
-    IFinancialInstrumentQuantity1Choice? ISecuritiesOption2.ConditionalQuantity => ConditionalQuantity;
-    IFinancialInstrumentQuantity1Choice? ISecuritiesOption2.OverAndAboveNormalEnsuredEntitlementQuantity => OverAndAboveNormalEnsuredEntitlementQuantity;
-    IInstructedOrQuantityToReceive1Choice ISecuritiesOption2.InstructedOrQuantityToReceive => InstructedOrQuantityToReceive;
+    IFinancialInstrumentQuantity1Choice? ISecuritiesOption2.ConditionalQuantity =>
+        ConditionalQuantity;
+    IFinancialInstrumentQuantity1Choice? ISecuritiesOption2.OverAndAboveNormalEnsuredEntitlementQuantity =>
+        OverAndAboveNormalEnsuredEntitlementQuantity;
+    IInstructedOrQuantityToReceive1Choice ISecuritiesOption2.InstructedOrQuantityToReceive =>
+        InstructedOrQuantityToReceive;
 }

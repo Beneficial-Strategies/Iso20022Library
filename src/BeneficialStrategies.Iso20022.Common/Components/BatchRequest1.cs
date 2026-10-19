@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dwiMsNuREeiB5uLfkg9ZJA")]
 [DisplayName("Batch Request")]
-public record BatchRequest1
+public partial record BatchRequest1
 {
     /// <summary>
     /// Flag to remove all the transactions.

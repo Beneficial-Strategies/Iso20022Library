@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentification4Choice;
 
-public partial record AustralianExtensiveBranchNetworkIdentification : IAustralianExtensiveBranchNetworkIdentification
-{
-}
+public partial record AustralianExtensiveBranchNetworkIdentification
+    : IAustralianExtensiveBranchNetworkIdentification { }

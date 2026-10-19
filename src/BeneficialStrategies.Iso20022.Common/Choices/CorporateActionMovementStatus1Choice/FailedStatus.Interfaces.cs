@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
 
 public partial record FailedStatus : IFailedStatus
 {
-    IPartyIdentification2Choice? IFailedStatus.AccountOwnerIdentification => AccountOwnerIdentification;
+    IPartyIdentification2Choice? IFailedStatus.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
     IEnumerable<IFailedMovement1> IFailedStatus.ResourceDetails => ResourceDetails;
 }

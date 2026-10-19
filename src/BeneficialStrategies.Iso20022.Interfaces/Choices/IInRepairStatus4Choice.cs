@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the in repair status.
 /// </summary>
 [IsoId("_xydlISY4EeW_ZNn8gbfY7Q")]
-public interface IInRepairStatus4Choice : IIsoChoice
-{
-}
+public interface IInRepairStatus4Choice : IIsoChoice { }

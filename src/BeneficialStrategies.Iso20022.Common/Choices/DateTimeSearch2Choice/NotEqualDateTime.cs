@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimeSearch2Choice
     /// </summary>
     [IsoId("_7Gq0mX3sEeibM9CPDGCw0g")]
     [DisplayName("Not Equal Date Time")]
-    public record NotEqualDateTime : DateTimeSearch2Choice_
+    public partial record NotEqualDateTime : DateTimeSearch2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

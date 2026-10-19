@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 )]
 [IsoId("_4R49hN6cEeiwsev40qZGEQ")]
 [DisplayName("Sale To POI Message Rejection V")]
-public record SaleToPOIMessageRejectionV01 : IOuterRecord
+public partial record SaleToPOIMessageRejectionV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

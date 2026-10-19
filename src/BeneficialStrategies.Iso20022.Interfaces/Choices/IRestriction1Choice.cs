@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the securities restriction information.
 /// </summary>
 [IsoId("_QvkZx9p-Ed-ak6NoX_4Aeg_2055714392")]
-public interface IRestriction1Choice : IIsoChoice
-{
-}
+public interface IRestriction1Choice : IIsoChoice { }

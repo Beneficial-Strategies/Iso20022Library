@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount4Choic
 
 public partial record SecuritiesQuantity : ISecuritiesQuantity
 {
-    IFinancialInstrumentQuantity1Choice? ISecuritiesQuantity.ConditionalQuantity => ConditionalQuantity;
+    IFinancialInstrumentQuantity1Choice? ISecuritiesQuantity.ConditionalQuantity =>
+        ConditionalQuantity;
     IQuantity20Choice ISecuritiesQuantity.InstructedQuantity => InstructedQuantity;
-    IFinancialInstrumentQuantity1Choice? ISecuritiesQuantity.AdditionalRoundUpQuantity => AdditionalRoundUpQuantity;
+    IFinancialInstrumentQuantity1Choice? ISecuritiesQuantity.AdditionalRoundUpQuantity =>
+        AdditionalRoundUpQuantity;
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record DetailedInstructionStatus9 : IDetailedInstructionStatus9
 {
     IPartyIdentification9Choice? IDetailedInstructionStatus9.AccountOwner => AccountOwner;
-    IEnumerable<IPartyIdentification9Choice> IDetailedInstructionStatus9.RightsHolder => RightsHolder;
+    IEnumerable<IPartyIdentification9Choice> IDetailedInstructionStatus9.RightsHolder =>
+        RightsHolder;
     IEnumerable<IVote4> IDetailedInstructionStatus9.VotePerResolution => VotePerResolution;
 }

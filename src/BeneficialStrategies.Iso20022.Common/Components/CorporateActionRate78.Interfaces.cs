@@ -17,7 +17,8 @@ public partial record CorporateActionRate78 : ICorporateActionRate78
     IRateAndAmountFormat50Choice? ICorporateActionRate78.BidInterval => BidInterval;
     IRateFormat12Choice? ICorporateActionRate78.PreviousFactor => PreviousFactor;
     IRateFormat12Choice? ICorporateActionRate78.NextFactor => NextFactor;
-    IRateFormat3Choice? ICorporateActionRate78.ReinvestmentDiscountRateToMarket => ReinvestmentDiscountRateToMarket;
+    IRateFormat3Choice? ICorporateActionRate78.ReinvestmentDiscountRateToMarket =>
+        ReinvestmentDiscountRateToMarket;
     IRateAndAmountFormat43Choice? ICorporateActionRate78.InterestShortfall => InterestShortfall;
     IRateAndAmountFormat43Choice? ICorporateActionRate78.RealisedLoss => RealisedLoss;
     IRateAndAmountFormat43Choice? ICorporateActionRate78.DeclaredRate => DeclaredRate;

@@ -11,20 +11,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransferStatusAndReason8 : ITransferStatusAndReason8
 {
     IAdditionalReference10? ITransferStatusAndReason8.ClientReference => ClientReference;
-    IEnumerable<ITransferStatusType3Choice> ITransferStatusAndReason8.TransferEventType => TransferEventType;
+    IEnumerable<ITransferStatusType3Choice> ITransferStatusAndReason8.TransferEventType =>
+        TransferEventType;
     ITransferStatus5Choice ITransferStatusAndReason8.TransferStatus => TransferStatus;
     IFinancialInstrument63Choice? ITransferStatusAndReason8.Instrument => Instrument;
     IAccount33? ITransferStatusAndReason8.InvestmentAccountDetails => InvestmentAccountDetails;
-    IEnumerable<IIntermediary48> ITransferStatusAndReason8.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary48> ITransferStatusAndReason8.IntermediaryInformation =>
+        IntermediaryInformation;
     IEnumerable<IUnit11> ITransferStatusAndReason8.UnitsDetails => UnitsDetails;
     IConversion2? ITransferStatusAndReason8.Conversion => Conversion;
     IEnumerable<IPaymentInstrument18> ITransferStatusAndReason8.PaymentDetails => PaymentDetails;
-    IEnumerable<IBenefitCrystallisationEvent2> ITransferStatusAndReason8.BenefitCrystallisationEvent => BenefitCrystallisationEvent;
+    IEnumerable<IBenefitCrystallisationEvent2> ITransferStatusAndReason8.BenefitCrystallisationEvent =>
+        BenefitCrystallisationEvent;
     IEnumerable<IDrawdown2> ITransferStatusAndReason8.DrawdownTranche => DrawdownTranche;
     IDrawdown3? ITransferStatusAndReason8.OtherDrawdownInformation => OtherDrawdownInformation;
     IEnumerable<Max350Text> ITransferStatusAndReason8.QueryResponse => QueryResponse;
     IPartyIdentification139? ITransferStatusAndReason8.StatusInitiator => StatusInitiator;
     IPartyIdentification139? ITransferStatusAndReason8.StatusIssuer => StatusIssuer;
     IPartyIdentification139? ITransferStatusAndReason8.StatusRecipient => StatusRecipient;
-    IEnumerable<IAdditionalInformation15> ITransferStatusAndReason8.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> ITransferStatusAndReason8.AdditionalInformation =>
+        AdditionalInformation;
 }

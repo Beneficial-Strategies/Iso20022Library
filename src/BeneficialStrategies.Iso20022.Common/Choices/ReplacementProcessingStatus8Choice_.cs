@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_m8gS4TqqEeWyoP0PbocV1Q")]
     [DisplayName("Replacement Processing Status 8 Choice")]
-    public abstract record ReplacementProcessingStatus8Choice_ { }
+    public abstract partial record ReplacementProcessingStatus8Choice_ { }
 }

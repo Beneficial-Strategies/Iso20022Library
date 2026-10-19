@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightThreshold2Choice;
 
-public partial record AdditionalRightThreshold : IAdditionalRightThreshold
-{
-}
+public partial record AdditionalRightThreshold : IAdditionalRightThreshold { }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uVlPgU3_Eey_VecAUE-C9Q")]
 [DisplayName("Reversal Request")]
-public record ReversalRequest4
+public partial record ReversalRequest4
 {
     /// <summary>
     /// Transaction to reverse.

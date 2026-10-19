@@ -12,5 +12,6 @@ public partial record CorporateActionElection4 : ICorporateActionElection4
 {
     ICorporateActionOption47Choice ICorporateActionElection4.OptionType => OptionType;
     ICorporateActionPrice99? ICorporateActionElection4.PriceDetails => PriceDetails;
-    ISecurityIdentification19? ICorporateActionElection4.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19? ICorporateActionElection4.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

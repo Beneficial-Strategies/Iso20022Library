@@ -11,9 +11,12 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCAElectionAdviceV01 : IAgentCAElectionAdviceV01
 {
     IDocumentIdentification8 IAgentCAElectionAdviceV01.Identification => Identification;
-    IElectionAdviceFunction1 IAgentCAElectionAdviceV01.ElectionAdviceTypeAndLinkage => ElectionAdviceTypeAndLinkage;
-    ICorporateActionInformation1 IAgentCAElectionAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    IElectionAdviceFunction1 IAgentCAElectionAdviceV01.ElectionAdviceTypeAndLinkage =>
+        ElectionAdviceTypeAndLinkage;
+    ICorporateActionInformation1 IAgentCAElectionAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     ICorporateActionElection3 IAgentCAElectionAdviceV01.ElectionDetails => ElectionDetails;
-    ICorporateActionAdditionalInformation1? IAgentCAElectionAdviceV01.AdditionalInformation => AdditionalInformation;
+    ICorporateActionAdditionalInformation1? IAgentCAElectionAdviceV01.AdditionalInformation =>
+        AdditionalInformation;
     IContactPerson1? IAgentCAElectionAdviceV01.ContactDetails => ContactDetails;
 }

@@ -15,6 +15,8 @@ public partial record FinancialInstrument111 : IFinancialInstrument111
     IAdditionalReference10? IFinancialInstrument111.CounterpartyReference => CounterpartyReference;
     IAccount37? IFinancialInstrument111.TransfereeAccount => TransfereeAccount;
     IAccount37? IFinancialInstrument111.Transferor => Transferor;
-    IFundSettlementParameters27? IFinancialInstrument111.SettlementPartiesDetails => SettlementPartiesDetails;
-    IEnumerable<IAdditionalInformation15> IFinancialInstrument111.AdditionalInformation => AdditionalInformation;
+    IFundSettlementParameters27? IFinancialInstrument111.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
+    IEnumerable<IAdditionalInformation15> IFinancialInstrument111.AdditionalInformation =>
+        AdditionalInformation;
 }

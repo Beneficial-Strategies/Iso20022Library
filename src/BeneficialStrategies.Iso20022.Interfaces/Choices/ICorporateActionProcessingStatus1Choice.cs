@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status of the details of the corporate action event.
 /// </summary>
 [IsoId("_Q1O85Np-Ed-ak6NoX_4Aeg_-1142477030")]
-public interface ICorporateActionProcessingStatus1Choice : IIsoChoice
-{
-}
+public interface ICorporateActionProcessingStatus1Choice : IIsoChoice { }

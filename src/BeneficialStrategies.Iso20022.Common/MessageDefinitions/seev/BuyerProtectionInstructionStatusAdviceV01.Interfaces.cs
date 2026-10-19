@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record BuyerProtectionInstructionStatusAdviceV01 : IBuyerProtectionInstructionStatusAdviceV01
+public partial record BuyerProtectionInstructionStatusAdviceV01
+    : IBuyerProtectionInstructionStatusAdviceV01
 {
-    IDocumentIdentification57 IBuyerProtectionInstructionStatusAdviceV01.BuyerProtectionInstruction => BuyerProtectionInstruction;
-    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IInstructionProcessingStatus59Choice> IBuyerProtectionInstructionStatusAdviceV01.InstructionProcessingStatus => InstructionProcessingStatus;
-    IRelatedSettlementInstruction4? IBuyerProtectionInstructionStatusAdviceV01.RelatedSettlementInstruction => RelatedSettlementInstruction;
-    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionStatusAdviceV01.AccountIdentification => AccountIdentification;
-    ICorporateActionElection4? IBuyerProtectionInstructionStatusAdviceV01.CorporateActionElection => CorporateActionElection;
-    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionStatusAdviceV01.SupplementaryData => SupplementaryData;
+    IDocumentIdentification57 IBuyerProtectionInstructionStatusAdviceV01.BuyerProtectionInstruction =>
+        BuyerProtectionInstruction;
+    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IInstructionProcessingStatus59Choice> IBuyerProtectionInstructionStatusAdviceV01.InstructionProcessingStatus =>
+        InstructionProcessingStatus;
+    IRelatedSettlementInstruction4? IBuyerProtectionInstructionStatusAdviceV01.RelatedSettlementInstruction =>
+        RelatedSettlementInstruction;
+    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionStatusAdviceV01.AccountIdentification =>
+        AccountIdentification;
+    ICorporateActionElection4? IBuyerProtectionInstructionStatusAdviceV01.CorporateActionElection =>
+        CorporateActionElection;
+    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionStatusAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -13,5 +13,6 @@ public partial record ReversalOfTransferInConfirmation : IReversalOfTransferInCo
     IAdditionalReference2 IReversalOfTransferInConfirmation.PreviousReference => PreviousReference;
     IAdditionalReference2? IReversalOfTransferInConfirmation.PoolReference => PoolReference;
     IAdditionalReference2? IReversalOfTransferInConfirmation.RelatedReference => RelatedReference;
-    ITransferIn1? IReversalOfTransferInConfirmation.TransferInConfirmationToBeReversed => TransferInConfirmationToBeReversed;
+    ITransferIn1? IReversalOfTransferInConfirmation.TransferInConfirmationToBeReversed =>
+        TransferInConfirmationToBeReversed;
 }

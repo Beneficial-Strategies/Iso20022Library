@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus25Choice
     /// </summary>
     [IsoId("_04af2Tp4EeWVrPy0StzzSg")]
     [DisplayName("Unmatched")]
-    public record Unmatched : MatchingStatus25Choice_
+    public partial record Unmatched : MatchingStatus25Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Umtchd")]

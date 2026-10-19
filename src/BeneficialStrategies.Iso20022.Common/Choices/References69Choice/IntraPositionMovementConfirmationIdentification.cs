@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice
     /// </summary>
     [IsoId("_z_ogNwzXEeuUZuaHWzkTew")]
     [DisplayName("Intra Position Movement Confirmation Identification")]
-    public record IntraPositionMovementConfirmationIdentification : References69Choice_
+    public partial record IntraPositionMovementConfirmationIdentification : References69Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

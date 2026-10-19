@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement status.
 /// </summary>
 [IsoId("_6BJtO5NLEeWGlc8L7oPDIg")]
-public interface ISettlementStatus21Choice : IIsoChoice
-{
-}
+public interface ISettlementStatus21Choice : IIsoChoice { }

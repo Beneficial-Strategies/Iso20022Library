@@ -12,5 +12,6 @@ public partial record PartyIdentificationAndAccount121 : IPartyIdentificationAnd
 {
     IPartyIdentification94Choice IPartyIdentificationAndAccount121.Identification => Identification;
     ICashAccountIdentification5Choice? IPartyIdentificationAndAccount121.CashAccount => CashAccount;
-    IAlternatePartyIdentification7? IPartyIdentificationAndAccount121.AlternateIdentification => AlternateIdentification;
+    IAlternatePartyIdentification7? IPartyIdentificationAndAccount121.AlternateIdentification =>
+        AlternateIdentification;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of proxy allowance.
 /// </summary>
 [IsoId("_7DISd1tgEeSwKe7KuKvXhg")]
-public interface IProxy2Choice : IIsoChoice
-{
-}
+public interface IProxy2Choice : IIsoChoice { }

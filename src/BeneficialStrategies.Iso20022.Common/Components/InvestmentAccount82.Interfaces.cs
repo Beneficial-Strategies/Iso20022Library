@@ -10,11 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InvestmentAccount82 : IInvestmentAccount82
 {
-    IEnumerable<IPartyIdentification139> IInvestmentAccount82.OwnerIdentification => OwnerIdentification;
+    IEnumerable<IPartyIdentification139> IInvestmentAccount82.OwnerIdentification =>
+        OwnerIdentification;
     IPartyIdentification139? IInvestmentAccount82.AccountServicer => AccountServicer;
     ISubAccount5? IInvestmentAccount82.SubAccountDetails => SubAccountDetails;
-    IBlockChainAddressWallet3? IInvestmentAccount82.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IIntermediary43> IInvestmentAccount82.IntermediaryInformation => IntermediaryInformation;
+    IBlockChainAddressWallet3? IInvestmentAccount82.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IIntermediary43> IInvestmentAccount82.IntermediaryInformation =>
+        IntermediaryInformation;
     ISafekeepingPlaceFormat42Choice? IInvestmentAccount82.SafekeepingPlace => SafekeepingPlace;
-    IFundSettlementParameters26? IInvestmentAccount82.SettlementPartiesDetails => SettlementPartiesDetails;
+    IFundSettlementParameters26? IInvestmentAccount82.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
 }

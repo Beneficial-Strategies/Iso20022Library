@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status19Choice
     /// </summary>
     [IsoId("_9HwpozqpEeWyoP0PbocV1Q")]
     [DisplayName("Registration Processing Status")]
-    public record RegistrationProcessingStatus : Status19Choice_
+    public partial record RegistrationProcessingStatus : Status19Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RegnPrcgSts")]

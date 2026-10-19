@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MMY5keFiEeWIA4E9cYSxxQ")]
 [DisplayName("Intra Position Report4")]
-public record IntraPositionReport4
+public partial record IntraPositionReport4
 {
     /// <summary>
     /// Identification of the query message sent to request this statement.

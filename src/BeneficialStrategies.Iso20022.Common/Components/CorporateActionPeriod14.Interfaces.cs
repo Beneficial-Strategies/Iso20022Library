@@ -15,15 +15,24 @@ public partial record CorporateActionPeriod14 : ICorporateActionPeriod14
     IPeriod6Choice? ICorporateActionPeriod14.CompulsoryPurchasePeriod => CompulsoryPurchasePeriod;
     IPeriod6Choice? ICorporateActionPeriod14.BlockingPeriod => BlockingPeriod;
     IPeriod6Choice? ICorporateActionPeriod14.ClaimPeriod => ClaimPeriod;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForBookEntryTransfer => DepositorySuspensionPeriodForBookEntryTransfer;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForDepositAtAgent => DepositorySuspensionPeriodForDepositAtAgent;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForDeposit => DepositorySuspensionPeriodForDeposit;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForPledge => DepositorySuspensionPeriodForPledge;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForSegregation => DepositorySuspensionPeriodForSegregation;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForWithdrawalAtAgent => DepositorySuspensionPeriodForWithdrawalAtAgent;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForWithdrawalInNomineeName => DepositorySuspensionPeriodForWithdrawalInNomineeName;
-    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForWithdrawalInStreetName => DepositorySuspensionPeriodForWithdrawalInStreetName;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForBookEntryTransfer =>
+        DepositorySuspensionPeriodForBookEntryTransfer;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForDepositAtAgent =>
+        DepositorySuspensionPeriodForDepositAtAgent;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForDeposit =>
+        DepositorySuspensionPeriodForDeposit;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForPledge =>
+        DepositorySuspensionPeriodForPledge;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForSegregation =>
+        DepositorySuspensionPeriodForSegregation;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForWithdrawalAtAgent =>
+        DepositorySuspensionPeriodForWithdrawalAtAgent;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForWithdrawalInNomineeName =>
+        DepositorySuspensionPeriodForWithdrawalInNomineeName;
+    IPeriod6Choice? ICorporateActionPeriod14.DepositorySuspensionPeriodForWithdrawalInStreetName =>
+        DepositorySuspensionPeriodForWithdrawalInStreetName;
     IPeriod6Choice? ICorporateActionPeriod14.BookClosurePeriod => BookClosurePeriod;
-    IPeriod6Choice? ICorporateActionPeriod14.CoDepositoriesSuspensionPeriod => CoDepositoriesSuspensionPeriod;
+    IPeriod6Choice? ICorporateActionPeriod14.CoDepositoriesSuspensionPeriod =>
+        CoDepositoriesSuspensionPeriod;
     IPeriod6Choice? ICorporateActionPeriod14.SplitPeriod => SplitPeriod;
 }

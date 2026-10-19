@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
     [IsoId("_RB5f4Np-Ed-ak6NoX_4Aeg_842152344")]
     [DisplayName("Identification And Purpose")]
     [IsoXmlTag("IdAndPurp")]
-    public record IdentificationAndPurpose : AccountIdentificationFormatChoice_
+    public partial record IdentificationAndPurpose : AccountIdentificationFormatChoice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.

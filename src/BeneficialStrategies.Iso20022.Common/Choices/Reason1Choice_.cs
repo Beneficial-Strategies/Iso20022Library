@@ -55,5 +55,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reason1Choice.UnmatchedReason), nameof(Reason1Choice.UnmatchedReason))]
     [IsoId("_UXb4U9p-Ed-ak6NoX_4Aeg_1692385622")]
     [DisplayName("Reason 1 Choice")]
-    public abstract record Reason1Choice_ { }
+    public abstract partial record Reason1Choice_ { }
 }

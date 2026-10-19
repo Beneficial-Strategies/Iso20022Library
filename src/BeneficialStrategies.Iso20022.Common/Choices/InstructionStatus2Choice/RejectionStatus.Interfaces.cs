@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus2Choice;
 
-public partial record RejectionStatus : IRejectionStatus
-{
-}
+public partial record RejectionStatus : IRejectionStatus { }

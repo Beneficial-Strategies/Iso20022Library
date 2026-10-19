@@ -14,5 +14,6 @@ public partial record Instruction4 : IInstruction4
     IProxy7? IInstruction4.Proxy => Proxy;
     IVoteDetails4? IInstruction4.VoteDetails => VoteDetails;
     IEnumerable<IIndividualPerson39> IInstruction4.MeetingAttendee => MeetingAttendee;
-    ISpecificInstructionRequest2? IInstruction4.SpecificInstructionRequest => SpecificInstructionRequest;
+    ISpecificInstructionRequest2? IInstruction4.SpecificInstructionRequest =>
+        SpecificInstructionRequest;
 }

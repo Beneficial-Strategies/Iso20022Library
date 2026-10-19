@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Identification Code for a clearing system, that has not yet been identified in the list of clearing systems.
 /// </summary>
 [IsoId("_TDPFhdp-Ed-ak6NoX_4Aeg_-1854348245")]
-public interface IOtherClearingCodeIdentification : IClearingSystemMemberIdentification2Choice, IIsoChoiceVariant
+public interface IOtherClearingCodeIdentification
+    : IClearingSystemMemberIdentification2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

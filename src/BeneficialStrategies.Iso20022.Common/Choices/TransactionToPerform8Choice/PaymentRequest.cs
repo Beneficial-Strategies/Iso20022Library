@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform8Choice
     /// <summary>Transaction to perform expressed as a payment request.</summary>
     [IsoId("_By-kQbZaEfCUZfsQO4rYeA")]
     [DisplayName("Payment Request")]
-    public record PaymentRequest : TransactionToPerform8Choice_
+    public partial record PaymentRequest : TransactionToPerform8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PmtReq")]

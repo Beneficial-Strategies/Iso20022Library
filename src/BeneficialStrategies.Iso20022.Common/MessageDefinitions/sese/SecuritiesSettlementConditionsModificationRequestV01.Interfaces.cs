@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementConditionsModificationRequestV01 : ISecuritiesSettlementConditionsModificationRequestV01
+public partial record SecuritiesSettlementConditionsModificationRequestV01
+    : ISecuritiesSettlementConditionsModificationRequestV01
 {
-    IDocumentIdentification11 ISecuritiesSettlementConditionsModificationRequestV01.Identification => Identification;
-    IPartyIdentification13Choice? ISecuritiesSettlementConditionsModificationRequestV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 ISecuritiesSettlementConditionsModificationRequestV01.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IRequestDetails1> ISecuritiesSettlementConditionsModificationRequestV01.RequestDetails => RequestDetails;
-    IEnumerable<IAdditionalInformation3> ISecuritiesSettlementConditionsModificationRequestV01.AdditionalInformation => AdditionalInformation;
-    IPartyIdentification10Choice? ISecuritiesSettlementConditionsModificationRequestV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesSettlementConditionsModificationRequestV01.MessageRecipient => MessageRecipient;
-    IEnumerable<IExtension2> ISecuritiesSettlementConditionsModificationRequestV01.Extension => Extension;
+    IDocumentIdentification11 ISecuritiesSettlementConditionsModificationRequestV01.Identification =>
+        Identification;
+    IPartyIdentification13Choice? ISecuritiesSettlementConditionsModificationRequestV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 ISecuritiesSettlementConditionsModificationRequestV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IRequestDetails1> ISecuritiesSettlementConditionsModificationRequestV01.RequestDetails =>
+        RequestDetails;
+    IEnumerable<IAdditionalInformation3> ISecuritiesSettlementConditionsModificationRequestV01.AdditionalInformation =>
+        AdditionalInformation;
+    IPartyIdentification10Choice? ISecuritiesSettlementConditionsModificationRequestV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesSettlementConditionsModificationRequestV01.MessageRecipient =>
+        MessageRecipient;
+    IEnumerable<IExtension2> ISecuritiesSettlementConditionsModificationRequestV01.Extension =>
+        Extension;
 }

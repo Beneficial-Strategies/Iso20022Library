@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_MbQI2NFSEd-BzquC8wXy7w_1168130771")]
 [DisplayName("Accounting Statement Of Holdings V")]
-public record AccountingStatementOfHoldingsV02 : IOuterRecord
+public partial record AccountingStatementOfHoldingsV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

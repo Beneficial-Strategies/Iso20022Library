@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClassificationType33Choice;
 
-public partial record ClassificationFinancialInstrument : IClassificationFinancialInstrument
-{
-}
+public partial record ClassificationFinancialInstrument : IClassificationFinancialInstrument { }

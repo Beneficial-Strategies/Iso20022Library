@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AlternateSecurityIdentification7 : IAlternateSecurityIdentification7
 {
-    IIdentificationSource1Choice IAlternateSecurityIdentification7.IdentificationSource => IdentificationSource;
+    IIdentificationSource1Choice IAlternateSecurityIdentification7.IdentificationSource =>
+        IdentificationSource;
 }

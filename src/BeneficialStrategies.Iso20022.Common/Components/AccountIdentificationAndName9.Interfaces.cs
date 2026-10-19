@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AccountIdentificationAndName9 : IAccountIdentificationAndName9
 {
-    IBlockChainAddressWallet3? IAccountIdentificationAndName9.BlockChainCashWallet => BlockChainCashWallet;
+    IBlockChainAddressWallet3? IAccountIdentificationAndName9.BlockChainCashWallet =>
+        BlockChainCashWallet;
     IGenericAccountIdentification1? IAccountIdentificationAndName9.Other => Other;
 }

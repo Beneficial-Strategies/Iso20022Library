@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification178Choice
     /// </summary>
     [IsoId("_UPdGodgxEeipBO1pkKK6zg")]
     [DisplayName("Any BIC")]
-    public record AnyBIC : PartyIdentification178Choice_
+    public partial record AnyBIC : PartyIdentification178Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

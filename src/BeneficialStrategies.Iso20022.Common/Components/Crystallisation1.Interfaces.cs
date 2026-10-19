@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Crystallisation1 : ICrystallisation1
 {
-    IEnumerable<IAdditionalInformation15> ICrystallisation1.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> ICrystallisation1.AdditionalInformation =>
+        AdditionalInformation;
 }

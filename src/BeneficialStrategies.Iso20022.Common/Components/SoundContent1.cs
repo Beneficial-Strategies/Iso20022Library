@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2WDDcN6-Eeiwsev40qZGEQ")]
 [DisplayName("Sound Content")]
-public record SoundContent1
+public partial record SoundContent1
 {
     /// <summary>
     /// Type of sound to play, as a reference to a sound, a reference to a Message, or a Text to read.

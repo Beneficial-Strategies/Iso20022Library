@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status8Choice
     /// </summary>
     [IsoId("_w2B72kABEeCaq78Ig8ATcA")]
     [DisplayName("Registration Processing Status")]
-    public record RegistrationProcessingStatus : Status8Choice_
+    public partial record RegistrationProcessingStatus : Status8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RegnPrcgSts")]

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementType7Choice
     /// <summary>Statement type expressed as a proprietary code.</summary>
     [IsoId("_wH_J0QJ3EfGAP_FOfstLIw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : StatementType7Choice_
+    public partial record Proprietary : StatementType7Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

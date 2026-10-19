@@ -8,16 +8,24 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesFinancingTransactionDetails32 : ISecuritiesFinancingTransactionDetails32
+public partial record SecuritiesFinancingTransactionDetails32
+    : ISecuritiesFinancingTransactionDetails32
 {
-    ITerminationDate5Choice? ISecuritiesFinancingTransactionDetails32.TerminationDate => TerminationDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails32.RateChangeDate => RateChangeDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails32.EarliestCallBackDate => EarliestCallBackDate;
-    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails32.CommissionCalculationDate => CommissionCalculationDate;
+    ITerminationDate5Choice? ISecuritiesFinancingTransactionDetails32.TerminationDate =>
+        TerminationDate;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails32.RateChangeDate =>
+        RateChangeDate;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails32.EarliestCallBackDate =>
+        EarliestCallBackDate;
+    IDateAndDateTimeChoice? ISecuritiesFinancingTransactionDetails32.CommissionCalculationDate =>
+        CommissionCalculationDate;
     IRateType67Choice? ISecuritiesFinancingTransactionDetails32.RateType => RateType;
-    IRevaluationIndicator4Choice? ISecuritiesFinancingTransactionDetails32.Revaluation => Revaluation;
-    ILegalFramework4Choice? ISecuritiesFinancingTransactionDetails32.LegalFramework => LegalFramework;
-    IInterestComputationMethodFormat5Choice? ISecuritiesFinancingTransactionDetails32.InterestComputationMethod => InterestComputationMethod;
+    IRevaluationIndicator4Choice? ISecuritiesFinancingTransactionDetails32.Revaluation =>
+        Revaluation;
+    ILegalFramework4Choice? ISecuritiesFinancingTransactionDetails32.LegalFramework =>
+        LegalFramework;
+    IInterestComputationMethodFormat5Choice? ISecuritiesFinancingTransactionDetails32.InterestComputationMethod =>
+        InterestComputationMethod;
     IRateName2? ISecuritiesFinancingTransactionDetails32.VariableRateSupport => VariableRateSupport;
     IRate2? ISecuritiesFinancingTransactionDetails32.RepurchaseRate => RepurchaseRate;
     IRate2? ISecuritiesFinancingTransactionDetails32.StockLoanMargin => StockLoanMargin;
@@ -25,11 +33,15 @@ public partial record SecuritiesFinancingTransactionDetails32 : ISecuritiesFinan
     IRate2? ISecuritiesFinancingTransactionDetails32.ChargesRate => ChargesRate;
     IRateOrName2Choice? ISecuritiesFinancingTransactionDetails32.PricingRate => PricingRate;
     IRate2? ISecuritiesFinancingTransactionDetails32.Spread => Spread;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.LocalBrokerCommission => LocalBrokerCommission;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.LocalBrokerCommission =>
+        LocalBrokerCommission;
     IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.DealAmount => DealAmount;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.AccruedInterestAmount => AccruedInterestAmount;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.AccruedInterestAmount =>
+        AccruedInterestAmount;
     IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.ForfeitAmount => ForfeitAmount;
     IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.PremiumAmount => PremiumAmount;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.TerminationAmountPerPieceOfCollateral => TerminationAmountPerPieceOfCollateral;
-    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.TerminationTransactionAmount => TerminationTransactionAmount;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.TerminationAmountPerPieceOfCollateral =>
+        TerminationAmountPerPieceOfCollateral;
+    IAmountAndDirection59? ISecuritiesFinancingTransactionDetails32.TerminationTransactionAmount =>
+        TerminationTransactionAmount;
 }

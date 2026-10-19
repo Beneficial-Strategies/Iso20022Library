@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentificationAndAccount194 : IPartyIdentificationAndAccount194
 {
-    IPartyIdentification123Choice IPartyIdentificationAndAccount194.Identification => Identification;
-    IAlternatePartyIdentification7? IPartyIdentificationAndAccount194.AlternateIdentification => AlternateIdentification;
-    ISecuritiesAccount19? IPartyIdentificationAndAccount194.SafekeepingAccount => SafekeepingAccount;
+    IPartyIdentification123Choice IPartyIdentificationAndAccount194.Identification =>
+        Identification;
+    IAlternatePartyIdentification7? IPartyIdentificationAndAccount194.AlternateIdentification =>
+        AlternateIdentification;
+    ISecuritiesAccount19? IPartyIdentificationAndAccount194.SafekeepingAccount =>
+        SafekeepingAccount;
     IDateAndDateTime2Choice? IPartyIdentificationAndAccount194.ProcessingDate => ProcessingDate;
-    IPartyTextInformation6? IPartyIdentificationAndAccount194.AdditionalInformation => AdditionalInformation;
+    IPartyTextInformation6? IPartyIdentificationAndAccount194.AdditionalInformation =>
+        AdditionalInformation;
 }

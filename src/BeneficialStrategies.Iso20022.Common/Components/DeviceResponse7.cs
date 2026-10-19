@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zU-7EZJEEe6RsYhlPIxpVw")]
 [DisplayName("Device Response7")]
-public record DeviceResponse7
+public partial record DeviceResponse7
 {
     /// <summary>
     /// Environment.

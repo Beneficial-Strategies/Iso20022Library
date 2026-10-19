@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of cash asset.
 /// </summary>
 [IsoId("_OWCEUEyIEeir2sRRVd9XhA")]
-public interface ICashAssetType1Choice : IIsoChoice
-{
-}
+public interface ICashAssetType1Choice : IIsoChoice { }

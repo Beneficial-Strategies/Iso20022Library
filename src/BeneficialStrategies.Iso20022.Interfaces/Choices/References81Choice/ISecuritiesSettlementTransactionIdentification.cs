@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References81Choice;
 /// <summary>
 /// Securities Settlement Transaction Identification.
 /// </summary>
-public interface ISecuritiesSettlementTransactionIdentification : IReferences81Choice, IIsoChoiceVariant
+public interface ISecuritiesSettlementTransactionIdentification
+    : IReferences81Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

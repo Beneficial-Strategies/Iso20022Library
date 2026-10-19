@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat23Choice;
 
-public partial record AmountAndRateStatus : IAmountAndRateStatus
-{
-}
+public partial record AmountAndRateStatus : IAmountAndRateStatus { }

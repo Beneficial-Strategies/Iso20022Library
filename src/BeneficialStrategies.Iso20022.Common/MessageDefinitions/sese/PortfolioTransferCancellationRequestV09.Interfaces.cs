@@ -8,12 +8,18 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record PortfolioTransferCancellationRequestV09 : IPortfolioTransferCancellationRequestV09
+public partial record PortfolioTransferCancellationRequestV09
+    : IPortfolioTransferCancellationRequestV09
 {
-    IMessageIdentification1 IPortfolioTransferCancellationRequestV09.MessageReference => MessageReference;
+    IMessageIdentification1 IPortfolioTransferCancellationRequestV09.MessageReference =>
+        MessageReference;
     IAdditionalReference11? IPortfolioTransferCancellationRequestV09.PoolReference => PoolReference;
-    IAdditionalReference10? IPortfolioTransferCancellationRequestV09.PreviousReference => PreviousReference;
-    IAdditionalReference10? IPortfolioTransferCancellationRequestV09.RelatedReference => RelatedReference;
-    ITransferReference14 IPortfolioTransferCancellationRequestV09.TransferReferences => TransferReferences;
-    IMarketPracticeVersion1? IPortfolioTransferCancellationRequestV09.MarketPracticeVersion => MarketPracticeVersion;
+    IAdditionalReference10? IPortfolioTransferCancellationRequestV09.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference10? IPortfolioTransferCancellationRequestV09.RelatedReference =>
+        RelatedReference;
+    ITransferReference14 IPortfolioTransferCancellationRequestV09.TransferReferences =>
+        TransferReferences;
+    IMarketPracticeVersion1? IPortfolioTransferCancellationRequestV09.MarketPracticeVersion =>
+        MarketPracticeVersion;
 }

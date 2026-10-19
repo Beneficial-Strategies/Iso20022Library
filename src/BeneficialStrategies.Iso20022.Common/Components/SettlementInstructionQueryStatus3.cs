@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X5k3wWdnEemMLeaDfmIfIA")]
 [DisplayName("Settlement Instruction Query Status3")]
-public record SettlementInstructionQueryStatus3
+public partial record SettlementInstructionQueryStatus3
 {
     /// <summary>
     /// Defines the status type of query criteria.

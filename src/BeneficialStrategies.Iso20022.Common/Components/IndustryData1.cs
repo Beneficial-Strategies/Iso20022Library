@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3neKIOzXEeiojesOXOKoug")]
 [DisplayName("Industry Data")]
-public record IndustryData1
+public partial record IndustryData1
 {
     /// <summary>
     /// Identification of the set of data to exchange.

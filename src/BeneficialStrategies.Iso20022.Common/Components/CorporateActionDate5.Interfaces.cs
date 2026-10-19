@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionDate5 : ICorporateActionDate5
 {
-    IDateFormat4Choice? ICorporateActionDate5.ForeignExchangeRateFixingDate => ForeignExchangeRateFixingDate;
+    IDateFormat4Choice? ICorporateActionDate5.ForeignExchangeRateFixingDate =>
+        ForeignExchangeRateFixingDate;
     IDateFormat4Choice? ICorporateActionDate5.ValueDate => ValueDate;
     IDateFormat4Choice? ICorporateActionDate5.PaymentDate => PaymentDate;
     IDateFormat4Choice? ICorporateActionDate5.EarliestPaymentDate => EarliestPaymentDate;

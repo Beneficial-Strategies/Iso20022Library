@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentification4Choice;
 
-public partial record SwissBCIdentification : ISwissBCIdentification
-{
-}
+public partial record SwissBCIdentification : ISwissBCIdentification { }

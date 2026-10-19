@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus3Choi
     [IsoId("_UZg799p-Ed-ak6NoX_4Aeg_-41941340")]
     [DisplayName("Modification Requested")]
     [IsoXmlTag("ModReqd")]
-    public record ModificationRequested : InstructionProcessingStatus3Choice_
+    public partial record ModificationRequested : InstructionProcessingStatus3Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventReference4Choice;
 
-public partial record LinkedCorporateActionIdentification : ILinkedCorporateActionIdentification
-{
-}
+public partial record LinkedCorporateActionIdentification : ILinkedCorporateActionIdentification { }

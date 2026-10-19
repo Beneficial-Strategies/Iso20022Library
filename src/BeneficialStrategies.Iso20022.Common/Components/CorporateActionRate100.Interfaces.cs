@@ -11,14 +11,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionRate100 : ICorporateActionRate100
 {
     IRateAndAmountFormat37Choice? ICorporateActionRate100.AdditionalTax => AdditionalTax;
-    IEnumerable<IGrossDividendRateFormat36Choice> ICorporateActionRate100.GrossDividendRate => GrossDividendRate;
-    IEnumerable<INetDividendRateFormat38Choice> ICorporateActionRate100.NetDividendRate => NetDividendRate;
+    IEnumerable<IGrossDividendRateFormat36Choice> ICorporateActionRate100.GrossDividendRate =>
+        GrossDividendRate;
+    IEnumerable<INetDividendRateFormat38Choice> ICorporateActionRate100.NetDividendRate =>
+        NetDividendRate;
     IRateAndAmountFormat37Choice? ICorporateActionRate100.IndexFactor => IndexFactor;
-    IEnumerable<IInterestRateUsedForPaymentFormat8Choice> ICorporateActionRate100.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IRateFormat3Choice? ICorporateActionRate100.MaximumAllowedOversubscriptionRate => MaximumAllowedOversubscriptionRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat8Choice> ICorporateActionRate100.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IRateFormat3Choice? ICorporateActionRate100.MaximumAllowedOversubscriptionRate =>
+        MaximumAllowedOversubscriptionRate;
     IRateFormat3Choice? ICorporateActionRate100.ProrationRate => ProrationRate;
-    IEnumerable<IRateAndAmountFormat41Choice> ICorporateActionRate100.WithholdingTaxRate => WithholdingTaxRate;
-    IEnumerable<IRateAndAmountFormat41Choice> ICorporateActionRate100.SecondLevelTax => SecondLevelTax;
-    IEnumerable<IRateTypeAndAmountAndStatus26> ICorporateActionRate100.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
+    IEnumerable<IRateAndAmountFormat41Choice> ICorporateActionRate100.WithholdingTaxRate =>
+        WithholdingTaxRate;
+    IEnumerable<IRateAndAmountFormat41Choice> ICorporateActionRate100.SecondLevelTax =>
+        SecondLevelTax;
+    IEnumerable<IRateTypeAndAmountAndStatus26> ICorporateActionRate100.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
     IRateAndAmountFormat37Choice? ICorporateActionRate100.TaxOnIncome => TaxOnIncome;
 }

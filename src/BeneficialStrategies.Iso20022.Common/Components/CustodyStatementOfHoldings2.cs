@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RPKf0tp-Ed-ak6NoX_4Aeg_1115213683")]
 [DisplayName("Custody Statement Of Holdings")]
-public record CustodyStatementOfHoldings2
+public partial record CustodyStatementOfHoldings2
 {
     /// <summary>
     /// General information related to the custody statement of holdings that is being cancelled.

@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record MarketClaimCancellationRequestStatusAdviceV03 : IMarketClaimCancellationRequestStatusAdviceV03
+public partial record MarketClaimCancellationRequestStatusAdviceV03
+    : IMarketClaimCancellationRequestStatusAdviceV03
 {
-    IDocumentIdentification9 IMarketClaimCancellationRequestStatusAdviceV03.MarketClaimCancellationRequestIdentification => MarketClaimCancellationRequestIdentification;
-    IReferences26 IMarketClaimCancellationRequestStatusAdviceV03.TransactionReference => TransactionReference;
-    ICorporateActionGeneralInformation181 IMarketClaimCancellationRequestStatusAdviceV03.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IMarketClaimCancellationRequestStatus2Choice IMarketClaimCancellationRequestStatusAdviceV03.MarketClaimCancellationRequestStatus => MarketClaimCancellationRequestStatus;
-    ICorporateActionOption234? IMarketClaimCancellationRequestStatusAdviceV03.MarketClaimDetails => MarketClaimDetails;
-    IEnumerable<ISupplementaryData1> IMarketClaimCancellationRequestStatusAdviceV03.SupplementaryData => SupplementaryData;
+    IDocumentIdentification9 IMarketClaimCancellationRequestStatusAdviceV03.MarketClaimCancellationRequestIdentification =>
+        MarketClaimCancellationRequestIdentification;
+    IReferences26 IMarketClaimCancellationRequestStatusAdviceV03.TransactionReference =>
+        TransactionReference;
+    ICorporateActionGeneralInformation181 IMarketClaimCancellationRequestStatusAdviceV03.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IMarketClaimCancellationRequestStatus2Choice IMarketClaimCancellationRequestStatusAdviceV03.MarketClaimCancellationRequestStatus =>
+        MarketClaimCancellationRequestStatus;
+    ICorporateActionOption234? IMarketClaimCancellationRequestStatusAdviceV03.MarketClaimDetails =>
+        MarketClaimDetails;
+    IEnumerable<ISupplementaryData1> IMarketClaimCancellationRequestStatusAdviceV03.SupplementaryData =>
+        SupplementaryData;
 }

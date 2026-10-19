@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for the identification ofa financial institution.
 /// </summary>
 [IsoId("__IfgtbNIEeejueAciesPMA")]
-public interface IFinancialInstitutionIdentification9Choice : IIsoChoice
-{
-}
+public interface IFinancialInstitutionIdentification9Choice : IIsoChoice { }

@@ -13,15 +13,19 @@ public partial record RateDetails24 : IRateDetails24
     IRateAndAmountFormat43Choice? IRateDetails24.AdditionalTax => AdditionalTax;
     IRateAndAmountFormat43Choice? IRateDetails24.ChargesFees => ChargesFees;
     IRateAndAmountFormat43Choice? IRateDetails24.FullyFrankedRate => FullyFrankedRate;
-    IEnumerable<IGrossDividendRateFormat24Choice> IRateDetails24.GrossDividendRate => GrossDividendRate;
-    ISolicitationFeeRateFormat9Choice? IRateDetails24.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    IEnumerable<IGrossDividendRateFormat24Choice> IRateDetails24.GrossDividendRate =>
+        GrossDividendRate;
+    ISolicitationFeeRateFormat9Choice? IRateDetails24.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateAndAmountFormat43Choice? IRateDetails24.ThirdPartyIncentiveRate => ThirdPartyIncentiveRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat9Choice> IRateDetails24.InterestRateUsedForPayment => InterestRateUsedForPayment;
+    IEnumerable<IInterestRateUsedForPaymentFormat9Choice> IRateDetails24.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
     IEnumerable<INetDividendRateFormat26Choice> IRateDetails24.NetDividendRate => NetDividendRate;
     IRateAndAmountFormat43Choice? IRateDetails24.NonResidentRate => NonResidentRate;
     ISolicitationFeeRateFormat9Choice? IRateDetails24.SolicitationFeeRate => SolicitationFeeRate;
     IEnumerable<ITaxCreditRateFormat9Choice> IRateDetails24.TaxCreditRate => TaxCreditRate;
-    IEnumerable<IRateAndAmountFormat45Choice> IRateDetails24.WithholdingTaxRate => WithholdingTaxRate;
+    IEnumerable<IRateAndAmountFormat45Choice> IRateDetails24.WithholdingTaxRate =>
+        WithholdingTaxRate;
     IEnumerable<IRateAndAmountFormat45Choice> IRateDetails24.SecondLevelTax => SecondLevelTax;
     IRateAndAmountFormat43Choice? IRateDetails24.TaxOnIncome => TaxOnIncome;
 }

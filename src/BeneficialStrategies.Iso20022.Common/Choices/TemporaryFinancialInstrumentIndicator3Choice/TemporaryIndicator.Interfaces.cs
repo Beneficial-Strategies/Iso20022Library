@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TemporaryFinancialInstrumentIndicator3Choice;
 
-public partial record TemporaryIndicator : ITemporaryIndicator
-{
-}
+public partial record TemporaryIndicator : ITemporaryIndicator { }

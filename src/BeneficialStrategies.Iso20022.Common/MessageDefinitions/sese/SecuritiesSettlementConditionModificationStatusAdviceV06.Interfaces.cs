@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementConditionModificationStatusAdviceV06 : ISecuritiesSettlementConditionModificationStatusAdviceV06
+public partial record SecuritiesSettlementConditionModificationStatusAdviceV06
+    : ISecuritiesSettlementConditionModificationStatusAdviceV06
 {
-    IIdentification1 ISecuritiesSettlementConditionModificationStatusAdviceV06.RequestReference => RequestReference;
-    IPartyIdentification36Choice? ISecuritiesSettlementConditionModificationStatusAdviceV06.AccountOwner => AccountOwner;
-    ISecuritiesAccount13? ISecuritiesSettlementConditionModificationStatusAdviceV06.SafekeepingAccount => SafekeepingAccount;
-    IRequestDetails13? ISecuritiesSettlementConditionModificationStatusAdviceV06.RequestDetails => RequestDetails;
-    IProcessingStatus44Choice ISecuritiesSettlementConditionModificationStatusAdviceV06.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionModificationStatusAdviceV06.SupplementaryData => SupplementaryData;
+    IIdentification1 ISecuritiesSettlementConditionModificationStatusAdviceV06.RequestReference =>
+        RequestReference;
+    IPartyIdentification36Choice? ISecuritiesSettlementConditionModificationStatusAdviceV06.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13? ISecuritiesSettlementConditionModificationStatusAdviceV06.SafekeepingAccount =>
+        SafekeepingAccount;
+    IRequestDetails13? ISecuritiesSettlementConditionModificationStatusAdviceV06.RequestDetails =>
+        RequestDetails;
+    IProcessingStatus44Choice ISecuritiesSettlementConditionModificationStatusAdviceV06.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionModificationStatusAdviceV06.SupplementaryData =>
+        SupplementaryData;
 }

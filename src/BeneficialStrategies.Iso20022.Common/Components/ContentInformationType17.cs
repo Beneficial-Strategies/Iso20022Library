@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QcstMds6Eee9e6xduATmQg")]
 [DisplayName("Content Information Type")]
-public record ContentInformationType17
+public partial record ContentInformationType17
 {
     /// <summary>
     /// Type of data protection.

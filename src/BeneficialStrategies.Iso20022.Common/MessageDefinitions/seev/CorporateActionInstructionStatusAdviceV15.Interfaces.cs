@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionStatusAdviceV15 : ICorporateActionInstructionStatusAdviceV15
+public partial record CorporateActionInstructionStatusAdviceV15
+    : ICorporateActionInstructionStatusAdviceV15
 {
-    IDocumentIdentification9? ICorporateActionInstructionStatusAdviceV15.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification33> ICorporateActionInstructionStatusAdviceV15.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation182 ICorporateActionInstructionStatusAdviceV15.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IInstructionProcessingStatus55Choice> ICorporateActionInstructionStatusAdviceV15.InstructionProcessingStatus => InstructionProcessingStatus;
-    ICorporateActionOption238? ICorporateActionInstructionStatusAdviceV15.CorporateActionInstruction => CorporateActionInstruction;
-    IProtectInstruction2? ICorporateActionInstructionStatusAdviceV15.ProtectInstruction => ProtectInstruction;
-    ICorporateActionNarrative10? ICorporateActionInstructionStatusAdviceV15.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionStatusAdviceV15.SupplementaryData => SupplementaryData;
+    IDocumentIdentification9? ICorporateActionInstructionStatusAdviceV15.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification33> ICorporateActionInstructionStatusAdviceV15.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation182 ICorporateActionInstructionStatusAdviceV15.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IInstructionProcessingStatus55Choice> ICorporateActionInstructionStatusAdviceV15.InstructionProcessingStatus =>
+        InstructionProcessingStatus;
+    ICorporateActionOption238? ICorporateActionInstructionStatusAdviceV15.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IProtectInstruction2? ICorporateActionInstructionStatusAdviceV15.ProtectInstruction =>
+        ProtectInstruction;
+    ICorporateActionNarrative10? ICorporateActionInstructionStatusAdviceV15.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionStatusAdviceV15.SupplementaryData =>
+        SupplementaryData;
 }

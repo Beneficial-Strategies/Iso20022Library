@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationSatus3Choice
     /// </summary>
     [IsoId("_EAk7gTqqEeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public record Code : AllocationSatus3Choice_
+    public partial record Code : AllocationSatus3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

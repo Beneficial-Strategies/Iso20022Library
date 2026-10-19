@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PriceDetails29 : IPriceDetails29
 {
-    IPriceFormat59Choice? IPriceDetails29.GenericCashPricePaidPerProduct => GenericCashPricePaidPerProduct;
-    IPriceFormat70Choice? IPriceDetails29.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
+    IPriceFormat59Choice? IPriceDetails29.GenericCashPricePaidPerProduct =>
+        GenericCashPricePaidPerProduct;
+    IPriceFormat70Choice? IPriceDetails29.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
 }

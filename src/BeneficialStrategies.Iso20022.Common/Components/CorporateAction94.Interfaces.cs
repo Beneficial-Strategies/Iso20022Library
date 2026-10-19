@@ -20,19 +20,27 @@ public partial record CorporateAction94 : ICorporateAction94
     IEventSequenceTypeFormat1Choice? ICorporateAction94.EventSequenceType => EventSequenceType;
     IDistributionTypeFormat7Choice? ICorporateAction94.OccurrenceType => OccurrenceType;
     IEnumerable<IOfferTypeFormat18Choice> ICorporateAction94.OfferType => OfferType;
-    IRenounceableEntitlementStatusTypeFormat3Choice? ICorporateAction94.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
-    IEnumerable<ICorporateActionEventStageFormat13Choice> ICorporateAction94.EventStage => EventStage;
-    IEnumerable<IAdditionalBusinessProcessFormat17Choice> ICorporateAction94.AdditionalBusinessProcessIndicator => AdditionalBusinessProcessIndicator;
-    IEnumerable<ICorporateActionChangeTypeFormat5Choice> ICorporateAction94.ChangeType => ChangeType;
-    IIntermediateSecuritiesDistributionTypeFormat19Choice? ICorporateAction94.FollowingEventTypeIndicator => FollowingEventTypeIndicator;
-    ICapitalGainFormat3Choice? ICorporateAction94.CapitalGainInOutIndicator => CapitalGainInOutIndicator;
-    ITaxableIncomePerShareCalculatedFormat3Choice? ICorporateAction94.TaxableIncomePerShareCalculated => TaxableIncomePerShareCalculated;
+    IRenounceableEntitlementStatusTypeFormat3Choice? ICorporateAction94.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
+    IEnumerable<ICorporateActionEventStageFormat13Choice> ICorporateAction94.EventStage =>
+        EventStage;
+    IEnumerable<IAdditionalBusinessProcessFormat17Choice> ICorporateAction94.AdditionalBusinessProcessIndicator =>
+        AdditionalBusinessProcessIndicator;
+    IEnumerable<ICorporateActionChangeTypeFormat5Choice> ICorporateAction94.ChangeType =>
+        ChangeType;
+    IIntermediateSecuritiesDistributionTypeFormat19Choice? ICorporateAction94.FollowingEventTypeIndicator =>
+        FollowingEventTypeIndicator;
+    ICapitalGainFormat3Choice? ICorporateAction94.CapitalGainInOutIndicator =>
+        CapitalGainInOutIndicator;
+    ITaxableIncomePerShareCalculatedFormat3Choice? ICorporateAction94.TaxableIncomePerShareCalculated =>
+        TaxableIncomePerShareCalculated;
     IElectionTypeFormat3Choice? ICorporateAction94.ElectionType => ElectionType;
     ILotteryTypeFormat4Choice? ICorporateAction94.LotteryType => LotteryType;
     ICertificationTypeFormat3Choice? ICorporateAction94.CertificationType => CertificationType;
     IConsentTypeFormat4Choice? ICorporateAction94.ConsentType => ConsentType;
     IInformationTypeFormat4Choice? ICorporateAction94.InformationType => InformationType;
-    IEnumerable<IGenericIdentification30> ICorporateAction94.TaxOnNonDistributedProceedsIndicator => TaxOnNonDistributedProceedsIndicator;
+    IEnumerable<IGenericIdentification30> ICorporateAction94.TaxOnNonDistributedProceedsIndicator =>
+        TaxOnNonDistributedProceedsIndicator;
     IDutchAuctionTypeFormat1Choice? ICorporateAction94.DutchAuctionType => DutchAuctionType;
     ICorporateActionNarrative58? ICorporateAction94.AdditionalInformation => AdditionalInformation;
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllegementStatus4Choice
     [IsoId("_6MjsN5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AllegementStatus4Choice_
+    public partial record Proprietary : AllegementStatus4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

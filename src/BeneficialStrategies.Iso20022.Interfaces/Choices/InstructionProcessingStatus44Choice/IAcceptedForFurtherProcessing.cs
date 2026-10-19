@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus44Cho
 /// Provides status information related to an instruction request that is accepted. This means that the instruction has been received, is processable and has been validated for further processing.
 /// </summary>
 [IsoId("_9FAmAx9QEeuFz_FaCzCLgQ")]
-public interface IAcceptedForFurtherProcessing : IInstructionProcessingStatus44Choice, IIsoChoiceVariant
+public interface IAcceptedForFurtherProcessing
+    : IInstructionProcessingStatus44Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("AccptdForFrthrPrcg")]

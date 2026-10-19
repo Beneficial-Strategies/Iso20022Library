@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionPreliminaryAdviceType1 : ICorporateActionPreliminaryAdviceType1
 {
-    ICorporateActionProcessingStatus1Choice ICorporateActionPreliminaryAdviceType1.ProcessingStatus => ProcessingStatus;
+    ICorporateActionProcessingStatus1Choice ICorporateActionPreliminaryAdviceType1.ProcessingStatus =>
+        ProcessingStatus;
 }

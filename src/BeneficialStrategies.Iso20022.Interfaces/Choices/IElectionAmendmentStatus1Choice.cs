@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the different statuses of an election amendment request.
 /// </summary>
 [IsoId("_RiiHxdp-Ed-ak6NoX_4Aeg_1987378998")]
-public interface IElectionAmendmentStatus1Choice : IIsoChoice
-{
-}
+public interface IElectionAmendmentStatus1Choice : IIsoChoice { }

@@ -12,8 +12,12 @@ public partial record CorporateActionPrice6 : ICorporateActionPrice6
 {
     IPriceFormat11Choice? ICorporateActionPrice6.CashInLieuOfSharePrice => CashInLieuOfSharePrice;
     IPriceFormat8Choice? ICorporateActionPrice6.ExercisePrice => ExercisePrice;
-    IEnumerable<IPriceFormat9Choice> ICorporateActionPrice6.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
-    IPriceFormat11Choice? ICorporateActionPrice6.OverSubscriptionDepositPrice => OverSubscriptionDepositPrice;
-    IPriceFormat11Choice? ICorporateActionPrice6.GenericCashPricePaidPerProduct => GenericCashPricePaidPerProduct;
-    IAmountPrice3? ICorporateActionPrice6.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
+    IEnumerable<IPriceFormat9Choice> ICorporateActionPrice6.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
+    IPriceFormat11Choice? ICorporateActionPrice6.OverSubscriptionDepositPrice =>
+        OverSubscriptionDepositPrice;
+    IPriceFormat11Choice? ICorporateActionPrice6.GenericCashPricePaidPerProduct =>
+        GenericCashPricePaidPerProduct;
+    IAmountPrice3? ICorporateActionPrice6.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
 }

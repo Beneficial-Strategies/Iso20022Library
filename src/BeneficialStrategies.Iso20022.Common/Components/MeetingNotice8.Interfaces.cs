@@ -14,15 +14,23 @@ public partial record MeetingNotice8 : IMeetingNotice8
     IDateAndDateTime2Choice? IMeetingNotice8.AnnouncementDate => AnnouncementDate;
     IEnumerable<IParticipationMethod2> IMeetingNotice8.Participation => Participation;
     IAttendance2? IMeetingNotice8.Attendance => Attendance;
-    IEnumerable<Max2048Text> IMeetingNotice8.AdditionalDocumentationURLAddress => AdditionalDocumentationURLAddress;
-    IEnumerable<IAdditionalRights3> IMeetingNotice8.AdditionalProcedureDetails => AdditionalProcedureDetails;
-    IFinancialInstrumentQuantity18Choice? IMeetingNotice8.TotalNumberOfSecuritiesOutstanding => TotalNumberOfSecuritiesOutstanding;
-    IPostalAddress1? IMeetingNotice8.ProxyAppointmentNotificationAddress => ProxyAppointmentNotificationAddress;
+    IEnumerable<Max2048Text> IMeetingNotice8.AdditionalDocumentationURLAddress =>
+        AdditionalDocumentationURLAddress;
+    IEnumerable<IAdditionalRights3> IMeetingNotice8.AdditionalProcedureDetails =>
+        AdditionalProcedureDetails;
+    IFinancialInstrumentQuantity18Choice? IMeetingNotice8.TotalNumberOfSecuritiesOutstanding =>
+        TotalNumberOfSecuritiesOutstanding;
+    IPostalAddress1? IMeetingNotice8.ProxyAppointmentNotificationAddress =>
+        ProxyAppointmentNotificationAddress;
     IProxy5Choice? IMeetingNotice8.ProxyChoice_ => ProxyChoice_;
-    IEnumerable<IMeetingContactPerson3> IMeetingNotice8.ContactPersonDetails => ContactPersonDetails;
+    IEnumerable<IMeetingContactPerson3> IMeetingNotice8.ContactPersonDetails =>
+        ContactPersonDetails;
     IDateFormat3Choice? IMeetingNotice8.ResultPublicationDate => ResultPublicationDate;
-    IDateFormat60Choice? IMeetingNotice8.SecuritiesBlockingPeriodEndDate => SecuritiesBlockingPeriodEndDate;
+    IDateFormat60Choice? IMeetingNotice8.SecuritiesBlockingPeriodEndDate =>
+        SecuritiesBlockingPeriodEndDate;
     IDateFormat1? IMeetingNotice8.EntitlementFixingDate => EntitlementFixingDate;
-    IDateFormat58Choice? IMeetingNotice8.RegistrationSecuritiesDeadline => RegistrationSecuritiesDeadline;
-    IDateFormat58Choice? IMeetingNotice8.RegistrationSecuritiesMarketDeadline => RegistrationSecuritiesMarketDeadline;
+    IDateFormat58Choice? IMeetingNotice8.RegistrationSecuritiesDeadline =>
+        RegistrationSecuritiesDeadline;
+    IDateFormat58Choice? IMeetingNotice8.RegistrationSecuritiesMarketDeadline =>
+        RegistrationSecuritiesMarketDeadline;
 }

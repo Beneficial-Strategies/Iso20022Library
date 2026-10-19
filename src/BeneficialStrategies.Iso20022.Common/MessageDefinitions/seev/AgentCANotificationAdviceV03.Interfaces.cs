@@ -11,11 +11,18 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCANotificationAdviceV03 : IAgentCANotificationAdviceV03
 {
     IPagination1? IAgentCANotificationAdviceV03.Pagination => Pagination;
-    ICorporateActionNotification12 IAgentCANotificationAdviceV03.NotificationGeneralInformation => NotificationGeneralInformation;
-    IDocumentIdentification31? IAgentCANotificationAdviceV03.PreviousNotificationIdentification => PreviousNotificationIdentification;
-    IEnumerable<ICorporateActionAgent2> IAgentCANotificationAdviceV03.AgentInformation => AgentInformation;
-    ICorporateActionGeneralInformation196 IAgentCANotificationAdviceV03.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    ICorporateAction88 IAgentCANotificationAdviceV03.CorporateActionDetails => CorporateActionDetails;
-    IEnumerable<ICorporateActionOption250> IAgentCANotificationAdviceV03.CorporateActionOptionDetails => CorporateActionOptionDetails;
-    ICorporateActionNarrative2? IAgentCANotificationAdviceV03.AdditionalInformation => AdditionalInformation;
+    ICorporateActionNotification12 IAgentCANotificationAdviceV03.NotificationGeneralInformation =>
+        NotificationGeneralInformation;
+    IDocumentIdentification31? IAgentCANotificationAdviceV03.PreviousNotificationIdentification =>
+        PreviousNotificationIdentification;
+    IEnumerable<ICorporateActionAgent2> IAgentCANotificationAdviceV03.AgentInformation =>
+        AgentInformation;
+    ICorporateActionGeneralInformation196 IAgentCANotificationAdviceV03.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    ICorporateAction88 IAgentCANotificationAdviceV03.CorporateActionDetails =>
+        CorporateActionDetails;
+    IEnumerable<ICorporateActionOption250> IAgentCANotificationAdviceV03.CorporateActionOptionDetails =>
+        CorporateActionOptionDetails;
+    ICorporateActionNarrative2? IAgentCANotificationAdviceV03.AdditionalInformation =>
+        AdditionalInformation;
 }

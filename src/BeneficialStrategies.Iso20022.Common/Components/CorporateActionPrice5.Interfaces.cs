@@ -11,9 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionPrice5 : ICorporateActionPrice5
 {
     IPriceFormat6Choice? ICorporateActionPrice5.ExercisePrice => ExercisePrice;
-    IEnumerable<IPriceFormat7Choice> ICorporateActionPrice5.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
-    IPriceFormat5Choice? ICorporateActionPrice5.GenericCashPricePaidPerProduct => GenericCashPricePaidPerProduct;
-    IAmountPrice3? ICorporateActionPrice5.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
+    IEnumerable<IPriceFormat7Choice> ICorporateActionPrice5.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
+    IPriceFormat5Choice? ICorporateActionPrice5.GenericCashPricePaidPerProduct =>
+        GenericCashPricePaidPerProduct;
+    IAmountPrice3? ICorporateActionPrice5.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
     IPriceFormat5Choice? ICorporateActionPrice5.CashInLieuOfSharePrice => CashInLieuOfSharePrice;
-    IPriceFormat5Choice? ICorporateActionPrice5.OverSubscriptionDepositPrice => OverSubscriptionDepositPrice;
+    IPriceFormat5Choice? ICorporateActionPrice5.OverSubscriptionDepositPrice =>
+        OverSubscriptionDepositPrice;
 }

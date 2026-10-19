@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TIjQcNuIEeiB5uLfkg9ZJA")]
 [DisplayName("Payment Account Request")]
-public record PaymentAccountRequest1
+public partial record PaymentAccountRequest1
 {
     /// <summary>
     /// Type of cardholder account used for the transaction. By Default the code Default is taken into account.

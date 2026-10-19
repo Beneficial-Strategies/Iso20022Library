@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record LegalFramework1Choice_ : ILegalFramework1Choice
-{
-}
+public abstract partial record LegalFramework1Choice_ : ILegalFramework1Choice { }

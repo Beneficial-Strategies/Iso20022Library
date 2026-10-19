@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RelatedSettlementInstruction2 : IRelatedSettlementInstruction2
 {
-    IFinancialInstrumentQuantity18Choice? IRelatedSettlementInstruction2.RelatedSettlementQuantity => RelatedSettlementQuantity;
-    IProceedsQuantityBreakdown1? IRelatedSettlementInstruction2.ProceedsQuantityBreakdown => ProceedsQuantityBreakdown;
+    IFinancialInstrumentQuantity18Choice? IRelatedSettlementInstruction2.RelatedSettlementQuantity =>
+        RelatedSettlementQuantity;
+    IProceedsQuantityBreakdown1? IRelatedSettlementInstruction2.ProceedsQuantityBreakdown =>
+        ProceedsQuantityBreakdown;
 }

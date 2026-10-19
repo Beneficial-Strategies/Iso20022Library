@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the priority.
 /// </summary>
 [IsoId("_rhERsTtDEeWRTLSN0i0tng")]
-public interface IPriorityNumeric4Choice : IIsoChoice
-{
-}
+public interface IPriorityNumeric4Choice : IIsoChoice { }

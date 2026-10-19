@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionEventProcessingStatusAdviceV02 : ICorporateActionEventProcessingStatusAdviceV02
+public partial record CorporateActionEventProcessingStatusAdviceV02
+    : ICorporateActionEventProcessingStatusAdviceV02
 {
-    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV02.NotificationIdentification => NotificationIdentification;
-    IEnumerable<IDocumentIdentification14> ICorporateActionEventProcessingStatusAdviceV02.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation9 ICorporateActionEventProcessingStatusAdviceV02.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IEventProcessingStatus1Choice> ICorporateActionEventProcessingStatusAdviceV02.EventProcessingStatus => EventProcessingStatus;
-    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV02.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdviceV02.SupplementaryData => SupplementaryData;
+    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV02.NotificationIdentification =>
+        NotificationIdentification;
+    IEnumerable<IDocumentIdentification14> ICorporateActionEventProcessingStatusAdviceV02.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation9 ICorporateActionEventProcessingStatusAdviceV02.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IEventProcessingStatus1Choice> ICorporateActionEventProcessingStatusAdviceV02.EventProcessingStatus =>
+        EventProcessingStatus;
+    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV02.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdviceV02.SupplementaryData =>
+        SupplementaryData;
 }

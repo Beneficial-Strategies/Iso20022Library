@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionType11Choic
     [IsoId("_fw8YK_vmEeCBQp5TnX1XKQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SecuritiesTransactionType11Choice_
+    public partial record Proprietary : SecuritiesTransactionType11Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity1Choice
     [IsoId("_RCMa0Np-Ed-ak6NoX_4Aeg_1824828268")]
     [DisplayName("Quantity As DSS")]
     [IsoXmlTag("QtyAsDSS")]
-    public record QuantityAsDSS : BalanceQuantity1Choice_
+    public partial record QuantityAsDSS : BalanceQuantity1Choice_
     {
         /// <summary>
         /// Entity that assigns the identification.

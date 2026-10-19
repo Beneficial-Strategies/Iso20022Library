@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Returned Reason1Choice.
 /// </summary>
 [IsoId("_sEEo6aGpEe-4O7NbwmwJkQ")]
-public interface IReturnedReason1Choice : IIsoChoice
-{
-}
+public interface IReturnedReason1Choice : IIsoChoice { }

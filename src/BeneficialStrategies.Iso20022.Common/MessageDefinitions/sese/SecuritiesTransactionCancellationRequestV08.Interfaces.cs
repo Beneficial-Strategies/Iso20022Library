@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionCancellationRequestV08 : ISecuritiesTransactionCancellationRequestV08
+public partial record SecuritiesTransactionCancellationRequestV08
+    : ISecuritiesTransactionCancellationRequestV08
 {
-    IReferences45Choice ISecuritiesTransactionCancellationRequestV08.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
-    IPartyIdentification144? ISecuritiesTransactionCancellationRequestV08.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesTransactionCancellationRequestV08.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesTransactionCancellationRequestV08.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ITransactionDetails172? ISecuritiesTransactionCancellationRequestV08.TransactionDetails => TransactionDetails;
-    ICancellationReason23? ISecuritiesTransactionCancellationRequestV08.CancellationReason => CancellationReason;
-    IFXCancellation3Choice? ISecuritiesTransactionCancellationRequestV08.FXCancellation => FXCancellation;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestV08.SupplementaryData => SupplementaryData;
+    IReferences45Choice ISecuritiesTransactionCancellationRequestV08.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
+    IPartyIdentification144? ISecuritiesTransactionCancellationRequestV08.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? ISecuritiesTransactionCancellationRequestV08.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesTransactionCancellationRequestV08.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ITransactionDetails172? ISecuritiesTransactionCancellationRequestV08.TransactionDetails =>
+        TransactionDetails;
+    ICancellationReason23? ISecuritiesTransactionCancellationRequestV08.CancellationReason =>
+        CancellationReason;
+    IFXCancellation3Choice? ISecuritiesTransactionCancellationRequestV08.FXCancellation =>
+        FXCancellation;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestV08.SupplementaryData =>
+        SupplementaryData;
 }

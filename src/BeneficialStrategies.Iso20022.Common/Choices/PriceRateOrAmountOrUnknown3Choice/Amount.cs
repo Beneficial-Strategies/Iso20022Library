@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown3Choic
     [IsoId("_gdOxm833Eee5nJBZsW8MFQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : PriceRateOrAmountOrUnknown3Choice_
+    public partial record Amount : PriceRateOrAmountOrUnknown3Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionEventProcessingStatusAdviceV08 : ICorporateActionEventProcessingStatusAdviceV08
+public partial record CorporateActionEventProcessingStatusAdviceV08
+    : ICorporateActionEventProcessingStatusAdviceV08
 {
-    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV08.NotificationIdentification => NotificationIdentification;
-    IEnumerable<IDocumentIdentification33> ICorporateActionEventProcessingStatusAdviceV08.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation154 ICorporateActionEventProcessingStatusAdviceV08.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IEventProcessingStatus5Choice> ICorporateActionEventProcessingStatusAdviceV08.EventProcessingStatus => EventProcessingStatus;
-    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV08.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdviceV08.SupplementaryData => SupplementaryData;
+    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV08.NotificationIdentification =>
+        NotificationIdentification;
+    IEnumerable<IDocumentIdentification33> ICorporateActionEventProcessingStatusAdviceV08.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation154 ICorporateActionEventProcessingStatusAdviceV08.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IEventProcessingStatus5Choice> ICorporateActionEventProcessingStatusAdviceV08.EventProcessingStatus =>
+        EventProcessingStatus;
+    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV08.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdviceV08.SupplementaryData =>
+        SupplementaryData;
 }

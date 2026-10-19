@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the exposure information.
 /// </summary>
 [IsoId("_ciETATi8Eeydid5dcNPKvg")]
-public interface IExposureType24Choice : IIsoChoice
-{
-}
+public interface IExposureType24Choice : IIsoChoice { }

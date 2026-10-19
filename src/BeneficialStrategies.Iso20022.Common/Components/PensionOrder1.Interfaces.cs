@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PensionOrder1 : IPensionOrder1
 {
     IPensionOrderType1Choice IPensionOrder1.Type => Type;
-    IEnumerable<IAdditionalInformation15> IPensionOrder1.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IPensionOrder1.AdditionalInformation =>
+        AdditionalInformation;
 }

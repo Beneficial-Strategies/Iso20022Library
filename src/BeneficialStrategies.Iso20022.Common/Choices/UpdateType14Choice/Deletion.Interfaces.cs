@@ -10,19 +10,23 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType14Choice;
 
 public partial record Deletion : IDeletion
 {
-    ISettlementTypeAndAdditionalParameters13? IDeletion.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters13? IDeletion.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages40> IDeletion.Linkages => Linkages;
     ISecuritiesTradeDetails50? IDeletion.TradeDetails => TradeDetails;
-    IFinancialInstrumentAttributes64? IDeletion.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    IFinancialInstrumentAttributes64? IDeletion.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IQuantityAndAccount44? IDeletion.QuantityAndAccountDetails => QuantityAndAccountDetails;
     ISettlementDetails94? IDeletion.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction11? IDeletion.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
+    IStandingSettlementInstruction11? IDeletion.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
     ISettlementParties39? IDeletion.DeliveringSettlementParties => DeliveringSettlementParties;
     ISettlementParties39? IDeletion.ReceivingSettlementParties => ReceivingSettlementParties;
     ICashParties26? IDeletion.CashParties => CashParties;
     IAmountAndDirection45? IDeletion.SettlementAmount => SettlementAmount;
     IOtherAmounts28? IDeletion.OtherAmounts => OtherAmounts;
     IOtherParties27? IDeletion.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters4? IDeletion.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
+    IRegistrationParameters4? IDeletion.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
     IEnumerable<ISupplementaryData1> IDeletion.SupplementaryData => SupplementaryData;
 }

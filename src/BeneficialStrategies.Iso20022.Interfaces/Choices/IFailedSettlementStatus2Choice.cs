@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the failed settlement status.
 /// </summary>
 [IsoId("_DOTJ4SY5EeW_ZNn8gbfY7Q")]
-public interface IFailedSettlementStatus2Choice : IIsoChoice
-{
-}
+public interface IFailedSettlementStatus2Choice : IIsoChoice { }

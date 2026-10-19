@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the processing status of a cancellation request.
 /// </summary>
 [IsoId("_RnJiBtp-Ed-ak6NoX_4Aeg_-302074425")]
-public interface IProcessedStatus2FormatChoice : IIsoChoice
-{
-}
+public interface IProcessedStatus2FormatChoice : IIsoChoice { }

@@ -21,5 +21,6 @@ public partial record Transfer29 : ITransfer29
     IEnumerable<IUnit3> ITransfer29.UnitsDetails => UnitsDetails;
     IPartyIdentificationAndAccount93? ITransfer29.ReceivingAgentDetails => ReceivingAgentDetails;
     IPartyIdentificationAndAccount93? ITransfer29.DeliveringAgentDetails => DeliveringAgentDetails;
-    IChargePaymentMethod1Choice? ITransfer29.TransferExpensesPaymentType => TransferExpensesPaymentType;
+    IChargePaymentMethod1Choice? ITransfer29.TransferExpensesPaymentType =>
+        TransferExpensesPaymentType;
 }

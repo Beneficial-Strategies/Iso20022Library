@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gkJhQahKEfCXwLUUylXgrQ")]
 [DisplayName("Penalty Transaction Record2")]
-public record PenaltyTransactionRecord2
+public partial record PenaltyTransactionRecord2
 {
     /// <summary>
     /// Choice of type for the transaction reported.

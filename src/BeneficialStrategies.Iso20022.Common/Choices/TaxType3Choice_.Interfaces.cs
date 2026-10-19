@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TaxType3Choice_ : ITaxType3Choice
-{
-}
+public abstract partial record TaxType3Choice_ : ITaxType3Choice { }

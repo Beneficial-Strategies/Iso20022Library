@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// German Bankleitzahl - identifies German financial institutions on the German national clearing systems.
 /// </summary>
 [IsoId("_VwSCe7NIEeejueAciesPMA")]
-public interface IGermanBankleitzahlIdentification : IClearingSystemMemberIdentification4Choice, IIsoChoiceVariant
+public interface IGermanBankleitzahlIdentification
+    : IClearingSystemMemberIdentification4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

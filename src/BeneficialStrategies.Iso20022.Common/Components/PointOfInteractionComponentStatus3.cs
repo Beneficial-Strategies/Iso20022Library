@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DSOZQY0TEeWRYffwL7E13A")]
 [DisplayName("Point Of Interaction Component Status")]
-public record PointOfInteractionComponentStatus3
+public partial record PointOfInteractionComponentStatus3
 {
     /// <summary>
     /// Current version of the component that might include the release number.

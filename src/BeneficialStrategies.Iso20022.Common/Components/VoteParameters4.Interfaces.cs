@@ -14,7 +14,8 @@ public partial record VoteParameters4 : IVoteParameters4
     IDateFormat29Choice? IVoteParameters4.VoteSTPDeadline => VoteSTPDeadline;
     IDateFormat29Choice? IVoteParameters4.VoteMarketDeadline => VoteMarketDeadline;
     IVoteMethods2? IVoteParameters4.VoteMethods => VoteMethods;
-    ICommunicationAddress4? IVoteParameters4.VotingBallotElectronicAddress => VotingBallotElectronicAddress;
+    ICommunicationAddress4? IVoteParameters4.VotingBallotElectronicAddress =>
+        VotingBallotElectronicAddress;
     IPostalAddress1? IVoteParameters4.VotingBallotRequestAddress => VotingBallotRequestAddress;
     IDateFormat29Choice? IVoteParameters4.RevocabilityDeadline => RevocabilityDeadline;
     IDateFormat29Choice? IVoteParameters4.RevocabilitySTPDeadline => RevocabilitySTPDeadline;
@@ -22,8 +23,10 @@ public partial record VoteParameters4 : IVoteParameters4
     IEnumerable<VoteInstruction2Code> IVoteParameters4.VoteInstructionType => VoteInstructionType;
     IIncentivePremium3? IVoteParameters4.EarlyIncentivePremium => EarlyIncentivePremium;
     IIncentivePremium3? IVoteParameters4.IncentivePremium => IncentivePremium;
-    IDateFormat29Choice? IVoteParameters4.EarlyVoteWithPremiumDeadline => EarlyVoteWithPremiumDeadline;
+    IDateFormat29Choice? IVoteParameters4.EarlyVoteWithPremiumDeadline =>
+        EarlyVoteWithPremiumDeadline;
     IDateFormat29Choice? IVoteParameters4.VoteWithPremiumDeadline => VoteWithPremiumDeadline;
     IDateFormat29Choice? IVoteParameters4.VoteWithPremiumSTPDeadline => VoteWithPremiumSTPDeadline;
-    IDateFormat29Choice? IVoteParameters4.VoteWithPremiumMarketDeadline => VoteWithPremiumMarketDeadline;
+    IDateFormat29Choice? IVoteParameters4.VoteWithPremiumMarketDeadline =>
+        VoteWithPremiumMarketDeadline;
 }

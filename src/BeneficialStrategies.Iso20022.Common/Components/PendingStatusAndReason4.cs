@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YqmoMeSkEe-qVZLXW4RRBw")]
 [DisplayName("Pending Status And Reason4")]
-public record PendingStatusAndReason4
+public partial record PendingStatusAndReason4
 {
     /// <summary>
     /// Provides details on the processing status of the transaction.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason14Choice
     /// </summary>
     [IsoId("_ux5oM1hpEeS8HfHHd4stCA")]
     [DisplayName("Pending Processing Reason")]
-    public record PendingProcessingReason : Reason14Choice_
+    public partial record PendingProcessingReason : Reason14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgPrcgRsn")]

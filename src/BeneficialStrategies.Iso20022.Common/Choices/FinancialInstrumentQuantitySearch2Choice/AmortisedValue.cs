@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantitySearc
     /// <summary>Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.</summary>
     [IsoId("_emN9m2qWEemz04WrKJaMEA")]
     [DisplayName("Amortised Value")]
-    public record AmortisedValue : FinancialInstrumentQuantitySearch2Choice_
+    public partial record AmortisedValue : FinancialInstrumentQuantitySearch2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AmtsdVal")]

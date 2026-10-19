@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.NumberCount1Choice;
 
-public partial record TotalNumber : ITotalNumber
-{
-}
+public partial record TotalNumber : ITotalNumber { }

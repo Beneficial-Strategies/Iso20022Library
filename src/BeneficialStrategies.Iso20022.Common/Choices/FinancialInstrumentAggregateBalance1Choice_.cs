@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PW7ItqCCEeOEyO7fCl8lLA")]
     [DisplayName("Financial Instrument Aggregate Balance 1 Choice")]
-    public abstract record FinancialInstrumentAggregateBalance1Choice_ { }
+    public abstract partial record FinancialInstrumentAggregateBalance1Choice_ { }
 }

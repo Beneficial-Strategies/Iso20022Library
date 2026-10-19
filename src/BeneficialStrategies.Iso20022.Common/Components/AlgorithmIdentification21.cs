@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rng3gdtbEee9e6xduATmQg")]
 [DisplayName("Algorithm Identification")]
-public record AlgorithmIdentification21
+public partial record AlgorithmIdentification21
 {
     /// <summary>
     /// Identification of the digest algorithm.

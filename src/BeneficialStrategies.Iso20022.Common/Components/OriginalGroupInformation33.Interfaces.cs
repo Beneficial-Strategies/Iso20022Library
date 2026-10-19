@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record OriginalGroupInformation33 : IOriginalGroupInformation33
-{
-}
+public partial record OriginalGroupInformation33 : IOriginalGroupInformation33 { }

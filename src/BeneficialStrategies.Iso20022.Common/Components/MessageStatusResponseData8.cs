@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sj0bYZTYEe6sd81HehWb6w")]
 [DisplayName("Message Status Response Data8")]
-public record MessageStatusResponseData8
+public partial record MessageStatusResponseData8
 {
     /// <summary>
     /// Exchange Identification.

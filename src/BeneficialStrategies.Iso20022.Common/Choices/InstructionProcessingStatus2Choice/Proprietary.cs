@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus2Choi
     [IsoId("_UYBuMtp-Ed-ak6NoX_4Aeg_-1515031008")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InstructionProcessingStatus2Choice_
+    public partial record Proprietary : InstructionProcessingStatus2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

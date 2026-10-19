@@ -12,6 +12,8 @@ public partial record ParticipationMethod3 : IParticipationMethod3
 {
     IParticipationMethod3Choice IParticipationMethod3.ParticipationMethod => ParticipationMethod;
     IDateFormat58Choice IParticipationMethod3.IssuerDeadlineForVoting => IssuerDeadlineForVoting;
-    IDateFormat58Choice? IParticipationMethod3.ResponseDeadlineForVoting => ResponseDeadlineForVoting;
-    IEnumerable<IInvestorTypeIdentification1> IParticipationMethod3.InvestorTypeIdentification => InvestorTypeIdentification;
+    IDateFormat58Choice? IParticipationMethod3.ResponseDeadlineForVoting =>
+        ResponseDeadlineForVoting;
+    IEnumerable<IInvestorTypeIdentification1> IParticipationMethod3.InvestorTypeIdentification =>
+        InvestorTypeIdentification;
 }

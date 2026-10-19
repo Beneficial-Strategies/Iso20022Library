@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification1Cho
 /// Infrastructure through which the payment instruction is processed.
 /// </summary>
 [IsoId("_TMVXINp-Ed-ak6NoX_4Aeg_-843594927")]
-public interface IClearingSystemIdentification : IClearingSystemIdentification1Choice, IIsoChoiceVariant
+public interface IClearingSystemIdentification
+    : IClearingSystemIdentification1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

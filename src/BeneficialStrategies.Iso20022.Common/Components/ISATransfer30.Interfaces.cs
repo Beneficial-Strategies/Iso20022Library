@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ISATransfer30 : IISATransfer30
 {
     IISAPortfolio1Choice? IISATransfer30.Portfolio => Portfolio;
-    IEnumerable<IFinancialInstrument61> IISATransfer30.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
+    IEnumerable<IFinancialInstrument61> IISATransfer30.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
 }

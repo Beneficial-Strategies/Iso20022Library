@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionNarrative8 : ICorporateActionNarrative8
 {
-    IEnumerable<Max350Text> ICorporateActionNarrative8.InformationToComplyWith => InformationToComplyWith;
+    IEnumerable<Max350Text> ICorporateActionNarrative8.InformationToComplyWith =>
+        InformationToComplyWith;
     IEnumerable<Max350Text> ICorporateActionNarrative8.DeliveryDetails => DeliveryDetails;
-    IEnumerable<Max350Text> ICorporateActionNarrative8.ForeignExchangeInstructionsAdditionalInformation => ForeignExchangeInstructionsAdditionalInformation;
+    IEnumerable<Max350Text> ICorporateActionNarrative8.ForeignExchangeInstructionsAdditionalInformation =>
+        ForeignExchangeInstructionsAdditionalInformation;
     IEnumerable<Max350Text> ICorporateActionNarrative8.Disclaimer => Disclaimer;
-    IEnumerable<Max350Text> ICorporateActionNarrative8.InstructionAdditionalInformation => InstructionAdditionalInformation;
+    IEnumerable<Max350Text> ICorporateActionNarrative8.InstructionAdditionalInformation =>
+        InstructionAdditionalInformation;
 }

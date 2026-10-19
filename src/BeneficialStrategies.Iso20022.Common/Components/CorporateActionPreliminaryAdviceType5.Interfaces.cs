@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CorporateActionPreliminaryAdviceType5 : ICorporateActionPreliminaryAdviceType5
-{
-}
+public partial record CorporateActionPreliminaryAdviceType5
+    : ICorporateActionPreliminaryAdviceType5 { }

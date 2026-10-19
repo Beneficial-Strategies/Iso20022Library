@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EFdOMN7JEeiwsev40qZGEQ")]
 [DisplayName("Device Transmit Message Response")]
-public record DeviceTransmitMessageResponse1
+public partial record DeviceTransmitMessageResponse1
 {
     /// <summary>
     /// Content of a transmitted message.

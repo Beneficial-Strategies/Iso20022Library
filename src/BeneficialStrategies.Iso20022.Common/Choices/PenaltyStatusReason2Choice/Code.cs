@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyStatusReason2Choice
     /// <summary>Penalty status reason, in a coded form.</summary>
     [IsoId("_vUsvER-DEeuwwezkzufkMw")]
     [DisplayName("Code")]
-    public record Code : PenaltyStatusReason2Choice_
+    public partial record Code : PenaltyStatusReason2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

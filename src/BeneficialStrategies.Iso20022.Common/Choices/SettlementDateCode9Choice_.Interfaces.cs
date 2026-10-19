@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SettlementDateCode9Choice_ : ISettlementDateCode9Choice
-{
-}
+public abstract partial record SettlementDateCode9Choice_ : ISettlementDateCode9Choice { }

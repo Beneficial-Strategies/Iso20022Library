@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.sese;
 public partial record PortfolioTransferNotificationV05 : IPortfolioTransferNotificationV05
 {
     IPagination1 IPortfolioTransferNotificationV05.Pagination => Pagination;
-    IStatement62 IPortfolioTransferNotificationV05.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement62 IPortfolioTransferNotificationV05.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification98? IPortfolioTransferNotificationV05.AccountOwner => AccountOwner;
     ISecuritiesAccount19 IPortfolioTransferNotificationV05.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISecuritiesTradeDetails72> IPortfolioTransferNotificationV05.TransferNotificationDetails => TransferNotificationDetails;
+    IEnumerable<ISecuritiesTradeDetails72> IPortfolioTransferNotificationV05.TransferNotificationDetails =>
+        TransferNotificationDetails;
 }

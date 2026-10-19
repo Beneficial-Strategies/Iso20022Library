@@ -8,10 +8,14 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionStatusQuery002V04 : ISecuritiesTransactionStatusQuery002V04
+public partial record SecuritiesTransactionStatusQuery002V04
+    : ISecuritiesTransactionStatusQuery002V04
 {
-    IDocumentNumber15 ISecuritiesTransactionStatusQuery002V04.StatusAdviceRequested => StatusAdviceRequested;
+    IDocumentNumber15 ISecuritiesTransactionStatusQuery002V04.StatusAdviceRequested =>
+        StatusAdviceRequested;
     IPartyIdentification109? ISecuritiesTransactionStatusQuery002V04.AccountOwner => AccountOwner;
-    ISecuritiesAccount27 ISecuritiesTransactionStatusQuery002V04.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQuery002V04.SupplementaryData => SupplementaryData;
+    ISecuritiesAccount27 ISecuritiesTransactionStatusQuery002V04.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQuery002V04.SupplementaryData =>
+        SupplementaryData;
 }

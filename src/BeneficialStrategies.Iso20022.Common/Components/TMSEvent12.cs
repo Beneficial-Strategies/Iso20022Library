@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-KYi4aE5Ee-MRKYsaX6JDg")]
 [DisplayName("TMS Event12")]
-public record TMSEvent12
+public partial record TMSEvent12
 {
     /// <summary>
     /// Time Stamp.

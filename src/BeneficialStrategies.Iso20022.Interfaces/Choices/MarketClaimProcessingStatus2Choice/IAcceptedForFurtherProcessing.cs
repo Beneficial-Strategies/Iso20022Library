@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
 
 /// <summary>Instruction is accepted for further processing.</summary>
 [IsoId("_G1D_KbMaEfCEXew4g5B5oA")]
-public interface IAcceptedForFurtherProcessing : IMarketClaimProcessingStatus2Choice, IIsoChoiceVariant
+public interface IAcceptedForFurtherProcessing
+    : IMarketClaimProcessingStatus2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("AccptdForFrthrPrcg")]

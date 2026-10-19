@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the reason why the instruction or cancellation request is cancelled.
 /// </summary>
 [IsoId("_QysmSNp-Ed-ak6NoX_4Aeg_503789636")]
-public interface ICancelledReason1Choice : IIsoChoice
-{
-}
+public interface ICancelledReason1Choice : IIsoChoice { }
