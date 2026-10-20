@@ -5,7 +5,7 @@
 The samples are built against the **interfaces** of the model ([BeneficialStrategies.Iso20022.Interfaces](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)), the contract the rest of the family is written to, with the objects made by the [Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory). So a sample works with anything that takes the interface: the validators, a consumer of a message bus, a method of your own.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Samples --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Samples --version 0.7.0-alpha
 ```
 
 It depends on `Primitives`, `Interfaces` and `Factory`, not on the message records, and targets netstandard2.0, net8.0 and net10.0. The package is in alpha and **not on NuGet yet**; the samples that exist today cover 24 choices and the components they need (see [What is here](#what-is-here-and-what-is-coming)). Three examples, each a step further.

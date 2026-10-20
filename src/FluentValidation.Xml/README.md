@@ -8,14 +8,14 @@ The package is built so that you take only what you need. Three examples, each a
 2. [The full library of messages](#2-the-full-library-of-messages): the ready-made classes for every ISO 20022 message.
 3. [Without the classes: the Factory](#3-without-the-classes-the-factory): you want a message's shape, not 3,339 implementations of it.
 
-The packages are in alpha, hence `--prerelease` in the commands.
+The packages are in alpha, so the commands name the version.
 
 ## 1. Your own class
 
 You do not need the ISO 20022 message library to use this. You need a class of your own whose members are ISO 20022 primitive types, and the XML to read into it.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation.Xml --prerelease
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation.Xml --version 0.7.0-alpha
 ```
 
 That brings `BeneficialStrategies.Iso20022.Primitives` (the ISO primitive types, code sets and the XML reader) and FluentValidation. Nothing else.
@@ -78,8 +78,8 @@ What made that work: `[IsoXmlTag]` says which element a member is read from; `re
 You would rather not write the classes: ISO 20022 has thousands of them. The message library has every message, component and choice as a ready-made C# class, and the validators of ISO's own rules for them.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022 --prerelease
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --prerelease
+dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
 ```
 
 `BeneficialStrategies.Iso20022` is the message classes; `.FluentValidation` is the validators. The validators are written for the **interfaces** of the messages (`IValidator<IFIToFIPaymentCancellationRequestV10>`), so you pick the class to read into with the `out` variable:
@@ -119,9 +119,9 @@ Xml.FacetViolation Document/FIToFIPmtCxlReq/Assgnmt/Id: 'Max35Text' allows at mo
 The message library is large, and perhaps you do not want 3,339 messages' worth of classes in your application. You want to read a message and get an object that has the message's shape, nothing more. The **Factory** builds that class for you, on the fly, the first time it is asked for a message interface, so no implementation library is needed at all.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Interfaces --prerelease
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --prerelease
-dotnet add package BeneficialStrategies.Iso20022.Factory --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Interfaces --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.Factory --version 0.7.0-alpha
 ```
 
 `.Interfaces` has an interface for every message, component and choice and no implementation (`.FluentValidation` brings it too; it is listed because it is what you program against). `.Factory` makes the objects.

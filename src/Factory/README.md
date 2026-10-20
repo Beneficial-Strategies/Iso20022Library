@@ -5,10 +5,10 @@
 It rests on the idea behind the whole family: the **interfaces are the contract** ([BeneficialStrategies.Iso20022.Interfaces](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)), and the tools (validators, readers, queue consumers) are written against them, not against any one implementation. The records are one implementation, a class of your own is another, and the Factory is the one that appears when you ask.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Factory --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Factory --version 0.7.0-alpha
 ```
 
-It depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives), and targets netstandard2.0, net8.0 and net10.0. The packages are in alpha, hence `--prerelease`. Four examples, each a step further.
+It depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives), and targets netstandard2.0, net8.0 and net10.0. The packages are in alpha, so the commands name the version. Four examples, each a step further.
 
 ## 1. Your own interface
 
@@ -67,7 +67,7 @@ Console.WriteLine(Iso20022XmlSerializer.SerializeToString(party));
 Now the interfaces of ISO's own messages. Add the package that has them, and ask for one:
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Interfaces --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Interfaces --version 0.7.0-alpha
 ```
 
 ```csharp

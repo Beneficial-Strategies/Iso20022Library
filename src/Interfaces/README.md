@@ -3,10 +3,10 @@
 An interface for every ISO 20022 message, component and choice: the **shape** of each type, with no implementation. Write against the shape, and decide separately what supplies the objects: a class of your own, the ready-made records, or classes made for you at run time.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Interfaces --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Interfaces --version 0.7.0-alpha
 ```
 
-The package depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the types of the members: `Max35Text`, the code sets, the amounts). The packages are in alpha, hence `--prerelease`.
+The package depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the types of the members: `Max35Text`, the code sets, the amounts). The packages are in alpha, so the commands name the version.
 
 ## Why this package is the nucleus
 

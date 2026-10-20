@@ -27,10 +27,10 @@ This library [covers all currently defined messages](https://github.com/Benefici
 ## Install
 
 ```
-dotnet add package BeneficialStrategies.Iso20022 --prerelease
+dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
 ```
 
-This brings the primitive types ([BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives)) and the interfaces ([BeneficialStrategies.Iso20022.Interfaces](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)). The packages are in alpha, hence `--prerelease`. It targets net8.0 and net10.0 (the primitives, the interfaces and the validators also target netstandard2.0). It is presumed you already have the [latest .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) installed, and a text editor, preferably with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit).
+This brings the primitive types ([BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives)) and the interfaces ([BeneficialStrategies.Iso20022.Interfaces](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)). The packages are in alpha, so the commands name the version. It targets net8.0 and net10.0 (the primitives, the interfaces and the validators also target netstandard2.0). It is presumed you already have the [latest .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) installed, and a text editor, preferably with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit).
 
 Four examples, each a step further. They all use nothing but this package.
 
@@ -40,7 +40,7 @@ Four examples, each a step further. They all use nothing but this package.
 mkdir test
 cd test
 dotnet new console
-dotnet add package BeneficialStrategies.Iso20022 --prerelease
+dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
 ```
 
 Open your `Program.cs` and paste the following:

@@ -13,14 +13,14 @@ Three examples, each adding one thing to what you reference:
 2. [The full library of messages](#2-the-full-library-of-messages): the ready-made classes and validators for every ISO 20022 message.
 3. [Without the classes: the Factory](#3-without-the-classes-the-factory): you want the message's shape, not 3,339 implementations of it.
 
-The packages are in alpha, hence `--prerelease` in the commands.
+The packages are in alpha, so the commands name the version.
 
 ## 1. Your own message
 
 You do not need the ISO 20022 message library, or its validators. You need a message class of your own whose members are ISO 20022 primitive types, and a validator for it.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation.Payloads --prerelease
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation.Payloads --version 0.7.0-alpha
 ```
 
 That brings the ISO primitive types and the readers (`BeneficialStrategies.Iso20022.Primitives`), [`BeneficialStrategies.Iso20022.FluentValidation.Xml`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml), FluentValidation and the dependency-injection abstractions. Nothing else. (You also need a container; `Microsoft.Extensions.DependencyInjection` below, or the one of your host.)
@@ -118,8 +118,8 @@ UnknownMessageType $root: Unrecognized ISO 20022 document namespace 'urn:example
 You would rather not write the classes or their rules: the message library has every ISO 20022 message as a ready-made class, and the validators of ISO's own rules for them.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022 --prerelease
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --prerelease
+dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
 ```
 
 `BeneficialStrategies.Iso20022` is the message classes; `.FluentValidation` is the validators. Register the validators of the messages you handle (`rootTypes`) and then the payload validators:
@@ -199,9 +199,9 @@ Xml.FacetViolation Document/FIToFIPmtCxlReq/Assgnmt/Id: 'Max35Text' allows at mo
 The message library is large, and perhaps you do not want 3,339 messages' worth of classes in your application. Register a factory, and the XML is read into the message's **interface**: the factory builds, on the fly, a small class that implements it, and no implementation library is needed at all.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Interfaces --prerelease
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --prerelease
-dotnet add package BeneficialStrategies.Iso20022.Factory --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Interfaces --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.Factory --version 0.7.0-alpha
 ```
 
 (`.FluentValidation` brings `.Interfaces`; it is listed because it is what you program against.) Register the factory, then the validators of the interfaces, then the payload validators (which look at what is registered):

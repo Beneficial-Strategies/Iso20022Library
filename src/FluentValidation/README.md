@@ -8,14 +8,14 @@ The validators are written for the **interfaces** of the model (`IValidator<IGro
 2. [The full library of messages](#2-the-full-library-of-messages): the ready-made classes for every ISO 20022 message.
 3. [Without the classes: the Factory](#3-without-the-classes-the-factory): objects for the interfaces, made for you.
 
-The packages are in alpha, hence `--prerelease` in the commands.
+The packages are in alpha, so the commands name the version.
 
 ## 1. Your own class
 
 You do not need the message library. Take an interface of the model, `IDateAndPlaceOfBirth1`, and implement it in a class of your own:
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --prerelease
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
 dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
@@ -71,8 +71,8 @@ The format of each member (35 characters at most, two upper-case letters, a vali
 You would rather not write the classes: ISO 20022 has thousands of them. The message library has every message, component and choice as a ready-made C# class, and they implement the interfaces, so the same validators work on them.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022 --prerelease
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --prerelease
+dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
 ```
 
 This validates `camt.056.001.10` (`FIToFIPaymentCancellationRequestV10`), one of the messages with full spec-compliance validators, first against a well-formed message and then against one that breaks a cross-field rule no C# type could express on its own:
@@ -167,7 +167,7 @@ IsValid=False
 The message library is large, and perhaps you do not want 3,339 messages' worth of classes in your application. The **Factory** builds the class that implements an interface on the fly, the first time it is asked for, so you name the interface and no implementation library is needed:
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Factory --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Factory --version 0.7.0-alpha
 ```
 
 ```csharp

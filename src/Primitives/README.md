@@ -19,10 +19,10 @@ They are assignable from strings and from the natural .NET types (a `string` to 
 ## Install
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Primitives --prerelease
+dotnet add package BeneficialStrategies.Iso20022.Primitives --version 0.7.0-alpha
 ```
 
-The packages are in alpha, hence `--prerelease`. Three examples, each a step further, and each using nothing but this package.
+The packages are in alpha, so the commands name the version. Three examples, each a step further, and each using nothing but this package.
 
 ## 1. Values that refuse what ISO does not allow
 
