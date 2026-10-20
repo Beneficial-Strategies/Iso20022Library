@@ -4,7 +4,7 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCredi
 
 /// <summary>
 /// Fanned out from one line item of a
-/// <see cref="RequestToPayCreditorEnrolmentAmendmentRequestV02"/> message (<c>reda.067</c>). See
+/// <see cref="IRequestToPayCreditorEnrolmentAmendmentRequestV02"/> message (<c>reda.067</c>). See
 /// <see cref="CreditorEnrolmentRequested"/> for the shared shape rationale.
 /// </summary>
 /// <param name="Amendment">
@@ -16,7 +16,7 @@ public sealed record CreditorEnrolmentAmendmentRequested(
     Guid EventId,
     string MessageIdentification,
     DateTime CreationDateTime,
-    RTPPartyIdentification2 InitiatingParty,
+    IRTPPartyIdentification2 InitiatingParty,
     int LineItemIndex,
-    CreditorEnrolmentAmendment5 Amendment
+    ICreditorEnrolmentAmendment5 Amendment
 ) : IIso20022FanOutEvent;

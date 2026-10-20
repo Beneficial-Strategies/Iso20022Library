@@ -202,13 +202,13 @@ public sealed class CreditorEnrolmentServiceProviderStateMachine
     /// <see cref="CreditorEnrolmentSagaState.LastStatus"/>'s own remarks on why <c>Proprietary</c>
     /// isn't interpreted.
     /// </summary>
-    private static bool IsAccepted(ServiceStatus1Choice_ status) =>
-        status is ServiceStatus1Choice.Code { Value: ServiceRequestStatus1Code.Accepted };
+    private static bool IsAccepted(IServiceStatus1Choice status) =>
+        status is ServiceStatus1Choice.ICode { Value: ServiceRequestStatus1Code.Accepted };
 
-    private static void ApplyStatus(CreditorEnrolmentSagaState state, EnrolmentStatus3 enrolmentStatus)
+    private static void ApplyStatus(CreditorEnrolmentSagaState state, IEnrolmentStatus3 enrolmentStatus)
     {
         state.LastStatus =
-            enrolmentStatus.Status is ServiceStatus1Choice.Code { Value: var code } ? code : null;
+            enrolmentStatus.Status is ServiceStatus1Choice.ICode { Value: var code } ? code : null;
         state.EffectiveEnrolmentDate = enrolmentStatus.EffectiveEnrolmentDate;
     }
 
@@ -218,7 +218,7 @@ public sealed class CreditorEnrolmentServiceProviderStateMachine
     /// remarks on the <see cref="AmendmentRequested"/> event registration for why that matters to
     /// SQL-translatable correlation expressions.
     /// </summary>
-    private static string? OriginalMessageIdOf(OriginalBusinessInstruction1? originalBusinessInstruction) =>
+    private static string? OriginalMessageIdOf(IOriginalBusinessInstruction1? originalBusinessInstruction) =>
         originalBusinessInstruction?.MessageIdentification.Value;
 
     /// <summary>
@@ -227,12 +227,12 @@ public sealed class CreditorEnrolmentServiceProviderStateMachine
     /// <c>state</c>" rule as <see cref="OriginalMessageIdOf"/>. See
     /// <see cref="Framework.PartyIdentityKey"/>'s remarks on why this path is best-effort.
     /// </summary>
-    private static string? PartyKeyOf(OriginalEnrolment3Choice_? originalEnrolment) =>
+    private static string? PartyKeyOf(IOriginalEnrolment3Choice? originalEnrolment) =>
         originalEnrolment switch
         {
-            OriginalEnrolment3Choice.OriginalCreditorIdentification { Value: var creditor } =>
+            OriginalEnrolment3Choice.IOriginalCreditorIdentification { Value: var creditor } =>
                 PartyIdentityKey.From(creditor),
-            OriginalEnrolment3Choice.OriginalEnrolmentData { Value: var data } => PartyIdentityKey.From(
+            OriginalEnrolment3Choice.IOriginalEnrolmentData { Value: var data } => PartyIdentityKey.From(
                 data.Creditor.Identification
             ),
             _ => null,

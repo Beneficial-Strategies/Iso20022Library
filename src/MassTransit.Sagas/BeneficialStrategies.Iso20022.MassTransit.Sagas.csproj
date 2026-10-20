@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\BeneficialStrategies.Iso20022.Common.csproj" />
+    <ProjectReference Include="..\Interfaces\BeneficialStrategies.Iso20022.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

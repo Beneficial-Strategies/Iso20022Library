@@ -111,12 +111,7 @@ public class CreditorEnrolmentSqliteCorrelationTests
                 cfg.UsingInMemory(
                     (context, busCfg) =>
                     {
-                        busCfg.ConfigureJsonSerializerOptions(options =>
-                        {
-                            foreach (var converter in Iso20022JsonSerializerOptions.Default.Converters)
-                                options.Converters.Add(converter);
-                            return options;
-                        });
+                        busCfg.ConfigureIso20022Json(new IsoDataFactory());
                         busCfg.ConfigureEndpoints(context);
                     }
                 );
@@ -226,7 +221,7 @@ public class CreditorEnrolmentSqliteCorrelationTests
         await using var __ = database;
 
         await harness.Bus.Publish(AStatusReport("MSG-301", "NEVER-SENT", ServiceRequestStatus1Code.Accepted));
-        Assert.True(await harness.Consumed.Any<RequestToPayCreditorEnrolmentStatusReportV02>());
+        Assert.True(await harness.Consumed.Any<IRequestToPayCreditorEnrolmentStatusReportV02>());
 
         Assert.False(await sagaHarness.Created.Any());
     }

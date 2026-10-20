@@ -10,9 +10,9 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayDebto
 /// <see cref="MassTransit.Sagas.reda.RequestToPayCreditorEnrolment.Consumers.CreditorEnrolmentRequestConsumer"/>
 /// for the shared rationale.
 /// </summary>
-public sealed class DebtorActivationRequestConsumer : IConsumer<RequestToPayDebtorActivationRequestV02>
+public sealed class DebtorActivationRequestConsumer : IConsumer<IRequestToPayDebtorActivationRequestV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayDebtorActivationRequestV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayDebtorActivationRequestV02> context)
     {
         var message = context.Message;
         var index = 0;
@@ -36,9 +36,9 @@ public sealed class DebtorActivationRequestConsumer : IConsumer<RequestToPayDebt
 
 /// <summary>See <see cref="DebtorActivationRequestConsumer"/>.</summary>
 public sealed class DebtorActivationAmendmentRequestConsumer
-    : IConsumer<RequestToPayDebtorActivationAmendmentRequestV02>
+    : IConsumer<IRequestToPayDebtorActivationAmendmentRequestV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayDebtorActivationAmendmentRequestV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayDebtorActivationAmendmentRequestV02> context)
     {
         var message = context.Message;
         var index = 0;
@@ -61,9 +61,9 @@ public sealed class DebtorActivationAmendmentRequestConsumer
 
 /// <summary>See <see cref="DebtorActivationRequestConsumer"/>.</summary>
 public sealed class DebtorActivationCancellationRequestConsumer
-    : IConsumer<RequestToPayDebtorActivationCancellationRequestV02>
+    : IConsumer<IRequestToPayDebtorActivationCancellationRequestV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayDebtorActivationCancellationRequestV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayDebtorActivationCancellationRequestV02> context)
     {
         var message = context.Message;
         var index = 0;
@@ -86,9 +86,9 @@ public sealed class DebtorActivationCancellationRequestConsumer
 
 /// <summary>See <see cref="DebtorActivationRequestConsumer"/>.</summary>
 public sealed class DebtorActivationStatusReportConsumer
-    : IConsumer<RequestToPayDebtorActivationStatusReportV02>
+    : IConsumer<IRequestToPayDebtorActivationStatusReportV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayDebtorActivationStatusReportV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayDebtorActivationStatusReportV02> context)
     {
         var message = context.Message;
         var index = 0;

@@ -53,29 +53,37 @@ saga instance always tracks exactly one enrolment/activation, never a whole batc
   Creditor's/Debtor's own originating systems) — those are reactive pass-throughs in the source
   document, not saga-worthy, and are not covered by this first release.
 
+## Interfaces, not records
+
+The consumers, events and saga state use the **interfaces** of the model (`IRequestToPayDebtorActivationRequestV02`, `IRTPPartyIdentification2`,
+`Party53Choice.IOrganisationIdentification`, ...), so this package needs `Primitives` and `Interfaces` and **not**
+`BeneficialStrategies.Iso20022.Common` (the 3,339 message records; #70). Your application decides what makes the objects: the records, or the
+`Factory` package's `IsoDataFactory` (a test checks that this package does not reference `Common`). Consumers are bound to the interface, so a message
+published as a record and one read from the wire by the factory reach the same consumer.
+
 ## JSON serialization
 
-The events and the saga state carry message records, and MassTransit moves them as JSON with `System.Text.Json`. Three things to know
+The events and the saga state carry these interfaces, and MassTransit moves them as JSON with `System.Text.Json`. Three things to know
 (each is covered by `MassTransitJsonRoundTripTests`, and the first by the saga tests as well):
 
-* **Register the library's converters, or events are silently dropped.** MassTransit's default options cannot read a `ValueList<T>`.
-  Without the converters of `Iso20022JsonSerializerOptions.Default` (which `ConfigureIso20022Json` registers) an event does not fail loudly: it is never consumed and ends in the
-  error queue. Register them on the bus:
+* **Register the library's converters and a factory, or events are lost or come out wrong.** MassTransit's default options cannot read a
+  `ValueList<T>`, and for a member declared with an interface MassTransit makes an object of its own, which keeps the members but loses which
+  variant of a choice it was. On the bus:
 
   ```csharp
-  busCfg.ConfigureIso20022Json();                // the events carry records
-  busCfg.ConfigureIso20022Json(isoDataFactory);  // the events carry interfaces; the factory makes the objects (the Factory package)
+  busCfg.ConfigureIso20022Json(new IsoDataFactory());   // IsoDataFactory is in the Factory package
   ```
 
-  With them, an event with lists and a choice arrives equal to the one that was sent.
+  This registers the converters of `Iso20022JsonSerializerOptions.Default` and `Iso20022InterfaceJsonConverterFactory`, which reads an interface into
+  the object the factory makes (first in the list, so that MassTransit's own interface converters do not get there first). Without the factory
+  (`ConfigureIso20022Json()`), only records can be read; without either an event is silently never consumed and ends in the error queue.
+  With them, an event with lists and a choice arrives with the same content and the same variants.
 * **The registration is process-wide.** `ConfigureJsonSerializerOptions` changes MassTransit's shared options, not those of one bus: once
-  any bus in the process has registered the converters, every bus has them. (It also means a test that checks the failure without them
-  depends on the order the tests run in.)
+  any bus in the process has registered the converters, every bus has them, and one kind of factory is in force (two instances of the same kind
+  are interchangeable). It also means a test that checks the failure without them depends on the order the tests run in.
 * **The events use MassTransit's property names, not the ISO ones.** The wire form of an event is camelCase (`messageIdentification`,
-  `initiatingParty`), which is fine between services of one team. A payload meant for another system should be written with the library's
-  own serializer (`Iso20022JsonSerializer`), not by MassTransit.
-
-With a factory, the bus also reads the model's interfaces (`Iso20022InterfaceJsonConverterFactory`); moving the events from the records to the interfaces, so that this package no longer needs `BeneficialStrategies.Iso20022.Common`, is #70. The factory is process-wide too: one factory for all buses.
+  `initiatingParty`), which is fine between services of one team and is the format this package settles on for its events. A payload meant for
+  another system should be written with the library's own serializer (`Iso20022JsonSerializer`), not by MassTransit.
 
 ## Project layout
 

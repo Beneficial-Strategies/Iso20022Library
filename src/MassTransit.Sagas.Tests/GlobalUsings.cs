@@ -17,3 +17,4 @@ global using MassTransit;
 global using MassTransit.Testing;
 global using Microsoft.Extensions.DependencyInjection;
 global using Xunit;
+global using BeneficialStrategies.Iso20022.Factory;
