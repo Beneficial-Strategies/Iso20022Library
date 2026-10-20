@@ -35,6 +35,9 @@ var id = IsoDataFactory.Make<IGenericIdentification3>(b => b
     .Set(x => x.Issuer).To("BANK"));
 ```
 
+`IsoDataFactory.With(source, b => b.Set(x => x.Member).To(value))` is the counterpart of a record's `with`: a copy of an object (of the factory, or a record)
+with the named members changed; the source is not touched.
+
 A member that is not named stays unset (a list is empty). `new IsoBuilder<T>` is not public: use `Make`, which builds with
 `IsoDataFactory.Shared`. The `Samples` package holds named objects made this way.
 

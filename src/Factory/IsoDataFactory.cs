@@ -42,6 +42,28 @@ public sealed class IsoDataFactory : IIsoDataFactory
         return builder.Result;
     }
 
+    /// <summary>A copy of an object with some members changed, as one expression: the interface-side counterpart of a record's <c>with</c>.</summary>
+    /// <remarks>
+    /// The copy is shallow (a list or an object that is a member is shared with the source, which is safe because they are not changed
+    /// in place). The source can be an object of a factory or a record. It is not changed.
+    /// </remarks>
+    /// <example><code>var broken = IsoDataFactory.With(valid, b =&gt; b.Set(x =&gt; x.Identification).To("a value that is too long"));</code></example>
+    public static T With<T>(T source, Action<IsoBuilder<T>> configure)
+        where T : class
+    {
+        if (source is null)
+            throw new System.ArgumentNullException(nameof(source));
+        if (configure is null)
+            throw new System.ArgumentNullException(nameof(configure));
+        var copy = CloneMethod.Invoke(source, null)!;
+        var builder = new IsoBuilder<T>(copy);
+        configure(builder);
+        return builder.Result;
+    }
+
+    private static readonly MethodInfo CloneMethod =
+        typeof(object).GetMethod(nameof(MemberwiseClone), BindingFlags.Instance | BindingFlags.NonPublic)!;
+
     /// <summary>The class built for an interface (built now if it has not been).</summary>
     public Type ImplementationOf(Type type) => Constructor(type)().GetType();
 

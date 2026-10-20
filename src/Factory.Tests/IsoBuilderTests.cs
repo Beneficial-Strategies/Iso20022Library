@@ -63,4 +63,31 @@ public class IsoBuilderTests
 
         Assert.Null(id.Issuer);
     }
+
+    [Fact]
+    public void With_CopiesAnObjectAndChangesTheNamedMembers_LeavingTheSourceAlone()
+    {
+        var source = IsoDataFactory.Make<IGenericIdentification3>(b => b
+            .Set(x => x.Identification).To("ID-1")
+            .Set(x => x.Issuer).To("BANK"));
+
+        var changed = IsoDataFactory.With(source, b => b.Set(x => x.Identification).To("ID-2"));
+
+        Assert.Equal("ID-2", changed.Identification.Value);
+        Assert.Equal("BANK", changed.Issuer!.Value.Value);
+        Assert.Equal("ID-1", source.Identification.Value);
+        Assert.NotSame(source, changed);
+        Assert.Equal(source, IsoDataFactory.With(source, _ => { }));
+    }
+
+    [Fact]
+    public void With_AlsoCopiesARecord()
+    {
+        IGenericIdentification3 source = new GenericIdentification3 { Identification = "ID-1" };
+
+        var changed = IsoDataFactory.With(source, b => b.Set(x => x.Issuer).To("BANK"));
+
+        Assert.Equal("BANK", changed.Issuer!.Value.Value);
+        Assert.Null(source.Issuer);
+    }
 }
