@@ -4,13 +4,13 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayDebto
 
 /// <summary>
 /// Fanned out from one line item of a
-/// <see cref="RequestToPayDebtorActivationAmendmentRequestV02"/> message (<c>reda.071</c>).
+/// <see cref="IRequestToPayDebtorActivationAmendmentRequestV02"/> message (<c>reda.071</c>).
 /// </summary>
 public sealed record DebtorActivationAmendmentRequested(
     Guid EventId,
     string MessageIdentification,
     DateTime CreationDateTime,
-    RTPPartyIdentification2 InitiatingParty,
+    IRTPPartyIdentification2 InitiatingParty,
     int LineItemIndex,
-    DebtorActivationAmendment5 Amendment
+    IDebtorActivationAmendment5 Amendment
 ) : IIso20022FanOutEvent;

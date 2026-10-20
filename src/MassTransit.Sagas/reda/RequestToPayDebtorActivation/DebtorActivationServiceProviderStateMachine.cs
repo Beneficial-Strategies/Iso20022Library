@@ -152,13 +152,13 @@ public sealed class DebtorActivationServiceProviderStateMachine
         SetCompletedWhenFinalized();
     }
 
-    private static bool IsAccepted(ServiceStatus1Choice_ status) =>
-        status is ServiceStatus1Choice.Code { Value: ServiceRequestStatus1Code.Accepted };
+    private static bool IsAccepted(IServiceStatus1Choice status) =>
+        status is ServiceStatus1Choice.ICode { Value: ServiceRequestStatus1Code.Accepted };
 
-    private static void ApplyStatus(DebtorActivationSagaState state, ActivationStatus3 activationStatus)
+    private static void ApplyStatus(DebtorActivationSagaState state, IActivationStatus3 activationStatus)
     {
         state.LastStatus =
-            activationStatus.Status is ServiceStatus1Choice.Code { Value: var code } ? code : null;
+            activationStatus.Status is ServiceStatus1Choice.ICode { Value: var code } ? code : null;
         state.EffectiveActivationDate = activationStatus.EffectiveActivationDate;
     }
 
@@ -168,7 +168,7 @@ public sealed class DebtorActivationServiceProviderStateMachine
     /// remarks on the <see cref="AmendmentRequested"/> event registration for why that matters to
     /// SQL-translatable correlation expressions.
     /// </summary>
-    private static string? OriginalMessageIdOf(OriginalBusinessInstruction1? originalBusinessInstruction) =>
+    private static string? OriginalMessageIdOf(IOriginalBusinessInstruction1? originalBusinessInstruction) =>
         originalBusinessInstruction?.MessageIdentification.Value;
 
     /// <summary>
@@ -176,12 +176,12 @@ public sealed class DebtorActivationServiceProviderStateMachine
     /// StatusReport's original-activation reference, when derivable. Same "message data only,
     /// never <c>state</c>" rule as <see cref="OriginalMessageIdOf"/>.
     /// </summary>
-    private static string? PartyKeyOf(OriginalActivation3Choice_? originalActivation) =>
+    private static string? PartyKeyOf(IOriginalActivation3Choice? originalActivation) =>
         originalActivation switch
         {
-            OriginalActivation3Choice.OriginalDebtorIdentification { Value: var debtor } =>
+            OriginalActivation3Choice.IOriginalDebtorIdentification { Value: var debtor } =>
                 PartyIdentityKey.From(debtor),
-            OriginalActivation3Choice.OriginalActivationData { Value: var data } => PartyIdentityKey.From(
+            OriginalActivation3Choice.IOriginalActivationData { Value: var data } => PartyIdentityKey.From(
                 data.Debtor.Identification
             ),
             _ => null,

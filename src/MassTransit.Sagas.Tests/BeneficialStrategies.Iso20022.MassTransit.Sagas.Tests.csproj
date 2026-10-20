@@ -47,6 +47,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MassTransit.Sagas\BeneficialStrategies.Iso20022.MassTransit.Sagas.csproj" />
+    <ProjectReference Include="..\Common\BeneficialStrategies.Iso20022.Common.csproj" />
+    <ProjectReference Include="..\Factory\BeneficialStrategies.Iso20022.Factory.csproj" />
   </ItemGroup>
 
 </Project>

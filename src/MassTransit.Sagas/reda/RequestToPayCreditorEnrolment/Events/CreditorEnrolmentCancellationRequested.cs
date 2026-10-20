@@ -4,14 +4,14 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCredi
 
 /// <summary>
 /// Fanned out from one line item of a
-/// <see cref="RequestToPayCreditorEnrolmentCancellationRequestV02"/> message (<c>reda.068</c>).
+/// <see cref="IRequestToPayCreditorEnrolmentCancellationRequestV02"/> message (<c>reda.068</c>).
 /// See <see cref="CreditorEnrolmentRequested"/> for the shared shape rationale.
 /// </summary>
 public sealed record CreditorEnrolmentCancellationRequested(
     Guid EventId,
     string MessageIdentification,
     DateTime CreationDateTime,
-    RTPPartyIdentification2 InitiatingParty,
+    IRTPPartyIdentification2 InitiatingParty,
     int LineItemIndex,
-    CreditorEnrolmentCancellation3 Cancellation
+    ICreditorEnrolmentCancellation3 Cancellation
 ) : IIso20022FanOutEvent;

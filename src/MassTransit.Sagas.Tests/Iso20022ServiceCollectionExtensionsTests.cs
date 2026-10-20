@@ -42,12 +42,7 @@ public class Iso20022ServiceCollectionExtensionsTests
                 {
                     // Same requirement as every other test in this project — see
                     // CreditorEnrolmentServiceProviderStateMachineTests for why.
-                    busCfg.ConfigureJsonSerializerOptions(options =>
-                    {
-                        foreach (var converter in Iso20022JsonSerializerOptions.Default.Converters)
-                            options.Converters.Add(converter);
-                        return options;
-                    });
+                    busCfg.ConfigureIso20022Json(new IsoDataFactory());
                     busCfg.ConfigureEndpoints(context);
                 }
             );
@@ -106,6 +101,6 @@ public class Iso20022ServiceCollectionExtensionsTests
         // Neither the fan-out consumer nor the saga state machine were registered for this
         // filter, so the raw ISO message is never consumed at all.
         await harness.Bus.Publish(ARequest("MSG-201"));
-        Assert.False(await harness.Consumed.Any<RequestToPayCreditorEnrolmentRequestV02>());
+        Assert.False(await harness.Consumed.Any<IRequestToPayCreditorEnrolmentRequestV02>());
     }
 }

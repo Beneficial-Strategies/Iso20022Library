@@ -3,7 +3,7 @@
 namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCreditorEnrolment.Events;
 
 /// <summary>
-/// Fanned out from one line item of a <see cref="RequestToPayCreditorEnrolmentRequestV02"/>
+/// Fanned out from one line item of a <see cref="IRequestToPayCreditorEnrolmentRequestV02"/>
 /// message (<c>reda.066</c>). Not an ISO 20022 type — see
 /// <see cref="Framework.IIso20022FanOutEvent"/> for why this exists.
 /// </summary>
@@ -18,8 +18,8 @@ public sealed record CreditorEnrolmentRequested(
     Guid EventId,
     string MessageIdentification,
     DateTime CreationDateTime,
-    RTPPartyIdentification2 InitiatingParty,
+    IRTPPartyIdentification2 InitiatingParty,
     int LineItemIndex,
-    CreditorEnrolment5 Enrolment,
-    CreditorInvoice6 ActivationData
+    ICreditorEnrolment5 Enrolment,
+    ICreditorInvoice6 ActivationData
 ) : IIso20022FanOutEvent;

@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.Framework;
 /// <summary>
 /// Fields every ISO 20022 RTP-service-provider saga in this package needs. Factored out because
 /// the Creditor Enrolment and Debtor Activation sagas are structurally identical at this level —
-/// both keyed off an <c>EnrolmentHeader3</c>/<c>ActivationHeader3</c>-shaped header with no
+/// both keyed off an <c>IEnrolmentHeader3</c>/<c>IActivationHeader3</c>-shaped header with no
 /// ISO-native business-transaction id to correlate on. This is deliberately not a speculative
 /// "general ISO 20022 saga" abstraction — there are only two real families behind it, and it
 /// captures exactly what they share, nothing more.
@@ -36,7 +36,7 @@ public abstract class Iso20022SagaStateBase : SagaStateMachineInstance
     /// <summary>
     /// <c>Header.MessageIdentification</c> of the most recently received *request-type* message in
     /// this episode (the initiating Request, or a later Amendment/Cancellation) — never a
-    /// StatusReport's own id. A StatusReport's <c>OriginalBusinessInstruction1.MessageIdentification</c>
+    /// StatusReport's own id. A StatusReport's <c>IOriginalBusinessInstruction1.MessageIdentification</c>
     /// always references whichever request it is reporting status for, so this is the field
     /// <c>StatusReported</c> correlation checks against.
     /// </summary>
@@ -46,7 +46,7 @@ public abstract class Iso20022SagaStateBase : SagaStateMachineInstance
     /// <c>Header.MessageIdentification</c> of the very first (initiating) Request in this episode —
     /// set once when the saga is created and never overwritten afterward. Amendment/Cancellation
     /// messages identify the enrolment/activation episode itself (not "the most recent message"),
-    /// so their <c>OriginalBusinessInstruction1.MessageIdentification</c> references this id even
+    /// so their <c>IOriginalBusinessInstruction1.MessageIdentification</c> references this id even
     /// after one or more StatusReports have since moved <see cref="LastMessageIdentification"/> on.
     /// </summary>
     public string OriginalMessageIdentification { get; set; } = string.Empty;

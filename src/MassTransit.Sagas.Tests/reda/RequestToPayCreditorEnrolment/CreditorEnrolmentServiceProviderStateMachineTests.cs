@@ -34,12 +34,7 @@ public class CreditorEnrolmentServiceProviderStateMachineTests
                 cfg.UsingInMemory(
                     (context, busCfg) =>
                     {
-                        busCfg.ConfigureJsonSerializerOptions(options =>
-                        {
-                            foreach (var converter in Iso20022JsonSerializerOptions.Default.Converters)
-                                options.Converters.Add(converter);
-                            return options;
-                        });
+                        busCfg.ConfigureIso20022Json(new IsoDataFactory());
                         busCfg.ConfigureEndpoints(context);
                     }
                 );
@@ -72,7 +67,7 @@ public class CreditorEnrolmentServiceProviderStateMachineTests
         await using var _ = provider;
 
         await harness.Bus.Publish(ARequest("MSG-001"));
-        Assert.True(await harness.Consumed.Any<RequestToPayCreditorEnrolmentRequestV02>());
+        Assert.True(await harness.Consumed.Any<IRequestToPayCreditorEnrolmentRequestV02>());
         Assert.True(await sagaHarness.Consumed.Any<Events.CreditorEnrolmentRequested>());
         Assert.True(await sagaHarness.Created.Any());
 
@@ -144,7 +139,7 @@ public class CreditorEnrolmentServiceProviderStateMachineTests
         await using var _ = provider;
 
         await harness.Bus.Publish(AStatusReport("MSG-301", "NEVER-SENT", ServiceRequestStatus1Code.Accepted));
-        Assert.True(await harness.Consumed.Any<RequestToPayCreditorEnrolmentStatusReportV02>());
+        Assert.True(await harness.Consumed.Any<IRequestToPayCreditorEnrolmentStatusReportV02>());
 
         Assert.False(await sagaHarness.Created.Any());
     }
