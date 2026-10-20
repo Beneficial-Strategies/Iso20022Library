@@ -72,7 +72,16 @@ internal sealed class ImmutableValueListConverter<T> : JsonConverter<ImmutableVa
 
         var items = new List<T>();
         while (reader.Read() && reader.TokenType != JsonTokenType.EndArray)
-            items.Add(JsonSerializer.Deserialize<T>(ref reader, options)!);
+        {
+            try
+            {
+                items.Add(JsonSerializer.Deserialize<T>(ref reader, options)!);
+            }
+            catch (JsonException ex)
+            {
+                throw new JsonListElementException(items.Count, ex);
+            }
+        }
 
         if (_concreteType == typeof(ValueList<T>))
             return new ValueList<T>(items);
@@ -91,5 +100,42 @@ internal sealed class ImmutableValueListConverter<T> : JsonConverter<ImmutableVa
         foreach (var item in value)
             JsonSerializer.Serialize(writer, item, typeof(T), options);
         writer.WriteEndArray();
+    }
+}
+
+/// <summary>
+/// A failure inside one element of a JSON array. The nested read that <see cref="ImmutableValueListConverter{T}"/> makes starts a new
+/// path of its own, so the element's index and the path inside it are kept here. <c>System.Text.Json</c> sets <see cref="JsonException.Path"/>
+/// to the path of the list when the exception passes through it; <see cref="WithWholePath"/> appends the rest.
+/// </summary>
+internal sealed class JsonListElementException : JsonException
+{
+    public JsonListElementException(int index, JsonException inner)
+        : base(inner is JsonListElementException e ? e.Detail : WithoutPath(inner), inner)
+    {
+        Detail = inner is JsonListElementException nested ? nested.Detail : WithoutPath(inner);
+        Tail = $"[{index}]" + inner.Path?.TrimStart('$') + (inner as JsonListElementException)?.Tail;
+    }
+
+    /// <summary>The message without any path, as the innermost converter wrote it.</summary>
+    public string Detail { get; }
+
+    /// <summary>The path below the list, such as <c>[1].amount.currency</c>.</summary>
+    public string Tail { get; }
+
+    /// <summary>The same failure as a plain exception whose <see cref="JsonException.Path"/> is the whole path.</summary>
+    internal JsonException WithWholePath()
+    {
+        var path = Path + Tail;
+        return new JsonException($"{Detail} Path: {path}", path, LineNumber, BytePositionInLine, this);
+    }
+
+    public override string Message => Path is null ? Detail : $"{Detail} Path: {Path}{Tail}";
+
+    // System.Text.Json appends " Path: $.x | LineNumber: n | BytePositionInLine: n." to the message.
+    private static string WithoutPath(JsonException ex)
+    {
+        var i = ex.Message.IndexOf(" Path: ", StringComparison.Ordinal);
+        return i < 0 ? ex.Message : ex.Message[..i];
     }
 }

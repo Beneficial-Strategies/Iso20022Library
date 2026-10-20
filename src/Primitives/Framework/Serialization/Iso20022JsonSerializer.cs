@@ -30,7 +30,8 @@ public static class Iso20022JsonSerializer
     /// <see cref="Iso20022JsonSerializerOptions.Default"/> wrap <see cref="Iso20022FormatException"/> as
     /// <see cref="JsonException"/>; so does this method for the records that refuse a value in their own setter
     /// (the amount types, whose digit and sign rules are checked there), which <c>System.Text.Json</c> would otherwise let
-    /// escape. See this project's own <c>CLAUDE.md</c> serialization contract table.
+    /// escape; a choice object without its <c>$type</c> is one too, and a failure inside a list carries the whole path, with the
+    /// index of each element. See this project's own <c>CLAUDE.md</c> serialization contract table.
     /// </exception>
     public static TMessage Deserialize<TMessage>(string json)
         where TMessage : IOuterRecord
@@ -42,6 +43,15 @@ public static class Iso20022JsonSerializer
         }
         catch (Iso20022FormatException ex)
         {
+            throw new JsonException(ex.Message, ex);
+        }
+        catch (JsonListElementException ex) when (ex.Path is not null)
+        {
+            throw ex.WithWholePath();
+        }
+        catch (NotSupportedException ex)
+        {
+            // A choice object without its "$type" discriminator: the base type of a choice is abstract.
             throw new JsonException(ex.Message, ex);
         }
     }
