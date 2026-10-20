@@ -41,6 +41,24 @@ public static class Iso20022MessageTypeRegistry
     public static IReadOnlyDictionary<string, Type> ByDocumentNamespace => Registry().ByDocumentNamespace;
 
     /// <summary>
+    /// Every message <em>interface</em> of the known assemblies (one marked with <see cref="IsoMessageAttribute"/>), keyed by its
+    /// <c>IsoIdentifier</c>. Present whether or not the records are: it is how a reader that has only the interfaces and a
+    /// factory finds the type of a message.
+    /// </summary>
+    public static IReadOnlyDictionary<string, Type> InterfaceByIsoIdentifier => Registry().InterfaceById;
+
+    /// <summary>Every message interface of the known assemblies, keyed by the namespace of its document.</summary>
+    public static IReadOnlyDictionary<string, Type> InterfaceByDocumentNamespace => Registry().InterfaceByNamespace;
+
+    /// <summary>Attempts to resolve a message interface from its XML document namespace.</summary>
+    public static bool TryGetInterfaceByDocumentNamespace(string documentNamespace, [NotNullWhen(true)] out Type? messageInterface) =>
+        InterfaceByDocumentNamespace.TryGetValue(documentNamespace, out messageInterface);
+
+    /// <summary>Attempts to resolve a message interface from its ISO 20022 message identifier.</summary>
+    public static bool TryGetInterfaceByIsoIdentifier(string isoIdentifier, [NotNullWhen(true)] out Type? messageInterface) =>
+        InterfaceByIsoIdentifier.TryGetValue(isoIdentifier, out messageInterface);
+
+    /// <summary>
     /// Attempts to resolve a message type from its XML document namespace — e.g. the root
     /// element's <c>xmlns</c> attribute value.
     /// </summary>
@@ -58,7 +76,14 @@ public static class Iso20022MessageTypeRegistry
 
     private static readonly object Gate = new();
     private static readonly HashSet<Assembly> Added = [];
-    private static (IReadOnlyDictionary<string, Type> ByIsoIdentifier, IReadOnlyDictionary<string, Type> ByDocumentNamespace)? _cache;
+    private sealed record Index(
+        IReadOnlyDictionary<string, Type> ByIsoIdentifier,
+        IReadOnlyDictionary<string, Type> ByDocumentNamespace,
+        IReadOnlyDictionary<string, Type> InterfaceById,
+        IReadOnlyDictionary<string, Type> InterfaceByNamespace
+    );
+
+    private static Index? _cache;
 
     static Iso20022MessageTypeRegistry() => AppDomain.CurrentDomain.AssemblyLoad += (_, _) => Invalidate();
 
@@ -79,19 +104,18 @@ public static class Iso20022MessageTypeRegistry
             _cache = null;
     }
 
-    private static (IReadOnlyDictionary<string, Type> ByIsoIdentifier, IReadOnlyDictionary<string, Type> ByDocumentNamespace) Registry()
+    private static Index Registry()
     {
         lock (Gate)
             return _cache ??= Build();
     }
 
-    private static (
-        IReadOnlyDictionary<string, Type> ByIsoIdentifier,
-        IReadOnlyDictionary<string, Type> ByDocumentNamespace
-    ) Build()
+    private static Index Build()
     {
         var byId = new Dictionary<string, Type>(StringComparer.Ordinal);
         var byNamespace = new Dictionary<string, Type>(StringComparer.Ordinal);
+        var interfaceById = new Dictionary<string, Type>(StringComparer.Ordinal);
+        var interfaceByNamespace = new Dictionary<string, Type>(StringComparer.Ordinal);
 
         var self = typeof(Iso20022MessageTypeRegistry).Assembly;
         var assemblies = new HashSet<Assembly>(Added);
@@ -117,6 +141,15 @@ public static class Iso20022MessageTypeRegistry
 
             foreach (var type in types)
             {
+                if (type.IsInterface && typeof(IOuterRecord).IsAssignableFrom(type))
+                {
+                    if (type.GetCustomAttributes(typeof(IsoMessageAttribute), false).FirstOrDefault() is IsoMessageAttribute message)
+                    {
+                        interfaceById[message.IsoIdentifier] = type;
+                        interfaceByNamespace[message.DocumentNamespace] = type;
+                    }
+                    continue;
+                }
                 if (type.IsAbstract || !typeof(IOuterRecord).IsAssignableFrom(type))
                     continue;
 
@@ -127,7 +160,7 @@ public static class Iso20022MessageTypeRegistry
             }
         }
 
-        return (byId, byNamespace);
+        return new Index(byId, byNamespace, interfaceById, interfaceByNamespace);
     }
 
     private static string? GetStaticStringConstant(Type type, string fieldName) =>

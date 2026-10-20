@@ -74,6 +74,19 @@ public static class Iso20022PayloadServiceCollectionExtensions
             registered.Add(record);
         }
 
+        // A message interface has an XML envelope of its own: the XML is read into the objects of the registered
+        // IIsoDataFactory, so no record is needed. (JSON is read into records only.)
+        foreach (var messageInterface in registered.Where(t => t.IsInterface).Distinct().ToList())
+        {
+            services.TryAdd(
+                new ServiceDescriptor(
+                    typeof(IValidator<>).MakeGenericType(typeof(XmlEnvelope<>).MakeGenericType(messageInterface)),
+                    typeof(XmlEnvelopeValidator<>).MakeGenericType(messageInterface),
+                    lifetime
+                )
+            );
+        }
+
         foreach (var messageType in registered.Where(t => t.IsClass).Distinct().ToList())
         {
             var xmlEnvelopeType = typeof(XmlEnvelope<>).MakeGenericType(messageType);

@@ -20,18 +20,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Payloads;
 /// </remarks>
 internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadValidationDispatcher
 {
-    private static readonly MethodInfo XmlTryDeserializeOpenMethod = typeof(Iso20022XmlSerializer)
-        .GetMethods(BindingFlags.Public | BindingFlags.Static)
-        .Single(m =>
-            m.Name == nameof(Iso20022XmlSerializer.TryDeserialize)
-            && m.GetParameters()[0].ParameterType == typeof(XDocument)
-        );
+    private static readonly MethodInfo XmlReadOpenMethod = typeof(Iso20022PayloadValidationDispatcher).GetMethod(
+        nameof(ReadXml),
+        BindingFlags.NonPublic | BindingFlags.Static
+    )!;
 
     private static readonly MethodInfo JsonTryDeserializeOpenMethod = typeof(Iso20022JsonSerializer).GetMethod(
         nameof(Iso20022JsonSerializer.TryDeserialize)
     )!;
 
-    private static readonly ConcurrentDictionary<Type, MethodInfo> XmlTryDeserializeMethods = new();
+    private static readonly ConcurrentDictionary<Type, Func<XDocument, IIsoDataFactory?, (object? Message, IReadOnlyList<DeserializationIssue> Issues)>> XmlReaders = new();
     private static readonly ConcurrentDictionary<Type, MethodInfo> JsonTryDeserializeMethods = new();
 
     private readonly IServiceProvider _serviceProvider;
@@ -44,31 +42,47 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
         XDocument document;
         try
         {
-            document = XDocument.Parse(xml);
+            document = XDocument.Parse(xml, LoadOptions.SetLineInfo);
         }
-        catch (Exception ex) when (ex is XmlException or ArgumentNullException or ArgumentException)
+        catch (XmlException ex)
         {
-            return NoTypeFailure($"XML could not be parsed: {ex.Message}", "XmlParseError");
+            return NoTypeFailure(new DeserializationIssue("", IssueCode.MalformedXml, null, ex.Message, ex.LineNumber, ex.LinePosition));
+        }
+        catch (Exception ex) when (ex is ArgumentNullException or ArgumentException)
+        {
+            return NoTypeFailure(new DeserializationIssue("", IssueCode.MalformedXml, null, $"There is no XML text: {ex.Message}"));
         }
 
         var documentNamespace = document.Root?.Name.NamespaceName;
-        if (
-            documentNamespace is null
-            || !Iso20022MessageTypeRegistry.TryGetByDocumentNamespace(documentNamespace, out var messageType)
-        )
-        {
-            return NoTypeFailure(
-                documentNamespace is null
-                    ? "XML has no root element."
-                    : $"Unrecognized ISO 20022 document namespace '{documentNamespace}'.",
-                "UnknownMessageType"
-            );
-        }
+        if (documentNamespace is null)
+            return NoTypeFailure("XML has no root element.", "UnknownMessageType");
 
-        return Dispatch(
+        // With a factory registered the XML is read into the message interface, so no record is needed; otherwise into the record.
+        var factory = _serviceProvider.GetService(typeof(IIsoDataFactory)) as IIsoDataFactory;
+        Type? messageType = null;
+        if (factory is not null && Iso20022MessageTypeRegistry.TryGetInterfaceByDocumentNamespace(documentNamespace, out var messageInterface))
+            messageType = messageInterface;
+        else if (Iso20022MessageTypeRegistry.TryGetByDocumentNamespace(documentNamespace, out var record))
+            messageType = record;
+        if (messageType is null)
+            return NoTypeFailure($"Unrecognized ISO 20022 document namespace '{documentNamespace}'.", "UnknownMessageType");
+
+        var (message, issues) = XmlReaders.GetOrAdd(
             messageType,
-            (out object? message, out Exception? error) => TryDeserializeXml(messageType, document, out message, out error)
-        );
+            t => (Func<XDocument, IIsoDataFactory?, (object?, IReadOnlyList<DeserializationIssue>)>)
+                XmlReadOpenMethod.MakeGenericMethod(t).CreateDelegate(typeof(Func<XDocument, IIsoDataFactory?, (object?, IReadOnlyList<DeserializationIssue>)>))
+        )(document, factory);
+        if (message is null)
+            return new Iso20022PayloadValidationResult(new ValidationResult(issues.Select(i => i.ToFailure()).ToList()), messageType, null);
+        return Validate(messageType, message);
+    }
+
+    // The same reading as the Xml package's extensions: every problem, with its path.
+    private static (object? Message, IReadOnlyList<DeserializationIssue> Issues) ReadXml<T>(XDocument document, IIsoDataFactory? factory)
+        where T : class, IOuterRecord
+    {
+        var read = Iso20022XmlSerializer.TryRead<T>(document, factory);
+        return (read.Message, read.Issues);
     }
 
     public Iso20022PayloadValidationResult ValidateJson(string json, string isoIdentifier)
@@ -100,8 +114,13 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
             );
         }
 
+        return Validate(messageType, message!);
+    }
+
+    private Iso20022PayloadValidationResult Validate(Type messageType, object message)
+    {
         // The validators are written for the message interface (#28); a validator registered for the record itself is also used.
-        var messageInterface = MessageValidatorAdapters.InterfaceOf(messageType);
+        var messageInterface = messageType.IsInterface ? messageType : MessageValidatorAdapters.InterfaceOf(messageType);
         var validator =
             (messageInterface is null ? null : _serviceProvider.GetService(typeof(IValidator<>).MakeGenericType(messageInterface)))
             as IValidator
@@ -119,7 +138,7 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
         // ValidationContext<object> plus GetFromNonGenericContext is FluentValidation's own
         // documented adapter for dispatching to an IValidator<T> whose T isn't known at compile
         // time (exactly this scenario: messageType is only known at runtime).
-        var nonGenericContext = new ValidationContext<object>(message!);
+        var nonGenericContext = new ValidationContext<object>(message);
         var validationResult = validator.Validate(nonGenericContext);
         return new Iso20022PayloadValidationResult(validationResult, messageType, message);
     }
@@ -127,21 +146,11 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
     private static Iso20022PayloadValidationResult NoTypeFailure(string message, string errorCode) =>
         new(SingleFailure(message, errorCode), null, null);
 
+    private static Iso20022PayloadValidationResult NoTypeFailure(DeserializationIssue issue) =>
+        new(new ValidationResult([issue.ToFailure()]), null, null);
+
     // MethodInfo.Invoke supports out parameters via the args array: pass placeholder slots for
     // them, then read the values Invoke writes back into those slots after it returns.
-    private static bool TryDeserializeXml(Type messageType, XDocument document, out object? message, out Exception? error)
-    {
-        var method = XmlTryDeserializeMethods.GetOrAdd(
-            messageType,
-            t => XmlTryDeserializeOpenMethod.MakeGenericMethod(t)
-        );
-        var args = new object?[] { document, null, null };
-        var success = (bool)method.Invoke(null, args)!;
-        message = args[1];
-        error = (Exception?)args[2];
-        return success;
-    }
-
     private static bool TryDeserializeJson(Type messageType, string json, out object? message, out Exception? error)
     {
         var method = JsonTryDeserializeMethods.GetOrAdd(

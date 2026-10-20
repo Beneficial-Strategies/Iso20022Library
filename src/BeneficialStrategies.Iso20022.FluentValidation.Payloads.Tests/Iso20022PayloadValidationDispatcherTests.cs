@@ -86,7 +86,7 @@ public class Iso20022PayloadValidationDispatcherTests
     }
 
     [Fact]
-    public void ValidateXml_MalformedXml_SingleFailure_WithXmlParseErrorCode()
+    public void ValidateXml_MalformedXml_SingleFailure_WithXmlMalformedXmlCode()
     {
         var dispatcher = BuildDispatcher();
 
@@ -94,7 +94,8 @@ public class Iso20022PayloadValidationDispatcherTests
 
         Assert.False(result.IsValid);
         var failure = Assert.Single(result.ValidationResult.Errors);
-        Assert.Equal("XmlParseError", failure.ErrorCode);
+        Assert.Equal("Xml.MalformedXml", failure.ErrorCode);
+        Assert.NotNull(failure.CustomState);   // the DeserializationIssue, with its line and position
     }
 
     [Fact]

@@ -3,21 +3,30 @@
 namespace BeneficialStrategies.Iso20022.Validation.Payloads;
 
 /// <summary>
-/// Deserializes the wrapped XML in an <see cref="XmlEnvelope{TMessage}"/> and, on success,
-/// delegates to the injected <see cref="IValidator{TMessage}"/> for <typeparamref name="TMessage"/>.
+/// Reads the wrapped XML in an <see cref="XmlEnvelope{TMessage}"/> and, when it could be read, delegates to the
+/// injected <see cref="IValidator{TMessage}"/> for <typeparamref name="TMessage"/>.
 /// </summary>
 /// <remarks>
-/// A deserialization failure — malformed XML, a missing/wrong root element, or an ISO 20022
-/// format-constraint violation — surfaces as a single <see cref="ValidationFailure"/> whose
-/// <see cref="ValidationFailure.ErrorCode"/> is <c>"XmlParseError"</c>, never a thrown exception.
-/// Uses <see cref="Iso20022XmlSerializer.TryDeserialize{TMessage}(string, out TMessage, out Exception)"/>
-/// for that non-throwing behavior.
-///
+/// <para>
+/// <typeparamref name="TMessage"/> is a message record, or a message interface when an <see cref="IIsoDataFactory"/> is
+/// registered (the <c>BeneficialStrategies.Iso20022.Factory</c> package supplies one): the XML is then read into
+/// the objects the factory makes and no record is needed.
+/// </para>
+/// <para>
+/// Every problem in the XML, not only the first, is a <see cref="ValidationFailure"/> whose
+/// <see cref="ValidationFailure.ErrorCode"/> is <c>Xml.</c> + the <see cref="IssueCode"/> (<c>Xml.MalformedXml</c>,
+/// <c>Xml.WrongRoot</c>, <c>Xml.RequiredMissing</c>, <c>Xml.FacetViolation</c>, ...) and whose
+/// <see cref="ValidationFailure.PropertyName"/> is the XML path; it is never a thrown exception. They are the failures
+/// of <c>BeneficialStrategies.Iso20022.FluentValidation.Xml</c>, which this builds on. When the XML cannot be read the
+/// message validator does not run.
+/// </para>
+/// <para>
 /// Business-rule failures from the underlying message validator pass through with their
 /// <see cref="ValidationFailure.PropertyName"/> untouched, preserving this project's convention
 /// of naming message-level failures after their ISO 20022 constraint (e.g.
 /// <c>WithName("TotalReturnedInterbankSettlementAmountAndSumRule")</c>) — a caller diffing
 /// failures against the message's own validator output sees identical property names either way.
+/// </para>
 /// </remarks>
 public sealed class XmlEnvelopeValidator<TMessage> : AbstractValidator<XmlEnvelope<TMessage>>
     where TMessage : class, IOuterRecord
@@ -27,27 +36,23 @@ public sealed class XmlEnvelopeValidator<TMessage> : AbstractValidator<XmlEnvelo
     /// for the deserialized <typeparamref name="TMessage"/> — e.g. resolved from a DI container —
     /// instead of this type constructing its own.
     /// </summary>
-    public XmlEnvelopeValidator(IValidator<TMessage> messageValidator)
+    /// <param name="messageValidator">The validator for the message.</param>
+    /// <param name="factory">Makes the objects when <typeparamref name="TMessage"/> is an interface; not needed for a record.</param>
+    public XmlEnvelopeValidator(IValidator<TMessage> messageValidator, IIsoDataFactory? factory = null)
     {
         RuleFor(x => x.Xml)
             .Custom(
                 (xml, context) =>
                 {
-                    if (!Iso20022XmlSerializer.TryDeserialize<TMessage>(xml, out var message, out var error))
+                    var read = Iso20022XmlSerializer.TryRead<TMessage>(xml, factory);
+                    if (read.Message is null)
                     {
-                        context.AddFailure(
-                            new ValidationFailure(
-                                context.PropertyPath,
-                                $"XML could not be parsed as {typeof(TMessage).Name}: {error?.Message}"
-                            )
-                            {
-                                ErrorCode = "XmlParseError",
-                            }
-                        );
+                        foreach (var issue in read.Issues)
+                            context.AddFailure(issue.ToFailure());
                         return;
                     }
 
-                    foreach (var failure in messageValidator.Validate(message).Errors)
+                    foreach (var failure in messageValidator.Validate(read.Message).Errors)
                         context.AddFailure(failure);
                 }
             );

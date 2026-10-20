@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BeneficialStrategies.Iso20022.Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
+    <ProjectReference Include="..\BeneficialStrategies.Iso20022.FluentValidation.Xml\BeneficialStrategies.Iso20022.FluentValidation.Xml.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
