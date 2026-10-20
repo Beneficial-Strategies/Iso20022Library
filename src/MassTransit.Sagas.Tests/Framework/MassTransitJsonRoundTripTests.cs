@@ -37,6 +37,13 @@ public class MassTransitJsonRoundTripTests
         }
     }
 
+    private static string Json(DebtorActivationAmendmentRequested e)
+    {
+        var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+        Iso20022MassTransitJson.Register(options, new IsoDataFactory());
+        return JsonSerializer.Serialize(e, options);
+    }
+
     private static DebtorActivationAmendmentRequested AnEvent()
     {
         var amendment = AAmendment("MSG-AMEND-1", "MSG-ORIG-1").AmendmentData.Single();
@@ -63,7 +70,7 @@ public class MassTransitJsonRoundTripTests
                     (context, busCfg) =>
                     {
                         if (withLibraryConverters)
-                            busCfg.ConfigureIso20022Json();
+                            busCfg.ConfigureIso20022Json(new IsoDataFactory());
                         busCfg.ConfigureEndpoints(context);
                     }
                 );
@@ -85,8 +92,11 @@ public class MassTransitJsonRoundTripTests
 
         Assert.True(await harness.Consumed.Any<DebtorActivationAmendmentRequested>());
         var arrived = Assert.Single(received.Events);
-        Assert.Equal(sent, arrived);   // records compare their members; the lists by item
-        Assert.Equal(sent.Amendment.OriginalActivation.GetType(), arrived.Amendment.OriginalActivation.GetType());
+        // The event is one of ours; what it holds arrives as objects the factory made, not the records that were sent, so the two are
+        // compared by what they say: the same JSON, and the same variant of the choice.
+        Assert.Equal(Json(sent), Json(arrived));
+        Assert.IsAssignableFrom<Choices.OriginalActivation3Choice.IOriginalDebtorIdentification>(arrived.Amendment.OriginalActivation);
+        Assert.NotEqual(sent.Amendment.OriginalActivation.GetType(), arrived.Amendment.OriginalActivation.GetType());
         Assert.Contains("json", Assert.Single(received.ContentTypes));   // it really was serialized
     }
 

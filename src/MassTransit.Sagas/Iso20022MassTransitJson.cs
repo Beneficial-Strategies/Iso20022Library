@@ -14,7 +14,7 @@ public static class Iso20022MassTransitJson
     /// </summary>
     /// <remarks>
     /// MassTransit keeps one set of JSON options for the whole process, so the registration is process-wide and may be repeated: a
-    /// converter that is already there is not added again. Only one factory can be in force; asking for a different one throws.
+    /// converter that is already there is not added again. Only one kind of factory can be in force (two instances of the same kind are interchangeable and the first stays); asking for another kind throws.
     /// The names on the wire stay MassTransit's own.
     /// </remarks>
     /// <param name="configurator">The bus being configured.</param>
@@ -41,9 +41,10 @@ public static class Iso20022MassTransitJson
             return;
         var present = options.Converters.OfType<Iso20022InterfaceJsonConverterFactory>().FirstOrDefault();
         if (present is null)
-            options.Converters.Add(new Iso20022InterfaceJsonConverterFactory(factory));
-        else if (!ReferenceEquals(present.Factory, factory))
+            // First: MassTransit has converters of its own that would make an object of its own for an interface, which loses the variant of a choice.
+            options.Converters.Insert(0, new Iso20022InterfaceJsonConverterFactory(factory));
+        else if (present.Factory.GetType() != factory.GetType())
             throw new InvalidOperationException(
-                "MassTransit's JSON options are shared by the whole process and already read the ISO 20022 interfaces through another factory; use one factory for all buses.");
+                "MassTransit's JSON options are shared by the whole process and already read the ISO 20022 interfaces through another kind of factory; use one kind of factory for all buses.");
     }
 }

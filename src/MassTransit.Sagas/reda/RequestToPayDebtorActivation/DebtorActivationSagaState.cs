@@ -11,16 +11,16 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayDebto
 public sealed class DebtorActivationSagaState : Framework.Iso20022SagaStateBase
 {
     /// <summary>The Debtor, captured from the initiating event's <c>Activation.Debtor</c>.</summary>
-    public RTPPartyIdentification2? Debtor { get; set; }
+    public IRTPPartyIdentification2? Debtor { get; set; }
 
     /// <summary>Captured from the initiating event's <c>Activation.Creditor</c>.</summary>
-    public RTPPartyIdentification2? Creditor { get; set; }
+    public IRTPPartyIdentification2? Creditor { get; set; }
 
     /// <summary>Captured from the initiating event's <c>Activation.DebtorSolutionProvider</c>.</summary>
-    public RTPPartyIdentification2? DebtorSolutionProvider { get; set; }
+    public IRTPPartyIdentification2? DebtorSolutionProvider { get; set; }
 
     /// <summary>Captured from the initiating event's <c>Activation.UltimateDebtor</c>, when present.</summary>
-    public RTPPartyIdentification2? UltimateDebtor { get; set; }
+    public IRTPPartyIdentification2? UltimateDebtor { get; set; }
 
     /// <summary>
     /// The outcome of the most recently processed <c>DebtorActivationStatusReported</c> event.
@@ -30,7 +30,7 @@ public sealed class DebtorActivationSagaState : Framework.Iso20022SagaStateBase
     public ServiceRequestStatus1Code? LastStatus { get; set; }
 
     /// <summary>The effective activation date from the most recently processed status report, when populated.</summary>
-    public DateAndDateTime2Choice_? EffectiveActivationDate { get; set; }
+    public IDateAndDateTime2Choice? EffectiveActivationDate { get; set; }
 
     /// <summary>
     /// Extension point for a caller-supplied review/compliance step. This package never sets or

@@ -11,9 +11,9 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCredi
 /// enrolments at once" gets reconciled with MassTransit's one-message-one-saga-instance
 /// correlation model; kept deliberately boring and separate from the state machine itself.
 /// </summary>
-public sealed class CreditorEnrolmentRequestConsumer : IConsumer<RequestToPayCreditorEnrolmentRequestV02>
+public sealed class CreditorEnrolmentRequestConsumer : IConsumer<IRequestToPayCreditorEnrolmentRequestV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayCreditorEnrolmentRequestV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayCreditorEnrolmentRequestV02> context)
     {
         var message = context.Message;
         var index = 0;
@@ -37,9 +37,9 @@ public sealed class CreditorEnrolmentRequestConsumer : IConsumer<RequestToPayCre
 
 /// <summary>See <see cref="CreditorEnrolmentRequestConsumer"/>.</summary>
 public sealed class CreditorEnrolmentAmendmentRequestConsumer
-    : IConsumer<RequestToPayCreditorEnrolmentAmendmentRequestV02>
+    : IConsumer<IRequestToPayCreditorEnrolmentAmendmentRequestV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayCreditorEnrolmentAmendmentRequestV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayCreditorEnrolmentAmendmentRequestV02> context)
     {
         var message = context.Message;
         var index = 0;
@@ -62,9 +62,9 @@ public sealed class CreditorEnrolmentAmendmentRequestConsumer
 
 /// <summary>See <see cref="CreditorEnrolmentRequestConsumer"/>.</summary>
 public sealed class CreditorEnrolmentCancellationRequestConsumer
-    : IConsumer<RequestToPayCreditorEnrolmentCancellationRequestV02>
+    : IConsumer<IRequestToPayCreditorEnrolmentCancellationRequestV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayCreditorEnrolmentCancellationRequestV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayCreditorEnrolmentCancellationRequestV02> context)
     {
         var message = context.Message;
         var index = 0;
@@ -87,9 +87,9 @@ public sealed class CreditorEnrolmentCancellationRequestConsumer
 
 /// <summary>See <see cref="CreditorEnrolmentRequestConsumer"/>.</summary>
 public sealed class CreditorEnrolmentStatusReportConsumer
-    : IConsumer<RequestToPayCreditorEnrolmentStatusReportV02>
+    : IConsumer<IRequestToPayCreditorEnrolmentStatusReportV02>
 {
-    public async Task Consume(ConsumeContext<RequestToPayCreditorEnrolmentStatusReportV02> context)
+    public async Task Consume(ConsumeContext<IRequestToPayCreditorEnrolmentStatusReportV02> context)
     {
         var message = context.Message;
         var index = 0;

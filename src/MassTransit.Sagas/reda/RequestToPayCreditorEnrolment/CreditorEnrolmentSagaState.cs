@@ -18,17 +18,17 @@ public sealed class CreditorEnrolmentSagaState : Framework.Iso20022SagaStateBase
     /// The Creditor, captured from the initiating <c>CreditorEnrolmentRequested</c> event's
     /// <c>Enrolment.Creditor</c>.
     /// </summary>
-    public RTPPartyIdentification2? Creditor { get; set; }
+    public IRTPPartyIdentification2? Creditor { get; set; }
 
     /// <summary>Captured from the initiating event's <c>Enrolment.MerchantCategoryCode</c>.</summary>
     public MerchantCategoryCodeIdentifier? MerchantCategoryCode { get; set; }
 
     /// <summary>Captured from the initiating event's <c>Enrolment.UltimateCreditor</c>, when present.</summary>
-    public RTPPartyIdentification2? UltimateCreditor { get; set; }
+    public IRTPPartyIdentification2? UltimateCreditor { get; set; }
 
     /// <summary>
     /// The outcome of the most recently processed <c>CreditorEnrolmentStatusReported</c> event.
-    /// Deliberately narrowed to the <c>Code</c> variant of <c>ServiceStatus1Choice_</c> — the
+    /// Deliberately narrowed to the <c>Code</c> variant of <c>IServiceStatus1Choice</c> — the
     /// <c>Proprietary</c> variant has no ISO-specified closed vocabulary a state graph can branch
     /// on, so a status report using it is recorded here as <see langword="null"/> rather than
     /// interpreted.
@@ -41,7 +41,7 @@ public sealed class CreditorEnrolmentSagaState : Framework.Iso20022SagaStateBase
     /// <see cref="DateTime"/>, to preserve the Date-vs-DateTime distinction the wire format
     /// itself carries.
     /// </summary>
-    public DateAndDateTime2Choice_? EffectiveEnrolmentDate { get; set; }
+    public IDateAndDateTime2Choice? EffectiveEnrolmentDate { get; set; }
 
     /// <summary>
     /// Extension point for a caller-supplied review/compliance step. This package never sets or
