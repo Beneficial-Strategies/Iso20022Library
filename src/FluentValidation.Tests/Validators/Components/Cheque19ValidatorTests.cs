@@ -9,16 +9,15 @@ public class Cheque19ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new Cheque19()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ICheque19>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void WithDeliveryMethod_NoValidationErrors()
     {
-        var value = new Cheque19
-        {
-            DeliveryMethod = new Choices.ChequeDeliveryMethod1Choice.Code { Value = ChequeDelivery1Code.MailToDebtor },
-        };
+        var value = IsoDataFactory.Make<ICheque19>(b => b
+            .Set(x => x.DeliveryMethod).To(IsoDataFactory.Make<Choices.ChequeDeliveryMethod1Choice.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(ChequeDelivery1Code.MailToDebtor))));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

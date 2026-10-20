@@ -9,22 +9,14 @@ public class ClearingSystemIdentification2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification2Choice.Code
-            {
-                Value = ExternalClearingSystemIdentification1Code.AustrianBankleitzahl,
-            };
+        var choice = BeneficialStrategies.Iso20022.Samples.ClearingSystemIdentification2Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification2Choice.Proprietary
-            {
-                Value = "MYCLRSYS",
-            };
+        var choice = BeneficialStrategies.Iso20022.Samples.ClearingSystemIdentification2Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

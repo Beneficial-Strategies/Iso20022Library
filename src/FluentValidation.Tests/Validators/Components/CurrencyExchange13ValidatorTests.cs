@@ -6,13 +6,11 @@ public class CurrencyExchange13ValidatorTests
 {
     private readonly CurrencyExchange13Validator _sut = new();
 
-    private static CurrencyExchange13 ValidMessage() =>
-        new()
-        {
-            SourceCurrency = "USD",
-            TargetCurrency = "EUR",
-            ExchangeRate = 0.9m,
-        };
+    private static ICurrencyExchange13 ValidMessage() =>
+        IsoDataFactory.Make<ICurrencyExchange13>(b => b
+            .Set(x => x.SourceCurrency).To("USD")
+            .Set(x => x.TargetCurrency).To("EUR")
+            .Set(x => x.ExchangeRate).To(0.9m));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,7 +21,8 @@ public class CurrencyExchange13ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { UnitCurrency = "USD" };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UnitCurrency).To("USD"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -35,7 +34,8 @@ public class CurrencyExchange13ValidatorTests
         registry.Add("EUR");
         var sut = new CurrencyExchange13Validator(new ActiveCurrencyCodeValidator(registry));
 
-        var result = sut.Validate(ValidMessage() with { SourceCurrency = "ZZZ" });
+        var result = sut.Validate(IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SourceCurrency).To("ZZZ")));
         Assert.False(result.IsValid);
     }
 }

@@ -6,26 +6,30 @@ public class MandateInitiationRequestV08ValidatorTests
 {
     private readonly MandateInitiationRequestV08Validator _sut = new();
 
-    private static GroupHeader110 ValidGroupHeader() =>
-        new() { MessageIdentification = "MSG-001", CreationDateTime = new DateTime(2026, 1, 1) };
+    private static IGroupHeader110 ValidGroupHeader() =>
+        IsoDataFactory.Make<IGroupHeader110>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1)));
 
-    private static PartyIdentification272 ValidParty(string name) => new() { Name = name };
+    private static IPartyIdentification272 ValidParty(string name) => IsoDataFactory.Make<IPartyIdentification272>(b => b
+        .Set(x => x.Name).To(name));
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidAgent() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
-    private static Mandate23 ValidMandate() =>
-        new()
-        {
-            Creditor = ValidParty("Creditor Co"),
-            Debtor = ValidParty("Debtor Co"),
-            DebtorAgent = ValidAgent(),
-            MandateRequestIdentification = "MNDTREQ-001",
-            TrackingIndicator = true,
-        };
+    private static IMandate23 ValidMandate() =>
+        IsoDataFactory.Make<IMandate23>(b => b
+            .Set(x => x.Creditor).To(ValidParty("Creditor Co"))
+            .Set(x => x.Debtor).To(ValidParty("Debtor Co"))
+            .Set(x => x.DebtorAgent).To(ValidAgent())
+            .Set(x => x.MandateRequestIdentification).To("MNDTREQ-001")
+            .Set(x => x.TrackingIndicator).To(true));
 
-    private static MandateInitiationRequestV08 ValidMessage() =>
-        new() { GroupHeader = ValidGroupHeader(), Mandate = [ValidMandate()] };
+    private static IMandateInitiationRequestV08 ValidMessage() =>
+        IsoDataFactory.Make<IMandateInitiationRequestV08>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.Mandate).To([ValidMandate()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -36,7 +40,8 @@ public class MandateInitiationRequestV08ValidatorTests
     [Fact]
     public void Mandate_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Mandate = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Mandate).To([]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "Mandate");
     }
@@ -44,17 +49,17 @@ public class MandateInitiationRequestV08ValidatorTests
     [Fact]
     public void Mandate_MultipleEntries_NoValidationError()
     {
-        var msg = ValidMessage() with { Mandate = [ValidMandate(), ValidMandate()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Mandate).To([ValidMandate(), ValidMandate()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -63,10 +68,9 @@ public class MandateInitiationRequestV08ValidatorTests
     {
         // GroupHeader -> Mandate -> UltimateDebtorGuideline: proves the full DI chain the message
         // validator was wired up with actually executes end to end.
-        var msg = ValidMessage() with
-        {
-            Mandate = [ValidMandate() with { UltimateDebtor = ValidParty("Debtor Co") }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Mandate).To([IsoDataFactory.With(ValidMandate(), b2 => b2
+                .Set(x2 => x2.UltimateDebtor).To(ValidParty("Debtor Co")))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName.EndsWith("UltimateDebtorGuideline"));
     }

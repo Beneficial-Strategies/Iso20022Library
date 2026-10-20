@@ -9,17 +9,15 @@ public class InstructionForDebtorAgent1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new InstructionForDebtorAgent1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IInstructionForDebtorAgent1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new InstructionForDebtorAgent1
-        {
-            Code = ExternalDebtorAgentInstruction1Code.PayCreditorByCheque,
-            InstructionInformation = "Pay by cheque",
-        };
+        var msg = IsoDataFactory.Make<IInstructionForDebtorAgent1>(b => b
+            .Set(x => x.Code).To(ExternalDebtorAgentInstruction1Code.PayCreditorByCheque)
+            .Set(x => x.InstructionInformation).To("Pay by cheque"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -30,7 +28,8 @@ public class InstructionForDebtorAgent1ValidatorTests
         registry.Add("CHQB");
         var sut = new InstructionForDebtorAgent1Validator(new ExternalDebtorAgentInstruction1CodeValidator(registry));
 
-        var result = sut.Validate(new InstructionForDebtorAgent1 { Code = "ZZZZ" });
+        var result = sut.Validate(IsoDataFactory.Make<IInstructionForDebtorAgent1>(b => b
+            .Set(x => x.Code).To("ZZZZ")));
         Assert.False(result.IsValid);
     }
 }

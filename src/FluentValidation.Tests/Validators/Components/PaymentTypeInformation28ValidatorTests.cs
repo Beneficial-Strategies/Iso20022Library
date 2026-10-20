@@ -9,29 +9,23 @@ public class PaymentTypeInformation28ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new PaymentTypeInformation28()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IPaymentTypeInformation28>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new PaymentTypeInformation28
-        {
-            InstructionPriority = Priority2Code.High,
-            ClearingChannel = ClearingChannel2Code.RealTimeGrossSettlementSystem,
-            ServiceLevel =
-            [
-                new BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice.Proprietary { Value = "SEPA" },
-            ],
-            LocalInstrument = new BeneficialStrategies.Iso20022.Choices.LocalInstrument2Choice.Proprietary
-            {
-                Value = "INST",
-            },
-            CategoryPurpose = new BeneficialStrategies.Iso20022.Choices.CategoryPurpose1Choice.Proprietary
-            {
-                Value = "CASH",
-            },
-        };
+        var msg = IsoDataFactory.Make<IPaymentTypeInformation28>(b => b
+            .Set(x => x.InstructionPriority).To(Priority2Code.High)
+            .Set(x => x.ClearingChannel).To(ClearingChannel2Code.RealTimeGrossSettlementSystem)
+            .Set(x => x.ServiceLevel).To([
+                IsoDataFactory.Make<Choices.ServiceLevel8Choice.IProprietary>(b2 => b2
+                    .Set(x2 => x2.Value).To("SEPA")),
+            ])
+            .Set(x => x.LocalInstrument).To(IsoDataFactory.Make<Choices.LocalInstrument2Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("INST")))
+            .Set(x => x.CategoryPurpose).To(IsoDataFactory.Make<Choices.CategoryPurpose1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("CASH"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

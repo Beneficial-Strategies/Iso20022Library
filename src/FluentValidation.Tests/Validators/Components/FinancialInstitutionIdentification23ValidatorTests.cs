@@ -6,7 +6,7 @@ public class FinancialInstitutionIdentification23ValidatorTests
 {
     private readonly FinancialInstitutionIdentification23Validator _sut = new();
 
-    private static FinancialInstitutionIdentification23 ValidMessage() => new();
+    private static IFinancialInstitutionIdentification23 ValidMessage() => IsoDataFactory.Make<IFinancialInstitutionIdentification23>();
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,15 +17,13 @@ public class FinancialInstitutionIdentification23ValidatorTests
     [Fact]
     public void AllOptionalChildren_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            ClearingSystemMemberIdentification = new ClearingSystemMemberIdentification2
-            {
-                MemberIdentification = "MEMBER-001",
-            },
-            Other = new GenericFinancialIdentification1 { Identification = "ID-001" },
-            PostalAddress = new PostalAddress27 { TownName = "Springfield" },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ClearingSystemMemberIdentification).To(IsoDataFactory.Make<IClearingSystemMemberIdentification2>(b2 => b2
+                .Set(x2 => x2.MemberIdentification).To("MEMBER-001")))
+            .Set(x => x.Other).To(IsoDataFactory.Make<IGenericFinancialIdentification1>(b2 => b2
+                .Set(x2 => x2.Identification).To("ID-001")))
+            .Set(x => x.PostalAddress).To(IsoDataFactory.Make<IPostalAddress27>(b2 => b2
+                .Set(x2 => x2.TownName).To("Springfield"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

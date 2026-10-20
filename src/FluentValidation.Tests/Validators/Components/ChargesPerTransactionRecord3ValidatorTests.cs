@@ -6,11 +6,14 @@ public class ChargesPerTransactionRecord3ValidatorTests
 {
     private readonly ChargesPerTransactionRecord3Validator _sut = new();
 
-    private static ChargesBreakdown1 ValidBreakdown() =>
-        new() { Amount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m } };
+    private static IChargesBreakdown1 ValidBreakdown() =>
+        IsoDataFactory.Make<IChargesBreakdown1>(b => b
+            .Set(x => x.Amount).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m }));
 
-    private static ChargesPerTransactionRecord3 ValidMessage() =>
-        new() { UnderlyingTransaction = new TransactionReferences7(), ChargesBreakdown = [ValidBreakdown()] };
+    private static IChargesPerTransactionRecord3 ValidMessage() =>
+        IsoDataFactory.Make<IChargesPerTransactionRecord3>(b => b
+            .Set(x => x.UnderlyingTransaction).To(IsoDataFactory.Make<ITransactionReferences7>())
+            .Set(x => x.ChargesBreakdown).To([ValidBreakdown()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,14 +26,16 @@ public class ChargesPerTransactionRecord3ValidatorTests
     [Fact]
     public void ChargesBreakdown_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { ChargesBreakdown = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ChargesBreakdown).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.ChargesBreakdown);
     }
 
     [Fact]
     public void ChargesBreakdown_OneElement_NoValidationError()
     {
-        var msg = ValidMessage() with { ChargesBreakdown = [ValidBreakdown()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ChargesBreakdown).To([ValidBreakdown()]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.ChargesBreakdown);
     }
 }

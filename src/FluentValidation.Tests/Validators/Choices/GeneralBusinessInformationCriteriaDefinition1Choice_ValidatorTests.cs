@@ -10,10 +10,8 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice_ValidatorTests
     public void QueryNameVariant_NoValidationErrors()
     {
         var value =
-            new BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriteriaDefinition1Choice.QueryName
-            {
-                Value = "PREVIOUS-QUERY",
-            };
+            IsoDataFactory.Make<Choices.GeneralBusinessInformationCriteriaDefinition1Choice.IQueryName>(b => b
+                .Set(x => x.Value).To("PREVIOUS-QUERY"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -21,7 +19,7 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice_ValidatorTests
     public void NewCriteriaVariant_Empty_NoValidationErrors()
     {
         var value =
-            new BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria();
+            IsoDataFactory.Make<Choices.GeneralBusinessInformationCriteriaDefinition1Choice.INewCriteria>();
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -29,12 +27,12 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice_ValidatorTests
     public void NewCriteriaVariant_AllFieldsPresent_NoValidationErrors()
     {
         var value =
-            new BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria
-            {
-                NewQueryName = "NEW-QUERY",
-                SearchCriteria = [new GeneralBusinessInformationSearchCriteria1 { Reference = ["REF-001"] }],
-                ReturnCriteria = new GeneralBusinessInformationReturnCriteria1 { QualifierIndicator = true },
-            };
+            IsoDataFactory.Make<Choices.GeneralBusinessInformationCriteriaDefinition1Choice.INewCriteria>(b => b
+                .Set(x => x.NewQueryName).To("NEW-QUERY")
+                .Set(x => x.SearchCriteria).To([IsoDataFactory.Make<IGeneralBusinessInformationSearchCriteria1>(b2 => b2
+                    .Set(x2 => x2.Reference).To(["REF-001"]))])
+                .Set(x => x.ReturnCriteria).To(IsoDataFactory.Make<IGeneralBusinessInformationReturnCriteria1>(b2 => b2
+                    .Set(x2 => x2.QualifierIndicator).To(true))));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

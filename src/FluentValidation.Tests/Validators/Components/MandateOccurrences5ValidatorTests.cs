@@ -6,7 +6,8 @@ public class MandateOccurrences5ValidatorTests
 {
     private readonly MandateOccurrences5Validator _sut = new();
 
-    private static MandateOccurrences5 ValidMessage() => new() { SequenceType = SequenceType2Code.Recurring };
+    private static IMandateOccurrences5 ValidMessage() => IsoDataFactory.Make<IMandateOccurrences5>(b => b
+        .Set(x => x.SequenceType).To(SequenceType2Code.Recurring));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,14 +18,11 @@ public class MandateOccurrences5ValidatorTests
     [Fact]
     public void AllOptionalChildren_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Frequency = new BeneficialStrategies.Iso20022.Choices.Frequency36Choice.Type
-            {
-                Value = Frequency6Code.Monthly,
-            },
-            Duration = new DatePeriod3 { FromDate = new DateOnly(2026, 1, 1) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Frequency).To(IsoDataFactory.Make<Choices.Frequency36Choice.IType>(b2 => b2
+                .Set(x2 => x2.Value).To(Frequency6Code.Monthly)))
+            .Set(x => x.Duration).To(IsoDataFactory.Make<IDatePeriod3>(b2 => b2
+                .Set(x2 => x2.FromDate).To(new DateOnly(2026, 1, 1)))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

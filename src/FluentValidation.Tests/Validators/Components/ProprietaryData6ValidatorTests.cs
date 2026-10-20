@@ -6,7 +6,8 @@ public class ProprietaryData6ValidatorTests
 {
     private readonly ProprietaryData6Validator _sut = new();
 
-    private static ProprietaryData6 ValidMessage() => new() { Any = new ExternalSchema.SkipPayload() };
+    private static IProprietaryData6 ValidMessage() => IsoDataFactory.Make<IProprietaryData6>(b => b
+        .Set(x => x.Any).To(new ExternalSchema.SkipPayload()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

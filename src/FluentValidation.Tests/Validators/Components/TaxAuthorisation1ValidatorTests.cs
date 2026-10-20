@@ -9,13 +9,15 @@ public class TaxAuthorisation1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new TaxAuthorisation1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ITaxAuthorisation1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new TaxAuthorisation1 { Title = "Mr", Name = "John Doe" };
+        var msg = IsoDataFactory.Make<ITaxAuthorisation1>(b => b
+            .Set(x => x.Title).To("Mr")
+            .Set(x => x.Name).To("John Doe"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

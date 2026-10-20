@@ -9,20 +9,16 @@ public class MandateRelatedData5Choice_ValidatorTests
     [Fact]
     public void DirectDebitMandateVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.MandateRelatedData5Choice.DirectDebitMandate
-        {
-            Value = new MandateRelatedInformation16(),
-        };
+        var value = IsoDataFactory.Make<Choices.MandateRelatedData5Choice.IDirectDebitMandate>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IMandateRelatedInformation16>()));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void CreditTransferMandateVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.MandateRelatedData5Choice.CreditTransferMandate
-        {
-            Value = new CreditTransferMandateData1(),
-        };
+        var value = IsoDataFactory.Make<Choices.MandateRelatedData5Choice.ICreditTransferMandate>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<ICreditTransferMandateData1>()));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

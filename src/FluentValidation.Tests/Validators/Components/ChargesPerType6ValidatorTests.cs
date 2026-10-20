@@ -6,24 +6,22 @@ public class ChargesPerType6ValidatorTests
 {
     private readonly ChargesPerType6Validator _sut = new();
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidAgent() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
-    private static CashAccount40 ValidAccount() => new();
+    private static ICashAccount40 ValidAccount() => IsoDataFactory.Make<ICashAccount40>();
 
-    private static ChargesPerTypeRecord6 MinimalRecord() =>
-        new()
-        {
-            UnderlyingTransaction = new TransactionReferences7(),
-            Amount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m },
-        };
+    private static IChargesPerTypeRecord6 MinimalRecord() =>
+        IsoDataFactory.Make<IChargesPerTypeRecord6>(b => b
+            .Set(x => x.UnderlyingTransaction).To(IsoDataFactory.Make<ITransactionReferences7>())
+            .Set(x => x.Amount).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m }));
 
-    private static ChargesPerType6 ValidMessage() =>
-        new()
-        {
-            Type = new Choices.ChargeType3Choice.Proprietary { Identification = "CHRG" },
-            Record = [MinimalRecord()],
-        };
+    private static IChargesPerType6 ValidMessage() =>
+        IsoDataFactory.Make<IChargesPerType6>(b => b
+            .Set(x => x.Type).To(IsoDataFactory.Make<Choices.ChargeType3Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Identification).To("CHRG")))
+            .Set(x => x.Record).To([MinimalRecord()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -36,7 +34,8 @@ public class ChargesPerType6ValidatorTests
     [Fact]
     public void Record_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Record = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Record).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Record);
     }
 
@@ -46,11 +45,10 @@ public class ChargesPerType6ValidatorTests
     [Fact]
     public void TopLevelAgentAndRecordAgent_Violates_BothRules()
     {
-        var msg = ValidMessage() with
-        {
-            ChargesAccountAgent = ValidAgent(),
-            Record = [MinimalRecord() with { ChargesAccountAgent = ValidAgent() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ChargesAccountAgent).To(ValidAgent())
+            .Set(x => x.Record).To([IsoDataFactory.With(MinimalRecord(), b2 => b2
+                .Set(x2 => x2.ChargesAccountAgent).To(ValidAgent()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ChargesAccountAgent2Rule");
         Assert.Contains(result.Errors, e => e.PropertyName == "ChargesAccountAgentRule");
@@ -59,11 +57,10 @@ public class ChargesPerType6ValidatorTests
     [Fact]
     public void TopLevelAgentAccountAndRecordAgentAccount_Violates_BothRules()
     {
-        var msg = ValidMessage() with
-        {
-            ChargesAccountAgentAccount = ValidAccount(),
-            Record = [MinimalRecord() with { ChargesAccountAgentAccount = ValidAccount() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ChargesAccountAgentAccount).To(ValidAccount())
+            .Set(x => x.Record).To([IsoDataFactory.With(MinimalRecord(), b2 => b2
+                .Set(x2 => x2.ChargesAccountAgentAccount).To(ValidAccount()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ChargesAccountAgent2Rule");
         Assert.Contains(result.Errors, e => e.PropertyName == "ChargesAccountAgentRule");
@@ -72,7 +69,8 @@ public class ChargesPerType6ValidatorTests
     [Fact]
     public void TopLevelAgentOnly_DoesNotViolate_EitherRule()
     {
-        var msg = ValidMessage() with { ChargesAccountAgent = ValidAgent() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ChargesAccountAgent).To(ValidAgent()));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "ChargesAccountAgent2Rule");
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "ChargesAccountAgentRule");
@@ -81,7 +79,9 @@ public class ChargesPerType6ValidatorTests
     [Fact]
     public void RecordAgentOnly_DoesNotViolate_EitherRule()
     {
-        var msg = ValidMessage() with { Record = [MinimalRecord() with { ChargesAccountAgent = ValidAgent() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Record).To([IsoDataFactory.With(MinimalRecord(), b2 => b2
+            .Set(x2 => x2.ChargesAccountAgent).To(ValidAgent()))]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "ChargesAccountAgent2Rule");
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "ChargesAccountAgentRule");

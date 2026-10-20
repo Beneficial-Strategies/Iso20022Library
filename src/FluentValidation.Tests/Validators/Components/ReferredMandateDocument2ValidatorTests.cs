@@ -6,7 +6,7 @@ public class ReferredMandateDocument2ValidatorTests
 {
     private readonly ReferredMandateDocument2Validator _sut = new();
 
-    private static ReferredMandateDocument2 ValidMessage() => new();
+    private static IReferredMandateDocument2 ValidMessage() => IsoDataFactory.Make<IReferredMandateDocument2>();
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,24 +17,14 @@ public class ReferredMandateDocument2ValidatorTests
     [Fact]
     public void AllOptionalChildren_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            RelatedDate = new DateAndType1
-            {
-                Date = new DateOnly(2026, 1, 1),
-                Type = new BeneficialStrategies.Iso20022.Choices.DateType2Choice.Proprietary
-                {
-                    Value = "MYDATETYPE",
-                },
-            },
-            Type = new DocumentType1
-            {
-                CodeOrProprietary = new BeneficialStrategies.Iso20022.Choices.DocumentType2Choice.Proprietary
-                {
-                    Value = "MYDOCTYPE",
-                },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.RelatedDate).To(IsoDataFactory.Make<IDateAndType1>(b2 => b2
+                .Set(x2 => x2.Date).To(new DateOnly(2026, 1, 1))
+                .Set(x2 => x2.Type).To(IsoDataFactory.Make<Choices.DateType2Choice.IProprietary>(b3 => b3
+                    .Set(x3 => x3.Value).To("MYDATETYPE")))))
+            .Set(x => x.Type).To(IsoDataFactory.Make<IDocumentType1>(b2 => b2
+                .Set(x2 => x2.CodeOrProprietary).To(IsoDataFactory.Make<Choices.DocumentType2Choice.IProprietary>(b3 => b3
+                    .Set(x3 => x3.Value).To("MYDOCTYPE"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

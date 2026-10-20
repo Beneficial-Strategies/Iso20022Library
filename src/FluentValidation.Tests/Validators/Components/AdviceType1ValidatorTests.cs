@@ -9,20 +9,17 @@ public class AdviceType1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new AdviceType1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IAdviceType1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new AdviceType1
-        {
-            CreditAdvice = new BeneficialStrategies.Iso20022.Choices.AdviceType1Choice.Code
-            {
-                Value = AdviceType1Code.AdviceWithDetails,
-            },
-            DebitAdvice = new BeneficialStrategies.Iso20022.Choices.AdviceType1Choice.Proprietary { Value = "DEBIT" },
-        };
+        var msg = IsoDataFactory.Make<IAdviceType1>(b => b
+            .Set(x => x.CreditAdvice).To(IsoDataFactory.Make<Choices.AdviceType1Choice.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(AdviceType1Code.AdviceWithDetails)))
+            .Set(x => x.DebitAdvice).To(IsoDataFactory.Make<Choices.AdviceType1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("DEBIT"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

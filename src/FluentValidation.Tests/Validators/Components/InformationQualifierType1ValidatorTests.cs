@@ -9,13 +9,15 @@ public class InformationQualifierType1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new InformationQualifierType1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IInformationQualifierType1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFields_Present_NoValidationError()
     {
-        var msg = new InformationQualifierType1 { IsFormatted = true, Priority = Priority1Code.High };
+        var msg = IsoDataFactory.Make<IInformationQualifierType1>(b => b
+            .Set(x => x.IsFormatted).To(true)
+            .Set(x => x.Priority).To(Priority1Code.High));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

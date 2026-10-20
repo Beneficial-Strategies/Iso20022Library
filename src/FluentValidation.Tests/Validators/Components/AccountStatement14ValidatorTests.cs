@@ -6,28 +6,21 @@ public class AccountStatement14ValidatorTests
 {
     private readonly AccountStatement14Validator _sut = new();
 
-    private static CashBalance8 ValidBalance() =>
-        new()
-        {
-            Type = new BalanceType13
-            {
-                CodeOrProprietary = new Choices.BalanceType10Choice.Code
-                {
-                    Value = Codesets.ExternalBalanceType1Code.ClosingAvailable,
-                },
-            },
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            CreditDebitIndicator = Codesets.CreditDebitCode.Credit,
-            Date = new Choices.DateAndDateTime2Choice.Date { Value = new DateOnly(2026, 1, 1) },
-        };
+    private static ICashBalance8 ValidBalance() =>
+        IsoDataFactory.Make<ICashBalance8>(b => b
+            .Set(x => x.Type).To(IsoDataFactory.Make<IBalanceType13>(b2 => b2
+                .Set(x2 => x2.CodeOrProprietary).To(IsoDataFactory.Make<Choices.BalanceType10Choice.ICode>(b3 => b3
+                    .Set(x3 => x3.Value).To(Codesets.ExternalBalanceType1Code.ClosingAvailable)))))
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.CreditDebitIndicator).To(Codesets.CreditDebitCode.Credit)
+            .Set(x => x.Date).To(IsoDataFactory.Make<Choices.DateAndDateTime2Choice.IDate>(b2 => b2
+                .Set(x2 => x2.Value).To(new DateOnly(2026, 1, 1)))));
 
-    private static AccountStatement14 ValidMessage() =>
-        new()
-        {
-            Identification = "STMT-001",
-            Account = new CashAccount43(),
-            Balance = [ValidBalance()],
-        };
+    private static IAccountStatement14 ValidMessage() =>
+        IsoDataFactory.Make<IAccountStatement14>(b => b
+            .Set(x => x.Identification).To("STMT-001")
+            .Set(x => x.Account).To(IsoDataFactory.Make<ICashAccount43>())
+            .Set(x => x.Balance).To([ValidBalance()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -40,14 +33,16 @@ public class AccountStatement14ValidatorTests
     [Fact]
     public void Balance_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Balance = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Balance).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Balance);
     }
 
     [Fact]
     public void Balance_OneElement_NoValidationError()
     {
-        var msg = ValidMessage() with { Balance = [ValidBalance()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Balance).To([ValidBalance()]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.Balance);
     }
 }

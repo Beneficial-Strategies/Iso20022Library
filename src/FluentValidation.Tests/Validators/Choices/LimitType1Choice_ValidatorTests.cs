@@ -9,17 +9,16 @@ public class LimitType1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.LimitType1Choice.Code
-        {
-            Value = LimitType3Code.Bilateral,
-        };
+        var value = IsoDataFactory.Make<Choices.LimitType1Choice.ICode>(b => b
+            .Set(x => x.Value).To(LimitType3Code.Bilateral));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.LimitType1Choice.Proprietary { Value = "MYLIMIT" };
+        var value = IsoDataFactory.Make<Choices.LimitType1Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYLIMIT"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

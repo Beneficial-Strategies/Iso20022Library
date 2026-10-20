@@ -41,49 +41,49 @@ public class CoverageCompletenessTests
     /// </remarks>
     public static readonly Type[] FullySupportedMessages =
     [
-        typeof(CancelCaseAssignmentV05),
-        typeof(RequestForDuplicateV07),
-        typeof(MandateCopyRequestV04),
-        typeof(CaseStatusReportRequestV05),
-        typeof(PayInEventAcknowledgementV02),
-        typeof(DebitAuthorisationResponseV06),
-        typeof(RejectInvestigationV07),
-        typeof(MandateInitiationRequestV08),
-        typeof(CaseStatusReportV06),
-        typeof(NotificationOfCaseAssignmentV06),
-        typeof(DeleteLimitV08),
-        typeof(DeleteStandingOrderV05),
-        typeof(DuplicateV07),
-        typeof(ProprietaryFormatInvestigationV06),
-        typeof(GetCurrencyExchangeRateV04),
-        typeof(GetGeneralBusinessInformationV04),
-        typeof(DeleteReservationV07),
-        typeof(LiquidityCreditTransferV07),
-        typeof(LiquidityDebitTransferV07),
-        typeof(MandateCancellationRequestV08),
-        typeof(MandateSuspensionRequestV04),
-        typeof(CreateLimitV02),
-        typeof(CreateReservationV03),
-        typeof(CreateStandingOrderV03),
-        typeof(ModifyStandingOrderV08),
-        typeof(ModifyReservationV07),
-        typeof(MandateAcceptanceReportV08),
-        typeof(MandateAmendmentRequestV08),
-        typeof(CreditorPaymentActivationRequestV12),
-        typeof(CustomerPaymentReversalV13),
-        typeof(CustomerDirectDebitInitiationV12),
-        typeof(CustomerCreditTransferInitiationV13),
-        typeof(CustomerPaymentStatusReportV15),
-        typeof(CreditorPaymentActivationRequestStatusReportV12),
-        typeof(MultilateralSettlementRequestV02),
-        typeof(FinancialInstitutionDirectDebitV06),
-        typeof(FIToFIPaymentStatusRequestV07),
-        typeof(FIToFIPaymentReversalV14),
-        typeof(FIToFIPaymentStatusReportV16),
-        typeof(FIToFICustomerCreditTransferV14),
-        typeof(FinancialInstitutionCreditTransferV13),
-        typeof(FIToFICustomerDirectDebitV12),
-        typeof(PaymentReturnV15),
+        typeof(ICancelCaseAssignmentV05),
+        typeof(IRequestForDuplicateV07),
+        typeof(IMandateCopyRequestV04),
+        typeof(ICaseStatusReportRequestV05),
+        typeof(IPayInEventAcknowledgementV02),
+        typeof(IDebitAuthorisationResponseV06),
+        typeof(IRejectInvestigationV07),
+        typeof(IMandateInitiationRequestV08),
+        typeof(ICaseStatusReportV06),
+        typeof(INotificationOfCaseAssignmentV06),
+        typeof(IDeleteLimitV08),
+        typeof(IDeleteStandingOrderV05),
+        typeof(IDuplicateV07),
+        typeof(IProprietaryFormatInvestigationV06),
+        typeof(IGetCurrencyExchangeRateV04),
+        typeof(IGetGeneralBusinessInformationV04),
+        typeof(IDeleteReservationV07),
+        typeof(ILiquidityCreditTransferV07),
+        typeof(ILiquidityDebitTransferV07),
+        typeof(IMandateCancellationRequestV08),
+        typeof(IMandateSuspensionRequestV04),
+        typeof(ICreateLimitV02),
+        typeof(ICreateReservationV03),
+        typeof(ICreateStandingOrderV03),
+        typeof(IModifyStandingOrderV08),
+        typeof(IModifyReservationV07),
+        typeof(IMandateAcceptanceReportV08),
+        typeof(IMandateAmendmentRequestV08),
+        typeof(ICreditorPaymentActivationRequestV12),
+        typeof(ICustomerPaymentReversalV13),
+        typeof(ICustomerDirectDebitInitiationV12),
+        typeof(ICustomerCreditTransferInitiationV13),
+        typeof(ICustomerPaymentStatusReportV15),
+        typeof(ICreditorPaymentActivationRequestStatusReportV12),
+        typeof(IMultilateralSettlementRequestV02),
+        typeof(IFinancialInstitutionDirectDebitV06),
+        typeof(IFIToFIPaymentStatusRequestV07),
+        typeof(IFIToFIPaymentReversalV14),
+        typeof(IFIToFIPaymentStatusReportV16),
+        typeof(IFIToFICustomerCreditTransferV14),
+        typeof(IFinancialInstitutionCreditTransferV13),
+        typeof(IFIToFICustomerDirectDebitV12),
+        typeof(IPaymentReturnV15),
     ];
 
     [Theory]
@@ -93,6 +93,7 @@ public class CoverageCompletenessTests
         var modelReachable = GetModelReachableTypes(messageType).Select(ToValidatedType).ToHashSet();
         var wiredClosure = GetWiredValidatedTypes(messageType);
 
+        Assert.True(modelReachable.Count > 0, $"no model type is reachable from {messageType.Name}: the walk is not finding the model");
         var gaps = modelReachable.Except(wiredClosure).ToList();
 
         Assert.True(
@@ -133,7 +134,7 @@ public class CoverageCompletenessTests
         while (queue.Count > 0)
         {
             var current = queue.Dequeue();
-            foreach (var prop in current.GetProperties(BindingFlags.Public | BindingFlags.Instance))
+            foreach (var prop in PropertiesOf(current))
             {
                 var propType = Unwrap(prop.PropertyType);
                 if (!visited.Add(propType))
@@ -162,7 +163,7 @@ public class CoverageCompletenessTests
     /// </summary>
     private static Type ToValidatedType(Type type)
     {
-        if (!IsModelComponentOrChoice(type))
+        if (!IsModelComponentOrChoice(type) || type.IsInterface)
         {
             return type;
         }
@@ -171,6 +172,12 @@ public class CoverageCompletenessTests
         var iface = typeof(BeneficialStrategies.Iso20022.Components.IGroupHeader110).Assembly.GetType(type.Namespace + "." + name);
         return iface ?? throw new InvalidOperationException($"No interface {name} for {type.FullName}.");
     }
+
+    // An interface lists only the members it declares itself; those of the interfaces it extends are its members too.
+    private static IEnumerable<PropertyInfo> PropertiesOf(Type type) =>
+        type.IsInterface
+            ? new[] { type }.Concat(type.GetInterfaces()).SelectMany(i => i.GetProperties(BindingFlags.Public | BindingFlags.Instance)).GroupBy(p => p.Name).Select(g => g.First())
+            : type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
     private static Type Unwrap(Type type)
     {
@@ -186,7 +193,7 @@ public class CoverageCompletenessTests
         }
 
         var def = type.GetGenericTypeDefinition();
-        if (def.Name is "ValueList`1" or "SimpleValueList`1" or "ImmutableValueList`1")
+        if (def.Name is "ValueList`1" or "SimpleValueList`1" or "ImmutableValueList`1" or "IEnumerable`1")
         {
             return type.GetGenericArguments()[0];
         }

@@ -6,16 +6,14 @@ public class DirectDebitTransactionInformation33ValidatorTests
 {
     private readonly DirectDebitTransactionInformation33Validator _sut = new();
 
-    private static DirectDebitTransactionInformation33 ValidMessage() =>
-        new()
-        {
-            PaymentIdentification = new PaymentIdentification13 { EndToEndIdentification = "E2E-001" },
-            Debtor = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = "DEUTDEFFXXX" },
-            },
-            InterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m },
-        };
+    private static IDirectDebitTransactionInformation33 ValidMessage() =>
+        IsoDataFactory.Make<IDirectDebitTransactionInformation33>(b => b
+            .Set(x => x.PaymentIdentification).To(IsoDataFactory.Make<IPaymentIdentification13>(b2 => b2
+                .Set(x2 => x2.EndToEndIdentification).To("E2E-001")))
+            .Set(x => x.Debtor).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b3 => b3
+                    .Set(x3 => x3.BICFI).To("DEUTDEFFXXX")))))
+            .Set(x => x.InterbankSettlementAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m }));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -28,10 +26,8 @@ public class DirectDebitTransactionInformation33ValidatorTests
     [Fact]
     public void InterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            InterbankSettlementAmount = ValidMessage().InterbankSettlementAmount with { Currency = default },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InterbankSettlementAmount).To(ValidMessage().InterbankSettlementAmount with { Currency = default }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "InterbankSettlementAmount.Currency");
     }
@@ -39,10 +35,8 @@ public class DirectDebitTransactionInformation33ValidatorTests
     [Fact]
     public void InterbankSettlementAmount_ZeroAmount_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            InterbankSettlementAmount = ValidMessage().InterbankSettlementAmount with { Amount = 0m },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InterbankSettlementAmount).To(ValidMessage().InterbankSettlementAmount with { Amount = 0m }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "InterbankSettlementAmount.Amount");
     }
@@ -52,96 +46,80 @@ public class DirectDebitTransactionInformation33ValidatorTests
     [Fact]
     public void PaymentTypeInformation_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { PaymentTypeInformation = new PaymentTypeInformation28() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.PaymentTypeInformation).To(IsoDataFactory.Make<IPaymentTypeInformation28>()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SettlementTimeIndication_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SettlementTimeIndication = new SettlementDateTimeIndication1 { CreditDateTime = new DateTime(2026, 1, 1) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SettlementTimeIndication).To(IsoDataFactory.Make<ISettlementDateTimeIndication1>(b2 => b2
+                .Set(x2 => x2.CreditDateTime).To(new DateTime(2026, 1, 1)))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SettlementTimeRequest_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SettlementTimeRequest = new SettlementTimeRequest2 { FromTime = new TimeOnly(9, 0, 0) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SettlementTimeRequest).To(IsoDataFactory.Make<ISettlementTimeRequest2>(b2 => b2
+                .Set(x2 => x2.FromTime).To(new TimeOnly(9, 0, 0)))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void UltimateDebtor_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { UltimateDebtor = ValidMessage().Debtor };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UltimateDebtor).To(ValidMessage().Debtor));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void DebtorAccount_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            DebtorAccount = new CashAccount40
-            {
-                Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-                {
-                    Value = "DE89370400440532013000",
-                },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAccount).To(IsoDataFactory.Make<ICashAccount40>(b2 => b2
+                .Set(x2 => x2.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b3 => b3
+                    .Set(x3 => x3.Value).To("DE89370400440532013000"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void DebtorAgent_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { DebtorAgent = ValidMessage().Debtor };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAgent).To(ValidMessage().Debtor));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void DebtorAgentAccount_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            DebtorAgentAccount = new CashAccount40
-            {
-                Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-                {
-                    Value = "DE89370400440532013000",
-                },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAgentAccount).To(IsoDataFactory.Make<ICashAccount40>(b2 => b2
+                .Set(x2 => x2.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b3 => b3
+                    .Set(x3 => x3.Value).To("DE89370400440532013000"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void Purpose_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Purpose = new BeneficialStrategies.Iso20022.Choices.Purpose2Choice.Code
-            {
-                Value = ExternalPurpose1Code.CashManagementTransfer,
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Purpose).To(IsoDataFactory.Make<Choices.Purpose2Choice.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(ExternalPurpose1Code.CashManagementTransfer))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void RemittanceInformation_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            RemittanceInformation = new RemittanceInformation2 { Unstructured = ["Invoice 12345"] },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.RemittanceInformation).To(IsoDataFactory.Make<IRemittanceInformation2>(b2 => b2
+                .Set(x2 => x2.Unstructured).To(["Invoice 12345"]))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

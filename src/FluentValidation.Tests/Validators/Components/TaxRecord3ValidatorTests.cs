@@ -9,24 +9,24 @@ public class TaxRecord3ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new TaxRecord3()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ITaxRecord3>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new TaxRecord3
-        {
-            Type = "VAT",
-            Category = "CAT1",
-            CategoryDetails = "Details",
-            DebtorStatus = "Active",
-            CertificateIdentification = "CERT-001",
-            FormsCode = "FORM1",
-            Period = new TaxPeriod3 { Year = 2026 },
-            TaxAmount = new TaxAmount3 { Rate = 5.5m },
-            AdditionalInformation = "Extra info",
-        };
+        var msg = IsoDataFactory.Make<ITaxRecord3>(b => b
+            .Set(x => x.Type).To("VAT")
+            .Set(x => x.Category).To("CAT1")
+            .Set(x => x.CategoryDetails).To("Details")
+            .Set(x => x.DebtorStatus).To("Active")
+            .Set(x => x.CertificateIdentification).To("CERT-001")
+            .Set(x => x.FormsCode).To("FORM1")
+            .Set(x => x.Period).To(IsoDataFactory.Make<ITaxPeriod3>(b2 => b2
+                .Set(x2 => x2.Year).To(2026)))
+            .Set(x => x.TaxAmount).To(IsoDataFactory.Make<ITaxAmount3>(b2 => b2
+                .Set(x2 => x2.Rate).To(5.5m)))
+            .Set(x => x.AdditionalInformation).To("Extra info"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

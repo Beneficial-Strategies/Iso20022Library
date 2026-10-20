@@ -15,14 +15,10 @@ public class PartyIdentityKeyTests
     [Fact]
     public void Organisation_LEIPresent_TakesPriorityOverAnyBIC()
     {
-        var party = new Party53Choice.OrganisationIdentification
-        {
-            Value = new OrganisationIdentification40
-            {
-                LEI = "529900T8BM49AURSDO55",
-                AnyBIC = "DEUTDEFF",
-            },
-        };
+        var party = IsoDataFactory.Make<Party53Choice.IOrganisationIdentification>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IOrganisationIdentification40>(b2 => b2
+                .Set(x2 => x2.LEI).To("529900T8BM49AURSDO55")
+                .Set(x2 => x2.AnyBIC).To("DEUTDEFF"))));
 
         Assert.Equal("LEI:529900T8BM49AURSDO55", PartyIdentityKey.From(party));
     }
@@ -30,10 +26,9 @@ public class PartyIdentityKeyTests
     [Fact]
     public void Organisation_AnyBICPresent_NoLEI_UsesAnyBIC()
     {
-        var party = new Party53Choice.OrganisationIdentification
-        {
-            Value = new OrganisationIdentification40 { AnyBIC = "DEUTDEFF" },
-        };
+        var party = IsoDataFactory.Make<Party53Choice.IOrganisationIdentification>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IOrganisationIdentification40>(b2 => b2
+                .Set(x2 => x2.AnyBIC).To("DEUTDEFF"))));
 
         Assert.Equal("BIC:DEUTDEFF", PartyIdentityKey.From(party));
     }
@@ -41,17 +36,14 @@ public class PartyIdentityKeyTests
     [Fact]
     public void Organisation_OnlyOther_UsesFirstOtherEntry()
     {
-        var party = new Party53Choice.OrganisationIdentification
-        {
-            Value = new OrganisationIdentification40
-            {
-                Other =
-                [
-                    new GenericOrganisationIdentification3 { Identification = "ACME-001" },
-                    new GenericOrganisationIdentification3 { Identification = "ACME-002" },
-                ],
-            },
-        };
+        var party = IsoDataFactory.Make<Party53Choice.IOrganisationIdentification>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IOrganisationIdentification40>(b2 => b2
+                .Set(x2 => x2.Other).To([
+                    IsoDataFactory.Make<IGenericOrganisationIdentification3>(b3 => b3
+                        .Set(x3 => x3.Identification).To("ACME-001")),
+                    IsoDataFactory.Make<IGenericOrganisationIdentification3>(b3 => b3
+                        .Set(x3 => x3.Identification).To("ACME-002")),
+                ]))));
 
         Assert.Equal("OTHER:ACME-001", PartyIdentityKey.From(party));
     }
@@ -59,10 +51,8 @@ public class PartyIdentityKeyTests
     [Fact]
     public void Organisation_NothingPopulated_ReturnsNull()
     {
-        var party = new Party53Choice.OrganisationIdentification
-        {
-            Value = new OrganisationIdentification40(),
-        };
+        var party = IsoDataFactory.Make<Party53Choice.IOrganisationIdentification>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IOrganisationIdentification40>()));
 
         Assert.Null(PartyIdentityKey.From(party));
     }
@@ -70,13 +60,10 @@ public class PartyIdentityKeyTests
     [Fact]
     public void Person_OnlyOther_UsesFirstOtherEntry()
     {
-        var party = new Party53Choice.PrivateIdentification
-        {
-            Value = new PersonIdentification20
-            {
-                Other = [new GenericPersonIdentification2 { Identification = "PERSON-001" }],
-            },
-        };
+        var party = IsoDataFactory.Make<Party53Choice.IPrivateIdentification>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IPersonIdentification20>(b2 => b2
+                .Set(x2 => x2.Other).To([IsoDataFactory.Make<IGenericPersonIdentification2>(b3 => b3
+                    .Set(x3 => x3.Identification).To("PERSON-001"))]))));
 
         Assert.Equal("OTHER:PERSON-001", PartyIdentityKey.From(party));
     }
@@ -84,10 +71,8 @@ public class PartyIdentityKeyTests
     [Fact]
     public void Person_NothingPopulated_ReturnsNull()
     {
-        var party = new Party53Choice.PrivateIdentification
-        {
-            Value = new PersonIdentification20(),
-        };
+        var party = IsoDataFactory.Make<Party53Choice.IPrivateIdentification>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IPersonIdentification20>()));
 
         Assert.Null(PartyIdentityKey.From(party));
     }

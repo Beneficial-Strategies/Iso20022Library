@@ -9,33 +9,23 @@ public class RemittanceAmount4ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new RemittanceAmount4()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IRemittanceAmount4>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new RemittanceAmount4
-        {
-            AdjustmentAmountAndReason =
-            [
-                new DocumentAdjustment1
-                {
-                    Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 10m },
-                },
-            ],
-            RemittanceAmountAndType =
-            [
-                new DocumentAmount1
-                {
-                    Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-                    Type = new BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice.Proprietary
-                    {
-                        Value = "MYAMTTYPE",
-                    },
-                },
-            ],
-        };
+        var msg = IsoDataFactory.Make<IRemittanceAmount4>(b => b
+            .Set(x => x.AdjustmentAmountAndReason).To([
+                IsoDataFactory.Make<IDocumentAdjustment1>(b2 => b2
+                    .Set(x2 => x2.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 10m })),
+            ])
+            .Set(x => x.RemittanceAmountAndType).To([
+                IsoDataFactory.Make<IDocumentAmount1>(b2 => b2
+                    .Set(x2 => x2.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+                    .Set(x2 => x2.Type).To(IsoDataFactory.Make<Choices.DocumentAmountType1Choice.IProprietary>(b3 => b3
+                        .Set(x3 => x3.Value).To("MYAMTTYPE")))),
+            ]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

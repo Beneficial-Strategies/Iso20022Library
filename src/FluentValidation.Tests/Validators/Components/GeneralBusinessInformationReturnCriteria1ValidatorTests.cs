@@ -9,18 +9,16 @@ public class GeneralBusinessInformationReturnCriteria1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new GeneralBusinessInformationReturnCriteria1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IGeneralBusinessInformationReturnCriteria1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFields_Present_NoValidationError()
     {
-        var msg = new GeneralBusinessInformationReturnCriteria1
-        {
-            QualifierIndicator = true,
-            SubjectIndicator = true,
-            SubjectDetailsIndicator = false,
-        };
+        var msg = IsoDataFactory.Make<IGeneralBusinessInformationReturnCriteria1>(b => b
+            .Set(x => x.QualifierIndicator).To(true)
+            .Set(x => x.SubjectIndicator).To(true)
+            .Set(x => x.SubjectDetailsIndicator).To(false));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

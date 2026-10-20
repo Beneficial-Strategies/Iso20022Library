@@ -43,12 +43,10 @@ public class ValidatorsOnInterfacesTests
     public void Component_OwnClass_GivesTheSameFailuresAsTheRecord()
     {
         var sut = new DateAndPlaceOfBirth1Validator(new CountryCodeValidator(RegistryOf<CountryCode>("US")));
-        var record = new DateAndPlaceOfBirth1
-        {
-            BirthDate = new DateOnly(1990, 1, 1),
-            CityOfBirth = "Springfield",
-            CountryOfBirth = "ZZ",
-        };
+        var record = IsoDataFactory.Make<IDateAndPlaceOfBirth1>(b => b
+            .Set(x => x.BirthDate).To(new DateOnly(1990, 1, 1))
+            .Set(x => x.CityOfBirth).To("Springfield")
+            .Set(x => x.CountryOfBirth).To("ZZ"));
 
         var fromRecord = Describe(sut.Validate(record));
         var fromOwnClass = Describe(sut.Validate(new OwnBirth("ZZ")));
@@ -62,11 +60,9 @@ public class ValidatorsOnInterfacesTests
     public void Choice_OwnVariantClass_GivesTheSameFailuresAsTheRecord()
     {
         var sut = new AmountType4Choice_Validator(new ActiveOrHistoricCurrencyCodeValidator(RegistryOf<ActiveOrHistoricCurrencyCode>("EUR")));
-        var record = new Choices.AmountType4Choice.EquivalentAmount
-        {
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            CurrencyOfTransfer = "ZZZ",
-        };
+        var record = IsoDataFactory.Make<Choices.AmountType4Choice.IEquivalentAmount>(b => b
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.CurrencyOfTransfer).To("ZZZ"));
 
         var fromRecord = Describe(sut.Validate(record));
         var fromOwnClass = Describe(sut.Validate(new OwnEquivalentAmount("ZZZ")));

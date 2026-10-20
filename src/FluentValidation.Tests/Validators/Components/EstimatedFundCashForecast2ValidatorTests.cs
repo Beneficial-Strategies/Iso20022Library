@@ -6,39 +6,41 @@ public class EstimatedFundCashForecast2ValidatorTests
 {
     private readonly EstimatedFundCashForecast2Validator _sut = new();
 
-    private static CashInForecast1 ValidCashIn(bool? exceptional = null) =>
-        new() { SettlementDate = new DateOnly(2026, 1, 1), ExceptionalCashFlowIndicator = exceptional };
+    private static ICashInForecast1 ValidCashIn(bool? exceptional = null) =>
+        IsoDataFactory.Make<ICashInForecast1>(b => b
+            .Set(x => x.SettlementDate).To(new DateOnly(2026, 1, 1))
+            .Set(x => x.ExceptionalCashFlowIndicator).To(exceptional));
 
-    private static CashOutForecast1 ValidCashOut(bool? exceptional = null) =>
-        new() { SettlementDate = new DateOnly(2026, 1, 1), ExceptionalCashFlowIndicator = exceptional };
+    private static ICashOutForecast1 ValidCashOut(bool? exceptional = null) =>
+        IsoDataFactory.Make<ICashOutForecast1>(b => b
+            .Set(x => x.SettlementDate).To(new DateOnly(2026, 1, 1))
+            .Set(x => x.ExceptionalCashFlowIndicator).To(exceptional));
 
-    private static ForecastParameter1 ValidForecastBreakdownDetail(bool? exceptional = null) =>
-        new()
-        {
-            ReportParameter = new Choices.ReportParameter2Choice.Country { Value = "US" },
-            EstimatedCashInForecastDetails = exceptional is null ? [] : [ValidCashIn(exceptional)],
-        };
+    private static IForecastParameter1 ValidForecastBreakdownDetail(bool? exceptional = null) =>
+        IsoDataFactory.Make<IForecastParameter1>(b => b
+            .Set(x => x.ReportParameter).To(IsoDataFactory.Make<Choices.ReportParameter2Choice.ICountry>(b2 => b2
+                .Set(x2 => x2.Value).To("US")))
+            .Set(x => x.EstimatedCashInForecastDetails).To(exceptional is null ? [] : [ValidCashIn(exceptional)]));
 
-    private static CashSortingCriterion1 ValidSortingCriteria(bool? exceptional = null) =>
-        new()
-        {
-            SortingCriterionType = new Choices.SortCriteria1Choice.UserDefined { Value = new Choices.DataFormat1Choice.Unstructured { Value = "FORMAT" } },
-            ForecastBreakdownDetails = [ValidForecastBreakdownDetail(exceptional)],
-        };
+    private static ICashSortingCriterion1 ValidSortingCriteria(bool? exceptional = null) =>
+        IsoDataFactory.Make<ICashSortingCriterion1>(b => b
+            .Set(x => x.SortingCriterionType).To(IsoDataFactory.Make<Choices.SortCriteria1Choice.IUserDefined>(b2 => b2
+                .Set(x2 => x2.Value).To(IsoDataFactory.Make<Choices.DataFormat1Choice.IUnstructured>(b3 => b3
+                .Set(x3 => x3.Value).To("FORMAT")))))
+            .Set(x => x.ForecastBreakdownDetails).To([ValidForecastBreakdownDetail(exceptional)]));
 
-    private static EstimatedFundCashForecast2 ValidMessage() =>
-        new()
-        {
-            TradeDateTime = new Choices.DateAndDateTimeChoice.Date { Value = new DateOnly(2026, 1, 1) },
-            PreviousTradeDateTime = new Choices.DateAndDateTimeChoice.Date { Value = new DateOnly(2025, 12, 1) },
-            FinancialInstrumentDetails = new FinancialInstrument5
-            {
-                Identification = new Choices.SecurityIdentification1Choice.ISIN { Value = "US0378331005" },
-                DualFundIndicator = false,
-            },
-            ExceptionalNetCashFlowIndicator = false,
-            SortingCriteriaDetails = [ValidSortingCriteria()],
-        };
+    private static IEstimatedFundCashForecast2 ValidMessage() =>
+        IsoDataFactory.Make<IEstimatedFundCashForecast2>(b => b
+            .Set(x => x.TradeDateTime).To(IsoDataFactory.Make<Choices.DateAndDateTimeChoice.IDate>(b2 => b2
+                .Set(x2 => x2.Value).To(new DateOnly(2026, 1, 1))))
+            .Set(x => x.PreviousTradeDateTime).To(IsoDataFactory.Make<Choices.DateAndDateTimeChoice.IDate>(b2 => b2
+                .Set(x2 => x2.Value).To(new DateOnly(2025, 12, 1))))
+            .Set(x => x.FinancialInstrumentDetails).To(IsoDataFactory.Make<IFinancialInstrument5>(b2 => b2
+                .Set(x2 => x2.Identification).To(IsoDataFactory.Make<Choices.SecurityIdentification1Choice.IISIN>(b3 => b3
+                    .Set(x3 => x3.Value).To("US0378331005")))
+                .Set(x2 => x2.DualFundIndicator).To(false)))
+            .Set(x => x.ExceptionalNetCashFlowIndicator).To(false)
+            .Set(x => x.SortingCriteriaDetails).To([ValidSortingCriteria()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -51,7 +53,8 @@ public class EstimatedFundCashForecast2ValidatorTests
     [Fact]
     public void SortingCriteriaDetails_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { SortingCriteriaDetails = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SortingCriteriaDetails).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.SortingCriteriaDetails);
     }
 
@@ -60,11 +63,9 @@ public class EstimatedFundCashForecast2ValidatorTests
     [Fact]
     public void ExceptionalIndicatorTrue_NoMatchingNestedIndicator_Violates_Rule()
     {
-        var msg = ValidMessage() with
-        {
-            ExceptionalNetCashFlowIndicator = true,
-            SortingCriteriaDetails = [ValidSortingCriteria(exceptional: false)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ExceptionalNetCashFlowIndicator).To(true)
+            .Set(x => x.SortingCriteriaDetails).To([ValidSortingCriteria(exceptional: false)]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ExceptionalCashFlowIndicatorRule");
     }
@@ -72,11 +73,9 @@ public class EstimatedFundCashForecast2ValidatorTests
     [Fact]
     public void ExceptionalIndicatorTrue_MatchingNestedIndicator_DoesNotViolate_Rule()
     {
-        var msg = ValidMessage() with
-        {
-            ExceptionalNetCashFlowIndicator = true,
-            SortingCriteriaDetails = [ValidSortingCriteria(exceptional: true)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ExceptionalNetCashFlowIndicator).To(true)
+            .Set(x => x.SortingCriteriaDetails).To([ValidSortingCriteria(exceptional: true)]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "ExceptionalCashFlowIndicatorRule");
     }

@@ -9,20 +9,14 @@ public class ClearingSystemIdentification3Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification3Choice.Code
-        {
-            Value = ExternalCashClearingSystem1Code.EBAEuro1Step1,
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.ClearingSystemIdentification3Choice.Valid.Code.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification3Choice.Proprietary
-        {
-            Value = "MYSYS",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.ClearingSystemIdentification3Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

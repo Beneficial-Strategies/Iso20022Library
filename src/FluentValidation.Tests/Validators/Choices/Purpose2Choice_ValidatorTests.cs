@@ -9,17 +9,16 @@ public class Purpose2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.Purpose2Choice.Code
-        {
-            Value = ExternalPurpose1Code.BankLoanDelayedDrawFunding,
-        };
+        var value = IsoDataFactory.Make<Choices.Purpose2Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalPurpose1Code.BankLoanDelayedDrawFunding));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.Purpose2Choice.Proprietary { Value = "MYPURPOSE" };
+        var value = IsoDataFactory.Make<Choices.Purpose2Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYPURPOSE"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

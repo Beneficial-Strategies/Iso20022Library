@@ -6,7 +6,8 @@ public class DatePeriod3ValidatorTests
 {
     private readonly DatePeriod3Validator _sut = new();
 
-    private static DatePeriod3 ValidMessage() => new() { FromDate = new DateOnly(2026, 1, 1) };
+    private static IDatePeriod3 ValidMessage() => IsoDataFactory.Make<IDatePeriod3>(b => b
+        .Set(x => x.FromDate).To(new DateOnly(2026, 1, 1)));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,7 +18,8 @@ public class DatePeriod3ValidatorTests
     [Fact]
     public void ToDate_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { ToDate = new DateOnly(2026, 12, 31) };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ToDate).To(new DateOnly(2026, 12, 31)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

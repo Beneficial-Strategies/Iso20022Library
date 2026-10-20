@@ -6,35 +6,35 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
 {
     private readonly FIToFICustomerCreditTransferV14Validator _sut = new();
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent(string bic) =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = bic } };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidAgent(string bic) =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b2 => b2
+            .Set(x2 => x2.BICFI).To(bic))));
 
-    private static GroupHeader131 ValidGroupHeader() =>
-        new()
-        {
-            MessageIdentification = "MSG-001",
-            CreationDateTime = new DateTime(2026, 1, 1),
-            NumberOfTransactions = "1",
-            SettlementInformation = new SettlementInstruction15 { SettlementMethod = SettlementMethod1Code.ClearingSystem },
-        };
+    private static IGroupHeader131 ValidGroupHeader() =>
+        IsoDataFactory.Make<IGroupHeader131>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.NumberOfTransactions).To("1")
+            .Set(x => x.SettlementInformation).To(IsoDataFactory.Make<ISettlementInstruction15>(b2 => b2
+                .Set(x2 => x2.SettlementMethod).To(SettlementMethod1Code.ClearingSystem))));
 
-    private static CreditTransferTransaction73 ValidTransaction() =>
-        new()
-        {
-            PaymentIdentification = new PaymentIdentification13 { EndToEndIdentification = "E2E-001" },
-            InterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m },
-            // GroupHeader carries no InterbankSettlementDate in these fixtures, so — per
-            // TransactionInterbankSettlementDateRule — each transaction must carry its own.
-            InterbankSettlementDate = new DateOnly(2026, 1, 1),
-            ChargeBearer = ChargeBearerType1Code.Shared,
-            Debtor = new PartyIdentification272(),
-            DebtorAgent = ValidAgent("DEUTDEFFXXX"),
-            CreditorAgent = ValidAgent("CHASUS33XXX"),
-            Creditor = new PartyIdentification272(),
-        };
+    private static ICreditTransferTransaction73 ValidTransaction() =>
+        IsoDataFactory.Make<ICreditTransferTransaction73>(b => b
+            .Set(x => x.PaymentIdentification).To(IsoDataFactory.Make<IPaymentIdentification13>(b2 => b2
+                .Set(x2 => x2.EndToEndIdentification).To("E2E-001")))
+            .Set(x => x.InterbankSettlementAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m })
+            .Set(x => x.InterbankSettlementDate).To(new DateOnly(2026, 1, 1))
+            .Set(x => x.ChargeBearer).To(ChargeBearerType1Code.Shared)
+            .Set(x => x.Debtor).To(IsoDataFactory.Make<IPartyIdentification272>())
+            .Set(x => x.DebtorAgent).To(ValidAgent("DEUTDEFFXXX"))
+            .Set(x => x.CreditorAgent).To(ValidAgent("CHASUS33XXX"))
+            .Set(x => x.Creditor).To(IsoDataFactory.Make<IPartyIdentification272>()));
 
-    private static FIToFICustomerCreditTransferV14 ValidMessage() =>
-        new() { GroupHeader = ValidGroupHeader(), CreditTransferTransactionInformation = [ValidTransaction()] };
+    private static IFIToFICustomerCreditTransferV14 ValidMessage() =>
+        IsoDataFactory.Make<IFIToFICustomerCreditTransferV14>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.CreditTransferTransactionInformation).To([ValidTransaction()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -47,11 +47,11 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void GroupHeaderInstructedAgentPresent_TransactionInstructedAgentPresent_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with { InstructedAgent = ValidAgent("BOFAUS3NXXX") },
-            CreditTransferTransactionInformation = [ValidTransaction() with { InstructedAgent = ValidAgent("BOFAUS3NXXX") }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.InstructedAgent).To(ValidAgent("BOFAUS3NXXX"))))
+            .Set(x => x.CreditTransferTransactionInformation).To([IsoDataFactory.With(ValidTransaction(), b2 => b2
+                .Set(x2 => x2.InstructedAgent).To(ValidAgent("BOFAUS3NXXX")))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "InstructedAgentRule");
     }
@@ -59,11 +59,11 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void GroupHeaderInstructingAgentPresent_TransactionInstructingAgentPresent_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with { InstructingAgent = ValidAgent("BOFAUS3NXXX") },
-            CreditTransferTransactionInformation = [ValidTransaction() with { InstructingAgent = ValidAgent("BOFAUS3NXXX") }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.InstructingAgent).To(ValidAgent("BOFAUS3NXXX"))))
+            .Set(x => x.CreditTransferTransactionInformation).To([IsoDataFactory.With(ValidTransaction(), b2 => b2
+                .Set(x2 => x2.InstructingAgent).To(ValidAgent("BOFAUS3NXXX")))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "InstructingAgentRule");
     }
@@ -73,13 +73,9 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void TotalInterbankSettlementAmountCurrencyMismatch_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with
-            {
-                TotalInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.TotalInterbankSettlementAmount).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 100m }))));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalInterbankSettlementAmountRule");
     }
@@ -87,13 +83,9 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void TotalInterbankSettlementAmountSumMismatch_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with
-            {
-                TotalInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 999m },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.TotalInterbankSettlementAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 999m }))));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalInterbankSettlementAmountAndSumRule");
     }
@@ -101,13 +93,9 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void TotalInterbankSettlementAmountMatchesSumAndCurrency_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with
-            {
-                TotalInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.TotalInterbankSettlementAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m }))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -116,10 +104,9 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void GroupHeaderInterbankSettlementDatePresent_TransactionAlsoPresent_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with { InterbankSettlementDate = new DateOnly(2026, 1, 1) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.InterbankSettlementDate).To(new DateOnly(2026, 1, 1)))));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "GroupHeaderInterbankSettlementDateRule");
     }
@@ -127,10 +114,9 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void GroupHeaderInterbankSettlementDateAbsent_TransactionAlsoAbsent_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            CreditTransferTransactionInformation = [ValidTransaction() with { InterbankSettlementDate = null }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreditTransferTransactionInformation).To([IsoDataFactory.With(ValidTransaction(), b2 => b2
+                .Set(x2 => x2.InterbankSettlementDate).To(null))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TransactionInterbankSettlementDateRule");
     }
@@ -140,11 +126,11 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void GroupHeaderPaymentTypeInformationPresent_TransactionAlsoPresent_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with { PaymentTypeInformation = new PaymentTypeInformation28() },
-            CreditTransferTransactionInformation = [ValidTransaction() with { PaymentTypeInformation = new PaymentTypeInformation28() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.PaymentTypeInformation).To(IsoDataFactory.Make<IPaymentTypeInformation28>())))
+            .Set(x => x.CreditTransferTransactionInformation).To([IsoDataFactory.With(ValidTransaction(), b2 => b2
+                .Set(x2 => x2.PaymentTypeInformation).To(IsoDataFactory.Make<IPaymentTypeInformation28>()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "PaymentTypeInformationRule");
     }
@@ -154,7 +140,9 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void NumberOfTransactionsMismatch_HasValidationError()
     {
-        var msg = ValidMessage() with { GroupHeader = ValidGroupHeader() with { NumberOfTransactions = "2" } };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+            .Set(x2 => x2.NumberOfTransactions).To("2"))));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "NumberOfTransactionsAndCreditTransfersRule");
     }
@@ -162,11 +150,10 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void NumberOfTransactionsMatches_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            CreditTransferTransactionInformation = [ValidTransaction(), ValidTransaction()],
-            GroupHeader = ValidGroupHeader() with { NumberOfTransactions = "2" },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreditTransferTransactionInformation).To([ValidTransaction(), ValidTransaction()])
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.NumberOfTransactions).To("2"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -175,17 +162,14 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void GroupHeaderExpiryDateTimePresent_TransactionAdditionalDateTimeExpiryAlsoPresent_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with { ExpiryDateTime = new DateTime(2026, 2, 1) },
-            CreditTransferTransactionInformation =
-            [
-                ValidTransaction() with
-                {
-                    AdditionalDateTime = new AdditionalDateTime1 { ExpiryDateTime = new DateTime(2026, 2, 1) },
-                },
-            ],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.ExpiryDateTime).To(new DateTime(2026, 2, 1))))
+            .Set(x => x.CreditTransferTransactionInformation).To([
+                IsoDataFactory.With(ValidTransaction(), b2 => b2
+                    .Set(x2 => x2.AdditionalDateTime).To(IsoDataFactory.Make<IAdditionalDateTime1>(b3 => b3
+                        .Set(x3 => x3.ExpiryDateTime).To(new DateTime(2026, 2, 1))))),
+            ]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "GroupHeaderExpiryDateTimeRule");
     }
@@ -193,20 +177,18 @@ public class FIToFICustomerCreditTransferV14ValidatorTests
     [Fact]
     public void GroupHeaderExpiryDateTimePresent_TransactionAdditionalDateTimeExpiryAbsent_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader() with { ExpiryDateTime = new DateTime(2026, 2, 1) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(ValidGroupHeader(), b2 => b2
+                .Set(x2 => x2.ExpiryDateTime).To(new DateTime(2026, 2, 1)))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

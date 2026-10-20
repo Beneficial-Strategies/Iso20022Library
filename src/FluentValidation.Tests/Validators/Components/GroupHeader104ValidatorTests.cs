@@ -6,13 +6,11 @@ public class GroupHeader104ValidatorTests
 {
     private readonly GroupHeader104Validator _sut = new();
 
-    private static GroupHeader104 ValidMessage() =>
-        new()
-        {
-            MessageIdentification = "MSG-001",
-            CreationDateTime = new DateTime(2026, 1, 1),
-            NumberOfSettlementRequests = "1",
-        };
+    private static IGroupHeader104 ValidMessage() =>
+        IsoDataFactory.Make<IGroupHeader104>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.NumberOfSettlementRequests).To("1"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,20 +21,17 @@ public class GroupHeader104ValidatorTests
     [Fact]
     public void ControlSum_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { ControlSum = 100.00m };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ControlSum).To(100.00m));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SettlementInformation_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SettlementInformation = new SettlementInstruction14
-            {
-                SettlementMethod = SettlementMethod2Code.ClearingSystem,
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SettlementInformation).To(IsoDataFactory.Make<ISettlementInstruction14>(b2 => b2
+                .Set(x2 => x2.SettlementMethod).To(SettlementMethod2Code.ClearingSystem))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

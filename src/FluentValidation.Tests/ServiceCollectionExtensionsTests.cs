@@ -4,24 +4,21 @@ namespace BeneficialStrategies.Iso20022.Validation;
 
 public class ServiceCollectionExtensionsTests
 {
-    private static BeneficialStrategies.Iso20022.Choices.Party50Choice_ ValidParty() =>
-        new BeneficialStrategies.Iso20022.Choices.Party50Choice.Party
-        {
-            Value = new PartyIdentification272 { Name = "Acme Corp" },
-        };
+    private static BeneficialStrategies.Iso20022.Choices.IParty50Choice ValidParty() =>
+        IsoDataFactory.Make<Choices.Party50Choice.IParty>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Acme Corp"))));
 
-    private static CancelCaseAssignmentV05 ValidCancelCaseAssignment() =>
-        new()
-        {
-            Assignment = new CaseAssignment6
-            {
-                Identification = "ASSIGN-001",
-                Assigner = ValidParty(),
-                Assignee = ValidParty(),
-                CreationDateTime = DateTime.UtcNow,
-            },
-            Case = new Case6 { Identification = "CASE-001", Creator = ValidParty() },
-        };
+    private static ICancelCaseAssignmentV05 ValidCancelCaseAssignment() =>
+        IsoDataFactory.Make<ICancelCaseAssignmentV05>(b => b
+            .Set(x => x.Assignment).To(IsoDataFactory.Make<ICaseAssignment6>(b2 => b2
+                .Set(x2 => x2.Identification).To("ASSIGN-001")
+                .Set(x2 => x2.Assigner).To(ValidParty())
+                .Set(x2 => x2.Assignee).To(ValidParty())
+                .Set(x2 => x2.CreationDateTime).To(DateTime.UtcNow)))
+            .Set(x => x.Case).To(IsoDataFactory.Make<ICase6>(b2 => b2
+                .Set(x2 => x2.Identification).To("CASE-001")
+                .Set(x2 => x2.Creator).To(ValidParty()))));
 
     // ── No filter: everything registers and resolves ──────────────────────────
 
@@ -144,7 +141,7 @@ public class ServiceCollectionExtensionsTests
     public void RootTypes_RegistersExactTransitiveClosure_NothingFromUnrelatedMessages()
     {
         var services = new ServiceCollection();
-        services.AddIso20022Validators(rootTypes: [typeof(CancelCaseAssignmentV05)]);
+        services.AddIso20022Validators(rootTypes: [typeof(ICancelCaseAssignmentV05)]);
         using var provider = services.BuildServiceProvider();
 
         // The root itself and everything it transitively needs, several levels deep, all resolve.
@@ -178,7 +175,7 @@ public class ServiceCollectionExtensionsTests
         full.AddIso20022Validators();
 
         var closure = new ServiceCollection();
-        closure.AddIso20022Validators(rootTypes: [typeof(CancelCaseAssignmentV05)]);
+        closure.AddIso20022Validators(rootTypes: [typeof(ICancelCaseAssignmentV05)]);
 
         Assert.True(
             closure.Count < full.Count,
@@ -190,7 +187,7 @@ public class ServiceCollectionExtensionsTests
     public void RootTypes_ValidMessage_ValidatesCorrectly()
     {
         var services = new ServiceCollection();
-        services.AddIso20022Validators(rootTypes: [typeof(CancelCaseAssignmentV05)]);
+        services.AddIso20022Validators(rootTypes: [typeof(ICancelCaseAssignmentV05)]);
         using var provider = services.BuildServiceProvider();
 
         var sut = provider.GetRequiredService<IValidator<ICancelCaseAssignmentV05>>();
@@ -204,7 +201,7 @@ public class ServiceCollectionExtensionsTests
     {
         var services = new ServiceCollection();
         services.AddIso20022Validators(
-            rootTypes: [typeof(CancelCaseAssignmentV05), typeof(MandateCopyRequestV04)]
+            rootTypes: [typeof(ICancelCaseAssignmentV05), typeof(IMandateCopyRequestV04)]
         );
         using var provider = services.BuildServiceProvider();
 

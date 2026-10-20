@@ -9,16 +9,14 @@ public class AccountSchemeName1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.AccountSchemeName1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.AccountSchemeName1Choice.Code { Value = ExternalAccountIdentification1Code.BBANIdentifier };
+        var choice = BeneficialStrategies.Iso20022.Samples.AccountSchemeName1Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.AccountSchemeName1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.AccountSchemeName1Choice.Proprietary { Value = "MYACCTSCHEME" };
+        var choice = BeneficialStrategies.Iso20022.Samples.AccountSchemeName1Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

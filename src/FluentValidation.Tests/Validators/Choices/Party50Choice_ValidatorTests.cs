@@ -6,24 +6,19 @@ public class Party50Choice_ValidatorTests
 {
     private readonly Party50Choice_Validator _sut = new();
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
-
-    private static PartyIdentification272 ValidParty() => new() { Name = "Acme Corp" };
-
     [Fact]
     public void AgentVariant_Valid_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Party50Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Party50Choice.Agent { Value = ValidAgent() };
+        BeneficialStrategies.Iso20022.Choices.IParty50Choice choice =
+            BeneficialStrategies.Iso20022.Samples.Party50Choice.Valid.Agent.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void PartyVariant_Valid_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Party50Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Party50Choice.Party { Value = ValidParty() };
+        BeneficialStrategies.Iso20022.Choices.IParty50Choice choice =
+            BeneficialStrategies.Iso20022.Samples.Party50Choice.Valid.Party.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -35,22 +30,8 @@ public class Party50Choice_ValidatorTests
         // struct-validated on construction (throws before reaching the validator), so instead
         // confirm propagation via the BranchIdentification -> PostalAddress27 -> AddressType path,
         // which is fully wired end-to-end through this dispatcher.
-        var agent = ValidAgent() with
-        {
-            BranchIdentification = new BranchData5
-            {
-                PostalAddress = new PostalAddress27
-                {
-                    AddressType = new BeneficialStrategies.Iso20022.Choices.AddressType3Choice.Proprietary
-                    {
-                        Identification = "AB12",
-                        Issuer = "IssuerX",
-                    },
-                },
-            },
-        };
-        BeneficialStrategies.Iso20022.Choices.Party50Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Party50Choice.Agent { Value = agent };
+        BeneficialStrategies.Iso20022.Choices.IParty50Choice choice =
+            BeneficialStrategies.Iso20022.Samples.Party50Choice.Valid.Agent.Maximal;
 
         // This nested combination is itself fully valid (no rule currently rejects it) — this
         // test exists to prove the DI chain (Party50Choice_Validator -> agentValueValidator ->

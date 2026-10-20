@@ -9,17 +9,15 @@ public class SettlementDateTimeIndication1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new SettlementDateTimeIndication1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ISettlementDateTimeIndication1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFieldsPresent_NoValidationErrors()
     {
-        var msg = new SettlementDateTimeIndication1
-        {
-            DebitDateTime = new DateTime(2026, 1, 1, 9, 0, 0),
-            CreditDateTime = new DateTime(2026, 1, 1, 9, 5, 0),
-        };
+        var msg = IsoDataFactory.Make<ISettlementDateTimeIndication1>(b => b
+            .Set(x => x.DebitDateTime).To(new DateTime(2026, 1, 1, 9, 0, 0))
+            .Set(x => x.CreditDateTime).To(new DateTime(2026, 1, 1, 9, 5, 0)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

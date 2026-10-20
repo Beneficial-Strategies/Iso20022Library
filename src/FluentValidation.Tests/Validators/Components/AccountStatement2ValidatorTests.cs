@@ -9,35 +9,24 @@ public class AccountStatement2ValidatorTests
 {
     private readonly AccountStatement2Validator _sut = new();
 
-    private static CashBalance3 ValidBalance() =>
-        new()
-        {
-            Type = new BalanceType12
-            {
-                CodeOrProprietary = new Choices.BalanceType5Choice.Code
-                {
-                    Value = BalanceType12Code.OpeningAvailable,
-                },
-            },
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            CreditDebitIndicator = CreditDebitCode.Credit,
-            Date = new Choices.DateAndDateTimeChoice.Date { Value = new DateOnly(2026, 1, 1) },
-        };
+    private static ICashBalance3 ValidBalance() =>
+        IsoDataFactory.Make<ICashBalance3>(b => b
+            .Set(x => x.Type).To(IsoDataFactory.Make<IBalanceType12>(b2 => b2
+                .Set(x2 => x2.CodeOrProprietary).To(IsoDataFactory.Make<Choices.BalanceType5Choice.ICode>(b3 => b3
+                    .Set(x3 => x3.Value).To(BalanceType12Code.OpeningAvailable)))))
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.CreditDebitIndicator).To(CreditDebitCode.Credit)
+            .Set(x => x.Date).To(IsoDataFactory.Make<Choices.DateAndDateTimeChoice.IDate>(b2 => b2
+                .Set(x2 => x2.Value).To(new DateOnly(2026, 1, 1)))));
 
-    private static AccountStatement2 ValidMessage() =>
-        new()
-        {
-            Identification = "STMT-001",
-            CreationDateTime = new DateTime(2026, 1, 1),
-            Account = new CashAccount20
-            {
-                Identification = new Choices.AccountIdentification4Choice.Other
-                {
-                    Identification = "ACC-001",
-                },
-            },
-            Balance = [ValidBalance()],
-        };
+    private static IAccountStatement2 ValidMessage() =>
+        IsoDataFactory.Make<IAccountStatement2>(b => b
+            .Set(x => x.Identification).To("STMT-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.Account).To(IsoDataFactory.Make<ICashAccount20>(b2 => b2
+                .Set(x2 => x2.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IOther>(b3 => b3
+                    .Set(x3 => x3.Identification).To("ACC-001")))))
+            .Set(x => x.Balance).To([ValidBalance()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -50,14 +39,16 @@ public class AccountStatement2ValidatorTests
     [Fact]
     public void Balance_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Balance = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Balance).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Balance);
     }
 
     [Fact]
     public void Balance_OneElement_NoValidationError()
     {
-        var msg = ValidMessage() with { Balance = [ValidBalance()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Balance).To([ValidBalance()]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.Balance);
     }
 
@@ -66,23 +57,18 @@ public class AccountStatement2ValidatorTests
     [Fact]
     public void ReportingSource_Code_NoValidationErrors()
     {
-        var msg = ValidMessage() with
-        {
-            ReportingSource = new RptgSrc1.Code
-            {
-                Value = ExternalReportingSource1Code.Accounting,
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ReportingSource).To(IsoDataFactory.Make<RptgSrc1.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(ExternalReportingSource1Code.Accounting))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ReportingSource_Proprietary_NoValidationErrors()
     {
-        var msg = ValidMessage() with
-        {
-            ReportingSource = new RptgSrc1.Proprietary { Value = "SRC-001" },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ReportingSource).To(IsoDataFactory.Make<RptgSrc1.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("SRC-001"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

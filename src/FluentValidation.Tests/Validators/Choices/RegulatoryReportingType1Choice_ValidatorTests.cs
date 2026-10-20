@@ -9,20 +9,16 @@ public class RegulatoryReportingType1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.RegulatoryReportingType1Choice.Code
-        {
-            Value = "CRED",
-        };
+        var value = IsoDataFactory.Make<Choices.RegulatoryReportingType1Choice.ICode>(b => b
+            .Set(x => x.Value).To("CRED"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.RegulatoryReportingType1Choice.Proprietary
-        {
-            Value = "MYTYPE",
-        };
+        var value = IsoDataFactory.Make<Choices.RegulatoryReportingType1Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYTYPE"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -33,10 +29,8 @@ public class RegulatoryReportingType1Choice_ValidatorTests
         registry.Add("CRED");
         var sut = new RegulatoryReportingType1Choice_Validator(new ExternalRegulatoryReportingType1CodeValidator(registry));
 
-        var value = new BeneficialStrategies.Iso20022.Choices.RegulatoryReportingType1Choice.Code
-        {
-            Value = "DEBT",
-        };
+        var value = IsoDataFactory.Make<Choices.RegulatoryReportingType1Choice.ICode>(b => b
+            .Set(x => x.Value).To("DEBT"));
         var result = sut.Validate(value);
         Assert.False(result.IsValid);
     }

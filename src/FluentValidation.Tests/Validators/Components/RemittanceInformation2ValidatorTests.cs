@@ -9,13 +9,14 @@ public class RemittanceInformation2ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new RemittanceInformation2()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IRemittanceInformation2>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void Unstructured_Present_NoValidationErrors()
     {
-        var msg = new RemittanceInformation2 { Unstructured = ["Invoice 12345"] };
+        var msg = IsoDataFactory.Make<IRemittanceInformation2>(b => b
+            .Set(x => x.Unstructured).To(["Invoice 12345"]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

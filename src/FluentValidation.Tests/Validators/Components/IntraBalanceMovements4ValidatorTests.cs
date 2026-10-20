@@ -6,35 +6,32 @@ public class IntraBalanceMovements4ValidatorTests
 {
     private readonly IntraBalanceMovements4Validator _sut = new();
 
-    private static CashAccount40 ValidAccount() => new();
+    private static ICashAccount40 ValidAccount() => IsoDataFactory.Make<ICashAccount40>();
 
-    private static SystemPartyIdentification8 ValidOwner() =>
-        new()
-        {
-            Identification = new PartyIdentification136
-            {
-                Identification = new Choices.PartyIdentification120Choice.NameAndAddress { Name = "Owner" },
-            },
-        };
+    private static ISystemPartyIdentification8 ValidOwner() =>
+        IsoDataFactory.Make<ISystemPartyIdentification8>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<IPartyIdentification136>(b2 => b2
+                .Set(x2 => x2.Identification).To(IsoDataFactory.Make<Choices.PartyIdentification120Choice.INameAndAddress>(b3 => b3
+                    .Set(x3 => x3.Name).To("Owner"))))));
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidServicer() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidServicer() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
-    private static IntraBalanceStatusAndReason2 ValidStatusAndReason() => new();
+    private static IIntraBalanceStatusAndReason2 ValidStatusAndReason() => IsoDataFactory.Make<IIntraBalanceStatusAndReason2>();
 
-    private static IntraBalanceMovement7 MinimalItem() => new() { AccountOwnerTransactionIdentification = "TXN-001" };
+    private static IIntraBalanceMovement7 MinimalItem() => IsoDataFactory.Make<IIntraBalanceMovement7>(b => b
+        .Set(x => x.AccountOwnerTransactionIdentification).To("TXN-001"));
 
     // ValidMessage sets all four top-level fields and no item-level equivalents — satisfies all
     // four XOR constraints simultaneously (top-level present, item-level absent).
-    private static IntraBalanceMovements4 ValidMessage() =>
-        new()
-        {
-            CashAccount = ValidAccount(),
-            CashAccountOwner = ValidOwner(),
-            CashAccountServicer = ValidServicer(),
-            StatusAndReason = ValidStatusAndReason(),
-            Movement = [MinimalItem()],
-        };
+    private static IIntraBalanceMovements4 ValidMessage() =>
+        IsoDataFactory.Make<IIntraBalanceMovements4>(b => b
+            .Set(x => x.CashAccount).To(ValidAccount())
+            .Set(x => x.CashAccountOwner).To(ValidOwner())
+            .Set(x => x.CashAccountServicer).To(ValidServicer())
+            .Set(x => x.StatusAndReason).To(ValidStatusAndReason())
+            .Set(x => x.Movement).To([MinimalItem()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -47,7 +44,8 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void Movement_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Movement = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Movement).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Movement);
     }
 
@@ -56,7 +54,9 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void TopLevelAndItemCashAccount_Violates_CashAccountRule()
     {
-        var msg = ValidMessage() with { Movement = [MinimalItem() with { CashAccount = ValidAccount() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Movement).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+            .Set(x2 => x2.CashAccount).To(ValidAccount()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountRule");
     }
@@ -64,7 +64,8 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void NeitherCashAccount_Violates_CashAccountRule()
     {
-        var msg = ValidMessage() with { CashAccount = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CashAccount).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountRule");
     }
@@ -74,7 +75,9 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void TopLevelAndItemCashAccountOwner_Violates_CashAccountOwnerRule()
     {
-        var msg = ValidMessage() with { Movement = [MinimalItem() with { CashAccountOwner = ValidOwner() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Movement).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+            .Set(x2 => x2.CashAccountOwner).To(ValidOwner()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountOwnerRule");
     }
@@ -82,7 +85,8 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void NeitherCashAccountOwner_Violates_CashAccountOwnerRule()
     {
-        var msg = ValidMessage() with { CashAccountOwner = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CashAccountOwner).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountOwnerRule");
     }
@@ -92,10 +96,9 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void TopLevelAndItemStatusAndReason_Violates_StatusAndReasonRule()
     {
-        var msg = ValidMessage() with
-        {
-            Movement = [MinimalItem() with { StatusAndReason = ValidStatusAndReason() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Movement).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.StatusAndReason).To(ValidStatusAndReason()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "StatusAndReasonRule");
     }
@@ -103,7 +106,8 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void NeitherStatusAndReason_Violates_StatusAndReasonRule()
     {
-        var msg = ValidMessage() with { StatusAndReason = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.StatusAndReason).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "StatusAndReasonRule");
     }
@@ -113,10 +117,9 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void TopLevelAndItemCashAccountServicer_Violates_CashAccountServicerRule()
     {
-        var msg = ValidMessage() with
-        {
-            Movement = [MinimalItem() with { CashAccountServicer = ValidServicer() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Movement).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.CashAccountServicer).To(ValidServicer()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountServicerRule");
     }
@@ -124,7 +127,8 @@ public class IntraBalanceMovements4ValidatorTests
     [Fact]
     public void NeitherCashAccountServicer_Violates_CashAccountServicerRule()
     {
-        var msg = ValidMessage() with { CashAccountServicer = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CashAccountServicer).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountServicerRule");
     }

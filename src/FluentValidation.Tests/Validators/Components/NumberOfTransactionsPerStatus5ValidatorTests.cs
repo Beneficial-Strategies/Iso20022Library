@@ -6,12 +6,10 @@ public class NumberOfTransactionsPerStatus5ValidatorTests
 {
     private readonly NumberOfTransactionsPerStatus5Validator _sut = new();
 
-    private static NumberOfTransactionsPerStatus5 ValidMessage() =>
-        new()
-        {
-            DetailedNumberOfTransactions = "1",
-            DetailedStatus = ExternalPaymentTransactionStatus1Code.AcceptedTechnicalValidation,
-        };
+    private static INumberOfTransactionsPerStatus5 ValidMessage() =>
+        IsoDataFactory.Make<INumberOfTransactionsPerStatus5>(b => b
+            .Set(x => x.DetailedNumberOfTransactions).To("1")
+            .Set(x => x.DetailedStatus).To(ExternalPaymentTransactionStatus1Code.AcceptedTechnicalValidation));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -22,7 +20,8 @@ public class NumberOfTransactionsPerStatus5ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { DetailedControlSum = 100.00m };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DetailedControlSum).To(100.00m));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

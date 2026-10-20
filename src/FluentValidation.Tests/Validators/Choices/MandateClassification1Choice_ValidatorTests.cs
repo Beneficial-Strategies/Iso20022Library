@@ -9,16 +9,18 @@ public class MandateClassification1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.MandateClassification1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.MandateClassification1Choice.Code { Value = MandateClassification1Code.Fixed };
+        BeneficialStrategies.Iso20022.Choices.IMandateClassification1Choice choice =
+            IsoDataFactory.Make<Choices.MandateClassification1Choice.ICode>(b => b
+                .Set(x => x.Value).To(MandateClassification1Code.Fixed));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.MandateClassification1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.MandateClassification1Choice.Proprietary { Value = "MYCLASS" };
+        BeneficialStrategies.Iso20022.Choices.IMandateClassification1Choice choice =
+            IsoDataFactory.Make<Choices.MandateClassification1Choice.IProprietary>(b => b
+                .Set(x => x.Value).To("MYCLASS"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

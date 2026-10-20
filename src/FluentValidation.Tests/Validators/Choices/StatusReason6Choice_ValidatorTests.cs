@@ -9,20 +9,16 @@ public class StatusReason6Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.StatusReason6Choice.Code
-        {
-            Value = ExternalStatusReason1Code.AbortedClearingTimeout,
-        };
+        var value = IsoDataFactory.Make<Choices.StatusReason6Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalStatusReason1Code.AbortedClearingTimeout));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.StatusReason6Choice.Proprietary
-        {
-            Value = "MYSTATUSREASON",
-        };
+        var value = IsoDataFactory.Make<Choices.StatusReason6Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYSTATUSREASON"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

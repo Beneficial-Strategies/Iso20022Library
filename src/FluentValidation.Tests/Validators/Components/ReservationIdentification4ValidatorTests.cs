@@ -6,13 +6,12 @@ public class ReservationIdentification4ValidatorTests
 {
     private readonly ReservationIdentification4Validator _sut = new();
 
-    private static BeneficialStrategies.Iso20022.Choices.ReservationType2Choice_ ValidType() =>
-        new BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.Code
-        {
-            Value = ExternalReservationType1Code.CashReservation,
-        };
+    private static BeneficialStrategies.Iso20022.Choices.IReservationType2Choice ValidType() =>
+        IsoDataFactory.Make<Choices.ReservationType2Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalReservationType1Code.CashReservation));
 
-    private static ReservationIdentification4 ValidMessage() => new() { Type = ValidType() };
+    private static IReservationIdentification4 ValidMessage() => IsoDataFactory.Make<IReservationIdentification4>(b => b
+        .Set(x => x.Type).To(ValidType()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,22 +22,14 @@ public class ReservationIdentification4ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            AccountIdentification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-            AccountOwner = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-            },
-            ReservationIdentification = "RSVN-001",
-            SystemIdentification = new BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice.Country
-            {
-                Value = "DE",
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountIdentification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000")))
+            .Set(x => x.AccountOwner).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>())))
+            .Set(x => x.ReservationIdentification).To("RSVN-001")
+            .Set(x => x.SystemIdentification).To(IsoDataFactory.Make<Choices.SystemIdentification2Choice.ICountry>(b2 => b2
+                .Set(x2 => x2.Value).To("DE"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

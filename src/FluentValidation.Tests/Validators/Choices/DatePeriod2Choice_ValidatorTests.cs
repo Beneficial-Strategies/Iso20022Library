@@ -9,21 +9,14 @@ public class DatePeriod2Choice_ValidatorTests
     [Fact]
     public void FromDateVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice.FromDate
-        {
-            Value = new DateOnly(2026, 1, 1),
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.DatePeriod2Choice.Valid.FromDate.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void FromToDateVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice.FromToDate
-        {
-            FromDate = new DateOnly(2026, 1, 1),
-            ToDate = new DateOnly(2026, 12, 31),
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.DatePeriod2Choice.Valid.FromToDate.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -9,26 +9,23 @@ public class CurrencyQueryDefinition3ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new CurrencyQueryDefinition3()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ICurrencyQueryDefinition3>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void QueryType_Present_NoValidationError()
     {
-        var msg = new CurrencyQueryDefinition3 { QueryType = QueryType2Code.Modified };
+        var msg = IsoDataFactory.Make<ICurrencyQueryDefinition3>(b => b
+            .Set(x => x.QueryType).To(QueryType2Code.Modified));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void CurrencyCriteria_Present_NoValidationError()
     {
-        var msg = new CurrencyQueryDefinition3
-        {
-            CurrencyCriteria = new BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.QueryName
-            {
-                Value = "PREVIOUS-QUERY",
-            },
-        };
+        var msg = IsoDataFactory.Make<ICurrencyQueryDefinition3>(b => b
+            .Set(x => x.CurrencyCriteria).To(IsoDataFactory.Make<Choices.CurrencyCriteriaDefinition1Choice.IQueryName>(b2 => b2
+                .Set(x2 => x2.Value).To("PREVIOUS-QUERY"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

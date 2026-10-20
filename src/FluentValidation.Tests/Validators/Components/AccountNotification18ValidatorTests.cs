@@ -6,35 +6,29 @@ public class AccountNotification18ValidatorTests
 {
     private readonly AccountNotification18Validator _sut = new();
 
-    private static Choices.Party40Choice.Agent ValidDebtor() =>
-        new()
-        {
-            FinancialInstitutionIdentification = new FinancialInstitutionIdentification18(),
-        };
+    private static Choices.Party40Choice.IAgent ValidDebtor() =>
+        IsoDataFactory.Make<Choices.Party40Choice.IAgent>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification18>()));
 
-    private static BranchAndFinancialInstitutionIdentification6 ValidAgent() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification18() };
+    private static IBranchAndFinancialInstitutionIdentification6 ValidAgent() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification6>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification18>()));
 
-    private static CashAccount40 ValidAccount(string id = "ACC-001") =>
-        new()
-        {
-            Identification = new Choices.AccountIdentification4Choice.Other { Identification = id },
-        };
+    private static ICashAccount40 ValidAccount(string id = "ACC-001") =>
+        IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IOther>(b2 => b2
+                .Set(x2 => x2.Identification).To(id))));
 
-    private static NotificationItem8 MinimalItem(string currency = "USD", decimal amount = 100m) =>
-        new()
-        {
-            Identification = "ITEM-001",
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = currency, Amount = amount },
-        };
+    private static INotificationItem8 MinimalItem(string currency = "USD", decimal amount = 100m) =>
+        IsoDataFactory.Make<INotificationItem8>(b => b
+            .Set(x => x.Identification).To("ITEM-001")
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = currency, Amount = amount }));
 
-    private static AccountNotification18 ValidMessage() =>
-        new()
-        {
-            Identification = "NOTIF-001",
-            Debtor = ValidDebtor(),
-            Item = [MinimalItem()],
-        };
+    private static IAccountNotification18 ValidMessage() =>
+        IsoDataFactory.Make<IAccountNotification18>(b => b
+            .Set(x => x.Identification).To("NOTIF-001")
+            .Set(x => x.Debtor).To(ValidDebtor())
+            .Set(x => x.Item).To([MinimalItem()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -47,7 +41,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void Item_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Item = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Item).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Item);
     }
 
@@ -56,7 +51,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void DebtorAndItemDebtor_Violates_DebtorRule()
     {
-        var msg = ValidMessage() with { Item = [MinimalItem() with { Debtor = ValidDebtor() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+            .Set(x2 => x2.Debtor).To(ValidDebtor()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "DebtorRule");
     }
@@ -73,11 +70,10 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void DebtorAgentAndItemDebtorAgent_Violates_DebtorAgentRule()
     {
-        var msg = ValidMessage() with
-        {
-            DebtorAgent = ValidAgent(),
-            Item = [MinimalItem() with { DebtorAgent = ValidAgent() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAgent).To(ValidAgent())
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.DebtorAgent).To(ValidAgent()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "DebtorAgentRule");
     }
@@ -85,7 +81,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void DebtorAgentOnly_DoesNotViolate_DebtorAgentRule()
     {
-        var msg = ValidMessage() with { DebtorAgent = ValidAgent() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAgent).To(ValidAgent()));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "DebtorAgentRule");
     }
@@ -95,12 +92,11 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void IntermediaryAgentAndItemIntermediaryAgent_Violates_IntermediaryAgentRule()
     {
-        var msg = ValidMessage() with
-        {
-            DebtorAgent = ValidAgent(),
-            IntermediaryAgent = ValidAgent(),
-            Item = [MinimalItem() with { IntermediaryAgent = ValidAgent() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAgent).To(ValidAgent())
+            .Set(x => x.IntermediaryAgent).To(ValidAgent())
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.IntermediaryAgent).To(ValidAgent()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "IntermediaryAgentRule");
     }
@@ -108,7 +104,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void IntermediaryAgentOnly_DoesNotViolate_IntermediaryAgentRule()
     {
-        var msg = ValidMessage() with { DebtorAgent = ValidAgent(), IntermediaryAgent = ValidAgent() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAgent).To(ValidAgent())
+            .Set(x => x.IntermediaryAgent).To(ValidAgent()));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "IntermediaryAgentRule");
     }
@@ -118,7 +116,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void NeitherDebtor_Violates_MandatoryDebtorRule()
     {
-        var msg = ValidMessage() with { Debtor = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Debtor).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "MandatoryDebtorRule");
     }
@@ -126,7 +125,10 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void ItemDebtorForEveryItem_DoesNotViolate_MandatoryDebtorRule()
     {
-        var msg = ValidMessage() with { Debtor = null, Item = [MinimalItem() with { Debtor = ValidDebtor() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Debtor).To(null)
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+            .Set(x2 => x2.Debtor).To(ValidDebtor()))]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "MandatoryDebtorRule");
     }
@@ -136,7 +138,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void IntermediaryAgentWithoutDebtorAgent_Violates_IntermediaryAgentAndDebtorAgentRule()
     {
-        var msg = ValidMessage() with { IntermediaryAgent = ValidAgent() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.IntermediaryAgent).To(ValidAgent()));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "IntermediaryAgentAndDebtorAgentRule");
     }
@@ -144,7 +147,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void IntermediaryAgentWithDebtorAgent_DoesNotViolate_IntermediaryAgentAndDebtorAgentRule()
     {
-        var msg = ValidMessage() with { IntermediaryAgent = ValidAgent(), DebtorAgent = ValidAgent() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.IntermediaryAgent).To(ValidAgent())
+            .Set(x => x.DebtorAgent).To(ValidAgent()));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "IntermediaryAgentAndDebtorAgentRule");
     }
@@ -154,11 +159,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void TotalAmountCurrencyMismatch_Violates_TotalAmountAndAmount1Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 100m },
-            Item = [MinimalItem(currency: "USD", amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 100m })
+            .Set(x => x.Item).To([MinimalItem(currency: "USD", amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalAmountAndAmount1Rule");
     }
@@ -166,11 +169,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void TotalAmountCurrencyMatches_DoesNotViolate_TotalAmountAndAmount1Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            Item = [MinimalItem(currency: "USD", amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.Item).To([MinimalItem(currency: "USD", amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "TotalAmountAndAmount1Rule");
     }
@@ -180,11 +181,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountPresentWithMixedItemCurrencies_Violates_AccountAndCurrencyRule()
     {
-        var msg = ValidMessage() with
-        {
-            Account = ValidAccount(),
-            Item = [MinimalItem(currency: "USD"), MinimalItem(currency: "EUR")],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Account).To(ValidAccount())
+            .Set(x => x.Item).To([MinimalItem(currency: "USD"), MinimalItem(currency: "EUR")]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "AccountAndCurrencyRule");
     }
@@ -192,11 +191,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountPresentWithConsistentItemCurrencies_DoesNotViolate_AccountAndCurrencyRule()
     {
-        var msg = ValidMessage() with
-        {
-            Account = ValidAccount(),
-            Item = [MinimalItem(currency: "USD"), MinimalItem(currency: "USD")],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Account).To(ValidAccount())
+            .Set(x => x.Item).To([MinimalItem(currency: "USD"), MinimalItem(currency: "USD")]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "AccountAndCurrencyRule");
     }
@@ -206,11 +203,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void TotalAmountNotEqualToSum_Violates_TotalAmountAndAmount2Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 999m },
-            Item = [MinimalItem(amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 999m })
+            .Set(x => x.Item).To([MinimalItem(amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalAmountAndAmount2Rule");
     }
@@ -218,11 +213,9 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void TotalAmountEqualToSum_DoesNotViolate_TotalAmountAndAmount2Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            Item = [MinimalItem(amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.Item).To([MinimalItem(amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "TotalAmountAndAmount2Rule");
     }
@@ -232,11 +225,10 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountAndItemAccount_Violates_AccountRule()
     {
-        var msg = ValidMessage() with
-        {
-            Account = ValidAccount(),
-            Item = [MinimalItem() with { Account = ValidAccount() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Account).To(ValidAccount())
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.Account).To(ValidAccount()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "AccountRule");
     }
@@ -244,7 +236,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountOnly_DoesNotViolate_AccountRule()
     {
-        var msg = ValidMessage() with { Account = ValidAccount() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Account).To(ValidAccount()));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "AccountRule");
     }
@@ -254,11 +247,10 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountOwnerAndItemAccountOwner_Violates_AccountOwnerRule()
     {
-        var msg = ValidMessage() with
-        {
-            AccountOwner = ValidDebtor(),
-            Item = [MinimalItem() with { AccountOwner = ValidDebtor() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountOwner).To(ValidDebtor())
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.AccountOwner).To(ValidDebtor()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "AccountOwnerRule");
     }
@@ -266,7 +258,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountOwnerOnly_DoesNotViolate_AccountOwnerRule()
     {
-        var msg = ValidMessage() with { AccountOwner = ValidDebtor() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountOwner).To(ValidDebtor()));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "AccountOwnerRule");
     }
@@ -276,11 +269,10 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountServicerAndItemAccountServicer_Violates_AccountServicerRule()
     {
-        var msg = ValidMessage() with
-        {
-            AccountServicer = ValidAgent(),
-            Item = [MinimalItem() with { AccountServicer = ValidAgent() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountServicer).To(ValidAgent())
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.AccountServicer).To(ValidAgent()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "AccountServicerRule");
     }
@@ -288,7 +280,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void AccountServicerOnly_DoesNotViolate_AccountServicerRule()
     {
-        var msg = ValidMessage() with { AccountServicer = ValidAgent() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountServicer).To(ValidAgent()));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "AccountServicerRule");
     }
@@ -299,11 +292,10 @@ public class AccountNotification18ValidatorTests
     public void ExpectedValueDateAndItemExpectedValueDate_Violates_ExpectedValueDateRule()
     {
         var date = new DateOnly(2026, 8, 13);
-        var msg = ValidMessage() with
-        {
-            ExpectedValueDate = date,
-            Item = [MinimalItem() with { ExpectedValueDate = date }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ExpectedValueDate).To(date)
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.ExpectedValueDate).To(date))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ExpectedValueDateRule");
     }
@@ -311,7 +303,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void ExpectedValueDateOnly_DoesNotViolate_ExpectedValueDateRule()
     {
-        var msg = ValidMessage() with { ExpectedValueDate = new DateOnly(2026, 8, 13) };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ExpectedValueDate).To(new DateOnly(2026, 8, 13)));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "ExpectedValueDateRule");
     }
@@ -321,11 +314,10 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void RelatedAccountAndItemRelatedAccount_Violates_RelatedAccountRule()
     {
-        var msg = ValidMessage() with
-        {
-            RelatedAccount = ValidAccount("PARENT-001"),
-            Item = [MinimalItem() with { RelatedAccount = ValidAccount("PARENT-001") }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.RelatedAccount).To(ValidAccount("PARENT-001"))
+            .Set(x => x.Item).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.RelatedAccount).To(ValidAccount("PARENT-001")))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "RelatedAccountRule");
     }
@@ -333,7 +325,8 @@ public class AccountNotification18ValidatorTests
     [Fact]
     public void RelatedAccountOnly_DoesNotViolate_RelatedAccountRule()
     {
-        var msg = ValidMessage() with { RelatedAccount = ValidAccount("PARENT-001") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.RelatedAccount).To(ValidAccount("PARENT-001")));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "RelatedAccountRule");
     }

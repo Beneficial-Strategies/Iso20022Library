@@ -6,8 +6,9 @@ public class InvestigationRejectionJustification1ValidatorTests
 {
     private readonly InvestigationRejectionJustification1Validator _sut = new();
 
-    private static InvestigationRejectionJustification1 ValidMessage() =>
-        new() { RejectionReason = InvestigationRejection1Code.UnderlyingPaymentNotFound };
+    private static IInvestigationRejectionJustification1 ValidMessage() =>
+        IsoDataFactory.Make<IInvestigationRejectionJustification1>(b => b
+            .Set(x => x.RejectionReason).To(InvestigationRejection1Code.UnderlyingPaymentNotFound));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

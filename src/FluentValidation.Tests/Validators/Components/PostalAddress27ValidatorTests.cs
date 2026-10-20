@@ -6,7 +6,7 @@ public class PostalAddress27ValidatorTests
 {
     private readonly PostalAddress27Validator _sut = new();
 
-    private static PostalAddress27 ValidMessage() => new();
+    private static IPostalAddress27 ValidMessage() => IsoDataFactory.Make<IPostalAddress27>();
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,13 +17,9 @@ public class PostalAddress27ValidatorTests
     [Fact]
     public void AddressType_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            AddressType = new BeneficialStrategies.Iso20022.Choices.AddressType3Choice.Code
-            {
-                Value = AddressType2Code.Business,
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AddressType).To(IsoDataFactory.Make<Choices.AddressType3Choice.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(AddressType2Code.Business))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

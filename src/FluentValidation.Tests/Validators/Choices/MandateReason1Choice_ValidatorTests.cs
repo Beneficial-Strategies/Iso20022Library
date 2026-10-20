@@ -9,17 +9,16 @@ public class MandateReason1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.MandateReason1Choice.Code
-        {
-            Value = ExternalMandateReason1Code.IncorrectAccountNumber,
-        };
+        var value = IsoDataFactory.Make<Choices.MandateReason1Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalMandateReason1Code.IncorrectAccountNumber));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.MandateReason1Choice.Proprietary { Value = "MYREASON" };
+        var value = IsoDataFactory.Make<Choices.MandateReason1Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYREASON"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

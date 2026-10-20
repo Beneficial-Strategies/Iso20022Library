@@ -6,22 +6,16 @@ public class MultilateralSettlementRequest3ValidatorTests
 {
     private readonly MultilateralSettlementRequest3Validator _sut = new();
 
-    private static MovementRecord2 ValidMovementRecord(string id) =>
-        new()
-        {
-            Identification = id,
-            Amount = new AmountAndDirection5
-            {
-                Amount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m },
-            },
-        };
+    private static IMovementRecord2 ValidMovementRecord(string id) =>
+        IsoDataFactory.Make<IMovementRecord2>(b => b
+            .Set(x => x.Identification).To(id)
+            .Set(x => x.Amount).To(IsoDataFactory.Make<IAmountAndDirection5>(b2 => b2
+                .Set(x2 => x2.Amount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m }))));
 
-    private static MultilateralSettlementRequest3 ValidMessage() =>
-        new()
-        {
-            InstructionIdentification = "INSTR-001",
-            MovementRecord = [ValidMovementRecord("MVMT-001"), ValidMovementRecord("MVMT-002")],
-        };
+    private static IMultilateralSettlementRequest3 ValidMessage() =>
+        IsoDataFactory.Make<IMultilateralSettlementRequest3>(b => b
+            .Set(x => x.InstructionIdentification).To("INSTR-001")
+            .Set(x => x.MovementRecord).To([ValidMovementRecord("MVMT-001"), ValidMovementRecord("MVMT-002")]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -34,7 +28,8 @@ public class MultilateralSettlementRequest3ValidatorTests
     [Fact]
     public void MovementRecord_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { MovementRecord = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.MovementRecord).To([]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "MovementRecord");
     }
@@ -42,7 +37,8 @@ public class MultilateralSettlementRequest3ValidatorTests
     [Fact]
     public void MovementRecord_OnlyOne_HasValidationError()
     {
-        var msg = ValidMessage() with { MovementRecord = [ValidMovementRecord("MVMT-001")] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.MovementRecord).To([ValidMovementRecord("MVMT-001")]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "MovementRecord");
     }
@@ -59,17 +55,17 @@ public class MultilateralSettlementRequest3ValidatorTests
     [Fact]
     public void InstructionPriority_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { InstructionPriority = Priority3Code.Normal };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InstructionPriority).To(Priority3Code.Normal));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SettlementTimeRequest_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SettlementTimeRequest = new SettlementTimeRequest2 { FromTime = new TimeOnly(9, 0, 0) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SettlementTimeRequest).To(IsoDataFactory.Make<ISettlementTimeRequest2>(b2 => b2
+                .Set(x2 => x2.FromTime).To(new TimeOnly(9, 0, 0)))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

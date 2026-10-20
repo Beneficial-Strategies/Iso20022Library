@@ -92,11 +92,10 @@ public class MassTransitJsonRoundTripTests
 
         Assert.True(await harness.Consumed.Any<DebtorActivationAmendmentRequested>());
         var arrived = Assert.Single(received.Events);
-        // The event is one of ours; what it holds arrives as objects the factory made, not the records that were sent, so the two are
-        // compared by what they say: the same JSON, and the same variant of the choice.
+        // What the event holds arrives as new objects (made by the factory), so the two are compared by what they say: the same JSON,
+        // and the same variant of the choice.
         Assert.Equal(Json(sent), Json(arrived));
         Assert.IsAssignableFrom<Choices.OriginalActivation3Choice.IOriginalDebtorIdentification>(arrived.Amendment.OriginalActivation);
-        Assert.NotEqual(sent.Amendment.OriginalActivation.GetType(), arrived.Amendment.OriginalActivation.GetType());
         Assert.Contains("json", Assert.Single(received.ContentTypes));   // it really was serialized
     }
 

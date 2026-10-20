@@ -6,8 +6,9 @@ public class DocumentAdjustment1ValidatorTests
 {
     private readonly DocumentAdjustment1Validator _sut = new();
 
-    private static DocumentAdjustment1 ValidMessage() =>
-        new() { Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 10m } };
+    private static IDocumentAdjustment1 ValidMessage() =>
+        IsoDataFactory.Make<IDocumentAdjustment1>(b => b
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 10m }));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,12 +19,10 @@ public class DocumentAdjustment1ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            CreditDebitIndicator = CreditDebitCode.Credit,
-            Reason = "ADJ1",
-            AdditionalInformation = "Adjustment note",
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreditDebitIndicator).To(CreditDebitCode.Credit)
+            .Set(x => x.Reason).To("ADJ1")
+            .Set(x => x.AdditionalInformation).To("Adjustment note"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

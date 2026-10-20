@@ -9,17 +9,15 @@ public class RemittanceInformation22ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new RemittanceInformation22()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IRemittanceInformation22>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new RemittanceInformation22
-        {
-            Unstructured = ["Payment for invoice 123"],
-            Structured = [new StructuredRemittanceInformation18()],
-        };
+        var msg = IsoDataFactory.Make<IRemittanceInformation22>(b => b
+            .Set(x => x.Unstructured).To(["Payment for invoice 123"])
+            .Set(x => x.Structured).To([IsoDataFactory.Make<IStructuredRemittanceInformation18>()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

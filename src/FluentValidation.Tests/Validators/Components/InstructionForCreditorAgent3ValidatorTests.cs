@@ -9,17 +9,15 @@ public class InstructionForCreditorAgent3ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new InstructionForCreditorAgent3()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IInstructionForCreditorAgent3>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new InstructionForCreditorAgent3
-        {
-            Code = ExternalCreditorAgentInstruction1Code.PayCreditorByCheque,
-            InstructionInformation = "Pay by cheque",
-        };
+        var msg = IsoDataFactory.Make<IInstructionForCreditorAgent3>(b => b
+            .Set(x => x.Code).To(ExternalCreditorAgentInstruction1Code.PayCreditorByCheque)
+            .Set(x => x.InstructionInformation).To("Pay by cheque"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

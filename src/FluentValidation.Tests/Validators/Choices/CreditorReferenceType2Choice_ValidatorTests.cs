@@ -9,20 +9,14 @@ public class CreditorReferenceType2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice.Code
-        {
-            Value = ExternalCreditorReferenceType1Code.DispatchAdvice,
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.CreditorReferenceType2Choice.Valid.Code.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice.Proprietary
-        {
-            Value = "MYREFTYPE",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.CreditorReferenceType2Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

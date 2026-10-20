@@ -19,58 +19,56 @@ public class AccountAndBalance47ValidatorTests
     /// Minimal valid instance: SafekeepingAccountOrBlockChainAddress1Rule requires exactly
     /// one of SafekeepingAccount or BlockChainAddressOrWallet to be present.
     /// </summary>
-    private static AccountAndBalance47 ValidMessage() => new() { SafekeepingAccount = "ACC-001" };
+    private static IAccountAndBalance47 ValidMessage() => IsoDataFactory.Make<IAccountAndBalance47>(b => b
+        .Set(x => x.SafekeepingAccount).To("ACC-001"));
 
-    private static PartyId127.AnyBIC OwnerAnyBic(string bic) => new() { Value = bic };
+    private static PartyId127.IAnyBIC OwnerAnyBic(string bic) => IsoDataFactory.Make<PartyId127.IAnyBIC>(b => b
+        .Set(x => x.Value).To(bic));
 
-    private static PartyId127.ProprietaryIdentification OwnerPropId(
+    private static PartyId127.IProprietaryIdentification OwnerPropId(
         string id = "PROP-ID-001",
         string issuer = "ACME",
         string? schemeName = null
     ) =>
-        new()
-        {
-            Identification = id,
-            Issuer = issuer,
-            // Explicit null guard: the implicit string→Max35Text operator throws on null.
-            SchemeName = schemeName is null ? null : (Max35Text?)new Max35Text(schemeName)
-        };
+        IsoDataFactory.Make<PartyId127.IProprietaryIdentification>(b => b
+            .Set(x => x.Identification).To(id)
+            .Set(x => x.Issuer).To(issuer)
+            .Set(x => x.SchemeName).To(schemeName is null ? null : (Max35Text?)new Max35Text(schemeName)));
 
-    private static SfkpgPlace28.Country PlaceCountry(string code) => new() { Value = code };
+    private static SfkpgPlace28.ICountry PlaceCountry(string code) => IsoDataFactory.Make<SfkpgPlace28.ICountry>(b => b
+        .Set(x => x.Value).To(code));
 
-    private static SfkpgPlace28.TypeAndIdentification PlaceTypeAndId(string bic) =>
-        new()
-        {
-            SafekeepingPlaceType = Codesets.SafekeepingPlace1Code.SharesHeldAtLocalCustodian,
-            Identification = bic,
-        };
+    private static SfkpgPlace28.ITypeAndIdentification PlaceTypeAndId(string bic) =>
+        IsoDataFactory.Make<SfkpgPlace28.ITypeAndIdentification>(b => b
+            .Set(x => x.SafekeepingPlaceType).To(Codesets.SafekeepingPlace1Code.SharesHeldAtLocalCustodian)
+            .Set(x => x.Identification).To(bic));
 
     // ── Happy path ───────────────────────────────────────────────────────────────
 
     [Fact]
     public void SafekeepingAccountOnly_NoValidationErrors()
     {
-        _sut.TestValidate(new AccountAndBalance47 { SafekeepingAccount = "ACC-001" })
+        _sut.TestValidate(IsoDataFactory.Make<IAccountAndBalance47>(b => b
+            .Set(x => x.SafekeepingAccount).To("ACC-001")))
             .ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void BlockChainAddressOnly_NoValidationErrors()
     {
-        _sut.TestValidate(new AccountAndBalance47 { BlockChainAddressOrWallet = "0xABCDEF" })
+        _sut.TestValidate(IsoDataFactory.Make<IAccountAndBalance47>(b => b
+            .Set(x => x.BlockChainAddressOrWallet).To("0xABCDEF")))
             .ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SafekeepingAccountWithOptionalFields_NoValidationErrors()
     {
-        var msg = new AccountAndBalance47
-        {
-            SafekeepingAccount = "ACC-001",
-            AccountOwner = OwnerAnyBic("DEUTDEFFXXX"),
-            SafekeepingPlace = PlaceCountry("DE"),
-            Balance = new CorporateActionBalanceDetails43(),
-        };
+        var msg = IsoDataFactory.Make<IAccountAndBalance47>(b => b
+            .Set(x => x.SafekeepingAccount).To("ACC-001")
+            .Set(x => x.AccountOwner).To(OwnerAnyBic("DEUTDEFFXXX"))
+            .Set(x => x.SafekeepingPlace).To(PlaceCountry("DE"))
+            .Set(x => x.Balance).To(IsoDataFactory.Make<ICorporateActionBalanceDetails43>()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -80,7 +78,7 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void NeitherAccountField_Violates1Rule()
     {
-        var result = _sut.Validate(new AccountAndBalance47());
+        var result = _sut.Validate(IsoDataFactory.Make<IAccountAndBalance47>());
         Assert.Contains(
             result.Errors,
             e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress1Rule"
@@ -92,11 +90,9 @@ public class AccountAndBalance47ValidatorTests
     {
         // Rule 1 fires when NEITHER is present; when both are present, rules 2 and 3 fire instead.
         var result = _sut.Validate(
-            new AccountAndBalance47
-            {
-                SafekeepingAccount = "ACC-001",
-                BlockChainAddressOrWallet = "0xABCDEF",
-            }
+            IsoDataFactory.Make<IAccountAndBalance47>(b => b
+                .Set(x => x.SafekeepingAccount).To("ACC-001")
+                .Set(x => x.BlockChainAddressOrWallet).To("0xABCDEF"))
         );
         Assert.DoesNotContain(
             result.Errors,
@@ -111,11 +107,9 @@ public class AccountAndBalance47ValidatorTests
     public void BothPresent_Violates2Rule()
     {
         var result = _sut.Validate(
-            new AccountAndBalance47
-            {
-                SafekeepingAccount = "ACC-001",
-                BlockChainAddressOrWallet = "0xABCDEF",
-            }
+            IsoDataFactory.Make<IAccountAndBalance47>(b => b
+                .Set(x => x.SafekeepingAccount).To("ACC-001")
+                .Set(x => x.BlockChainAddressOrWallet).To("0xABCDEF"))
         );
         Assert.Contains(
             result.Errors,
@@ -127,7 +121,8 @@ public class AccountAndBalance47ValidatorTests
     public void BlockChainOnly_DoesNotViolate2Rule()
     {
         var result = _sut.Validate(
-            new AccountAndBalance47 { BlockChainAddressOrWallet = "0xABCDEF", }
+            IsoDataFactory.Make<IAccountAndBalance47>(b => b
+                .Set(x => x.BlockChainAddressOrWallet).To("0xABCDEF"))
         );
         Assert.DoesNotContain(
             result.Errors,
@@ -142,11 +137,9 @@ public class AccountAndBalance47ValidatorTests
     public void BothPresent_Violates3Rule()
     {
         var result = _sut.Validate(
-            new AccountAndBalance47
-            {
-                SafekeepingAccount = "ACC-001",
-                BlockChainAddressOrWallet = "0xABCDEF",
-            }
+            IsoDataFactory.Make<IAccountAndBalance47>(b => b
+                .Set(x => x.SafekeepingAccount).To("ACC-001")
+                .Set(x => x.BlockChainAddressOrWallet).To("0xABCDEF"))
         );
         Assert.Contains(
             result.Errors,
@@ -157,7 +150,8 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void SafekeepingAccountOnly_DoesNotViolate3Rule()
     {
-        var result = _sut.Validate(new AccountAndBalance47 { SafekeepingAccount = "ACC-001", });
+        var result = _sut.Validate(IsoDataFactory.Make<IAccountAndBalance47>(b => b
+            .Set(x => x.SafekeepingAccount).To("ACC-001")));
         Assert.DoesNotContain(
             result.Errors,
             e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress3Rule"
@@ -171,13 +165,15 @@ public class AccountAndBalance47ValidatorTests
     {
         // Max35Text constructor rejects invalid values — they never reach the validator.
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = ValidMessage() with { SafekeepingAccount = new string('X', 36) });
+            _ = IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.SafekeepingAccount).To(new string('X', 36))));
     }
 
     [Fact]
     public void SafekeepingAccount_MaxLength35_NoError()
     {
-        var msg = ValidMessage() with { SafekeepingAccount = new string('X', 35) };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SafekeepingAccount).To(new string('X', 35)));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.SafekeepingAccount);
     }
 
@@ -185,7 +181,8 @@ public class AccountAndBalance47ValidatorTests
     public void SafekeepingAccount_EmptyString_ThrowsAtConstruction()
     {
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = ValidMessage() with { SafekeepingAccount = "" });
+            _ = IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.SafekeepingAccount).To("")));
     }
 
     // ── BlockChainAddressOrWallet: Max140Text (0..1) ──────────────────────────────
@@ -194,13 +191,15 @@ public class AccountAndBalance47ValidatorTests
     public void BlockChainAddress_TooLong_ThrowsAtConstruction()
     {
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = new AccountAndBalance47 { BlockChainAddressOrWallet = new string('a', 141) });
+            _ = IsoDataFactory.Make<IAccountAndBalance47>(b => b
+                .Set(x => x.BlockChainAddressOrWallet).To(new string('a', 141))));
     }
 
     [Fact]
     public void BlockChainAddress_MaxLength140_NoError()
     {
-        var msg = new AccountAndBalance47 { BlockChainAddressOrWallet = new string('a', 140) };
+        var msg = IsoDataFactory.Make<IAccountAndBalance47>(b => b
+            .Set(x => x.BlockChainAddressOrWallet).To(new string('a', 140)));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.BlockChainAddressOrWallet);
     }
 
@@ -209,14 +208,16 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void AccountOwner_AnyBic_ValidBic8_NoError()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("DEUTDEFF") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountOwner).To(OwnerAnyBic("DEUTDEFF")));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AccountOwner_AnyBic_ValidBic11_NoError()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("DEUTDEFFXXX") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountOwner).To(OwnerAnyBic("DEUTDEFFXXX")));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -244,7 +245,8 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void AccountOwner_ProprietaryId_Valid_NoError()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerPropId() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountOwner).To(OwnerPropId()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -275,13 +277,11 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void AccountOwner_ProprietaryId_SchemeNameMaxLength35_NoError()
     {
-        var msg = ValidMessage() with
-        {
-            AccountOwner = OwnerPropId(schemeName: new string('X', 35)),
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountOwner).To(OwnerPropId(schemeName: new string('X', 35))));
         _sut.TestValidate(msg)
             .ShouldNotHaveValidationErrorFor(x =>
-                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName
+                ((PartyId127.IProprietaryIdentification)x.AccountOwner!).SchemeName
             );
     }
 
@@ -290,7 +290,8 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void SafekeepingPlace_Country_ValidCode_NoError()
     {
-        var msg = ValidMessage() with { SafekeepingPlace = PlaceCountry("DE") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SafekeepingPlace).To(PlaceCountry("DE")));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -313,7 +314,8 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void SafekeepingPlace_TypeAndId_ValidBic_NoError()
     {
-        var msg = ValidMessage() with { SafekeepingPlace = PlaceTypeAndId("DEUTDEFFXXX") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SafekeepingPlace).To(PlaceTypeAndId("DEUTDEFFXXX")));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -329,7 +331,8 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void Balance_EmptyDetails_NoError()
     {
-        var msg = ValidMessage() with { Balance = new CorporateActionBalanceDetails43() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Balance).To(IsoDataFactory.Make<ICorporateActionBalanceDetails43>()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

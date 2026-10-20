@@ -9,23 +9,19 @@ public class PaymentCondition2ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new PaymentCondition2()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IPaymentCondition2>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new PaymentCondition2
-        {
-            AmountModificationAllowed = true,
-            DelayPenalty = "Late fee applies",
-            EarlyPaymentAllowed = false,
-            GuaranteedPaymentRequested = true,
-            ImmediatePaymentRebate = new BeneficialStrategies.Iso20022.Choices.AmountOrRate1Choice.Rate
-            {
-                Value = 2.5m,
-            },
-        };
+        var msg = IsoDataFactory.Make<IPaymentCondition2>(b => b
+            .Set(x => x.AmountModificationAllowed).To(true)
+            .Set(x => x.DelayPenalty).To("Late fee applies")
+            .Set(x => x.EarlyPaymentAllowed).To(false)
+            .Set(x => x.GuaranteedPaymentRequested).To(true)
+            .Set(x => x.ImmediatePaymentRebate).To(IsoDataFactory.Make<Choices.AmountOrRate1Choice.IRate>(b2 => b2
+                .Set(x2 => x2.Value).To(2.5m))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

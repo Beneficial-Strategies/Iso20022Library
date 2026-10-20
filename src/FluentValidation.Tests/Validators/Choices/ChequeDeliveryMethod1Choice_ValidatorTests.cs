@@ -9,14 +9,14 @@ public class ChequeDeliveryMethod1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new Choices.ChequeDeliveryMethod1Choice.Code { Value = ChequeDelivery1Code.MailToDebtor };
+        var value = BeneficialStrategies.Iso20022.Samples.ChequeDeliveryMethod1Choice.Valid.Code.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new Choices.ChequeDeliveryMethod1Choice.Proprietary { Value = "COURIER" };
+        var value = BeneficialStrategies.Iso20022.Samples.ChequeDeliveryMethod1Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

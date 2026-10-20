@@ -9,16 +9,18 @@ public class ServiceLevel8Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice.Code { Value = ExternalServiceLevel1Code.BookTransaction };
+        BeneficialStrategies.Iso20022.Choices.IServiceLevel8Choice choice =
+            IsoDataFactory.Make<Choices.ServiceLevel8Choice.ICode>(b => b
+                .Set(x => x.Value).To(ExternalServiceLevel1Code.BookTransaction));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice.Proprietary { Value = "MYSVCLVL" };
+        BeneficialStrategies.Iso20022.Choices.IServiceLevel8Choice choice =
+            IsoDataFactory.Make<Choices.ServiceLevel8Choice.IProprietary>(b => b
+                .Set(x => x.Value).To("MYSVCLVL"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

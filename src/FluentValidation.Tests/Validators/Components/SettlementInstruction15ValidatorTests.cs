@@ -6,8 +6,9 @@ public class SettlementInstruction15ValidatorTests
 {
     private readonly SettlementInstruction15Validator _sut = new();
 
-    private static SettlementInstruction15 ValidMessage() =>
-        new() { SettlementMethod = SettlementMethod1Code.InstructedAgent };
+    private static ISettlementInstruction15 ValidMessage() =>
+        IsoDataFactory.Make<ISettlementInstruction15>(b => b
+            .Set(x => x.SettlementMethod).To(SettlementMethod1Code.InstructedAgent));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,31 +19,21 @@ public class SettlementInstruction15ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var agent = new BranchAndFinancialInstitutionIdentification8
-        {
-            FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-        };
-        var account = new CashAccount40
-        {
-            Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-        };
-        var msg = ValidMessage() with
-        {
-            ClearingSystem = new BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification3Choice.Proprietary
-            {
-                Value = "MYSYS",
-            },
-            InstructedReimbursementAgent = agent,
-            InstructedReimbursementAgentAccount = account,
-            InstructingReimbursementAgent = agent,
-            InstructingReimbursementAgentAccount = account,
-            SettlementAccount = account,
-            ThirdReimbursementAgent = agent,
-            ThirdReimbursementAgentAccount = account,
-        };
+        var agent = IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
+        var account = IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000"))));
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ClearingSystem).To(IsoDataFactory.Make<Choices.ClearingSystemIdentification3Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYSYS")))
+            .Set(x => x.InstructedReimbursementAgent).To(agent)
+            .Set(x => x.InstructedReimbursementAgentAccount).To(account)
+            .Set(x => x.InstructingReimbursementAgent).To(agent)
+            .Set(x => x.InstructingReimbursementAgentAccount).To(account)
+            .Set(x => x.SettlementAccount).To(account)
+            .Set(x => x.ThirdReimbursementAgent).To(agent)
+            .Set(x => x.ThirdReimbursementAgentAccount).To(account));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,7 +6,8 @@ public class PaymentIdentification8ValidatorTests
 {
     private readonly PaymentIdentification8Validator _sut = new();
 
-    private static PaymentIdentification8 ValidMessage() => new() { EndToEndIdentification = "E2E-001" };
+    private static IPaymentIdentification8 ValidMessage() => IsoDataFactory.Make<IPaymentIdentification8>(b => b
+        .Set(x => x.EndToEndIdentification).To("E2E-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,12 +18,10 @@ public class PaymentIdentification8ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            InstructionIdentification = "INSTR-001",
-            TransactionIdentification = "TX-001",
-            UETR = "8a562590-5288-4dc0-a49d-9846f6720b17",
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InstructionIdentification).To("INSTR-001")
+            .Set(x => x.TransactionIdentification).To("TX-001")
+            .Set(x => x.UETR).To("8a562590-5288-4dc0-a49d-9846f6720b17"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

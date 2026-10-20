@@ -6,7 +6,8 @@ public class OtherContact1ValidatorTests
 {
     private readonly OtherContact1Validator _sut = new();
 
-    private static OtherContact1 ValidMessage() => new() { ChannelType = "FAXX" };
+    private static IOtherContact1 ValidMessage() => IsoDataFactory.Make<IOtherContact1>(b => b
+        .Set(x => x.ChannelType).To("FAXX"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,7 +18,8 @@ public class OtherContact1ValidatorTests
     [Fact]
     public void Identification_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { Identification = "+1-555-0100" };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Identification).To("+1-555-0100"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,7 +6,8 @@ public class MessageHeader7ValidatorTests
 {
     private readonly MessageHeader7Validator _sut = new();
 
-    private static MessageHeader7 ValidMessage() => new() { MessageIdentification = "MSG-001" };
+    private static IMessageHeader7 ValidMessage() => IsoDataFactory.Make<IMessageHeader7>(b => b
+        .Set(x => x.MessageIdentification).To("MSG-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,16 +18,13 @@ public class MessageHeader7ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            CreationDateTime = new DateTime(2026, 1, 1),
-            RequestType = new BeneficialStrategies.Iso20022.Choices.RequestType4Choice.Proprietary
-            {
-                Identification = "REQ-TYPE-001",
-            },
-            OriginalBusinessQuery = new OriginalBusinessQuery1 { MessageIdentification = "ORIG-MSG-001" },
-            QueryName = "PREVIOUS-QUERY",
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.RequestType).To(IsoDataFactory.Make<Choices.RequestType4Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Identification).To("REQ-TYPE-001")))
+            .Set(x => x.OriginalBusinessQuery).To(IsoDataFactory.Make<IOriginalBusinessQuery1>(b2 => b2
+                .Set(x2 => x2.MessageIdentification).To("ORIG-MSG-001")))
+            .Set(x => x.QueryName).To("PREVIOUS-QUERY"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

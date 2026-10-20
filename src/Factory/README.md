@@ -23,6 +23,24 @@ The object is a normal value: its members are the interface's, `Equals` and `Get
 their items), `ToString` shows them, the validators of the `FluentValidation` package accept it (`IValidator<IFoo>`), and the
 serializer writes it back to the same XML.
 
+## Making an object by hand
+
+For a test or a sample, `IsoDataFactory.Make<T>` makes an object for an interface and sets its members. The interface has no
+setters, so each member is named with a lambda and then given its value (two steps, so that the value converts to the member's
+type as it does for a record: `"MSG-1"` to a `Max35Text`).
+
+```csharp
+var id = IsoDataFactory.Make<IGenericIdentification3>(b => b
+    .Set(x => x.Identification).To("ID-1")
+    .Set(x => x.Issuer).To("BANK"));
+```
+
+`IsoDataFactory.With(source, b => b.Set(x => x.Member).To(value))` is the counterpart of a record's `with`: a copy of an object (of the factory, or a record)
+with the named members changed; the source is not touched.
+
+A member that is not named stays unset (a list is empty). `new IsoBuilder<T>` is not public: use `Make`, which builds with
+`IsoDataFactory.Shared`. The `Samples` package holds named objects made this way.
+
 ## Dependency injection
 
 ```csharp

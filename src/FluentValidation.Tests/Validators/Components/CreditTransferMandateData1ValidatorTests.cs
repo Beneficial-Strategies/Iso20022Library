@@ -9,30 +9,24 @@ public class CreditTransferMandateData1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new CreditTransferMandateData1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ICreditTransferMandateData1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new CreditTransferMandateData1
-        {
-            MandateIdentification = "MNDT-001",
-            Type = new MandateTypeInformation2(),
-            DateOfSignature = new DateOnly(2026, 1, 1),
-            DateOfVerification = new DateTime(2026, 1, 1),
-            ElectronicSignature = Convert.ToBase64String([1, 2, 3]),
-            FirstPaymentDate = new DateOnly(2026, 2, 1),
-            FinalPaymentDate = new DateOnly(2026, 12, 1),
-            Frequency = new BeneficialStrategies.Iso20022.Choices.Frequency36Choice.Type
-            {
-                Value = Frequency6Code.Monthly,
-            },
-            Reason = new BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice.Proprietary
-            {
-                Value = "MYREASON",
-            },
-        };
+        var msg = IsoDataFactory.Make<ICreditTransferMandateData1>(b => b
+            .Set(x => x.MandateIdentification).To("MNDT-001")
+            .Set(x => x.Type).To(IsoDataFactory.Make<IMandateTypeInformation2>())
+            .Set(x => x.DateOfSignature).To(new DateOnly(2026, 1, 1))
+            .Set(x => x.DateOfVerification).To(new DateTime(2026, 1, 1))
+            .Set(x => x.ElectronicSignature).To(Convert.ToBase64String([1, 2, 3]))
+            .Set(x => x.FirstPaymentDate).To(new DateOnly(2026, 2, 1))
+            .Set(x => x.FinalPaymentDate).To(new DateOnly(2026, 12, 1))
+            .Set(x => x.Frequency).To(IsoDataFactory.Make<Choices.Frequency36Choice.IType>(b2 => b2
+                .Set(x2 => x2.Value).To(Frequency6Code.Monthly)))
+            .Set(x => x.Reason).To(IsoDataFactory.Make<Choices.MandateSetupReason1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYREASON"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

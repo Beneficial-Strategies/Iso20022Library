@@ -9,13 +9,15 @@ public class RegulatoryAuthority2ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new RegulatoryAuthority2()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IRegulatoryAuthority2>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new RegulatoryAuthority2 { Name = "Financial Regulator", Country = "US" };
+        var msg = IsoDataFactory.Make<IRegulatoryAuthority2>(b => b
+            .Set(x => x.Name).To("Financial Regulator")
+            .Set(x => x.Country).To("US"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -26,7 +28,8 @@ public class RegulatoryAuthority2ValidatorTests
         registry.Add("US");
         var sut = new RegulatoryAuthority2Validator(new CountryCodeValidator(registry));
 
-        var result = sut.Validate(new RegulatoryAuthority2 { Country = "ZZ" });
+        var result = sut.Validate(IsoDataFactory.Make<IRegulatoryAuthority2>(b => b
+            .Set(x => x.Country).To("ZZ")));
         Assert.False(result.IsValid);
     }
 }

@@ -9,22 +9,14 @@ public class AmountType4Choice_ValidatorTests
     [Fact]
     public void InstructedAmountVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.AmountType4Choice.InstructedAmount
-        {
-            Currency = "USD",
-            Amount = 100m,
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid.InstructedAmount.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void EquivalentAmountVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.AmountType4Choice.EquivalentAmount
-        {
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            CurrencyOfTransfer = "EUR",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid.EquivalentAmount.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -35,11 +27,7 @@ public class AmountType4Choice_ValidatorTests
         registry.Add("EUR");
         var sut = new AmountType4Choice_Validator(new ActiveOrHistoricCurrencyCodeValidator(registry));
 
-        var value = new BeneficialStrategies.Iso20022.Choices.AmountType4Choice.EquivalentAmount
-        {
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            CurrencyOfTransfer = "ZZZ",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid.EquivalentAmount.Maximal;
         var result = sut.Validate(value);
         Assert.False(result.IsValid);
     }

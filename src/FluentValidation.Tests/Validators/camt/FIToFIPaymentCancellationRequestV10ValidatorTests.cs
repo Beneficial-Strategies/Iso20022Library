@@ -1,6 +1,6 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using Agent = BeneficialStrategies.Iso20022.Choices.Party40Choice.Agent;
+using IAgent= BeneficialStrategies.Iso20022.Choices.Party40Choice.IAgent;
 using CxlReasonChoice = BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice;
 using CxlReasonCode = BeneficialStrategies.Iso20022.Codesets.ExternalCancellationReason1Code;
 
@@ -16,39 +16,33 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
 
     // ── Helpers ────────────────────────────────────────────────────────────────
 
-    private static Agent MakeAgent(string bic) =>
-        new()
-        {
-            FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
-            {
-                BICFI = bic,
-            },
-        };
+    private static IAgent MakeAgent(string bic) =>
+        IsoDataFactory.Make<Choices.Party40Choice.IAgent>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification18>(b2 => b2
+                .Set(x2 => x2.BICFI).To(bic))));
 
-    private static CaseAssignment5 ValidAssignment() =>
-        new()
-        {
-            Identification = "ASSIGN-001",
-            Assigner = MakeAgent("DEUTDEFFXXX"),
-            Assignee = MakeAgent("BNPAFRPPXXX"),
-            CreationDateTime = new DateTime(2024, 3, 16, 9, 0, 0),
-        };
+    private static ICaseAssignment5 ValidAssignment() =>
+        IsoDataFactory.Make<ICaseAssignment5>(b => b
+            .Set(x => x.Identification).To("ASSIGN-001")
+            .Set(x => x.Assigner).To(MakeAgent("DEUTDEFFXXX"))
+            .Set(x => x.Assignee).To(MakeAgent("BNPAFRPPXXX"))
+            .Set(x => x.CreationDateTime).To(new DateTime(2024, 3, 16, 9, 0, 0)));
 
-    private static UnderlyingTransaction28 ValidUnderlying() =>
-        new()
-        {
-            TransactionInformation = [new PaymentTransaction137
-            {
-                OriginalEndToEndIdentification = "E2E-001",
-                OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
-            }],
-        };
+    private static IUnderlyingTransaction28 ValidUnderlying() =>
+        IsoDataFactory.Make<IUnderlyingTransaction28>(b => b
+            .Set(x => x.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b2 => b2
+                .Set(x2 => x2.OriginalEndToEndIdentification).To("E2E-001")
+                .Set(x2 => x2.OriginalUETR).To("97ed4827-7b6f-4491-a06f-b548d5a7512d"))]));
 
-    private static PaymentCancellationReason5 ValidCancellationReason() =>
-        new() { Reason = new CxlReasonChoice.Code { Value = CxlReasonCode.RequestedByCustomer }, };
+    private static IPaymentCancellationReason5 ValidCancellationReason() =>
+        IsoDataFactory.Make<IPaymentCancellationReason5>(b => b
+            .Set(x => x.Reason).To(IsoDataFactory.Make<CxlReasonChoice.ICode>(b2 => b2
+            .Set(x2 => x2.Value).To(CxlReasonCode.RequestedByCustomer))));
 
-    private static FIToFIPaymentCancellationRequestV10 ValidMessage() =>
-        new() { Assignment = ValidAssignment(), Underlying = [ValidUnderlying()], };
+    private static IFIToFIPaymentCancellationRequestV10 ValidMessage() =>
+        IsoDataFactory.Make<IFIToFIPaymentCancellationRequestV10>(b => b
+            .Set(x => x.Assignment).To(ValidAssignment())
+            .Set(x => x.Underlying).To([ValidUnderlying()]));
 
     // ── Happy path ─────────────────────────────────────────────────────────────
 
@@ -61,20 +55,19 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void ValidMessage_WithOptionalCase_NoValidationErrors()
     {
-        var msg = ValidMessage() with
-        {
-            Case = new Case5 { Identification = "CASE-001", Creator = MakeAgent("DEUTDEFFXXX"), },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Case).To(IsoDataFactory.Make<ICase5>(b2 => b2
+                .Set(x2 => x2.Identification).To("CASE-001")
+                .Set(x2 => x2.Creator).To(MakeAgent("DEUTDEFFXXX")))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ValidMessage_WithControlData_NoValidationErrors()
     {
-        var msg = ValidMessage() with
-        {
-            ControlData = new ControlData1 { NumberOfTransactions = "1" },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ControlData).To(IsoDataFactory.Make<IControlData1>(b2 => b2
+                .Set(x2 => x2.NumberOfTransactions).To("1"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -83,20 +76,14 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         // GroupCancellationAndReasonRule: when GroupCancellation is true,
         // CancellationReasonInformation/Reason must be present.
-        var msg = new FIToFIPaymentCancellationRequestV10
-        {
-            Assignment = ValidAssignment(),
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-MSG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "true",
-                    CancellationReasonInformation = [ValidCancellationReason()],
-                },
-            }],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentCancellationRequestV10>(b => b
+            .Set(x => x.Assignment).To(ValidAssignment())
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-MSG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("true")
+                    .Set(x3 => x3.CancellationReasonInformation).To([ValidCancellationReason()]))))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -106,17 +93,12 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     public void MissingAssignment_HasValidationError()
     {
         // Records require `Assignment` at compile time; bypass via cast to trigger runtime validation
-        var msg = ValidMessage() with
-        {
-        };
+        var msg = ValidMessage();
         // Use reflection to clear the required property for test
         var result = _sut.Validate(
-            new FIToFIPaymentCancellationRequestV10
-            {
-                // Assignment intentionally omitted — required property, FluentValidation NotNull check
-                Assignment = null!,
-                Underlying = [ValidUnderlying()],
-            }
+            IsoDataFactory.Make<IFIToFIPaymentCancellationRequestV10>(b => b
+                .Set(x => x.Assignment).To(null!)
+                .Set(x => x.Underlying).To([ValidUnderlying()]))
         );
         Assert.Contains(result.Errors, e => e.PropertyName == "Assignment");
     }
@@ -125,11 +107,9 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     public void MissingUnderlying_HasValidationError()
     {
         var result = _sut.Validate(
-            new FIToFIPaymentCancellationRequestV10
-            {
-                Assignment = ValidAssignment(),
-                Underlying = null!,
-            }
+            IsoDataFactory.Make<IFIToFIPaymentCancellationRequestV10>(b => b
+                .Set(x => x.Assignment).To(ValidAssignment())
+                .Set(x => x.Underlying).To(null!))
         );
         Assert.Contains(result.Errors, e => e.PropertyName == "Underlying");
     }
@@ -141,23 +121,24 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         // Max35Text constructor rejects empty — never reaches the validator.
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = ValidAssignment() with { Identification = "" });
+            _ = IsoDataFactory.With(ValidAssignment(), b => b
+                .Set(x => x.Identification).To("")));
     }
 
     [Fact]
     public void Assignment_Identification_TooLong_ThrowsAtConstruction()
     {
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = ValidAssignment() with { Identification = new string('A', 36) });
+            _ = IsoDataFactory.With(ValidAssignment(), b => b
+                .Set(x => x.Identification).To(new string('A', 36))));
     }
 
     [Fact]
     public void Assignment_Identification_MaxLength35_NoError()
     {
-        var msg = ValidMessage() with
-        {
-            Assignment = ValidAssignment() with { Identification = new string('A', 35) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Assignment).To(IsoDataFactory.With(ValidAssignment(), b2 => b2
+                .Set(x2 => x2.Identification).To(new string('A', 35)))));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.Assignment.Identification);
     }
 
@@ -166,14 +147,18 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void Assignment_NullAssigner_HasValidationError()
     {
-        var msg = ValidMessage() with { Assignment = ValidAssignment() with { Assigner = null! }, };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Assignment).To(IsoDataFactory.With(ValidAssignment(), b2 => b2
+            .Set(x2 => x2.Assigner).To(null!))));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Assigner);
     }
 
     [Fact]
     public void Assignment_NullAssignee_HasValidationError()
     {
-        var msg = ValidMessage() with { Assignment = ValidAssignment() with { Assignee = null! }, };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Assignment).To(IsoDataFactory.With(ValidAssignment(), b2 => b2
+            .Set(x2 => x2.Assignee).To(null!))));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Assignee);
     }
 
@@ -184,23 +169,24 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         // Max15NumericText enforces [0-9]{1,15} — invalid values cannot reach the validator.
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = new ControlData1 { NumberOfTransactions = "12X" });
+            _ = IsoDataFactory.Make<IControlData1>(b => b
+                .Set(x => x.NumberOfTransactions).To("12X")));
     }
 
     [Fact]
     public void ControlData_NumberOfTransactions_TooManyDigits_ThrowsAtConstruction()
     {
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = new ControlData1 { NumberOfTransactions = "1234567890123456" }); // 16 digits
+            _ = IsoDataFactory.Make<IControlData1>(b => b
+                .Set(x => x.NumberOfTransactions).To("1234567890123456"))); // 16 digits
     }
 
     [Fact]
     public void ControlData_NumberOfTransactions_Valid_NoError()
     {
-        var msg = ValidMessage() with
-        {
-            ControlData = new ControlData1 { NumberOfTransactions = "999" },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ControlData).To(IsoDataFactory.Make<IControlData1>(b2 => b2
+                .Set(x2 => x2.NumberOfTransactions).To("999"))));
         _sut.TestValidate(msg)
             .ShouldNotHaveValidationErrorFor(x => x.ControlData!.NumberOfTransactions);
     }
@@ -212,22 +198,17 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         // UUIDv4Identifier enforces RFC 4122 pattern — invalid values cannot reach the validator.
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = new PaymentTransaction137 { OriginalUETR = "not-a-valid-uuid" });
+            _ = IsoDataFactory.Make<IPaymentTransaction137>(b => b
+                .Set(x => x.OriginalUETR).To("not-a-valid-uuid")));
     }
 
     [Fact]
     public void TransactionInfo_ValidUETR_NoError()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.OriginalUETR).To("97ed4827-7b6f-4491-a06f-b548d5a7512d"))]))]));
         var result2 = _sut.Validate(msg);
         Assert.DoesNotContain(result2.Errors, e => e.PropertyName.EndsWith(".OriginalUETR"));
     }
@@ -239,7 +220,8 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         // Max35Text constructor rejects TooLong — never reaches the validator.
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = new PaymentTransaction137 { OriginalEndToEndIdentification = new string('X', 36) });
+            _ = IsoDataFactory.Make<IPaymentTransaction137>(b => b
+                .Set(x => x.OriginalEndToEndIdentification).To(new string('X', 36))));
     }
 
     // ── UnderlyingTransaction28: empty underlying ─────────────────────────────
@@ -247,13 +229,9 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void Underlying_BothChildrenNull_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = null,
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(null))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.ErrorMessage.Contains("at least one"));
     }
@@ -263,23 +241,17 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void CasePresentAtBothMessageAndTransactionLevel_HasValidationError()
     {
-        var msg = new FIToFIPaymentCancellationRequestV10
-        {
-            Assignment = ValidAssignment(),
-            Case = new Case5 { Identification = "CASE-MSG", Creator = MakeAgent("DEUTDEFFXXX") },
-            Underlying = [new UnderlyingTransaction28
-            {
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    Case = new Case5
-                    {
-                        Identification = "CASE-TXN",
-                        Creator = MakeAgent("DEUTDEFFXXX")
-                    },
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentCancellationRequestV10>(b => b
+            .Set(x => x.Assignment).To(ValidAssignment())
+            .Set(x => x.Case).To(IsoDataFactory.Make<ICase5>(b2 => b2
+                .Set(x2 => x2.Identification).To("CASE-MSG")
+                .Set(x2 => x2.Creator).To(MakeAgent("DEUTDEFFXXX"))))
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.Case).To(IsoDataFactory.Make<ICase5>(b4 => b4
+                        .Set(x4 => x4.Identification).To("CASE-TXN")
+                        .Set(x4 => x4.Creator).To(MakeAgent("DEUTDEFFXXX"))))
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "MessageOrGroupCaseRule");
     }
@@ -287,24 +259,18 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void CasePresentAtBothMessageAndGroupLevel_HasValidationError()
     {
-        var msg = new FIToFIPaymentCancellationRequestV10
-        {
-            Assignment = ValidAssignment(),
-            Case = new Case5 { Identification = "CASE-MSG", Creator = MakeAgent("DEUTDEFFXXX") },
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    Case = new Case5
-                    {
-                        Identification = "CASE-GRP",
-                        Creator = MakeAgent("DEUTDEFFXXX")
-                    },
-                },
-            }],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentCancellationRequestV10>(b => b
+            .Set(x => x.Assignment).To(ValidAssignment())
+            .Set(x => x.Case).To(IsoDataFactory.Make<ICase5>(b2 => b2
+                .Set(x2 => x2.Identification).To("CASE-MSG")
+                .Set(x2 => x2.Creator).To(MakeAgent("DEUTDEFFXXX"))))
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.Case).To(IsoDataFactory.Make<ICase5>(b4 => b4
+                        .Set(x4 => x4.Identification).To("CASE-GRP")
+                        .Set(x4 => x4.Creator).To(MakeAgent("DEUTDEFFXXX")))))))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "MessageOrGroupCaseRule");
     }
@@ -312,23 +278,14 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void CasePresentOnlyAtTransactionLevel_NoRuleViolation()
     {
-        var msg = new FIToFIPaymentCancellationRequestV10
-        {
-            Assignment = ValidAssignment(),
-            // No message-level Case
-            Underlying = [new UnderlyingTransaction28
-            {
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    Case = new Case5
-                    {
-                        Identification = "CASE-TXN",
-                        Creator = MakeAgent("DEUTDEFFXXX")
-                    },
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentCancellationRequestV10>(b => b
+            .Set(x => x.Assignment).To(ValidAssignment())
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.Case).To(IsoDataFactory.Make<ICase5>(b4 => b4
+                        .Set(x4 => x4.Identification).To("CASE-TXN")
+                        .Set(x4 => x4.Creator).To(MakeAgent("DEUTDEFFXXX"))))
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor("MessageOrGroupCaseRule");
     }
 
@@ -339,11 +296,9 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         // Max35Text constructor rejects empty strings (TooShort) — never reaches the validator.
         Assert.Throws<Iso20022FormatException>(() =>
-            _ = new OriginalGroupHeader15
-            {
-                OriginalMessageIdentification = "", // violates Max35Text minLength=1
-                OriginalMessageNameIdentification = "pacs.008.001.11",
-            });
+            _ = IsoDataFactory.Make<IOriginalGroupHeader15>(b => b
+                .Set(x => x.OriginalMessageIdentification).To("")
+                .Set(x => x.OriginalMessageNameIdentification).To("pacs.008.001.11")));
     }
 
     // ── UnderlyingTransaction28: GroupCancellationAndReasonRule ──────────────────
@@ -351,19 +306,12 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void GroupCancellationTrue_NoReason_ViolatesGroupCancellationAndReasonRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "true",
-                    // CancellationReasonInformation intentionally absent
-                },
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("true"))))]));
         var result = _sut.Validate(msg);
         Assert.Contains(
             result.Errors,
@@ -374,19 +322,13 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void GroupCancellationTrue_WithReason_SatisfiesGroupCancellationAndReasonRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "true",
-                    CancellationReasonInformation = [ValidCancellationReason()],
-                },
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("true")
+                    .Set(x3 => x3.CancellationReasonInformation).To([ValidCancellationReason()]))))]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(
             result.Errors,
@@ -399,23 +341,15 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void GroupCancellationTrue_WithTransactionInfo_ViolatesRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "true",
-                    CancellationReasonInformation = [ValidCancellationReason()],
-                },
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("true")
+                    .Set(x3 => x3.CancellationReasonInformation).To([ValidCancellationReason()])))
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         var result = _sut.Validate(msg);
         Assert.Contains(
             result.Errors,
@@ -428,19 +362,12 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void GroupCancellationFalse_NoTransactionInfo_ViolatesRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "false",
-                    // TransactionInformation intentionally absent
-                },
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("false"))))]));
         var result = _sut.Validate(msg);
         Assert.Contains(
             result.Errors,
@@ -451,22 +378,14 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void GroupCancellationFalse_WithTransactionInfo_SatisfiesRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "false",
-                },
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("false")))
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(
             result.Errors,
@@ -479,23 +398,15 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void GroupCancellationFalse_NumberOfTransactionsMismatch_ViolatesRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "false",
-                    NumberOfTransactions = "5", // claims 5, but only 1 present
-                },
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("false")
+                    .Set(x3 => x3.NumberOfTransactions).To("5")))
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         var result = _sut.Validate(msg);
         Assert.Contains(
             result.Errors,
@@ -506,23 +417,15 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void GroupCancellationFalse_NumberOfTransactionsMatches_SatisfiesRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    GroupCancellation = "false",
-                    NumberOfTransactions = "1",
-                },
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.GroupCancellation).To("false")
+                    .Set(x3 => x3.NumberOfTransactions).To("1")))
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(
             result.Errors,
@@ -535,31 +438,19 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void BothGroupAndTransactionHaveCase_ViolatesGroupOrTransactionCaseRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "ORIG-001",
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                    Case = new Case5
-                    {
-                        Identification = "CASE-GRP",
-                        Creator = MakeAgent("DEUTDEFFXXX")
-                    },
-                },
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    Case = new Case5
-                    {
-                        Identification = "CASE-TXN",
-                        Creator = MakeAgent("DEUTDEFFXXX")
-                    },
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.OriginalGroupInformationAndCancellation).To(IsoDataFactory.Make<IOriginalGroupHeader15>(b3 => b3
+                    .Set(x3 => x3.OriginalMessageIdentification).To("ORIG-001")
+                    .Set(x3 => x3.OriginalMessageNameIdentification).To("pacs.008.001.11")
+                    .Set(x3 => x3.Case).To(IsoDataFactory.Make<ICase5>(b4 => b4
+                        .Set(x4 => x4.Identification).To("CASE-GRP")
+                        .Set(x4 => x4.Creator).To(MakeAgent("DEUTDEFFXXX"))))))
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.Case).To(IsoDataFactory.Make<ICase5>(b4 => b4
+                        .Set(x4 => x4.Identification).To("CASE-TXN")
+                        .Set(x4 => x4.Creator).To(MakeAgent("DEUTDEFFXXX"))))
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule"));
     }
@@ -567,21 +458,13 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void OnlyTransactionHasCase_SatisfiesGroupOrTransactionCaseRule()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = [new UnderlyingTransaction28
-            {
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    Case = new Case5
-                    {
-                        Identification = "CASE-TXN",
-                        Creator = MakeAgent("DEUTDEFFXXX")
-                    },
-                    OriginalEndToEndIdentification = "E2E-001",
-                }],
-            }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Underlying).To([IsoDataFactory.Make<IUnderlyingTransaction28>(b2 => b2
+                .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction137>(b3 => b3
+                    .Set(x3 => x3.Case).To(IsoDataFactory.Make<ICase5>(b4 => b4
+                        .Set(x4 => x4.Identification).To("CASE-TXN")
+                        .Set(x4 => x4.Creator).To(MakeAgent("DEUTDEFFXXX"))))
+                    .Set(x3 => x3.OriginalEndToEndIdentification).To("E2E-001"))]))]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(
             result.Errors,

@@ -9,7 +9,8 @@ public class SystemIdentification2Choice_ValidatorTests
     [Fact]
     public void CountryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice.Country { Value = "DE" };
+        var value = IsoDataFactory.Make<Choices.SystemIdentification2Choice.ICountry>(b => b
+            .Set(x => x.Value).To("DE"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -17,7 +18,9 @@ public class SystemIdentification2Choice_ValidatorTests
     public void MarketInfrastructureIdentificationVariant_NoValidationErrors()
     {
         var value =
-            new BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice.MarketInfrastructureIdentification { Value = new BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentification1Choice.Proprietary { Value = "MI" } };
+            IsoDataFactory.Make<Choices.SystemIdentification2Choice.IMarketInfrastructureIdentification>(b => b
+                .Set(x => x.Value).To(IsoDataFactory.Make<Choices.MarketInfrastructureIdentification1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MI"))));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

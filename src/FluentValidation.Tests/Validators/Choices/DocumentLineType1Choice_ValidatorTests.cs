@@ -9,20 +9,16 @@ public class DocumentLineType1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DocumentLineType1Choice.Code
-        {
-            Value = ExternalDocumentLineType1Code.AdditionalProductIdentificationAssignedByTheManufacturer,
-        };
+        var value = IsoDataFactory.Make<Choices.DocumentLineType1Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalDocumentLineType1Code.AdditionalProductIdentificationAssignedByTheManufacturer));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DocumentLineType1Choice.Proprietary
-        {
-            Value = "MYLINETYPE",
-        };
+        var value = IsoDataFactory.Make<Choices.DocumentLineType1Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYLINETYPE"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

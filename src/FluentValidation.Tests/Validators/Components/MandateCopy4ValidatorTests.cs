@@ -6,15 +6,10 @@ public class MandateCopy4ValidatorTests
 {
     private readonly MandateCopy4Validator _sut = new();
 
-    private static MandateCopy4 ValidMessage() =>
-        new()
-        {
-            OriginalMandate =
-                new BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice.OriginalMandateIdentification
-                {
-                    Value = "MNDT-001",
-                },
-        };
+    private static IMandateCopy4 ValidMessage() =>
+        IsoDataFactory.Make<IMandateCopy4>(b => b
+            .Set(x => x.OriginalMandate).To(IsoDataFactory.Make<Choices.OriginalMandate10Choice.IOriginalMandateIdentification>(b2 => b2
+                    .Set(x2 => x2.Value).To("MNDT-001"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -25,19 +20,14 @@ public class MandateCopy4ValidatorTests
     [Fact]
     public void AllOptionalChildren_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            MandateStatus = new BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice.Proprietary
-            {
-                Value = "CUSTOMSTATUS",
-            },
-            OriginalMessageInformation = new OriginalMessageInformation1
-            {
-                MessageIdentification = "MSG-001",
-                MessageNameIdentification = "pain.017.001.04",
-            },
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.MandateStatus).To(IsoDataFactory.Make<Choices.MandateStatus1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("CUSTOMSTATUS")))
+            .Set(x => x.OriginalMessageInformation).To(IsoDataFactory.Make<IOriginalMessageInformation1>(b2 => b2
+                .Set(x2 => x2.MessageIdentification).To("MSG-001")
+                .Set(x2 => x2.MessageNameIdentification).To("pain.017.001.04")))
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

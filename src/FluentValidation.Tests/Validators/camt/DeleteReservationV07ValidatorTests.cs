@@ -6,9 +6,11 @@ public class DeleteReservationV07ValidatorTests
 {
     private readonly DeleteReservationV07Validator _sut = new();
 
-    private static MessageHeader1 ValidMessageHeader() => new() { MessageIdentification = "MSG-001" };
+    private static IMessageHeader1 ValidMessageHeader() => IsoDataFactory.Make<IMessageHeader1>(b => b
+        .Set(x => x.MessageIdentification).To("MSG-001"));
 
-    private static DeleteReservationV07 ValidMessage() => new() { MessageHeader = ValidMessageHeader() };
+    private static IDeleteReservationV07 ValidMessage() => IsoDataFactory.Make<IDeleteReservationV07>(b => b
+        .Set(x => x.MessageHeader).To(ValidMessageHeader()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -19,26 +21,19 @@ public class DeleteReservationV07ValidatorTests
     [Fact]
     public void CurrentReservation_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            CurrentReservation = new ReservationIdentification4
-            {
-                Type = new BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.Code
-                {
-                    Value = ExternalReservationType1Code.CashReservation,
-                },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CurrentReservation).To(IsoDataFactory.Make<IReservationIdentification4>(b2 => b2
+                .Set(x2 => x2.Type).To(IsoDataFactory.Make<Choices.ReservationType2Choice.ICode>(b3 => b3
+                    .Set(x3 => x3.Value).To(ExternalReservationType1Code.CashReservation))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

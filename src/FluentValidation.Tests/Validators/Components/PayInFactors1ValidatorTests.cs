@@ -6,21 +6,17 @@ public class PayInFactors1ValidatorTests
 {
     private readonly PayInFactors1Validator _sut = new();
 
-    private static CurrencyFactors1 ValidCurrencyFactor() =>
-        new()
-        {
-            Currency = "USD",
-            ShortPositionLimit = 100m,
-            MinimumPayInAmount = 10m,
-            VolatilityMargin = 5m,
-        };
+    private static ICurrencyFactors1 ValidCurrencyFactor() =>
+        IsoDataFactory.Make<ICurrencyFactors1>(b => b
+            .Set(x => x.Currency).To("USD")
+            .Set(x => x.ShortPositionLimit).To(100m)
+            .Set(x => x.MinimumPayInAmount).To(10m)
+            .Set(x => x.VolatilityMargin).To(5m));
 
-    private static PayInFactors1 ValidMessage() =>
-        new()
-        {
-            AggregateShortPositionLimit = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 1000m },
-            CurrencyFactors = [ValidCurrencyFactor()],
-        };
+    private static IPayInFactors1 ValidMessage() =>
+        IsoDataFactory.Make<IPayInFactors1>(b => b
+            .Set(x => x.AggregateShortPositionLimit).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 1000m })
+            .Set(x => x.CurrencyFactors).To([ValidCurrencyFactor()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -33,14 +29,16 @@ public class PayInFactors1ValidatorTests
     [Fact]
     public void CurrencyFactors_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { CurrencyFactors = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CurrencyFactors).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.CurrencyFactors);
     }
 
     [Fact]
     public void CurrencyFactors_OneElement_NoValidationError()
     {
-        var msg = ValidMessage() with { CurrencyFactors = [ValidCurrencyFactor()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CurrencyFactors).To([ValidCurrencyFactor()]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.CurrencyFactors);
     }
 }

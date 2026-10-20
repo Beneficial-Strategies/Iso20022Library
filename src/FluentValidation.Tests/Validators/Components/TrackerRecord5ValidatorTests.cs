@@ -6,14 +6,10 @@ public class TrackerRecord5ValidatorTests
 {
     private readonly TrackerRecord5Validator _sut = new();
 
-    private static TrackerRecord5 ValidMessage() =>
-        new()
-        {
-            Agent = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-            },
-        };
+    private static ITrackerRecord5 ValidMessage() =>
+        IsoDataFactory.Make<ITrackerRecord5>(b => b
+            .Set(x => x.Agent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -24,17 +20,13 @@ public class TrackerRecord5ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            ChargeBearer = ChargeBearerType1Code.BorneByDebtor,
-            ChargesAmount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m },
-            ExchangeRateData = new CurrencyExchange13
-            {
-                SourceCurrency = "USD",
-                TargetCurrency = "EUR",
-                ExchangeRate = 0.9m,
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ChargeBearer).To(ChargeBearerType1Code.BorneByDebtor)
+            .Set(x => x.ChargesAmount).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m })
+            .Set(x => x.ExchangeRateData).To(IsoDataFactory.Make<ICurrencyExchange13>(b2 => b2
+                .Set(x2 => x2.SourceCurrency).To("USD")
+                .Set(x2 => x2.TargetCurrency).To("EUR")
+                .Set(x2 => x2.ExchangeRate).To(0.9m))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

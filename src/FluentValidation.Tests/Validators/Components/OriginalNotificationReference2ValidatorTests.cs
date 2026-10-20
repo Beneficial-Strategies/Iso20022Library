@@ -6,21 +6,19 @@ public class OriginalNotificationReference2ValidatorTests
 {
     private readonly OriginalNotificationReference2Validator _sut = new();
 
-    private static CashAccount16 ValidAccount(string id = "ACC-001") =>
-        new()
-        {
-            Identification = new Choices.AccountIdentification4Choice.Other { Identification = id },
-        };
+    private static ICashAccount16 ValidAccount(string id = "ACC-001") =>
+        IsoDataFactory.Make<ICashAccount16>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IOther>(b2 => b2
+                .Set(x2 => x2.Identification).To(id))));
 
-    private static OriginalItemAndStatus2 MinimalItem(string currency = "USD", decimal amount = 100m) =>
-        new()
-        {
-            OriginalItemIdentification = "ITEM-001",
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = currency, Amount = amount },
-            ItemStatus = Codesets.NotificationStatus3Code.Received,
-        };
+    private static IOriginalItemAndStatus2 MinimalItem(string currency = "USD", decimal amount = 100m) =>
+        IsoDataFactory.Make<IOriginalItemAndStatus2>(b => b
+            .Set(x => x.OriginalItemIdentification).To("ITEM-001")
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = currency, Amount = amount })
+            .Set(x => x.ItemStatus).To(Codesets.NotificationStatus3Code.Received));
 
-    private static OriginalNotificationReference2 ValidMessage() => new() { OriginalItemAndStatus = [MinimalItem()] };
+    private static IOriginalNotificationReference2 ValidMessage() => IsoDataFactory.Make<IOriginalNotificationReference2>(b => b
+        .Set(x => x.OriginalItemAndStatus).To([MinimalItem()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -33,7 +31,8 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void OriginalItemAndStatus_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { OriginalItemAndStatus = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalItemAndStatus).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.OriginalItemAndStatus);
     }
 
@@ -43,11 +42,10 @@ public class OriginalNotificationReference2ValidatorTests
     public void ExpectedValueDateAndItemExpectedValueDate_Violates_ExpectedValueDateRule()
     {
         var date = new DateOnly(2026, 8, 13);
-        var msg = ValidMessage() with
-        {
-            ExpectedValueDate = date,
-            OriginalItemAndStatus = [MinimalItem() with { ExpectedValueDate = date }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ExpectedValueDate).To(date)
+            .Set(x => x.OriginalItemAndStatus).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.ExpectedValueDate).To(date))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ExpectedValueDateRule");
     }
@@ -55,7 +53,8 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void ExpectedValueDateOnly_DoesNotViolate_ExpectedValueDateRule()
     {
-        var msg = ValidMessage() with { ExpectedValueDate = new DateOnly(2026, 8, 13) };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ExpectedValueDate).To(new DateOnly(2026, 8, 13)));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "ExpectedValueDateRule");
     }
@@ -65,11 +64,9 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void TotalAmountCurrencyMismatch_Violates_TotalAmountAndAmount1Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 100m },
-            OriginalItemAndStatus = [MinimalItem(currency: "USD", amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 100m })
+            .Set(x => x.OriginalItemAndStatus).To([MinimalItem(currency: "USD", amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalAmountAndAmount1Rule");
     }
@@ -77,11 +74,9 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void TotalAmountCurrencyMatches_DoesNotViolate_TotalAmountAndAmount1Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            OriginalItemAndStatus = [MinimalItem(currency: "USD", amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.OriginalItemAndStatus).To([MinimalItem(currency: "USD", amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "TotalAmountAndAmount1Rule");
     }
@@ -91,11 +86,9 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void TotalAmountNotEqualToSum_Violates_TotalAmountAndAmount2Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 999m },
-            OriginalItemAndStatus = [MinimalItem(amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 999m })
+            .Set(x => x.OriginalItemAndStatus).To([MinimalItem(amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalAmountAndAmount2Rule");
     }
@@ -103,11 +96,9 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void TotalAmountEqualToSum_DoesNotViolate_TotalAmountAndAmount2Rule()
     {
-        var msg = ValidMessage() with
-        {
-            TotalAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            OriginalItemAndStatus = [MinimalItem(amount: 100m)],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TotalAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.OriginalItemAndStatus).To([MinimalItem(amount: 100m)]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "TotalAmountAndAmount2Rule");
     }
@@ -117,11 +108,9 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void AccountPresentWithMixedItemCurrencies_Violates_AccountAndCurrencyRule()
     {
-        var msg = ValidMessage() with
-        {
-            Account = ValidAccount(),
-            OriginalItemAndStatus = [MinimalItem(currency: "USD"), MinimalItem(currency: "EUR")],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Account).To(ValidAccount())
+            .Set(x => x.OriginalItemAndStatus).To([MinimalItem(currency: "USD"), MinimalItem(currency: "EUR")]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "AccountAndCurrencyRule");
     }
@@ -129,11 +118,9 @@ public class OriginalNotificationReference2ValidatorTests
     [Fact]
     public void AccountPresentWithConsistentItemCurrencies_DoesNotViolate_AccountAndCurrencyRule()
     {
-        var msg = ValidMessage() with
-        {
-            Account = ValidAccount(),
-            OriginalItemAndStatus = [MinimalItem(currency: "USD"), MinimalItem(currency: "USD")],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Account).To(ValidAccount())
+            .Set(x => x.OriginalItemAndStatus).To([MinimalItem(currency: "USD"), MinimalItem(currency: "USD")]));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "AccountAndCurrencyRule");
     }

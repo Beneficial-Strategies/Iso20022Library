@@ -9,20 +9,14 @@ public class DateAndDateTime2Choice_ValidatorTests
     [Fact]
     public void DateVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice.Date
-        {
-            Value = new DateOnly(2026, 1, 1),
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.DateAndDateTime2Choice.Valid.Date.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void DateTimeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice.DateTime
-        {
-            Value = new DateTime(2026, 1, 1),
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.DateAndDateTime2Choice.Valid.DateTime_.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

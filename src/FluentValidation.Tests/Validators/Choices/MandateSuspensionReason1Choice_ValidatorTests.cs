@@ -9,20 +9,16 @@ public class MandateSuspensionReason1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.MandateSuspensionReason1Choice.Code
-        {
-            Value = ExternalMandateSuspensionReason1Code.ContractAmended,
-        };
+        var value = IsoDataFactory.Make<Choices.MandateSuspensionReason1Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalMandateSuspensionReason1Code.ContractAmended));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.MandateSuspensionReason1Choice.Proprietary
-        {
-            Value = "MYREASON",
-        };
+        var value = IsoDataFactory.Make<Choices.MandateSuspensionReason1Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYREASON"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

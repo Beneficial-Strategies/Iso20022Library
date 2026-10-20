@@ -9,18 +9,16 @@ public class AdditionalDateTime1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new AdditionalDateTime1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IAdditionalDateTime1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFieldsPresent_NoValidationErrors()
     {
-        var msg = new AdditionalDateTime1
-        {
-            AcceptanceDateTime = new DateTime(2026, 1, 1),
-            ExpiryDateTime = new DateTime(2026, 1, 2),
-            PoolingAdjustmentDate = new DateOnly(2026, 1, 1),
-        };
+        var msg = IsoDataFactory.Make<IAdditionalDateTime1>(b => b
+            .Set(x => x.AcceptanceDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.ExpiryDateTime).To(new DateTime(2026, 1, 2))
+            .Set(x => x.PoolingAdjustmentDate).To(new DateOnly(2026, 1, 1)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

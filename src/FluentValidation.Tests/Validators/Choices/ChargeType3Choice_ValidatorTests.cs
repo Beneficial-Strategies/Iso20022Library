@@ -9,20 +9,14 @@ public class ChargeType3Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ChargeType3Choice.Code
-        {
-            Value = ExternalChargeType1Code.BrokerageFee,
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.ChargeType3Choice.Valid.Code.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ChargeType3Choice.Proprietary
-        {
-            Identification = "CHG-001",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.ChargeType3Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }
