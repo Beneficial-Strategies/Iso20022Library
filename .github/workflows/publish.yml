@@ -55,6 +55,14 @@ jobs:
             -c Release \
             --output ./nupkg
 
+      # Needs only Primitives (not the message records).
+      - name: Build and pack (BeneficialStrategies.Iso20022.Factory)
+        run: |
+          cd src
+          dotnet pack BeneficialStrategies.Iso20022.Factory \
+            -c Release \
+            --output ./nupkg
+
       # Needs only Primitives (not the message records); Payloads references it, so it is packed first.
       - name: Build and pack (BeneficialStrategies.Iso20022.FluentValidation.Xml)
         run: |

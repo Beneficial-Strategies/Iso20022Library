@@ -34,7 +34,7 @@ jobs:
         run: python3 -m unittest -q test_prepare_release
         working-directory: tools/releasing
 
-  # The netstandard2.0 builds (Primitives, Interfaces, FluentValidation, FluentValidation.Payloads) are for .NET Framework (4.6.1 and later), Mono and Unity.
+  # The netstandard2.0 builds (Primitives, Interfaces, FluentValidation, FluentValidation.Payloads, Factory) are for .NET Framework (4.6.1 and later), Mono and Unity.
   # Their tests run on .NET Framework 4.8, which needs Windows. (Common and the saga toolkit are net8.0 and net10.0 only.)
   primitives-net48:
     runs-on: windows-latest
@@ -48,6 +48,6 @@ jobs:
       - name: Test Primitives on .NET Framework 4.8
         run: dotnet test src/BeneficialStrategies.Iso20022.Primitives.Tests -c Release -f net48
 
-      # The netstandard2.0 builds of Interfaces, FluentValidation and FluentValidation.Payloads, with classes of the tests' own (no records: Common is net8.0 and net10.0).
+      # The netstandard2.0 builds of Interfaces, FluentValidation, FluentValidation.Payloads and Factory, with classes of the tests' own (no records: Common is net8.0 and net10.0).
       - name: Test the validators and the payload validators on .NET Framework 4.8
         run: dotnet test src/BeneficialStrategies.Iso20022.FluentValidation.NetStandard.Tests -c Release -f net48
