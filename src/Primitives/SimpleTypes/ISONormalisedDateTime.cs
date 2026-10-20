@@ -70,10 +70,10 @@ public readonly struct ISONormalisedDateTime : IIsoSimpleValue<DateTime>, IIsoCo
         var core = value[..^1];
         if (!Regex.IsMatch(core, CorePattern))
             throw new Iso20022FormatException(typeof(ISONormalisedDateTime), value, "ISO 8601 \"YYYY-MM-DDThh:mm:ss[.sss]Z\"");
-        Value = DateTime.SpecifyKind(
-            DateTime.Parse(core, CultureInfo.InvariantCulture, DateTimeStyles.None),
-            DateTimeKind.Utc
-        );
+        // the shape is right, but the date or time can still be impossible (second 60)
+        if (!DateTime.TryParse(core, CultureInfo.InvariantCulture, DateTimeStyles.None, out var dateTime))
+            throw new Iso20022FormatException(typeof(ISONormalisedDateTime), value, "a date and time that exist: month 01-12, a day of that month, hours 00-23, minutes and seconds 00-59");
+        Value = DateTime.SpecifyKind(dateTime, DateTimeKind.Utc);
     }
 
     /// <summary>Always succeeds — every <see cref="DateTime"/> is a valid ISONormalisedDateTime value.</summary>

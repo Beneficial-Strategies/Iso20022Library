@@ -63,7 +63,10 @@ public readonly struct XsdGYear : IIsoSimpleValue<int>, IIsoTimezoneQualifiedVal
         }
         if (!Regex.IsMatch(core, CorePattern))
             throw new Iso20022FormatException(typeof(XsdGYear), value, "xs:gYear — 4+ digits, optionally prefixed \"-\", with an optional timezone");
-        Value = int.Parse(core, CultureInfo.InvariantCulture);
+        // the shape is right, but the year can still be more than an int holds
+        if (!int.TryParse(core, NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out var year))
+            throw new Iso20022FormatException(typeof(XsdGYear), value, $"xs:gYear — a year between {int.MinValue} and {int.MaxValue}");
+        Value = year;
         TimezoneOffset = tz;
     }
 

@@ -61,23 +61,24 @@ public static partial class Iso20022XmlSerializer
         where TMessage : IOuterRecord => Serialize(message).ToString(SaveOptions.None);
 
     /// <summary>Deserializes an <see cref="XDocument"/> to an ISO 20022 message record.</summary>
+    /// <exception cref="Iso20022DeserializationException">
+    /// Thrown when the document cannot be read as the message. It carries every problem found, each with its path (see
+    /// <see cref="TryRead{TMessage}(XDocument?, IIsoDataFactory?)"/>, which reports them without throwing).
+    /// </exception>
     public static TMessage Deserialize<TMessage>(XDocument document)
-        where TMessage : IOuterRecord
+        where TMessage : class, IOuterRecord
     {
-        var (ns, xmlTag, docElem) = GetMessageConstants(typeof(TMessage));
-        var docRoot =
-            document.Root ?? throw new InvalidOperationException("Document has no root element.");
-        var messageRoot =
-            docRoot.Element(ns + xmlTag)
-            ?? throw new InvalidOperationException(
-                $"Expected <{xmlTag}> under <{docElem}> in namespace '{ns}'."
-            );
-        return (TMessage)DeserializeObject(typeof(TMessage), messageRoot, ns);
+        if (document is null)
+            throw new System.ArgumentNullException(nameof(document));
+        var read = TryRead<TMessage>(document);
+        return read.Message ?? throw new Iso20022DeserializationException(typeof(TMessage), read.Issues);
     }
 
     /// <summary>Deserializes an XML string to an ISO 20022 message record.</summary>
+    /// <exception cref="XmlException">Thrown when the text is not well-formed XML.</exception>
+    /// <exception cref="Iso20022DeserializationException">Thrown when the XML cannot be read as the message.</exception>
     public static TMessage Deserialize<TMessage>(string xml)
-        where TMessage : IOuterRecord => Deserialize<TMessage>(XDocument.Parse(xml));
+        where TMessage : class, IOuterRecord => Deserialize<TMessage>(XDocument.Parse(xml, LoadOptions.SetLineInfo));
 
     /// <summary>
     /// Attempts to deserialize an XML string to an ISO 20022 message record without throwing.
@@ -443,118 +444,6 @@ public static partial class Iso20022XmlSerializer
         return SerializeObject(value, ns, tag);
     }
 
-    // ── Deserialization ────────────────────────────────────────────────────────
-
-    private static object DeserializeObject(Type type, XElement el, XNamespace ns)
-    {
-        // Activator.CreateInstance runs the parameterless ctor, which sets collection defaults (= []).
-        var instance =
-            Activator.CreateInstance(type)
-            ?? throw new InvalidOperationException($"Cannot create instance of {type.Name}.");
-
-        foreach (var meta in GetProps(type))
-        {
-            var propDeclared = UnwrapNullable(meta.Property.PropertyType);
-
-            if (meta.IsCollection)
-            {
-                var children = el.Elements(ns + meta.XmlTag).ToList();
-                if (children.Count == 0)
-                    continue;
-                var items = children
-                    .Select(child => DeserializeValue(meta.CoreType, child, ns, meta.CoreIsLeaf))
-                    .ToList();
-                meta.Property.SetValue(
-                    instance,
-                    CreateList(meta.Property.PropertyType, meta.CoreType, items)
-                );
-            }
-            else if (propDeclared.IsAbstract)
-            {
-                var child = el.Element(ns + meta.XmlTag);
-                if (child is null)
-                    continue;
-                meta.Property.SetValue(instance, DeserializeChoice(propDeclared, child, ns));
-            }
-            else
-            {
-                var child = el.Element(ns + meta.XmlTag);
-                if (child is null)
-                    continue;
-                meta.Property.SetValue(
-                    instance,
-                    DeserializeValue(propDeclared, child, ns, meta.CoreIsLeaf)
-                );
-            }
-        }
-        return instance;
-    }
-
-    private static object DeserializeValue(Type type, XElement el, XNamespace ns, bool isLeaf)
-    {
-        var core = UnwrapNullable(type);
-        if (isLeaf || IsLeafType(core))
-            return ParseLeaf(core, el.Value, el);
-        if (core.IsEnum)
-            return ParseEnum(core, el.Value);
-        if (core.IsAbstract)
-            return DeserializeChoice(core, el, ns);
-        if (IsAmountType(core))
-            return DeserializeAmount(core, el);
-        return DeserializeObject(core, el, ns);
-    }
-
-    private static object DeserializeChoice(Type abstractType, XElement parentEl, XNamespace ns)
-    {
-        var variants = GetChoiceVariants(abstractType);
-        if (variants.Length == 0)
-            throw new NotSupportedException(
-                $"No XML tag mappings found for choice type '{abstractType.Name}'. "
-                    + "Ensure [JsonDerivedType] is present on the abstract base and "
-                    + "[IsoXmlTag] is on each complex variant class."
-            );
-
-        foreach (var (tag, variantType) in variants)
-        {
-            var hasClassTag = ClassTag(variantType) is not null;
-            if (hasClassTag)
-            {
-                // Complex variant: look for <tag> wrapper
-                var wrapperEl = parentEl.Element(ns + tag);
-                if (wrapperEl is null)
-                    continue;
-                // Amount-like variants (e.g. InstructedAmount) use Ccy-attribute format
-                if (IsAmountType(variantType))
-                    return DeserializeAmount(variantType, wrapperEl);
-                return DeserializeObject(variantType, wrapperEl, ns);
-            }
-            else
-            {
-                // Simple variant: look for discriminating inner element
-                var innerEl = parentEl.Element(ns + tag);
-                if (innerEl is null)
-                    continue;
-                var variantProps = GetProps(variantType);
-                var instance =
-                    Activator.CreateInstance(variantType)
-                    ?? throw new InvalidOperationException($"Cannot create {variantType.Name}.");
-                var v = DeserializeValue(
-                    variantProps[0].CoreType,
-                    innerEl,
-                    ns,
-                    variantProps[0].CoreIsLeaf
-                );
-                variantProps[0].Property.SetValue(instance, v);
-                return instance;
-            }
-        }
-
-        var present = string.Join(", ", parentEl.Elements().Select(e => $"<{e.Name.LocalName}>"));
-        throw new InvalidOperationException(
-            $"Cannot match [{present}] to any variant of '{abstractType.Name}'."
-        );
-    }
-
     // ── Collection construction ────────────────────────────────────────────────
 
     private static object CreateList(Type listType, Type elementType, List<object> rawItems)
@@ -680,8 +569,6 @@ public static partial class Iso20022XmlSerializer
             return Convert.FromBase64String(text);
         if (type == typeof(System.Xml.XmlQualifiedName))
             return ParseQName(text, el);
-        if (type.IsEnum)
-            return ParseEnum(type, text);
         var simpleValueType = GetSimpleValueType(type);
         if (simpleValueType is not null)
         {
@@ -779,26 +666,6 @@ public static partial class Iso20022XmlSerializer
         return field?.GetCustomAttribute<EnumMemberAttribute>()?.Value ?? name;
     }
 
-    private static object ParseEnum(Type enumType, string text)
-    {
-        foreach (var field in enumType.GetFields(BindingFlags.Public | BindingFlags.Static))
-        {
-            var memberValue = field.GetCustomAttribute<EnumMemberAttribute>()?.Value ?? field.Name;
-            if (memberValue == text)
-                return field.GetValue(null)!;
-        }
-        // Fallback: try by C# name (e.g. for external codeset strings stored as-is)
-        try
-        {
-            return Enum.Parse(enumType, text);
-        }
-        catch (ArgumentException)
-        {
-            // not a member: falls through to the error below (Enum.TryParse(Type, ...) does not exist on netstandard2.0)
-        }
-        throw new InvalidOperationException($"Unknown value '{text}' for enum {enumType.Name}.");
-    }
-
     // ── Currency-and-amount helpers ────────────────────────────────────────────
 
     /// <summary>
@@ -836,23 +703,6 @@ public static partial class Iso20022XmlSerializer
             new XAttribute("Ccy", currency),
             amount.ToString(CultureInfo.InvariantCulture)
         );
-    }
-
-    private static object DeserializeAmount(Type type, XElement el)
-    {
-        var instance =
-            Activator.CreateInstance(type)
-            ?? throw new InvalidOperationException($"Cannot create instance of {type.Name}.");
-        var props = GetProps(type);
-        var currencyProp = props.First(p => p.XmlTag == "Currency").Property;
-        var amountProp = props.First(p => p.XmlTag == "Amount").Property;
-        var ccy = el.Attribute("Ccy")?.Value;
-        if (string.IsNullOrEmpty(ccy))
-            throw new InvalidOperationException($"Required attribute Ccy is missing on <{el.Name.LocalName}>.");
-        else
-            currencyProp.SetValue(instance, ConstructSimpleValue(currencyProp.PropertyType, ccy!));
-        amountProp.SetValue(instance, decimal.Parse(el.Value, CultureInfo.InvariantCulture));
-        return instance;
     }
 
     // ── Type helpers ───────────────────────────────────────────────────────────

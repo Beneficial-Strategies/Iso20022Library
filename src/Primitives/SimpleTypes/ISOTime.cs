@@ -82,7 +82,10 @@ public readonly struct ISOTime : IIsoSimpleValue<TimeOnly>, IIsoTimezoneQualifie
         }
         if (!Regex.IsMatch(core, CorePattern))
             throw new Iso20022FormatException(typeof(ISOTime), value, "ISO 8601 \"hh:mm:ss[.sss]\" with an optional timezone");
-        Value = TimeOnly.Parse(core, CultureInfo.InvariantCulture, DateTimeStyles.None);
+        // the shape is right, but the time can still be impossible (25:61:61), or 24:00:00, which a TimeOnly cannot hold
+        if (!TimeOnly.TryParse(core, CultureInfo.InvariantCulture, DateTimeStyles.None, out var time))
+            throw new Iso20022FormatException(typeof(ISOTime), value, "a time of day: hours 00-23, minutes and seconds 00-59");
+        Value = time;
         TimezoneOffset = tz;
     }
 
