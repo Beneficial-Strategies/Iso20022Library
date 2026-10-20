@@ -297,7 +297,7 @@ public static partial class Iso20022XmlSerializer
                 ?? throw new InvalidOperationException($"Cannot create instance of {type.Name}.");
 
     // The property of the interface has no setter; the object the factory made has one with the same name.
-    private static void SetMember(object instance, PropMeta meta, object? value)
+    internal static void SetMember(object instance, PropMeta meta, object? value)
     {
         var property = meta.Property.CanWrite
             ? meta.Property

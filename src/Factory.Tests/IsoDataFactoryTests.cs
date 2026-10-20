@@ -6,7 +6,7 @@ public class IsoDataFactoryTests
 {
     private static readonly IsoDataFactory Factory = new();
 
-    private static MultilateralSettlementRequestV02 Record(string movementId = "MOV-002") =>
+    internal static MultilateralSettlementRequestV02 Record(string movementId = "MOV-002") =>
         new()
         {
             GroupHeader = new GroupHeader104

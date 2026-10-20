@@ -185,7 +185,7 @@ public static partial class Iso20022XmlSerializer
 
     // ── Reflection metadata cache ──────────────────────────────────────────────
 
-    private sealed record PropMeta(
+    internal sealed record PropMeta(
         PropertyInfo Property,
         string XmlTag,
         bool IsCollection,
@@ -196,7 +196,7 @@ public static partial class Iso20022XmlSerializer
 
     private static readonly ConcurrentDictionary<Type, PropMeta[]> PropCache = new();
 
-    private static PropMeta[] GetProps(Type type) => PropCache.GetOrAdd(type, BuildProps);
+    internal static PropMeta[] GetProps(Type type) => PropCache.GetOrAdd(type, BuildProps);
 
     private static PropMeta[] BuildProps(Type type)
     {
@@ -292,9 +292,9 @@ public static partial class Iso20022XmlSerializer
         ChoiceCache.GetOrAdd(abstractType, BuildChoiceVariants);
 
     // The variant interfaces of every choice interface of an assembly, found once.
-    private static readonly ConcurrentDictionary<Assembly, ILookup<Type, Type>> VariantInterfaces = new();
+    internal static readonly ConcurrentDictionary<Assembly, ILookup<Type, Type>> VariantInterfaces = new();
 
-    private static ILookup<Type, Type> FindVariantInterfaces(Assembly assembly)
+    internal static ILookup<Type, Type> FindVariantInterfaces(Assembly assembly)
     {
         Type[] types;
         try
@@ -446,7 +446,7 @@ public static partial class Iso20022XmlSerializer
 
     // ── Collection construction ────────────────────────────────────────────────
 
-    private static object CreateList(Type listType, Type elementType, List<object> rawItems)
+    internal static object CreateList(Type listType, Type elementType, List<object> rawItems)
     {
         // Cast List<object> → IEnumerable<TElement> at runtime, then invoke IEnumerable<T> ctor.
         var castMethod = typeof(Enumerable)
