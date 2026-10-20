@@ -9,42 +9,32 @@ public class StandingOrder10ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new StandingOrder10()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IStandingOrder10>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var agent = new BranchAndFinancialInstitutionIdentification8
-        {
-            FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-        };
-        var account = new CashAccount40
-        {
-            Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-        };
-        var msg = new StandingOrder10
-        {
-            Amount = new BeneficialStrategies.Iso20022.Choices.Amount2Choice.AmountWithCurrency
-            {
-                Currency = "USD",
-                Amount = 100m,
-            },
-            Creditor = agent,
-            CreditorAccount = account,
-            Debtor = agent,
-            DebtorAccount = account,
-            ExecutionType = new BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice.Event { Value = new BeneficialStrategies.Iso20022.Choices.EventType1Choice.Proprietary { Value = "EVT" } },
-            Frequency = Frequency2Code.Monthly,
-            ValidityPeriod = new BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice.FromDate
-            {
-                Value = new DateOnly(2026, 1, 1),
-            },
-            ZeroSweepIndicator = true,
-        };
+        var agent = IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
+        var account = IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000"))));
+        var msg = IsoDataFactory.Make<IStandingOrder10>(b => b
+            .Set(x => x.Amount).To(IsoDataFactory.Make<Choices.Amount2Choice.IAmountWithCurrency>(b2 => b2
+                .Set(x2 => x2.Currency).To("USD")
+                .Set(x2 => x2.Amount).To(100m)))
+            .Set(x => x.Creditor).To(agent)
+            .Set(x => x.CreditorAccount).To(account)
+            .Set(x => x.Debtor).To(agent)
+            .Set(x => x.DebtorAccount).To(account)
+            .Set(x => x.ExecutionType).To(IsoDataFactory.Make<Choices.ExecutionType1Choice.IEvent>(b2 => b2
+                .Set(x2 => x2.Value).To(IsoDataFactory.Make<Choices.EventType1Choice.IProprietary>(b3 => b3
+                .Set(x3 => x3.Value).To("EVT")))))
+            .Set(x => x.Frequency).To(Frequency2Code.Monthly)
+            .Set(x => x.ValidityPeriod).To(IsoDataFactory.Make<Choices.DatePeriod2Choice.IFromDate>(b2 => b2
+                .Set(x2 => x2.Value).To(new DateOnly(2026, 1, 1))))
+            .Set(x => x.ZeroSweepIndicator).To(true));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,8 +6,9 @@ public class OriginalPaymentInstruction52ValidatorTests
 {
     private readonly OriginalPaymentInstruction52Validator _sut = new();
 
-    private static OriginalPaymentInstruction52 ValidMessage() =>
-        new() { OriginalPaymentInformationIdentification = "PMTINF-001" };
+    private static IOriginalPaymentInstruction52 ValidMessage() =>
+        IsoDataFactory.Make<IOriginalPaymentInstruction52>(b => b
+            .Set(x => x.OriginalPaymentInformationIdentification).To("PMTINF-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,22 +19,17 @@ public class OriginalPaymentInstruction52ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            OriginalNumberOfTransactions = "1",
-            OriginalControlSum = 100.00m,
-            PaymentInformationStatus = ExternalPaymentGroupStatus1Code.AcceptedTechnicalValidation,
-            StatusReasonInformation = [new StatusReasonInformation14()],
-            NumberOfTransactionsPerStatus =
-            [
-                new NumberOfTransactionsPerStatus5
-                {
-                    DetailedNumberOfTransactions = "1",
-                    DetailedStatus = ExternalPaymentTransactionStatus1Code.AcceptedTechnicalValidation,
-                },
-            ],
-            TransactionInformationAndStatus = [new PaymentTransaction169()],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalNumberOfTransactions).To("1")
+            .Set(x => x.OriginalControlSum).To(100.00m)
+            .Set(x => x.PaymentInformationStatus).To(ExternalPaymentGroupStatus1Code.AcceptedTechnicalValidation)
+            .Set(x => x.StatusReasonInformation).To([IsoDataFactory.Make<IStatusReasonInformation14>()])
+            .Set(x => x.NumberOfTransactionsPerStatus).To([
+                IsoDataFactory.Make<INumberOfTransactionsPerStatus5>(b2 => b2
+                    .Set(x2 => x2.DetailedNumberOfTransactions).To("1")
+                    .Set(x2 => x2.DetailedStatus).To(ExternalPaymentTransactionStatus1Code.AcceptedTechnicalValidation)),
+            ])
+            .Set(x => x.TransactionInformationAndStatus).To([IsoDataFactory.Make<IPaymentTransaction169>()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

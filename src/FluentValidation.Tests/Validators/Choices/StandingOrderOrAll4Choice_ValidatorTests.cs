@@ -6,32 +6,26 @@ public class StandingOrderOrAll4Choice_ValidatorTests
 {
     private readonly StandingOrderOrAll4Choice_Validator _sut = new();
 
-    private static CashAccount40 ValidAccount() =>
-        new()
-        {
-            Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-        };
+    private static ICashAccount40 ValidAccount() =>
+        IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000"))));
 
     [Fact]
     public void AllStandingOrdersVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll4Choice.AllStandingOrders
-        {
-            Value = new StandingOrderIdentification9 { Account = ValidAccount() },
-        };
+        var value = IsoDataFactory.Make<Choices.StandingOrderOrAll4Choice.IAllStandingOrders>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IStandingOrderIdentification9>(b2 => b2
+                .Set(x2 => x2.Account).To(ValidAccount()))));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void StandingOrderVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll4Choice.StandingOrder
-        {
-            Value = new StandingOrderIdentification8 { Account = ValidAccount() },
-        };
+        var value = IsoDataFactory.Make<Choices.StandingOrderOrAll4Choice.IStandingOrder>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IStandingOrderIdentification8>(b2 => b2
+                .Set(x2 => x2.Account).To(ValidAccount()))));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

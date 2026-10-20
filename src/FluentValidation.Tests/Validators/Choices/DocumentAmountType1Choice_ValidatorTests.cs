@@ -9,20 +9,16 @@ public class DocumentAmountType1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice.Code
-        {
-            Value = ExternalDocumentAmountType1Code.AdditionalPromotionalDiscount,
-        };
+        var value = IsoDataFactory.Make<Choices.DocumentAmountType1Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalDocumentAmountType1Code.AdditionalPromotionalDiscount));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice.Proprietary
-        {
-            Value = "MYAMTTYPE",
-        };
+        var value = IsoDataFactory.Make<Choices.DocumentAmountType1Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYAMTTYPE"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

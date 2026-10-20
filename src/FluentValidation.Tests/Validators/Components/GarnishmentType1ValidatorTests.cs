@@ -6,14 +6,10 @@ public class GarnishmentType1ValidatorTests
 {
     private readonly GarnishmentType1Validator _sut = new();
 
-    private static GarnishmentType1 ValidMessage() =>
-        new()
-        {
-            CodeOrProprietary = new BeneficialStrategies.Iso20022.Choices.GarnishmentType1Choice.Proprietary
-            {
-                Value = "MYGARNISHMENT",
-            },
-        };
+    private static IGarnishmentType1 ValidMessage() =>
+        IsoDataFactory.Make<IGarnishmentType1>(b => b
+            .Set(x => x.CodeOrProprietary).To(IsoDataFactory.Make<Choices.GarnishmentType1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYGARNISHMENT"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -24,7 +20,8 @@ public class GarnishmentType1ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { Issuer = "IssuerCo" };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Issuer).To("IssuerCo"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

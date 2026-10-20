@@ -6,7 +6,7 @@ public class PersonIdentification18ValidatorTests
 {
     private readonly PersonIdentification18Validator _sut = new();
 
-    private static PersonIdentification18 ValidMessage() => new();
+    private static IPersonIdentification18 ValidMessage() => IsoDataFactory.Make<IPersonIdentification18>();
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,16 +17,13 @@ public class PersonIdentification18ValidatorTests
     [Fact]
     public void AllOptionalChildren_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            DateAndPlaceOfBirth = new DateAndPlaceOfBirth1
-            {
-                BirthDate = new DateOnly(1990, 1, 1),
-                CityOfBirth = "Springfield",
-                CountryOfBirth = "US",
-            },
-            Other = [new GenericPersonIdentification2 { Identification = "PERS-001" }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DateAndPlaceOfBirth).To(IsoDataFactory.Make<IDateAndPlaceOfBirth1>(b2 => b2
+                .Set(x2 => x2.BirthDate).To(new DateOnly(1990, 1, 1))
+                .Set(x2 => x2.CityOfBirth).To("Springfield")
+                .Set(x2 => x2.CountryOfBirth).To("US")))
+            .Set(x => x.Other).To([IsoDataFactory.Make<IGenericPersonIdentification2>(b2 => b2
+                .Set(x2 => x2.Identification).To("PERS-001"))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

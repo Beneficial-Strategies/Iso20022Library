@@ -6,20 +6,19 @@ public class LiquidityDebitTransferV07ValidatorTests
 {
     private readonly LiquidityDebitTransferV07Validator _sut = new();
 
-    private static MessageHeader1 ValidMessageHeader() => new() { MessageIdentification = "MSG-001" };
+    private static IMessageHeader1 ValidMessageHeader() => IsoDataFactory.Make<IMessageHeader1>(b => b
+        .Set(x => x.MessageIdentification).To("MSG-001"));
 
-    private static LiquidityDebitTransfer4 ValidLiquidityDebitTransfer() =>
-        new()
-        {
-            TransferredAmount = new BeneficialStrategies.Iso20022.Choices.Amount2Choice.AmountWithCurrency
-            {
-                Currency = "USD",
-                Amount = 100m,
-            },
-        };
+    private static ILiquidityDebitTransfer4 ValidLiquidityDebitTransfer() =>
+        IsoDataFactory.Make<ILiquidityDebitTransfer4>(b => b
+            .Set(x => x.TransferredAmount).To(IsoDataFactory.Make<Choices.Amount2Choice.IAmountWithCurrency>(b2 => b2
+                .Set(x2 => x2.Currency).To("USD")
+                .Set(x2 => x2.Amount).To(100m))));
 
-    private static LiquidityDebitTransferV07 ValidMessage() =>
-        new() { MessageHeader = ValidMessageHeader(), LiquidityDebitTransfer = ValidLiquidityDebitTransfer() };
+    private static ILiquidityDebitTransferV07 ValidMessage() =>
+        IsoDataFactory.Make<ILiquidityDebitTransferV07>(b => b
+            .Set(x => x.MessageHeader).To(ValidMessageHeader())
+            .Set(x => x.LiquidityDebitTransfer).To(ValidLiquidityDebitTransfer()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -30,10 +29,9 @@ public class LiquidityDebitTransferV07ValidatorTests
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

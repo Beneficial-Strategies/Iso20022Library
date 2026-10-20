@@ -9,44 +9,34 @@ public class AmendmentInformationDetails15ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new AmendmentInformationDetails15()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IAmendmentInformationDetails15>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var agent = new BranchAndFinancialInstitutionIdentification8
-        {
-            FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-        };
-        var account = new CashAccount40
-        {
-            Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-        };
-        var msg = new AmendmentInformationDetails15
-        {
-            OriginalCreditorAgent = agent,
-            OriginalCreditorAgentAccount = account,
-            OriginalCreditorSchemeIdentification = new PartyIdentification272 { Name = "Original Creditor Co" },
-            OriginalDebtor = new PartyIdentification272 { Name = "Original Debtor Co" },
-            OriginalDebtorAccount = account,
-            OriginalDebtorAgent = agent,
-            OriginalDebtorAgentAccount = account,
-            OriginalFinalCollectionDate = new DateOnly(2026, 12, 1),
-            OriginalFrequency = new BeneficialStrategies.Iso20022.Choices.Frequency36Choice.Type
-            {
-                Value = Frequency6Code.Monthly,
-            },
-            OriginalMandateIdentification = "MNDT-ORIG-001",
-            OriginalReason = new BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice.Proprietary
-            {
-                Value = "MYREASON",
-            },
-            OriginalTrackingDays = "05",
-        };
+        var agent = IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
+        var account = IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000"))));
+        var msg = IsoDataFactory.Make<IAmendmentInformationDetails15>(b => b
+            .Set(x => x.OriginalCreditorAgent).To(agent)
+            .Set(x => x.OriginalCreditorAgentAccount).To(account)
+            .Set(x => x.OriginalCreditorSchemeIdentification).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Original Creditor Co")))
+            .Set(x => x.OriginalDebtor).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Original Debtor Co")))
+            .Set(x => x.OriginalDebtorAccount).To(account)
+            .Set(x => x.OriginalDebtorAgent).To(agent)
+            .Set(x => x.OriginalDebtorAgentAccount).To(account)
+            .Set(x => x.OriginalFinalCollectionDate).To(new DateOnly(2026, 12, 1))
+            .Set(x => x.OriginalFrequency).To(IsoDataFactory.Make<Choices.Frequency36Choice.IType>(b2 => b2
+                .Set(x2 => x2.Value).To(Frequency6Code.Monthly)))
+            .Set(x => x.OriginalMandateIdentification).To("MNDT-ORIG-001")
+            .Set(x => x.OriginalReason).To(IsoDataFactory.Make<Choices.MandateSetupReason1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYREASON")))
+            .Set(x => x.OriginalTrackingDays).To("05"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

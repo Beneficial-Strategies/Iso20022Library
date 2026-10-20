@@ -6,9 +6,11 @@ public class GetGeneralBusinessInformationV04ValidatorTests
 {
     private readonly GetGeneralBusinessInformationV04Validator _sut = new();
 
-    private static MessageHeader1 ValidMessageHeader() => new() { MessageIdentification = "MSG-001" };
+    private static IMessageHeader1 ValidMessageHeader() => IsoDataFactory.Make<IMessageHeader1>(b => b
+        .Set(x => x.MessageIdentification).To("MSG-001"));
 
-    private static GetGeneralBusinessInformationV04 ValidMessage() => new() { MessageHeader = ValidMessageHeader() };
+    private static IGetGeneralBusinessInformationV04 ValidMessage() => IsoDataFactory.Make<IGetGeneralBusinessInformationV04>(b => b
+        .Set(x => x.MessageHeader).To(ValidMessageHeader()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -19,23 +21,18 @@ public class GetGeneralBusinessInformationV04ValidatorTests
     [Fact]
     public void GeneralBusinessInformationQueryDefinition_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GeneralBusinessInformationQueryDefinition = new BusinessInformationQueryDefinition3
-            {
-                QueryType = QueryType2Code.Modified,
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GeneralBusinessInformationQueryDefinition).To(IsoDataFactory.Make<IBusinessInformationQueryDefinition3>(b2 => b2
+                .Set(x2 => x2.QueryType).To(QueryType2Code.Modified))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

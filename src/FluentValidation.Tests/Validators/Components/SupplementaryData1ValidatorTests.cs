@@ -6,8 +6,9 @@ public class SupplementaryData1ValidatorTests
 {
     private readonly SupplementaryData1Validator _sut = new();
 
-    private static SupplementaryData1 ValidMessage() =>
-        new() { Envelope = new SupplementaryDataEnvelope1() };
+    private static ISupplementaryData1 ValidMessage() =>
+        IsoDataFactory.Make<ISupplementaryData1>(b => b
+            .Set(x => x.Envelope).To(new SupplementaryDataEnvelope1()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,7 +19,8 @@ public class SupplementaryData1ValidatorTests
     [Fact]
     public void PlaceAndName_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { PlaceAndName = "/Document/Xpath" };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.PlaceAndName).To("/Document/Xpath"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

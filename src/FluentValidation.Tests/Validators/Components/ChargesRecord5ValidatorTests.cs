@@ -6,12 +6,10 @@ public class ChargesRecord5ValidatorTests
 {
     private readonly ChargesRecord5Validator _sut = new();
 
-    private static ChargesRecord5 ValidMessage() =>
-        new()
-        {
-            Amount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m },
-            UnderlyingTransaction = [new TransactionReferences7()],
-        };
+    private static IChargesRecord5 ValidMessage() =>
+        IsoDataFactory.Make<IChargesRecord5>(b => b
+            .Set(x => x.Amount).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 10m })
+            .Set(x => x.UnderlyingTransaction).To([IsoDataFactory.Make<ITransactionReferences7>()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -24,14 +22,16 @@ public class ChargesRecord5ValidatorTests
     [Fact]
     public void UnderlyingTransaction_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { UnderlyingTransaction = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UnderlyingTransaction).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.UnderlyingTransaction);
     }
 
     [Fact]
     public void UnderlyingTransaction_OneElement_NoValidationError()
     {
-        var msg = ValidMessage() with { UnderlyingTransaction = [new TransactionReferences7()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UnderlyingTransaction).To([IsoDataFactory.Make<ITransactionReferences7>()]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.UnderlyingTransaction);
     }
 }

@@ -6,14 +6,13 @@ public class GroupHeader112ValidatorTests
 {
     private readonly GroupHeader112Validator _sut = new();
 
-    private static GroupHeader112 ValidMessage() =>
-        new()
-        {
-            MessageIdentification = "MSG-001",
-            CreationDateTime = new DateTime(2026, 1, 1),
-            NumberOfTransactions = "1",
-            InitiatingParty = new PartyIdentification272 { Name = "Initiator Co" },
-        };
+    private static IGroupHeader112 ValidMessage() =>
+        IsoDataFactory.Make<IGroupHeader112>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.NumberOfTransactions).To("1")
+            .Set(x => x.InitiatingParty).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Initiator Co"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -24,14 +23,10 @@ public class GroupHeader112ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            ControlSum = 100.00m,
-            ForwardingAgent = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ControlSum).To(100.00m)
+            .Set(x => x.ForwardingAgent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

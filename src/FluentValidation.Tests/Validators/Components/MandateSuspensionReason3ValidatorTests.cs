@@ -6,13 +6,12 @@ public class MandateSuspensionReason3ValidatorTests
 {
     private readonly MandateSuspensionReason3Validator _sut = new();
 
-    private static BeneficialStrategies.Iso20022.Choices.MandateSuspensionReason1Choice_ ValidReason() =>
-        new BeneficialStrategies.Iso20022.Choices.MandateSuspensionReason1Choice.Code
-        {
-            Value = ExternalMandateSuspensionReason1Code.ContractAmended,
-        };
+    private static BeneficialStrategies.Iso20022.Choices.IMandateSuspensionReason1Choice ValidReason() =>
+        IsoDataFactory.Make<Choices.MandateSuspensionReason1Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalMandateSuspensionReason1Code.ContractAmended));
 
-    private static MandateSuspensionReason3 ValidMessage() => new() { Reason = ValidReason() };
+    private static IMandateSuspensionReason3 ValidMessage() => IsoDataFactory.Make<IMandateSuspensionReason3>(b => b
+        .Set(x => x.Reason).To(ValidReason()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,11 +22,10 @@ public class MandateSuspensionReason3ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            AdditionalInformation = ["Additional detail"],
-            Originator = new PartyIdentification272 { Name = "Originator Co" },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AdditionalInformation).To(["Additional detail"])
+            .Set(x => x.Originator).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Originator Co"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

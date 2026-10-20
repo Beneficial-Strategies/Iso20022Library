@@ -6,37 +6,33 @@ public class OriginalMandate11Choice_ValidatorTests
 {
     private readonly OriginalMandate11Choice_Validator _sut = new();
 
-    private static PartyIdentification272 ValidParty(string name) => new() { Name = name };
+    private static IPartyIdentification272 ValidParty(string name) => IsoDataFactory.Make<IPartyIdentification272>(b => b
+        .Set(x => x.Name).To(name));
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidAgent() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
-    private static Mandate22 ValidMandate() =>
-        new()
-        {
-            Creditor = ValidParty("Creditor Co"),
-            Debtor = ValidParty("Debtor Co"),
-            DebtorAgent = ValidAgent(),
-            TrackingIndicator = true,
-        };
+    private static IMandate22 ValidMandate() =>
+        IsoDataFactory.Make<IMandate22>(b => b
+            .Set(x => x.Creditor).To(ValidParty("Creditor Co"))
+            .Set(x => x.Debtor).To(ValidParty("Debtor Co"))
+            .Set(x => x.DebtorAgent).To(ValidAgent())
+            .Set(x => x.TrackingIndicator).To(true));
 
     [Fact]
     public void OriginalMandateIdentificationVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.OriginalMandate11Choice.OriginalMandateIdentification
-        {
-            Value = "MNDT-001",
-        };
+        var value = IsoDataFactory.Make<Choices.OriginalMandate11Choice.IOriginalMandateIdentification>(b => b
+            .Set(x => x.Value).To("MNDT-001"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void OriginalMandateVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.OriginalMandate11Choice.OriginalMandate
-        {
-            Value = ValidMandate(),
-        };
+        var value = IsoDataFactory.Make<Choices.OriginalMandate11Choice.IOriginalMandate>(b => b
+            .Set(x => x.Value).To(ValidMandate()));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

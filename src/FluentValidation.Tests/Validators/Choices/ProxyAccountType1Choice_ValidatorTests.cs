@@ -9,16 +9,18 @@ public class ProxyAccountType1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice.Code { Value = ExternalProxyAccountType1Code.TelephoneNumber };
+        BeneficialStrategies.Iso20022.Choices.IProxyAccountType1Choice choice =
+            IsoDataFactory.Make<Choices.ProxyAccountType1Choice.ICode>(b => b
+                .Set(x => x.Value).To(ExternalProxyAccountType1Code.TelephoneNumber));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice.Proprietary { Value = "MYPROXYTYPE" };
+        BeneficialStrategies.Iso20022.Choices.IProxyAccountType1Choice choice =
+            IsoDataFactory.Make<Choices.ProxyAccountType1Choice.IProprietary>(b => b
+                .Set(x => x.Value).To("MYPROXYTYPE"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -9,20 +9,16 @@ public class ReversalReason4Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ReversalReason4Choice.Code
-        {
-            Value = ExternalReversalReason1Code.InvalidCreditorAccountNumber,
-        };
+        var value = IsoDataFactory.Make<Choices.ReversalReason4Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalReversalReason1Code.InvalidCreditorAccountNumber));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ReversalReason4Choice.Proprietary
-        {
-            Value = "MYREVREASON",
-        };
+        var value = IsoDataFactory.Make<Choices.ReversalReason4Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYREVREASON"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,7 +6,8 @@ public class ProxyAccountIdentification1ValidatorTests
 {
     private readonly ProxyAccountIdentification1Validator _sut = new();
 
-    private static ProxyAccountIdentification1 ValidMessage() => new() { Identification = "alias@example.com" };
+    private static IProxyAccountIdentification1 ValidMessage() => IsoDataFactory.Make<IProxyAccountIdentification1>(b => b
+        .Set(x => x.Identification).To("alias@example.com"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,13 +18,9 @@ public class ProxyAccountIdentification1ValidatorTests
     [Fact]
     public void Type_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Type = new BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice.Proprietary
-            {
-                Value = "MYPROXYTYPE",
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Type).To(IsoDataFactory.Make<Choices.ProxyAccountType1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYPROXYTYPE"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

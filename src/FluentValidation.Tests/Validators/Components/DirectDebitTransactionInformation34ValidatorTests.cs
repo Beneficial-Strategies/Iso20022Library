@@ -6,24 +6,18 @@ public class DirectDebitTransactionInformation34ValidatorTests
 {
     private readonly DirectDebitTransactionInformation34Validator _sut = new();
 
-    private static DirectDebitTransactionInformation34 ValidMessage() =>
-        new()
-        {
-            PaymentIdentification = new PaymentIdentification6 { EndToEndIdentification = "E2E-001" },
-            InstructedAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            DebtorAgent = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-            },
-            Debtor = new PartyIdentification272 { Name = "Debtor Co" },
-            DebtorAccount = new CashAccount40
-            {
-                Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-                {
-                    Value = "DE89370400440532013000",
-                },
-            },
-        };
+    private static IDirectDebitTransactionInformation34 ValidMessage() =>
+        IsoDataFactory.Make<IDirectDebitTransactionInformation34>(b => b
+            .Set(x => x.PaymentIdentification).To(IsoDataFactory.Make<IPaymentIdentification6>(b2 => b2
+                .Set(x2 => x2.EndToEndIdentification).To("E2E-001")))
+            .Set(x => x.InstructedAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.DebtorAgent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>())))
+            .Set(x => x.Debtor).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Debtor Co")))
+            .Set(x => x.DebtorAccount).To(IsoDataFactory.Make<ICashAccount40>(b2 => b2
+                .Set(x2 => x2.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b3 => b3
+                    .Set(x3 => x3.Value).To("DE89370400440532013000"))))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -34,25 +28,27 @@ public class DirectDebitTransactionInformation34ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            PaymentTypeInformation = new PaymentTypeInformation29(),
-            ChargeBearer = ChargeBearerType1Code.BorneByDebtor,
-            DirectDebitTransaction = new DirectDebitTransaction12(),
-            UltimateCreditor = new PartyIdentification272 { Name = "Ultimate Creditor Co" },
-            DebtorAgentAccount = ValidMessage().DebtorAccount,
-            UltimateDebtor = new PartyIdentification272 { Name = "Ultimate Debtor Co" },
-            InstructionForCreditorAgent = "Please contact debtor",
-            Purpose = new BeneficialStrategies.Iso20022.Choices.Purpose2Choice.Proprietary { Value = "MYPURPOSE" },
-            RegulatoryReporting =
-            [
-                new RegulatoryReporting10 { DebitCreditReportingIndicator = RegulatoryReportingType1Code.Debit },
-            ],
-            Tax = new TaxData1(),
-            RelatedRemittanceInformation = [new RemittanceLocation8()],
-            RemittanceInformation = new RemittanceInformation26(),
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.PaymentTypeInformation).To(IsoDataFactory.Make<IPaymentTypeInformation29>())
+            .Set(x => x.ChargeBearer).To(ChargeBearerType1Code.BorneByDebtor)
+            .Set(x => x.DirectDebitTransaction).To(IsoDataFactory.Make<IDirectDebitTransaction12>())
+            .Set(x => x.UltimateCreditor).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Ultimate Creditor Co")))
+            .Set(x => x.DebtorAgentAccount).To(ValidMessage().DebtorAccount)
+            .Set(x => x.UltimateDebtor).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Ultimate Debtor Co")))
+            .Set(x => x.InstructionForCreditorAgent).To("Please contact debtor")
+            .Set(x => x.Purpose).To(IsoDataFactory.Make<Choices.Purpose2Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYPURPOSE")))
+            .Set(x => x.RegulatoryReporting).To([
+                IsoDataFactory.Make<IRegulatoryReporting10>(b2 => b2
+                    .Set(x2 => x2.DebitCreditReportingIndicator).To(RegulatoryReportingType1Code.Debit)),
+            ])
+            .Set(x => x.Tax).To(IsoDataFactory.Make<ITaxData1>())
+            .Set(x => x.RelatedRemittanceInformation).To([IsoDataFactory.Make<IRemittanceLocation8>()])
+            .Set(x => x.RemittanceInformation).To(IsoDataFactory.Make<IRemittanceInformation26>())
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

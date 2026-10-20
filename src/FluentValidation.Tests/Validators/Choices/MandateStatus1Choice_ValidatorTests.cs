@@ -9,22 +9,18 @@ public class MandateStatus1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice.Code
-            {
-                Value = ExternalMandateStatus1Code.Active,
-            };
+        BeneficialStrategies.Iso20022.Choices.IMandateStatus1Choice choice =
+            IsoDataFactory.Make<Choices.MandateStatus1Choice.ICode>(b => b
+                .Set(x => x.Value).To(ExternalMandateStatus1Code.Active));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice.Proprietary
-            {
-                Value = "CUSTOMSTATUS",
-            };
+        BeneficialStrategies.Iso20022.Choices.IMandateStatus1Choice choice =
+            IsoDataFactory.Make<Choices.MandateStatus1Choice.IProprietary>(b => b
+                .Set(x => x.Value).To("CUSTOMSTATUS"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,12 +6,11 @@ public class PartyAndSignature4ValidatorTests
 {
     private readonly PartyAndSignature4Validator _sut = new();
 
-    private static PartyAndSignature4 ValidMessage() =>
-        new()
-        {
-            Party = new PartyIdentification272 { Name = "Signing Co" },
-            Signature = new SkipPayload(),
-        };
+    private static IPartyAndSignature4 ValidMessage() =>
+        IsoDataFactory.Make<IPartyAndSignature4>(b => b
+            .Set(x => x.Party).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Signing Co")))
+            .Set(x => x.Signature).To(new SkipPayload()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

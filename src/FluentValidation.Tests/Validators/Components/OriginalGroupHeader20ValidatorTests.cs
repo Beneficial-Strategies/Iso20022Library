@@ -6,8 +6,10 @@ public class OriginalGroupHeader20ValidatorTests
 {
     private readonly OriginalGroupHeader20Validator _sut = new();
 
-    private static OriginalGroupHeader20 ValidMessage() =>
-        new() { OriginalMessageIdentification = "MSG-001", OriginalMessageNameIdentification = "pain.007.001.13" };
+    private static IOriginalGroupHeader20 ValidMessage() =>
+        IsoDataFactory.Make<IOriginalGroupHeader20>(b => b
+            .Set(x => x.OriginalMessageIdentification).To("MSG-001")
+            .Set(x => x.OriginalMessageNameIdentification).To("pain.007.001.13"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,11 +20,9 @@ public class OriginalGroupHeader20ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            OriginalCreationDateTime = new DateTime(2026, 1, 1),
-            ReversalReasonInformation = [new PaymentReversalReason10()],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalCreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.ReversalReasonInformation).To([IsoDataFactory.Make<IPaymentReversalReason10>()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

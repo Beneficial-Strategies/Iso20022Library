@@ -9,18 +9,19 @@ public class GeneralBusinessInformationSearchCriteria1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new GeneralBusinessInformationSearchCriteria1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IGeneralBusinessInformationSearchCriteria1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFields_Present_NoValidationError()
     {
-        var msg = new GeneralBusinessInformationSearchCriteria1
-        {
-            Reference = ["REF-001"],
-            Subject = [new BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice.Equal { Value = "SUBJECT" }],
-            Qualifier = [new InformationQualifierType1 { IsFormatted = true, Priority = Priority1Code.High }],
-        };
+        var msg = IsoDataFactory.Make<IGeneralBusinessInformationSearchCriteria1>(b => b
+            .Set(x => x.Reference).To(["REF-001"])
+            .Set(x => x.Subject).To([IsoDataFactory.Make<Choices.CharacterSearch1Choice.IEqual>(b2 => b2
+                .Set(x2 => x2.Value).To("SUBJECT"))])
+            .Set(x => x.Qualifier).To([IsoDataFactory.Make<IInformationQualifierType1>(b2 => b2
+                .Set(x2 => x2.IsFormatted).To(true)
+                .Set(x2 => x2.Priority).To(Priority1Code.High))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

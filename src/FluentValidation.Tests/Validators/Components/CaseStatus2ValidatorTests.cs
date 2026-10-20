@@ -6,8 +6,10 @@ public class CaseStatus2ValidatorTests
 {
     private readonly CaseStatus2Validator _sut = new();
 
-    private static CaseStatus2 ValidMessage() =>
-        new() { DateTime = new DateTime(2026, 1, 1), CaseStatus = CaseStatus2Code.Assigned };
+    private static ICaseStatus2 ValidMessage() =>
+        IsoDataFactory.Make<ICaseStatus2>(b => b
+            .Set(x => x.DateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.CaseStatus).To(CaseStatus2Code.Assigned));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,7 +20,8 @@ public class CaseStatus2ValidatorTests
     [Fact]
     public void Reason_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { Reason = "Approved after review" };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Reason).To("Approved after review"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

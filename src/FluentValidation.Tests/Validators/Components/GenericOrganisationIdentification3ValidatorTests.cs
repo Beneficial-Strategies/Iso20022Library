@@ -6,8 +6,9 @@ public class GenericOrganisationIdentification3ValidatorTests
 {
     private readonly GenericOrganisationIdentification3Validator _sut = new();
 
-    private static GenericOrganisationIdentification3 ValidMessage() =>
-        new() { Identification = "ORG-001" };
+    private static IGenericOrganisationIdentification3 ValidMessage() =>
+        IsoDataFactory.Make<IGenericOrganisationIdentification3>(b => b
+            .Set(x => x.Identification).To("ORG-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,14 +19,9 @@ public class GenericOrganisationIdentification3ValidatorTests
     [Fact]
     public void SchemeName_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SchemeName =
-                new BeneficialStrategies.Iso20022.Choices.OrganisationIdentificationSchemeName1Choice.Proprietary
-                {
-                    Value = "MYSCHEME",
-                },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SchemeName).To(IsoDataFactory.Make<Choices.OrganisationIdentificationSchemeName1Choice.IProprietary>(b2 => b2
+                    .Set(x2 => x2.Value).To("MYSCHEME"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

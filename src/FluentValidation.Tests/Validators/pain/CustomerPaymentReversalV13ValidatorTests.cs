@@ -6,37 +6,32 @@ public class CustomerPaymentReversalV13ValidatorTests
 {
     private readonly CustomerPaymentReversalV13Validator _sut = new();
 
-    private static GroupHeader124 ValidGroupHeader(bool? groupReversal = false, string numberOfTransactions = "1") =>
-        new()
-        {
-            MessageIdentification = "MSG-001",
-            CreationDateTime = new DateTime(2026, 1, 1),
-            NumberOfTransactions = numberOfTransactions,
-            GroupReversal = groupReversal,
-        };
+    private static IGroupHeader124 ValidGroupHeader(bool? groupReversal = false, string numberOfTransactions = "1") =>
+        IsoDataFactory.Make<IGroupHeader124>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.NumberOfTransactions).To(numberOfTransactions)
+            .Set(x => x.GroupReversal).To(groupReversal));
 
-    private static OriginalGroupHeader20 ValidOriginalGroupInformation() =>
-        new() { OriginalMessageIdentification = "MSG-000", OriginalMessageNameIdentification = "pain.008.001.13" };
+    private static IOriginalGroupHeader20 ValidOriginalGroupInformation() =>
+        IsoDataFactory.Make<IOriginalGroupHeader20>(b => b
+            .Set(x => x.OriginalMessageIdentification).To("MSG-000")
+            .Set(x => x.OriginalMessageNameIdentification).To("pain.008.001.13"));
 
     /// <summary>
     /// Individual-transaction-reversal mode: GroupReversal is false, one payment-information block
     /// is itself flagged PaymentInformationReversal=true, which exempts it from the
     /// GroupReversalAndNumberOfTransactionsGuideline count check.
     /// </summary>
-    private static CustomerPaymentReversalV13 ValidMessage() =>
-        new()
-        {
-            GroupHeader = ValidGroupHeader(),
-            OriginalGroupInformation = ValidOriginalGroupInformation(),
-            OriginalPaymentInformationAndReversal =
-            [
-                new OriginalPaymentInstruction53
-                {
-                    OriginalPaymentInformationIdentification = "PMTINF-001",
-                    PaymentInformationReversal = true,
-                },
-            ],
-        };
+    private static ICustomerPaymentReversalV13 ValidMessage() =>
+        IsoDataFactory.Make<ICustomerPaymentReversalV13>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.OriginalGroupInformation).To(ValidOriginalGroupInformation())
+            .Set(x => x.OriginalPaymentInformationAndReversal).To([
+                IsoDataFactory.Make<IOriginalPaymentInstruction53>(b2 => b2
+                    .Set(x2 => x2.OriginalPaymentInformationIdentification).To("PMTINF-001")
+                    .Set(x2 => x2.PaymentInformationReversal).To(true)),
+            ]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -47,47 +42,29 @@ public class CustomerPaymentReversalV13ValidatorTests
     [Fact]
     public void GroupReversalMode_ValidMessage_NoValidationErrors()
     {
-        var msg = new CustomerPaymentReversalV13
-        {
-            GroupHeader = ValidGroupHeader(groupReversal: true),
-            OriginalGroupInformation = ValidOriginalGroupInformation() with
-            {
-                ReversalReasonInformation =
-                [
-                    new PaymentReversalReason10
-                    {
-                        Reason = new BeneficialStrategies.Iso20022.Choices.ReversalReason4Choice.Proprietary
-                        {
-                            Value = "MYREVREASON",
-                        },
-                    },
-                ],
-            },
-            OriginalPaymentInformationAndReversal = [],
-        };
+        var msg = IsoDataFactory.Make<ICustomerPaymentReversalV13>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader(groupReversal: true))
+            .Set(x => x.OriginalGroupInformation).To(IsoDataFactory.With(ValidOriginalGroupInformation(), b2 => b2
+                .Set(x2 => x2.ReversalReasonInformation).To([
+                    IsoDataFactory.Make<IPaymentReversalReason10>(b3 => b3
+                        .Set(x3 => x3.Reason).To(IsoDataFactory.Make<Choices.ReversalReason4Choice.IProprietary>(b4 => b4
+                            .Set(x4 => x4.Value).To("MYREVREASON")))),
+                ])))
+            .Set(x => x.OriginalPaymentInformationAndReversal).To([]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void GroupReversalTrue_WithPaymentInformationPresent_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader(groupReversal: true),
-            OriginalGroupInformation = ValidOriginalGroupInformation() with
-            {
-                ReversalReasonInformation =
-                [
-                    new PaymentReversalReason10
-                    {
-                        Reason = new BeneficialStrategies.Iso20022.Choices.ReversalReason4Choice.Proprietary
-                        {
-                            Value = "MYREVREASON",
-                        },
-                    },
-                ],
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader(groupReversal: true))
+            .Set(x => x.OriginalGroupInformation).To(IsoDataFactory.With(ValidOriginalGroupInformation(), b2 => b2
+                .Set(x2 => x2.ReversalReasonInformation).To([
+                    IsoDataFactory.Make<IPaymentReversalReason10>(b3 => b3
+                        .Set(x3 => x3.Reason).To(IsoDataFactory.Make<Choices.ReversalReason4Choice.IProprietary>(b4 => b4
+                            .Set(x4 => x4.Value).To("MYREVREASON")))),
+                ]))));
         var result = _sut.Validate(msg);
         Assert.False(result.IsValid);
         Assert.Contains(result.Errors, e => e.PropertyName == "GroupReversalAndPaymentInformationNotPresentRule");
@@ -96,12 +73,10 @@ public class CustomerPaymentReversalV13ValidatorTests
     [Fact]
     public void GroupReversalTrue_WithoutReason_HasValidationError()
     {
-        var msg = new CustomerPaymentReversalV13
-        {
-            GroupHeader = ValidGroupHeader(groupReversal: true),
-            OriginalGroupInformation = ValidOriginalGroupInformation(),
-            OriginalPaymentInformationAndReversal = [],
-        };
+        var msg = IsoDataFactory.Make<ICustomerPaymentReversalV13>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader(groupReversal: true))
+            .Set(x => x.OriginalGroupInformation).To(ValidOriginalGroupInformation())
+            .Set(x => x.OriginalPaymentInformationAndReversal).To([]));
         var result = _sut.Validate(msg);
         Assert.False(result.IsValid);
         Assert.Contains(result.Errors, e => e.PropertyName == "GroupReversalAndReasonRule");
@@ -110,7 +85,8 @@ public class CustomerPaymentReversalV13ValidatorTests
     [Fact]
     public void GroupReversalFalse_WithoutPaymentInformation_HasValidationError()
     {
-        var msg = ValidMessage() with { OriginalPaymentInformationAndReversal = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalPaymentInformationAndReversal).To([]));
         var result = _sut.Validate(msg);
         Assert.False(result.IsValid);
         Assert.Contains(result.Errors, e => e.PropertyName == "GroupReversalAndPaymentInformationPresentRule");
@@ -119,19 +95,14 @@ public class CustomerPaymentReversalV13ValidatorTests
     [Fact]
     public void GroupReversalFalse_NumberOfTransactionsMismatch_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader(numberOfTransactions: "5"),
-            OriginalPaymentInformationAndReversal =
-            [
-                new OriginalPaymentInstruction53
-                {
-                    OriginalPaymentInformationIdentification = "PMTINF-001",
-                    PaymentInformationReversal = false,
-                    TransactionInformation = [new PaymentTransaction174(), new PaymentTransaction174()],
-                },
-            ],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader(numberOfTransactions: "5"))
+            .Set(x => x.OriginalPaymentInformationAndReversal).To([
+                IsoDataFactory.Make<IOriginalPaymentInstruction53>(b2 => b2
+                    .Set(x2 => x2.OriginalPaymentInformationIdentification).To("PMTINF-001")
+                    .Set(x2 => x2.PaymentInformationReversal).To(false)
+                    .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction174>(), IsoDataFactory.Make<IPaymentTransaction174>()])),
+            ]));
         var result = _sut.Validate(msg);
         Assert.False(result.IsValid);
         Assert.Contains(result.Errors, e => e.PropertyName == "GroupReversalAndNumberOfTransactionsGuideline");
@@ -140,29 +111,23 @@ public class CustomerPaymentReversalV13ValidatorTests
     [Fact]
     public void GroupReversalFalse_NumberOfTransactionsMatches_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupHeader = ValidGroupHeader(numberOfTransactions: "2"),
-            OriginalPaymentInformationAndReversal =
-            [
-                new OriginalPaymentInstruction53
-                {
-                    OriginalPaymentInformationIdentification = "PMTINF-001",
-                    PaymentInformationReversal = false,
-                    TransactionInformation = [new PaymentTransaction174(), new PaymentTransaction174()],
-                },
-            ],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader(numberOfTransactions: "2"))
+            .Set(x => x.OriginalPaymentInformationAndReversal).To([
+                IsoDataFactory.Make<IOriginalPaymentInstruction53>(b2 => b2
+                    .Set(x2 => x2.OriginalPaymentInformationIdentification).To("PMTINF-001")
+                    .Set(x2 => x2.PaymentInformationReversal).To(false)
+                    .Set(x2 => x2.TransactionInformation).To([IsoDataFactory.Make<IPaymentTransaction174>(), IsoDataFactory.Make<IPaymentTransaction174>()])),
+            ]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

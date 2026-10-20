@@ -6,9 +6,11 @@ public class CreateLimitV02ValidatorTests
 {
     private readonly CreateLimitV02Validator _sut = new();
 
-    private static MessageHeader1 ValidMessageHeader() => new() { MessageIdentification = "MSG-001" };
+    private static IMessageHeader1 ValidMessageHeader() => IsoDataFactory.Make<IMessageHeader1>(b => b
+        .Set(x => x.MessageIdentification).To("MSG-001"));
 
-    private static CreateLimitV02 ValidMessage() => new() { MessageHeader = ValidMessageHeader() };
+    private static ICreateLimitV02 ValidMessage() => IsoDataFactory.Make<ICreateLimitV02>(b => b
+        .Set(x => x.MessageHeader).To(ValidMessageHeader()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -19,37 +21,25 @@ public class CreateLimitV02ValidatorTests
     [Fact]
     public void LimitData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            LimitData =
-            [
-                new LimitStructure6
-                {
-                    LimitIdentification = new LimitIdentification8
-                    {
-                        Type = new BeneficialStrategies.Iso20022.Choices.LimitType1Choice.Code
-                        {
-                            Value = LimitType3Code.Bilateral,
-                        },
-                    },
-                    Amount = new BeneficialStrategies.Iso20022.Choices.Amount2Choice.AmountWithCurrency
-                    {
-                        Currency = "USD",
-                        Amount = 100m,
-                    },
-                },
-            ],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.LimitData).To([
+                IsoDataFactory.Make<ILimitStructure6>(b2 => b2
+                    .Set(x2 => x2.LimitIdentification).To(IsoDataFactory.Make<ILimitIdentification8>(b3 => b3
+                        .Set(x3 => x3.Type).To(IsoDataFactory.Make<Choices.LimitType1Choice.ICode>(b4 => b4
+                            .Set(x4 => x4.Value).To(LimitType3Code.Bilateral)))))
+                    .Set(x2 => x2.Amount).To(IsoDataFactory.Make<Choices.Amount2Choice.IAmountWithCurrency>(b3 => b3
+                        .Set(x3 => x3.Currency).To("USD")
+                        .Set(x3 => x3.Amount).To(100m)))),
+            ]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

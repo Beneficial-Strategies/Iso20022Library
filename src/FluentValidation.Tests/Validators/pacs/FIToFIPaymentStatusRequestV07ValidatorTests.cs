@@ -6,19 +6,26 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
 {
     private readonly FIToFIPaymentStatusRequestV07Validator _sut = new();
 
-    private static GroupHeader109 ValidGroupHeader() =>
-        new() { MessageIdentification = "MSG-001", CreationDateTime = new DateTime(2026, 1, 1) };
+    private static IGroupHeader109 ValidGroupHeader() =>
+        IsoDataFactory.Make<IGroupHeader109>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1)));
 
-    private static OriginalGroupInformation27 ValidOriginalGroupInformation() =>
-        new() { OriginalMessageIdentification = "OMSG-001", OriginalMessageNameIdentification = "pacs.008.001.08" };
+    private static IOriginalGroupInformation27 ValidOriginalGroupInformation() =>
+        IsoDataFactory.Make<IOriginalGroupInformation27>(b => b
+            .Set(x => x.OriginalMessageIdentification).To("OMSG-001")
+            .Set(x => x.OriginalMessageNameIdentification).To("pacs.008.001.08"));
 
-    private static OriginalGroupInformation33 ValidTransactionOriginalGroupInformation() =>
-        new() { OriginalMessageIdentification = "OMSG-001", OriginalMessageNameIdentification = "pacs.008.001.08" };
+    private static IOriginalGroupInformation33 ValidTransactionOriginalGroupInformation() =>
+        IsoDataFactory.Make<IOriginalGroupInformation33>(b => b
+            .Set(x => x.OriginalMessageIdentification).To("OMSG-001")
+            .Set(x => x.OriginalMessageNameIdentification).To("pacs.008.001.08"));
 
-    private static PaymentTransaction171 TransactionWithOwnOriginalGroupInformation() =>
-        new() { OriginalGroupInformation = ValidTransactionOriginalGroupInformation() };
+    private static IPaymentTransaction171 TransactionWithOwnOriginalGroupInformation() =>
+        IsoDataFactory.Make<IPaymentTransaction171>(b => b
+            .Set(x => x.OriginalGroupInformation).To(ValidTransactionOriginalGroupInformation()));
 
-    private static PaymentTransaction171 TransactionWithoutOwnOriginalGroupInformation() => new();
+    private static IPaymentTransaction171 TransactionWithoutOwnOriginalGroupInformation() => IsoDataFactory.Make<IPaymentTransaction171>();
 
     [Fact]
     public void EmptyMessage_NoValidationErrors()
@@ -26,7 +33,8 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
         // No OriginalGroupInformation and no TransactionInformation at all — none of the three
         // presence rules are triggered (they only constrain elements of TransactionInformation
         // when it's non-empty).
-        var msg = new FIToFIPaymentStatusRequestV07 { GroupHeader = ValidGroupHeader() };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -35,11 +43,9 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
     [Fact]
     public void OriginalGroupInformationAbsent_TransactionWithoutOwnOriginalGroupInformation_HasValidationError()
     {
-        var msg = new FIToFIPaymentStatusRequestV07
-        {
-            GroupHeader = ValidGroupHeader(),
-            TransactionInformation = [TransactionWithoutOwnOriginalGroupInformation()],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.TransactionInformation).To([TransactionWithoutOwnOriginalGroupInformation()]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "OriginalGroupInformationAbsenceRule");
     }
@@ -47,11 +53,9 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
     [Fact]
     public void OriginalGroupInformationAbsent_TransactionWithOwnOriginalGroupInformation_NoValidationError()
     {
-        var msg = new FIToFIPaymentStatusRequestV07
-        {
-            GroupHeader = ValidGroupHeader(),
-            TransactionInformation = [TransactionWithOwnOriginalGroupInformation()],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.TransactionInformation).To([TransactionWithOwnOriginalGroupInformation()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -60,12 +64,10 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
     [Fact]
     public void OriginalGroupInformationPresentOnce_TransactionWithOwnOriginalGroupInformation_HasValidationError()
     {
-        var msg = new FIToFIPaymentStatusRequestV07
-        {
-            GroupHeader = ValidGroupHeader(),
-            OriginalGroupInformation = [ValidOriginalGroupInformation()],
-            TransactionInformation = [TransactionWithOwnOriginalGroupInformation()],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.OriginalGroupInformation).To([ValidOriginalGroupInformation()])
+            .Set(x => x.TransactionInformation).To([TransactionWithOwnOriginalGroupInformation()]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "OriginalGroupInformationSinglePresenceRule");
     }
@@ -73,12 +75,10 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
     [Fact]
     public void OriginalGroupInformationPresentOnce_TransactionWithoutOwnOriginalGroupInformation_NoValidationError()
     {
-        var msg = new FIToFIPaymentStatusRequestV07
-        {
-            GroupHeader = ValidGroupHeader(),
-            OriginalGroupInformation = [ValidOriginalGroupInformation()],
-            TransactionInformation = [TransactionWithoutOwnOriginalGroupInformation()],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.OriginalGroupInformation).To([ValidOriginalGroupInformation()])
+            .Set(x => x.TransactionInformation).To([TransactionWithoutOwnOriginalGroupInformation()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -87,12 +87,10 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
     [Fact]
     public void OriginalGroupInformationPresentTwice_TransactionWithoutOwnOriginalGroupInformation_HasValidationError()
     {
-        var msg = new FIToFIPaymentStatusRequestV07
-        {
-            GroupHeader = ValidGroupHeader(),
-            OriginalGroupInformation = [ValidOriginalGroupInformation(), ValidOriginalGroupInformation()],
-            TransactionInformation = [TransactionWithoutOwnOriginalGroupInformation()],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.OriginalGroupInformation).To([ValidOriginalGroupInformation(), ValidOriginalGroupInformation()])
+            .Set(x => x.TransactionInformation).To([TransactionWithoutOwnOriginalGroupInformation()]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "OriginalGroupInformationMultiplePresenceRule");
     }
@@ -100,23 +98,20 @@ public class FIToFIPaymentStatusRequestV07ValidatorTests
     [Fact]
     public void OriginalGroupInformationPresentTwice_TransactionWithOwnOriginalGroupInformation_NoValidationError()
     {
-        var msg = new FIToFIPaymentStatusRequestV07
-        {
-            GroupHeader = ValidGroupHeader(),
-            OriginalGroupInformation = [ValidOriginalGroupInformation(), ValidOriginalGroupInformation()],
-            TransactionInformation = [TransactionWithOwnOriginalGroupInformation()],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.OriginalGroupInformation).To([ValidOriginalGroupInformation(), ValidOriginalGroupInformation()])
+            .Set(x => x.TransactionInformation).To([TransactionWithOwnOriginalGroupInformation()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = new FIToFIPaymentStatusRequestV07
-        {
-            GroupHeader = ValidGroupHeader(),
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.Make<IFIToFIPaymentStatusRequestV07>(b => b
+            .Set(x => x.GroupHeader).To(ValidGroupHeader())
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

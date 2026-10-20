@@ -6,34 +6,25 @@ public class CreateReservationV03ValidatorTests
 {
     private readonly CreateReservationV03Validator _sut = new();
 
-    private static MessageHeader1 ValidMessageHeader() => new() { MessageIdentification = "MSG-001" };
+    private static IMessageHeader1 ValidMessageHeader() => IsoDataFactory.Make<IMessageHeader1>(b => b
+        .Set(x => x.MessageIdentification).To("MSG-001"));
 
-    private static ReservationIdentification4 ValidReservationIdentification() =>
-        new()
-        {
-            Type = new BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.Code
-            {
-                Value = ExternalReservationType1Code.CashReservation,
-            },
-        };
+    private static IReservationIdentification4 ValidReservationIdentification() =>
+        IsoDataFactory.Make<IReservationIdentification4>(b => b
+            .Set(x => x.Type).To(IsoDataFactory.Make<Choices.ReservationType2Choice.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(ExternalReservationType1Code.CashReservation))));
 
-    private static Reservation4 ValidValueSet() =>
-        new()
-        {
-            Amount = new BeneficialStrategies.Iso20022.Choices.Amount2Choice.AmountWithCurrency
-            {
-                Currency = "USD",
-                Amount = 100m,
-            },
-        };
+    private static IReservation4 ValidValueSet() =>
+        IsoDataFactory.Make<IReservation4>(b => b
+            .Set(x => x.Amount).To(IsoDataFactory.Make<Choices.Amount2Choice.IAmountWithCurrency>(b2 => b2
+                .Set(x2 => x2.Currency).To("USD")
+                .Set(x2 => x2.Amount).To(100m))));
 
-    private static CreateReservationV03 ValidMessage() =>
-        new()
-        {
-            MessageHeader = ValidMessageHeader(),
-            ReservationIdentification = ValidReservationIdentification(),
-            ValueSet = ValidValueSet(),
-        };
+    private static ICreateReservationV03 ValidMessage() =>
+        IsoDataFactory.Make<ICreateReservationV03>(b => b
+            .Set(x => x.MessageHeader).To(ValidMessageHeader())
+            .Set(x => x.ReservationIdentification).To(ValidReservationIdentification())
+            .Set(x => x.ValueSet).To(ValidValueSet()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -44,10 +35,9 @@ public class CreateReservationV03ValidatorTests
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

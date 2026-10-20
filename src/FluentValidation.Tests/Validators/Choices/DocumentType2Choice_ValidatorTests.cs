@@ -9,16 +9,18 @@ public class DocumentType2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.DocumentType2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.DocumentType2Choice.Code { Value = ExternalDocumentType1Code.CommercialInvoice };
+        BeneficialStrategies.Iso20022.Choices.IDocumentType2Choice choice =
+            IsoDataFactory.Make<Choices.DocumentType2Choice.ICode>(b => b
+                .Set(x => x.Value).To(ExternalDocumentType1Code.CommercialInvoice));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.DocumentType2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.DocumentType2Choice.Proprietary { Value = "MYDOCTYPE" };
+        BeneficialStrategies.Iso20022.Choices.IDocumentType2Choice choice =
+            IsoDataFactory.Make<Choices.DocumentType2Choice.IProprietary>(b => b
+                .Set(x => x.Value).To("MYDOCTYPE"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

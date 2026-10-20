@@ -6,8 +6,9 @@ public class DocumentLineInformation1ValidatorTests
 {
     private readonly DocumentLineInformation1Validator _sut = new();
 
-    private static DocumentLineInformation1 ValidMessage() =>
-        new() { Identification = [new DocumentLineIdentification1()] };
+    private static IDocumentLineInformation1 ValidMessage() =>
+        IsoDataFactory.Make<IDocumentLineInformation1>(b => b
+            .Set(x => x.Identification).To([IsoDataFactory.Make<IDocumentLineIdentification1>()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -20,14 +21,16 @@ public class DocumentLineInformation1ValidatorTests
     [Fact]
     public void Identification_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Identification = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Identification).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Identification);
     }
 
     [Fact]
     public void Identification_OneElement_NoValidationError()
     {
-        var msg = ValidMessage() with { Identification = [new DocumentLineIdentification1()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Identification).To([IsoDataFactory.Make<IDocumentLineIdentification1>()]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.Identification);
     }
 }

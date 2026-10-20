@@ -9,30 +9,24 @@ public class RequestType4Choice_ValidatorTests
     [Fact]
     public void PaymentControlVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.RequestType4Choice.PaymentControl
-        {
-            Value = ExternalPaymentControlRequestType1Code.ReleasePending,
-        };
+        var value = IsoDataFactory.Make<Choices.RequestType4Choice.IPaymentControl>(b => b
+            .Set(x => x.Value).To(ExternalPaymentControlRequestType1Code.ReleasePending));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void EnquiryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.RequestType4Choice.Enquiry
-        {
-            Value = ExternalEnquiryRequestType1Code.BankPositionEnquiry,
-        };
+        var value = IsoDataFactory.Make<Choices.RequestType4Choice.IEnquiry>(b => b
+            .Set(x => x.Value).To(ExternalEnquiryRequestType1Code.BankPositionEnquiry));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.RequestType4Choice.Proprietary
-        {
-            Identification = "REQ-TYPE-001",
-        };
+        var value = IsoDataFactory.Make<Choices.RequestType4Choice.IProprietary>(b => b
+            .Set(x => x.Identification).To("REQ-TYPE-001"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

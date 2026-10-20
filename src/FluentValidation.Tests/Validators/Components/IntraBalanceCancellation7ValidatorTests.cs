@@ -6,29 +6,34 @@ public class IntraBalanceCancellation7ValidatorTests
 {
     private readonly IntraBalanceCancellation7Validator _sut = new();
 
-    private static CashAccount40 ValidAccount() => new();
+    private static ICashAccount40 ValidAccount() => IsoDataFactory.Make<ICashAccount40>();
 
-    private static SystemPartyIdentification8 ValidOwner() =>
-        new() { Identification = new PartyIdentification136 { Identification = new Choices.PartyIdentification120Choice.NameAndAddress { Name = "Owner" } } };
+    private static ISystemPartyIdentification8 ValidOwner() =>
+        IsoDataFactory.Make<ISystemPartyIdentification8>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<IPartyIdentification136>(b2 => b2
+            .Set(x2 => x2.Identification).To(IsoDataFactory.Make<Choices.PartyIdentification120Choice.INameAndAddress>(b3 => b3
+            .Set(x3 => x3.Name).To("Owner"))))));
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidServicer() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidServicer() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
-    private static ProcessingStatus69Choice_ ValidStatus() => new Choices.ProcessingStatus69Choice.AcknowledgedAccepted { Value = new Choices.AcknowledgedAcceptedStatus24Choice.NoSpecifiedReason { Value = default } };
+    private static IProcessingStatus69Choice ValidStatus() => IsoDataFactory.Make<Choices.ProcessingStatus69Choice.IAcknowledgedAccepted>(b => b
+        .Set(x => x.Value).To(IsoDataFactory.Make<Choices.AcknowledgedAcceptedStatus24Choice.INoSpecifiedReason>(b2 => b2
+        .Set(x2 => x2.Value).To(default))));
 
-    private static IntraBalanceCancellation8 MinimalItem() => new() { RequestReference = "REQ-001" };
+    private static IIntraBalanceCancellation8 MinimalItem() => IsoDataFactory.Make<IIntraBalanceCancellation8>(b => b
+        .Set(x => x.RequestReference).To("REQ-001"));
 
     // ValidMessage sets all four top-level fields and no item-level equivalents — satisfies all
     // four XOR constraints simultaneously (top-level present, item-level absent).
-    private static IntraBalanceCancellation7 ValidMessage() =>
-        new()
-        {
-            CashAccount = ValidAccount(),
-            CashAccountOwner = ValidOwner(),
-            CashAccountServicer = ValidServicer(),
-            ProcessingStatus = ValidStatus(),
-            Cancellation = [MinimalItem()],
-        };
+    private static IIntraBalanceCancellation7 ValidMessage() =>
+        IsoDataFactory.Make<IIntraBalanceCancellation7>(b => b
+            .Set(x => x.CashAccount).To(ValidAccount())
+            .Set(x => x.CashAccountOwner).To(ValidOwner())
+            .Set(x => x.CashAccountServicer).To(ValidServicer())
+            .Set(x => x.ProcessingStatus).To(ValidStatus())
+            .Set(x => x.Cancellation).To([MinimalItem()]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -41,7 +46,8 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void Cancellation_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { Cancellation = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Cancellation).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Cancellation);
     }
 
@@ -50,7 +56,9 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void TopLevelAndItemCashAccount_Violates_CashAccountRule()
     {
-        var msg = ValidMessage() with { Cancellation = [MinimalItem() with { CashAccount = ValidAccount() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Cancellation).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+            .Set(x2 => x2.CashAccount).To(ValidAccount()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountRule");
     }
@@ -58,7 +66,8 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void NeitherCashAccount_Violates_CashAccountRule()
     {
-        var msg = ValidMessage() with { CashAccount = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CashAccount).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountRule");
     }
@@ -75,7 +84,9 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void TopLevelAndItemCashAccountOwner_Violates_CashAccountOwnerRule()
     {
-        var msg = ValidMessage() with { Cancellation = [MinimalItem() with { CashAccountOwner = ValidOwner() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Cancellation).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+            .Set(x2 => x2.CashAccountOwner).To(ValidOwner()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountOwnerRule");
     }
@@ -83,7 +94,8 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void NeitherCashAccountOwner_Violates_CashAccountOwnerRule()
     {
-        var msg = ValidMessage() with { CashAccountOwner = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CashAccountOwner).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountOwnerRule");
     }
@@ -93,7 +105,9 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void TopLevelAndItemProcessingStatus_Violates_ProcessingStatusRule()
     {
-        var msg = ValidMessage() with { Cancellation = [MinimalItem() with { ProcessingStatus = ValidStatus() }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Cancellation).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+            .Set(x2 => x2.ProcessingStatus).To(ValidStatus()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ProcessingStatusRule");
     }
@@ -101,7 +115,8 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void NeitherProcessingStatus_Violates_ProcessingStatusRule()
     {
-        var msg = ValidMessage() with { ProcessingStatus = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ProcessingStatus).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ProcessingStatusRule");
     }
@@ -111,10 +126,9 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void TopLevelAndItemCashAccountServicer_Violates_CashAccountServicerRule()
     {
-        var msg = ValidMessage() with
-        {
-            Cancellation = [MinimalItem() with { CashAccountServicer = ValidServicer() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Cancellation).To([IsoDataFactory.With(MinimalItem(), b2 => b2
+                .Set(x2 => x2.CashAccountServicer).To(ValidServicer()))]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountServicerRule");
     }
@@ -122,7 +136,8 @@ public class IntraBalanceCancellation7ValidatorTests
     [Fact]
     public void NeitherCashAccountServicer_Violates_CashAccountServicerRule()
     {
-        var msg = ValidMessage() with { CashAccountServicer = null };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CashAccountServicer).To(null));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CashAccountServicerRule");
     }

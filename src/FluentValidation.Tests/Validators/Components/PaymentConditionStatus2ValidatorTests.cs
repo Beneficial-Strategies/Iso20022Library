@@ -9,18 +9,16 @@ public class PaymentConditionStatus2ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new PaymentConditionStatus2()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IPaymentConditionStatus2>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new PaymentConditionStatus2
-        {
-            AcceptedAmount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            EarlyPayment = true,
-            GuaranteedPayment = false,
-        };
+        var msg = IsoDataFactory.Make<IPaymentConditionStatus2>(b => b
+            .Set(x => x.AcceptedAmount).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.EarlyPayment).To(true)
+            .Set(x => x.GuaranteedPayment).To(false));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,8 +6,9 @@ public class TaxRecordDetails3ValidatorTests
 {
     private readonly TaxRecordDetails3Validator _sut = new();
 
-    private static TaxRecordDetails3 ValidMessage() =>
-        new() { Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m } };
+    private static ITaxRecordDetails3 ValidMessage() =>
+        IsoDataFactory.Make<ITaxRecordDetails3>(b => b
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m }));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,10 +19,9 @@ public class TaxRecordDetails3ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Period = new TaxPeriod3 { Year = 2026 },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Period).To(IsoDataFactory.Make<ITaxPeriod3>(b2 => b2
+                .Set(x2 => x2.Year).To(2026))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

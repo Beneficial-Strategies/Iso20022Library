@@ -9,14 +9,10 @@ public class DocumentAmount1ValidatorTests
     [Fact]
     public void ValidMessage_NoValidationErrors()
     {
-        var msg = new DocumentAmount1
-        {
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            Type = new BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice.Proprietary
-            {
-                Value = "MYAMTTYPE",
-            },
-        };
+        var msg = IsoDataFactory.Make<IDocumentAmount1>(b => b
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.Type).To(IsoDataFactory.Make<Choices.DocumentAmountType1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYAMTTYPE"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

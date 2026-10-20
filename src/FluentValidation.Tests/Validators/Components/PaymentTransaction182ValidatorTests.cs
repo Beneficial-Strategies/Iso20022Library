@@ -6,11 +6,9 @@ public class PaymentTransaction182ValidatorTests
 {
     private readonly PaymentTransaction182Validator _sut = new();
 
-    private static PaymentTransaction182 ValidMessage() =>
-        new()
-        {
-            ReversedInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m },
-        };
+    private static IPaymentTransaction182 ValidMessage() =>
+        IsoDataFactory.Make<IPaymentTransaction182>(b => b
+            .Set(x => x.ReversedInterbankSettlementAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m }));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,10 +21,8 @@ public class PaymentTransaction182ValidatorTests
     [Fact]
     public void ReversedInterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            ReversedInterbankSettlementAmount = ValidMessage().ReversedInterbankSettlementAmount with { Currency = default },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ReversedInterbankSettlementAmount).To(ValidMessage().ReversedInterbankSettlementAmount with { Currency = default }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ReversedInterbankSettlementAmount.Currency");
     }
@@ -34,10 +30,8 @@ public class PaymentTransaction182ValidatorTests
     [Fact]
     public void ReversedInterbankSettlementAmount_ZeroAmount_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            ReversedInterbankSettlementAmount = ValidMessage().ReversedInterbankSettlementAmount with { Amount = 0m },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ReversedInterbankSettlementAmount).To(ValidMessage().ReversedInterbankSettlementAmount with { Amount = 0m }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ReversedInterbankSettlementAmount.Amount");
     }
@@ -53,9 +47,12 @@ public class PaymentTransaction182ValidatorTests
         var amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 50m };
         var msg = fieldName switch
         {
-            "OriginalInterbankSettlementAmount" => ValidMessage() with { OriginalInterbankSettlementAmount = amount },
-            "ReversedInstructedAmount" => ValidMessage() with { ReversedInstructedAmount = amount },
-            "CompensationAmount" => ValidMessage() with { CompensationAmount = amount },
+            "OriginalInterbankSettlementAmount" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.OriginalInterbankSettlementAmount).To(amount)),
+            "ReversedInstructedAmount" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.ReversedInstructedAmount).To(amount)),
+            "CompensationAmount" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.CompensationAmount).To(amount)),
             _ => throw new ArgumentOutOfRangeException(nameof(fieldName)),
         };
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
@@ -64,10 +61,8 @@ public class PaymentTransaction182ValidatorTests
     [Fact]
     public void OriginalInterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = default, Amount = 50m },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalInterbankSettlementAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = default, Amount = 50m }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "OriginalInterbankSettlementAmount.Currency");
     }
@@ -75,10 +70,8 @@ public class PaymentTransaction182ValidatorTests
     [Fact]
     public void CompensationAmount_ZeroAmount_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            CompensationAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 0m },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CompensationAmount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 0m }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "CompensationAmount.Amount");
     }
@@ -88,94 +81,78 @@ public class PaymentTransaction182ValidatorTests
     [Fact]
     public void OriginalGroupInformation_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            OriginalGroupInformation = new OriginalGroupInformation33
-            {
-                OriginalMessageIdentification = "MSG-001",
-                OriginalMessageNameIdentification = "pacs.008.001.08",
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalGroupInformation).To(IsoDataFactory.Make<IOriginalGroupInformation33>(b2 => b2
+                .Set(x2 => x2.OriginalMessageIdentification).To("MSG-001")
+                .Set(x2 => x2.OriginalMessageNameIdentification).To("pacs.008.001.08"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SettlementTimeIndication_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SettlementTimeIndication = new SettlementDateTimeIndication1 { CreditDateTime = new DateTime(2026, 1, 1) },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SettlementTimeIndication).To(IsoDataFactory.Make<ISettlementDateTimeIndication1>(b2 => b2
+                .Set(x2 => x2.CreditDateTime).To(new DateTime(2026, 1, 1)))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ChargesInformation_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            ChargesInformation =
-            [
-                new Charges16
-                {
-                    Agent = new BranchAndFinancialInstitutionIdentification8
-                    {
-                        FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = "DEUTDEFFXXX" },
-                    },
-                    Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 5m },
-                },
-            ],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ChargesInformation).To([
+                IsoDataFactory.Make<ICharges16>(b2 => b2
+                    .Set(x2 => x2.Agent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b3 => b3
+                        .Set(x3 => x3.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b4 => b4
+                            .Set(x4 => x4.BICFI).To("DEUTDEFFXXX")))))
+                    .Set(x2 => x2.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 5m })),
+            ]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void InstructingAgent_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            InstructingAgent = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = "DEUTDEFFXXX" },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InstructingAgent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b3 => b3
+                    .Set(x3 => x3.BICFI).To("DEUTDEFFXXX"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void InstructedAgent_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            InstructedAgent = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = "DEUTDEFFXXX" },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InstructedAgent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b3 => b3
+                    .Set(x3 => x3.BICFI).To("DEUTDEFFXXX"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ReversalReasonInformation_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { ReversalReasonInformation = [new PaymentReversalReason10()] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ReversalReasonInformation).To([IsoDataFactory.Make<IPaymentReversalReason10>()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void OriginalTransactionReference_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { OriginalTransactionReference = new OriginalTransactionReference47() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalTransactionReference).To(IsoDataFactory.Make<IOriginalTransactionReference47>()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void SupplementaryData_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

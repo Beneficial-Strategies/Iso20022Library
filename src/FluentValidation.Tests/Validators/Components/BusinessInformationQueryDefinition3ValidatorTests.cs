@@ -9,21 +9,16 @@ public class BusinessInformationQueryDefinition3ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new BusinessInformationQueryDefinition3()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IBusinessInformationQueryDefinition3>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFields_Present_NoValidationError()
     {
-        var msg = new BusinessInformationQueryDefinition3
-        {
-            QueryType = QueryType2Code.Modified,
-            GeneralBusinessInformationCriteria =
-                new BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriteriaDefinition1Choice.QueryName
-                {
-                    Value = "PREVIOUS-QUERY",
-                },
-        };
+        var msg = IsoDataFactory.Make<IBusinessInformationQueryDefinition3>(b => b
+            .Set(x => x.QueryType).To(QueryType2Code.Modified)
+            .Set(x => x.GeneralBusinessInformationCriteria).To(IsoDataFactory.Make<Choices.GeneralBusinessInformationCriteriaDefinition1Choice.IQueryName>(b2 => b2
+                    .Set(x2 => x2.Value).To("PREVIOUS-QUERY"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

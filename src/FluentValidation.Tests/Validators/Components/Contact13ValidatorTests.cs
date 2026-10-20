@@ -6,7 +6,7 @@ public class Contact13ValidatorTests
 {
     private readonly Contact13Validator _sut = new();
 
-    private static Contact13 ValidMessage() => new();
+    private static IContact13 ValidMessage() => IsoDataFactory.Make<IContact13>();
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,7 +17,9 @@ public class Contact13ValidatorTests
     [Fact]
     public void Other_NonEmpty_NoValidationError()
     {
-        var msg = ValidMessage() with { Other = [new OtherContact1 { ChannelType = "FAXX" }] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Other).To([IsoDataFactory.Make<IOtherContact1>(b2 => b2
+            .Set(x2 => x2.ChannelType).To("FAXX"))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

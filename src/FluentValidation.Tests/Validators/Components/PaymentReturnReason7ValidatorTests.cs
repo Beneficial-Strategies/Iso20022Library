@@ -9,30 +9,31 @@ public class PaymentReturnReason7ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new PaymentReturnReason7()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IPaymentReturnReason7>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void Originator_Present_NoValidationError()
     {
-        var msg = new PaymentReturnReason7 { Originator = new PartyIdentification272() };
+        var msg = IsoDataFactory.Make<IPaymentReturnReason7>(b => b
+            .Set(x => x.Originator).To(IsoDataFactory.Make<IPartyIdentification272>()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void Reason_Present_NoValidationError()
     {
-        var msg = new PaymentReturnReason7
-        {
-            Reason = new BeneficialStrategies.Iso20022.Choices.ReturnReason5Choice.Proprietary { Value = "CUSTOM" },
-        };
+        var msg = IsoDataFactory.Make<IPaymentReturnReason7>(b => b
+            .Set(x => x.Reason).To(IsoDataFactory.Make<Choices.ReturnReason5Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("CUSTOM"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AdditionalInformation_Present_NoValidationError()
     {
-        var msg = new PaymentReturnReason7 { AdditionalInformation = ["More detail here."] };
+        var msg = IsoDataFactory.Make<IPaymentReturnReason7>(b => b
+            .Set(x => x.AdditionalInformation).To(["More detail here."]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

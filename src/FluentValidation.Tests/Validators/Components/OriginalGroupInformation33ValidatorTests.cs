@@ -6,8 +6,10 @@ public class OriginalGroupInformation33ValidatorTests
 {
     private readonly OriginalGroupInformation33Validator _sut = new();
 
-    private static OriginalGroupInformation33 ValidMessage() =>
-        new() { OriginalMessageIdentification = "MSG-001", OriginalMessageNameIdentification = "pacs.008.001.08" };
+    private static IOriginalGroupInformation33 ValidMessage() =>
+        IsoDataFactory.Make<IOriginalGroupInformation33>(b => b
+            .Set(x => x.OriginalMessageIdentification).To("MSG-001")
+            .Set(x => x.OriginalMessageNameIdentification).To("pacs.008.001.08"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,7 +20,8 @@ public class OriginalGroupInformation33ValidatorTests
     [Fact]
     public void OriginalCreationDateTime_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { OriginalCreationDateTime = new DateTime(2026, 1, 1) };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalCreationDateTime).To(new DateTime(2026, 1, 1)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

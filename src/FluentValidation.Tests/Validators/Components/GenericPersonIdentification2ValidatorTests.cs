@@ -6,8 +6,9 @@ public class GenericPersonIdentification2ValidatorTests
 {
     private readonly GenericPersonIdentification2Validator _sut = new();
 
-    private static GenericPersonIdentification2 ValidMessage() =>
-        new() { Identification = "PERS-001" };
+    private static IGenericPersonIdentification2 ValidMessage() =>
+        IsoDataFactory.Make<IGenericPersonIdentification2>(b => b
+            .Set(x => x.Identification).To("PERS-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,14 +19,9 @@ public class GenericPersonIdentification2ValidatorTests
     [Fact]
     public void SchemeName_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SchemeName =
-                new BeneficialStrategies.Iso20022.Choices.PersonIdentificationSchemeName1Choice.Proprietary
-                {
-                    Value = "MYSCHEME",
-                },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SchemeName).To(IsoDataFactory.Make<Choices.PersonIdentificationSchemeName1Choice.IProprietary>(b2 => b2
+                    .Set(x2 => x2.Value).To("MYSCHEME"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

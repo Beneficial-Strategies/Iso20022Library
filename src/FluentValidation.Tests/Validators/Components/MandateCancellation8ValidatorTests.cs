@@ -6,23 +6,19 @@ public class MandateCancellation8ValidatorTests
 {
     private readonly MandateCancellation8Validator _sut = new();
 
-    private static BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice_ ValidOriginalMandate() =>
-        new BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice.OriginalMandateIdentification
-        {
-            Value = "MNDT-001",
-        };
+    private static BeneficialStrategies.Iso20022.Choices.IOriginalMandate10Choice ValidOriginalMandate() =>
+        IsoDataFactory.Make<Choices.OriginalMandate10Choice.IOriginalMandateIdentification>(b => b
+            .Set(x => x.Value).To("MNDT-001"));
 
-    private static MandateCancellationReason2 ValidReason() =>
-        new()
-        {
-            Reason = new BeneficialStrategies.Iso20022.Choices.MandateReason1Choice.Code
-            {
-                Value = ExternalMandateReason1Code.IncorrectAccountNumber,
-            },
-        };
+    private static IMandateCancellationReason2 ValidReason() =>
+        IsoDataFactory.Make<IMandateCancellationReason2>(b => b
+            .Set(x => x.Reason).To(IsoDataFactory.Make<Choices.MandateReason1Choice.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(ExternalMandateReason1Code.IncorrectAccountNumber))));
 
-    private static MandateCancellation8 ValidMessage() =>
-        new() { CancellationReason = ValidReason(), OriginalMandate = ValidOriginalMandate() };
+    private static IMandateCancellation8 ValidMessage() =>
+        IsoDataFactory.Make<IMandateCancellation8>(b => b
+            .Set(x => x.CancellationReason).To(ValidReason())
+            .Set(x => x.OriginalMandate).To(ValidOriginalMandate()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -33,15 +29,12 @@ public class MandateCancellation8ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            OriginalMessageInformation = new OriginalMessageInformation1
-            {
-                MessageIdentification = "ORIG-MSG-001",
-                MessageNameIdentification = "pain.009.001.08",
-            },
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.OriginalMessageInformation).To(IsoDataFactory.Make<IOriginalMessageInformation1>(b2 => b2
+                .Set(x2 => x2.MessageIdentification).To("ORIG-MSG-001")
+                .Set(x2 => x2.MessageNameIdentification).To("pain.009.001.08")))
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

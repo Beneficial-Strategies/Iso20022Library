@@ -6,8 +6,10 @@ public class CurrencyExchangeSearchCriteria1ValidatorTests
 {
     private readonly CurrencyExchangeSearchCriteria1Validator _sut = new();
 
-    private static CurrencyExchangeSearchCriteria1 ValidMessage() =>
-        new() { SourceCurrency = "USD", TargetCurrency = "EUR" };
+    private static ICurrencyExchangeSearchCriteria1 ValidMessage() =>
+        IsoDataFactory.Make<ICurrencyExchangeSearchCriteria1>(b => b
+            .Set(x => x.SourceCurrency).To("USD")
+            .Set(x => x.TargetCurrency).To("EUR"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

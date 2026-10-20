@@ -9,17 +9,16 @@ public class RemittanceLocation8ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new RemittanceLocation8()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IRemittanceLocation8>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new RemittanceLocation8
-        {
-            RemittanceIdentification = "RMT-001",
-            RemittanceLocationDetails = [new RemittanceLocationData2 { Method = RemittanceLocationMethod2Code.Fax }],
-        };
+        var msg = IsoDataFactory.Make<IRemittanceLocation8>(b => b
+            .Set(x => x.RemittanceIdentification).To("RMT-001")
+            .Set(x => x.RemittanceLocationDetails).To([IsoDataFactory.Make<IRemittanceLocationData2>(b2 => b2
+                .Set(x2 => x2.Method).To(RemittanceLocationMethod2Code.Fax))]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

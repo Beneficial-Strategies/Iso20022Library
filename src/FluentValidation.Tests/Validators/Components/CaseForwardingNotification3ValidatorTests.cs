@@ -6,8 +6,9 @@ public class CaseForwardingNotification3ValidatorTests
 {
     private readonly CaseForwardingNotification3Validator _sut = new();
 
-    private static CaseForwardingNotification3 ValidMessage() =>
-        new() { Justification = CaseForwardingNotification3Code.FurtherInvestigation };
+    private static ICaseForwardingNotification3 ValidMessage() =>
+        IsoDataFactory.Make<ICaseForwardingNotification3>(b => b
+            .Set(x => x.Justification).To(CaseForwardingNotification3Code.FurtherInvestigation));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

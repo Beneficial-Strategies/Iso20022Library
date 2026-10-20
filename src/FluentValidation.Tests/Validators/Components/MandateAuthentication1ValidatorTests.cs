@@ -6,7 +6,7 @@ public class MandateAuthentication1ValidatorTests
 {
     private readonly MandateAuthentication1Validator _sut = new();
 
-    private static MandateAuthentication1 ValidMessage() => new();
+    private static IMandateAuthentication1 ValidMessage() => IsoDataFactory.Make<IMandateAuthentication1>();
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,13 +17,9 @@ public class MandateAuthentication1ValidatorTests
     [Fact]
     public void Channel_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Channel = new BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice.Proprietary
-            {
-                Value = "CHANNELX",
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Channel).To(IsoDataFactory.Make<Choices.AuthenticationChannel1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("CHANNELX"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

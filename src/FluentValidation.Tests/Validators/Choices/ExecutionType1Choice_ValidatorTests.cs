@@ -9,17 +9,17 @@ public class ExecutionType1Choice_ValidatorTests
     [Fact]
     public void TimeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice.Time
-        {
-            Value = new TimeOnly(9, 0, 0),
-        };
+        var value = IsoDataFactory.Make<Choices.ExecutionType1Choice.ITime>(b => b
+            .Set(x => x.Value).To(new TimeOnly(9, 0, 0)));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void EventVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice.Event { Value = new BeneficialStrategies.Iso20022.Choices.EventType1Choice.Proprietary { Value = "EVT" } };
+        var value = IsoDataFactory.Make<Choices.ExecutionType1Choice.IEvent>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<Choices.EventType1Choice.IProprietary>(b2 => b2
+            .Set(x2 => x2.Value).To("EVT"))));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,8 +6,10 @@ public class OriginalMessageInformation1ValidatorTests
 {
     private readonly OriginalMessageInformation1Validator _sut = new();
 
-    private static OriginalMessageInformation1 ValidMessage() =>
-        new() { MessageIdentification = "MSG-001", MessageNameIdentification = "pain.017.001.04" };
+    private static IOriginalMessageInformation1 ValidMessage() =>
+        IsoDataFactory.Make<IOriginalMessageInformation1>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.MessageNameIdentification).To("pain.017.001.04"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,7 +20,8 @@ public class OriginalMessageInformation1ValidatorTests
     [Fact]
     public void CreationDateTime_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { CreationDateTime = new DateTime(2026, 1, 1) };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

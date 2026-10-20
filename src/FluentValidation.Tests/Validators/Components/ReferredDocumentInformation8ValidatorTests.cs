@@ -9,29 +9,23 @@ public class ReferredDocumentInformation8ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new ReferredDocumentInformation8()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IReferredDocumentInformation8>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new ReferredDocumentInformation8
-        {
-            LineDetails = [new DocumentLineInformation2 { Identification = [new DocumentLineIdentification1()] }],
-            Number = "DOC-001",
-            RelatedDate = new DateAndType1
-            {
-                Date = new DateOnly(2026, 1, 1),
-                Type = new BeneficialStrategies.Iso20022.Choices.DateType2Choice.Proprietary { Value = "MYDATE" },
-            },
-            Type = new DocumentType1
-            {
-                CodeOrProprietary = new BeneficialStrategies.Iso20022.Choices.DocumentType2Choice.Proprietary
-                {
-                    Value = "MYDOCTYPE",
-                },
-            },
-        };
+        var msg = IsoDataFactory.Make<IReferredDocumentInformation8>(b => b
+            .Set(x => x.LineDetails).To([IsoDataFactory.Make<IDocumentLineInformation2>(b2 => b2
+                .Set(x2 => x2.Identification).To([IsoDataFactory.Make<IDocumentLineIdentification1>()]))])
+            .Set(x => x.Number).To("DOC-001")
+            .Set(x => x.RelatedDate).To(IsoDataFactory.Make<IDateAndType1>(b2 => b2
+                .Set(x2 => x2.Date).To(new DateOnly(2026, 1, 1))
+                .Set(x2 => x2.Type).To(IsoDataFactory.Make<Choices.DateType2Choice.IProprietary>(b3 => b3
+                    .Set(x3 => x3.Value).To("MYDATE")))))
+            .Set(x => x.Type).To(IsoDataFactory.Make<IDocumentType1>(b2 => b2
+                .Set(x2 => x2.CodeOrProprietary).To(IsoDataFactory.Make<Choices.DocumentType2Choice.IProprietary>(b3 => b3
+                    .Set(x3 => x3.Value).To("MYDOCTYPE"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

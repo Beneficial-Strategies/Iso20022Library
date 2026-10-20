@@ -6,28 +6,29 @@ public class TaxCalculation1ValidatorTests
 {
     private readonly TaxCalculation1Validator _sut = new();
 
-    private static AmountAndDirection34 ValidAmount(decimal amount = 100m) =>
-        new()
-        {
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = amount },
-            Sign = true,
-        };
+    private static IAmountAndDirection34 ValidAmount(decimal amount = 100m) =>
+        IsoDataFactory.Make<IAmountAndDirection34>(b => b
+            .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = amount })
+            .Set(x => x.Sign).To(true));
 
-    private static BillingServicesAmount3 ValidConversion() =>
-        new() { SourceAmount = ValidAmount(), HostAmount = ValidAmount() };
+    private static IBillingServicesAmount3 ValidConversion() =>
+        IsoDataFactory.Make<IBillingServicesAmount3>(b => b
+            .Set(x => x.SourceAmount).To(ValidAmount())
+            .Set(x => x.HostAmount).To(ValidAmount()));
 
-    private static BillingServicesTax3 ValidTaxIdentification() =>
-        new() { Number = "TAX-001", Rate = 5, TotalTaxAmount = ValidAmount() };
+    private static IBillingServicesTax3 ValidTaxIdentification() =>
+        IsoDataFactory.Make<IBillingServicesTax3>(b => b
+            .Set(x => x.Number).To("TAX-001")
+            .Set(x => x.Rate).To(5)
+            .Set(x => x.TotalTaxAmount).To(ValidAmount()));
 
-    private static TaxCalculation1 ValidMessage() =>
-        new()
-        {
-            HostCurrency = "USD",
-            TaxableServiceChargeConversion = [ValidConversion()],
-            TotalTaxableServiceChargeHostAmount = ValidAmount(),
-            TaxIdentification = [ValidTaxIdentification()],
-            TotalTax = ValidAmount(),
-        };
+    private static ITaxCalculation1 ValidMessage() =>
+        IsoDataFactory.Make<ITaxCalculation1>(b => b
+            .Set(x => x.HostCurrency).To("USD")
+            .Set(x => x.TaxableServiceChargeConversion).To([ValidConversion()])
+            .Set(x => x.TotalTaxableServiceChargeHostAmount).To(ValidAmount())
+            .Set(x => x.TaxIdentification).To([ValidTaxIdentification()])
+            .Set(x => x.TotalTax).To(ValidAmount()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -40,7 +41,8 @@ public class TaxCalculation1ValidatorTests
     [Fact]
     public void TaxableServiceChargeConversion_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { TaxableServiceChargeConversion = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TaxableServiceChargeConversion).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.TaxableServiceChargeConversion);
     }
 
@@ -49,7 +51,8 @@ public class TaxCalculation1ValidatorTests
     [Fact]
     public void TaxIdentification_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { TaxIdentification = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TaxIdentification).To([]));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TaxIdentification");
     }
@@ -57,26 +60,21 @@ public class TaxCalculation1ValidatorTests
     [Fact]
     public void TaxIdentification_ThreeElements_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            TaxIdentification = [ValidTaxIdentification(), ValidTaxIdentification(), ValidTaxIdentification()],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TaxIdentification).To([ValidTaxIdentification(), ValidTaxIdentification(), ValidTaxIdentification()]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.TaxIdentification);
     }
 
     [Fact]
     public void TaxIdentification_FourElements_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            TaxIdentification =
-            [
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TaxIdentification).To([
                 ValidTaxIdentification(),
                 ValidTaxIdentification(),
                 ValidTaxIdentification(),
                 ValidTaxIdentification(),
-            ],
-        };
+            ]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.TaxIdentification);
     }
 }

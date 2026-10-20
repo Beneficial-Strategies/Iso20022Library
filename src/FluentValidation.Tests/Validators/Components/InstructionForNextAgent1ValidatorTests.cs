@@ -9,17 +9,15 @@ public class InstructionForNextAgent1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new InstructionForNextAgent1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IInstructionForNextAgent1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFieldsPresent_NoValidationErrors()
     {
-        var msg = new InstructionForNextAgent1
-        {
-            Code = Instruction4Code.PhoneNextAgent,
-            InstructionInformation = "Call before delivery",
-        };
+        var msg = IsoDataFactory.Make<IInstructionForNextAgent1>(b => b
+            .Set(x => x.Code).To(Instruction4Code.PhoneNextAgent)
+            .Set(x => x.InstructionInformation).To("Call before delivery"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

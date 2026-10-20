@@ -6,13 +6,11 @@ public class GroupHeader119ValidatorTests
 {
     private readonly GroupHeader119Validator _sut = new();
 
-    private static GroupHeader119 ValidMessage() =>
-        new()
-        {
-            MessageIdentification = "MSG-001",
-            CreationDateTime = new DateTime(2026, 1, 1),
-            NumberOfTransactions = "1",
-        };
+    private static IGroupHeader119 ValidMessage() =>
+        IsoDataFactory.Make<IGroupHeader119>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.NumberOfTransactions).To("1"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,33 +21,28 @@ public class GroupHeader119ValidatorTests
     [Fact]
     public void ControlSum_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { ControlSum = 100.00m };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ControlSum).To(100.00m));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void InstructingAgent_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            InstructingAgent = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = "DEUTDEFFXXX" },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InstructingAgent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b3 => b3
+                    .Set(x3 => x3.BICFI).To("DEUTDEFFXXX"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void InstructedAgent_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            InstructedAgent = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = "DEUTDEFFXXX" },
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InstructedAgent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b3 => b3
+                    .Set(x3 => x3.BICFI).To("DEUTDEFFXXX"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

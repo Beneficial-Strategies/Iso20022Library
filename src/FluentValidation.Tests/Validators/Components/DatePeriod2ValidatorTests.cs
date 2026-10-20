@@ -9,7 +9,9 @@ public class DatePeriod2ValidatorTests
     [Fact]
     public void ValidMessage_NoValidationErrors()
     {
-        var msg = new DatePeriod2 { FromDate = new DateOnly(2026, 1, 1), ToDate = new DateOnly(2026, 12, 31) };
+        var msg = IsoDataFactory.Make<IDatePeriod2>(b => b
+            .Set(x => x.FromDate).To(new DateOnly(2026, 1, 1))
+            .Set(x => x.ToDate).To(new DateOnly(2026, 12, 31)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

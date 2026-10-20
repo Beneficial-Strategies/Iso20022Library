@@ -6,16 +6,23 @@ public class TransactionParties11ValidatorTests
 {
     private readonly TransactionParties11Validator _sut = new();
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent(string bic) =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23 { BICFI = bic } };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidAgent(string bic) =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>(b2 => b2
+            .Set(x2 => x2.BICFI).To(bic))));
 
-    private static BeneficialStrategies.Iso20022.Choices.Party50Choice_ ValidParty() =>
-        new BeneficialStrategies.Iso20022.Choices.Party50Choice.Party { Value = new PartyIdentification272() };
+    private static BeneficialStrategies.Iso20022.Choices.IParty50Choice ValidParty() =>
+        IsoDataFactory.Make<Choices.Party50Choice.IParty>(b => b
+            .Set(x => x.Value).To(IsoDataFactory.Make<IPartyIdentification272>()));
 
-    private static CashAccount40 ValidAccount(string id = "ACC-001") =>
-        new() { Identification = new Choices.AccountIdentification4Choice.Other { Identification = id } };
+    private static ICashAccount40 ValidAccount(string id = "ACC-001") =>
+        IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IOther>(b2 => b2
+            .Set(x2 => x2.Identification).To(id))));
 
-    private static TransactionParties11 ValidMessage() => new() { Creditor = ValidParty(), Debtor = ValidParty() };
+    private static ITransactionParties11 ValidMessage() => IsoDataFactory.Make<ITransactionParties11>(b => b
+        .Set(x => x.Creditor).To(ValidParty())
+        .Set(x => x.Debtor).To(ValidParty()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -26,26 +33,28 @@ public class TransactionParties11ValidatorTests
     [Fact]
     public void CreditorAccountAndDebtorAccount_Present_NoValidationErrors()
     {
-        var msg = ValidMessage() with { CreditorAccount = ValidAccount(), DebtorAccount = ValidAccount() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreditorAccount).To(ValidAccount())
+            .Set(x => x.DebtorAccount).To(ValidAccount()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void CreditorAgentAndDebtorAgent_Present_NoValidationErrors()
     {
-        var msg = ValidMessage() with { CreditorAgent = ValidAgent("CHASUS33XXX"), DebtorAgent = ValidAgent("DEUTDEFFXXX") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreditorAgent).To(ValidAgent("CHASUS33XXX"))
+            .Set(x => x.DebtorAgent).To(ValidAgent("DEUTDEFFXXX")));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void InitiatingPartyAndUltimateParties_Present_NoValidationErrors()
     {
-        var msg = ValidMessage() with
-        {
-            InitiatingParty = ValidParty(),
-            UltimateCreditor = ValidParty(),
-            UltimateDebtor = ValidParty(),
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.InitiatingParty).To(ValidParty())
+            .Set(x => x.UltimateCreditor).To(ValidParty())
+            .Set(x => x.UltimateDebtor).To(ValidParty()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -60,12 +69,24 @@ public class TransactionParties11ValidatorTests
     {
         var msg = fieldName switch
         {
-            "IntermediaryAgent1" => ValidMessage() with { IntermediaryAgent1 = ValidAgent("BOFAUS3NXXX"), IntermediaryAgent1Account = ValidAccount() },
-            "IntermediaryAgent2" => ValidMessage() with { IntermediaryAgent2 = ValidAgent("BOFAUS3NXXX"), IntermediaryAgent2Account = ValidAccount() },
-            "IntermediaryAgent3" => ValidMessage() with { IntermediaryAgent3 = ValidAgent("BOFAUS3NXXX"), IntermediaryAgent3Account = ValidAccount() },
-            "PreviousInstructingAgent1" => ValidMessage() with { PreviousInstructingAgent1 = ValidAgent("BOFAUS3NXXX"), PreviousInstructingAgent1Account = ValidAccount() },
-            "PreviousInstructingAgent2" => ValidMessage() with { PreviousInstructingAgent2 = ValidAgent("BOFAUS3NXXX"), PreviousInstructingAgent2Account = ValidAccount() },
-            "PreviousInstructingAgent3" => ValidMessage() with { PreviousInstructingAgent3 = ValidAgent("BOFAUS3NXXX"), PreviousInstructingAgent3Account = ValidAccount() },
+            "IntermediaryAgent1" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.IntermediaryAgent1).To(ValidAgent("BOFAUS3NXXX"))
+                .Set(x => x.IntermediaryAgent1Account).To(ValidAccount())),
+            "IntermediaryAgent2" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.IntermediaryAgent2).To(ValidAgent("BOFAUS3NXXX"))
+                .Set(x => x.IntermediaryAgent2Account).To(ValidAccount())),
+            "IntermediaryAgent3" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.IntermediaryAgent3).To(ValidAgent("BOFAUS3NXXX"))
+                .Set(x => x.IntermediaryAgent3Account).To(ValidAccount())),
+            "PreviousInstructingAgent1" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.PreviousInstructingAgent1).To(ValidAgent("BOFAUS3NXXX"))
+                .Set(x => x.PreviousInstructingAgent1Account).To(ValidAccount())),
+            "PreviousInstructingAgent2" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.PreviousInstructingAgent2).To(ValidAgent("BOFAUS3NXXX"))
+                .Set(x => x.PreviousInstructingAgent2Account).To(ValidAccount())),
+            "PreviousInstructingAgent3" => IsoDataFactory.With(ValidMessage(), b => b
+                .Set(x => x.PreviousInstructingAgent3).To(ValidAgent("BOFAUS3NXXX"))
+                .Set(x => x.PreviousInstructingAgent3Account).To(ValidAccount())),
             _ => throw new ArgumentOutOfRangeException(nameof(fieldName)),
         };
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
@@ -74,7 +95,9 @@ public class TransactionParties11ValidatorTests
     [Fact]
     public void DebtorAgentAccountAndCreditorAgentAccount_Present_NoValidationErrors()
     {
-        var msg = ValidMessage() with { DebtorAgentAccount = ValidAccount(), CreditorAgentAccount = ValidAccount() };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.DebtorAgentAccount).To(ValidAccount())
+            .Set(x => x.CreditorAgentAccount).To(ValidAccount()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

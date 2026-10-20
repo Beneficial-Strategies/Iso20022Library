@@ -9,18 +9,16 @@ public class TaxParty1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new TaxParty1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ITaxParty1>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new TaxParty1
-        {
-            TaxIdentification = "TAX-001",
-            RegistrationIdentification = "REG-001",
-            TaxType = "VAT",
-        };
+        var msg = IsoDataFactory.Make<ITaxParty1>(b => b
+            .Set(x => x.TaxIdentification).To("TAX-001")
+            .Set(x => x.RegistrationIdentification).To("REG-001")
+            .Set(x => x.TaxType).To("VAT"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

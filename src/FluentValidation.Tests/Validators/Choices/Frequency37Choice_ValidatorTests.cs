@@ -9,16 +9,18 @@ public class Frequency37Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Frequency37Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Frequency37Choice.Code { Value = Frequency10Code.Annual };
+        BeneficialStrategies.Iso20022.Choices.IFrequency37Choice choice =
+            IsoDataFactory.Make<Choices.Frequency37Choice.ICode>(b => b
+                .Set(x => x.Value).To(Frequency10Code.Annual));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Frequency37Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Frequency37Choice.Proprietary { Value = "MYFREQ" };
+        BeneficialStrategies.Iso20022.Choices.IFrequency37Choice choice =
+            IsoDataFactory.Make<Choices.Frequency37Choice.IProprietary>(b => b
+                .Set(x => x.Value).To("MYFREQ"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,12 +6,10 @@ public class ValueValidatorTests
 {
     private readonly ValueValidator _sut = new();
 
-    private static Value ValidMessage() =>
-        new()
-        {
-            BaseCurrencyItem = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            AlternateCurrencyItem = [new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 90m }],
-        };
+    private static IValue ValidMessage() =>
+        IsoDataFactory.Make<IValue>(b => b
+            .Set(x => x.BaseCurrencyItem).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.AlternateCurrencyItem).To([new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 90m }]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -24,17 +22,16 @@ public class ValueValidatorTests
     [Fact]
     public void AlternateCurrencyItem_Empty_HasValidationError()
     {
-        var msg = ValidMessage() with { AlternateCurrencyItem = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AlternateCurrencyItem).To([]));
         _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.AlternateCurrencyItem);
     }
 
     [Fact]
     public void AlternateCurrencyItem_OneElement_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            AlternateCurrencyItem = [new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 90m }],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AlternateCurrencyItem).To([new ActiveOrHistoricCurrencyAndAmount { Currency = "EUR", Amount = 90m }]));
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.AlternateCurrencyItem);
     }
 }

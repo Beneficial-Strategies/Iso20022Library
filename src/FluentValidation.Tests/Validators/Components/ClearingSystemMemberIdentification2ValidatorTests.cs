@@ -6,8 +6,9 @@ public class ClearingSystemMemberIdentification2ValidatorTests
 {
     private readonly ClearingSystemMemberIdentification2Validator _sut = new();
 
-    private static ClearingSystemMemberIdentification2 ValidMessage() =>
-        new() { MemberIdentification = "MEMBER-001" };
+    private static IClearingSystemMemberIdentification2 ValidMessage() =>
+        IsoDataFactory.Make<IClearingSystemMemberIdentification2>(b => b
+            .Set(x => x.MemberIdentification).To("MEMBER-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,14 +19,9 @@ public class ClearingSystemMemberIdentification2ValidatorTests
     [Fact]
     public void ClearingSystemIdentification_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            ClearingSystemIdentification =
-                new BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification2Choice.Proprietary
-                {
-                    Value = "MYCLRSYS",
-                },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.ClearingSystemIdentification).To(IsoDataFactory.Make<Choices.ClearingSystemIdentification2Choice.IProprietary>(b2 => b2
+                    .Set(x2 => x2.Value).To("MYCLRSYS"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,12 +6,11 @@ public class ProprietaryData7ValidatorTests
 {
     private readonly ProprietaryData7Validator _sut = new();
 
-    private static ProprietaryData7 ValidMessage() =>
-        new()
-        {
-            Type = "PaymentInstruction",
-            Data = new ProprietaryData6 { Any = new ExternalSchema.SkipPayload() },
-        };
+    private static IProprietaryData7 ValidMessage() =>
+        IsoDataFactory.Make<IProprietaryData7>(b => b
+            .Set(x => x.Type).To("PaymentInstruction")
+            .Set(x => x.Data).To(IsoDataFactory.Make<IProprietaryData6>(b2 => b2
+                .Set(x2 => x2.Any).To(new ExternalSchema.SkipPayload()))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

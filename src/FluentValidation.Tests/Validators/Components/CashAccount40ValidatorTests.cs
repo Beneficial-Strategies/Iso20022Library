@@ -6,14 +6,10 @@ public class CashAccount40ValidatorTests
 {
     private readonly CashAccount40Validator _sut = new();
 
-    private static CashAccount40 ValidMessageWithIdentification() =>
-        new()
-        {
-            Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-        };
+    private static ICashAccount40 ValidMessageWithIdentification() =>
+        IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -26,7 +22,7 @@ public class CashAccount40ValidatorTests
     [Fact]
     public void NeitherIdentificationNorProxy_HasValidationError()
     {
-        var msg = new CashAccount40();
+        var msg = IsoDataFactory.Make<ICashAccount40>();
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "IdentificationOrProxyPresenceRule");
     }
@@ -41,10 +37,9 @@ public class CashAccount40ValidatorTests
     [Fact]
     public void ProxyOnly_NoValidationError()
     {
-        var msg = new CashAccount40
-        {
-            Proxy = new ProxyAccountIdentification1 { Identification = "alias@example.com" },
-        };
+        var msg = IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Proxy).To(IsoDataFactory.Make<IProxyAccountIdentification1>(b2 => b2
+                .Set(x2 => x2.Identification).To("alias@example.com"))));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "IdentificationOrProxyPresenceRule");
     }
@@ -52,10 +47,9 @@ public class CashAccount40ValidatorTests
     [Fact]
     public void BothIdentificationAndProxy_NoValidationError()
     {
-        var msg = ValidMessageWithIdentification() with
-        {
-            Proxy = new ProxyAccountIdentification1 { Identification = "alias@example.com" },
-        };
+        var msg = IsoDataFactory.With(ValidMessageWithIdentification(), b => b
+            .Set(x => x.Proxy).To(IsoDataFactory.Make<IProxyAccountIdentification1>(b2 => b2
+                .Set(x2 => x2.Identification).To("alias@example.com"))));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "IdentificationOrProxyPresenceRule");
     }
@@ -63,15 +57,11 @@ public class CashAccount40ValidatorTests
     [Fact]
     public void TypeAndCurrencyAndName_Present_NoValidationError()
     {
-        var msg = ValidMessageWithIdentification() with
-        {
-            Type = new BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice.Proprietary
-            {
-                Value = "MYTYPE",
-            },
-            Currency = "USD",
-            Name = "My Account",
-        };
+        var msg = IsoDataFactory.With(ValidMessageWithIdentification(), b => b
+            .Set(x => x.Type).To(IsoDataFactory.Make<Choices.CashAccountType2Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYTYPE")))
+            .Set(x => x.Currency).To("USD")
+            .Set(x => x.Name).To("My Account"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,8 +6,10 @@ public class OriginalGroupInformation32ValidatorTests
 {
     private readonly OriginalGroupInformation32Validator _sut = new();
 
-    private static OriginalGroupInformation32 ValidMessage() =>
-        new() { OriginalMessageIdentification = "MSG-001", OriginalMessageNameIdentification = "pain.013.001.12" };
+    private static IOriginalGroupInformation32 ValidMessage() =>
+        IsoDataFactory.Make<IOriginalGroupInformation32>(b => b
+            .Set(x => x.OriginalMessageIdentification).To("MSG-001")
+            .Set(x => x.OriginalMessageNameIdentification).To("pain.013.001.12"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,22 +20,17 @@ public class OriginalGroupInformation32ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            GroupStatus = ExternalPaymentGroupStatus1Code.AcceptedTechnicalValidation,
-            NumberOfTransactionsPerStatus =
-            [
-                new NumberOfTransactionsPerStatus5
-                {
-                    DetailedNumberOfTransactions = "1",
-                    DetailedStatus = ExternalPaymentTransactionStatus1Code.AcceptedTechnicalValidation,
-                },
-            ],
-            OriginalControlSum = 100.00m,
-            OriginalCreationDateTime = new DateTime(2026, 1, 1),
-            OriginalNumberOfTransactions = "1",
-            StatusReasonInformation = [new StatusReasonInformation14()],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.GroupStatus).To(ExternalPaymentGroupStatus1Code.AcceptedTechnicalValidation)
+            .Set(x => x.NumberOfTransactionsPerStatus).To([
+                IsoDataFactory.Make<INumberOfTransactionsPerStatus5>(b2 => b2
+                    .Set(x2 => x2.DetailedNumberOfTransactions).To("1")
+                    .Set(x2 => x2.DetailedStatus).To(ExternalPaymentTransactionStatus1Code.AcceptedTechnicalValidation)),
+            ])
+            .Set(x => x.OriginalControlSum).To(100.00m)
+            .Set(x => x.OriginalCreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.OriginalNumberOfTransactions).To("1")
+            .Set(x => x.StatusReasonInformation).To([IsoDataFactory.Make<IStatusReasonInformation14>()]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

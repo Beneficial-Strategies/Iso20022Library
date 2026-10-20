@@ -9,19 +9,17 @@ public class SettlementTimeRequest2ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new SettlementTimeRequest2()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ISettlementTimeRequest2>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllFieldsPresent_NoValidationErrors()
     {
-        var msg = new SettlementTimeRequest2
-        {
-            CLSTime = new TimeOnly(12, 0, 0),
-            TillTime = new TimeOnly(15, 0, 0),
-            FromTime = new TimeOnly(9, 0, 0),
-            RejectTime = new TimeOnly(16, 0, 0),
-        };
+        var msg = IsoDataFactory.Make<ISettlementTimeRequest2>(b => b
+            .Set(x => x.CLSTime).To(new TimeOnly(12, 0, 0))
+            .Set(x => x.TillTime).To(new TimeOnly(15, 0, 0))
+            .Set(x => x.FromTime).To(new TimeOnly(9, 0, 0))
+            .Set(x => x.RejectTime).To(new TimeOnly(16, 0, 0)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

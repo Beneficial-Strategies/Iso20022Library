@@ -6,14 +6,10 @@ public class DocumentLineType1ValidatorTests
 {
     private readonly DocumentLineType1Validator _sut = new();
 
-    private static DocumentLineType1 ValidMessage() =>
-        new()
-        {
-            CodeOrProprietary = new BeneficialStrategies.Iso20022.Choices.DocumentLineType1Choice.Proprietary
-            {
-                Value = "MYLINETYPE",
-            },
-        };
+    private static IDocumentLineType1 ValidMessage() =>
+        IsoDataFactory.Make<IDocumentLineType1>(b => b
+            .Set(x => x.CodeOrProprietary).To(IsoDataFactory.Make<Choices.DocumentLineType1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYLINETYPE"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -24,7 +20,8 @@ public class DocumentLineType1ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { Issuer = "IssuerCo" };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Issuer).To("IssuerCo"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

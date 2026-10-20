@@ -6,13 +6,11 @@ public class GroupHeader124ValidatorTests
 {
     private readonly GroupHeader124Validator _sut = new();
 
-    private static GroupHeader124 ValidMessage() =>
-        new()
-        {
-            MessageIdentification = "MSG-001",
-            CreationDateTime = new DateTime(2026, 1, 1),
-            NumberOfTransactions = "1",
-        };
+    private static IGroupHeader124 ValidMessage() =>
+        IsoDataFactory.Make<IGroupHeader124>(b => b
+            .Set(x => x.MessageIdentification).To("MSG-001")
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1))
+            .Set(x => x.NumberOfTransactions).To("1"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -23,23 +21,20 @@ public class GroupHeader124ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var agent = new BranchAndFinancialInstitutionIdentification8
-        {
-            FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-        };
-        var msg = ValidMessage() with
-        {
-            Authorisation =
-            [
-                new BeneficialStrategies.Iso20022.Choices.Authorisation1Choice.Proprietary { Value = "AUTH1" },
-            ],
-            ControlSum = 100.00m,
-            CreditorAgent = agent,
-            DebtorAgent = agent,
-            ForwardingAgent = agent,
-            GroupReversal = true,
-            InitiatingParty = new PartyIdentification272 { Name = "Initiator Co" },
-        };
+        var agent = IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Authorisation).To([
+                IsoDataFactory.Make<Choices.Authorisation1Choice.IProprietary>(b2 => b2
+                    .Set(x2 => x2.Value).To("AUTH1")),
+            ])
+            .Set(x => x.ControlSum).To(100.00m)
+            .Set(x => x.CreditorAgent).To(agent)
+            .Set(x => x.DebtorAgent).To(agent)
+            .Set(x => x.ForwardingAgent).To(agent)
+            .Set(x => x.GroupReversal).To(true)
+            .Set(x => x.InitiatingParty).To(IsoDataFactory.Make<IPartyIdentification272>(b2 => b2
+                .Set(x2 => x2.Name).To("Initiator Co"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

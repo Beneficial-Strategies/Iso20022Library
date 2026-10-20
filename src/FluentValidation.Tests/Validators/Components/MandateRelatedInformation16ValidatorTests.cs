@@ -9,31 +9,25 @@ public class MandateRelatedInformation16ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new MandateRelatedInformation16()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IMandateRelatedInformation16>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new MandateRelatedInformation16
-        {
-            AmendmentIndicator = true,
-            AmendmentInformationDetails = new AmendmentInformationDetails15(),
-            DateOfSignature = new DateOnly(2026, 1, 1),
-            ElectronicSignature = Convert.ToBase64String([1, 2, 3]),
-            FinalCollectionDate = new DateOnly(2026, 12, 1),
-            FirstCollectionDate = new DateOnly(2026, 2, 1),
-            Frequency = new BeneficialStrategies.Iso20022.Choices.Frequency36Choice.Type
-            {
-                Value = Frequency6Code.Monthly,
-            },
-            MandateIdentification = "MNDT-001",
-            Reason = new BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice.Proprietary
-            {
-                Value = "MYREASON",
-            },
-            TrackingDays = "05",
-        };
+        var msg = IsoDataFactory.Make<IMandateRelatedInformation16>(b => b
+            .Set(x => x.AmendmentIndicator).To(true)
+            .Set(x => x.AmendmentInformationDetails).To(IsoDataFactory.Make<IAmendmentInformationDetails15>())
+            .Set(x => x.DateOfSignature).To(new DateOnly(2026, 1, 1))
+            .Set(x => x.ElectronicSignature).To(Convert.ToBase64String([1, 2, 3]))
+            .Set(x => x.FinalCollectionDate).To(new DateOnly(2026, 12, 1))
+            .Set(x => x.FirstCollectionDate).To(new DateOnly(2026, 2, 1))
+            .Set(x => x.Frequency).To(IsoDataFactory.Make<Choices.Frequency36Choice.IType>(b2 => b2
+                .Set(x2 => x2.Value).To(Frequency6Code.Monthly)))
+            .Set(x => x.MandateIdentification).To("MNDT-001")
+            .Set(x => x.Reason).To(IsoDataFactory.Make<Choices.MandateSetupReason1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYREASON")))
+            .Set(x => x.TrackingDays).To("05"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

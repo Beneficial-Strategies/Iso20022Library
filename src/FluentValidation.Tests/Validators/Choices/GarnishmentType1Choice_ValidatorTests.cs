@@ -9,20 +9,16 @@ public class GarnishmentType1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.GarnishmentType1Choice.Code
-        {
-            Value = ExternalGarnishmentType1Code.GarnishmentForChildSupport,
-        };
+        var value = IsoDataFactory.Make<Choices.GarnishmentType1Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalGarnishmentType1Code.GarnishmentForChildSupport));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.GarnishmentType1Choice.Proprietary
-        {
-            Value = "MYGARNISHMENT",
-        };
+        var value = IsoDataFactory.Make<Choices.GarnishmentType1Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYGARNISHMENT"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

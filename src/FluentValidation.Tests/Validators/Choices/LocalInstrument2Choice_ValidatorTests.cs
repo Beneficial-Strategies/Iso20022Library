@@ -9,16 +9,18 @@ public class LocalInstrument2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.LocalInstrument2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.LocalInstrument2Choice.Code { Value = ExternalLocalInstrument1Code.BatchPaymentsAruba };
+        BeneficialStrategies.Iso20022.Choices.ILocalInstrument2Choice choice =
+            IsoDataFactory.Make<Choices.LocalInstrument2Choice.ICode>(b => b
+                .Set(x => x.Value).To(ExternalLocalInstrument1Code.BatchPaymentsAruba));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.LocalInstrument2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.LocalInstrument2Choice.Proprietary { Value = "MYINSTR" };
+        BeneficialStrategies.Iso20022.Choices.ILocalInstrument2Choice choice =
+            IsoDataFactory.Make<Choices.LocalInstrument2Choice.IProprietary>(b => b
+                .Set(x => x.Value).To("MYINSTR"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

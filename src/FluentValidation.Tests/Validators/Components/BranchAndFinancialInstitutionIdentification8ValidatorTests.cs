@@ -6,8 +6,9 @@ public class BranchAndFinancialInstitutionIdentification8ValidatorTests
 {
     private readonly BranchAndFinancialInstitutionIdentification8Validator _sut = new();
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidMessage() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidMessage() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,7 +19,9 @@ public class BranchAndFinancialInstitutionIdentification8ValidatorTests
     [Fact]
     public void BranchIdentification_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { BranchIdentification = new BranchData5 { Name = "Main Branch" } };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.BranchIdentification).To(IsoDataFactory.Make<IBranchData5>(b2 => b2
+            .Set(x2 => x2.Name).To("Main Branch"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

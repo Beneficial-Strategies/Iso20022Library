@@ -9,23 +9,17 @@ public class CreditorReferenceInformation3ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new CreditorReferenceInformation3()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<ICreditorReferenceInformation3>()).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = new CreditorReferenceInformation3
-        {
-            Reference = "REF-001",
-            Type = new CreditorReferenceType3
-            {
-                CodeOrProprietary = new BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice.Proprietary
-                {
-                    Value = "MYREFTYPE",
-                },
-            },
-        };
+        var msg = IsoDataFactory.Make<ICreditorReferenceInformation3>(b => b
+            .Set(x => x.Reference).To("REF-001")
+            .Set(x => x.Type).To(IsoDataFactory.Make<ICreditorReferenceType3>(b2 => b2
+                .Set(x2 => x2.CodeOrProprietary).To(IsoDataFactory.Make<Choices.CreditorReferenceType2Choice.IProprietary>(b3 => b3
+                    .Set(x3 => x3.Value).To("MYREFTYPE"))))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

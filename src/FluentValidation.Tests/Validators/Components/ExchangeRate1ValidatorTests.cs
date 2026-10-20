@@ -9,6 +9,6 @@ public class ExchangeRate1ValidatorTests
     [Fact]
     public void EmptyMessage_NoValidationErrors()
     {
-        _sut.TestValidate(new ExchangeRate1()).ShouldNotHaveAnyValidationErrors();
+        _sut.TestValidate(IsoDataFactory.Make<IExchangeRate1>()).ShouldNotHaveAnyValidationErrors();
     }
 }

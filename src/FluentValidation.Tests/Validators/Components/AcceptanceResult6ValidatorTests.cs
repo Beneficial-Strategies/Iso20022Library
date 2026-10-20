@@ -6,7 +6,8 @@ public class AcceptanceResult6ValidatorTests
 {
     private readonly AcceptanceResult6Validator _sut = new();
 
-    private static AcceptanceResult6 ValidMessage() => new() { Accepted = true };
+    private static IAcceptanceResult6 ValidMessage() => IsoDataFactory.Make<IAcceptanceResult6>(b => b
+        .Set(x => x.Accepted).To(true));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,15 +18,11 @@ public class AcceptanceResult6ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Accepted = false,
-            RejectReason = new BeneficialStrategies.Iso20022.Choices.MandateReason1Choice.Code
-            {
-                Value = ExternalMandateReason1Code.IncorrectAccountNumber,
-            },
-            AdditionalRejectReasonInformation = ["Additional detail"],
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Accepted).To(false)
+            .Set(x => x.RejectReason).To(IsoDataFactory.Make<Choices.MandateReason1Choice.ICode>(b2 => b2
+                .Set(x2 => x2.Value).To(ExternalMandateReason1Code.IncorrectAccountNumber)))
+            .Set(x => x.AdditionalRejectReasonInformation).To(["Additional detail"]));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

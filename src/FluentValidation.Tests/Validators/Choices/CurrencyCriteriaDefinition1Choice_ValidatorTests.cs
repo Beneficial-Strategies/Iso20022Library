@@ -23,7 +23,7 @@ public class CurrencyCriteriaDefinition1Choice_ValidatorTests
     [Fact]
     public void NewCriteriaVariant_Empty_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.NewCriteria();
+        var value = IsoDataFactory.Make<Choices.CurrencyCriteriaDefinition1Choice.INewCriteria>();
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

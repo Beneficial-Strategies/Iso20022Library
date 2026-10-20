@@ -6,8 +6,9 @@ public class GenericFinancialIdentification1ValidatorTests
 {
     private readonly GenericFinancialIdentification1Validator _sut = new();
 
-    private static GenericFinancialIdentification1 ValidMessage() =>
-        new() { Identification = "ID-001" };
+    private static IGenericFinancialIdentification1 ValidMessage() =>
+        IsoDataFactory.Make<IGenericFinancialIdentification1>(b => b
+            .Set(x => x.Identification).To("ID-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,14 +19,9 @@ public class GenericFinancialIdentification1ValidatorTests
     [Fact]
     public void SchemeName_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            SchemeName =
-                new BeneficialStrategies.Iso20022.Choices.FinancialIdentificationSchemeName1Choice.Proprietary
-                {
-                    Value = "MYSCHEME",
-                },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.SchemeName).To(IsoDataFactory.Make<Choices.FinancialIdentificationSchemeName1Choice.IProprietary>(b2 => b2
+                    .Set(x2 => x2.Value).To("MYSCHEME"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

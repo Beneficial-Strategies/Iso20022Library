@@ -9,20 +9,16 @@ public class ReservationType2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.Code
-        {
-            Value = ExternalReservationType1Code.CashReservation,
-        };
+        var value = IsoDataFactory.Make<Choices.ReservationType2Choice.ICode>(b => b
+            .Set(x => x.Value).To(ExternalReservationType1Code.CashReservation));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.Proprietary
-        {
-            Value = "MYRESERVATION",
-        };
+        var value = IsoDataFactory.Make<Choices.ReservationType2Choice.IProprietary>(b => b
+            .Set(x => x.Value).To("MYRESERVATION"));
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

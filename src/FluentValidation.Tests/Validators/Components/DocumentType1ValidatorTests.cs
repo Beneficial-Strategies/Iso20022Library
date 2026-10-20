@@ -6,14 +6,10 @@ public class DocumentType1ValidatorTests
 {
     private readonly DocumentType1Validator _sut = new();
 
-    private static DocumentType1 ValidMessage() =>
-        new()
-        {
-            CodeOrProprietary = new BeneficialStrategies.Iso20022.Choices.DocumentType2Choice.Proprietary
-            {
-                Value = "MYDOCTYPE",
-            },
-        };
+    private static IDocumentType1 ValidMessage() =>
+        IsoDataFactory.Make<IDocumentType1>(b => b
+            .Set(x => x.CodeOrProprietary).To(IsoDataFactory.Make<Choices.DocumentType2Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYDOCTYPE"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

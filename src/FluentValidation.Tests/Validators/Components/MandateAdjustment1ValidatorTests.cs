@@ -6,7 +6,8 @@ public class MandateAdjustment1ValidatorTests
 {
     private readonly MandateAdjustment1Validator _sut = new();
 
-    private static MandateAdjustment1 ValidMessage() => new() { DateAdjustmentRuleIndicator = true };
+    private static IMandateAdjustment1 ValidMessage() => IsoDataFactory.Make<IMandateAdjustment1>(b => b
+        .Set(x => x.DateAdjustmentRuleIndicator).To(true));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,13 +18,9 @@ public class MandateAdjustment1ValidatorTests
     [Fact]
     public void Category_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Category = new BeneficialStrategies.Iso20022.Choices.Frequency37Choice.Proprietary
-            {
-                Value = "MYFREQ",
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Category).To(IsoDataFactory.Make<Choices.Frequency37Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYFREQ"))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

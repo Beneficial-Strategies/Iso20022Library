@@ -6,16 +6,13 @@ public class StandingOrderIdentification9ValidatorTests
 {
     private readonly StandingOrderIdentification9Validator _sut = new();
 
-    private static CashAccount40 ValidAccount() =>
-        new()
-        {
-            Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-        };
+    private static ICashAccount40 ValidAccount() =>
+        IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000"))));
 
-    private static StandingOrderIdentification9 ValidMessage() => new() { Account = ValidAccount() };
+    private static IStandingOrderIdentification9 ValidMessage() => IsoDataFactory.Make<IStandingOrderIdentification9>(b => b
+        .Set(x => x.Account).To(ValidAccount()));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -26,13 +23,9 @@ public class StandingOrderIdentification9ValidatorTests
     [Fact]
     public void AccountOwner_Present_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            AccountOwner = new BranchAndFinancialInstitutionIdentification8
-            {
-                FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-            },
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.AccountOwner).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b2 => b2
+                .Set(x2 => x2.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()))));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

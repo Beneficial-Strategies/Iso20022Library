@@ -9,20 +9,16 @@ public class References80Choice_ValidatorTests
     [Fact]
     public void CommonIdentification_NoValidationErrors()
     {
-        var msg = new BeneficialStrategies.Iso20022.Choices.References80Choice.CommonIdentification
-        {
-            Value = "REF-001",
-        };
+        var msg = IsoDataFactory.Make<Choices.References80Choice.ICommonIdentification>(b => b
+            .Set(x => x.Value).To("REF-001"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void UniqueTransactionIdentifier_NoValidationErrors()
     {
-        var msg = new BeneficialStrategies.Iso20022.Choices.References80Choice.UniqueTransactionIdentifier
-        {
-            Value = "ABCDEFGHIJKLMNOPQR12",
-        };
+        var msg = IsoDataFactory.Make<Choices.References80Choice.IUniqueTransactionIdentifier>(b => b
+            .Set(x => x.Value).To("ABCDEFGHIJKLMNOPQR12"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

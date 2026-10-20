@@ -6,19 +6,19 @@ public class Mandate22ValidatorTests
 {
     private readonly Mandate22Validator _sut = new();
 
-    private static PartyIdentification272 ValidParty(string name) => new() { Name = name };
+    private static IPartyIdentification272 ValidParty(string name) => IsoDataFactory.Make<IPartyIdentification272>(b => b
+        .Set(x => x.Name).To(name));
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidAgent() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
-    private static Mandate22 ValidMessage() =>
-        new()
-        {
-            Creditor = ValidParty("Creditor Co"),
-            Debtor = ValidParty("Debtor Co"),
-            DebtorAgent = ValidAgent(),
-            TrackingIndicator = true,
-        };
+    private static IMandate22 ValidMessage() =>
+        IsoDataFactory.Make<IMandate22>(b => b
+            .Set(x => x.Creditor).To(ValidParty("Creditor Co"))
+            .Set(x => x.Debtor).To(ValidParty("Debtor Co"))
+            .Set(x => x.DebtorAgent).To(ValidAgent())
+            .Set(x => x.TrackingIndicator).To(true));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -31,7 +31,8 @@ public class Mandate22ValidatorTests
     [Fact]
     public void UltimateDebtor_SameAsDebtor_HasValidationError()
     {
-        var msg = ValidMessage() with { UltimateDebtor = ValidParty("Debtor Co") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UltimateDebtor).To(ValidParty("Debtor Co")));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "UltimateDebtorGuideline");
     }
@@ -39,7 +40,8 @@ public class Mandate22ValidatorTests
     [Fact]
     public void UltimateCreditor_SameAsCreditor_HasValidationError()
     {
-        var msg = ValidMessage() with { UltimateCreditor = ValidParty("Creditor Co") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UltimateCreditor).To(ValidParty("Creditor Co")));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "UltimateCreditorGuideline");
     }

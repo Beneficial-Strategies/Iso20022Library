@@ -6,8 +6,9 @@ public class AmountAndDirection5ValidatorTests
 {
     private readonly AmountAndDirection5Validator _sut = new();
 
-    private static AmountAndDirection5 ValidMessage() =>
-        new() { Amount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m } };
+    private static IAmountAndDirection5 ValidMessage() =>
+        IsoDataFactory.Make<IAmountAndDirection5>(b => b
+            .Set(x => x.Amount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 100m }));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -18,7 +19,8 @@ public class AmountAndDirection5ValidatorTests
     [Fact]
     public void CreditDebit_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { CreditDebit = CreditDebitCode.Credit };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreditDebit).To(CreditDebitCode.Credit));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -28,7 +30,8 @@ public class AmountAndDirection5ValidatorTests
     public void Currency_Unset_HasValidationError()
     {
         // a bad code cannot be built (ActiveCurrencyCode checks its pattern); an unset one still can
-        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Currency = default } };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Amount).To(ValidMessage().Amount with { Currency = default }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "Amount.Currency");
     }
@@ -36,7 +39,8 @@ public class AmountAndDirection5ValidatorTests
     [Fact]
     public void Currency_Valid_NoValidationError()
     {
-        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Currency = "USD" } };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Amount).To(ValidMessage().Amount with { Currency = "USD" }));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "Amount.Currency");
     }
@@ -46,7 +50,8 @@ public class AmountAndDirection5ValidatorTests
     [Fact]
     public void Amount_Zero_HasValidationError()
     {
-        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Amount = 0m } };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Amount).To(ValidMessage().Amount with { Amount = 0m }));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "Amount.Amount");
     }
@@ -61,7 +66,8 @@ public class AmountAndDirection5ValidatorTests
     [Fact]
     public void Amount_Positive_NoValidationError()
     {
-        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Amount = 0.01m } };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Amount).To(ValidMessage().Amount with { Amount = 0.01m }));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "Amount.Amount");
     }

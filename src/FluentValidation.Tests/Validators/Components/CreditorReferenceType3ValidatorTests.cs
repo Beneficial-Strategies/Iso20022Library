@@ -6,14 +6,10 @@ public class CreditorReferenceType3ValidatorTests
 {
     private readonly CreditorReferenceType3Validator _sut = new();
 
-    private static CreditorReferenceType3 ValidMessage() =>
-        new()
-        {
-            CodeOrProprietary = new BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice.Proprietary
-            {
-                Value = "MYREFTYPE",
-            },
-        };
+    private static ICreditorReferenceType3 ValidMessage() =>
+        IsoDataFactory.Make<ICreditorReferenceType3>(b => b
+            .Set(x => x.CodeOrProprietary).To(IsoDataFactory.Make<Choices.CreditorReferenceType2Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYREFTYPE"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -24,7 +20,8 @@ public class CreditorReferenceType3ValidatorTests
     [Fact]
     public void AllOptionalFields_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { Issuer = "IssuerCo" };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Issuer).To("IssuerCo"));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -6,25 +6,16 @@ public class TrackerData7ValidatorTests
 {
     private readonly TrackerData7Validator _sut = new();
 
-    private static TrackerData7 ValidMessage() =>
-        new()
-        {
-            ConfirmedAmount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            ConfirmedDate = new BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice.Date
-            {
-                Value = new DateOnly(2026, 1, 1),
-            },
-            TrackerRecord =
-            [
-                new TrackerRecord5
-                {
-                    Agent = new BranchAndFinancialInstitutionIdentification8
-                    {
-                        FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
-                    },
-                },
-            ],
-        };
+    private static ITrackerData7 ValidMessage() =>
+        IsoDataFactory.Make<ITrackerData7>(b => b
+            .Set(x => x.ConfirmedAmount).To(new ActiveCurrencyAndAmount { Currency = "USD", Amount = 100m })
+            .Set(x => x.ConfirmedDate).To(IsoDataFactory.Make<Choices.DateAndDateTime2Choice.IDate>(b2 => b2
+                .Set(x2 => x2.Value).To(new DateOnly(2026, 1, 1))))
+            .Set(x => x.TrackerRecord).To([
+                IsoDataFactory.Make<ITrackerRecord5>(b2 => b2
+                    .Set(x2 => x2.Agent).To(IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b3 => b3
+                        .Set(x3 => x3.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>())))),
+            ]));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -35,7 +26,8 @@ public class TrackerData7ValidatorTests
     [Fact]
     public void EmptyTrackerRecord_HasValidationError()
     {
-        var msg = ValidMessage() with { TrackerRecord = [] };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.TrackerRecord).To([]));
         var result = _sut.TestValidate(msg);
         result.ShouldHaveValidationErrorFor(x => x.TrackerRecord);
     }

@@ -6,15 +6,11 @@ public class DateAndType1ValidatorTests
 {
     private readonly DateAndType1Validator _sut = new();
 
-    private static DateAndType1 ValidMessage() =>
-        new()
-        {
-            Date = new DateOnly(2026, 1, 1),
-            Type = new BeneficialStrategies.Iso20022.Choices.DateType2Choice.Proprietary
-            {
-                Value = "MYDATETYPE",
-            },
-        };
+    private static IDateAndType1 ValidMessage() =>
+        IsoDataFactory.Make<IDateAndType1>(b => b
+            .Set(x => x.Date).To(new DateOnly(2026, 1, 1))
+            .Set(x => x.Type).To(IsoDataFactory.Make<Choices.DateType2Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYDATETYPE"))));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()

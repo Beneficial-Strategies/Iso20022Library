@@ -9,35 +9,29 @@ public class Frequency36Choice_ValidatorTests
     [Fact]
     public void TypeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Frequency36Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Frequency36Choice.Type
-            {
-                Value = Frequency6Code.Monthly,
-            };
+        BeneficialStrategies.Iso20022.Choices.IFrequency36Choice choice =
+            IsoDataFactory.Make<Choices.Frequency36Choice.IType>(b => b
+                .Set(x => x.Value).To(Frequency6Code.Monthly));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void PeriodVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Frequency36Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Frequency36Choice.Period
-            {
-                Type = Frequency6Code.Monthly,
-                CountPerPeriod = 2m,
-            };
+        BeneficialStrategies.Iso20022.Choices.IFrequency36Choice choice =
+            IsoDataFactory.Make<Choices.Frequency36Choice.IPeriod>(b => b
+                .Set(x => x.Type).To(Frequency6Code.Monthly)
+                .Set(x => x.CountPerPeriod).To(2m));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void PointInTimeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Frequency36Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Frequency36Choice.PointInTime
-            {
-                Type = Frequency6Code.Monthly,
-                Value = "15",
-            };
+        BeneficialStrategies.Iso20022.Choices.IFrequency36Choice choice =
+            IsoDataFactory.Make<Choices.Frequency36Choice.IPointInTime>(b => b
+                .Set(x => x.Type).To(Frequency6Code.Monthly)
+                .Set(x => x.Value).To("15"));
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

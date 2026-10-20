@@ -6,7 +6,8 @@ public class MessageHeader1ValidatorTests
 {
     private readonly MessageHeader1Validator _sut = new();
 
-    private static MessageHeader1 ValidMessage() => new() { MessageIdentification = "MSG-001" };
+    private static IMessageHeader1 ValidMessage() => IsoDataFactory.Make<IMessageHeader1>(b => b
+        .Set(x => x.MessageIdentification).To("MSG-001"));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -17,7 +18,8 @@ public class MessageHeader1ValidatorTests
     [Fact]
     public void CreationDateTime_Present_NoValidationError()
     {
-        var msg = ValidMessage() with { CreationDateTime = new DateTime(2026, 1, 1) };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.CreationDateTime).To(new DateTime(2026, 1, 1)));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

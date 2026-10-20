@@ -6,20 +6,20 @@ public class Mandate23ValidatorTests
 {
     private readonly Mandate23Validator _sut = new();
 
-    private static PartyIdentification272 ValidParty(string name) => new() { Name = name };
+    private static IPartyIdentification272 ValidParty(string name) => IsoDataFactory.Make<IPartyIdentification272>(b => b
+        .Set(x => x.Name).To(name));
 
-    private static BranchAndFinancialInstitutionIdentification8 ValidAgent() =>
-        new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
+    private static IBranchAndFinancialInstitutionIdentification8 ValidAgent() =>
+        IsoDataFactory.Make<IBranchAndFinancialInstitutionIdentification8>(b => b
+            .Set(x => x.FinancialInstitutionIdentification).To(IsoDataFactory.Make<IFinancialInstitutionIdentification23>()));
 
-    private static Mandate23 ValidMessage() =>
-        new()
-        {
-            Creditor = ValidParty("Creditor Co"),
-            Debtor = ValidParty("Debtor Co"),
-            DebtorAgent = ValidAgent(),
-            MandateRequestIdentification = "MNDTREQ-001",
-            TrackingIndicator = true,
-        };
+    private static IMandate23 ValidMessage() =>
+        IsoDataFactory.Make<IMandate23>(b => b
+            .Set(x => x.Creditor).To(ValidParty("Creditor Co"))
+            .Set(x => x.Debtor).To(ValidParty("Debtor Co"))
+            .Set(x => x.DebtorAgent).To(ValidAgent())
+            .Set(x => x.MandateRequestIdentification).To("MNDTREQ-001")
+            .Set(x => x.TrackingIndicator).To(true));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -32,7 +32,8 @@ public class Mandate23ValidatorTests
     [Fact]
     public void UltimateDebtor_SameAsDebtor_HasValidationError()
     {
-        var msg = ValidMessage() with { UltimateDebtor = ValidParty("Debtor Co") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UltimateDebtor).To(ValidParty("Debtor Co")));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "UltimateDebtorGuideline");
     }
@@ -40,7 +41,8 @@ public class Mandate23ValidatorTests
     [Fact]
     public void UltimateDebtor_DifferentFromDebtor_NoValidationError()
     {
-        var msg = ValidMessage() with { UltimateDebtor = ValidParty("Someone Else") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UltimateDebtor).To(ValidParty("Someone Else")));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "UltimateDebtorGuideline");
     }
@@ -48,7 +50,8 @@ public class Mandate23ValidatorTests
     [Fact]
     public void UltimateCreditor_SameAsCreditor_HasValidationError()
     {
-        var msg = ValidMessage() with { UltimateCreditor = ValidParty("Creditor Co") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UltimateCreditor).To(ValidParty("Creditor Co")));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "UltimateCreditorGuideline");
     }
@@ -56,7 +59,8 @@ public class Mandate23ValidatorTests
     [Fact]
     public void UltimateCreditor_DifferentFromCreditor_NoValidationError()
     {
-        var msg = ValidMessage() with { UltimateCreditor = ValidParty("Someone Else") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.UltimateCreditor).To(ValidParty("Someone Else")));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "UltimateCreditorGuideline");
     }
@@ -66,34 +70,29 @@ public class Mandate23ValidatorTests
     [Fact]
     public void AllOptionalChildren_Present_NoValidationError()
     {
-        var account = new CashAccount40
-        {
-            Identification = new BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN
-            {
-                Value = "DE89370400440532013000",
-            },
-        };
-        var msg = ValidMessage() with
-        {
-            Adjustment = new MandateAdjustment1 { DateAdjustmentRuleIndicator = false },
-            Authentication = new MandateAuthentication1(),
-            CollectionAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 50m },
-            CreditorAccount = account,
-            CreditorAgent = ValidAgent(),
-            CreditorSchemeIdentification = ValidParty("Scheme Owner"),
-            DebtorAccount = account,
-            FirstCollectionAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 75m },
-            MandateIdentification = ["MNDT-001"],
-            MaximumAmount = new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 500m },
-            Occurrences = new MandateOccurrences5 { SequenceType = SequenceType2Code.Recurring },
-            Reason = new BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice.Proprietary
-            {
-                Value = "MYREASON",
-            },
-            ReferredDocument = [new ReferredMandateDocument2()],
-            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
-            Type = new MandateTypeInformation2(),
-        };
+        var account = IsoDataFactory.Make<ICashAccount40>(b => b
+            .Set(x => x.Identification).To(IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b2 => b2
+                .Set(x2 => x2.Value).To("DE89370400440532013000"))));
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Adjustment).To(IsoDataFactory.Make<IMandateAdjustment1>(b2 => b2
+                .Set(x2 => x2.DateAdjustmentRuleIndicator).To(false)))
+            .Set(x => x.Authentication).To(IsoDataFactory.Make<IMandateAuthentication1>())
+            .Set(x => x.CollectionAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 50m })
+            .Set(x => x.CreditorAccount).To(account)
+            .Set(x => x.CreditorAgent).To(ValidAgent())
+            .Set(x => x.CreditorSchemeIdentification).To(ValidParty("Scheme Owner"))
+            .Set(x => x.DebtorAccount).To(account)
+            .Set(x => x.FirstCollectionAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 75m })
+            .Set(x => x.MandateIdentification).To(["MNDT-001"])
+            .Set(x => x.MaximumAmount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = 500m })
+            .Set(x => x.Occurrences).To(IsoDataFactory.Make<IMandateOccurrences5>(b2 => b2
+                .Set(x2 => x2.SequenceType).To(SequenceType2Code.Recurring)))
+            .Set(x => x.Reason).To(IsoDataFactory.Make<Choices.MandateSetupReason1Choice.IProprietary>(b2 => b2
+                .Set(x2 => x2.Value).To("MYREASON")))
+            .Set(x => x.ReferredDocument).To([IsoDataFactory.Make<IReferredMandateDocument2>()])
+            .Set(x => x.SupplementaryData).To([IsoDataFactory.Make<ISupplementaryData1>(b2 => b2
+                .Set(x2 => x2.Envelope).To(new SupplementaryDataEnvelope1()))])
+            .Set(x => x.Type).To(IsoDataFactory.Make<IMandateTypeInformation2>()));
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

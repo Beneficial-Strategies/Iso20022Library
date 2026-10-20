@@ -6,10 +6,13 @@ public class Mandate21ValidatorTests
 {
     private readonly Mandate21Validator _sut = new();
 
-    private static PartyIdentification272 ValidParty(string name) => new() { Name = name };
+    private static IPartyIdentification272 ValidParty(string name) => IsoDataFactory.Make<IPartyIdentification272>(b => b
+        .Set(x => x.Name).To(name));
 
-    private static Mandate21 ValidMessage() =>
-        new() { MandateIdentification = "MNDT-001", TrackingIndicator = true };
+    private static IMandate21 ValidMessage() =>
+        IsoDataFactory.Make<IMandate21>(b => b
+            .Set(x => x.MandateIdentification).To("MNDT-001")
+            .Set(x => x.TrackingIndicator).To(true));
 
     [Fact]
     public void ValidMessage_NoValidationErrors()
@@ -22,7 +25,9 @@ public class Mandate21ValidatorTests
     [Fact]
     public void UltimateDebtor_SameAsDebtor_HasValidationError()
     {
-        var msg = ValidMessage() with { Debtor = ValidParty("Debtor Co"), UltimateDebtor = ValidParty("Debtor Co") };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Debtor).To(ValidParty("Debtor Co"))
+            .Set(x => x.UltimateDebtor).To(ValidParty("Debtor Co")));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "UltimateDebtorGuideline");
     }
@@ -30,11 +35,9 @@ public class Mandate21ValidatorTests
     [Fact]
     public void UltimateDebtor_DifferentFromDebtor_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Debtor = ValidParty("Debtor Co"),
-            UltimateDebtor = ValidParty("Someone Else"),
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Debtor).To(ValidParty("Debtor Co"))
+            .Set(x => x.UltimateDebtor).To(ValidParty("Someone Else")));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "UltimateDebtorGuideline");
     }
@@ -42,11 +45,9 @@ public class Mandate21ValidatorTests
     [Fact]
     public void UltimateCreditor_SameAsCreditor_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Creditor = ValidParty("Creditor Co"),
-            UltimateCreditor = ValidParty("Creditor Co"),
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Creditor).To(ValidParty("Creditor Co"))
+            .Set(x => x.UltimateCreditor).To(ValidParty("Creditor Co")));
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "UltimateCreditorGuideline");
     }
@@ -54,11 +55,9 @@ public class Mandate21ValidatorTests
     [Fact]
     public void UltimateCreditor_DifferentFromCreditor_NoValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Creditor = ValidParty("Creditor Co"),
-            UltimateCreditor = ValidParty("Someone Else"),
-        };
+        var msg = IsoDataFactory.With(ValidMessage(), b => b
+            .Set(x => x.Creditor).To(ValidParty("Creditor Co"))
+            .Set(x => x.UltimateCreditor).To(ValidParty("Someone Else")));
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(result.Errors, e => e.PropertyName == "UltimateCreditorGuideline");
     }
