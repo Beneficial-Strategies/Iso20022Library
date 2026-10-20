@@ -22,6 +22,9 @@ public sealed class Iso20022InterfaceJsonConverterFactory(IIsoDataFactory factor
 
     private readonly IIsoDataFactory _factory = factory ?? throw new System.ArgumentNullException(nameof(factory));
 
+    /// <summary>The factory that makes the objects this converter reads.</summary>
+    public IIsoDataFactory Factory => _factory;
+
     /// <inheritdoc/>
     public override bool CanConvert(Type typeToConvert) =>
         typeToConvert.IsInterface && Iso.KindOf(typeToConvert) is IsoKind.Message or IsoKind.Component or IsoKind.Choice or IsoKind.ChoiceVariant;
