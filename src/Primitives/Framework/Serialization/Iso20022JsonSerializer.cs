@@ -26,16 +26,25 @@ public static class Iso20022JsonSerializer
 
     /// <summary>Deserializes a JSON string to an ISO 20022 message record.</summary>
     /// <exception cref="JsonException">
-    /// The JSON is malformed, or a value violates an ISO 20022 format constraint — every
-    /// converter in <see cref="Iso20022JsonSerializerOptions.Default"/> wraps
-    /// <see cref="Iso20022FormatException"/> as <see cref="JsonException"/>, so this single
-    /// exception type covers both cases. See this project's own <c>CLAUDE.md</c> serialization
-    /// contract table.
+    /// The JSON is malformed, or a value violates an ISO 20022 format constraint. The converters in
+    /// <see cref="Iso20022JsonSerializerOptions.Default"/> wrap <see cref="Iso20022FormatException"/> as
+    /// <see cref="JsonException"/>; so does this method for the records that refuse a value in their own setter
+    /// (the amount types, whose digit and sign rules are checked there), which <c>System.Text.Json</c> would otherwise let
+    /// escape. See this project's own <c>CLAUDE.md</c> serialization contract table.
     /// </exception>
     public static TMessage Deserialize<TMessage>(string json)
-        where TMessage : IOuterRecord =>
-        JsonSerializer.Deserialize<TMessage>(json, Iso20022JsonSerializerOptions.Default)
-        ?? throw new JsonException($"Deserializing '{typeof(TMessage).Name}' produced a null result.");
+        where TMessage : IOuterRecord
+    {
+        try
+        {
+            return JsonSerializer.Deserialize<TMessage>(json, Iso20022JsonSerializerOptions.Default)
+                ?? throw new JsonException($"Deserializing '{typeof(TMessage).Name}' produced a null result.");
+        }
+        catch (Iso20022FormatException ex)
+        {
+            throw new JsonException(ex.Message, ex);
+        }
+    }
 
     /// <summary>
     /// Attempts to deserialize a JSON string to an ISO 20022 message record without throwing.
