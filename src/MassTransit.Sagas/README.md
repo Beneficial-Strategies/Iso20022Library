@@ -59,16 +59,12 @@ The events and the saga state carry message records, and MassTransit moves them 
 (each is covered by `MassTransitJsonRoundTripTests`, and the first by the saga tests as well):
 
 * **Register the library's converters, or events are silently dropped.** MassTransit's default options cannot read a `ValueList<T>`.
-  Without the converters of `Iso20022JsonSerializerOptions.Default` an event does not fail loudly: it is never consumed and ends in the
+  Without the converters of `Iso20022JsonSerializerOptions.Default` (which `ConfigureIso20022Json` registers) an event does not fail loudly: it is never consumed and ends in the
   error queue. Register them on the bus:
 
   ```csharp
-  busCfg.ConfigureJsonSerializerOptions(options =>
-  {
-      foreach (var converter in Iso20022JsonSerializerOptions.Default.Converters)
-          options.Converters.Add(converter);
-      return options;
-  });
+  busCfg.ConfigureIso20022Json();                // the events carry records
+  busCfg.ConfigureIso20022Json(isoDataFactory);  // the events carry interfaces; the factory makes the objects (the Factory package)
   ```
 
   With them, an event with lists and a choice arrives equal to the one that was sent.
@@ -79,7 +75,7 @@ The events and the saga state carry message records, and MassTransit moves them 
   `initiatingParty`), which is fine between services of one team. A payload meant for another system should be written with the library's
   own serializer (`Iso20022JsonSerializer`), not by MassTransit.
 
-Reading the interfaces instead of the records, so that this package no longer needs `BeneficialStrategies.Iso20022.Common`, is #70.
+With a factory, the bus also reads the model's interfaces (`Iso20022InterfaceJsonConverterFactory`); moving the events from the records to the interfaces, so that this package no longer needs `BeneficialStrategies.Iso20022.Common`, is #70. The factory is process-wide too: one factory for all buses.
 
 ## Project layout
 

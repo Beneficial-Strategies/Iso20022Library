@@ -63,12 +63,7 @@ public class MassTransitJsonRoundTripTests
                     (context, busCfg) =>
                     {
                         if (withLibraryConverters)
-                            busCfg.ConfigureJsonSerializerOptions(options =>
-                            {
-                                foreach (var converter in Iso20022JsonSerializerOptions.Default.Converters)
-                                    options.Converters.Add(converter);
-                                return options;
-                            });
+                            busCfg.ConfigureIso20022Json();
                         busCfg.ConfigureEndpoints(context);
                     }
                 );
