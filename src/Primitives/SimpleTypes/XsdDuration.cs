@@ -78,17 +78,29 @@ public readonly struct XsdDuration : IIsoSimpleValue<XsdDurationValue>, IIsoComp
             throw new Iso20022FormatException(
                 typeof(XsdDuration), value, "xs:duration — \"-?PnYnMnDTnHnMnS\", at least one designator required");
 
+        // each number can still be more than a component holds (P99999999999999999999Y)
+        var seconds = 0m;
+        if (match.Groups[7].Success && !decimal.TryParse(match.Groups[7].Value, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out seconds))
+            throw TooLarge(value);
         Value = new XsdDurationValue(
             IsNegative: match.Groups[1].Success,
-            Years: ParseIntGroup(match.Groups[2]),
-            Months: ParseIntGroup(match.Groups[3]),
-            Days: ParseIntGroup(match.Groups[4]),
-            Hours: ParseIntGroup(match.Groups[5]),
-            Minutes: ParseIntGroup(match.Groups[6]),
-            Seconds: match.Groups[7].Success ? decimal.Parse(match.Groups[7].Value, CultureInfo.InvariantCulture) : 0m);
+            Years: ParseIntGroup(match.Groups[2], value),
+            Months: ParseIntGroup(match.Groups[3], value),
+            Days: ParseIntGroup(match.Groups[4], value),
+            Hours: ParseIntGroup(match.Groups[5], value),
+            Minutes: ParseIntGroup(match.Groups[6], value),
+            Seconds: seconds);
     }
 
-    private static int ParseIntGroup(Group group) => group.Success ? int.Parse(group.Value, CultureInfo.InvariantCulture) : 0;
+    private static Iso20022FormatException TooLarge(string value) =>
+        new(typeof(XsdDuration), value, "xs:duration — each number must fit in a 32-bit integer (seconds in a decimal)");
+
+    private static int ParseIntGroup(Group group, string value)
+    {
+        if (!group.Success)
+            return 0;
+        return int.TryParse(group.Value, NumberStyles.None, CultureInfo.InvariantCulture, out var number) ? number : throw TooLarge(value);
+    }
 
     /// <summary>Returns <see langword="true"/> when every component magnitude in <paramref name="value"/> is non-negative.</summary>
     public static bool TryCreate(XsdDurationValue value, [NotNullWhen(true)] out XsdDuration result)

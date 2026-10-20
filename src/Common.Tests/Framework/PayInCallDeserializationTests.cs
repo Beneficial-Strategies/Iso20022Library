@@ -80,16 +80,20 @@ public class PayInCallDeserializationTests
     }
 
     /// <summary>
-    /// The reason for #19. The existing Deserialize accepts a required element that is absent,
-    /// because <c>required</c> is only a compiler rule and the record is built by reflection.
+    /// The reason for #19. The first reader accepted a required element that is absent, because <c>required</c> is only a compiler
+    /// rule and the record is built by reflection. <c>Deserialize</c> and <c>TryDeserialize</c> now read with <c>TryRead</c> (step 5).
     /// </summary>
     [Fact]
-    public void The_old_reader_accepts_a_missing_required_element()
+    public void Deserialize_and_TryDeserialize_reject_a_missing_required_element()
     {
         var ok = Iso20022XmlSerializer.TryDeserialize<PayInCallV01>(Xml(msgId: ""), out var message, out var error);
 
-        Assert.True(ok, error?.Message);
-        Assert.Equal(default, message!.ReportData.MessageIdentification);
+        Assert.False(ok);
+        Assert.Null(message);
+        var exception = Assert.IsType<Iso20022DeserializationException>(error);
+        Assert.Equal("Document/PayInCall/RptData/MsgId", exception.Path);
+        Assert.Equal(IssueCode.RequiredMissing, exception.First.Code);
+        Assert.Throws<Iso20022DeserializationException>(() => Iso20022XmlSerializer.Deserialize<PayInCallV01>(Xml(msgId: "")));
     }
 
     [Fact]

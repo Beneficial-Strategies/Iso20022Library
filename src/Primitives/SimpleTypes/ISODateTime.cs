@@ -89,7 +89,10 @@ public readonly struct ISODateTime : IIsoSimpleValue<DateTime>, IIsoTimezoneQual
         }
         if (!Regex.IsMatch(core, CorePattern))
             throw new Iso20022FormatException(typeof(ISODateTime), value, "ISO 8601 \"YYYY-MM-DDThh:mm:ss[.sss]\" with an optional timezone");
-        Value = DateTime.Parse(core, CultureInfo.InvariantCulture, DateTimeStyles.None);
+        // the shape is right, but the date or time can still be impossible (hour 25, second 60)
+        if (!DateTime.TryParse(core, CultureInfo.InvariantCulture, DateTimeStyles.None, out var dateTime))
+            throw new Iso20022FormatException(typeof(ISODateTime), value, "a date and time that exist: month 01-12, a day of that month, hours 00-23, minutes and seconds 00-59");
+        Value = dateTime;
         TimezoneOffset = tz;
     }
 

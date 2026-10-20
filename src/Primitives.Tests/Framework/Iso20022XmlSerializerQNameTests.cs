@@ -121,7 +121,7 @@ public class Iso20022XmlSerializerQNameTests
     }
 
     [Fact]
-    public void Deserialize_UnboundPrefix_ThrowsFormatException()
+    public void Deserialize_UnboundPrefix_Throws_AndNamesTheElement()
     {
         const string xml = """
             <?xml version="1.0" encoding="UTF-8"?>
@@ -132,7 +132,9 @@ public class Iso20022XmlSerializerQNameTests
             </Document>
             """;
 
-        var ex = Assert.Throws<Iso20022FormatException>(() => Iso20022XmlSerializer.Deserialize<QNameTestMessage>(xml));
+        var ex = Assert.Throws<Serialization.Iso20022DeserializationException>(() => Iso20022XmlSerializer.Deserialize<QNameTestMessage>(xml));
         Assert.Contains("unbound", ex.Message);
+        Assert.Equal("Document/Root/Qn", ex.Path);
+        Assert.Equal("unbound:Foo", ex.Value);
     }
 }

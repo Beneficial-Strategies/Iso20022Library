@@ -60,7 +60,7 @@ public class Iso20022XmlSerializerTryDeserializeTests
     }
 
     [Fact]
-    public void TryDeserialize_String_WrongRootElement_ReturnsFalseWithInvalidOperationException()
+    public void TryDeserialize_String_WrongRootElement_ReturnsFalseWithDeserializationException()
     {
         // Well-formed XML, but not this message's <Document>/<MulSttlmReq> shape.
         const string wellFormedButWrongShape = "<SomethingElse xmlns=\"urn:not-iso20022\"><Inner/></SomethingElse>";
@@ -73,7 +73,9 @@ public class Iso20022XmlSerializerTryDeserializeTests
 
         Assert.False(success);
         Assert.Null(message);
-        Assert.IsType<InvalidOperationException>(error);
+        var exception = Assert.IsType<Iso20022DeserializationException>(error);
+        Assert.IsAssignableFrom<InvalidOperationException>(exception);
+        Assert.All(exception.Issues, i => Assert.Equal(IssueCode.WrongRoot, i.Code));
     }
 
     [Fact]
