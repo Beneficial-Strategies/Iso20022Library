@@ -29,6 +29,18 @@ if (!result.IsValid)
 
 The same method takes an `XDocument` or an `XElement`, and has an async form, `ValidateAsync<TInterface, TRecord>`, returning the result and the record. An `XElement` can be any part of a document, so `IValidator<INameAndAddress5>` with `NameAndAddress5` validates a part on its own; pass a `ReadContext` with the namespace and a path prefix when it is a fragment of a larger document.
 
+## Without the records
+
+With a factory, the XML is read into the interface itself and no record is named, so you do not reference `BeneficialStrategies.Iso20022.Common` at all. The factory comes from [BeneficialStrategies.Iso20022.Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory), which builds the classes that implement the interfaces at run time:
+
+```csharp
+var factory = new IsoDataFactory();   // or the singleton from AddIso20022Factory(...)
+
+ValidationResult result = validator.Validate(xml, factory, out IFIToFICustomerCreditTransferV14? message);
+```
+
+One type argument, inferred from the validator and the `out` variable (`out var message` works here, since the interface is the validator's own; it is only the record overloads that need the `out` variable declared with its type). The same overloads exist for an `XDocument`, an `XElement` and `ValidateAsync`. The result and `message` mean what the next section says. This package depends only on the `IIsoDataFactory` abstraction in `Primitives`, so you can pass a factory of your own as well.
+
 ## What you get back
 
 | The XML | `result` | `message` |
