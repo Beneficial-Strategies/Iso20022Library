@@ -16,14 +16,14 @@ public class CurrencyCriteriaDefinition1Choice_ValidatorTests
     [Fact]
     public void NewCriteriaVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Minimal;
+        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Maximal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void NewCriteriaVariant_Empty_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.NewCriteria();
+        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }
