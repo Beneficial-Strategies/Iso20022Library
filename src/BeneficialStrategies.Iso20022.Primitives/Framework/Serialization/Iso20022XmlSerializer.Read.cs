@@ -17,7 +17,7 @@ public static partial class Iso20022XmlSerializer
     // ── Public API ─────────────────────────────────────────────────────────────
 
     /// <summary>Reads an XML string into a message, reporting every problem found.</summary>
-    public static DeserializationResult<TMessage> TryRead<TMessage>(string? xml)
+    public static DeserializationResult<TMessage> TryRead<TMessage>(string? xml, IIsoDataFactory? factory = null)
         where TMessage : class, IOuterRecord
     {
         if (xml is null)
@@ -35,14 +35,14 @@ public static partial class Iso20022XmlSerializer
                 [new DeserializationIssue("", IssueCode.MalformedXml, null, ex.Message, ex.LineNumber, ex.LinePosition)]
             );
         }
-        return TryRead<TMessage>(document);
+        return TryRead<TMessage>(document, factory);
     }
 
     /// <summary>Reads a document into a message, reporting every problem found.</summary>
-    public static DeserializationResult<TMessage> TryRead<TMessage>(XDocument? document)
+    public static DeserializationResult<TMessage> TryRead<TMessage>(XDocument? document, IIsoDataFactory? factory = null)
         where TMessage : class, IOuterRecord
     {
-        var sink = new ReadSink();
+        var sink = new ReadSink(factory);
         var (ns, xmlTag, docElem) = GetMessageConstants(typeof(TMessage));
         var root = document?.Root;
         if (root is null)
@@ -67,12 +67,12 @@ public static partial class Iso20022XmlSerializer
     /// Reads any part of a document: a component, a choice or a message, rooted at <paramref name="element"/>.
     /// The element's own name is not checked, since the same type appears under many tags.
     /// </summary>
-    public static DeserializationResult<T> Read<T>(XElement element, ReadContext? context = null)
+    public static DeserializationResult<T> Read<T>(XElement element, ReadContext? context = null, IIsoDataFactory? factory = null)
         where T : class
     {
         var ns = context?.Namespace ?? element.Name.Namespace;
         var path = (context?.PathPrefix ?? "") + element.Name.LocalName;
-        var sink = new ReadSink();
+        var sink = new ReadSink(factory);
         var value = ReadValue(typeof(T), element, ns, path, sink, isLeaf: false);
         return sink.Issues.Count == 0 && value is T typed
             ? DeserializationResult<T>.Success(typed)
@@ -81,8 +81,11 @@ public static partial class Iso20022XmlSerializer
 
     // ── The walk ───────────────────────────────────────────────────────────────
 
-    private sealed class ReadSink
+    private sealed class ReadSink(IIsoDataFactory? factory)
     {
+        /// <summary>Makes the objects for interfaces; records are created directly.</summary>
+        public IIsoDataFactory Factory { get; } = factory ?? NoDataFactory.Instance;
+
         public List<DeserializationIssue> Issues { get; } = [];
 
         public void Add(XObject? at, string path, IssueCode code, string? value, string reason)
@@ -99,9 +102,7 @@ public static partial class Iso20022XmlSerializer
     // if the sink is not empty at the end.
     private static object ReadObject(Type type, XElement el, XNamespace ns, string path, ReadSink sink)
     {
-        var instance =
-            Activator.CreateInstance(type)
-            ?? throw new InvalidOperationException($"Cannot create instance of {type.Name}.");
+        var instance = Create(type, sink);
         var props = GetProps(type);
 
         foreach (var child in el.Elements())
@@ -121,6 +122,8 @@ public static partial class Iso20022XmlSerializer
                 {
                     if (meta.IsRequired)
                         sink.Add(el, propPath, IssueCode.RequiredMissing, null, $"Required element <{meta.XmlTag}> is missing.");
+                    else if (type.IsInterface)
+                        SetMember(instance, meta, CreateList(meta.Property.PropertyType, meta.CoreType, []));   // a record's list starts empty; so does this
                     continue;
                 }
                 var items = new List<object>();
@@ -131,7 +134,7 @@ public static partial class Iso20022XmlSerializer
                     if (item is null) allRead = false; else items.Add(item);
                 }
                 if (allRead)
-                    meta.Property.SetValue(instance, CreateList(meta.Property.PropertyType, meta.CoreType, items));
+                    SetMember(instance, meta, CreateList(meta.Property.PropertyType, meta.CoreType, items));
             }
             else
             {
@@ -144,7 +147,7 @@ public static partial class Iso20022XmlSerializer
                 }
                 var value = ReadValue(propType, child, ns, propPath, sink, meta.CoreIsLeaf);
                 if (value is not null)
-                    meta.Property.SetValue(instance, value);
+                    SetMember(instance, meta, value);
             }
         }
         return instance;
@@ -158,7 +161,7 @@ public static partial class Iso20022XmlSerializer
             return ReadEnum(core, el, path, sink);
         if (isLeaf || IsLeafType(core))
             return ReadLeaf(core, el, path, sink);
-        if (core.IsAbstract)
+        if (IsChoiceType(core))
             return ReadChoice(core, el, ns, path, sink);
         if (IsAmountType(core))
             return ReadAmount(core, el, path, sink);
@@ -225,7 +228,7 @@ public static partial class Iso20022XmlSerializer
         var (tag, variantType) = present[0];
         var wrapper = parentEl.Element(ns + tag)!;
         var variantPath = $"{path}/{tag}";
-        if (variantType.GetCustomAttribute<IsoXmlTagAttribute>() is not null)
+        if (ClassTag(variantType) is not null)
             return IsAmountType(variantType)
                 ? ReadAmount(variantType, wrapper, variantPath, sink)
                 : ReadObject(variantType, wrapper, ns, variantPath, sink);
@@ -235,8 +238,8 @@ public static partial class Iso20022XmlSerializer
         var value = ReadValue(variantProps[0].CoreType, wrapper, ns, variantPath, sink, variantProps[0].CoreIsLeaf);
         if (value is null)
             return null;
-        var instance = Activator.CreateInstance(variantType)!;
-        variantProps[0].Property.SetValue(instance, value);
+        var instance = Create(variantType, sink);
+        SetMember(instance, variantProps[0], value);
         return instance;
     }
 
@@ -274,9 +277,29 @@ public static partial class Iso20022XmlSerializer
         }
         if (!ok)
             return null;
-        var instance = Activator.CreateInstance(type)!;
-        currencyProp.SetValue(instance, currency);
-        props.First(p => p.XmlTag == "Amount").Property.SetValue(instance, amount);
+        var instance = Create(type, sink);
+        SetMember(instance, props.First(p => p.XmlTag == "Currency"), currency);
+        SetMember(instance, props.First(p => p.XmlTag == "Amount"), amount);
         return instance;
+    }
+
+    // A record is created directly; an interface is made by the factory.
+    private static object Create(Type type, ReadSink sink) =>
+        type.IsInterface
+            ? sink.Factory.Create(type)
+            : Activator.CreateInstance(type)
+                ?? throw new InvalidOperationException($"Cannot create instance of {type.Name}.");
+
+    // The property of the interface has no setter; the object the factory made has one with the same name.
+    private static void SetMember(object instance, PropMeta meta, object? value)
+    {
+        var property = meta.Property.CanWrite
+            ? meta.Property
+            : instance.GetType().GetProperty(meta.Property.Name, BindingFlags.Public | BindingFlags.Instance);
+        if (property is null || !property.CanWrite)
+            throw new InvalidOperationException(
+                $"{instance.GetType().Name} has no settable property '{meta.Property.Name}', which {meta.Property.DeclaringType?.Name} requires of the object a factory makes."
+            );
+        property.SetValue(instance, value);
     }
 }
