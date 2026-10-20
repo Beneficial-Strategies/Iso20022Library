@@ -1,54 +1,114 @@
 # BeneficialStrategies.Iso20022.Factory
 
-Read ISO 20022 messages into their **interfaces** without the message records. The package builds, at run time, a small sealed
-class for each interface you ask for (a message, a component, a choice variant) and gives it to the reader to fill. You depend on
-`Primitives` and on whatever supplies the interfaces; you do not depend on `BeneficialStrategies.Iso20022.Common`
-(3,339 messages' worth of records).
+**Objects for the ISO 20022 interfaces, made for you.** Ask for an interface (a message, a component, a choice variant) and the Factory builds, at run time, a small sealed class that implements it, fills it from XML or JSON, and gives it to you. You never write the implementation, and you do not install one: no message records, no [BeneficialStrategies.Iso20022](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) with its 3,339 messages' worth of classes.
 
-Targets netstandard2.0, net8.0 and net10.0.
+It rests on the idea behind the whole family: the **interfaces are the contract** ([BeneficialStrategies.Iso20022.Interfaces](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)), and the tools (validators, readers, queue consumers) are written against them, not against any one implementation. The records are one implementation, a class of your own is another, and the Factory is the one that appears when you ask.
 
-## Use
+```
+dotnet add package BeneficialStrategies.Iso20022.Factory --prerelease
+```
+
+It depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives), and targets netstandard2.0, net8.0 and net10.0. The packages are in alpha, hence `--prerelease`. Four examples, each a step further.
+
+## 1. Your own interface
+
+The Factory is not specific to ISO's own messages: it makes an object for any interface that follows the pattern. Here, an interface of your own, with the primitive types for members:
+
+```csharp
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Factory;
+using BeneficialStrategies.Iso20022.Framework;
+using BeneficialStrategies.Iso20022.Serialization;
+using BeneficialStrategies.Iso20022.SimpleTypes;
+
+[IsoMessage("xmpl.001.001.01", "Party", "urn:example:xmpl.001.001.01")]   // identifier, element, namespace of the document
+public interface IMyMessage : IOuterRecord
+{
+    [IsoXmlTag("Name")] Max35Text Name { get; }                      // at most 35 characters
+    [IsoXmlTag("ChargeBearer")] ChargeBearerType1Code ChargeBearer { get; }   // DEBT, CRED, SHAR or SLEV
+}
+```
+
+There is no class that implements `IMyMessage`, and you do not write one. Give the reader a factory:
 
 ```csharp
 var factory = new IsoDataFactory();
 
-var result = Iso20022XmlSerializer.TryRead<IFIToFICustomerCreditTransferV14>(xml, factory);
+var xml = "<Document xmlns=\"urn:example:xmpl.001.001.01\"><Party><Name>Acme Corp</Name><ChargeBearer>SHAR</ChargeBearer></Party></Document>";
+
+var result = Iso20022XmlSerializer.TryRead<IMyMessage>(xml, factory);
+
 if (result.Succeeded)
-    IFIToFICustomerCreditTransferV14 message = result.Message;   // an object of a class built for the interface
+{
+    IMyMessage party = result.Message!;                    // an object of a class built for the interface
+    Console.WriteLine($"{party.Name} pays {party.ChargeBearer}");   // Acme Corp pays Shared
+}
 else
-    foreach (var issue in result.Issues) Console.WriteLine(issue);   // every problem, with its path
+    foreach (var issue in result.Issues)
+        Console.WriteLine(issue);                          // every problem, with its path
 ```
 
-The object is a normal value: its members are the interface's, `Equals` and `GetHashCode` compare the members (and lists by
-their items), `ToString` shows them, the validators of the `FluentValidation` package accept it (`IValidator<IFoo>`), and the
-serializer writes it back to the same XML.
+The object is a normal value: its members are the interface's, `Equals` and `GetHashCode` compare the members (and lists by their items), `ToString` shows them (`IMyMessage_1 { Name = Acme Corp, ChargeBearer = Shared }`), and the serializer writes it back to the same XML:
 
-## Making an object by hand
+```csharp
+Console.WriteLine(Iso20022XmlSerializer.SerializeToString(party));
+```
+```xml
+<Document xmlns="urn:example:xmpl.001.001.01">
+  <Party>
+    <Name>Acme Corp</Name>
+    <ChargeBearer>SHAR</ChargeBearer>
+  </Party>
+</Document>
+```
 
-For a test or a sample, `IsoDataFactory.Make<T>` makes an object for an interface and sets its members. The interface has no
-setters, so each member is named with a lambda and then given its value (two steps, so that the value converts to the member's
-type as it does for a record: `"MSG-1"` to a `Max35Text`).
+## 2. A message of the library
+
+Now the interfaces of ISO's own messages. Add the package that has them, and ask for one:
+
+```
+dotnet add package BeneficialStrategies.Iso20022.Interfaces --prerelease
+```
+
+```csharp
+using BeneficialStrategies.Iso20022.camt;
+
+var result = Iso20022XmlSerializer.TryRead<IFIToFIPaymentCancellationRequestV10>(xml, factory);   // xml: a camt.056.001.10 document
+
+if (result.Succeeded)
+    Console.WriteLine(result.Message!.Assignment.Identification);   // DEUTDEFF/240316/CAMT056/00001
+```
+
+Everything about it is as in example 1, for a message with a deep tree of components: it reads, compares by value, and writes back to XML that reads into an equal object. Nothing was written and no implementation library was installed. If the document is wrong, the result lists every problem and no object is made:
+
+```
+Document/FIToFIPmtCxlReq/Assgnmt/Id: RequiredMissing: Required element <Id> is missing. (line 24, position 6)
+```
+
+The validators of [BeneficialStrategies.Iso20022.FluentValidation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation) are written for the interfaces, so they accept the object (`IValidator<IFIToFIPaymentCancellationRequestV10>`). To read XML and validate it in one call, or queue payloads, see [FluentValidation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml) and [FluentValidation.Payloads](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Payloads), which take the factory too.
+
+## 3. In an application: dependency injection
+
+```csharp
+services.AddIso20022Factory(typeof(IFIToFIPaymentCancellationRequestV10), typeof(IBankToCustomerStatementV08));
+```
+
+registers one `IsoDataFactory` (also as `IIsoDataFactory`) and, in a host, builds the classes for those messages and everything they reach when the host starts, so no read pays for building a class. Without a host, call `factory.Warm(typeof(IFoo), ...)` yourself at startup. The factory is thread-safe, and what it builds is shared by every factory in the process.
+
+## 4. Making an object by hand
+
+For a test or a sample you want an object without reading anything. `IsoDataFactory.Make<T>` makes one for an interface and sets its members. The interface has no setters, so each member is named with a lambda and then given its value (two steps, so that the value converts to the member's type as it does for a record: `"ID-1"` to a `Max35Text`):
 
 ```csharp
 var id = IsoDataFactory.Make<IGenericIdentification3>(b => b
     .Set(x => x.Identification).To("ID-1")
     .Set(x => x.Issuer).To("BANK"));
+
+var other = IsoDataFactory.With(id, b => b.Set(x => x.Identification).To("ID-2"));   // a copy, one member changed
+Console.WriteLine($"{id.Identification} {other.Identification} {id.Issuer}");         // ID-1 ID-2 BANK
 ```
 
-`IsoDataFactory.With(source, b => b.Set(x => x.Member).To(value))` is the counterpart of a record's `with`: a copy of an object (of the factory, or a record)
-with the named members changed; the source is not touched.
-
-A member that is not named stays unset (a list is empty). `new IsoBuilder<T>` is not public: use `Make`, which builds with
-`IsoDataFactory.Shared`. The `Samples` package holds named objects made this way.
-
-## Dependency injection
-
-```csharp
-services.AddIso20022Factory(typeof(IFIToFICustomerCreditTransferV14), typeof(IBankToCustomerStatementV08));
-```
-
-registers one `IsoDataFactory` (also as `IIsoDataFactory`) and, in a host, builds the classes for those messages and everything
-they reach when the host starts. Without a host, call `factory.Warm(typeof(IFoo), ...)` yourself at startup.
+`IsoDataFactory.With` is the counterpart of a record's `with`: a copy of an object (of the factory, or a record) with the named members changed; the source is not touched. A member that is not named stays unset (a list is empty). `Make` and `With` build with `IsoDataFactory.Shared`. `BeneficialStrategies.Iso20022.Samples` holds named valid objects made this way, for tests.
 
 ## What it costs
 
