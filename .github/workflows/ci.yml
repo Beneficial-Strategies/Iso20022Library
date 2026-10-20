@@ -49,8 +49,8 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Test Primitives on .NET Framework 4.8
-        run: dotnet test src/BeneficialStrategies.Iso20022.Primitives.Tests -c Release -f net48
+        run: dotnet test src/Primitives.Tests -c Release -f net48
 
       # The netstandard2.0 builds of Interfaces, FluentValidation, FluentValidation.Payloads and Factory, with classes of the tests' own (no records: Common is net8.0 and net10.0).
       - name: Test the validators and the payload validators on .NET Framework 4.8
-        run: dotnet test src/BeneficialStrategies.Iso20022.FluentValidation.NetStandard.Tests -c Release -f net48
+        run: dotnet test src/FluentValidation.NetStandard.Tests -c Release -f net48

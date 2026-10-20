@@ -198,7 +198,7 @@ encountered. The correct reference style is shown in older files such as
 cd src && dotnet build iso20022.sln
 
 # Build the library for Release/publish verification
-cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release
+cd src && dotnet build Common -c Release
 ```
 
 ### Target Framework Policy
@@ -244,7 +244,7 @@ reflection over the attributes and `IOuterRecord`, and the registry is told the 
   build only, so type tests for the exception write `System.ArgumentNullException`);
 * no `ReadOnlySpan` overloads of `Parse` (use `Substring`), and `LangVersion` is `latest`.
 Its tests run on .NET Framework 4.8 (`Primitives.Tests` adds `net48` on Windows; tests that need the records, such as the serializer tests on real messages, are in `Common.Tests`, and those of `.Payloads` in `FluentValidation.Payloads.Tests`; `FluentValidation.Xml.Tests` holds the tests of the Xml package, `Factory.Tests` those of the Factory package; `FluentValidation.NetStandard.Tests` runs the validators, the Xml extensions and the payload validators on .NET Framework 4.8 with classes of its own; the `primitives-net48` CI job). Code in `Primitives`
-must keep compiling for `netstandard2.0`: build it (`dotnet build src/BeneficialStrategies.Iso20022.Primitives`) after a change.
+must keep compiling for `netstandard2.0`: build it (`dotnet build src/Primitives`) after a change.
 `Iso20022PrimitiveJsonOptions` holds the JSON converters of the primitives alone.
 
 ### Build Performance (Known, Not a Misconfiguration)
@@ -262,7 +262,7 @@ fix.
 Practical mitigations for interim/dev-loop builds (all confirmed against this repo, not
 theoretical):
 - **Build only the one project you're iterating on**, not the whole solution:
-  `dotnet build BeneficialStrategies.Iso20022.Common`, not `dotnet build iso20022.sln`.
+  `dotnet build Common`, not `dotnet build iso20022.sln`.
 - **Build a single TFM while iterating**, not both: `dotnet build -f net8.0` (or whichever you're
   actively targeting). Now that the library multi-targets two TFMs, building both on every save
   doubles the ~80-100s cost for no benefit until you're actually checking cross-TFM behavior.
@@ -285,7 +285,7 @@ The files are maintained directly (see "How the code is maintained" above). Clau
 ### Directory Structure
 
 ```
-src/BeneficialStrategies.Iso20022.Primitives/   # no reference to Common; same root namespace
+src/Primitives/   # no reference to Common; same root namespace
 ├── SimpleTypes/         # Primitive data types (structs)
 ├── Codesets/            # Enums (code sets) and external code structs
 ├── Amounts/             # Amount types
@@ -294,15 +294,15 @@ src/BeneficialStrategies.Iso20022.Primitives/   # no reference to Common; same r
 ├── Metadata/            # Attribute definitions
 └── Framework/           # IIso* interfaces, IsoSimpleType attributes, Iso20022FormatException, and the JSON converters the types name
 
-src/BeneficialStrategies.Iso20022.Interfaces/   # references Primitives only; netstandard2.0 as well
+src/Interfaces/   # references Primitives only; netstandard2.0 as well
 ├── Components/ Choices/ MessageDefinitions/    # one interface per record, generated from the records (#27)
 └── GlobalUsings.cs
 
-src/BeneficialStrategies.Iso20022.Factory/                   # references Primitives only; netstandard2.0 as well: classes for the interfaces, built at run time (#61)
-src/BeneficialStrategies.Iso20022.FluentValidation.Xml/        # references Primitives only; netstandard2.0 as well: validate XML from text, a document or an element (#21)
-src/BeneficialStrategies.Iso20022.FluentValidation.Payloads/   # references Primitives only; netstandard2.0 as well: validates raw XML or JSON payloads (#28)
+src/Factory/                   # references Primitives only; netstandard2.0 as well: classes for the interfaces, built at run time (#61)
+src/FluentValidation.Xml/        # references Primitives only; netstandard2.0 as well: validate XML from text, a document or an element (#21)
+src/FluentValidation.Payloads/   # references Primitives only; netstandard2.0 as well: validates raw XML or JSON payloads (#28)
 
-src/BeneficialStrategies.Iso20022.Common/       # references Primitives and Interfaces
+src/Common/       # references Primitives and Interfaces
 ├── Components/          # Message components (12,653 types)
 ├── Choices/             # Polymorphic choice types
 └── MessageDefinitions/  # Top-level message type files
@@ -625,7 +625,7 @@ in #41 (and #39 for the choices). Put derived files in `_work/<project>/xsd/`, n
 
 ### Embedded XML Sample Files
 
-XML sample files live in `src/BeneficialStrategies.Iso20022.Common.Tests/TestData/` and are
+XML sample files live in `src/Common.Tests/TestData/` and are
 compiled as `EmbeddedResource`. Every file **must** be validated against the official ISO 20022
 XSD **before** it is committed.
 

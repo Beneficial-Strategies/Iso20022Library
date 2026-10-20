@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity) like Primitives, which it references; see CLAUDE.md, Target Framework Policy. -->
+    <TargetFrameworks>netstandard2.0;net8.0;net10.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BeneficialStrategies.Iso20022.Validation</RootNamespace>
+    <AssemblyName>BeneficialStrategies.Iso20022.FluentValidation.Xml</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>BeneficialStrategies.Iso20022.FluentValidation.Xml</PackageId>
+    <PackageDescription>Validate ISO 20022 XML straight from text, a document or an element: every problem in the XML is reported with its path, then the FluentValidation rules run on what was read. Needs only the Primitives package, not the message records.</PackageDescription>
+    <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Polyfill" Version="11.*" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

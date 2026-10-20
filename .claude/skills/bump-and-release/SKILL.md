@@ -14,7 +14,7 @@ The version to release is: **$ARGUMENTS**
 
 ### 1. Release notes
 
-Open `src/BeneficialStrategies.Iso20022.Common/release-notes.txt` (and the equivalent
+Open `src/Common/release-notes.txt` (and the equivalent
 `release-notes.txt` for any other package with meaningful changes this release —
 `BeneficialStrategies.Iso20022.FluentValidation`, `BeneficialStrategies.Iso20022.MassTransit.Sagas`).
 
@@ -52,18 +52,18 @@ off the shared version, defeating the point of centralizing it here.
 
 Files that hardcode a message count and must be kept in sync together:
 
-- `src/BeneficialStrategies.Iso20022.Common/BeneficialStrategies.Iso20022.Common.csproj` — `PackageDescription`:
+- `src/Common/BeneficialStrategies.Iso20022.Common.csproj` — `PackageDescription`:
   ```xml
   <PackageDescription>The entirety of the ISO20022 message domain model. {N} B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
   ```
-- `src/BeneficialStrategies.Iso20022.Common/README.md` — opening sentence: `...containers for {N} different types of financial services messages...`
+- `src/Common/README.md` — opening sentence: `...containers for {N} different types of financial services messages...`
 - `README.md` (root) — the package table's one-line description of `BeneficialStrategies.Iso20022` (now much smaller surface area than before the restructuring — a single table cell, not a duplicated paragraph).
 - `doc/Scope-Statement.md` — full regeneration, see below. Its own summary line and per-business-area table use the same `{N}`.
 
-**Recompute `{N}`** as the actual count of files under `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/`:
+**Recompute `{N}`** as the actual count of files under `src/Common/MessageDefinitions/`:
 
 ```bash
-find src/BeneficialStrategies.Iso20022.Common/MessageDefinitions -iname "*.cs" | wc -l
+find src/Common/MessageDefinitions -iname "*.cs" | wc -l
 ```
 
 Use this file count, not `get_repository_statistics`' MCP-reported total, for `{N}` in the
@@ -78,7 +78,7 @@ exactly — only the precise counts do.
 per-business-area snapshot, so partial updates leave it self-contradictory:
 1. Recompute the file-count-per-business-area table:
    ```bash
-   cd src/BeneficialStrategies.Iso20022.Common/MessageDefinitions
+   cd src/Common/MessageDefinitions
    for d in */; do echo "${d%/} $(find "${d%/}" -iname '*.cs' | wc -l)"; done | sort
    ```
 2. Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` for the "Spec" column per business area and
@@ -107,10 +107,10 @@ once it's actually published) has its own `dotnet add package ... --version` lin
 dotnet add package BeneficialStrategies.Iso20022 --version $ARGUMENTS
 ```
 
-`src/BeneficialStrategies.Iso20022.FluentValidation/README.md` has two such lines (it installs
+`src/FluentValidation/README.md` has two such lines (it installs
 both `BeneficialStrategies.Iso20022` and `BeneficialStrategies.Iso20022.FluentValidation`) — update
 both. A mechanical backstop also exists for this specific step:
-`src/BeneficialStrategies.Iso20022.Common.Tests/ReadmeVersionPinTests.cs` fails the test suite if
+`src/Common.Tests/ReadmeVersionPinTests.cs` fails the test suite if
 any package README's version pin drifts from `Directory.Build.props`, so a missed line here
 surfaces immediately in step 6 below rather than silently shipping stale.
 
@@ -128,8 +128,8 @@ Bump version to $ARGUMENTS and add release notes
 Before merging, confirm the build and the README version-pin guard test are clean locally:
 
 ```bash
-cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release
-cd src && dotnet test BeneficialStrategies.Iso20022.Common.Tests
+cd src && dotnet build Common -c Release
+cd src && dotnet test Common.Tests
 ```
 
 Fix any errors before proceeding.
@@ -147,7 +147,7 @@ git push origin main
 After merging, verify the build is still clean:
 
 ```bash
-cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release
+cd src && dotnet build Common -c Release
 ```
 
 ### 8. Tag and push

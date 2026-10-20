@@ -29,13 +29,13 @@ SKIP_LABELS = {"no-release-notes"}
 AREA_PACKAGES = {"area:core": {"core"}, "area:primitives": {"primitives"}, "area:interfaces": {"interfaces"}, "area:validation": {"validation"}, "area:payloads": {"payloads"}, "area:xml": {"xml"}, "area:factory": {"factory"}}   # no area label: every published package
 IGNORED_AREAS = {"area:sagas"}                                               # not published
 NOTE_FILES = {
-    "primitives": "src/BeneficialStrategies.Iso20022.Primitives/release-notes.txt",
-    "interfaces": "src/BeneficialStrategies.Iso20022.Interfaces/release-notes.txt",
-    "core": "src/BeneficialStrategies.Iso20022.Common/release-notes.txt",
-    "validation": "src/BeneficialStrategies.Iso20022.FluentValidation/release-notes.txt",
-    "payloads": "src/BeneficialStrategies.Iso20022.FluentValidation.Payloads/release-notes.txt",
-    "xml": "src/BeneficialStrategies.Iso20022.FluentValidation.Xml/release-notes.txt",
-    "factory": "src/BeneficialStrategies.Iso20022.Factory/release-notes.txt",
+    "primitives": "src/Primitives/release-notes.txt",
+    "interfaces": "src/Interfaces/release-notes.txt",
+    "core": "src/Common/release-notes.txt",
+    "validation": "src/FluentValidation/release-notes.txt",
+    "payloads": "src/FluentValidation.Payloads/release-notes.txt",
+    "xml": "src/FluentValidation.Xml/release-notes.txt",
+    "factory": "src/Factory/release-notes.txt",
 }
 PROPS = "src/Directory.Build.props"
 CATEGORIES = [("breaking", "Breaking change"), ("added", "Added"), ("fixed", "Fixed"), ("changed", "Changed")]

@@ -102,7 +102,7 @@ For each item, extract the business area from the ISO message identifier (e.g., 
 
 2. Determine the class name from the display name + version number (e.g., `CustomerCreditTransferInitiationV12`).
 
-3. Create `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/{area}/{ClassName}.cs`:
+3. Create `src/Common/MessageDefinitions/{area}/{ClassName}.cs`:
 
 ```csharp
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
@@ -209,7 +209,7 @@ for messages.
    A referencing type that is *itself* also Removed in this same sync should be processed first.
 
 3. If no external references, delete the file, **and its FluentValidation validator in the same
-   commit** if one exists (`src/BeneficialStrategies.Iso20022.FluentValidation/Validators/{area}/{ClassName}Validator.cs`).
+   commit** if one exists (`src/FluentValidation/Validators/{area}/{ClassName}Validator.cs`).
    See `snapshot-sync-validator-checksums` for the FluentValidation-side manifest this should also
    update.
 

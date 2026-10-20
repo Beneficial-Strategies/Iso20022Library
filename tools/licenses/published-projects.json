@@ -1,9 +1,9 @@
 [
-  "src/BeneficialStrategies.Iso20022.Primitives/BeneficialStrategies.Iso20022.Primitives.csproj",
-  "src/BeneficialStrategies.Iso20022.Interfaces/BeneficialStrategies.Iso20022.Interfaces.csproj",
-  "src/BeneficialStrategies.Iso20022.Common/BeneficialStrategies.Iso20022.Common.csproj",
-  "src/BeneficialStrategies.Iso20022.FluentValidation/BeneficialStrategies.Iso20022.FluentValidation.csproj",
-  "src/BeneficialStrategies.Iso20022.FluentValidation.Xml/BeneficialStrategies.Iso20022.FluentValidation.Xml.csproj",
-  "src/BeneficialStrategies.Iso20022.FluentValidation.Payloads/BeneficialStrategies.Iso20022.FluentValidation.Payloads.csproj",
-  "src/BeneficialStrategies.Iso20022.Factory/BeneficialStrategies.Iso20022.Factory.csproj"
+  "src/Primitives/BeneficialStrategies.Iso20022.Primitives.csproj",
+  "src/Interfaces/BeneficialStrategies.Iso20022.Interfaces.csproj",
+  "src/Common/BeneficialStrategies.Iso20022.Common.csproj",
+  "src/FluentValidation/BeneficialStrategies.Iso20022.FluentValidation.csproj",
+  "src/FluentValidation.Xml/BeneficialStrategies.Iso20022.FluentValidation.Xml.csproj",
+  "src/FluentValidation.Payloads/BeneficialStrategies.Iso20022.FluentValidation.Payloads.csproj",
+  "src/Factory/BeneficialStrategies.Iso20022.Factory.csproj"
 ]

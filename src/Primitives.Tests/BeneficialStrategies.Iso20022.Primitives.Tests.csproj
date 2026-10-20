@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Mirrors the library's TFM policy so both targets actually get exercised, not just compiled — see Common.csproj. -->
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <!-- .NET Framework 4.8 runs the netstandard2.0 build of Primitives; it needs Windows (CI has a job for it) -->
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('Windows')) Or '$(BuildNet48)' == 'true'">$(TargetFrameworks);net48</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BeneficialStrategies.Iso20022</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
+  </ItemGroup>
+
+  <!-- the tests use reflection overloads and Index that .NET Framework lacks -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <PackageReference Include="Polyfill" Version="11.*" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestData/**/*.xml" />
+  </ItemGroup>
+
+</Project>

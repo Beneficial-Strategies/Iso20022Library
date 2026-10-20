@@ -45,7 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\BeneficialStrategies.Iso20022.MassTransit.Sagas\BeneficialStrategies.Iso20022.MassTransit.Sagas.csproj" />
+    <ProjectReference Include="..\..\..\src\MassTransit.Sagas\BeneficialStrategies.Iso20022.MassTransit.Sagas.csproj" />
   </ItemGroup>
 
 </Project>

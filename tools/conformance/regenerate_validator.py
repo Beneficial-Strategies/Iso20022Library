@@ -4,8 +4,8 @@
 import os, re, sys, collections
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 SRC = os.path.join(ROOT, 'src')
-REC = SRC + '/BeneficialStrategies.Iso20022.Common/Components/%s.cs'
-VAL = SRC + '/BeneficialStrategies.Iso20022.FluentValidation/Validators'
+REC = SRC + '/Common/Components/%s.cs'
+VAL = SRC + '/FluentValidation/Validators'
 PROP = re.compile(r'^\s*public\s+(required\s+)?([\w.]+(?:<[\w.<>?, ]+>)?\??)\s+(\w+)\s*\{\s*get;\s*init;\s*\}')
 
 def validator_class(t):

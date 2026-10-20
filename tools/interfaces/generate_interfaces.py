@@ -14,8 +14,8 @@ import re
 import sys
 from pathlib import Path
 
-COMMON = Path("src/BeneficialStrategies.Iso20022.Common")
-OUT = Path("src/BeneficialStrategies.Iso20022.Interfaces")
+COMMON = Path("src/Common")
+OUT = Path("src/Interfaces")
 KEEP_ATTRS = ("IsoId", "DisplayName", "IsoXmlTag")
 
 DECL = re.compile(r"^\s*public\s+(abstract\s+)?(partial\s+)?record\s+(\w+)(?:\s*:\s*([\w.]+))?")

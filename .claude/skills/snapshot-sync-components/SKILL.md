@@ -50,7 +50,7 @@ ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__universal_look
 
    A component with missing fields will compile but silently drop data during deserialization. This is not acceptable.
 
-2. Create `src/BeneficialStrategies.Iso20022.Common/Components/{ComponentName}.cs` using this pattern:
+2. Create `src/Common/Components/{ComponentName}.cs` using this pattern:
 
 ```csharp
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
@@ -126,7 +126,7 @@ A component whose `registrationStatus` flipped to `Obsolete` in `get_snapshot_di
 **still appears** in `get_spec_snapshot` output — i.e. the ISO registry still tracks it, just
 flagged. This is not a removal.
 
-1. Read the existing file at `src/BeneficialStrategies.Iso20022.Common/Components/{ComponentName}.cs`.
+1. Read the existing file at `src/Common/Components/{ComponentName}.cs`.
 
 2. Add the `[Obsolete]` attribute immediately before `public record {ComponentName}`, after all
    other attributes:
@@ -159,7 +159,7 @@ transition is expected, not a special case).
    must go first, then the component, then the innermost component.)
 
 3. If no external references, delete the file **and its FluentValidation validator in the same
-   commit** if one exists (`src/BeneficialStrategies.Iso20022.FluentValidation/Validators/Components/{ComponentName}Validator.cs`)
+   commit** if one exists (`src/FluentValidation/Validators/Components/{ComponentName}Validator.cs`)
    — a validator has no reason to outlive the type it validates, and deleting the model type alone
    would leave the validator failing to compile anyway. See
    `snapshot-sync-validator-checksums` for the FluentValidation-side manifest this should also

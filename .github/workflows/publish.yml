@@ -30,21 +30,21 @@ jobs:
       - name: Build and pack (BeneficialStrategies.Iso20022.Primitives)
         run: |
           cd src
-          dotnet pack BeneficialStrategies.Iso20022.Primitives \
+          dotnet pack Primitives \
             -c Release \
             --output ./nupkg
 
       - name: Build and pack (BeneficialStrategies.Iso20022.Interfaces)
         run: |
           cd src
-          dotnet pack BeneficialStrategies.Iso20022.Interfaces \
+          dotnet pack Interfaces \
             -c Release \
             --output ./nupkg
 
       - name: Build and pack (BeneficialStrategies.Iso20022)
         run: |
           cd src
-          dotnet pack BeneficialStrategies.Iso20022.Common \
+          dotnet pack Common \
             -c Release \
             --output ./nupkg
 
@@ -55,7 +55,7 @@ jobs:
       - name: Build and pack (BeneficialStrategies.Iso20022.FluentValidation)
         run: |
           cd src
-          dotnet pack BeneficialStrategies.Iso20022.FluentValidation \
+          dotnet pack FluentValidation \
             -c Release \
             --output ./nupkg
 
@@ -63,7 +63,7 @@ jobs:
       - name: Build and pack (BeneficialStrategies.Iso20022.Factory)
         run: |
           cd src
-          dotnet pack BeneficialStrategies.Iso20022.Factory \
+          dotnet pack Factory \
             -c Release \
             --output ./nupkg
 
@@ -71,7 +71,7 @@ jobs:
       - name: Build and pack (BeneficialStrategies.Iso20022.FluentValidation.Xml)
         run: |
           cd src
-          dotnet pack BeneficialStrategies.Iso20022.FluentValidation.Xml \
+          dotnet pack FluentValidation.Xml \
             -c Release \
             --output ./nupkg
 
@@ -79,7 +79,7 @@ jobs:
       - name: Build and pack (BeneficialStrategies.Iso20022.FluentValidation.Payloads)
         run: |
           cd src
-          dotnet pack BeneficialStrategies.Iso20022.FluentValidation.Payloads \
+          dotnet pack FluentValidation.Payloads \
             -c Release \
             --output ./nupkg
 
@@ -113,7 +113,7 @@ jobs:
         run: |
           version="${GITHUB_REF_NAME#v}"
           awk -v v="$version" '$0 == v {found=1; next} found && /^[^ ]/ {exit} found {print}' \
-            src/BeneficialStrategies.Iso20022.Common/release-notes.txt | sed 's/^    //' > release-body.md
+            src/Common/release-notes.txt | sed 's/^    //' > release-body.md
           [ -s release-body.md ] || echo "See the NuGet package release notes." > release-body.md
           flags=()
           case "$version" in *-*) flags+=(--prerelease);; esac

@@ -4,7 +4,7 @@ type has the same number of unmatched tags on both sides, pairing them by simila
 (an outdated definition) are listed, not changed."""
 import difflib, json, os, re, collections
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
-LIB = os.path.join(ROOT, 'src', 'BeneficialStrategies.Iso20022.Common')
+LIB = os.path.join(ROOT, 'src', 'Common')
 WORK = os.environ.get('ISO20022_WORK', os.path.join(ROOT, '..', '_work', 'Iso20022Library'))
 r = json.load(open(os.path.join(WORK, 'code-vs-repo.json')))
 renamed = collections.Counter(); left = []
