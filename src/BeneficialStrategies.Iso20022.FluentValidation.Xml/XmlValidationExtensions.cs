@@ -30,6 +30,13 @@ namespace BeneficialStrategies.Iso20022.Validation;
 /// implements it, and code that holds an <c>IValidator&lt;TheRecord&gt;</c> can use these methods with
 /// <c>TInterface</c> = the record.
 /// </para>
+/// <para>
+/// <b>With a factory, no record is needed.</b> The methods that take an <see cref="IIsoDataFactory"/> read into the interface
+/// itself, with the objects the factory makes (the <c>BeneficialStrategies.Iso20022.Factory</c> package supplies one), so
+/// there is a single type argument, inferred from the validator and the <c>out</c> argument:
+/// <c>validator.Validate(xml, factory, out IFooV01? message)</c>. Everything else, the result, <c>message</c> and the error
+/// codes, is as described above.
+/// </para>
 /// </remarks>
 public static class XmlValidationExtensions
 {
@@ -138,6 +145,134 @@ public static class XmlValidationExtensions
         if (validator is null)
             throw new System.ArgumentNullException(nameof(validator));
         return FinishAsync(validator, Iso20022XmlSerializer.TryRead<TRecord>(xml), cancellationToken);
+    }
+
+    /// <summary>Reads any part of a document rooted at <paramref name="element"/> into the interface, with the objects of <paramref name="factory"/>, and validates it.</summary>
+    /// <param name="validator">The validator for the interface.</param>
+    /// <param name="element">The element to read. Its own name is not checked, since the same type appears under many tags.</param>
+    /// <param name="factory">Makes the objects that implement the interfaces.</param>
+    /// <param name="message">What was read, or <see langword="null"/> when the XML could not be read.</param>
+    /// <param name="context">The namespace and the path prefix of the element when it is a fragment of a larger document.</param>
+    public static ValidationResult Validate<T>(
+        this IValidator<T> validator,
+        XElement element,
+        IIsoDataFactory factory,
+        out T? message,
+        ReadContext? context = null
+    )
+        where T : class
+    {
+        if (validator is null)
+            throw new System.ArgumentNullException(nameof(validator));
+        if (element is null)
+            throw new System.ArgumentNullException(nameof(element));
+        if (factory is null)
+            throw new System.ArgumentNullException(nameof(factory));
+        return Finish<T, T>(validator, Iso20022XmlSerializer.Read<T>(element, context, factory), out message);
+    }
+
+    /// <summary>Reads a document into the message interface, with the objects of <paramref name="factory"/>, and validates it.</summary>
+    /// <param name="validator">The validator for the message interface.</param>
+    /// <param name="document">The document.</param>
+    /// <param name="factory">Makes the objects that implement the interfaces.</param>
+    /// <param name="message">What was read, or <see langword="null"/> when the XML could not be read.</param>
+    public static ValidationResult Validate<T>(
+        this IValidator<T> validator,
+        XDocument document,
+        IIsoDataFactory factory,
+        out T? message
+    )
+        where T : class, IOuterRecord
+    {
+        if (validator is null)
+            throw new System.ArgumentNullException(nameof(validator));
+        if (factory is null)
+            throw new System.ArgumentNullException(nameof(factory));
+        return Finish<T, T>(validator, Iso20022XmlSerializer.TryRead<T>(document, factory), out message);
+    }
+
+    /// <summary>Reads XML text into the message interface, with the objects of <paramref name="factory"/>, and validates it.</summary>
+    /// <param name="validator">The validator for the message interface.</param>
+    /// <param name="xml">The XML text. Malformed XML is reported as one problem, with its line and position.</param>
+    /// <param name="factory">Makes the objects that implement the interfaces.</param>
+    /// <param name="message">What was read, or <see langword="null"/> when the XML could not be read.</param>
+    public static ValidationResult Validate<T>(
+        this IValidator<T> validator,
+        string xml,
+        IIsoDataFactory factory,
+        out T? message
+    )
+        where T : class, IOuterRecord
+    {
+        if (validator is null)
+            throw new System.ArgumentNullException(nameof(validator));
+        if (factory is null)
+            throw new System.ArgumentNullException(nameof(factory));
+        return Finish<T, T>(validator, Iso20022XmlSerializer.TryRead<T>(xml, factory), out message);
+    }
+
+    /// <summary>The async form of the element method that takes a factory.</summary>
+    /// <param name="validator">The validator for the interface.</param>
+    /// <param name="element">The element to read.</param>
+    /// <param name="factory">Makes the objects that implement the interfaces.</param>
+    /// <param name="context">The namespace and the path prefix of the element when it is a fragment of a larger document.</param>
+    /// <param name="cancellationToken">Cancels the validation.</param>
+    public static Task<(ValidationResult Result, T? Message)> ValidateAsync<T>(
+        this IValidator<T> validator,
+        XElement element,
+        IIsoDataFactory factory,
+        ReadContext? context = null,
+        CancellationToken cancellationToken = default
+    )
+        where T : class
+    {
+        if (validator is null)
+            throw new System.ArgumentNullException(nameof(validator));
+        if (element is null)
+            throw new System.ArgumentNullException(nameof(element));
+        if (factory is null)
+            throw new System.ArgumentNullException(nameof(factory));
+        return FinishAsync<T, T>(validator, Iso20022XmlSerializer.Read<T>(element, context, factory), cancellationToken);
+    }
+
+    /// <summary>The async form of the document method that takes a factory.</summary>
+    /// <param name="validator">The validator for the message interface.</param>
+    /// <param name="document">The document.</param>
+    /// <param name="factory">Makes the objects that implement the interfaces.</param>
+    /// <param name="cancellationToken">Cancels the validation.</param>
+    public static Task<(ValidationResult Result, T? Message)> ValidateAsync<T>(
+        this IValidator<T> validator,
+        XDocument document,
+        IIsoDataFactory factory,
+        CancellationToken cancellationToken = default
+    )
+        where T : class, IOuterRecord
+    {
+        if (validator is null)
+            throw new System.ArgumentNullException(nameof(validator));
+        if (factory is null)
+            throw new System.ArgumentNullException(nameof(factory));
+        return FinishAsync<T, T>(validator, Iso20022XmlSerializer.TryRead<T>(document, factory), cancellationToken);
+    }
+
+    /// <summary>The async form of the text method that takes a factory.</summary>
+    /// <param name="validator">The validator for the message interface.</param>
+    /// <param name="xml">The XML text.</param>
+    /// <param name="factory">Makes the objects that implement the interfaces.</param>
+    /// <param name="cancellationToken">Cancels the validation.</param>
+    public static Task<(ValidationResult Result, T? Message)> ValidateAsync<T>(
+        this IValidator<T> validator,
+        string xml,
+        IIsoDataFactory factory,
+        CancellationToken cancellationToken = default
+    )
+        where T : class, IOuterRecord
+    {
+        if (validator is null)
+            throw new System.ArgumentNullException(nameof(validator));
+        if (factory is null)
+            throw new System.ArgumentNullException(nameof(factory));
+        return FinishAsync<T, T>(validator, Iso20022XmlSerializer.TryRead<T>(xml, factory), cancellationToken);
     }
 
     /// <summary>The failure that reports one reading problem.</summary>

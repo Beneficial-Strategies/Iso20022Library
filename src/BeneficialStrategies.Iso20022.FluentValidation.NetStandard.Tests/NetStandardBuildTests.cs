@@ -117,6 +117,27 @@ public class NetStandardBuildTests
         Assert.Equal(xml, Iso20022XmlSerializer.SerializeToString(read.Message));
     }
 
+    [Fact]
+    public void XmlExtension_ValidatesAMessageInterface_WithTheFactory_OnEveryTarget()
+    {
+        var rules = new InlineValidator<ITinyAttributed>();
+        rules.RuleFor(x => x.Identification).Must(id => id.Value != "BAD").WithMessage("BAD is not allowed.");
+        IValidator<ITinyAttributed> sut = rules;
+        var factory = new Factory.IsoDataFactory();
+        string Xml(string id) => Iso20022XmlSerializer.SerializeToString(new TinyAttributed { Identification = id });
+
+        var good = sut.Validate(Xml("OK"), factory, out ITinyAttributed? message);
+        var bad = sut.Validate(Xml("BAD"), factory, out ITinyAttributed? rejected);
+        var broken = sut.Validate("<not-xml", factory, out ITinyAttributed? none);
+
+        Assert.True(good.IsValid);
+        Assert.Equal("OK", message!.Identification.Value);
+        Assert.False(bad.IsValid);
+        Assert.NotNull(rejected);
+        Assert.False(broken.IsValid);
+        Assert.Null(none);
+    }
+
     private static InlineValidator<ITinyMessage> TinyRules()
     {
         var rules = new InlineValidator<ITinyMessage>();
