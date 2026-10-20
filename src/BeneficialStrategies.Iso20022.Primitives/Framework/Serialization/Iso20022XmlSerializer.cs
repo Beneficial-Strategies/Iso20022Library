@@ -200,9 +200,10 @@ public static partial class Iso20022XmlSerializer
     private static PropMeta[] BuildProps(Type type)
     {
         var result = new List<PropMeta>();
-        foreach (var prop in type.GetProperties(BindingFlags.Public | BindingFlags.Instance))
+        foreach (var prop in type.IsInterface ? InterfaceProperties(type) : type.GetProperties(BindingFlags.Public | BindingFlags.Instance))
         {
-            var tagAttr = prop.GetCustomAttribute<IsoXmlTagAttribute>();
+            // a class that implements an interface of the library need not repeat its tags
+            var tagAttr = prop.GetCustomAttribute<IsoXmlTagAttribute>() ?? TagFromInterfaces(type, prop);
             if (tagAttr is null)
                 continue;
 
@@ -216,11 +217,70 @@ public static partial class Iso20022XmlSerializer
                     isCol,
                     core,
                     IsLeafType(core),
+                    // a record says "required" with the keyword; an interface, by the member not being nullable
                     prop.GetCustomAttribute<System.Runtime.CompilerServices.RequiredMemberAttribute>() is not null
+                        || (type.IsInterface && !isCol && IsNotNullable(prop))
                 )
             );
         }
         return [.. result];
+    }
+
+    // An interface's own properties and those of the interfaces it extends (GetProperties returns only the first).
+    private static IEnumerable<PropertyInfo> InterfaceProperties(Type iface) =>
+        new[] { iface }
+            .Concat(iface.GetInterfaces())
+            .SelectMany(i => i.GetProperties(BindingFlags.Public | BindingFlags.Instance))
+            .GroupBy(p => p.Name)
+            .Select(g => g.First());
+
+    private static IsoXmlTagAttribute? TagFromInterfaces(Type type, PropertyInfo prop)
+    {
+        if (type.IsInterface)
+            return null;
+        foreach (var i in type.GetInterfaces())
+            if (i.GetProperty(prop.Name)?.GetCustomAttribute<IsoXmlTagAttribute>() is { } tag)
+                return tag;
+        return null;
+    }
+
+    // The tag a type carries as a whole (a complex choice variant), on the type or, for a class, on an interface it implements.
+    private static IsoXmlTagAttribute? ClassTag(Type type)
+    {
+        if (type.GetCustomAttribute<IsoXmlTagAttribute>() is { } own)
+            return own;
+        if (!type.IsInterface)
+            foreach (var i in type.GetInterfaces())
+                if (i.GetCustomAttribute<IsoXmlTagAttribute>() is { } tag)
+                    return tag;
+        return null;
+    }
+
+    // A choice is an abstract record or an interface marked IIsoChoice; any other interface is a component.
+    private static bool IsChoiceType(Type t) =>
+        t.IsAbstract && (!t.IsInterface || typeof(IIsoChoice).IsAssignableFrom(t));
+
+    // Reads the compiler's nullable annotation by name, so this works on every target.
+    private static bool IsNotNullable(PropertyInfo prop)
+    {
+        if (Nullable.GetUnderlyingType(prop.PropertyType) is not null)
+            return false;
+        if (prop.PropertyType.IsValueType)
+            return true;
+        var flag = NullableFlag(prop.CustomAttributes, "NullableAttribute")
+            ?? NullableFlag(prop.DeclaringType?.CustomAttributes, "NullableContextAttribute");
+        return flag == 1;
+    }
+
+    private static byte? NullableFlag(IEnumerable<CustomAttributeData>? attributes, string name)
+    {
+        var data = attributes?.FirstOrDefault(a => a.AttributeType.Name == name);
+        if (data is null || data.ConstructorArguments.Count == 0)
+            return null;
+        var arg = data.ConstructorArguments[0].Value;
+        if (arg is byte single)
+            return single;
+        return arg is IReadOnlyCollection<CustomAttributeTypedArgument> { Count: > 0 } many ? many.First().Value as byte? : null;
     }
 
     // Cache: choice abstract type → [(discriminating xml tag, concrete variant type)]
@@ -230,9 +290,36 @@ public static partial class Iso20022XmlSerializer
     private static (string Tag, Type Variant)[] GetChoiceVariants(Type abstractType) =>
         ChoiceCache.GetOrAdd(abstractType, BuildChoiceVariants);
 
+    // The variant interfaces of every choice interface of an assembly, found once.
+    private static readonly ConcurrentDictionary<Assembly, ILookup<Type, Type>> VariantInterfaces = new();
+
+    private static ILookup<Type, Type> FindVariantInterfaces(Assembly assembly)
+    {
+        Type[] types;
+        try
+        {
+            types = assembly.GetTypes();
+        }
+        catch (ReflectionTypeLoadException ex)
+        {
+            types = ex.Types.Where(t => t is not null).ToArray()!;
+        }
+        return types
+            .Where(t => t.IsInterface && typeof(IIsoChoiceVariant).IsAssignableFrom(t))
+            .SelectMany(v => v.GetInterfaces().Where(i => i != typeof(IIsoChoice) && typeof(IIsoChoice).IsAssignableFrom(i)).Select(c => (Choice: c, Variant: v)))
+            .ToLookup(x => x.Choice, x => x.Variant);
+    }
+
     private static (string Tag, Type Variant)[] BuildChoiceVariants(Type abstractType)
     {
         var result = new List<(string, Type)>();
+        if (abstractType.IsInterface)
+        {
+            foreach (var variant in VariantInterfaces.GetOrAdd(abstractType.Assembly, FindVariantInterfaces)[abstractType])
+                if (GetVariantTag(variant) is { } variantTag)
+                    result.Add((variantTag, variant));
+            return [.. result];
+        }
         foreach (var attr in abstractType.GetCustomAttributes<JsonDerivedTypeAttribute>())
         {
             var tag = GetVariantTag(attr.DerivedType);
@@ -249,7 +336,7 @@ public static partial class Iso20022XmlSerializer
     /// </summary>
     private static string? GetVariantTag(Type variantType)
     {
-        var classTag = variantType.GetCustomAttribute<IsoXmlTagAttribute>();
+        var classTag = ClassTag(variantType);
         if (classTag is not null)
             return classTag.XmlTag;
 
@@ -305,17 +392,18 @@ public static partial class Iso20022XmlSerializer
             return new XElement(ns + tag, GetEnumMemberValue(value));
 
         // Abstract declared type = choice: find the variant's discriminating element
-        if (declaredType.IsAbstract)
+        if (IsChoiceType(declaredType))
         {
             var variants = GetChoiceVariants(declaredType);
-            var match = variants.FirstOrDefault(v => v.Variant == runtimeType);
+            // for a choice interface the variant is an interface the object implements, not its own type
+            var match = variants.FirstOrDefault(v => declaredType.IsInterface ? v.Variant.IsAssignableFrom(runtimeType) : v.Variant == runtimeType);
             if (match == default)
                 throw new NotSupportedException(
                     $"Choice variant '{runtimeType.Name}' of '{declaredType.Name}' has no XML tag. "
                         + $"Add [IsoXmlTag(\"...\")]  at the class level."
                 );
 
-            var hasClassTag = runtimeType.GetCustomAttribute<IsoXmlTagAttribute>() is not null;
+            var hasClassTag = ClassTag(match.Variant) is not null;
             var wrapper = new XElement(ns + tag);
 
             if (hasClassTag)
@@ -323,7 +411,7 @@ public static partial class Iso20022XmlSerializer
                 // Complex variant: normally <tag><VariantTag>...properties...</VariantTag></tag>
                 // Exception: if the variant itself is an amount type (e.g. InstructedAmount with
                 // Currency+Amount), serialize as <tag><VariantTag Ccy="EUR">47250.00</VariantTag></tag>
-                if (IsAmountType(runtimeType))
+                if (IsAmountType(match.Variant))
                     wrapper.Add(SerializeAmount(value, ns, match.Tag));
                 else
                     wrapper.Add(SerializeObject(value, ns, match.Tag));
@@ -331,7 +419,7 @@ public static partial class Iso20022XmlSerializer
             else
             {
                 // Simple variant: <tag><discriminatorTag>leaf-or-object</discriminatorTag></tag>
-                var variantProps = GetProps(runtimeType);
+                var variantProps = GetProps(match.Variant);
                 var inner = variantProps[0].Property.GetValue(value);
                 if (inner is not null)
                     wrapper.Add(
@@ -428,7 +516,7 @@ public static partial class Iso20022XmlSerializer
 
         foreach (var (tag, variantType) in variants)
         {
-            var hasClassTag = variantType.GetCustomAttribute<IsoXmlTagAttribute>() is not null;
+            var hasClassTag = ClassTag(variantType) is not null;
             if (hasClassTag)
             {
                 // Complex variant: look for <tag> wrapper
@@ -476,6 +564,12 @@ public static partial class Iso20022XmlSerializer
             .GetMethod(nameof(Enumerable.Cast), BindingFlags.Public | BindingFlags.Static)!
             .MakeGenericMethod(elementType);
         var typed = castMethod.Invoke(null, [rawItems])!;
+        if (listType.IsInterface)
+        {
+            // an interface asks for IEnumerable<T>; give it the list a record would hold
+            var simple = IsLeafType(elementType) || elementType.IsEnum || GetSimpleValueType(elementType) is not null;
+            listType = (simple ? typeof(SimpleValueList<>) : typeof(ValueList<>)).MakeGenericType(elementType);
+        }
         return Activator.CreateInstance(listType, [typed])!;
     }
 
@@ -802,7 +896,8 @@ public static partial class Iso20022XmlSerializer
         {
             var gd = t.GetGenericTypeDefinition();
             if (
-                gd == typeof(ImmutableValueList<>)
+                gd == typeof(IEnumerable<>)
+                || gd == typeof(ImmutableValueList<>)
                 || gd == typeof(ValueList<>)
                 || gd == typeof(SimpleValueList<>)
             )
