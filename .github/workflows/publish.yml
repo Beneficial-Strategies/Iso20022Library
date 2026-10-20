@@ -18,6 +18,10 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
+      # Nothing is packed if a dependency has a license outside the allowed list (tools/licenses).
+      - name: Check the licenses of the packages we depend on
+        run: tools/licenses/check.sh
+
       # A single .NET 10 SDK builds both TFMs (net8.0;net10.0) fine — the SDK targets older
       # frameworks via downloaded reference packs, no need to install multiple SDK versions
       # side by side just to pack. See src/global.json and CLAUDE.md "Target Framework Policy".
