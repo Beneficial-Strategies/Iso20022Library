@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Payloads;
 /// </summary>
 /// <param name="ValidationResult">
 /// The full FluentValidation result — <see cref="FluentValidation.Results.ValidationResult.Errors"/>
-/// contains parse failures (<c>"XmlParseError"</c>/<c>"PayloadParseError"</c>/etc. — see
+/// contains parse failures (<c>"Xml.MalformedXml"</c> and the other <c>Xml.*</c> codes, <c>"PayloadParseError"</c>, etc. — see
 /// <see cref="IIso20022PayloadValidationDispatcher"/>'s remarks) exactly like it contains ordinary
 /// business-rule failures; nothing distinguishes the two in shape.
 /// </param>

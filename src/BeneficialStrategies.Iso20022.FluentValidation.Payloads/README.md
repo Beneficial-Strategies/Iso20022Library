@@ -7,8 +7,9 @@ dotnet add package BeneficialStrategies.Iso20022.FluentValidation.Payloads --ver
 Validate raw ISO 20022 XML or JSON payloads (for example off a message queue): the payload is deserialized, then validated with the
 validators of [BeneficialStrategies.Iso20022.FluentValidation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation).
 
-* Depends on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the serializers are there), FluentValidation and `Microsoft.Extensions.DependencyInjection.Abstractions`; not on the message records.
-* To validate XML with a plain method call, with every reading problem reported and the record handed back, and no container, see [BeneficialStrategies.Iso20022.FluentValidation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml); the envelope validators here are being moved onto it (#21).
+* Depends on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the serializers are there), [BeneficialStrategies.Iso20022.FluentValidation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml) (the XML side is built on it), FluentValidation and `Microsoft.Extensions.DependencyInjection.Abstractions`; not on the message records.
+* To validate XML with a plain method call, with every reading problem reported and the message handed back, and no container, use [BeneficialStrategies.Iso20022.FluentValidation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml) directly. The XML envelope validator and the dispatcher here report exactly its failures.
+* **Without the records:** register an `IIsoDataFactory` (`services.AddIso20022Factory()` from [BeneficialStrategies.Iso20022.Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory)) and the XML is read into the message *interface*: `IValidator<XmlEnvelope<IFIToFICustomerCreditTransferV14>>` is registered next to the record's, and the dispatcher resolves the interface of a document's namespace and reads into it, so `BeneficialStrategies.Iso20022.Common` is not needed. JSON is read into records only.
 * Targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0, like the validators package it works with.
 * The message records are found by the `Iso20022MessageTypeRegistry` of Primitives: the loaded assemblies that reference it, plus the ones you hand to `AddIso20022PayloadValidators(messageAssemblies: [...])` or `Iso20022MessageTypeRegistry.AddAssembly(...)`. Do that when a payload may arrive before any record type has been used in the process.
 * The validators are written for the message interfaces; the envelope validators validate the record the payload is read into, through the validator of its interface.
@@ -24,8 +25,10 @@ know the message type up front:
 - `IIso20022PayloadValidationDispatcher` — when the payload could be any one of several message
   types, resolved from the payload itself. Registered via `AddIso20022PayloadValidationDispatcher()`.
 
-Either way, a parse failure becomes a `ValidationFailure` in the result (`ErrorCode` values like
-`"XmlParseError"`, `"JsonParseError"`, `"UnknownMessageType"`), never a thrown exception.
+Either way, a reading failure becomes `ValidationFailure`s in the result, never a thrown exception. For XML every problem is reported, not only the first:
+`ErrorCode` is `Xml.` + the kind (`Xml.MalformedXml`, `Xml.WrongRoot`, `Xml.RequiredMissing`, `Xml.BadValue`, `Xml.FacetViolation`, `Xml.UnexpectedElement`, ...),
+`PropertyName` is the XML path, and `CustomState` is the `DeserializationIssue` with the line and position. (They were a single `XmlParseError` before.)
+The dispatcher's other codes are `UnknownMessageType`, `NoValidatorRegistered` and, for JSON, `PayloadParseError`.
 
 ### Example 1 — known type, JSON payload
 

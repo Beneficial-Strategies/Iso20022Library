@@ -50,17 +50,17 @@ public class XmlEnvelopeValidatorTests
     }
 
     [Fact]
-    public void MalformedXml_SingleFailure_WithXmlParseErrorCode()
+    public void MalformedXml_SingleFailure_WithXmlMalformedXmlCode()
     {
         var result = _sut.Validate(new XmlEnvelope<MultilateralSettlementRequestV02>("<Document><Unclosed>"));
 
         Assert.False(result.IsValid);
         var failure = Assert.Single(result.Errors);
-        Assert.Equal("XmlParseError", failure.ErrorCode);
+        Assert.Equal("Xml.MalformedXml", failure.ErrorCode);
     }
 
     [Fact]
-    public void WrongRootElement_SingleFailure_WithXmlParseErrorCode()
+    public void WrongRootElement_IsReported_WithXmlWrongRootCodes()
     {
         var result = _sut.Validate(
             new XmlEnvelope<MultilateralSettlementRequestV02>(
@@ -69,8 +69,7 @@ public class XmlEnvelopeValidatorTests
         );
 
         Assert.False(result.IsValid);
-        var failure = Assert.Single(result.Errors);
-        Assert.Equal("XmlParseError", failure.ErrorCode);
+        Assert.All(result.Errors, e => Assert.Equal("Xml.WrongRoot", e.ErrorCode));
     }
 
     [Fact]
