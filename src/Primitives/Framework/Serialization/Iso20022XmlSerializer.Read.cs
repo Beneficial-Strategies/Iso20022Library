@@ -243,8 +243,8 @@ public static partial class Iso20022XmlSerializer
         return instance;
     }
 
-    // <Amt Ccy="EUR">10.50</Amt>. The currency is checked by its code type (#8). The facets of the
-    // amount value are #13; here only text that is not a number is reported.
+    // <Amt Ccy="EUR">10.50</Amt>. The currency is checked by its code type (#8), the value by the facets of its amount type (#13):
+    // not negative, at most so many digits in all and after the decimal point.
     private static object? ReadAmount(Type type, XElement el, string path, ReadSink sink)
     {
         var props = GetProps(type);
@@ -273,6 +273,12 @@ public static partial class Iso20022XmlSerializer
         if (!decimal.TryParse(el.Value, NumberStyles.Number, CultureInfo.InvariantCulture, out var amount))
         {
             sink.Add(el, path, IssueCode.BadValue, el.Value, $"'{el.Value}' is not a decimal number.");
+            ok = false;
+        }
+        else if (props.First(p => p.XmlTag == "Amount").Property.GetCustomAttribute<IsoAmountAttribute>() is { } facets
+            && IsoAmountFacets.Violation(facets, amount) is { } reason)
+        {
+            sink.Add(el, path, IssueCode.FacetViolation, el.Value, $"'{el.Value}' is not a valid amount: {reason}.");
             ok = false;
         }
         if (!ok)

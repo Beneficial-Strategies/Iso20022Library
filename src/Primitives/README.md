@@ -4,7 +4,7 @@ The ISO 20022 primitive data types, code sets and external codes, with their for
 
 * **Simple types** (`Max35Text`, `ActiveCurrencyAndAmount`-style decimals, dates, identifiers): immutable structs that refuse a value outside the ISO format.
 * **Code sets** (enums) and **external codes** (structs such as `ActiveCurrencyCode`).
-* **Amounts**: the currency-and-amount data types.
+* **Amounts**: the currency-and-amount data types. Each refuses a value outside the limits of its ISO type: not negative, and at most so many digits in all and after the decimal point (for example 18 and 5 for `ActiveCurrencyAndAmount`; trailing zeros do not count). Building one with `Amount = -1m` throws an `Iso20022FormatException`; reading XML reports it as an `Xml.FacetViolation` with the path of the element.
 
 ```
 dotnet add package BeneficialStrategies.Iso20022.Primitives --version 0.7.0-alpha

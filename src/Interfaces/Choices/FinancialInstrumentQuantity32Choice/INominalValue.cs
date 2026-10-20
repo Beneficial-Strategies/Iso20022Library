@@ -26,5 +26,6 @@ public interface INominalValue : IFinancialInstrumentQuantity32Choice, IIsoChoic
     [IsoId("_A6FBE5jfEeqkLZLH6DK3UQ_Amount")]
     [DisplayName("Active Or Historic Currency And 19 Decimal Amount _ Amount")]
     [IsoXmlTag("Amount")]
+    [IsoAmount(25, 19)]
     decimal Amount { get; }
 }

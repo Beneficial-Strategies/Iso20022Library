@@ -25,5 +25,12 @@ public record RestrictedFINActiveOrHistoricCurrencyAndAmount : IIsoAmount
     [IsoId("_XY_k3tp-Ed-ak6NoX_4Aeg_1054967173_Amount")]
     [DisplayName("Restricted FIN Active Or Historic Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required decimal Amount { get; init; }
+    [IsoAmount(14, 5)]
+    public required decimal Amount
+    {
+        get => _amount;
+        init => _amount = IsoAmountFacets.Check(typeof(RestrictedFINActiveOrHistoricCurrencyAndAmount), nameof(Amount), value);
+    }
+
+    private decimal _amount;
 }

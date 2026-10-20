@@ -26,5 +26,6 @@ public interface ILoss : IProfitAndLoss1Choice, IIsoChoiceVariant
     [IsoId("_YX4O9Np-Ed-ak6NoX_4Aeg_-184934550_Amount")]
     [DisplayName("Active Currency And 13 Decimal Amount _ Amount")]
     [IsoXmlTag("Amount")]
+    [IsoAmount(18, 13)]
     decimal Amount { get; }
 }

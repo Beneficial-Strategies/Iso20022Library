@@ -26,5 +26,6 @@ public interface ICreditNoteAmount : IReferredDocumentAmount1Choice, IIsoChoiceV
     [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Amount")]
     [DisplayName("Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
+    [IsoAmount(18, 5)]
     decimal Amount { get; }
 }

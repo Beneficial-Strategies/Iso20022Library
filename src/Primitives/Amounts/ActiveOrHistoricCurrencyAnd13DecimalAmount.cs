@@ -25,5 +25,12 @@ public record ActiveOrHistoricCurrencyAnd13DecimalAmount : IIsoAmount
     [IsoId("_YYB_9Np-Ed-ak6NoX_4Aeg_-771372619_Amount")]
     [DisplayName("Active Or Historic Currency And 13 Decimal Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required decimal Amount { get; init; }
+    [IsoAmount(18, 13)]
+    public required decimal Amount
+    {
+        get => _amount;
+        init => _amount = IsoAmountFacets.Check(typeof(ActiveOrHistoricCurrencyAnd13DecimalAmount), nameof(Amount), value);
+    }
+
+    private decimal _amount;
 }

@@ -26,5 +26,6 @@ public interface ICash : IAssetHolding1Choice, IIsoChoiceVariant
     [IsoId("_YX4O9tp-Ed-ak6NoX_4Aeg_-836081793_Amount")]
     [DisplayName("Active Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
+    [IsoAmount(18, 5)]
     decimal Amount { get; }
 }

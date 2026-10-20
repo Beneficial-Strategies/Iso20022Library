@@ -52,11 +52,10 @@ public class AmountAndDirection5ValidatorTests
     }
 
     [Fact]
-    public void Amount_Negative_HasValidationError()
+    public void Amount_Negative_CannotBeBuilt_BecauseTheAmountTypeRefusesIt()
     {
-        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Amount = -1m } };
-        var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors, e => e.PropertyName == "Amount.Amount");
+        // a negative amount never reaches the validator (#13): the record stops it where it is made
+        Assert.Throws<Iso20022FormatException>(() => ValidMessage().Amount with { Amount = -1m });
     }
 
     [Fact]
