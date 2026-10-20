@@ -21,19 +21,28 @@ public sealed class Iso20022DecimalJsonConverter : JsonConverter<decimal>
     /// <summary>Singleton — stateless, safe to share.</summary>
     public static readonly Iso20022DecimalJsonConverter Instance = new();
 
+    // The xs:decimal lexical form: an optional sign, digits with an optional point, no thousands separator, no exponent.
+    private const NumberStyles LexicalForm =
+        NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite;
+
     /// <inheritdoc/>
     public override decimal Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         if (reader.TokenType == JsonTokenType.String)
         {
             var str = reader.GetString();
-            if (decimal.TryParse(str, NumberStyles.Number, CultureInfo.InvariantCulture, out var value))
+            if (decimal.TryParse(str, LexicalForm, CultureInfo.InvariantCulture, out var value))
                 return value;
             throw new JsonException($"Cannot parse '{str}' as a decimal.");
         }
 
         if (reader.TokenType == JsonTokenType.Number)
+        {
+            // The binding writes every decimal as a string; a number token is tolerated only in plain decimal notation.
+            if (reader.ValueSpan.IndexOfAny((byte)'e', (byte)'E') >= 0)
+                throw new JsonException("Cannot read a decimal written with an exponent; write it as a string of digits.");
             return reader.GetDecimal();
+        }
 
         throw new JsonException($"Expected a JSON string or number for decimal, got {reader.TokenType}.");
     }
