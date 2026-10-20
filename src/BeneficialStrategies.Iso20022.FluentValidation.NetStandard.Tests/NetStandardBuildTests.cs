@@ -103,6 +103,20 @@ public class NetStandardBuildTests
         Assert.Equal("ATTR-1", read.Message!.Identification.Value);
     }
 
+    [Fact]
+    public void AMessageInterface_IsReadIntoAClassBuiltAtRunTime()
+    {
+        var xml = Iso20022XmlSerializer.SerializeToString(new TinyAttributed { Identification = "RUN-1" });
+
+        var read = Iso20022XmlSerializer.TryRead<ITinyAttributed>(xml, new Factory.IsoDataFactory());
+
+        Assert.True(read.Succeeded, string.Join("; ", read.Issues.Select(i => i.Reason)));
+        Assert.IsNotType<TinyAttributed>(read.Message);
+        Assert.Equal("RUN-1", read.Message!.Identification.Value);
+
+        Assert.Equal(xml, Iso20022XmlSerializer.SerializeToString(read.Message));
+    }
+
     private static InlineValidator<ITinyMessage> TinyRules()
     {
         var rules = new InlineValidator<ITinyMessage>();
