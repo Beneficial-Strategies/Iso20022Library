@@ -1,7 +1,7 @@
 ---
 name: snapshot-sync-validator-checksums
 description: Refresh coverage-checksums.json (FluentValidation package) from the current MCP spec snapshot and flag which existing validators need review — edit (spec content changed), mirror [Obsolete] from the model type (spec entity flagged obsolete but still present), or delete in lockstep with its model type (spec entity genuinely absent, subject to reference-safety check). Also runs tools/check_message_coverage_gaps.py to detect a new/superseding message landing in a business area already claimed 100% complete.
-argument-hint: (none — reads snapshot-sync/{date}/spec-snapshot.tsv, writes src/BeneficialStrategies.Iso20022.FluentValidation/coverage-checksums.json)
+argument-hint: (none — reads snapshot-sync/{date}/spec-snapshot.tsv, writes src/FluentValidation/coverage-checksums.json)
 ---
 
 # Snapshot Sync — Validator Checksums
@@ -40,7 +40,7 @@ doesn't exist for the date you're working, run `snapshot-sync-plan` first (or it
 ### 2. Regenerate the manifest
 
 ```bash
-cd src/BeneficialStrategies.Iso20022.FluentValidation
+cd src/FluentValidation
 python3 tools/build_coverage_checksums.py \
   --snapshot-date {date} \
   ../../snapshot-sync/{date}/spec-snapshot.tsv
@@ -57,13 +57,13 @@ that a spec entity changed.
 ### 3. Diff against the last committed manifest
 
 ```bash
-git diff --stat src/BeneficialStrategies.Iso20022.FluentValidation/coverage-checksums.json
+git diff --stat src/FluentValidation/coverage-checksums.json
 ```
 
 Then inspect the actual entries that changed:
 
 ```bash
-git diff src/BeneficialStrategies.Iso20022.FluentValidation/coverage-checksums.json
+git diff src/FluentValidation/coverage-checksums.json
 ```
 
 Categorize every changed entry:
@@ -138,7 +138,7 @@ table intro) is invisible to that test. Nothing goes red; the completeness claim
 being true.
 
 ```bash
-cd src/BeneficialStrategies.Iso20022.FluentValidation
+cd src/FluentValidation
 python3 tools/check_message_coverage_gaps.py ../../snapshot-sync/{date}/spec-snapshot.tsv
 ```
 

@@ -8,7 +8,7 @@ Fixed here:
   a class-level tag that is not the element's            -> the element's tag"""
 import json, os, re, collections
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
-LIB = os.path.join(ROOT, 'src', 'BeneficialStrategies.Iso20022.Common')
+LIB = os.path.join(ROOT, 'src', 'Common')
 WORK = os.environ.get('ISO20022_WORK', os.path.join(ROOT, '..', '_work', 'Iso20022Library'))
 E = json.load(open(os.path.join(WORK, 'repo-structure.json')))['entries']
 by_name = collections.defaultdict(list)

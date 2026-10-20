@@ -5,7 +5,7 @@ types, tags, ids and definitions), in the form the other records have. Usage: re
 import os, re, sys, collections
 import xml.etree.ElementTree as ET
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
-LIB = os.path.join(ROOT, 'src', 'BeneficialStrategies.Iso20022.Common')
+LIB = os.path.join(ROOT, 'src', 'Common')
 REPO = os.environ.get('ISO20022_REPO', os.path.expanduser('~/.iso20022/snapshots/20260904_ISO20022_2013_eRepository.iso20022'))
 XSI = '{http://www.w3.org/2001/XMLSchema-instance}type'; XMI = '{http://www.omg.org/XMI}id'
 wanted = set(sys.argv[1:])

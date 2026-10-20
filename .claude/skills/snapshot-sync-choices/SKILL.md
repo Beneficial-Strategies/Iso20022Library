@@ -35,8 +35,8 @@ ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__universal_look
 ## Choice Type File Structure
 
 Each choice type occupies:
-- `src/BeneficialStrategies.Iso20022.Common/Choices/{ChoiceName}_.cs` — abstract base record
-- `src/BeneficialStrategies.Iso20022.Common/Choices/{ChoiceName}/` — directory containing one `.cs` file per variant
+- `src/Common/Choices/{ChoiceName}_.cs` — abstract base record
+- `src/Common/Choices/{ChoiceName}/` — directory containing one `.cs` file per variant
 
 The abstract base uses `[KnownType]` and `[JsonDerivedType]` attributes for each variant. Variant files contain concrete records that extend the base.
 
@@ -170,7 +170,7 @@ namespace BeneficialStrategies.Iso20022.Choices.{ChoiceName}
 A choice whose `registrationStatus` flipped to `Obsolete` in `get_snapshot_diff` but which **still
 appears** in `get_spec_snapshot` output. Not a removal.
 
-1. Read the existing base file at `src/BeneficialStrategies.Iso20022.Common/Choices/{ChoiceName}_.cs`.
+1. Read the existing base file at `src/Common/Choices/{ChoiceName}_.cs`.
 
 2. Add the `[Obsolete]` attribute immediately before `public abstract record {ChoiceName}_`, after
    all other attributes:
@@ -199,7 +199,7 @@ merely `Obsolete`-flagged (see the Obsolete step above).
 
 3. If no external references, delete `Choices/{ChoiceName}_.cs` and the entire `Choices/{ChoiceName}/`
    directory, **and its FluentValidation validator in the same commit** if one exists
-   (`src/BeneficialStrategies.Iso20022.FluentValidation/Validators/Choices/{ChoiceName}_Validator.cs`).
+   (`src/FluentValidation/Validators/Choices/{ChoiceName}_Validator.cs`).
    See `snapshot-sync-validator-checksums` for the FluentValidation-side manifest this should also
    update.
 

@@ -79,7 +79,7 @@ For each unchecked codeset item (up to 20), determine the action from its label 
 
    **2a. Hybrid struct (external, with known members)** — open `IIsoExternalCode` struct (same shape as 2b) PLUS one `public static readonly {CodesetName} {MemberName} = new("{code}");` field per known member, each with its own `<summary>`/`[Description]`/`[IsoId]` (the member's own IsoId, not the codeset's). See `Codesets/ExternalAuthenticationMethod1Code.cs` or `Codesets/ExternalProductType1Code.cs` for the reference shape. The constructor stays exactly as open as 2b — the constants are additive convenience only.
 
-   **2b. Plain open struct (no known members)** — follow the `IIsoExternalCode` struct template in CLAUDE.md ("ISO Simple Value Primitives" → struct template), file goes in `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs`, namespace `BeneficialStrategies.Iso20022.Codesets`, `[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<{CodesetName}>))]`. See `Codesets/CurrencyCode.cs` for the reference shape (Pattern-validated, `TryCreate`, full six equality operators, implicit string operators). Mark the item `[x]` in PLAN.md with a note identifying which of 2a/2b was used and the source of the Pattern (MCP facet, or "no facet published — kept permissive").
+   **2b. Plain open struct (no known members)** — follow the `IIsoExternalCode` struct template in CLAUDE.md ("ISO Simple Value Primitives" → struct template), file goes in `src/Common/Codesets/{CodesetName}.cs`, namespace `BeneficialStrategies.Iso20022.Codesets`, `[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<{CodesetName}>))]`. See `Codesets/CurrencyCode.cs` for the reference shape (Pattern-validated, `TryCreate`, full six equality operators, implicit string operators). Mark the item `[x]` in PLAN.md with a note identifying which of 2a/2b was used and the source of the Pattern (MCP facet, or "no facet published — kept permissive").
 
    **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
    After receiving the lookup result, verify the member list is complete:
@@ -95,7 +95,7 @@ For each unchecked codeset item (up to 20), determine the action from its label 
 
    A codeset file with missing enum members will compile but produce silent runtime errors (unmapped codes). This is not acceptable.
 
-2. **If the codeset has real `[EnumMember]` entries in the spec** (the MEMBERLESS CHECK above did not apply), create `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs` as a closed `enum` using this pattern. (If the MEMBERLESS CHECK above DID apply, 2a/2b already specified the struct shape to use instead — skip this enum template.)
+2. **If the codeset has real `[EnumMember]` entries in the spec** (the MEMBERLESS CHECK above did not apply), create `src/Common/Codesets/{CodesetName}.cs` as a closed `enum` using this pattern. (If the MEMBERLESS CHECK above DID apply, 2a/2b already specified the struct shape to use instead — skip this enum template.)
 
 ```csharp
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
@@ -138,7 +138,7 @@ Omit `[DerivedFrom]` and the `= {ParentCode}.{MemberName}` ordinal assignment if
 
 1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` with the codeset name to get the authoritative current member list.
 
-2. Read the existing file at `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs`.
+2. Read the existing file at `src/Common/Codesets/{CodesetName}.cs`.
 
 3. Apply the changes:
    - **Added members**: append new `[EnumMember]` entries at the end of the enum body following the existing pattern.
@@ -157,7 +157,7 @@ Omit `[DerivedFrom]` and the `= {ParentCode}.{MemberName}` ordinal assignment if
 
 ### Obsolete Codeset
 
-1. Read the existing file at `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs`.
+1. Read the existing file at `src/Common/Codesets/{CodesetName}.cs`.
 
 2. Add the `[Obsolete]` attribute immediately before `public enum {CodesetName}`, after all other attributes:
    - If a removalDate is recorded in PLAN.md: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. Removal date: {removalDate}.")]`

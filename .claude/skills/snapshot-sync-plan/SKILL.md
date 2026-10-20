@@ -86,7 +86,7 @@ ls snapshot-sync/*/spec-snapshot.tsv 2>/dev/null | sort | tail -2
 ```bash
 # Messages in spec vs. files in MessageDefinitions/
 grep '^MSGDEF' snapshot-sync/{date}/spec-snapshot.tsv | cut -f2 > /tmp/spec-messages.txt
-find src/BeneficialStrategies.Iso20022.Common/MessageDefinitions -name "*.cs" \
+find src/Common/MessageDefinitions -name "*.cs" \
   | xargs -I{} basename {} .cs > /tmp/lib-messages.txt
 comm -23 <(sort /tmp/spec-messages.txt) <(sort /tmp/lib-messages.txt)  # in spec, not in lib = NEW
 comm -13 <(sort /tmp/spec-messages.txt) <(sort /tmp/lib-messages.txt)  # in lib, not in spec = REMOVED
@@ -122,7 +122,7 @@ grep '^MSGELEMENT' /tmp/snapshot-added.tsv   # New elements within existing comp
 
 Sort every changed artifact into one of four phases. For each item record whether it is **new**, **changed**, or **removed**, and note enough detail to act on it without re-querying MCP (though re-querying for details is always fine):
 
-- **Phase 1 — Codesets**: enum types under `src/BeneficialStrategies.Iso20022.Common/Codesets/`
+- **Phase 1 — Codesets**: enum types under `src/Common/Codesets/`
   - New: full name + file path. **Important — before adding a "New" entry, check whether the codeset has any enumerated codes in the spec.** A codeset with no codes is one of two things:
     1. **External with members**: `IsExternal` flag is set AND the MCP returns members sourced from the external codeset JSON (`*externalcodesets*.json`). Still a New entry — the codeset skill creates a **hybrid `IIsoExternalCode` struct** (open struct + named constants per known member), not a closed enum.
     2. **Everything else with no codes** — pattern-validated (`pattern` attribute present), length/table-validated (`ValidationByTable` constraint, minLength/maxLength/exact-length facet), or genuinely no facet at all: still a New entry, and still real work — the codeset skill creates a **plain open `IIsoExternalCode` struct**, Pattern-validated (or permissively `^.+$` with a documented "MCP checked, no facet found" note when MCP gives nothing at all).
@@ -143,7 +143,7 @@ Sort every changed artifact into one of four phases. For each item record whethe
   - Changed: added/removed enum member codes
   - Obsolete: call `get_snapshot_diff` with `section: changedContent` and `xsiType: CodeSet`, then filter for records where `changes.registrationStatus[1] === "Obsolete"`. For each match, check if the file exists in `Codesets/`; if so, add an `### Obsolete` subsection entry noting the removalDate from `changes.removalDate[1]` (if present). These files stay in the library — they get `[Obsolete("Marked obsolete in the ISO 20022 {date} snapshot. Removal date: {removalDate}.")]` (or `"No removal date recorded."` if absent). Do NOT put them in `### Removed`.
   - Removed: file path to delete — only for codesets that appear in `get_snapshot_diff` `section: removed` with `xsi:type: CodeSet` AND whose file exists in `Codesets/`. Items that are merely Obsolete are NOT removals.
-- **Phase 2 — Components**: record types under `src/BeneficialStrategies.Iso20022.Common/Components/`
+- **Phase 2 — Components**: record types under `src/Common/Components/`
   - Changed: field-level description (type change, added field, removed field)
   - Obsolete/Removed: **same three-state distinction as Phase 1** (below), substituting
     `xsiType: MessageComponent` and `Components/` for `CodeSet`/`Codesets/`. This is not
@@ -152,10 +152,10 @@ Sort every changed artifact into one of four phases. For each item record whethe
     fully purged it from the queryable snapshot by 2026-06-26, specifically because an earlier
     version of this section had no Obsolete/Removed step for Components at all — see
     `project_validator_checksum_manifest` in project memory.
-- **Phase 3 — Choices**: abstract choice records under `src/BeneficialStrategies.Iso20022.Common/Choices/`
+- **Phase 3 — Choices**: abstract choice records under `src/Common/Choices/`
   - Changed: variant added/removed
   - Obsolete/Removed: same three-state distinction, `xsiType: ChoiceComponent` and `Choices/`.
-- **Phase 4 — Messages**: outer record types under `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/{area}/`
+- **Phase 4 — Messages**: outer record types under `src/Common/MessageDefinitions/{area}/`
   - Group by 4-letter business area prefix (pain, pacs, camt, seev, sese, semt, acmt, admi, auth, etc.)
   - Obsolete/Removed: same three-state distinction. Messages have no `xsiType` value in
     `get_snapshot_diff` (`MessageDefinition` returns zero results — confirmed 2026-08-26); scan the

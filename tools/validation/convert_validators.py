@@ -9,8 +9,8 @@ import re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2] / "src"
-IFACES = ROOT / "BeneficialStrategies.Iso20022.Interfaces"
-VAL = ROOT / "BeneficialStrategies.Iso20022.FluentValidation"
+IFACES = ROOT / "Interfaces"
+VAL = ROOT / "FluentValidation"
 
 top, variants = set(), set()   # I-names directly in Components, Choices or MessageDefinitions/<area>; (choice, I-name) of variants
 for p in IFACES.rglob("I*.cs"):

@@ -112,7 +112,7 @@ git commit -m "Snapshot sync {date} ({library}): Milestone {N} passed — build 
 At Milestone 4 of each sync, run the build with obsolete warnings re-enabled to audit the tangle:
 
 ```bash
-cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release --no-incremental \
+cd src && dotnet build Common -c Release --no-incremental \
   -p:EnableObsoleteWarnings=true 2>&1 | grep "CS0618\|CS0612" | wc -l
 ```
 

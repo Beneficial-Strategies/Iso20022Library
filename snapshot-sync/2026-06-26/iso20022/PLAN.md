@@ -199,7 +199,7 @@ therefore nothing to do."
 - [x] `StatementOfInvestmentFundTransactions3` — deleted `Components/StatementOfInvestmentFundTransactions3.cs` (Phase 4 messages deleted first, confirmed self-contained via grep — see note above)
 - [x] `SubAccountIdentification36` — deleted `Components/SubAccountIdentification36.cs`
 - [x] `InvestmentAccount43` — deleted `Components/InvestmentAccount43.cs`
-- [x] `InvestmentFundTransactionsByFund3` — deleted `Components/InvestmentFundTransactionsByFund3.cs`, `src/BeneficialStrategies.Iso20022.FluentValidation/Validators/Components/InvestmentFundTransactionsByFund3Validator.cs`, and its `coverage-checksums.json` entry
+- [x] `InvestmentFundTransactionsByFund3` — deleted `Components/InvestmentFundTransactionsByFund3.cs`, `src/FluentValidation/Validators/Components/InvestmentFundTransactionsByFund3Validator.cs`, and its `coverage-checksums.json` entry
 - [x] `Intermediary27` — deleted `Components/Intermediary27.cs`
 - [x] `InvestmentFundTransaction4` — deleted `Components/InvestmentFundTransaction4.cs`
 

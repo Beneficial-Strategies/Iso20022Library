@@ -5,7 +5,7 @@
   a component                                  -> class tag = the element's tag, and the component's members, inlined, in order"""
 import json, os, re, collections
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
-LIB = os.path.join(ROOT, 'src', 'BeneficialStrategies.Iso20022.Common')
+LIB = os.path.join(ROOT, 'src', 'Common')
 WORK = os.environ.get('ISO20022_WORK', os.path.join(ROOT, '..', '_work', 'Iso20022Library'))
 D = json.load(open(os.path.join(WORK, 'repo-structure.json')))
 E = D['entries']
