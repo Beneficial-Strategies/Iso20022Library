@@ -1,7 +1,20 @@
 # Tools for the Samples package (#88)
 
-Used once to move the first slice of test objects into `src/Samples`; kept so the same can be done for the next one, until the
-Roslyn rewriter of #88 replaces them.
+`Rewriter/` is the tool that moved the tests of `FluentValidation.Tests` off the message records (#88): a Roslyn rewriter that opens a
+test project with MSBuild, and with the compiler's own knowledge of every type rewrites
+`new Foo { A = x }`, target-typed `new() { ... }` and `source with { A = x }` into `IsoDataFactory.Make<IFoo>(...)` and
+`IsoDataFactory.With(source, ...)`, and every record type named in a type position (return types, declarations, patterns, `typeof`,
+`using` aliases) into its interface.
+
+```
+dotnet build tools/samples/Rewriter -c Release
+dotnet tools/samples/Rewriter/bin/Release/net10.0/Rewriter.dll src/Some.Tests/Some.Tests.csproj Validators SomeFile.cs [--dry]
+```
+
+The project must still compile with the records referenced (the compiler needs them to know the types); drop the reference afterwards.
+Constructions it cannot read are left as they are and listed. It rewrites in place, so run the tests before and after and compare the counts.
+
+The two scripts below were used first, for the 24 choice-validator files, and make the named samples of `src/Samples` out of them:
 
 1. `convert_tests.py <test file>...` rewrites `new Record { A = x }` in test files to `IsoDataFactory.Make<IRecord>(b => b.Set(x => x.A).To(x))`.
    It skips what it cannot read and does not handle `with` expressions or target-typed `new()`.
