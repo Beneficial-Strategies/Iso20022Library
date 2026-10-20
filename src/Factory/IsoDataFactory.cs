@@ -28,6 +28,20 @@ public sealed class IsoDataFactory : IIsoDataFactory
         return Constructors.TryGetValue(type, out var create) ? create() : Constructor(type)();
     }
 
+    /// <summary>A factory to use where none is configured, such as in a test.</summary>
+    public static IsoDataFactory Shared { get; } = new();
+
+    /// <summary>Makes an object for an interface and sets its members, as one expression.</summary>
+    /// <example><code>var id = IsoDataFactory.Make&lt;IGenericIdentification3&gt;(b =&gt; b.Set(x =&gt; x.Identification, "ID-1"));</code></example>
+    /// <param name="configure">Sets the members; omit it for an object with every member unset (lists empty).</param>
+    public static T Make<T>(Action<IsoBuilder<T>>? configure = null)
+        where T : class
+    {
+        var builder = new IsoBuilder<T>(Shared.Create(typeof(T)));
+        configure?.Invoke(builder);
+        return builder.Result;
+    }
+
     /// <summary>The class built for an interface (built now if it has not been).</summary>
     public Type ImplementationOf(Type type) => Constructor(type)().GetType();
 

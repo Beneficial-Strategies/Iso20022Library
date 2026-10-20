@@ -9,21 +9,14 @@ public class Amount2Choice_ValidatorTests
     [Fact]
     public void AmountWithCurrencyVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.Amount2Choice.AmountWithCurrency
-        {
-            Currency = "USD",
-            Amount = 100m,
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.Amount2Choice.Valid.AmountWithCurrency.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void AmountWithoutCurrencyVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.Amount2Choice.AmountWithoutCurrency
-        {
-            Value = 100m,
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.Amount2Choice.Valid.AmountWithoutCurrency.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

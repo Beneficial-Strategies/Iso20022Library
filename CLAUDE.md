@@ -232,7 +232,7 @@ SDK.
 `BeneficialStrategies.Iso20022.FluentValidation` via `src/Directory.Build.props` (`<Version>` and
 the rest of the shared package metadata) — see "Multi-Package Repository Strategy" below for why.
 
-**The exception: `BeneficialStrategies.Iso20022.Primitives`, `.Interfaces`, `.FluentValidation`, `.FluentValidation.Xml`, `.FluentValidation.Payloads` and `.Factory` also target `netstandard2.0`** (#26, #28), so that .NET Framework
+**The exception: `BeneficialStrategies.Iso20022.Primitives`, `.Interfaces`, `.FluentValidation`, `.FluentValidation.Xml`, `.FluentValidation.Payloads`, `.Factory` and `.Samples` also target `netstandard2.0`** (#26, #28), so that .NET Framework
 4.6.1+, Mono 5.4+ and Unity can take the primitive types, the interfaces, the validators and the payload validation without the records (`Common` and the
 saga toolkit stay net8.0 + net10.0; the validators reference `Primitives` and `Interfaces` only). The XML and JSON serializers, the value lists and the message-type registry are in `Primitives` for that reason (they work by
 reflection over the attributes and `IOuterRecord`, and the registry is told the records' assembly), so `.Payloads` needs `Primitives` only. `netstandard2.0` is one build for all of those. What it costs:
@@ -299,6 +299,7 @@ src/Interfaces/   # references Primitives only; netstandard2.0 as well
 └── GlobalUsings.cs
 
 src/Factory/                   # references Primitives only; netstandard2.0 as well: classes for the interfaces, built at run time (#61)
+src/Samples/                   # references Primitives, Interfaces and Factory; netstandard2.0 as well: named valid and invalid objects for tests (#88)
 src/FluentValidation.Xml/        # references Primitives only; netstandard2.0 as well: validate XML from text, a document or an element (#21)
 src/FluentValidation.Payloads/   # references Primitives only; netstandard2.0 as well: validates raw XML or JSON payloads (#28)
 

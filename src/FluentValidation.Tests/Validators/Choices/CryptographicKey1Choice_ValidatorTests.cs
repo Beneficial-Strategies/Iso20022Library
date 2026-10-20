@@ -9,17 +9,14 @@ public class CryptographicKey1Choice_ValidatorTests
     [Fact]
     public void Signature_NoValidationErrors()
     {
-        var msg = new BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice.Signature
-        {
-            Value = new string('A', 64),
-        };
+        var msg = BeneficialStrategies.Iso20022.Samples.CryptographicKey1Choice.Valid.Signature.Minimal;
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ILPV4_NoValidationErrors()
     {
-        var msg = new BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice.ILPV4 { Value = "AB12" };
+        var msg = BeneficialStrategies.Iso20022.Samples.CryptographicKey1Choice.Valid.ILPV4.Minimal;
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

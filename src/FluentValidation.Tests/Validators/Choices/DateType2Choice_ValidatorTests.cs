@@ -9,16 +9,14 @@ public class DateType2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.DateType2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.DateType2Choice.Code { Value = ExternalDateType1Code.InvoiceDate };
+        var choice = BeneficialStrategies.Iso20022.Samples.DateType2Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.DateType2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.DateType2Choice.Proprietary { Value = "MYDATETYPE" };
+        var choice = BeneficialStrategies.Iso20022.Samples.DateType2Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

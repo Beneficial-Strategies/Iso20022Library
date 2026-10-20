@@ -9,20 +9,14 @@ public class CurrencyCriteriaDefinition1Choice_ValidatorTests
     [Fact]
     public void QueryNameVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.QueryName
-        {
-            Value = "PREVIOUS-QUERY",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.QueryName.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void NewCriteriaVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.NewCriteria
-        {
-            SearchCriteria = [new CurrencyExchangeSearchCriteria1 { SourceCurrency = "USD", TargetCurrency = "EUR" }],
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 

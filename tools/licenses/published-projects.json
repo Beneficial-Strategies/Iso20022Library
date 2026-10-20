@@ -5,5 +5,6 @@
   "src/FluentValidation/BeneficialStrategies.Iso20022.FluentValidation.csproj",
   "src/FluentValidation.Xml/BeneficialStrategies.Iso20022.FluentValidation.Xml.csproj",
   "src/FluentValidation.Payloads/BeneficialStrategies.Iso20022.FluentValidation.Payloads.csproj",
-  "src/Factory/BeneficialStrategies.Iso20022.Factory.csproj"
+  "src/Factory/BeneficialStrategies.Iso20022.Factory.csproj",
+  "src/Samples/BeneficialStrategies.Iso20022.Samples.csproj"
 ]

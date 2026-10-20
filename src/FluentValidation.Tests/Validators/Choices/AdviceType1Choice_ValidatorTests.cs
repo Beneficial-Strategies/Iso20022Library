@@ -9,17 +9,14 @@ public class AdviceType1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.AdviceType1Choice.Code
-        {
-            Value = AdviceType1Code.AdviceWithDetails,
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.AdviceType1Choice.Valid.Code.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.AdviceType1Choice.Proprietary { Value = "MYADVICE" };
+        var value = BeneficialStrategies.Iso20022.Samples.AdviceType1Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

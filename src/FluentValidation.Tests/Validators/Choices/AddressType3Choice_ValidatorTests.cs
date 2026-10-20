@@ -9,23 +9,14 @@ public class AddressType3Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.AddressType3Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.AddressType3Choice.Code
-            {
-                Value = AddressType2Code.Business,
-            };
+        var choice = BeneficialStrategies.Iso20022.Samples.AddressType3Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.AddressType3Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.AddressType3Choice.Proprietary
-            {
-                Identification = "AB12",
-                Issuer = "IssuerX",
-            };
+        var choice = BeneficialStrategies.Iso20022.Samples.AddressType3Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -9,16 +9,14 @@ public class AuthenticationChannel1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice.Code { Value = ExternalAuthenticationChannel1Code.ATM };
+        var choice = BeneficialStrategies.Iso20022.Samples.AuthenticationChannel1Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice.Proprietary { Value = "CHANNELX" };
+        var choice = BeneficialStrategies.Iso20022.Samples.AuthenticationChannel1Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

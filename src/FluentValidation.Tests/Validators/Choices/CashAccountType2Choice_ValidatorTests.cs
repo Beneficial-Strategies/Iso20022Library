@@ -9,16 +9,14 @@ public class CashAccountType2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice.Code { Value = ExternalCashAccountType1Code.Current };
+        var choice = BeneficialStrategies.Iso20022.Samples.CashAccountType2Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice.Proprietary { Value = "MYTYPE" };
+        var choice = BeneficialStrategies.Iso20022.Samples.CashAccountType2Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

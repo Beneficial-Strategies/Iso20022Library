@@ -9,32 +9,14 @@ public class CurrentOrDefaultReservation4Choice_ValidatorTests
     [Fact]
     public void CurrentVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation4Choice.Current
-        {
-            Value = new ReservationIdentification4
-            {
-                Type = new BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.Code
-                {
-                    Value = ExternalReservationType1Code.CashReservation,
-                },
-            },
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.CurrentOrDefaultReservation4Choice.Valid.Current.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void DefaultVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation4Choice.Default
-        {
-            Value = new ReservationIdentification4
-            {
-                Type = new BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.Code
-                {
-                    Value = ExternalReservationType1Code.CashReservation,
-                },
-            },
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.CurrentOrDefaultReservation4Choice.Valid.Default.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

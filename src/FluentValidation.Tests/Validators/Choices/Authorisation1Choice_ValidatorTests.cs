@@ -9,22 +9,14 @@ public class Authorisation1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Authorisation1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Authorisation1Choice.Code
-            {
-                Value = Authorisation1Code.PreAuthorisedFile,
-            };
+        var choice = BeneficialStrategies.Iso20022.Samples.Authorisation1Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.Authorisation1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.Authorisation1Choice.Proprietary
-            {
-                Value = "LEVEL2",
-            };
+        var choice = BeneficialStrategies.Iso20022.Samples.Authorisation1Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

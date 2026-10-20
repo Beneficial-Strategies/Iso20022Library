@@ -9,16 +9,14 @@ public class CategoryPurpose1Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.CategoryPurpose1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.CategoryPurpose1Choice.Code { Value = ExternalCategoryPurpose1Code.BonusPayment };
+        var choice = BeneficialStrategies.Iso20022.Samples.CategoryPurpose1Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        BeneficialStrategies.Iso20022.Choices.CategoryPurpose1Choice_ choice =
-            new BeneficialStrategies.Iso20022.Choices.CategoryPurpose1Choice.Proprietary { Value = "MYCAT" };
+        var choice = BeneficialStrategies.Iso20022.Samples.CategoryPurpose1Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

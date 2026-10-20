@@ -9,20 +9,14 @@ public class AcknowledgementDetails1Choice_ValidatorTests
     [Fact]
     public void PayInScheduleReferenceVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice.PayInScheduleReference
-        {
-            Value = "PIS-001",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.AcknowledgementDetails1Choice.Valid.PayInScheduleReference.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void PayInCallReferenceVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice.PayInCallReference
-        {
-            Value = "PIC-001",
-        };
+        var value = BeneficialStrategies.Iso20022.Samples.AcknowledgementDetails1Choice.Valid.PayInCallReference.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }
