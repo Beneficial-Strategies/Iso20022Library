@@ -9,13 +9,11 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid;
 
-/// <summary>Valid samples of the <c>NewCriteria</c> variant of <c>CurrencyCriteriaDefinition1Choice</c>.</summary>
+/// <summary>Valid samples of <c>NewCriteria</c> of <c>CurrencyCriteriaDefinition1Choice</c>.</summary>
 public static class NewCriteria
 {
-    /// <summary>The NewCriteria variant of <c>CurrencyCriteriaDefinition1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>NewCriteria</c> of <c>CurrencyCriteriaDefinition1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.INewCriteria Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.INewCriteria>(b => b
-                .Set(x => x.SearchCriteria).To([IsoDataFactory.Make<ICurrencyExchangeSearchCriteria1>(b2 => b2
-                    .Set(x2 => x2.SourceCurrency).To("USD")
-                    .Set(x2 => x2.TargetCurrency).To("EUR"))]));
+                .Set(x => x.SearchCriteria).To([BeneficialStrategies.Iso20022.Samples.CurrencyExchangeSearchCriteria1.Valid.Standard.Minimal]));
 }

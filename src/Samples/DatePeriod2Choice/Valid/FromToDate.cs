@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.DatePeriod2Choice.Valid;
 
-/// <summary>Valid samples of the <c>FromToDate</c> variant of <c>DatePeriod2Choice</c>.</summary>
+/// <summary>Valid samples of <c>FromToDate</c> of <c>DatePeriod2Choice</c>.</summary>
 public static class FromToDate
 {
-    /// <summary>The FromToDate variant of <c>DatePeriod2Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>FromToDate</c> of <c>DatePeriod2Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice.IFromToDate Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice.IFromToDate>(b => b
                 .Set(x => x.FromDate).To(new System.DateOnly(2026, 1, 1))

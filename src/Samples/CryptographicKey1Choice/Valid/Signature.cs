@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.CryptographicKey1Choice.Valid;
 
-/// <summary>Valid samples of the <c>Signature</c> variant of <c>CryptographicKey1Choice</c>.</summary>
+/// <summary>Valid samples of <c>Signature</c> of <c>CryptographicKey1Choice</c>.</summary>
 public static class Signature
 {
-    /// <summary>The Signature variant of <c>CryptographicKey1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>Signature</c> of <c>CryptographicKey1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice.ISignature Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice.ISignature>(b => b
                 .Set(x => x.Value).To(new string('A', 64)));

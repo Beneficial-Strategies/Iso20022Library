@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid;
 
-/// <summary>Valid samples of the <c>InstructedAmount</c> variant of <c>AmountType4Choice</c>.</summary>
+/// <summary>Valid samples of <c>InstructedAmount</c> of <c>AmountType4Choice</c>.</summary>
 public static class InstructedAmount
 {
-    /// <summary>The InstructedAmount variant of <c>AmountType4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>InstructedAmount</c> of <c>AmountType4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.AmountType4Choice.IInstructedAmount Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.AmountType4Choice.IInstructedAmount>(b => b
                 .Set(x => x.Currency).To("USD")

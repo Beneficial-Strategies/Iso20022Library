@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid;
 
-/// <summary>Valid samples of the <c>QueryName</c> variant of <c>CurrencyCriteriaDefinition1Choice</c>.</summary>
+/// <summary>Valid samples of <c>QueryName</c> of <c>CurrencyCriteriaDefinition1Choice</c>.</summary>
 public static class QueryName
 {
-    /// <summary>The QueryName variant of <c>CurrencyCriteriaDefinition1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>QueryName</c> of <c>CurrencyCriteriaDefinition1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.IQueryName Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice.IQueryName>(b => b
                 .Set(x => x.Value).To("PREVIOUS-QUERY"));

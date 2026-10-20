@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.Authorisation1Choice.Valid;
 
-/// <summary>Valid samples of the <c>Proprietary</c> variant of <c>Authorisation1Choice</c>.</summary>
+/// <summary>Valid samples of <c>Proprietary</c> of <c>Authorisation1Choice</c>.</summary>
 public static class Proprietary
 {
-    /// <summary>The Proprietary variant of <c>Authorisation1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>Proprietary</c> of <c>Authorisation1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.Authorisation1Choice.IProprietary Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.Authorisation1Choice.IProprietary>(b => b
                     .Set(x => x.Value).To("LEVEL2"));

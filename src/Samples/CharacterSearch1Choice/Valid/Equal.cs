@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.CharacterSearch1Choice.Valid;
 
-/// <summary>Valid samples of the <c>Equal</c> variant of <c>CharacterSearch1Choice</c>.</summary>
+/// <summary>Valid samples of <c>Equal</c> of <c>CharacterSearch1Choice</c>.</summary>
 public static class Equal
 {
-    /// <summary>The Equal variant of <c>CharacterSearch1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>Equal</c> of <c>CharacterSearch1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice.IEqual Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice.IEqual>(b => b
                 .Set(x => x.Value).To("SUBJECT"));

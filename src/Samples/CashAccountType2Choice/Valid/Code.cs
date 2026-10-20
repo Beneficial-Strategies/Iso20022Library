@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.CashAccountType2Choice.Valid;
 
-/// <summary>Valid samples of the <c>Code</c> variant of <c>CashAccountType2Choice</c>.</summary>
+/// <summary>Valid samples of <c>Code</c> of <c>CashAccountType2Choice</c>.</summary>
 public static class Code
 {
-    /// <summary>The Code variant of <c>CashAccountType2Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>Code</c> of <c>CashAccountType2Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice.ICode Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice.ICode>(b => b
                     .Set(x => x.Value).To(ExternalCashAccountType1Code.Current));

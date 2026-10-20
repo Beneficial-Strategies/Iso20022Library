@@ -9,11 +9,16 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.AccountIdentification4Choice.Valid;
 
-/// <summary>Valid samples of the <c>IBAN</c> variant of <c>AccountIdentification4Choice</c>.</summary>
+/// <summary>Valid samples of <c>IBAN</c> of <c>AccountIdentification4Choice</c>.</summary>
 public static class IBAN
 {
-    /// <summary>The IBAN variant of <c>AccountIdentification4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>IBAN</c> of <c>AccountIdentification4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IIBAN Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IIBAN>(b => b
                     .Set(x => x.Value).To("DE89370400440532013000"));
+
+    /// <summary>A valid <c>IBAN</c> of <c>AccountIdentification4Choice</c> with more members set than Minimal. A new object on every access.</summary>
+    public static BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IIBAN Maximal =>
+        IsoDataFactory.Make<Choices.AccountIdentification4Choice.IIBAN>(b4 => b4
+                        .Set(x4 => x4.Value).To("DE89370400440532013000"));
 }

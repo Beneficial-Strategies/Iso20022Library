@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.DateAndDateTime2Choice.Valid;
 
-/// <summary>Valid samples of the <c>DateTime</c> variant of <c>DateAndDateTime2Choice</c>.</summary>
+/// <summary>Valid samples of <c>DateTime</c> of <c>DateAndDateTime2Choice</c>.</summary>
 public static class DateTime_
 {
-    /// <summary>The DateTime variant of <c>DateAndDateTime2Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>DateTime</c> of <c>DateAndDateTime2Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice.IDateTime Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice.IDateTime>(b => b
                 .Set(x => x.Value).To(new System.DateTime(2026, 1, 1)));

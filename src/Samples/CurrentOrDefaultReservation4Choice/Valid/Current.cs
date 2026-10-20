@@ -9,13 +9,11 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.CurrentOrDefaultReservation4Choice.Valid;
 
-/// <summary>Valid samples of the <c>Current</c> variant of <c>CurrentOrDefaultReservation4Choice</c>.</summary>
+/// <summary>Valid samples of <c>Current</c> of <c>CurrentOrDefaultReservation4Choice</c>.</summary>
 public static class Current
 {
-    /// <summary>The Current variant of <c>CurrentOrDefaultReservation4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>Current</c> of <c>CurrentOrDefaultReservation4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation4Choice.ICurrent Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation4Choice.ICurrent>(b => b
-                .Set(x => x.Value).To(IsoDataFactory.Make<IReservationIdentification4>(b2 => b2
-                    .Set(x2 => x2.Type).To(IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.ReservationType2Choice.ICode>(b3 => b3
-                        .Set(x3 => x3.Value).To(ExternalReservationType1Code.CashReservation))))));
+                .Set(x => x.Value).To(BeneficialStrategies.Iso20022.Samples.ReservationIdentification4.Valid.Standard.Minimal));
 }

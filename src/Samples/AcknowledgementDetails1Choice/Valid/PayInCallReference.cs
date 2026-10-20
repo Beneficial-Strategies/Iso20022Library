@@ -9,10 +9,10 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.AcknowledgementDetails1Choice.Valid;
 
-/// <summary>Valid samples of the <c>PayInCallReference</c> variant of <c>AcknowledgementDetails1Choice</c>.</summary>
+/// <summary>Valid samples of <c>PayInCallReference</c> of <c>AcknowledgementDetails1Choice</c>.</summary>
 public static class PayInCallReference
 {
-    /// <summary>The PayInCallReference variant of <c>AcknowledgementDetails1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>PayInCallReference</c> of <c>AcknowledgementDetails1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice.IPayInCallReference Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice.IPayInCallReference>(b => b
                 .Set(x => x.Value).To("PIC-001"));

@@ -9,16 +9,16 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid;
 
-/// <summary>Valid samples of the <c>EquivalentAmount</c> variant of <c>AmountType4Choice</c>.</summary>
+/// <summary>Valid samples of <c>EquivalentAmount</c> of <c>AmountType4Choice</c>.</summary>
 public static class EquivalentAmount
 {
-    /// <summary>The EquivalentAmount variant of <c>AmountType4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
+    /// <summary>A valid <c>EquivalentAmount</c> of <c>AmountType4Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.AmountType4Choice.IEquivalentAmount Minimal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.AmountType4Choice.IEquivalentAmount>(b => b
                 .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
                 .Set(x => x.CurrencyOfTransfer).To("EUR"));
 
-    /// <summary>The EquivalentAmount variant of <c>AmountType4Choice</c> with more members set than Minimal. A new object on every access.</summary>
+    /// <summary>A valid <c>EquivalentAmount</c> of <c>AmountType4Choice</c> with more members set than Minimal. A new object on every access.</summary>
     public static BeneficialStrategies.Iso20022.Choices.AmountType4Choice.IEquivalentAmount Maximal =>
         IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.AmountType4Choice.IEquivalentAmount>(b => b
                 .Set(x => x.Amount).To(new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m })
