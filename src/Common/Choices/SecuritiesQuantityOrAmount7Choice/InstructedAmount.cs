@@ -30,6 +30,13 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount7Choic
         [IsoId("_WOVvkNp-Ed-ak6NoX_4Aeg_-1267706960_Amount")]
         [DisplayName("Restricted FIN Active Currency And Amount _ Amount")]
         [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        [IsoAmount(14, 5)]
+        public required decimal Amount
+        {
+            get => _amount;
+            init => _amount = IsoAmountFacets.Check(typeof(InstructedAmount), nameof(Amount), value);
+        }
+
+        private decimal _amount;
     }
 }

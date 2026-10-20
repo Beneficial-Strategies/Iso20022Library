@@ -30,6 +30,13 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss1Choice
         [IsoId("_YX4O9Np-Ed-ak6NoX_4Aeg_-184934550_Amount")]
         [DisplayName("Active Currency And 13 Decimal Amount _ Amount")]
         [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        [IsoAmount(18, 13)]
+        public required decimal Amount
+        {
+            get => _amount;
+            init => _amount = IsoAmountFacets.Check(typeof(Profit), nameof(Amount), value);
+        }
+
+        private decimal _amount;
     }
 }

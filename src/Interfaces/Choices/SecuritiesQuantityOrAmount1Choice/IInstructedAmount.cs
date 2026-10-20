@@ -26,5 +26,6 @@ public interface IInstructedAmount : ISecuritiesQuantityOrAmount1Choice, IIsoCho
     [IsoId("_WOVvkNp-Ed-ak6NoX_4Aeg_-1267706960_Amount")]
     [DisplayName("Restricted FIN Active Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
+    [IsoAmount(14, 5)]
     decimal Amount { get; }
 }

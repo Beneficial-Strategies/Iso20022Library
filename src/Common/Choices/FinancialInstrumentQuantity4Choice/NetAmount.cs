@@ -30,6 +30,13 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity4Choi
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Amount")]
         [DisplayName("Currency And Amount _ Amount")]
         [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        [IsoAmount(18, 5)]
+        public required decimal Amount
+        {
+            get => _amount;
+            init => _amount = IsoAmountFacets.Check(typeof(NetAmount), nameof(Amount), value);
+        }
+
+        private decimal _amount;
     }
 }

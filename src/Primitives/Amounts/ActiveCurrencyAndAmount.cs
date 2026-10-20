@@ -25,5 +25,12 @@ public record ActiveCurrencyAndAmount : IIsoAmount
     [IsoId("_YX4O9tp-Ed-ak6NoX_4Aeg_-836081793_Amount")]
     [DisplayName("Active Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required decimal Amount { get; init; }
+    [IsoAmount(18, 5)]
+    public required decimal Amount
+    {
+        get => _amount;
+        init => _amount = IsoAmountFacets.Check(typeof(ActiveCurrencyAndAmount), nameof(Amount), value);
+    }
+
+    private decimal _amount;
 }

@@ -16,7 +16,7 @@ from pathlib import Path
 
 COMMON = Path("src/Common")
 OUT = Path("src/Interfaces")
-KEEP_ATTRS = ("IsoId", "DisplayName", "IsoXmlTag")
+KEEP_ATTRS = ("IsoId", "DisplayName", "IsoXmlTag", "IsoAmount")
 
 DECL = re.compile(r"^\s*public\s+(abstract\s+)?(partial\s+)?record\s+(\w+)(?:\s*:\s*([\w.]+))?")
 NS = re.compile(r"^\s*namespace\s+([\w.]+)")
