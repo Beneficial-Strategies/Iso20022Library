@@ -24,6 +24,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// - per clearing member and per non clearing member and per security identification: the report will show the information for the clearing member (global clearing member only) structured by non clearing member(s) and by security identification.
 /// </summary>
 [IsoId("_-hxndaMOEeCojJW5vEuTEQ_-1836673720")]
+[IsoMessage("secl.005.001.02", "MrgnRpt", "urn:iso:std:iso:20022:tech:xsd:secl.005.001.02")]
 public interface IMarginReportV02 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_AQtlMRNUEfC1ZfCQz0xB3g")]
+[IsoMessage("cafr.003.001.04", "FrdDspstnInitn", "urn:iso:std:iso:20022:tech:xsd:cafr.003.001.04")]
 public interface IFraudDispositionInitiationV04 : IOuterRecord
 {
     /// <summary>

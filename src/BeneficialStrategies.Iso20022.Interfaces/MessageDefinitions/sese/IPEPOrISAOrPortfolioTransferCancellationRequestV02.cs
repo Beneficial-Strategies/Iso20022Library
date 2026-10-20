@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The message identification of the PEPOrISAOrPortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PEPOrISAOrPortfolioTransferInstruction by just quoting its message identification in PreviousReference.
 /// </summary>
 [IsoId("_j9ueC9E5Ed-BzquC8wXy7w_493377092")]
+[IsoMessage(
+    "sese.014.001.02",
+    "PEPOrISAOrPrtflTrfCxlReqV02",
+    "urn:iso:std:iso:20022:tech:xsd:sese.014.001.02"
+)]
 public interface IPEPOrISAOrPortfolioTransferCancellationRequestV02 : IOuterRecord
 {
     /// <summary>

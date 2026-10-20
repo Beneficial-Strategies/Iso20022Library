@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// This message is sent once the Margin Call is agreed or partially agreed and can be used for new collateral at the initiation of an exposure or for additional collateral for variation of an existing exposure. The collateral proposal can include securities, cash and other types of collateral.
 /// </summary>
 [IsoId("_J4YkVygrEeyB747fKu7_rw")]
+[IsoMessage("colr.007.001.06", "CollPrpsl", "urn:iso:std:iso:20022:tech:xsd:colr.007.001.06")]
 public interface ICollateralProposalV06 : IOuterRecord
 {
     /// <summary>

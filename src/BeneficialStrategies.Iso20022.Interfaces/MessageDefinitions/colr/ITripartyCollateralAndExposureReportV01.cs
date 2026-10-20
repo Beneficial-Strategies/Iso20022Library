@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// This message is sent to provide the details of the valuation of both the collateral and the exposure.
 /// </summary>
 [IsoId("_2uaM0Ss7EeySlt9bF77XfA")]
+[IsoMessage(
+    "colr.022.001.01",
+    "TrptyCollAndXpsrRpt",
+    "urn:iso:std:iso:20022:tech:xsd:colr.022.001.01"
+)]
 public interface ITripartyCollateralAndExposureReportV01 : IOuterRecord
 {
     /// <summary>

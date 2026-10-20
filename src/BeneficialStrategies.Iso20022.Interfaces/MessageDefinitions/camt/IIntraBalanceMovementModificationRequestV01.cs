@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - re-send to a third party a copy of a message for information (the sub-function of the message is &quot;CopyDuplicate&quot;).
 /// </summary>
 [IsoId("_DLtLCTncEem7JZMuWtwtsg")]
+[IsoMessage(
+    "camt.072.001.01",
+    "IntraBalMvmntModReq",
+    "urn:iso:std:iso:20022:tech:xsd:camt.072.001.01"
+)]
 public interface IIntraBalanceMovementModificationRequestV01 : IOuterRecord
 {
     /// <summary>

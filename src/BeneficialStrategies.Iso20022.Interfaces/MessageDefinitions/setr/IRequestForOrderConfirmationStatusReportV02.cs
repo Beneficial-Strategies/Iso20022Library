@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// When the RequestForOrderConfirmationStatusReport is used to request the status of an order confirmation message, then the message identification of the order confirmation message is identified in PreviousReference.
 /// </summary>
 [IsoId("_Aab8RzbLEead9bDRE_1DAQ")]
+[IsoMessage(
+    "setr.058.001.02",
+    "ReqForOrdrConfStsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:setr.058.001.02"
+)]
 public interface IRequestForOrderConfirmationStatusReportV02 : IOuterRecord
 {
     /// <summary>

@@ -39,6 +39,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The case creator provides the information to be modified in line with agreements made with the case assignee. If the case assignee needs in turn to assign the case to a subsequent case assignee, the requested modification(s) must be in line with the agreement made with the next case assignee and a Notification Of Case Assignment message must be sent to the case assigner. Otherwise, the request to modify payment case must be rejected (by means of a negative Resolution Of Investigation message).
 /// </summary>
 [IsoId("_sS9141kyEeGeoaLUQk__nA_739061166")]
+[IsoMessage("camt.087.001.01", "ReqToModfyPmt", "urn:iso:std:iso:20022:tech:xsd:camt.087.001.01")]
 public interface IRequestToModifyPaymentV01 : IOuterRecord
 {
     /// <summary>

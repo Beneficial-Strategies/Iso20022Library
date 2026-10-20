@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The AccountHoldingInformationRequest message is used to request information about assets held on behalf of the client for which it intends to instruct a portfolio transfer at a later time.
 /// </summary>
 [IsoId("_HxRzkekzEeu9cf4XM82AQQ")]
+[IsoMessage("sese.019.001.08", "AcctHldgInfReq", "urn:iso:std:iso:20022:tech:xsd:sese.019.001.08")]
 public interface IAccountHoldingInformationRequestV08 : IOuterRecord
 {
     /// <summary>

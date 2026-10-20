@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R28WSTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage(
+    "acmt.020.001.04",
+    "AcctClsgAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.020.001.04"
+)]
 public interface IAccountClosingAmendmentRequestV04 : IOuterRecord
 {
     /// <summary>

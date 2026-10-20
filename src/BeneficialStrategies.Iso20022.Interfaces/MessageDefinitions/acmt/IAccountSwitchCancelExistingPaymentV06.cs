@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("aba5f794-417a-4552-8a67-ac92469f2b58")]
+[IsoMessage(
+    "acmt.029.001.06",
+    "AcctSwtchCclExstgPmt",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.029.001.06"
+)]
 public interface IAccountSwitchCancelExistingPaymentV06 : IOuterRecord
 {
     /// <summary>

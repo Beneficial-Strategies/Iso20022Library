@@ -27,6 +27,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CustomerCreditTransferInitiation message also allows for a Mixed mode where the PaymentInformation block can be repeated and each PaymentInformation block can contain one or several CreditTransferTransactionInformation block(s).|Single|When grouping is set to Single, information for each individual instruction is included separately. This means the|PaymentInformation block is repeated, and present for each occurrence of the CreditTransferTransactionInformation block.|Grouped|When grouping is set to Grouped, the PaymentInformation block will be present once and the CreditTransferTransactionInformation block will be repeated.|Mixed|When grouping is set to Mixed, the PaymentInformation block may be present once or may be repeated. Each sequence|of the PaymentInformation block may contain one or several CreditTransferTransactionInformation block(s).
 /// </summary>
 [IsoId("_GWb0ldEvEd-BzquC8wXy7w_1535349168")]
+[IsoMessage("pain.001.001.02", "pain.001.001.02", "urn:iso:std:iso:20022:tech:xsd:pain.001.001.02")]
 public interface ICustomerCreditTransferInitiationV02 : IOuterRecord
 {
     /// <summary>

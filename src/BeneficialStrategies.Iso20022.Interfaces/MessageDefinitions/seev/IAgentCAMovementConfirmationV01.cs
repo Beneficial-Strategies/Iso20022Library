@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// - Agent Corporate Action Election Status Advice where an election cancellation request has been accepted. It confirms the return of the exercised resources. The building block Agent Corporate Action Election Status Advice Identification must be present. An Agent Corporate Action Election Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.
 /// </summary>
 [IsoId("_TOf2vdEwEd-BzquC8wXy7w_550595772")]
+[IsoMessage("seev.021.001.01", "AgtCAMvmntConf", "urn:iso:std:iso:20022:tech:xsd:seev.021.001.01")]
 public interface IAgentCAMovementConfirmationV01 : IOuterRecord
 {
     /// <summary>

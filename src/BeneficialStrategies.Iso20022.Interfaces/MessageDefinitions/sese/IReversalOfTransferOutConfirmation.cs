@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// This message must contain the reference of the message to be reversed. The message may also contain all the details of the reversed message, but this is not recommended.
 /// </summary>
 [IsoId("_pokg9tE5Ed-BzquC8wXy7w_938886633")]
+[IsoMessage("sese.004.001.01", "sese.004.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.004.001.01")]
 public interface IReversalOfTransferOutConfirmation : IOuterRecord
 {
     /// <summary>

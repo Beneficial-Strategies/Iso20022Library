@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3ODgzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage(
+    "camt.085.001.02",
+    "IntraBalMvmntPdgRpt",
+    "urn:iso:std:iso:20022:tech:xsd:camt.085.001.02"
+)]
 public interface IIntraBalanceMovementPendingReportV02 : IOuterRecord
 {
     /// <summary>

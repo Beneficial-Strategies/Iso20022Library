@@ -22,6 +22,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// In addition, the underlying transaction type for the cash-in or cash-out movement can be specified, as well as information about the cash movement&apos;s underlying orders, such as commission and charges.
 /// </summary>
 [IsoId("_LgMJUQasEeSrXeb3pHPmbg")]
+[IsoMessage(
+    "camt.043.001.04",
+    "FndDtldConfdCshFcstRpt",
+    "urn:iso:std:iso:20022:tech:xsd:camt.043.001.04"
+)]
 public interface IFundDetailedConfirmedCashForecastReportV04 : IOuterRecord
 {
     /// <summary>

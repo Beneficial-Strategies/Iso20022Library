@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// Note that one confirmation status advice acknowledgement responds to one confirmation status advice.
 /// </summary>
 [IsoId("_4rvHkER_EeStEe_B2dcrqg")]
+[IsoMessage(
+    "fxtr.038.001.01",
+    "FXTradConfStsAdvcAck",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.038.001.01"
+)]
 public interface IForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

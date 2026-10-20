@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingStatusReport message is exchanged between parties that have an interest in the referenced undertaking transaction. It notifies the recipient of the status of the transaction, such as acceptance or rejection, withdrawal, or non-conformation. The sender may add additional information, as appropriate.
 /// </summary>
 [IsoId("_9h8tJXltEeG7BsjMvd1mEw_-329334493")]
+[IsoMessage("tsrv.019.001.01", "UdrtkgStsRpt", "urn:iso:std:iso:20022:tech:xsd:tsrv.019.001.01")]
 public interface IUndertakingStatusReportV01 : IOuterRecord
 {
     /// <summary>

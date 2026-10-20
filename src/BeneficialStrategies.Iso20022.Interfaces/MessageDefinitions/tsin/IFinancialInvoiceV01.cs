@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// The use of self-billing by the buyer to the seller, where the buyer acts as the invoice issuer or the process of handling an incorrect invoice, is not in scope.
 /// </summary>
 [IsoId("_BU_0In1LEeCF8NjrBemJWQ_-1866907401")]
+[IsoMessage("tsin.004.001.01", "FinInvc", "urn:iso:std:iso:20022:tech:xsd:tsin.004.001.01")]
 public interface IFinancialInvoiceV01 : IOuterRecord
 {
     /// <summary>

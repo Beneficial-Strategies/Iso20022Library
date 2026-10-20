@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The message may be sent in response to requests on the registration of the currency control contract, supporting document or on the payment regulatory information notification.
 /// </summary>
 [IsoId("_bf9SA22PEei3KuUgpx7Xcw")]
+[IsoMessage("auth.027.001.02", "CcyCtrlStsAdvc", "urn:iso:std:iso:20022:tech:xsd:auth.027.001.02")]
 public interface ICurrencyControlStatusAdviceV02 : IOuterRecord
 {
     /// <summary>

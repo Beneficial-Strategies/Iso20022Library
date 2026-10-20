@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - according to the workflow implemented in the matching application, it did not expect the received message.
 /// </summary>
 [IsoId("_oHDjhdE8Ed-BzquC8wXy7w_-1687018808")]
+[IsoMessage("tsmt.016.001.03", "ErrRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.016.001.03")]
 public interface IErrorReportV03 : IOuterRecord
 {
     /// <summary>

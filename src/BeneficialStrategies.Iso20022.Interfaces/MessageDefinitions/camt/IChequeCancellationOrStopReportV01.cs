@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The ChequeCancellationOrStopReport message is sent by the drawee agent (on which a cheque is drawn) to the drawer agent or the agent acting on behalf of the drawer agent to indicate what actions have been taken in attempting to cancel the presentment and/or stop the payment of the cheque referred to in the message.
 /// </summary>
 [IsoId("_QUITMbSJEeq3lpO-mRtrig")]
+[IsoMessage("camt.109.001.01", "ChqCxlOrStopRpt", "urn:iso:std:iso:20022:tech:xsd:camt.109.001.01")]
 public interface IChequeCancellationOrStopReportV01 : IOuterRecord
 {
     /// <summary>

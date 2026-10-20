@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritiesFinancingReportingMissingCollateralRequest is made available by the trade repository (TR) to the  report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, with a request to submit collateral information for a given trade.
 /// </summary>
 [IsoId("_EGxyIcKvEeuzU9S_IANlog")]
+[IsoMessage(
+    "auth.083.001.02",
+    "SctiesFincgRptgMssngCollReq",
+    "urn:iso:std:iso:20022:tech:xsd:auth.083.001.02"
+)]
 public interface ISecuritiesFinancingReportingMissingCollateralRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// The BatchTransferInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer). This message is used to transfer a series of transactions or administrative information in a single exchange.
 /// </summary>
 [IsoId("_oX5L5VXAEeeiG_nL4vgKnQ")]
+[IsoMessage("caad.003.001.01", "BtchTrfInitn", "urn:iso:std:iso:20022:tech:xsd:caad.003.001.01")]
 public interface IBatchTransferInitiationV01 : IOuterRecord
 {
     /// <summary>

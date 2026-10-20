@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The PayInSchedule message is sent by a central settlement system to the participant to provide notification of a series of timed payments scheduled for each currency at the time and date of the schedule generation. The central settlement system may send information about how the timed payments have been calculated.
 /// </summary>
 [IsoId("_KfNcsS43EeK7-OZOLIksSw")]
+[IsoMessage("camt.062.001.03", "PayInSchdl", "urn:iso:std:iso:20022:tech:xsd:camt.062.001.03")]
 public interface IPayInScheduleV03 : IOuterRecord
 {
     /// <summary>

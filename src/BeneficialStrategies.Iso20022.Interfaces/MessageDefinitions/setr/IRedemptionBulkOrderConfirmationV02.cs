@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// If the executing party needs to confirm a RedemptionMultipleOrder message, then the RedemptionMultipleOrderConfirmation message must be used.
 /// </summary>
 [IsoId("_pGD-5dE7Ed-BzquC8wXy7w_314405258")]
+[IsoMessage("setr.003.001.02", "setr.003.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.003.001.02")]
 public interface IRedemptionBulkOrderConfirmationV02 : IOuterRecord
 {
     /// <summary>

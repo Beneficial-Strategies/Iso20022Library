@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeReport message is sent by the report submitting entity to the trade repository (TR) to report on the derivative transactions or sent by the trade repository (TR) to the authority or made available by the trade repository (TR) to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable.
 /// </summary>
 [IsoId("_pVWWmWmFEe2DRvVJM2Qy-g")]
+[IsoMessage("auth.030.001.03", "DerivsTradRpt", "urn:iso:std:iso:20022:tech:xsd:auth.030.001.03")]
 public interface IDerivativesTradeReportV03 : IOuterRecord
 {
     /// <summary>

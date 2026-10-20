@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The rejection or acceptance of a PortfolioTransferCancellationRequest is made using an TransferCancellationStatusReport message.
 /// </summary>
 [IsoId("_OSc-8XhFEeij0vbhRaNJcw")]
+[IsoMessage("sese.014.001.09", "PrtflTrfCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.014.001.09")]
 public interface IPortfolioTransferCancellationRequestV09 : IOuterRecord
 {
     /// <summary>

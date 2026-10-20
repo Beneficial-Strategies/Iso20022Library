@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 ///
 /// </summary>
 [IsoId("_DLtLSzncEem7JZMuWtwtsg")]
+[IsoMessage(
+    "camt.079.001.01",
+    "IntraBalMvmntQryRspn",
+    "urn:iso:std:iso:20022:tech:xsd:camt.079.001.01"
+)]
 public interface IIntraBalanceMovementQueryResponseV01 : IOuterRecord
 {
     /// <summary>

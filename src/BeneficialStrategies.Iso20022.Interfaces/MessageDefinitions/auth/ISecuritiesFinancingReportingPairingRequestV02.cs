@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritiesFinancingReportingPairingRequest is sent by the trade repository (TR) to the other trade repositories (TRs) in order to identify the trade repository (TR) holding information on a second leg of a given transaction.
 /// </summary>
 [IsoId("_mxP0EcIVEeunlsN4rAgJZA")]
+[IsoMessage(
+    "auth.078.001.02",
+    "SctiesFincgRptgPairgReq",
+    "urn:iso:std:iso:20022:tech:xsd:auth.078.001.02"
+)]
 public interface ISecuritiesFinancingReportingPairingRequestV02 : IOuterRecord
 {
     /// <summary>

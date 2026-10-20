@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The TransactionReport message can be sent by the matching application to report on various details of transactions that the requester of the report asked for. The message is sent in response to a TransactionReportRequest message.
 /// </summary>
 [IsoId("_2UxmeNE8Ed-BzquC8wXy7w_-1389761233")]
+[IsoMessage("tsmt.041.001.03", "TxRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.041.001.03")]
 public interface ITransactionReportV03 : IOuterRecord
 {
     /// <summary>

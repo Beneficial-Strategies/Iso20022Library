@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// This message may also contain details of the message to be cancelled, but this is not recommended.
 /// </summary>
 [IsoId("_bVylm9E-Ed-BzquC8wXy7w_2091851889")]
+[IsoMessage(
+    "camt.045.001.02",
+    "FndDtldConfdCshFcstRptCxlV02",
+    "urn:iso:std:iso:20022:tech:xsd:camt.045.001.02"
+)]
 public interface IFundDetailedConfirmedCashForecastReportCancellationV02 : IOuterRecord
 {
     /// <summary>

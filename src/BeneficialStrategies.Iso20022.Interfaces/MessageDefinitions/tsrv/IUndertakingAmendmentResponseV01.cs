@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingAmendmentResponse message is sent by the beneficiary to the party that issued the undertaking, either directly or via one or more advising parties, to indicate acceptance or rejection by the beneficiary of the amendment.
 /// </summary>
 [IsoId("_9iGeInltEeG7BsjMvd1mEw_-1174691593")]
+[IsoMessage(
+    "tsrv.008.001.01",
+    "UdrtkgAmdmntRspn",
+    "urn:iso:std:iso:20022:tech:xsd:tsrv.008.001.01"
+)]
 public interface IUndertakingAmendmentResponseV01 : IOuterRecord
 {
     /// <summary>

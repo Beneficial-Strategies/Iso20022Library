@@ -24,6 +24,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Claim Non Receipt message may be forwarded to subsequent case assignees.
 /// </summary>
 [IsoId("_ROx5WNE-Ed-BzquC8wXy7w_1258797228")]
+[IsoMessage("camt.027.001.03", "ClmNonRct", "urn:iso:std:iso:20022:tech:xsd:camt.027.001.03")]
 public interface IClaimNonReceiptV03 : IOuterRecord
 {
     /// <summary>

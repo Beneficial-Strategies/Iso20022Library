@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.casr;
 ///
 /// </summary>
 [IsoId("_Xf4eFVdOEeeIAMBcVOw01w")]
+[IsoMessage("casr.002.001.01", "SttlmRptgRspn", "urn:iso:std:iso:20022:tech:xsd:casr.002.001.01")]
 public interface ISettlementReportingResponseV01 : IOuterRecord
 {
     /// <summary>

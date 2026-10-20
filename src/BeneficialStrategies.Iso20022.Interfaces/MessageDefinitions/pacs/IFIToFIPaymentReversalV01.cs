@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 ///
 /// </summary>
 [IsoId("_elKe5dEuEd-BzquC8wXy7w_-1796587382")]
+[IsoMessage("pacs.007.001.01", "pacs.007.001.01", "urn:iso:std:iso:20022:tech:xsd:pacs.007.001.01")]
 public interface IFIToFIPaymentReversalV01 : IOuterRecord
 {
     /// <summary>

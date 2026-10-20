@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// This extends the message InformationRequestResponse.
 /// </summary>
 [IsoId("_8nOCwC_7EeOKib24wnHaFg")]
+[IsoMessage("supl.027.001.01", "InfRspnSD1", "urn:iso:std:iso:20022:tech:xsd:supl.027.001.01")]
 public interface IInformationResponseSD1V01 : IOuterRecord
 {
     /// <summary>

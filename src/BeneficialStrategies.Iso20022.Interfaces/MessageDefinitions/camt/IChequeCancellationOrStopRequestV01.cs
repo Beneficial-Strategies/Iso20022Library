@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The ChequeCancellationOrStopRequest message is sent by a drawer bank, or a bank acting on behalf of the drawer bank, to the agent on which a cheque has been drawn (the drawee bank) to request for the cancellation of the presentment and/or stop the payment of the cheque referred to in the message.
 /// </summary>
 [IsoId("_E2tqILSIEeq3lpO-mRtrig")]
+[IsoMessage("camt.108.001.01", "ChqCxlOrStopReq", "urn:iso:std:iso:20022:tech:xsd:camt.108.001.01")]
 public interface IChequeCancellationOrStopRequestV01 : IOuterRecord
 {
     /// <summary>

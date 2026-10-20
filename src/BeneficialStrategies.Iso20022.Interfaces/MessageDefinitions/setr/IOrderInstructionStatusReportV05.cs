@@ -42,6 +42,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// - information related to the order, for example, settlement amount, number of units, expected trade date.
 /// </summary>
 [IsoId("b7ba4a58-4ec2-4997-a354-a448fb49418c")]
+[IsoMessage("setr.016.001.05", "OrdrInstrStsRpt", "urn:iso:std:iso:20022:tech:xsd:setr.016.001.05")]
 public interface IOrderInstructionStatusReportV05 : IOuterRecord
 {
     /// <summary>

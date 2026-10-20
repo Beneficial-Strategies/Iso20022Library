@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_8QuIcRN9EfC1ZfCQz0xB3g")]
+[IsoMessage("caad.008.001.03", "AdmstvInitn", "urn:iso:std:iso:20022:tech:xsd:caad.008.001.03")]
 public interface IAdministrativeInitiationV03 : IOuterRecord
 {
     /// <summary>

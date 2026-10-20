@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The ShareholdersIdentificationDisclosureResponseCancellationAdvice message is sent by any intermediaries to the recipient designated by the issuer (such as an issuer&apos;s agent) in the disclosure request message in order to cancel the shareholder identification disclosure response whether previously sent in a single message or in a set of multipart/paginated response messages.
 /// </summary>
 [IsoId("_mi0doEV8EemRx7jyevcLwg")]
+[IsoMessage(
+    "seev.048.001.01",
+    "ShrhldrIdDsclsrRspnCxlAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.048.001.01"
+)]
 public interface IShareholderIdentificationDisclosureResponseCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>

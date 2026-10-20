@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// The ATMWithdrawalCompletionAcknowledgement message is sent by an acquirer or its agent to an ATM to acknowledge the receipt of an ATMWithdrawalCompletionAdvice message.
 /// </summary>
 [IsoId("_YbuXga4NEeWZgJQOa6iKCQ")]
+[IsoMessage(
+    "catp.004.001.02",
+    "ATMWdrwlCmpltnAck",
+    "urn:iso:std:iso:20022:tech:xsd:catp.004.001.02"
+)]
 public interface IATMWithdrawalCompletionAcknowledgementV02 : IOuterRecord
 {
     /// <summary>

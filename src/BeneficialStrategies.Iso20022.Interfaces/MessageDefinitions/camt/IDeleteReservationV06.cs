@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Scope|The DeleteReservation message is used to request the deletion of one particular reservation by the member and managed by the transaction administrator.|Usage|The deletion of a reservation in the system, will not only reset the reserved liquidity to zero, but also delete the reservation itself from the system: only the default reservation for the current business day remains in the system.
 /// </summary>
 [IsoId("_ThNXx9b6Eeq_l4BJLVUF2Q")]
+[IsoMessage("camt.049.001.06", "DelRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.049.001.06")]
 public interface IDeleteReservationV06 : IOuterRecord
 {
     /// <summary>

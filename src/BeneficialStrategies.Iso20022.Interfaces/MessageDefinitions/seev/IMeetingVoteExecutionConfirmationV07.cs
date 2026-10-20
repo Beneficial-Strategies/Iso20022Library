@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message definition is intended for use with the Business Application Header (BAH).
 /// </summary>
 [IsoId("_sV77O_EkEeqRfth943bvEA")]
+[IsoMessage(
+    "seev.007.001.07",
+    "MtgVoteExctnConf",
+    "urn:iso:std:iso:20022:tech:xsd:seev.007.001.07"
+)]
 public interface IMeetingVoteExecutionConfirmationV07 : IOuterRecord
 {
     /// <summary>

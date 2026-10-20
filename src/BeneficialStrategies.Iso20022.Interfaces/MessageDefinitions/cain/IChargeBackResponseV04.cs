@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_6DcNAROHEfC1ZfCQz0xB3g")]
+[IsoMessage("cain.028.001.04", "ChrgBckRspn", "urn:iso:std:iso:20022:tech:xsd:cain.028.001.04")]
 public interface IChargeBackResponseV04 : IOuterRecord
 {
     /// <summary>

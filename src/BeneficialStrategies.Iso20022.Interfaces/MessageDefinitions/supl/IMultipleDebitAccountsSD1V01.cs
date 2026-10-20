@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The MultipleDebitAccountsSD1V01 message extends ISO 20022 Customer Credit Transfer Initiation (pain.001) message for multiple debit accounts.
 /// </summary>
 [IsoId("_F24lM9IEEe20cKCFrGj2Qw")]
+[IsoMessage(
+    "supl.044.001.01",
+    "MltplDbtAcctsSD1",
+    "urn:iso:std:iso:20022:tech:xsd:supl.044.001.01"
+)]
 public interface IMultipleDebitAccountsSD1V01 : IOuterRecord
 {
     /// <summary>

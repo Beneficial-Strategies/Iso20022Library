@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingTradingVolumeCapDataReport message is sent by the trading venue to the national competent authority to report the total volume of trading and volumes of trading under reference price waiver and negotiated transactions waiver.
 /// </summary>
 [IsoId("_4LUGR0RNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.035.001.01",
+    "FinInstrmRptgTradgVolCapDataRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.035.001.01"
+)]
 public interface IFinancialInstrumentReportingTradingVolumeCapDataReportV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The MultipleForeignExchangeSD1V01 message extends ISO 20022 Customer Credit Transfer Initiation (pain.001) message for a single debit account with multiple foreign exchange contracts.
 /// </summary>
 [IsoId("_NmExYNH3Ee20cKCFrGj2Qw")]
+[IsoMessage("supl.043.001.01", "MltplFXSD1", "urn:iso:std:iso:20022:tech:xsd:supl.043.001.01")]
 public interface IMultipleForeignExchangeSD1V01 : IOuterRecord
 {
     /// <summary>

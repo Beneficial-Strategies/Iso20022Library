@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_0pF0kZLDEe6TWIDarRgYow")]
+[IsoMessage("cafr.002.001.03", "FrdRptgRspn", "urn:iso:std:iso:20022:tech:xsd:cafr.002.001.03")]
 public interface IFraudReportingResponseV03 : IOuterRecord
 {
     /// <summary>

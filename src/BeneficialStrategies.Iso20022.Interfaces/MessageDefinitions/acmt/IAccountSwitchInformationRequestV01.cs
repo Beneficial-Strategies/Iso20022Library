@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchInformationRequest message is sent by the new account servicer to the account servicer which previously held the account to initiate the account switch process. It provides information sufficient for the old account servicer to identify the old account and validate the account parties. The new account servicer is able to inform the old bank of the maximum funding the new account will provide to settle a negative closing balance and the proposed balance transfer window.
 /// </summary>
 [IsoId("_Yn9UMhMKEeSTk5fcu7tr9w")]
+[IsoMessage("acmt.027.001.01", "AcctSwtchInfReq", "urn:iso:std:iso:20022:tech:xsd:acmt.027.001.01")]
 public interface IAccountSwitchInformationRequestV01 : IOuterRecord
 {
     /// <summary>

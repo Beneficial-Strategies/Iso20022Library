@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The IdentificationVerificationRequest message can contain one or more verification requests.
 /// </summary>
 [IsoId("_sZX_5FkyEeGeoaLUQk__nA_-973563434")]
+[IsoMessage("acmt.023.001.02", "IdVrfctnReq", "urn:iso:std:iso:20022:tech:xsd:acmt.023.001.02")]
 public interface IIdentificationVerificationRequestV02 : IOuterRecord
 {
     /// <summary>

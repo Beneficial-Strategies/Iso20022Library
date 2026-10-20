@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_CHmIcZUyEe62CMB9luireQ")]
+[IsoMessage("catm.005.001.10", "MntncDlgtnReq", "urn:iso:std:iso:20022:tech:xsd:catm.005.001.10")]
 public interface IMaintenanceDelegationRequestV10 : IOuterRecord
 {
     /// <summary>

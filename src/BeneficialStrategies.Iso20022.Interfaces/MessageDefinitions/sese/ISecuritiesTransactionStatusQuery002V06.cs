@@ -26,6 +26,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 ///
 /// </summary>
 [IsoId("_gOMmYzi8Eeydid5dcNPKvg")]
+[IsoMessage("sese.021.002.06", "SctiesTxStsQry", "urn:iso:std:iso:20022:tech:xsd:sese.021.002.06")]
 public interface ISecuritiesTransactionStatusQuery002V06 : IOuterRecord
 {
     /// <summary>

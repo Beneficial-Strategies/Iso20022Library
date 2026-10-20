@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (that is either the beneficiary is credited, or the transaction is rejected).
 /// </summary>
 [IsoId("_UVR_ARlVEe2Do_UtrNmb2g")]
+[IsoMessage("pain.002.001.13", "CstmrPmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:pain.002.001.13")]
 public interface ICustomerPaymentStatusReportV13 : IOuterRecord
 {
     /// <summary>

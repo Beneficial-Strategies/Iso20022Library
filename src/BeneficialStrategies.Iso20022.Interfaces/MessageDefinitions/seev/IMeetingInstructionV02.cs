@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// Once the message is sent, it cannot be modified. It must be cancelled by a MeetingInstructionCancellationRequest. Only after receipt of a confirmed cancelled status via the MeetingInstructionStatus message, a new MeetingInstruction message can be sent.
 /// </summary>
 [IsoId("_TqgdUtEwEd-BzquC8wXy7w_-118091241")]
+[IsoMessage("seev.004.001.02", "MtgInstr", "urn:iso:std:iso:20022:tech:xsd:seev.004.001.02")]
 public interface IMeetingInstructionV02 : IOuterRecord
 {
     /// <summary>

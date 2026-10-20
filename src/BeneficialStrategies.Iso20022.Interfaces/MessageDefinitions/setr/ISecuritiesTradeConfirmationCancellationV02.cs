@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// Respondent: Instructing party, a custodian or an affirming party optionally responds with SecuritiesTradeConfirmationResponse (accept or reject) message.
 /// </summary>
 [IsoId("_q-sQUQNmEe2P7e2qGFFOGg")]
+[IsoMessage(
+    "setr.029.001.02",
+    "SctiesTradConfCxl",
+    "urn:iso:std:iso:20022:tech:xsd:setr.029.001.02"
+)]
 public interface ISecuritiesTradeConfirmationCancellationV02 : IOuterRecord
 {
     /// <summary>

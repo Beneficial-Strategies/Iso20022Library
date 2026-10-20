@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The ShareholdersIdentificationDisclosureRequest message is sent by an issuer or by a third party nominated by the issuer (such as an issuer&apos;s agent) to the first intermediaries in a custody chain or is sent by any intermediaries in a custody chain to the next intermediary down the chain of intermediaries (towards the investor side of the chain) in order to request the disclosure of shareholders identity and provides information on the receiving party to whom responses must be sent, on the financial instrument concerned and on the deadline to respond.
 /// </summary>
 [IsoId("_n1QvATWfEe2OzdGcZrUAEQ")]
+[IsoMessage(
+    "seev.045.001.04",
+    "ShrhldrsIdDsclsrReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.045.001.04"
+)]
 public interface IShareholdersIdentificationDisclosureRequestV04 : IOuterRecord
 {
     /// <summary>

@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// This message could be sent together with other related documents.
 /// </summary>
 [IsoId("_rkXieNE9Ed-BzquC8wXy7w_1808843508")]
+[IsoMessage(
+    "acmt.017.001.01",
+    "AcctMndtMntncReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.017.001.01"
+)]
 public interface IAccountMandateMaintenanceRequestV01 : IOuterRecord
 {
     /// <summary>

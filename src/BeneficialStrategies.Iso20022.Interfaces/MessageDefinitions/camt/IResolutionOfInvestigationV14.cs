@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("524da510-1286-4f88-89d2-962d2a425f89")]
+[IsoMessage("camt.029.001.14", "RsltnOfInvstgtn", "urn:iso:std:iso:20022:tech:xsd:camt.029.001.14")]
 public interface IResolutionOfInvestigationV14 : IOuterRecord
 {
     /// <summary>

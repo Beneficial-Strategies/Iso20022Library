@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.remt;
 /// The RemittanceLocationAdvice message allows the originator of the message to identify where the remittance advice is located for a related payment.
 /// </summary>
 [IsoId("_10RAoKMDEeKl_NvHIICqIw")]
+[IsoMessage("remt.002.001.01", "RmtLctnAdvc", "urn:iso:std:iso:20022:tech:xsd:remt.002.001.01")]
 public interface IRemittanceLocationAdviceV01 : IOuterRecord
 {
     /// <summary>

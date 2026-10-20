@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// Fourth, it is used as a reminder to request voting instructions. This is done by indicating NONREF in the Identification element of the InstructionIdentification component and by using the status code NotReceived in the ProcessingStatus.
 /// </summary>
 [IsoId("_TqDxVdEwEd-BzquC8wXy7w_1419808465")]
+[IsoMessage("seev.006.001.03", "MtgInstrSts", "urn:iso:std:iso:20022:tech:xsd:seev.006.001.03")]
 public interface IMeetingInstructionStatusV03 : IOuterRecord
 {
     /// <summary>

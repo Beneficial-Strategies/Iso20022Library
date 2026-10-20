@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 ///
 /// </summary>
 [IsoId("_0RQ-oS5IEeunNvJlR_vCbg")]
+[IsoMessage(
+    "caaa.017.001.08",
+    "AccptrCcyConvsRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.017.001.08"
+)]
 public interface IAcceptorCurrencyConversionResponseV08 : IOuterRecord
 {
     /// <summary>

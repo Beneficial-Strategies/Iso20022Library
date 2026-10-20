@@ -22,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// If it is agreed to include the payment information related to the credit side only once (i.e. Grouped mode), the PaymentInformation block will be present only once. If it is agreed to repeat the payment information related to the credit side (i.e. Single mode), the PaymentInformation block must be present once per occurrence of the DirectDebitTransactionInformation block. The CustomerDirectDebitInitiation message also allows for a Mixed mode where the PaymentInformation block can be repeated and each PaymentInformation block can contain one or several DirectDebitTransactionInformation block(s).|Single|When grouping is set to Single, information for each individual instruction is included separately. This means the|PaymentInformation block is repeated, and present for each occurrence of the Direct Debit TransactionInformation block.|Grouped|When grouping is set to Grouped, the PaymentInformation block will be present once and the Direct Debit|TransactionInformation block will be repeated.|Mixed|When grouping is set to Mixed, the PaymentInformation block may be present once or may be repeated. Each sequence|of the PaymentInformation block may contain one or several Direct Debit TransactionInformation block(s).
 /// </summary>
 [IsoId("_GWuvhdEvEd-BzquC8wXy7w_143996786")]
+[IsoMessage("pain.008.001.01", "pain.008.001.01", "urn:iso:std:iso:20022:tech:xsd:pain.008.001.01")]
 public interface ICustomerDirectDebitInitiationV01 : IOuterRecord
 {
     /// <summary>

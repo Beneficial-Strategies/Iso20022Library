@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The MultilateralSettlementRequest message can contain one or more settlement instructions with multiple movements between accounts. By default, all movements present in an individual instruction shall be processed as a batch entry rather than a single entry per individual movement.
 /// </remarks>
 [IsoId("_R3QfeTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("pacs.029.001.02", "MulSttlmReq", "urn:iso:std:iso:20022:tech:xsd:pacs.029.001.02")]
 public interface IMultilateralSettlementRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The ForeignExchangeTradeWithdrawalNotification message is used to confirm the cancellation of a previously notified trade.
 /// </summary>
 [IsoId("_K7tXYS53EeKwTrPDLMbLxA")]
+[IsoMessage(
+    "fxtr.013.001.03",
+    "FXTradWdrwlNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.03"
+)]
 public interface IForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
 {
     /// <summary>

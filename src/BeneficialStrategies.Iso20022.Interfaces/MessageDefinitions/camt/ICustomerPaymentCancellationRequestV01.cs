@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Customer Payment Cancellation Request message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original Customer Payment Cancellation Request message and the element ReopenCaseIndication is set to &apos;Yes&apos; or &apos;true&apos;.
 /// </summary>
 [IsoId("_RsSUuNE-Ed-BzquC8wXy7w_377163299")]
+[IsoMessage("camt.055.001.01", "CstmrPmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:camt.055.001.01")]
 public interface ICustomerPaymentCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

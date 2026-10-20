@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// The ATMDepositRequest message is sent by an ATM to an acquirer or its agent to request the approval of a deposit transaction at an ATM, before or after deposit media inside the ATM.
 /// </summary>
 [IsoId("_VweFcK39EeWL1uap3dNhCQ")]
+[IsoMessage("catp.012.001.01", "ATMDpstReq", "urn:iso:std:iso:20022:tech:xsd:catp.012.001.01")]
 public interface IATMDepositRequestV01 : IOuterRecord
 {
     /// <summary>

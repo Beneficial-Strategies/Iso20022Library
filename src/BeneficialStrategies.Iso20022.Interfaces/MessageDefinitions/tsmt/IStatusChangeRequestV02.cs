@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The matching application will pass on the request by sending a StatusChangeRequestNotification message to the counterparty which can accept or reject the request by sending a SatausChangeRequestAcceptance or StatusChangeRequestRejection message.
 /// </summary>
 [IsoId("_xjvgaNE8Ed-BzquC8wXy7w_-2117703681")]
+[IsoMessage("tsmt.026.001.02", "StsChngReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.026.001.02")]
 public interface IStatusChangeRequestV02 : IOuterRecord
 {
     /// <summary>

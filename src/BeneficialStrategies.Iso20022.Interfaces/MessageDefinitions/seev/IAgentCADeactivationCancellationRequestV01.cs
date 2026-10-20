@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// In case a corporate action or option is already deactivated, this message can not be used to reactivate the corporate action entire event or option; the notification advice message must be used to reactivate a corporate action or option.
 /// </summary>
 [IsoId("_TL9gGdEwEd-BzquC8wXy7w_1830397138")]
+[IsoMessage(
+    "seev.029.001.01",
+    "AgtCADeactvtnCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.029.001.01"
+)]
 public interface IAgentCADeactivationCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

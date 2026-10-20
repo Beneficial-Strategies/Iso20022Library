@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// A Message Rejection is sent by one of the parties when it detects a technical or functional error in a previous received message.
 /// </summary>
 [IsoId("_4R49hN6cEeiwsev40qZGEQ")]
+[IsoMessage(
+    "casp.013.001.01",
+    "SaleToPOIMsgRjctn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.013.001.01"
+)]
 public interface ISaleToPOIMessageRejectionV01 : IOuterRecord
 {
     /// <summary>

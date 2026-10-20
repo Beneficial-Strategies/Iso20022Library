@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The message may contains trade details and trading parties&apos; information.
 /// </summary>
 [IsoId("_OqvAMkRZEeSWxNI5mwqKGQ")]
+[IsoMessage("fxtr.031.001.01", "FXTradCaptrRpt", "urn:iso:std:iso:20022:tech:xsd:fxtr.031.001.01")]
 public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
 {
     /// <summary>

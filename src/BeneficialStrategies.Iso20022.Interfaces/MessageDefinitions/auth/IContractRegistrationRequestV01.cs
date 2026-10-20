@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The ContractRegistrationRequest message is sent by the reporting party to the registration agent to initiate the registration of a new contract subject to currency control.
 /// </summary>
 [IsoId("_2fWxgNLHEeSdq5yU2aaSNw")]
+[IsoMessage("auth.018.001.01", "CtrctRegnReq", "urn:iso:std:iso:20022:tech:xsd:auth.018.001.01")]
 public interface IContractRegistrationRequestV01 : IOuterRecord
 {
     /// <summary>

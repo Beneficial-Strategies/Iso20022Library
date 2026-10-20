@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// This message is a Response for several kind of device services exchanged between the Sale System (Merchant I.S.) and the POI system (Card Acceptor system).
 /// </summary>
 [IsoId("_ZORUIYYDEemxIqbaFEE8-w")]
+[IsoMessage(
+    "casp.017.001.01",
+    "SaleToPOIDvcRspn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.017.001.01"
+)]
 public interface ISaleToPOIDeviceResponseV01 : IOuterRecord
 {
     /// <summary>

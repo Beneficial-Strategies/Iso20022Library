@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Request To Cancel Payment message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original Request To Modify Payment message and the element ReopenCaseIndication is set to &apos;Yes&apos; or &apos;true&apos;.
 /// </summary>
 [IsoId("_SsPgaNE_Ed-BzquC8wXy7w_-319126459")]
+[IsoMessage("camt.008.002.01", "camt.008.002.01", "urn:iso:std:iso:20022:tech:xsd:camt.008.002.01")]
 public interface IRequestToCancelPayment : IOuterRecord
 {
     /// <summary>

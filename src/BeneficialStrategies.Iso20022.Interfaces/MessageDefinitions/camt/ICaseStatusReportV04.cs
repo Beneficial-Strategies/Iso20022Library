@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - may be skipped and replaced by a Resolution Of Investigation message when the request for a investigation status is received at the time the assigner has resolved the case. (In this case a Resolution Of Investigation message can be sent instead of a Case Status Report and the case may be closed.).
 /// </summary>
 [IsoId("_sVp9glkyEeGeoaLUQk__nA_-1954850313")]
+[IsoMessage("camt.039.001.04", "CaseStsRpt", "urn:iso:std:iso:20022:tech:xsd:camt.039.001.04")]
 public interface ICaseStatusReportV04 : IOuterRecord
 {
     /// <summary>

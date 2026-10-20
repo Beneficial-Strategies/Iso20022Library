@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3RtfzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage(
+    "auth.024.001.04",
+    "PmtRgltryInfNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:auth.024.001.04"
+)]
 public interface IPaymentRegulatoryInformationNotificationV04 : IOuterRecord
 {
     /// <summary>

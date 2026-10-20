@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// For a statement, the Bank-to-Customer Account Statement message should be used.
 /// </summary>
 [IsoId("_4FFMYQ5qEe2xs7BqO31w6w")]
+[IsoMessage(
+    "camt.052.001.11",
+    "BkToCstmrAcctRpt",
+    "urn:iso:std:iso:20022:tech:xsd:camt.052.001.11"
+)]
 public interface IBankToCustomerAccountReportV11 : IOuterRecord
 {
     /// <summary>

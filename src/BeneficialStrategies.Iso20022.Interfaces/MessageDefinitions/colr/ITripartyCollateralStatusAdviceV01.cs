@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// This message provides valuation results as well as the status of the  proposed collateral movements (cash and securities).
 /// </summary>
 [IsoId("_2uaM6ys7EeySlt9bF77XfA")]
+[IsoMessage(
+    "colr.023.001.01",
+    "TrptyCollStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:colr.023.001.01"
+)]
 public interface ITripartyCollateralStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

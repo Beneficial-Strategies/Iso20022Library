@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 ///
 /// </summary>
 [IsoId("_-yhDUeUTEem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.060.001.01",
+    "CCPDalyCshFlowsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.060.001.01"
+)]
 public interface ICCPDailyCashFlowsReportV01 : IOuterRecord
 {
     /// <summary>

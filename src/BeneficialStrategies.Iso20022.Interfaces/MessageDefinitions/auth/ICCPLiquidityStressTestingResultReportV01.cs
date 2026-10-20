@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPLiquidityStressTestingResultReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the results of the liquidity stress tests.
 /// </summary>
 [IsoId("_FO6mYeUREem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.063.001.01",
+    "CCPLqdtyStrssTstgRsltRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.063.001.01"
+)]
 public interface ICCPLiquidityStressTestingResultReportV01 : IOuterRecord
 {
     /// <summary>

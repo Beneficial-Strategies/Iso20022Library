@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The message can carry digital signatures if required by context.
 /// </summary>
 [IsoId("_OTgzNTEy-AOSNFX-8224507")]
+[IsoMessage("tsmt.055.001.01", "PtyEvtAdvc", "urn:iso:std:iso:20022:tech:xsd:tsmt.055.001.01")]
 public interface IPartyEventAdviceV01 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - the party establishing a transaction in the lodge mode, that is the sender of an InitialBaselineSubmission message including the instruction lodge. In the outlined scenario the message is used to inform about the successful establishment of a transaction in the matching application.
 /// </summary>
 [IsoId("_lhzYiNE8Ed-BzquC8wXy7w_-1930237011")]
+[IsoMessage("tsmt.010.001.03", "BaselnMtchRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.010.001.03")]
 public interface IBaselineMatchReportV03 : IOuterRecord
 {
     /// <summary>

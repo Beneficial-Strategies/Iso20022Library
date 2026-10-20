@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchRequestRedirection message is sent by the new account servicer to a central account switch servicer to set up the redirection of payment and collection transactions that are processed after completion of the account switch.  It is routed to the previous account servicer to signal that it should schedule the cancellation of all payment arrangements on the old account. This message may also be used by the new bank to amend the new account details, if the details previously provided were incorrect.
 /// </summary>
 [IsoId("_e20_UhMMEeSTk5fcu7tr9w")]
+[IsoMessage(
+    "acmt.030.001.01",
+    "AcctSwtchReqRdrctn",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.030.001.01"
+)]
 public interface IAccountSwitchRequestRedirectionV01 : IOuterRecord
 {
     /// <summary>

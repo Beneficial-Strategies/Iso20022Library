@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_je3-AaFDEe-MRKYsaX6JDg")]
+[IsoMessage(
+    "casp.007.001.07",
+    "SaleToPOIAdmstvReq",
+    "urn:iso:std:iso:20022:tech:xsd:casp.007.001.07"
+)]
 public interface ISaleToPOIAdministrativeRequestV07 : IOuterRecord
 {
     /// <summary>

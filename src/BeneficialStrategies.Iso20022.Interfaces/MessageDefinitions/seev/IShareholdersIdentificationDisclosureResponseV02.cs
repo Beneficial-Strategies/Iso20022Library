@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The ShareholdersIdentificationDisclosureResponse message is sent in response to a shareholder identification disclosure request message by any intermediaries to the recipient designated by the issuer (such as an issuer&apos;s agent) in the disclosure request message in order to provide the requested information on the identity of the shareholders and their accounts holdings serviced by the intermediary for the requested financial instrument.
 /// </summary>
 [IsoId("_9U3hhfEkEeqRfth943bvEA")]
+[IsoMessage(
+    "seev.047.001.02",
+    "ShrhldrsIdDsclsrRspn",
+    "urn:iso:std:iso:20022:tech:xsd:seev.047.001.02"
+)]
 public interface IShareholdersIdentificationDisclosureResponseV02 : IOuterRecord
 {
     /// <summary>

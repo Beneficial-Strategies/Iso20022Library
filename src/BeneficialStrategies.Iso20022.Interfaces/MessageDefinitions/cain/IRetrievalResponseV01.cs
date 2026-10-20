@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The RetrievalResponse message is sent by an acquirer to an issuer or agent in response to an Retrievalnitiation message.
 /// </summary>
 [IsoId("_VMDehFaDEeeFltjJxERUxw")]
+[IsoMessage("cain.022.001.01", "RtrvlRspn", "urn:iso:std:iso:20022:tech:xsd:cain.022.001.01")]
 public interface IRetrievalResponseV01 : IOuterRecord
 {
     /// <summary>

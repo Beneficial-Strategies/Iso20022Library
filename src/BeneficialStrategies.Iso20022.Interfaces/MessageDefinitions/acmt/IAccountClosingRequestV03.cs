@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountClosingRequest message is sent from an organisation to a financial institution as part of the account closing process. It is the initial request message to close an account.
 /// </summary>
 [IsoId("_bf9RM22PEei3KuUgpx7Xcw")]
+[IsoMessage("acmt.019.001.03", "AcctClsgReq", "urn:iso:std:iso:20022:tech:xsd:acmt.019.001.03")]
 public interface IAccountClosingRequestV03 : IOuterRecord
 {
     /// <summary>

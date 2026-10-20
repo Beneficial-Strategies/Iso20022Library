@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Based on the criteria defined in the CreateReservation message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.
 /// </summary>
 [IsoId("_P8tokckHEem3UrxZgQhVAw")]
+[IsoMessage("camt.103.001.01", "CretRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.103.001.01")]
 public interface ICreateReservationV01 : IOuterRecord
 {
     /// <summary>

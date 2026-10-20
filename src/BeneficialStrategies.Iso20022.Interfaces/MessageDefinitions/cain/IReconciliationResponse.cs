@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The ReconciliationResponse message is sent by an issuer or an agent to return the reconciled totals for debits, credits, chargebacks and other transactions.
 /// </summary>
 [IsoId("_A6xeEHvBEeSLmfFG0DG7zQ")]
+[IsoMessage("cain.008.001.01", "RcncltnRspn", "urn:iso:std:iso:20022:tech:xsd:cain.008.001.01")]
 public interface IReconciliationResponse : IOuterRecord
 {
     /// <summary>

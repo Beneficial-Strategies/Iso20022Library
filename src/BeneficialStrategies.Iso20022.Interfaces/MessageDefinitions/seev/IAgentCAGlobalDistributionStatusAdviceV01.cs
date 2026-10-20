@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// - Provide a status by individual movements, in which case, the building block Individual Movement Status must be present. An individual movement cannot be rejected.
 /// </summary>
 [IsoId("_TN5ZxdEwEd-BzquC8wXy7w_893376547")]
+[IsoMessage(
+    "seev.018.001.01",
+    "AgtCAGblDstrbtnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.018.001.01"
+)]
 public interface IAgentCAGlobalDistributionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The CollateralManagementCancellationStatus message can be sent to provide a status for a previously received CollateralManagementCancellationRequest message.
 /// </summary>
 [IsoId("_C_d_AV9MEeSMgPeFpRHeJw")]
+[IsoMessage("colr.006.001.03", "CollMgmtCxlSts", "urn:iso:std:iso:20022:tech:xsd:colr.006.001.03")]
 public interface ICollateralManagementCancellationStatusV03 : IOuterRecord
 {
     /// <summary>

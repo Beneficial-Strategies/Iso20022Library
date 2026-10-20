@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritesFinancingReportingReconciliationStatusAdvice message is sent by the trade repositories (TRs) ) to other TR and to the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, to provide a status advice for reconciliation.
 /// </summary>
 [IsoId("_2zvMAwuAEeqVvtu9Ny8FDA")]
+[IsoMessage(
+    "auth.080.001.01",
+    "SctiesFincgRptgRcncltnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:auth.080.001.01"
+)]
 public interface ISecuritiesFinancingReportingReconciliationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

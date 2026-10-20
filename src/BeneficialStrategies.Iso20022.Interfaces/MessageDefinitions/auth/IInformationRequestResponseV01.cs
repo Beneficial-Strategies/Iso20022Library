@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// •	only referred to in the response message.
 /// </summary>
 [IsoId("_6iqtkDzdEeGl7N0Cd54dlw")]
+[IsoMessage("auth.002.001.01", "InfReqRspn", "urn:iso:std:iso:20022:tech:xsd:auth.002.001.01")]
 public interface IInformationRequestResponseV01 : IOuterRecord
 {
     /// <summary>

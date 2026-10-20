@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// This message is obsolete please use WithdrawalNotificationV02 - fxtr.013.001.02
 /// </summary>
 [IsoId("_V5V16NE8Ed-BzquC8wXy7w_-1324281")]
+[IsoMessage("trea.013.001.01", "WdrwlNtfctnV01", "urn:iso:std:iso:20022:tech:xsd:trea.013.001.01")]
 public interface IWithdrawalNotificationV01 : IOuterRecord
 {
     /// <summary>

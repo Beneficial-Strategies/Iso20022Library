@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// If an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport sent.
 /// </summary>
 [IsoId("_ZtBOz9EvEd-BzquC8wXy7w_-770509177")]
+[IsoMessage(
+    "reda.003.001.03",
+    "PricRptCrrctnV03",
+    "urn:iso:std:iso:20022:tech:xsd:reda.003.001.03"
+)]
 public interface IPriceReportCorrectionV03 : IOuterRecord
 {
     /// <summary>

@@ -21,6 +21,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.
 /// </summary>
 [IsoId("_2aCoWNE5Ed-BzquC8wXy7w_-1118153820")]
+[IsoMessage(
+    "sese.028.001.01",
+    "SctiesSttlmTxAllgmtNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:sese.028.001.01"
+)]
 public interface ISecuritiesSettlementTransactionAllegementNotificationV01 : IOuterRecord
 {
     /// <summary>

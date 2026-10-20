@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The CollateralAndExposureReport is used to provide the details of the valuation of the collateral, that is, the valuation of securities collateral, cash collateral or other type of collateral, posted at a specific calculation date.
 /// </summary>
 [IsoId("_XAW1sYFrEeWtPe6Crjmeug")]
+[IsoMessage("colr.016.001.03", "CollAndXpsrRpt", "urn:iso:std:iso:20022:tech:xsd:colr.016.001.03")]
 public interface ICollateralAndExposureReportV03 : IOuterRecord
 {
     /// <summary>

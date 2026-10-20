@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Scope:|The PartyCreationRequest message is sent by an instructing party to the executing party to request for the creation of party reference data for a new party in the executing system.||Usage:|It aims at instructing the creation of a new party with corresponding details.|Processing and confirmation of the party creation request are provided via a party status advice.
 /// </summary>
 [IsoId("_lfqucZeTEeen_cyMrluY4w")]
+[IsoMessage("reda.014.001.01", "PtyCreReq", "urn:iso:std:iso:20022:tech:xsd:reda.014.001.01")]
 public interface IPartyCreationRequestV01 : IOuterRecord
 {
     /// <summary>

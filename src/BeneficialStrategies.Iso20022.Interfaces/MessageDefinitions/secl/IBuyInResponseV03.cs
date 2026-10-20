@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// The BuyInResponse may be sent in response to the BuyInNotification message. However, the use of this message in the buy in process is optional and depends on the rules set by each central counterparty.
 /// </summary>
 [IsoId("_2_0twS0lEeSRe9rElPHBfg")]
+[IsoMessage("secl.008.001.03", "BuyInRspn", "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03")]
 public interface IBuyInResponseV03 : IOuterRecord
 {
     /// <summary>

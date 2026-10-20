@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// For a single subscription order, the SubscriptionOrder message, not the SubscriptionBulkOrder message, must be used.
 /// </summary>
 [IsoId("_Aab6XTbLEead9bDRE_1DAQ")]
+[IsoMessage("setr.007.001.04", "SbcptBlkOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.007.001.04")]
 public interface ISubscriptionBulkOrderV04 : IOuterRecord
 {
     /// <summary>

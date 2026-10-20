@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingStatusAdvice message is sent by the national competent authority to the reporting agent to provide a status advice for the correctness, issues or errors that arise from the submitted report.
 /// </summary>
 [IsoId("_4LUGQURNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.031.001.01",
+    "FinInstrmRptgStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:auth.031.001.01"
+)]
 public interface IFinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

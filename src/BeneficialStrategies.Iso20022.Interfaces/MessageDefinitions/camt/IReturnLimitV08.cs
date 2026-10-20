@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Additional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.
 /// </summary>
 [IsoId("_jwlcGRbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.010.001.08", "RtrLmt", "urn:iso:std:iso:20022:tech:xsd:camt.010.001.08")]
 public interface IReturnLimitV08 : IOuterRecord
 {
     /// <summary>

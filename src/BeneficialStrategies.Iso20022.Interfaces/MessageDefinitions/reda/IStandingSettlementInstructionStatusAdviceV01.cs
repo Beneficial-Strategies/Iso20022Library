@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Scope|The receiver of a StandingSettlementInstruction message sends the StandingSettlementInstructionStatusAdvice message to the instructing party (sender of the StandingSettlementInstruction message) to provide the status of a previously received StandingSettlementInstruction, StandingSettlementInstructionCancellation or StandingSettlementInstructionDeletion message.||Usage|The StandingSettlementInstructionStatusAdvice message is used to report one of the following statuses:|- a received status, or, |- an accepted status, or,|- a rejected status, or,|- a pending processing status, or,|- a proprietary status.
 /// </summary>
 [IsoId("_5gmxoPRnEeK8G5J12Bcx2g")]
+[IsoMessage(
+    "reda.058.001.01",
+    "StgSttlmInstrStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:reda.058.001.01"
+)]
 public interface IStandingSettlementInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

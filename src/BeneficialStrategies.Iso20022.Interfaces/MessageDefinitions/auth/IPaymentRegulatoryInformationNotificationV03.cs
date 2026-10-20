@@ -13,6 +13,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// In some cases, the registration agent may also sent this message to the reporting party.
 /// </summary>
 [IsoId("_Nz8a0R3pEeuiRvbpCaJe6A")]
+[IsoMessage(
+    "auth.024.001.03",
+    "PmtRgltryInfNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:auth.024.001.03"
+)]
 public interface IPaymentRegulatoryInformationNotificationV03 : IOuterRecord
 {
     /// <summary>

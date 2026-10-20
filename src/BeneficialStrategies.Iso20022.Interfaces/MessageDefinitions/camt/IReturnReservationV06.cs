@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - type of reservation.
 /// </summary>
 [IsoId("_jwlcKRbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.047.001.06", "RtrRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.047.001.06")]
 public interface IReturnReservationV06 : IOuterRecord
 {
     /// <summary>

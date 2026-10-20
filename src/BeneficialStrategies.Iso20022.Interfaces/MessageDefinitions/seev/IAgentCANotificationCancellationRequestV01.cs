@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// In both cases, the building block notification advice identification must be present to link this cancellation request to the notification advice that was previously sent.
 /// </summary>
 [IsoId("_TRVISdEwEd-BzquC8wXy7w_1381384285")]
+[IsoMessage(
+    "seev.010.001.01",
+    "AgtCANtfctnCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.010.001.01"
+)]
 public interface IAgentCANotificationCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

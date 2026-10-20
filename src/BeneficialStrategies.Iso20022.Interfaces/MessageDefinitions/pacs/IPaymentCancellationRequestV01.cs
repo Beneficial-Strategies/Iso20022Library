@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The PaymentCancellationRequest message exchanged between agents is identified in the schema as follows: |urn: iso: std: iso: 20022: tech: xsd: pacs.006.001.01|.
 /// </summary>
 [IsoId("_eoSrcdEuEd-BzquC8wXy7w_-1218856998")]
+[IsoMessage("pacs.006.001.01", "pacs.006.001.01", "urn:iso:std:iso:20022:tech:xsd:pacs.006.001.01")]
 public interface IPaymentCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

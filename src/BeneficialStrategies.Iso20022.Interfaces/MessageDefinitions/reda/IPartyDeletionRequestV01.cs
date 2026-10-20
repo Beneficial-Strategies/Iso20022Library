@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Processing of the party deletion request message is provided via a party status advice.
 /// </summary>
 [IsoId("_77TqgZeSEeen_cyMrluY4w")]
+[IsoMessage("reda.031.001.01", "PtyDeltnReq", "urn:iso:std:iso:20022:tech:xsd:reda.031.001.01")]
 public interface IPartyDeletionRequestV01 : IOuterRecord
 {
     /// <summary>

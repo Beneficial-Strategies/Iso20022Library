@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// This message will be replied to by a ReturnCurrencyExchangeRate message.
 /// </summary>
 [IsoId("_jwlbdxbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.016.001.04", "GetCcyXchgRate", "urn:iso:std:iso:20022:tech:xsd:camt.016.001.04")]
 public interface IGetCurrencyExchangeRateV04 : IOuterRecord
 {
     /// <summary>

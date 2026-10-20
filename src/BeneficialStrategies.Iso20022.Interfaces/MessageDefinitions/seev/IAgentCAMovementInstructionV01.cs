@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// change of option, e.g. in the case of the closure of an option, by moving the exercised resources from one option to another option within the sequestered balances in accordance to the new option conditions. The order type must be &apos;option change order&apos;.
 /// </summary>
 [IsoId("_TQbwbNEwEd-BzquC8wXy7w_89976784")]
+[IsoMessage("seev.019.001.01", "AgtCAMvmntInstr", "urn:iso:std:iso:20022:tech:xsd:seev.019.001.01")]
 public interface IAgentCAMovementInstructionV01 : IOuterRecord
 {
     /// <summary>

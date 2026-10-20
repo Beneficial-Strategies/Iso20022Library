@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCancellationRequest message is used when the card acceptor is unaware of the cancellation of the transaction by the acquirer.
 /// </summary>
 [IsoId("_cMhxZaMVEeCJ6YNENx4h-w_602094635")]
+[IsoMessage("caaa.005.001.01", "AccptrCxlReq", "urn:iso:std:iso:20022:tech:xsd:caaa.005.001.01")]
 public interface IAcceptorCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

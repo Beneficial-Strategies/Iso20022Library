@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message is used to provide a status on the deactivation instruction, especially to confirm the deactivation of a Corporate Action event or option.
 /// </summary>
 [IsoId("_TMQbDNEwEd-BzquC8wXy7w_622567227")]
+[IsoMessage(
+    "seev.030.001.01",
+    "AgtCADeactvtnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.030.001.01"
+)]
 public interface IAgentCADeactivationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

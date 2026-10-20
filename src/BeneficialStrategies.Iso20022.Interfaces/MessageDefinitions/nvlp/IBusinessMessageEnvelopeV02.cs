@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.nvlp;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_HcxQAbMcEe-OHY85tcOC5w")]
+[IsoMessage("nvlp.001.001.02", "BizMsgEnvlp", "urn:iso:std:iso:20022:tech:xsd:nvlp.001.001.02")]
 public interface IBusinessMessageEnvelopeV02 : IOuterRecord
 {
     /// <summary>

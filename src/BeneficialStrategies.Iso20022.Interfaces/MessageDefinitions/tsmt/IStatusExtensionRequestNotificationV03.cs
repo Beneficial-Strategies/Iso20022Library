@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The StatusExtensionRequestNotification message can be sent by the matching application to pass on information about the request to extend the status of a transaction that it has obtained through the receipt of a StatusExtensionRequest message.
 /// </summary>
 [IsoId("_zU2RotE8Ed-BzquC8wXy7w_883782458")]
+[IsoMessage(
+    "tsmt.036.001.03",
+    "StsXtnsnReqNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.036.001.03"
+)]
 public interface IStatusExtensionRequestNotificationV03 : IOuterRecord
 {
     /// <summary>

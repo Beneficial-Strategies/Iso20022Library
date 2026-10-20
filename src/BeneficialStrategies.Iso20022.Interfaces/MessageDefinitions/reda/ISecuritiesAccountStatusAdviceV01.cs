@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// When the processing is succesfully performed, the message includes the related securities account identification.
 /// </summary>
 [IsoId("_KAu-652fEem_Be8NuxvF7Q")]
+[IsoMessage(
+    "reda.020.001.01",
+    "SctiesAcctStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:reda.020.001.01"
+)]
 public interface ISecuritiesAccountStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

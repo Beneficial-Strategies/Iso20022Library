@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// The CertificateManagementResponse is sent by a terminal manager in response to a CertificateManagementRequest to provide the outcome of the requested service.
 /// </summary>
 [IsoId("_2x9fsXPYEe2pK6udhxEaHA")]
+[IsoMessage("catm.008.001.06", "CertMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:catm.008.001.06")]
 public interface ICertificateManagementResponseV06 : IOuterRecord
 {
     /// <summary>

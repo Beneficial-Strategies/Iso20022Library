@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_fTgMORPeEeSVo-TFVwFHvA")]
+[IsoMessage("pacs.009.001.05", "FICdtTrf", "urn:iso:std:iso:20022:tech:xsd:pacs.009.001.05")]
 public interface IFinancialInstitutionCreditTransferV05 : IOuterRecord
 {
     /// <summary>

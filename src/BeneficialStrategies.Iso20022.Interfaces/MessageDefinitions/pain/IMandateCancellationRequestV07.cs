@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The MandateCancellationRequest message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_rUYN_dcBEeq_l4BJLVUF2Q")]
+[IsoMessage("pain.011.001.07", "MndtCxlReq", "urn:iso:std:iso:20022:tech:xsd:pain.011.001.07")]
 public interface IMandateCancellationRequestV07 : IOuterRecord
 {
     /// <summary>

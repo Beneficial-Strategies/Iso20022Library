@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// Usage: when the shareholder identification disclosure response is sent in a multipart response report (with several messages), a single response status advice only may be sent for the acceptance status of the whole report.
 /// </summary>
 [IsoId("_NCNMYHC5EemNhNOCZKENuw")]
+[IsoMessage(
+    "seev.049.001.01",
+    "ShrhldrIdDsclsrRspnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.049.001.01"
+)]
 public interface IShareholderIdentificationDisclosureResponseStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

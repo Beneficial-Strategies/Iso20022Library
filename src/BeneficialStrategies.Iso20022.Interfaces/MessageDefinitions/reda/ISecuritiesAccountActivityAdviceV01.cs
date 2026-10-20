@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The SecuritieAccountActivityReport message is sent by the executing party to an instructing party containing information about changes on securities account reference data.||Scope and usage: |It aims at informing about the changes occurred during a business date for securities account reference data.
 /// </summary>
 [IsoId("_KAlNkZ2fEem_Be8NuxvF7Q")]
+[IsoMessage(
+    "reda.035.001.01",
+    "SctiesAcctActvtyAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:reda.035.001.01"
+)]
 public interface ISecuritiesAccountActivityAdviceV01 : IOuterRecord
 {
     /// <summary>

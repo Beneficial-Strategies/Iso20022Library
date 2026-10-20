@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The InquiryInitiation message is sent by an acquirer or agent to an issuer to request information related to the card (e.g. about a cardholder, the availability of funds, etc.).
 /// </summary>
 [IsoId("_ggro1VdREeeIAMBcVOw01w")]
+[IsoMessage("cain.016.001.01", "NqryInitn", "urn:iso:std:iso:20022:tech:xsd:cain.016.001.01")]
 public interface IInquiryInitiationV01 : IOuterRecord
 {
     /// <summary>

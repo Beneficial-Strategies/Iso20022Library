@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The confirmation status advice is sent by the CMU to the market participants after they received the confirmation request.
 /// </summary>
 [IsoId("_giUbEESAEeStEe_B2dcrqg")]
+[IsoMessage(
+    "fxtr.037.001.01",
+    "FXTradConfStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.037.001.01"
+)]
 public interface IForeignExchangeTradeConfirmationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

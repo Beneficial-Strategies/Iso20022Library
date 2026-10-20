@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CurrencyControlSupportingDocumentDelivery message is sent by either the reporting party (respectively the registration agent) or the registration agent (respectively the reporting party) in response to the supporting document request.
 /// </summary>
 [IsoId("_bf9R822PEei3KuUgpx7Xcw")]
+[IsoMessage(
+    "auth.025.001.02",
+    "CcyCtrlSpprtgDocDlvry",
+    "urn:iso:std:iso:20022:tech:xsd:auth.025.001.02"
+)]
 public interface ICurrencyControlSupportingDocumentDeliveryV02 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_KXRK4Z_wEfC4Q_xhaK1hdQ")]
+[IsoMessage("caaa.011.001.15", "AccptrBtchTrf", "urn:iso:std:iso:20022:tech:xsd:caaa.011.001.15")]
 public interface IAcceptorBatchTransferV15 : IOuterRecord
 {
     /// <summary>

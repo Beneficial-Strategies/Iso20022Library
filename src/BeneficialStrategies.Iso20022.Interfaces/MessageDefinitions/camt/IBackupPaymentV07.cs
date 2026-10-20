@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// To verify the outcome of the request, the member may submit a GetTransaction or GetAccount message with the appropriate search criteria.
 /// </summary>
 [IsoId("_jwlbMRbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.023.001.07", "BckpPmt", "urn:iso:std:iso:20022:tech:xsd:camt.023.001.07")]
 public interface IBackupPaymentV07 : IOuterRecord
 {
     /// <summary>

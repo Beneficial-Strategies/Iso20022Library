@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The PaymentCancellationRequest message exchanged between non-financial institution customers and agents is identified in the schema as follows: urn:iso:std:iso:20022:tech:xsd:pain.006.001.01.
 /// </summary>
 [IsoId("_GZHVINEvEd-BzquC8wXy7w_162316323")]
+[IsoMessage("pain.006.001.01", "pain.006.001.01", "urn:iso:std:iso:20022:tech:xsd:pain.006.001.01")]
 public interface IPaymentCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

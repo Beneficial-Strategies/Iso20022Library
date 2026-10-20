@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// If the instructing party does not have enough information to instruct the transfer, then it must first send a RequestForPEPOrISAOrPortfolioInformation message to the executing party in order to receive a PEPOrISAOrPortfolioInformation message.
 /// </summary>
 [IsoId("_lB0YQNE5Ed-BzquC8wXy7w_-1087264002")]
+[IsoMessage(
+    "sese.012.001.02",
+    "PEPOrISAOrPrtflTrfInstrV02",
+    "urn:iso:std:iso:20022:tech:xsd:sese.012.001.02"
+)]
 public interface IPEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
 {
     /// <summary>

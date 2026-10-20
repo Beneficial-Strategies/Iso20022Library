@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message is also used to notify an update or amendment to a previously sent MeetingResultDissemination message.
 /// </summary>
 [IsoId("_TtMk6NEwEd-BzquC8wXy7w_-698422163")]
+[IsoMessage("seev.008.001.03", "MtgRsltDssmntn", "urn:iso:std:iso:20022:tech:xsd:seev.008.001.03")]
 public interface IMeetingResultDisseminationV03 : IOuterRecord
 {
     /// <summary>

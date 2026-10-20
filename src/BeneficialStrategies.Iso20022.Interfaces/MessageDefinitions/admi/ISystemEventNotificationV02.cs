@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// The message can be used by a central settlement system to inform its participants of an event that is going to occur in the system, for instance that the system will be down at a certain time, etc.
 /// </summary>
 [IsoId("_pgC-EU7TEeSGH6dwL1uJcg")]
+[IsoMessage("admi.004.001.02", "SysEvtNtfctn", "urn:iso:std:iso:20022:tech:xsd:admi.004.001.02")]
 public interface ISystemEventNotificationV02 : IOuterRecord
 {
     /// <summary>

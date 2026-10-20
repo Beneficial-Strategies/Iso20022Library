@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// To request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original RedemptionOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the RedemptionOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the redemption order confirmation cancellation is to be followed by an amendment An amendment of a redemption order confirmation is carried out by sending a RedemptionOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’.
 /// </summary>
 [IsoId("_Aab7szbLEead9bDRE_1DAQ")]
+[IsoMessage(
+    "setr.051.001.02",
+    "RedOrdrConfCxlInstr",
+    "urn:iso:std:iso:20022:tech:xsd:setr.051.001.02"
+)]
 public interface IRedemptionOrderConfirmationCancellationInstructionV02 : IOuterRecord
 {
     /// <summary>

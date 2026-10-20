@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// In principle, the transaction administrator may send a Receipt message as a reply to the liquidity transfer request. To verify the outcome of the request, the member may submit a GetTransaction or GetAccount message with the appropriate search criteria.
 /// </summary>
 [IsoId("_ThP0Adb6Eeq_l4BJLVUF2Q")]
+[IsoMessage("camt.050.001.06", "LqdtyCdtTrf", "urn:iso:std:iso:20022:tech:xsd:camt.050.001.06")]
 public interface ILiquidityCreditTransferV06 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// The ManagementPlanReplacement message is sent by a terminal manager to a POI to set maintenance actions to be performed.
 /// </summary>
 [IsoId("_YbeR8U6qEeyGi9JAv6wq7Q")]
+[IsoMessage("catm.002.001.10", "MgmtPlanRplcmnt", "urn:iso:std:iso:20022:tech:xsd:catm.002.001.10")]
 public interface IManagementPlanReplacementV10 : IOuterRecord
 {
     /// <summary>

@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 ///
 /// </summary>
 [IsoId("_jMaBadcBEeq_l4BJLVUF2Q")]
+[IsoMessage("pacs.028.001.05", "FIToFIPmtStsReq", "urn:iso:std:iso:20022:tech:xsd:pacs.028.001.05")]
 public interface IFIToFIPaymentStatusRequestV05 : IOuterRecord
 {
     /// <summary>

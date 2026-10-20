@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - Debit Authorisation Request message, sent to the case creator/case assigner, if the payment instruction has reached an incorrect creditor.|The UnableToApply message has the following main characteristics:|- Case Identification and Reason Code:|The case creator (the instructed party/creditor of a payment instruction) assigns a unique case identification and optionally|the reason code for the Unable To Apply message. This information will be passed unchanged to all subsequent case|assignees.|- Underlying Payment Instruction Identification:|The case creator specifies the identification of the underlying payment instruction. This identification needs to be updated|by the subsequent case assigner(s) in order to match the one used with their case assignee(s).|- Unable To Apply Justification:|The Unable To Apply Justification element allows the assigner to indicate whether a specific element causes the unable|to apply situation (incorrect element and/or mismatched element can be listed) or whether any supplementary information|needs to be forwarded.
 /// </summary>
 [IsoId("_hCmh-NE_Ed-BzquC8wXy7w_120677065")]
+[IsoMessage("camt.026.001.03", "UblToApply", "urn:iso:std:iso:20022:tech:xsd:camt.026.001.03")]
 public interface IUnableToApplyV03 : IOuterRecord
 {
     /// <summary>

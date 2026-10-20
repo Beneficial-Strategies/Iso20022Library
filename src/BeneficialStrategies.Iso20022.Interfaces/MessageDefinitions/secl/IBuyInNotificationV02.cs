@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_-gcKsqMOEeCojJW5vEuTEQ_-837816509")]
+[IsoMessage("secl.007.001.02", "BuyInNtfctn", "urn:iso:std:iso:20022:tech:xsd:secl.007.001.02")]
 public interface IBuyInNotificationV02 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// This message provides the status of the Triparty collateral transaction or instruction.
 /// </summary>
 [IsoId("_2uaNCys7EeySlt9bF77XfA")]
+[IsoMessage(
+    "colr.020.001.01",
+    "TrptyCollTxInstrPrcgStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:colr.020.001.01"
+)]
 public interface ITripartyCollateralTransactionInstructionProcessingStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

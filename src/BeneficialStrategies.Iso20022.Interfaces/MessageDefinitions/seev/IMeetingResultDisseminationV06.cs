@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message definition is intended for use with the Business Application Header.
 /// </summary>
 [IsoId("_yXBbtayREemMosWmlQ33EA")]
+[IsoMessage("seev.008.001.06", "MtgRsltDssmntn", "urn:iso:std:iso:20022:tech:xsd:seev.008.001.06")]
 public interface IMeetingResultDisseminationV06 : IOuterRecord
 {
     /// <summary>

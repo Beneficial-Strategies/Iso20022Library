@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The rejection of an amendment request can be achieved by sending an AmendmentRejection message.
 /// </summary>
 [IsoId("_j0IVwtE8Ed-BzquC8wXy7w_1561210255")]
+[IsoMessage("tsmt.005.001.02", "AmdmntAccptnc", "urn:iso:std:iso:20022:tech:xsd:tsmt.005.001.02")]
 public interface IAmendmentAcceptanceV02 : IOuterRecord
 {
     /// <summary>

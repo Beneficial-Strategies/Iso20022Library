@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - the party that has requested the amendment of a baseline established in the lodge mode. In the outlined scenario the message is used to confirm the changes to the baseline and to list the differences between the amended baseline and the baseline established earlier.
 /// </summary>
 [IsoId("_nsFeyNE8Ed-BzquC8wXy7w_1762924909")]
+[IsoMessage("tsmt.015.001.03", "DltaRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.015.001.03")]
 public interface IDeltaReportV03 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The ATMExceptionAcknowledgement message is sent by an acquirer or its agent to an ATM to acknowledge the receipt of an ATMExceptionAdvice message.
 /// </summary>
 [IsoId("_YFLI0K5GEeWCgYcWSNgX5g")]
+[IsoMessage("caam.012.001.01", "ATMXcptnAck", "urn:iso:std:iso:20022:tech:xsd:caam.012.001.01")]
 public interface IATMExceptionAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

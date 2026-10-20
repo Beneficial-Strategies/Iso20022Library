@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The ChargeBackInitiation message is sent by an issuer or agent to an acquirer to fully or partially nullify a previous financial transaction; namely when the issuer determines that a customer dispute exists or that an error or violation of rules has been committed. It is also used to nullify a previous chargeback. Chargebacks have a financial impact and should be computed within reconciliation totals.
 /// </summary>
 [IsoId("_1HbrRFZdEeen1vB4iz5SyA")]
+[IsoMessage("cain.027.001.01", "ChrgBckInitn", "urn:iso:std:iso:20022:tech:xsd:cain.027.001.01")]
 public interface IChargeBackInitiationV01 : IOuterRecord
 {
     /// <summary>

@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 ///
 /// </summary>
 [IsoId("_-4fJISzhEeKZfox_pyYpTA")]
+[IsoMessage("admi.011.001.01", "SysEvtAck", "urn:iso:std:iso:20022:tech:xsd:admi.011.001.01")]
 public interface ISystemEventAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

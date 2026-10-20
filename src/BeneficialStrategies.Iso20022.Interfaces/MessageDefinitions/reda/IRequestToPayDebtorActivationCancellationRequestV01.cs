@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The RequestToPayDebtorActivationCancellationRequest message is sent by the debtor RTP (Request To Pay) provider to the creditor RTP provider and optionally from the debtor to its RTP provider and from the creditor RTP provider to the creditor to request for the cancellation of the debtor activation of the RTP service with that specific creditor.
 /// </summary>
 [IsoId("_rNNBw-HzEeqbls7Gk4-ckA")]
+[IsoMessage(
+    "reda.072.001.01",
+    "ReqToPayDbtrActvtnCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.072.001.01"
+)]
 public interface IRequestToPayDebtorActivationCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

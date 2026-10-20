@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// Second, it is used to advise that the meeting is cancelled. In this case, only the MeetingReference and Reason building blocks need to be present.
 /// </summary>
 [IsoId("_TlSmJNEwEd-BzquC8wXy7w_-1183208887")]
+[IsoMessage("seev.002.001.03", "MtgCxl", "urn:iso:std:iso:20022:tech:xsd:seev.002.001.03")]
 public interface IMeetingCancellationV03 : IOuterRecord
 {
     /// <summary>

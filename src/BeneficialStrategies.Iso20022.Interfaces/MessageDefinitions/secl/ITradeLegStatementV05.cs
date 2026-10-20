@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_4eXSYaoxEfCG2_q2WT-90w")]
+[IsoMessage("secl.003.001.05", "TradLegStmt", "urn:iso:std:iso:20022:tech:xsd:secl.003.001.05")]
 public interface ITradeLegStatementV05 : IOuterRecord
 {
     /// <summary>

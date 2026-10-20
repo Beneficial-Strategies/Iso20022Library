@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The BankServicesBillingStatement message is intended for use with the ISO 20022 Business Application Header.
 /// </summary>
 [IsoId("_bf9SDW2PEei3KuUgpx7Xcw")]
+[IsoMessage("camt.086.001.03", "BkSvcsBllgStmt", "urn:iso:std:iso:20022:tech:xsd:camt.086.001.03")]
 public interface IBankServicesBillingStatementV03 : IOuterRecord
 {
     /// <summary>

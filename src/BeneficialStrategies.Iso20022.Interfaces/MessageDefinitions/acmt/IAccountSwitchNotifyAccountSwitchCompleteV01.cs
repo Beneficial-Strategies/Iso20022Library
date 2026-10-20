@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchNotifyAccountSwitchComplete message is sent by the new account servicer to a central account switch servicer to signal that it has completed the account switch.
 /// </summary>
 [IsoId("_Vh8wEhMLEeSTk5fcu7tr9w")]
+[IsoMessage(
+    "acmt.033.001.01",
+    "AcctSwtchNtfyAcctSwtchCmplt",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.033.001.01"
+)]
 public interface IAccountSwitchNotifyAccountSwitchCompleteV01 : IOuterRecord
 {
     /// <summary>

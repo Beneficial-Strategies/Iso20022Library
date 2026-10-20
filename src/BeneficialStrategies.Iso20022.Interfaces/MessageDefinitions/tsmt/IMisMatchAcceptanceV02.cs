@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The rejection of mis-matched data sets can be achieved by sending a MisMatchRejection message.
 /// </summary>
 [IsoId("_rmuIWNE8Ed-BzquC8wXy7w_-505567278")]
+[IsoMessage("tsmt.020.001.02", "MisMtchAccptnc", "urn:iso:std:iso:20022:tech:xsd:tsmt.020.001.02")]
 public interface IMisMatchAcceptanceV02 : IOuterRecord
 {
     /// <summary>

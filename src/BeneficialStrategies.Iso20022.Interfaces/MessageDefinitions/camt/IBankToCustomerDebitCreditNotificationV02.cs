@@ -22,6 +22,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// It does not contain balance information.
 /// </summary>
 [IsoId("_JG4lINE-Ed-BzquC8wXy7w_1022273973")]
+[IsoMessage(
+    "camt.054.001.02",
+    "BkToCstmrDbtCdtNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:camt.054.001.02"
+)]
 public interface IBankToCustomerDebitCreditNotificationV02 : IOuterRecord
 {
     /// <summary>

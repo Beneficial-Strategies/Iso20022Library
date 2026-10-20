@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_hV5l8YV4Ee6odei_lsRKtw")]
+[IsoMessage("cain.020.001.03", "Amdmnt", "urn:iso:std:iso:20022:tech:xsd:cain.020.001.03")]
 public interface IAmendmentV03 : IOuterRecord
 {
     /// <summary>

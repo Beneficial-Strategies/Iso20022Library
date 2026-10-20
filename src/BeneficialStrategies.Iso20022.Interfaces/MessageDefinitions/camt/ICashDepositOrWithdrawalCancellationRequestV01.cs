@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Where requesting cancellation of a cash withdrawal request, it is sent by a cash sender to a cash receiver.
 /// </remarks>
 [IsoId("_Zbk1oHgyEfCdoODv2ypKfw")]
+[IsoMessage(
+    "camt.116.001.01",
+    "CshDpstOrWdrwlCxlReq",
+    "urn:iso:std:iso:20022:tech:xsd:camt.116.001.01"
+)]
 public interface ICashDepositOrWithdrawalCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

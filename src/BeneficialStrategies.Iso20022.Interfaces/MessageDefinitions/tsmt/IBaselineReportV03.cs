@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - to the submitter of the data set(s) and to the counterparty in case of a data set match for a transaction established in the push-through mode.The message can be sent after a successful data-set match or after the acceptance of mis-matched data sets to inform about the actual status of the dynamic part of the baseline.
 /// </summary>
 [IsoId("_l8xdSNE8Ed-BzquC8wXy7w_1618740400")]
+[IsoMessage("tsmt.011.001.03", "BaselnRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.011.001.03")]
 public interface IBaselineReportV03 : IOuterRecord
 {
     /// <summary>

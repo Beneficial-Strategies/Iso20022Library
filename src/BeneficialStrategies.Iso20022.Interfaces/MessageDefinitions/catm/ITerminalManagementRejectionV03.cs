@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// The TerminalManagementRejection message is sent by the terminal manager to reject a message request sent by an acceptor, to indicate that the received message could not be processed.
 /// </summary>
 [IsoId("_5h17wWp0EeSMqvBfBY1c9A")]
+[IsoMessage("catm.004.001.03", "TermnlMgmtRjctn", "urn:iso:std:iso:20022:tech:xsd:catm.004.001.03")]
 public interface ITerminalManagementRejectionV03 : IOuterRecord
 {
     /// <summary>

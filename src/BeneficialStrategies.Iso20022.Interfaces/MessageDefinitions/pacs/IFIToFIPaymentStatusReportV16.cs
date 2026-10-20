@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FIToFIPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (for example either the beneficiary is credited, or the transaction is rejected).
 /// </remarks>
 [IsoId("42d3d142-0665-41d5-b5b7-87bdd32671d8")]
+[IsoMessage("pacs.002.001.16", "FIToFIPmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:pacs.002.001.16")]
 public interface IFIToFIPaymentStatusReportV16 : IOuterRecord
 {
     /// <summary>

@@ -13,6 +13,11 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// The message can carry digital signatures if required by context.
 /// </summary>
 [IsoId("_OTgzNDkx-AOSNFX-8224506")]
+[IsoMessage(
+    "tsin.012.001.01",
+    "PtyRegnAndGrntAck",
+    "urn:iso:std:iso:20022:tech:xsd:tsin.012.001.01"
+)]
 public interface IPartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

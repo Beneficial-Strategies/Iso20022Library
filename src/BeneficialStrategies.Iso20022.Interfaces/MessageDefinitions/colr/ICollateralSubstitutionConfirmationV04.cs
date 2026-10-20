@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// This message confirms the collateral delivery. The collateral taker will only release the return of collateral when the new piece of collateral is received. The collateral giver sends the collateral taker the notification that the collateral substitution (that is new piece(s) of collateral) have been released.
 /// </summary>
 [IsoId("_rREV0YFrEeWtPe6Crjmeug")]
+[IsoMessage("colr.012.001.04", "CollSbstitnConf", "urn:iso:std:iso:20022:tech:xsd:colr.012.001.04")]
 public interface ICollateralSubstitutionConfirmationV04 : IOuterRecord
 {
     /// <summary>

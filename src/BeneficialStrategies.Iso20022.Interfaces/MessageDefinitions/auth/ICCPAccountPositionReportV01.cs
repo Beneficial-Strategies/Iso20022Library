@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPAccountPositionReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the positions of the clearing members of the central counterparty.
 /// </summary>
 [IsoId("_1-TtoeUREem3X-64-NKdqg")]
+[IsoMessage("auth.068.001.01", "CCPAcctPosRpt", "urn:iso:std:iso:20022:tech:xsd:auth.068.001.01")]
 public interface ICCPAccountPositionReportV01 : IOuterRecord
 {
     /// <summary>

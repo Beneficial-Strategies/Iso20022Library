@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeWarningsReport is sent by the trade repository (TR) to the authority or made available by the trade repository (TR) to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable.
 /// </summary>
 [IsoId("_pVW9r2mFEe2DRvVJM2Qy-g")]
+[IsoMessage(
+    "auth.106.001.01",
+    "DerivsTradWrnngsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.106.001.01"
+)]
 public interface IDerivativesTradeWarningsReportV01 : IOuterRecord
 {
     /// <summary>

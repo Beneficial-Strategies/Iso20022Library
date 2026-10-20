@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// The UndertakingApplication message is sent by the party requesting issuance of the undertaking (applicant or obligor) to the party issuing the undertaking. It is used to request the issuance of an undertaking (demand guarantee or standby letter of credit or suretyship) or counter-undertaking (counter-guarantee or counter-standby or suretyship), and provides details on the applicable rules, terms, conditions and content of the undertaking to be issued.
 /// </summary>
 [IsoId("_9fRMkHltEeG7BsjMvd1mEw_980511566")]
+[IsoMessage("tsin.005.001.01", "UdrtkgAppl", "urn:iso:std:iso:20022:tech:xsd:tsin.005.001.01")]
 public interface IUndertakingApplicationV01 : IOuterRecord
 {
     /// <summary>

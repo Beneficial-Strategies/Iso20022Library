@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// The Settlement Obligation Report message is provided per delivery account and per instrument. The report can be provided for one specific delivering party or one specific receiving party. It can also be generated per non clearing member.
 /// </summary>
 [IsoId("_suRVUS9dEeS94oXWDaBauA")]
+[IsoMessage("secl.010.001.03", "SttlmOblgtnRpt", "urn:iso:std:iso:20022:tech:xsd:secl.010.001.03")]
 public interface ISettlementObligationReportV03 : IOuterRecord
 {
     /// <summary>

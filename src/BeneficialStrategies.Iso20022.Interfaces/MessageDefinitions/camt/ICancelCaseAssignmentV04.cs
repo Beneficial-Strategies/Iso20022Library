@@ -24,6 +24,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The CancelCaseAssignment message must not be used for other purposes. If, for example, a request to modify payment fails, and the case creator requests the cancellation of the payment, then a CustomerPaymentCancellationRequest or FIToFIPaymentCancellationRequest message must be used, with the case identification of the original RequestToModifyPayment message. In this context it is incorrect to use the CancelCaseAssignment message.
 /// </summary>
 [IsoId("_eX_OnW2PEei3KuUgpx7Xcw")]
+[IsoMessage("camt.032.001.04", "CclCaseAssgnmt", "urn:iso:std:iso:20022:tech:xsd:camt.032.001.04")]
 public interface ICancelCaseAssignmentV04 : IOuterRecord
 {
     /// <summary>

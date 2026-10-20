@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeRejectionStatisticalReport message is sent by the the trade repositories to the supervisory authority system, to report statistical information on derivatives submissions.
 /// </summary>
 [IsoId("_F_KeAd1bEeqxpKDfBZC1vg")]
+[IsoMessage(
+    "auth.092.001.02",
+    "DerivsTradRjctnSttstclRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.092.001.02"
+)]
 public interface IDerivativesTradeRejectionStatisticalReportV02 : IOuterRecord
 {
     /// <summary>

@@ -24,6 +24,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// Ultimately, the statement reaches the relevant fund company, for example, the transfer agent, that may use it for obtaining information about the custodians, distributors and commercial agreement references associated with holdings on an omnibus account in the shareholder register.
 /// </summary>
 [IsoId("_xPhF4Ig7EeO9_8n7Pjtlag")]
+[IsoMessage(
+    "semt.041.001.01",
+    "SctiesBalTrnsprncyRpt",
+    "urn:iso:std:iso:20022:tech:xsd:semt.041.001.01"
+)]
 public interface ISecuritiesBalanceTransparencyReportV01 : IOuterRecord
 {
     /// <summary>

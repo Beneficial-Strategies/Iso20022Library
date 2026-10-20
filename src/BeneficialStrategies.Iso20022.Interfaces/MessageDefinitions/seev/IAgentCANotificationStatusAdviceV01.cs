@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// When this message is used to provide the status of a notification cancellation request then the building block Notification Cancellation Request Identification must be present.
 /// </summary>
 [IsoId("_TReSOdEwEd-BzquC8wXy7w_-1525445298")]
+[IsoMessage(
+    "seev.011.001.01",
+    "AgtCANtfctnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.011.001.01"
+)]
 public interface IAgentCANotificationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

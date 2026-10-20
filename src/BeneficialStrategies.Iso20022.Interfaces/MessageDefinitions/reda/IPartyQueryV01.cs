@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Scope:|The PartyQuery message is sent by a central securities depository, a national central bank, a central securities depository participant, a central counter party, a payment bank, a trading party or a stock exchange to the executing party to query for the party reference data of a party defined in the system.
 /// </summary>
 [IsoId("_6z5WgZeSEeen_cyMrluY4w")]
+[IsoMessage("reda.015.001.01", "PtyQry", "urn:iso:std:iso:20022:tech:xsd:reda.015.001.01")]
 public interface IPartyQueryV01 : IOuterRecord
 {
     /// <summary>

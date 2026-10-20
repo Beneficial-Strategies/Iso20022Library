@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// - as an end of day report.
 /// </summary>
 [IsoId("_DlZHIS0mEeSRe9rElPHBfg")]
+[IsoMessage("secl.003.001.03", "TradLegStmt", "urn:iso:std:iso:20022:tech:xsd:secl.003.001.03")]
 public interface ITradeLegStatementV03 : IOuterRecord
 {
     /// <summary>

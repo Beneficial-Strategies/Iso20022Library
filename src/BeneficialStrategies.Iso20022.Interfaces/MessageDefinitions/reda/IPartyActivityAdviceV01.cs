@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The PartyActivityReport message is sent by the executing party to an instructing party containing information about changes on party reference data.||Scope and usage:|It aims at informing about the changes occurred during a business date for party reference data.
 /// </summary>
 [IsoId("__JD_8ZeSEeen_cyMrluY4w")]
+[IsoMessage("reda.041.001.01", "PtyActvtyAdvc", "urn:iso:std:iso:20022:tech:xsd:reda.041.001.01")]
 public interface IPartyActivityAdviceV01 : IOuterRecord
 {
     /// <summary>

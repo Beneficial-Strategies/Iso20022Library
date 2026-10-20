@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The message may also be forwarded to any authorised third party, as defined in the local scheme
 /// </summary>
 [IsoId("_rNNBkeHzEeqbls7Gk4-ckA")]
+[IsoMessage(
+    "reda.067.001.01",
+    "ReqToPayCdtrEnrlmntAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.067.001.01"
+)]
 public interface IRequestToPayCreditorEnrolmentAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>

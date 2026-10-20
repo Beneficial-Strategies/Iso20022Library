@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information.|using the relevant elements in the Business Application Header.|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.
 /// </summary>
 [IsoId("_I_jGEdtaEd-RF5yaMAVhAw")]
+[IsoMessage(
+    "sese.028.001.02",
+    "SctiesSttlmTxAllgmtNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:sese.028.001.02"
+)]
 public interface ISecuritiesSettlementTransactionAllegementNotificationV02 : IOuterRecord
 {
     /// <summary>

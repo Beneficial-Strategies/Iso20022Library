@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The NotificationToReceive message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.
 /// </summary>
 [IsoId("_sYylOmtdEeCY4-KZ9JEyUQ_-1019649132")]
+[IsoMessage("camt.057.001.02", "NtfctnToRcv", "urn:iso:std:iso:20022:tech:xsd:camt.057.001.02")]
 public interface INotificationToReceiveV02 : IOuterRecord
 {
     /// <summary>

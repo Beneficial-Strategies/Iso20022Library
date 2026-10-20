@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// Scope|An account servicer sends a SecuritiesSettlementTransactionReversalAdvice to an account owner to reverse the confirmation of a partial or full delivery or receipt of financial instruments, free or against of payment, physically or by book-entry.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.||ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.
 /// </summary>
 [IsoId("_TuynofvLEeCBQp5TnX1XKQ")]
+[IsoMessage(
+    "sese.026.001.03",
+    "SctiesSttlmTxRvslAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:sese.026.001.03"
+)]
 public interface ISecuritiesSettlementTransactionReversalAdviceV03 : IOuterRecord
 {
     /// <summary>

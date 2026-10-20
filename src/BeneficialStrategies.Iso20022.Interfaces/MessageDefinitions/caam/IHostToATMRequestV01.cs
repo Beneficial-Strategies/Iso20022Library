@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// The HostToATMRequest message is sent by a host to an ATM to request the ATM to contact a host by sending of a maintenance messages.
 /// </summary>
 [IsoId("_ZgfQ4ItqEeSDLd7nI4Quzw")]
+[IsoMessage("caam.007.001.01", "HstToATMReq", "urn:iso:std:iso:20022:tech:xsd:caam.007.001.01")]
 public interface IHostToATMRequestV01 : IOuterRecord
 {
     /// <summary>

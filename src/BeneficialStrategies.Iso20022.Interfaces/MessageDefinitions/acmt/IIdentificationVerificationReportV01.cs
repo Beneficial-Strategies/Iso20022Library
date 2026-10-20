@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The IdentificationVerificationReport message may include the correct party and/or account identification information.
 /// </summary>
 [IsoId("_sR7vSWtdEeCY4-KZ9JEyUQ_-1219419046")]
+[IsoMessage("acmt.024.001.01", "IdVrfctnRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.024.001.01")]
 public interface IIdentificationVerificationReportV01 : IOuterRecord
 {
     /// <summary>

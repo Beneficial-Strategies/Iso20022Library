@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 ///
 /// </summary>
 [IsoId("_eii_URnXEeKKXqHkeUjBbw")]
+[IsoMessage("camt.063.001.02", "PayInEvtAck", "urn:iso:std:iso:20022:tech:xsd:camt.063.001.02")]
 public interface IPayInEventAcknowledgementV02 : IOuterRecord
 {
     /// <summary>

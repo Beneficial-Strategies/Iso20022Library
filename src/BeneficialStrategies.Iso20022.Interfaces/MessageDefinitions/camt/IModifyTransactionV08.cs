@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// To verify the outcome of the request, the member may submit a GetTransaction message with the appropriate search criteria.
 /// </summary>
 [IsoId("_jwlb6RbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.007.001.08", "ModfyTx", "urn:iso:std:iso:20022:tech:xsd:camt.007.001.08")]
 public interface IModifyTransactionV08 : IOuterRecord
 {
     /// <summary>

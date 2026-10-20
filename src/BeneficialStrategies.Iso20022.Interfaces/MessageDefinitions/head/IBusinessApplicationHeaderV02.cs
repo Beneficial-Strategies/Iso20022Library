@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.head;
 /// Specific usage of this BusinessMessageHeader may be defined by the relevant SEG.
 /// </summary>
 [IsoId("_6wX5Uch7Eei73Ywzx0CAAg")]
+[IsoMessage("head.001.001.02", "AppHdr", "urn:iso:std:iso:20022:tech:xsd:head.001.001.02")]
 public interface IBusinessApplicationHeaderV02 : IOuterRecord
 {
     /// <summary>

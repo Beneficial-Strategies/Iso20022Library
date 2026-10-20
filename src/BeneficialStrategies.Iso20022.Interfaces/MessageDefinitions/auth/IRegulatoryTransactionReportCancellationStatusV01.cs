@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// If the status is rejected, then reason for the rejection must be specified.
 /// </summary>
 [IsoId("_gJrQAcIFEeGllrOKQRUTYA_-231568037")]
+[IsoMessage(
+    "auth.011.001.01",
+    "RgltryTxRptCxlStsV01",
+    "urn:iso:std:iso:20022:tech:xsd:auth.011.001.01"
+)]
 public interface IRegulatoryTransactionReportCancellationStatusV01 : IOuterRecord
 {
     /// <summary>

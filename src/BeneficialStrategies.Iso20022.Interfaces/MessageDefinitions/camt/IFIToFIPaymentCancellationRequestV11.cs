@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3KYpzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("camt.056.001.11", "FIToFIPmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:camt.056.001.11")]
 public interface IFIToFIPaymentCancellationRequestV11 : IOuterRecord
 {
     /// <summary>

@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 ///
 /// </summary>
 [IsoId("_rNNB1-HzEeqbls7Gk4-ckA")]
+[IsoMessage(
+    "reda.073.001.01",
+    "ReqToPayDbtrActvtnStsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:reda.073.001.01"
+)]
 public interface IRequestToPayDebtorActivationStatusReportV01 : IOuterRecord
 {
     /// <summary>

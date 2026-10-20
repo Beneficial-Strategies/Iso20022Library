@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// Reconciliation is the exchange between two interchanging parties (Acquirer, Issuer or Agent) of totals and/or counts of messages within a specific session.
 /// </summary>
 [IsoId("_6rd65VUFEeetiruPyDPo0Q")]
+[IsoMessage("caad.005.001.02", "RcncltnInitn", "urn:iso:std:iso:20022:tech:xsd:caad.005.001.02")]
 public interface IReconciliationInitiationV02 : IOuterRecord
 {
     /// <summary>

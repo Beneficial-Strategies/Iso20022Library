@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Based on the criteria defined in the CreateStandingOrder message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.
 /// </summary>
 [IsoId("_ThMwvdb6Eeq_l4BJLVUF2Q")]
+[IsoMessage("camt.102.001.02", "CretStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.102.001.02")]
 public interface ICreateStandingOrderV02 : IOuterRecord
 {
     /// <summary>

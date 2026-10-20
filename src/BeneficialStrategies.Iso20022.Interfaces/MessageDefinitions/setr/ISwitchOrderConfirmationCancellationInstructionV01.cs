@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// It is also possible to instruct the cancellation of the confirmation message by quoting its message identification in PreviousReference, but this is not recommended.
 /// </summary>
 [IsoId("_64NK2NE7Ed-BzquC8wXy7w_1641853769")]
+[IsoMessage(
+    "setr.055.001.01",
+    "SwtchOrdrConfCxlInstrV01",
+    "urn:iso:std:iso:20022:tech:xsd:setr.055.001.01"
+)]
 public interface ISwitchOrderConfirmationCancellationInstructionV01 : IOuterRecord
 {
     /// <summary>

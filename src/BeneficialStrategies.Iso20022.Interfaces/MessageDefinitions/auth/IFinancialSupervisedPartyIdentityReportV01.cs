@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 ///
 /// </summary>
 [IsoId("_EUnq8PH0Eeaz_YGUGLjP6A")]
+[IsoMessage(
+    "auth.076.001.01",
+    "FinSprvsdPtyIdntyRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.076.001.01"
+)]
 public interface IFinancialSupervisedPartyIdentityReportV01 : IOuterRecord
 {
     /// <summary>

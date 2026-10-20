@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant secured money market transactions.
 /// </summary>
 [IsoId("_DufHwcEPEea7jLfvGi1PDw")]
+[IsoMessage(
+    "auth.012.001.02",
+    "MnyMktScrdMktSttstclRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.012.001.02"
+)]
 public interface IMoneyMarketSecuredMarketStatisticalReportV02 : IOuterRecord
 {
     /// <summary>

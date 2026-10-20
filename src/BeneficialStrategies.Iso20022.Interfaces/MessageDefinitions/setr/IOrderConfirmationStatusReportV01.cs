@@ -30,6 +30,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The individual order confirmation or confirmation amendment for which the status is given is identified with its order reference. The message identification of the message in which the individual order confirmation or confirmation amendment was conveyed may also be quoted in RelatedReference, but this is not recommended.
 /// </summary>
 [IsoId("_hzzSMNE7Ed-BzquC8wXy7w_-354500985")]
+[IsoMessage(
+    "setr.057.001.01",
+    "OrdrConfStsRptV01",
+    "urn:iso:std:iso:20022:tech:xsd:setr.057.001.01"
+)]
 public interface IOrderConfirmationStatusReportV01 : IOuterRecord
 {
     /// <summary>

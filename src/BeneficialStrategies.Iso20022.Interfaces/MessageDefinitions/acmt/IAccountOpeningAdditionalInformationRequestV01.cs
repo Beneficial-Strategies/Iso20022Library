@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// This message should only be sent if additional information is required as part of the account opening process.
 /// </summary>
 [IsoId("_s7Y_yNE9Ed-BzquC8wXy7w_1867153324")]
+[IsoMessage(
+    "acmt.009.001.01",
+    "AcctOpngAddtlInfReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.009.001.01"
+)]
 public interface IAccountOpeningAdditionalInformationRequestV01 : IOuterRecord
 {
     /// <summary>

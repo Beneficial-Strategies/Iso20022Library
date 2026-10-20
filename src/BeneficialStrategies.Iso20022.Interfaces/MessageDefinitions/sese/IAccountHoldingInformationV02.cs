@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The AccountHoldingInformation message is used to provide information about one or more ISA or portfolio products held in a client&apos;s account.
 /// </summary>
 [IsoId("_QJo8ofpcEeCPwaG9zjUPNQ")]
+[IsoMessage("sese.018.001.02", "AcctHldgInf", "urn:iso:std:iso:20022:tech:xsd:sese.018.001.02")]
 public interface IAccountHoldingInformationV02 : IOuterRecord
 {
     /// <summary>

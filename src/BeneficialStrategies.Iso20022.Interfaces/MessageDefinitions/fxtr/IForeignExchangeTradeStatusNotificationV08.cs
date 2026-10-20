@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_xgDn8UjqEe-KhcStGV4xTg")]
+[IsoMessage("fxtr.008.001.08", "FXTradStsNtfctn", "urn:iso:std:iso:20022:tech:xsd:fxtr.008.001.08")]
 public interface IForeignExchangeTradeStatusNotificationV08 : IOuterRecord
 {
     /// <summary>

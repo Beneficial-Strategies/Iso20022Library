@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingCountryCodeReport message provides the details of the two character country codes and is created by ESMA for distribution to national competent authorities.
 /// </summary>
 [IsoId("_4LK8MURNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.047.001.01",
+    "FinInstrmRptgCtryCdRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.047.001.01"
+)]
 public interface IFinancialInstrumentReportingCountryCodeReportV01 : IOuterRecord
 {
     /// <summary>

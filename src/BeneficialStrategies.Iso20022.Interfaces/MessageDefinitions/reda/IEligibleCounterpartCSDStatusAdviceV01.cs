@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_CZNtMbDEEe-g3p7goNrabg")]
+[IsoMessage(
+    "reda.044.001.01",
+    "ElgblCntrptCSDStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:reda.044.001.01"
+)]
 public interface IEligibleCounterpartCSDStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

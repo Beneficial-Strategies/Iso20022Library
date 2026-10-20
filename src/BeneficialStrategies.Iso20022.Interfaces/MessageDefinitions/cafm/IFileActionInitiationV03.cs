@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_AZwjQZB0Ee6TWIDarRgYow")]
+[IsoMessage("cafm.001.001.03", "FileActnInitn", "urn:iso:std:iso:20022:tech:xsd:cafm.001.001.03")]
 public interface IFileActionInitiationV03 : IOuterRecord
 {
     /// <summary>

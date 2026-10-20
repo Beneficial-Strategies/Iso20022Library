@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party.
 /// </summary>
 [IsoId("_oh7FMRXgEeOocOqSQt5Jbw")]
+[IsoMessage("sese.005.001.05", "TrfInInstr", "urn:iso:std:iso:20022:tech:xsd:sese.005.001.05")]
 public interface ITransferInInstructionV05 : IOuterRecord
 {
     /// <summary>

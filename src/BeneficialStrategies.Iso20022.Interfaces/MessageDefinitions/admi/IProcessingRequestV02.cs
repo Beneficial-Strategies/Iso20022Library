@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// The Processing Request message is sent by a participant to a central system to request the initiation of a system process supported by a central system.
 /// </summary>
 [IsoId("_1MsY4QR4Ee29PP19jELcvQ")]
+[IsoMessage("admi.017.001.02", "PrcgReq", "urn:iso:std:iso:20022:tech:xsd:admi.017.001.02")]
 public interface IProcessingRequestV02 : IOuterRecord
 {
     /// <summary>

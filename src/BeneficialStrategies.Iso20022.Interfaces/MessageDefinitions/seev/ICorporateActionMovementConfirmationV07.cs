@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// using the relevant elements in the business application header (BAH).
 /// </summary>
 [IsoId("_Rc5pZTm_EeWENZE2jGFgGw")]
+[IsoMessage(
+    "seev.036.001.07",
+    "CorpActnMvmntConf",
+    "urn:iso:std:iso:20022:tech:xsd:seev.036.001.07"
+)]
 public interface ICorporateActionMovementConfirmationV07 : IOuterRecord
 {
     /// <summary>

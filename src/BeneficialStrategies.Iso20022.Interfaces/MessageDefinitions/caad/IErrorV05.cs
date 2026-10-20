@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_-PSiYROHEfC1ZfCQz0xB3g")]
+[IsoMessage("caad.007.001.05", "Err", "urn:iso:std:iso:20022:tech:xsd:caad.007.001.05")]
 public interface IErrorV05 : IOuterRecord
 {
     /// <summary>

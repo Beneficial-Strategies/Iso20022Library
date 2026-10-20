@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// It is used to advise the drawee bank, or confirm to an enquiring bank, the details concerning the cheque(s) referred to in the message.
 /// </summary>
 [IsoId("_QqKNkbSJEeq3lpO-mRtrig")]
+[IsoMessage(
+    "camt.107.001.01",
+    "ChqPresntmntNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:camt.107.001.01"
+)]
 public interface IChequePresentmentNotificationV01 : IOuterRecord
 {
     /// <summary>

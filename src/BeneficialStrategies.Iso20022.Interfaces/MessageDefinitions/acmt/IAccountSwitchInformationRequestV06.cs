@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("20a60248-b1e9-4597-be26-f96ed1b9f64d")]
+[IsoMessage("acmt.027.001.06", "AcctSwtchInfReq", "urn:iso:std:iso:20022:tech:xsd:acmt.027.001.06")]
 public interface IAccountSwitchInformationRequestV06 : IOuterRecord
 {
     /// <summary>

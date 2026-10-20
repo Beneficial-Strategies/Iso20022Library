@@ -164,6 +164,10 @@ public static partial class Iso20022XmlSerializer
 
     private static (XNamespace Ns, string XmlTag, string DocElem) GetMessageConstants(Type t)
     {
+        // a record carries its constants; any other class takes them from the [IsoMessage] of its interface
+        if (t.GetField("DocumentNamespace", BindingFlags.Public | BindingFlags.Static) is null
+            && IsoMessageAttribute.Find(t) is { } message)
+            return (XNamespace.Get(message.DocumentNamespace), message.XmlTag, message.DocumentElementName);
         var ns = XNamespace.Get(GetConstant<string>(t, "DocumentNamespace"));
         var xmlTag = GetConstant<string>(t, "XmlTag");
         var docElem = GetConstant<string>(t, "DocumentElementName");

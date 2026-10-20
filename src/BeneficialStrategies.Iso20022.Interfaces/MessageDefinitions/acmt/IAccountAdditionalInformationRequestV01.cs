@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// This message should only be sent if additional information is required as part of the account maintenance process.
 /// </summary>
 [IsoId("_mso-iNE9Ed-BzquC8wXy7w_-37995631")]
+[IsoMessage("acmt.012.001.01", "AcctAddtlInfReq", "urn:iso:std:iso:20022:tech:xsd:acmt.012.001.01")]
 public interface IAccountAdditionalInformationRequestV01 : IOuterRecord
 {
     /// <summary>

@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 ///
 /// </summary>
 [IsoId("_CWdYcTttEeWiAsQFICzmOw")]
+[IsoMessage("pacs.010.001.02", "FIDrctDbt", "urn:iso:std:iso:20022:tech:xsd:pacs.010.001.02")]
 public interface IFinancialInstitutionDirectDebitV02 : IOuterRecord
 {
     /// <summary>

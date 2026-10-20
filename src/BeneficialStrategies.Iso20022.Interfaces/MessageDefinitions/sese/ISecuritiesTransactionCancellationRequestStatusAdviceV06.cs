@@ -23,6 +23,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// using the relevant elements in the Business Application Header.
 /// </summary>
 [IsoId("_M5NWkQyQEeuG8M5giQ2e0w")]
+[IsoMessage(
+    "sese.027.001.06",
+    "SctiesTxCxlReqStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:sese.027.001.06"
+)]
 public interface ISecuritiesTransactionCancellationRequestStatusAdviceV06 : IOuterRecord
 {
     /// <summary>

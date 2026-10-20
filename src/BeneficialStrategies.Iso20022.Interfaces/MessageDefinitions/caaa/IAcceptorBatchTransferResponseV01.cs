@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorBatchTransferResponse message is used by an acquirer to inform the card acceptor of the card payment transactions that could not be captured in the AcceptorBatchTransfer.
 /// </summary>
 [IsoId("_fHr69KMVEeCJ6YNENx4h-w_-1884462176")]
+[IsoMessage(
+    "caaa.012.001.01",
+    "AccptrBtchTrfRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.012.001.01"
+)]
 public interface IAcceptorBatchTransferResponseV01 : IOuterRecord
 {
     /// <summary>

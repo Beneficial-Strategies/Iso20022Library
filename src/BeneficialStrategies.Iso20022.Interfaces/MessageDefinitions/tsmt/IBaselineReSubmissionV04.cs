@@ -19,6 +19,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The BaselineReSubmission message can be sent by the counterparty of a transaction to the matching application in response to a BaselineMatchReport message indicating mis-matches. The objective of the BaselineReSubmission message sent in the outlined scenario is to correct a BaselineReSubmission message submitted earlier in order to achieve the establishment of a transaction in the matching application.
 /// </summary>
 [IsoId("_4PCl8dNTEeK-v49t1oWkNA")]
+[IsoMessage(
+    "tsmt.012.001.04",
+    "BaselnReSubmissn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.012.001.04"
+)]
 public interface IBaselineReSubmissionV04 : IOuterRecord
 {
     /// <summary>

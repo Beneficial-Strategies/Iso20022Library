@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message can also be used to pre-advise a global distribution authorisation request, in which case the value of the field pre-advice indicator must be set to yes.
 /// </summary>
 [IsoId("_TNwP1dEwEd-BzquC8wXy7w_690310315")]
+[IsoMessage(
+    "seev.017.001.01",
+    "AgtCAGblDstrbtnAuthstnReq",
+    "urn:iso:std:iso:20022:tech:xsd:seev.017.001.01"
+)]
 public interface IAgentCAGlobalDistributionAuthorisationRequestV01 : IOuterRecord
 {
     /// <summary>

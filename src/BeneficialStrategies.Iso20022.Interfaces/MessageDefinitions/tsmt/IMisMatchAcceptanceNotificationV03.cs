@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// In order to pass on information about the rejection of mis-matched data sets the matching application sends a MisMatchRejectionNotification message.
 /// </summary>
 [IsoId("_rLAcuNE8Ed-BzquC8wXy7w_2021244556")]
+[IsoMessage(
+    "tsmt.021.001.03",
+    "MisMtchAccptncNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.021.001.03"
+)]
 public interface IMisMatchAcceptanceNotificationV03 : IOuterRecord
 {
     /// <summary>

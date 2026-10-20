@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountRequestAcknowledgement message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation. It is sent after the request has been validated from an authentication and authorization point of view. The business content has not yet been validated at this stage.
 /// </summary>
 [IsoId("_gDPu8Q1TEeKGXqvMN6jpiw")]
+[IsoMessage("acmt.010.001.02", "AcctReqAck", "urn:iso:std:iso:20022:tech:xsd:acmt.010.001.02")]
 public interface IAccountRequestAcknowledgementV02 : IOuterRecord
 {
     /// <summary>

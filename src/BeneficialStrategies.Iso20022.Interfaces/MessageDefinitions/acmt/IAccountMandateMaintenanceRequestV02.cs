@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// It is not possible to update the account characteristics or organisation information with this message.
 /// </summary>
 [IsoId("_Yex38Q1TEeKGXqvMN6jpiw")]
+[IsoMessage(
+    "acmt.017.001.02",
+    "AcctMndtMntncReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.017.001.02"
+)]
 public interface IAccountMandateMaintenanceRequestV02 : IOuterRecord
 {
     /// <summary>

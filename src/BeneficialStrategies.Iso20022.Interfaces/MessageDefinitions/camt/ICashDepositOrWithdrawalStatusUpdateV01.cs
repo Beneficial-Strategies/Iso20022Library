@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Where reporting on the status of a cash withdrawal request, it is sent by a cash sender to a cash receiver.
 /// </remarks>
 [IsoId("_hb3y8FGkEfC_v5ez7RpMHw")]
+[IsoMessage(
+    "camt.115.001.01",
+    "CshDpstOrWdrwlStsUpd",
+    "urn:iso:std:iso:20022:tech:xsd:camt.115.001.01"
+)]
 public interface ICashDepositOrWithdrawalStatusUpdateV01 : IOuterRecord
 {
     /// <summary>

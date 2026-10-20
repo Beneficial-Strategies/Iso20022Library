@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIMessageRejection message is sent by one of the parties when it detects a technical or functional error in a previous received message.
 /// </summary>
 [IsoId("_IAhL0Q1UEeqjM-rxn3HuXQ")]
+[IsoMessage(
+    "casp.013.001.02",
+    "SaleToPOIMsgRjctn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.013.001.02"
+)]
 public interface ISaleToPOIMessageRejectionV02 : IOuterRecord
 {
     /// <summary>

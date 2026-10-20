@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CCPIncomeStatementAndCapitalAdequacyReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the financial performance and regulatory capital holdings of the central counterparty.
 /// </summary>
 [IsoId("_DzbYceUUEem3X-64-NKdqg")]
+[IsoMessage(
+    "auth.059.001.01",
+    "CCPIncmStmtAndCptlAdqcyRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.059.001.01"
+)]
 public interface ICCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
 {
     /// <summary>

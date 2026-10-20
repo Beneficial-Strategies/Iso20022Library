@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The ChargesPaymentRequest message is sent by a financial institution to another financial institution to request the payment of charges, interest and/or other expenses which are previously unknown to the receiver.
 /// </summary>
 [IsoId("_Q2jcwKdBEeqY6dwgI6s5vg")]
+[IsoMessage("camt.106.001.01", "ChrgsPmtReq", "urn:iso:std:iso:20022:tech:xsd:camt.106.001.01")]
 public interface IChargesPaymentRequestV01 : IOuterRecord
 {
     /// <summary>

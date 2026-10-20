@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// Extends the ATICA message set to address the requirement of the European Banking Authority (EBA) related to the Regulatory Technical Standard (RTS) on Strong Customer Authentication (SCA) imposed by the EU regulation.
 /// </summary>
 [IsoId("_g7hKgAMdEeujMs2LsB3mMw")]
+[IsoMessage(
+    "supl.035.001.01",
+    "EUPSD2SCADataSD1",
+    "urn:iso:std:iso:20022:tech:xsd:supl.035.001.01"
+)]
 public interface IEUPSD2SCADataSD1V01 : IOuterRecord
 {
     /// <summary>

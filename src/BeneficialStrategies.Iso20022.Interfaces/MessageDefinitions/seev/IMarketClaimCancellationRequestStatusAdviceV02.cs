@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_FG4DcVxPEe6fgZt44_IqFA")]
+[IsoMessage(
+    "seev.053.001.02",
+    "MktClmCxlReqStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.053.001.02"
+)]
 public interface IMarketClaimCancellationRequestStatusAdviceV02 : IOuterRecord
 {
     /// <summary>

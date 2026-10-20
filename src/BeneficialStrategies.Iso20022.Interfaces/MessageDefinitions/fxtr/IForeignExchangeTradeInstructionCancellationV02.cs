@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// The ForeignExchangeTradeInstructionCancellation message is sent from a participant to a central settlement system to advise of the cancellation of a previously sent notification. The &quot;Related Reference&quot; must be used to link it to the previous notification.
 /// </summary>
 [IsoId("_56FNoRnWEeKKXqHkeUjBbw")]
+[IsoMessage("fxtr.016.001.02", "FXTradInstrCxl", "urn:iso:std:iso:20022:tech:xsd:fxtr.016.001.02")]
 public interface IForeignExchangeTradeInstructionCancellationV02 : IOuterRecord
 {
     /// <summary>

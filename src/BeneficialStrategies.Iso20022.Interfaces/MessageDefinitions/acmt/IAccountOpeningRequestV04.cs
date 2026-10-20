@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountOpeningRequest message is sent from an organisation to a financial institution as part of the account opening process. It is the initial request message to open an account.
 /// </summary>
 [IsoId("_1ENlzdcAEeq_l4BJLVUF2Q")]
+[IsoMessage("acmt.007.001.04", "AcctOpngReq", "urn:iso:std:iso:20022:tech:xsd:acmt.007.001.04")]
 public interface IAccountOpeningRequestV04 : IOuterRecord
 {
     /// <summary>

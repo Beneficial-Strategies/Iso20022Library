@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The MandateInitiationRequest message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_r1UQkFkyEeGeoaLUQk__nA_-422128939")]
+[IsoMessage("pain.009.001.02", "MndtInitnReq", "urn:iso:std:iso:20022:tech:xsd:pain.009.001.02")]
 public interface IMandateInitiationRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_YZ-Mk4cPEe-m68RYMhvgvg")]
+[IsoMessage("secl.010.001.04", "SttlmOblgtnRpt", "urn:iso:std:iso:20022:tech:xsd:secl.010.001.04")]
 public interface ISettlementObligationReportV04 : IOuterRecord
 {
     /// <summary>

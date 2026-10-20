@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// If the InvestmentFundReportRequest message is used to request a fund processing passport then the request can specify the financial instrument for which the report is requested. Other appropriate parameters can also be included. It is also possible to indicate that the request is an open request, that is, there is no specific criteria for the report requested. For example, a request for a fund processing passport report that is specified as &quot;no criteria&quot; means that the request is a request for all fund processing passports.
 /// </summary>
 [IsoId("_Zsax2NEvEd-BzquC8wXy7w_-630681424")]
+[IsoMessage(
+    "reda.005.001.02",
+    "InvstmtFndRptReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.005.001.02"
+)]
 public interface IInvestmentFundReportRequestV02 : IOuterRecord
 {
     /// <summary>

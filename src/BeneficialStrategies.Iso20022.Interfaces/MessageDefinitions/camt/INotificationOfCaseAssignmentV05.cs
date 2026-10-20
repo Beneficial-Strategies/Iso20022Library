@@ -26,6 +26,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// When the assignee does not reassign the case to another party (that is responding with a NotificationOfCaseAssignment message with notification MINE - The case is processed by the assignee), the case assignment should contain the case assignment elements as received in the original query.
 /// </summary>
 [IsoId("_eX_Oh22PEei3KuUgpx7Xcw")]
+[IsoMessage(
+    "camt.030.001.05",
+    "NtfctnOfCaseAssgnmt",
+    "urn:iso:std:iso:20022:tech:xsd:camt.030.001.05"
+)]
 public interface INotificationOfCaseAssignmentV05 : IOuterRecord
 {
     /// <summary>

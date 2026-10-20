@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The RoleAndBaselineAcceptance message is sent in response to a message that is a direct request to join a transaction.
 /// </summary>
 [IsoId("_tSUHeNE8Ed-BzquC8wXy7w_1282098535")]
+[IsoMessage(
+    "tsmt.049.001.01",
+    "RoleAndBaselnAccptnc",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.049.001.01"
+)]
 public interface IRoleAndBaselineAcceptanceV01 : IOuterRecord
 {
     /// <summary>

@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// When the sender is the account servicer of an account owned by the receiver, for example, the account in AccountSubLevel1/AccountIdentification or AccountSubLevel2/AccountIdentification, the message is providing a statement of the receiver’s holdings with sender. This direction is commonly referred to as ‘upstream’, and the safekeeping account should identify the ultimate place of safekeeping (for example, an account in a transfer agent&apos;s register of shareholders).
 /// </summary>
 [IsoId("_LMa20VTQEeatgN-VQ0eFlQ")]
+[IsoMessage(
+    "semt.041.001.02",
+    "SctiesBalTrnsprncyRpt",
+    "urn:iso:std:iso:20022:tech:xsd:semt.041.001.02"
+)]
 public interface ISecuritiesBalanceTransparencyReportV02 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradeReportQuery message is sent by the supervisory authority system to the trade repositories, to query data based on the search criteria for the trade transaction as defined by the system user.
 /// </summary>
 [IsoId("_wdKwQxWsEeqvRcdYcNYAVw")]
+[IsoMessage(
+    "auth.029.001.01",
+    "DerivsTradRptQry",
+    "urn:iso:std:iso:20022:tech:xsd:auth.029.001.01"
+)]
 public interface IDerivativesTradeReportQueryV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The SecuritiesAccountQuery message sent by an instructing party to the executing party to request the details related to the securities account.
 /// </summary>
 [IsoId("_KAu-wZ2fEem_Be8NuxvF7Q")]
+[IsoMessage("reda.019.001.01", "SctiesAcctQry", "urn:iso:std:iso:20022:tech:xsd:reda.019.001.01")]
 public interface ISecuritiesAccountQueryV01 : IOuterRecord
 {
     /// <summary>

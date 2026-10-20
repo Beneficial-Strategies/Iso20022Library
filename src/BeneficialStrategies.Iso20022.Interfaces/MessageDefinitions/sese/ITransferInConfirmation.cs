@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// TheTransferInConfirmation message is used by an executing party to confirm to the instructing party receipt of a financial instrument, either from another account owned by the instructing party or from a third party.
 /// </summary>
 [IsoId("_JMkTONE6Ed-BzquC8wXy7w_-1545863539")]
+[IsoMessage("sese.007.001.01", "sese.007.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.007.001.01")]
 public interface ITransferInConfirmation : IOuterRecord
 {
     /// <summary>

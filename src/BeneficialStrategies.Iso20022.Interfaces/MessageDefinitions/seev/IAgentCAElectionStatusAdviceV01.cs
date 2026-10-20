@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// - Agent Corporation Action Election Amendment Request to provide the status of the amendment request, in which case, the building blocks Election Amendment Request Identification and the Election Amendment Request Status must be present.
 /// </summary>
 [IsoId("_TNct0NEwEd-BzquC8wXy7w_1059605864")]
+[IsoMessage(
+    "seev.015.001.01",
+    "AgtCAElctnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.015.001.01"
+)]
 public interface IAgentCAElectionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

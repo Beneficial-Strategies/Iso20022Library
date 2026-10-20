@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FinancialInstitutionDirectDebit message is exchanged between agents and can contain one or more financial institution direct debit instruction(s) for one or more creditor(s). The FinancialInstitutionDirectDebit message can be used in domestic and cross-border scenarios.
 /// </remarks>
 [IsoId("_R3LnHzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("pacs.010.001.06", "FIDrctDbt", "urn:iso:std:iso:20022:tech:xsd:pacs.010.001.06")]
 public interface IFinancialInstitutionDirectDebitV06 : IOuterRecord
 {
     /// <summary>

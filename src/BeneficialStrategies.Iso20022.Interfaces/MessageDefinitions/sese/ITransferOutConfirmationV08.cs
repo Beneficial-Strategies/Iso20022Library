@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The reference of the transfer confirmation is identified in TransferConfirmationReference. The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferOutInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference but this is not recommended.
 /// </summary>
 [IsoId("_pI1q0YZLEeemXK0UETsSiA")]
+[IsoMessage("sese.003.001.08", "TrfOutConf", "urn:iso:std:iso:20022:tech:xsd:sese.003.001.08")]
 public interface ITransferOutConfirmationV08 : IOuterRecord
 {
     /// <summary>

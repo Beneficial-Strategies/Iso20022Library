@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The Acknowledgement message can be sent to a party from which the matching application received a message to acknowledge the receipt of that message. The message is sent when the matching application does not send any other message in response to a received message.
 /// </summary>
 [IsoId("_hJ9OiNE8Ed-BzquC8wXy7w_-2019493432")]
+[IsoMessage("tsmt.001.001.03", "Ack", "urn:iso:std:iso:20022:tech:xsd:tsmt.001.001.03")]
 public interface IAcknowledgementV03 : IOuterRecord
 {
     /// <summary>

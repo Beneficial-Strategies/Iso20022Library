@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The AcquirerReversalResponse message is sent by an issuer or an agent to answer to an AcquirerReversalInitiation message.
 /// </summary>
 [IsoId("_Se9ukHu2EeS2Z_kGi7H1VQ")]
+[IsoMessage("cain.006.001.01", "AcqrrRvslRspn", "urn:iso:std:iso:20022:tech:xsd:cain.006.001.01")]
 public interface IAcquirerReversalResponse : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchTerminationSwitch message is sent by the new account servicer to the account switch servicer to signal that the account switch must be stopped. The AccountSwitchTerminationSwitch message is only used in exception after the new account servicer has received an AccountSwitchInformationResponse message.
 /// </summary>
 [IsoId("_8iy48hMMEeSTk5fcu7tr9w")]
+[IsoMessage(
+    "acmt.036.001.01",
+    "AcctSwtchTermntnSwtch",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.036.001.01"
+)]
 public interface IAccountSwitchTerminationSwitchV01 : IOuterRecord
 {
     /// <summary>

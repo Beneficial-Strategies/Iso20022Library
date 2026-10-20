@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// The SecuritiesBalanceTransparencyReportStatusAdvice is used to accept (Accepted), partially accept (Accepted With Exception) or reject (Rejected) a previously received SecuritiesBalanceTransparencyReport.
 /// </summary>
 [IsoId("_yMxXsbvVEeOgOuxYpBEzKg")]
+[IsoMessage(
+    "semt.042.001.01",
+    "SctiesBalTrnsprncyRptStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:semt.042.001.01"
+)]
 public interface ISecuritiesBalanceTransparencyReportStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

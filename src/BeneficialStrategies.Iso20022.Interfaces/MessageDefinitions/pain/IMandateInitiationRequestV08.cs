@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3P4fzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("pain.009.001.08", "MndtInitnReq", "urn:iso:std:iso:20022:tech:xsd:pain.009.001.08")]
 public interface IMandateInitiationRequestV08 : IOuterRecord
 {
     /// <summary>

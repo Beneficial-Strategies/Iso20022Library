@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The SpecialNotification message is sent to the parties to the transaction so that they can take appropriate action.
 /// </summary>
 [IsoId("_uldKWNE8Ed-BzquC8wXy7w_-3505275")]
+[IsoMessage("tsmt.048.001.01", "SpclNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.048.001.01")]
 public interface ISpecialNotificationV01 : IOuterRecord
 {
     /// <summary>

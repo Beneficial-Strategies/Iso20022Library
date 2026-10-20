@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account and when they are to be cancelled. This message is used during a partial switch of the account and may be sent multiple times to allow for the account parties to transfer different payment arrangements at different times during the switch.
 /// </summary>
 [IsoId("_R3AApjEZEe6kQ-WGAhcVPQ")]
+[IsoMessage(
+    "acmt.029.001.05",
+    "AcctSwtchCclExstgPmt",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.029.001.05"
+)]
 public interface IAccountSwitchCancelExistingPaymentV05 : IOuterRecord
 {
     /// <summary>

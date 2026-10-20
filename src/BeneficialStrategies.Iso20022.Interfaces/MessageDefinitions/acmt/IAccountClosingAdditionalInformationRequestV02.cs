@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountClosingAdditionalInformationRequest message is sent from a financial institution to an organisation as part of the account closing process. This message is sent in response to a closing request message from the organisation, if the business content is valid, but additional information is required.
 /// </summary>
 [IsoId("_QvJSwQ1TEeKGXqvMN6jpiw")]
+[IsoMessage(
+    "acmt.021.001.02",
+    "AcctClsgAddtlInfReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.021.001.02"
+)]
 public interface IAccountClosingAdditionalInformationRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// Note: the delivery details are sent through the Agent Corporate Action Information Advice.
 /// </summary>
 [IsoId("_TMj9DtEwEd-BzquC8wXy7w_707588589")]
+[IsoMessage(
+    "seev.016.001.01",
+    "AgtCADstrbtnBrkdwnAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.016.001.01"
+)]
 public interface IAgentCADistributionBreakdownAdviceV01 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The ProprietaryData element must contain a well formed XML document. This means XML special characters such as &apos;&lt;&apos; must be used in a way that is consistent with XML well-formedness criteria.|.
 /// </summary>
 [IsoId("_sW_aQlkyEeGeoaLUQk__nA_781357375")]
+[IsoMessage(
+    "camt.035.001.03",
+    "PrtryFrmtInvstgtn",
+    "urn:iso:std:iso:20022:tech:xsd:camt.035.001.03"
+)]
 public interface IProprietaryFormatInvestigationV03 : IOuterRecord
 {
     /// <summary>

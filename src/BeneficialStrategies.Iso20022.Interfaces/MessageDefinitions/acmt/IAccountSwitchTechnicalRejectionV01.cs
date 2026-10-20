@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountSwitchTechnicalRejection message is sent by the account switch servicer to the new account servicer when it has not been able to validate a previously sent message.
 /// </summary>
 [IsoId("_0UASkhMMEeSTk5fcu7tr9w")]
+[IsoMessage(
+    "acmt.037.001.01",
+    "AcctSwtchTechRjctn",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.037.001.01"
+)]
 public interface IAccountSwitchTechnicalRejectionV01 : IOuterRecord
 {
     /// <summary>

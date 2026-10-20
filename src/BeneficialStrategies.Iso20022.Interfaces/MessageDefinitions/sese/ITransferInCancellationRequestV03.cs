@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The message identification of the TransferInInstruction message in which the transfer was conveyed may also be quoted in PreviousReference. It is also possible to request the cancellation of a TransferInInstruction message by quoting its message identification in PreviousReference.
 /// </summary>
 [IsoId("_5Eu2kfpbEeCPwaG9zjUPNQ")]
+[IsoMessage("sese.006.001.03", "TrfInCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.006.001.03")]
 public interface ITransferInCancellationRequestV03 : IOuterRecord
 {
     /// <summary>

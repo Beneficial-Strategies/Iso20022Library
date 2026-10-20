@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingNonExtensionNotification message is sent by the party that issued the undertaking to the beneficiary, either directly or via one or more advising parties, to notify it of the non-extension of the referenced undertaking beyond the current expiry date.
 /// </summary>
 [IsoId("_9i_O8nltEeG7BsjMvd1mEw_-188871383")]
+[IsoMessage(
+    "tsrv.011.001.01",
+    "UdrtkgNonXtnsnNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsrv.011.001.01"
+)]
 public interface IUndertakingNonExtensionNotificationV01 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// Note a capture request could be rejected.
 /// </summary>
 [IsoId("_KgkR8oHHEeSY3ulMDfpmvA")]
+[IsoMessage(
+    "fxtr.032.001.01",
+    "FXTradCaptrRptReq",
+    "urn:iso:std:iso:20022:tech:xsd:fxtr.032.001.01"
+)]
 public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
 {
     /// <summary>

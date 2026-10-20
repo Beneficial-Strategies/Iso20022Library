@@ -33,6 +33,7 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// - Percentage of the total subscription amount: when the switch transaction is subscription driven, it is the part of the subscription amount that must be the result of the redemption of a specific financial instrument, for example, the redemption quantity in financial instrument ABC represents 50% of the subscription amount of the financial instrument ISIN LU4444444444.
 /// </summary>
 [IsoId("eb7c3ee9-79bb-4213-8f40-1253e88fae14")]
+[IsoMessage("setr.013.001.05", "SwtchOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.013.001.05")]
 public interface ISwitchOrderV05 : IOuterRecord
 {
     /// <summary>

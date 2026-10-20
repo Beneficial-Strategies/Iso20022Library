@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The TransferInstructionStatusReport message is used to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction, or in response to a RequestForTransferStatus message. It may also be used to report the status of an event related to the asset being transferred or provide additional information.
 /// </summary>
 [IsoId("6d8aabaf-c569-4b9f-a38e-8ad74f74ecba")]
+[IsoMessage("sese.011.001.10", "TrfInstrStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.011.001.10")]
 public interface ITransferInstructionStatusReportV10 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The FundConfirmedCashForecastReport message is used to provide definitive cash movements, that is it is sent after the cut-off time and/or the price valuation of the fund.
 /// </summary>
 [IsoId("_Z4N0WNE-Ed-BzquC8wXy7w_-289598746")]
+[IsoMessage("camt.041.001.02", "camt.041.001.02", "urn:iso:std:iso:20022:tech:xsd:camt.041.001.02")]
 public interface IFundConfirmedCashForecastReportV02 : IOuterRecord
 {
     /// <summary>

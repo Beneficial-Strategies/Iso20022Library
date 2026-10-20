@@ -173,6 +173,14 @@ def has_interface(r):
     return (OUT / r.path.relative_to(COMMON).parent / (iface_name(r.name) + ".cs")).exists()
 
 
+def message_attribute(r):
+    """[IsoMessage(...)]: the constants of the message record, so the interface alone says how to read and write it."""
+    text = r.path.read_text()
+    c = {k: re.search(rf'public const string {k} = "([^"]+)";', text).group(1) for k in ("IsoIdentifier", "XmlTag", "DocumentNamespace", "DocumentElementName")}
+    extra = "" if c["DocumentElementName"] == "Document" else f', DocumentElementName = "{c["DocumentElementName"]}"'
+    return f'[IsoMessage("{c["IsoIdentifier"]}", "{c["XmlTag"]}", "{c["DocumentNamespace"]}"{extra})]'
+
+
 def write_interface(r, base_list, comps, choices, out_root):
     rel = r.path.relative_to(COMMON)
     name = iface_name(r.name)
@@ -182,6 +190,8 @@ def write_interface(r, base_list, comps, choices, out_root):
              f"namespace {r.ns};", ""]
     # DisplayName is not valid on an interface; a variant's IsoXmlTag is how a reader finds its wrapper element
     lines += r.doc + [a for a in keep(r.attrs) if a.startswith(("[IsoId(", "[IsoXmlTag("))]
+    if base_list == ["IOuterRecord"]:
+        lines.append(message_attribute(r))
     lines.append(f"public interface {name} : {', '.join(base_list)}")
     lines.append("{")
     body = []

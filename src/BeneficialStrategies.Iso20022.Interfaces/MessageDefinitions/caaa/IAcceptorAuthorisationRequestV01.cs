@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorAuthorisationRequest message may embed the information required for transferring to the acquirer the data needed to perform the financial settlement of the transaction (capture). An intermediary agent may act on behalf of the card acceptor or of the acquirer in providing additional functionality such as: switching to different acquirers, loyalty processing or management of the acceptor system.
 /// </summary>
 [IsoId("_ghrzxaMVEeCJ6YNENx4h-w_1039526828")]
+[IsoMessage(
+    "caaa.001.001.01",
+    "AccptrAuthstnReq",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.001.001.01"
+)]
 public interface IAcceptorAuthorisationRequestV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// The ReconciliationResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a ReconciliationInitiation message.
 /// </summary>
 [IsoId("_7OfdhVUHEeetiruPyDPo0Q")]
+[IsoMessage("caad.006.001.02", "RcncltnRspn", "urn:iso:std:iso:20022:tech:xsd:caad.006.001.02")]
 public interface IReconciliationResponseV02 : IOuterRecord
 {
     /// <summary>

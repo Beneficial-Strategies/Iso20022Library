@@ -24,6 +24,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Initiator: executing/servicing party.
 /// </summary>
 [IsoId("_jTumxx62Eeu31YsWNiv_cw")]
+[IsoMessage(
+    "reda.030.001.01",
+    "SctyDeltnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:reda.030.001.01"
+)]
 public interface ISecurityDeletionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

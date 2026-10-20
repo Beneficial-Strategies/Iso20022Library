@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// - or partially accept the recall of collateral.
 /// </summary>
 [IsoId("_M-jCEVnMEeSPgY23yCMQSQ")]
+[IsoMessage("colr.004.001.03", "MrgnCallRspn", "urn:iso:std:iso:20022:tech:xsd:colr.004.001.03")]
 public interface IMarginCallResponseV03 : IOuterRecord
 {
     /// <summary>

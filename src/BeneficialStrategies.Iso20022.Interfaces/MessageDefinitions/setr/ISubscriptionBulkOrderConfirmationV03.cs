@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// If the executing party needs to confirm a SubscriptionOrder instruction, then the SubscriptionOrderConfirmation must be used.
 /// </summary>
 [IsoId("_zVj4wNE7Ed-BzquC8wXy7w_616882747")]
+[IsoMessage(
+    "setr.009.001.03",
+    "SbcptBlkOrdrConfV03",
+    "urn:iso:std:iso:20022:tech:xsd:setr.009.001.03"
+)]
 public interface ISubscriptionBulkOrderConfirmationV03 : IOuterRecord
 {
     /// <summary>

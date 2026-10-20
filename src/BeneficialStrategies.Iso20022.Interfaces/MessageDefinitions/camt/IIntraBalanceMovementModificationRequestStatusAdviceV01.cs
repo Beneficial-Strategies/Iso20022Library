@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The IntraBalanceMovementModificationRequestStatusAdvice message is sent from a settlement infrastructure to an account owner/requestor to advise the status of an intra-balance movement modification request previously sent by the account owner/requestor.||Usage: |The message may be used to: |- re-send a message previously sent (the sub-function of the message is &quot;Duplicate&quot;)|- provide a third party with a copy of a message for information (the sub-function of the message is &quot;Copy&quot;)|- re-send to a third party a copy of a message for information (the sub-function of the message is &quot;CopyDuplicate&quot;).
 /// </summary>
 [IsoId("_DLtK8zncEem7JZMuWtwtsg")]
+[IsoMessage(
+    "camt.073.001.01",
+    "IntraBalMvmntModReqStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:camt.073.001.01"
+)]
 public interface IIntraBalanceMovementModificationRequestStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

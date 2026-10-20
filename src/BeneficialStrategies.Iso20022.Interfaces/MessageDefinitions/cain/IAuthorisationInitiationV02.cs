@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 ///
 /// </summary>
 [IsoId("_SBa-kFKeEeeFcfYfFkVztg")]
+[IsoMessage("cain.001.001.02", "AuthstnInitn", "urn:iso:std:iso:20022:tech:xsd:cain.001.001.02")]
 public interface IAuthorisationInitiationV02 : IOuterRecord
 {
     /// <summary>

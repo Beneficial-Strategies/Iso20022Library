@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The DerivativesTradePositionSetReport message is sent by the trade repositories to the supervisory authority system, to report aggregated exposures between a pair of counterparties that comprise positions sets, collateral position sets, currency positions sets and currency collateral position sets.
 /// </summary>
 [IsoId("_CClucQ1MEeqV4s5SpzR1dQ")]
+[IsoMessage(
+    "auth.090.001.01",
+    "DerivsTradPosSetRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.090.001.01"
+)]
 public interface IDerivativesTradePositionSetReportV01 : IOuterRecord
 {
     /// <summary>

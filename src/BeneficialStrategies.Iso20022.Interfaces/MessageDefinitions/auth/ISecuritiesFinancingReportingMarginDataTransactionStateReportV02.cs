@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritiesFinancingReportingMarginDataTransactionStateReport message is sent by the trade repository (TR) to the competent authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the margins exchanged in relation to the CCP-cleared securities financing transactions.
 /// </summary>
 [IsoId("_WA-jUcKuEeuzU9S_IANlog")]
+[IsoMessage(
+    "auth.085.001.02",
+    "SctiesFincgRptgMrgnDataTxStatRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.085.001.02"
+)]
 public interface ISecuritiesFinancingReportingMarginDataTransactionStateReportV02 : IOuterRecord
 {
     /// <summary>

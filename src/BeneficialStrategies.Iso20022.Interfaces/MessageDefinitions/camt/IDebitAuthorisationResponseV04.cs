@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Debit Authorisation Response message must be used exclusively between the account owner and the account servicing institution. It must not be used in place of a Resolution Of Investigation message between subsequent agents.
 /// </summary>
 [IsoId("_nNCymaqDEeeMmtkfa8-zPg")]
+[IsoMessage("camt.036.001.04", "DbtAuthstnRspn", "urn:iso:std:iso:20022:tech:xsd:camt.036.001.04")]
 public interface IDebitAuthorisationResponseV04 : IOuterRecord
 {
     /// <summary>

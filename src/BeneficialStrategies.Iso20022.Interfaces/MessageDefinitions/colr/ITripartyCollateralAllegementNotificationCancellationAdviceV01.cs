@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The previously sent message is a TripartyCollateralAllegementNotification
 /// </summary>
 [IsoId("_rvMtQSs7EeySlt9bF77XfA")]
+[IsoMessage(
+    "colr.024.001.01",
+    "TrptyCollAllgmtNtfctnCxlAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:colr.024.001.01"
+)]
 public interface ITripartyCollateralAllegementNotificationCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>

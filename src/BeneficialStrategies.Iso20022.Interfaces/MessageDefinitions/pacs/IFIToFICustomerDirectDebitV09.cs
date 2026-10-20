@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_jMYzIdcBEeq_l4BJLVUF2Q")]
+[IsoMessage(
+    "pacs.003.001.09",
+    "FIToFICstmrDrctDbt",
+    "urn:iso:std:iso:20022:tech:xsd:pacs.003.001.09"
+)]
 public interface IFIToFICustomerDirectDebitV09 : IOuterRecord
 {
     /// <summary>

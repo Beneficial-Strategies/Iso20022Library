@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The RequestToPayCreditorEnrolmentStatusReport message is sent from the RTP (Request To Pay) directory provider to the creditor RTP provider and optionally from the creditor RTP provider to the creditor or any of the forwarding agent to provide the status of the initial creation, amendment or cancellation request.
 /// </summary>
 [IsoId("_rNNBr-HzEeqbls7Gk4-ckA")]
+[IsoMessage(
+    "reda.069.001.01",
+    "ReqToPayCdtrEnrlmntStsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:reda.069.001.01"
+)]
 public interface IRequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingReferenceDataDeltaReport message is sent by the trading venues to the national competent authority to report on changes that have occurred in the base data between reference data file generation.
 /// </summary>
 [IsoId("_4LUGKURNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.036.001.01",
+    "FinInstrmRptgRefDataDltaRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.036.001.01"
+)]
 public interface IFinancialInstrumentReportingReferenceDataDeltaReportV01 : IOuterRecord
 {
     /// <summary>

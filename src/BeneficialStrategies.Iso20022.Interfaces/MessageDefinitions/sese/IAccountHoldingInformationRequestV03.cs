@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The AccountHoldingInformationRequest message is used to request information about one or more ISA or portfolio products held in a client&apos;s account for which it intends to instruct a transfer at a later time.
 /// </summary>
 [IsoId("__cvtERXeEeOocOqSQt5Jbw")]
+[IsoMessage("sese.019.001.03", "AcctHldgInfReq", "urn:iso:std:iso:20022:tech:xsd:sese.019.001.03")]
 public interface IAccountHoldingInformationRequestV03 : IOuterRecord
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The IdentificationModificationAdvice includes the correct party and/or account identification information, the IdentificationModificationAdvice or the included information may be forwarded to the initiating party of the transaction messages.
 /// </summary>
 [IsoId("_dgmtDgyYEeukGOovyT2RcQ")]
+[IsoMessage("acmt.022.001.03", "IdModAdvc", "urn:iso:std:iso:20022:tech:xsd:acmt.022.001.03")]
 public interface IIdentificationModificationAdviceV03 : IOuterRecord
 {
     /// <summary>

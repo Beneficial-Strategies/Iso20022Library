@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCancellationAdvice message is sent by the card acceptor to an acquirer when the acquirer did not receive a correct response to the AcceptorCompletionAdvice message.
 /// </summary>
 [IsoId("_dGVuRaMVEeCJ6YNENx4h-w_-1804997012")]
+[IsoMessage("caaa.007.001.01", "AccptrCxlAdvc", "urn:iso:std:iso:20022:tech:xsd:caaa.007.001.01")]
 public interface IAcceptorCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>

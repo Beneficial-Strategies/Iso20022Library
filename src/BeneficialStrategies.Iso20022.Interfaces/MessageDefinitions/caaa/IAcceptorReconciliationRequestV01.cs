@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorReconciliationRequest message is also used to close a reconciliation period.
 /// </summary>
 [IsoId("_PNo5FaMVEeCJ6YNENx4h-w_-594784238")]
+[IsoMessage(
+    "caaa.009.001.01",
+    "AccptrRcncltnReq",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.009.001.01"
+)]
 public interface IAcceptorReconciliationRequestV01 : IOuterRecord
 {
     /// <summary>

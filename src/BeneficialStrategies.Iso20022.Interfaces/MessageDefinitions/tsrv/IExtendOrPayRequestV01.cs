@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The ExtendOrPayRequest message is sent by the party that issued the undertaking to the party that requested issuance of the undertaking (applicant or obligor), to request the applicant&apos;s response to a beneficiary request to extend or pay.
 /// </summary>
 [IsoId("_9hNGQnltEeG7BsjMvd1mEw_-1297539311")]
+[IsoMessage("tsrv.014.001.01", "XtndOrPayReq", "urn:iso:std:iso:20022:tech:xsd:tsrv.014.001.01")]
 public interface IExtendOrPayRequestV01 : IOuterRecord
 {
     /// <summary>

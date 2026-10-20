@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The CollateralSubstitutionRequest message can be sent by either the collateral giver or collateral taker in order to substitute collateral that is already held by the other party.
 /// </summary>
 [IsoId("_w4W-AVnMEeSPgY23yCMQSQ")]
+[IsoMessage("colr.010.001.03", "CollSbstitnReq", "urn:iso:std:iso:20022:tech:xsd:colr.010.001.03")]
 public interface ICollateralSubstitutionRequestV03 : IOuterRecord
 {
     /// <summary>

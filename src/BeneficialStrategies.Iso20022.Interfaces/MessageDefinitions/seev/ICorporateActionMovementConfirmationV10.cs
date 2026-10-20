@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).
 /// </summary>
 [IsoId("_BBQdR7T-EeiTob_PrFFUxA")]
+[IsoMessage(
+    "seev.036.001.10",
+    "CorpActnMvmntConf",
+    "urn:iso:std:iso:20022:tech:xsd:seev.036.001.10"
+)]
 public interface ICorporateActionMovementConfirmationV10 : IOuterRecord
 {
     /// <summary>

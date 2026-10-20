@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The SecuritiesAccountDeletionRequest message is sent by an instructing party to the executing party to request for the deletion of a securities account from the securities account reference data defined in the system of the executing party.||Usage: |It aims at instructing the deletion of an existing securities account providing securities account identification.|The result of the deletion is provided through a SecuritiesAccountStatusAdvice message.
 /// </summary>
 [IsoId("_KAu-m52fEem_Be8NuxvF7Q")]
+[IsoMessage(
+    "reda.032.001.01",
+    "SctiesAcctDeltnReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.032.001.01"
+)]
 public interface ISecuritiesAccountDeletionRequestV01 : IOuterRecord
 {
     /// <summary>

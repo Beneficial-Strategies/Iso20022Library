@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCANOEligibleBalanceSD1 message extends ISO corporate action notification (Eligible Balance market practice) message with DTCC corporate action eligible balance elements not covered in the standard message.
 /// </summary>
 [IsoId("_x6QSBQB6EeqouY-yI_q3qQ")]
+[IsoMessage(
+    "supl.007.001.09",
+    "DTCCCANOElgblBalSD1",
+    "urn:iso:std:iso:20022:tech:xsd:supl.007.001.09"
+)]
 public interface IDTCCCANOEligibleBalanceSD1V09 : IOuterRecord
 {
     /// <summary>

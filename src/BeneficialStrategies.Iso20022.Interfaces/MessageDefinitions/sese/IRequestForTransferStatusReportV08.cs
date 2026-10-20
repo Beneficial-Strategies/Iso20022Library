@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// - information relevant to one or more transfer instructions.
 /// </summary>
 [IsoId("_Ix6uEdvdEeqxGfKJubfhIw")]
+[IsoMessage("sese.009.001.08", "ReqForTrfStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.009.001.08")]
 public interface IRequestForTransferStatusReportV08 : IOuterRecord
 {
     /// <summary>

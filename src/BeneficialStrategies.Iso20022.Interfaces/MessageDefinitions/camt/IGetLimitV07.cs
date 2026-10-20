@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The GetLimit message is used to request information on the details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator.
 /// </summary>
 [IsoId("_jwlbhxbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.009.001.07", "GetLmt", "urn:iso:std:iso:20022:tech:xsd:camt.009.001.07")]
 public interface IGetLimitV07 : IOuterRecord
 {
     /// <summary>

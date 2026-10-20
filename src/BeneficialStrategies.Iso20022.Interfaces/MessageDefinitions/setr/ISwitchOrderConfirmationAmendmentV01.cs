@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference. The message identification of the SwitchOrderConfirmation message in which the original switch order confirmation was conveyed may also be quoted in PreviousReference.
 /// </summary>
 [IsoId("_6dPGENE7Ed-BzquC8wXy7w_1688953221")]
+[IsoMessage(
+    "setr.056.001.01",
+    "SwtchOrdrConfAmdmntV01",
+    "urn:iso:std:iso:20022:tech:xsd:setr.056.001.01"
+)]
 public interface ISwitchOrderConfirmationAmendmentV01 : IOuterRecord
 {
     /// <summary>

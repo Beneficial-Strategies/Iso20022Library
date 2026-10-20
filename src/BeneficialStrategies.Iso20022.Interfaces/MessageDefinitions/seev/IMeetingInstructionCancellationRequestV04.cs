@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// This message must be answered by a MeetingInstructionStatus message. Some instructions in the previously sent MeetingInstruction message may have already been executed and cannot be cancelled. This information should appear clearly in the status message.
 /// </summary>
 [IsoId("_TniBy9EwEd-BzquC8wXy7w_-914512760")]
+[IsoMessage("seev.005.001.04", "MtgInstrCxlReq", "urn:iso:std:iso:20022:tech:xsd:seev.005.001.04")]
 public interface IMeetingInstructionCancellationRequestV04 : IOuterRecord
 {
     /// <summary>

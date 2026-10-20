@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The SecuritiesFinancingReportingTransactionStateReport is sent by the trade repository (TR) to the other trade repository (TR) or the authority or made available to the  report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the transaction.
 /// </summary>
 [IsoId("_2zvMKQuAEeqVvtu9Ny8FDA")]
+[IsoMessage(
+    "auth.079.001.01",
+    "SctiesFincgRptgTxStatRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.079.001.01"
+)]
 public interface ISecuritiesFinancingReportingTransactionStateReportV01 : IOuterRecord
 {
     /// <summary>

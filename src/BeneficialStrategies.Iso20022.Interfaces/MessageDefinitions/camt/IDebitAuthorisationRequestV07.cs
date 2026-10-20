@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The DebitAuthorisationRequest must be used exclusively between the account servicing institution and the account owner. It must not be used in place of a RequestToModifyPayment or CustomerPaymentCancellationRequest or FIToFIPaymentCancellationRequest message between subsequent agents.
 /// </summary>
 [IsoId("_eYI_KW2PEei3KuUgpx7Xcw")]
+[IsoMessage("camt.037.001.07", "DbtAuthstnReq", "urn:iso:std:iso:20022:tech:xsd:camt.037.001.07")]
 public interface IDebitAuthorisationRequestV07 : IOuterRecord
 {
     /// <summary>

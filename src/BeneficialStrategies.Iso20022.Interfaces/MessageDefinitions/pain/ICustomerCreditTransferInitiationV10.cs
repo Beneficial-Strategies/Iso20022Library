@@ -24,6 +24,11 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CustomerCreditTransferInitiation message must not be used by the debtor agent to execute the credit transfer instruction(s). The FIToFICustomerCreditTransfer message must be used instead.
 /// </summary>
 [IsoId("_LwD3L8P_Eemsic1bQcEtLA")]
+[IsoMessage(
+    "pain.001.001.10",
+    "CstmrCdtTrfInitn",
+    "urn:iso:std:iso:20022:tech:xsd:pain.001.001.10"
+)]
 public interface ICustomerCreditTransferInitiationV10 : IOuterRecord
 {
     /// <summary>

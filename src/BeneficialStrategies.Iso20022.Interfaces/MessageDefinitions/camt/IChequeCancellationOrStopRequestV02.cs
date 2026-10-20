@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3E5JTEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("camt.108.001.02", "ChqCxlOrStopReq", "urn:iso:std:iso:20022:tech:xsd:camt.108.001.02")]
 public interface IChequeCancellationOrStopRequestV02 : IOuterRecord
 {
     /// <summary>

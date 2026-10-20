@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The Duplicate Data element must contain a well formed XML document. This means XML special characters such as &apos;&lt;&apos; must be used in a way that is consistent with XML well-formedness criteria.|.
 /// </summary>
 [IsoId("_nNMjUaqDEeeMmtkfa8-zPg")]
+[IsoMessage("camt.034.001.05", "Dplct", "urn:iso:std:iso:20022:tech:xsd:camt.034.001.05")]
 public interface IDuplicateV05 : IOuterRecord
 {
     /// <summary>

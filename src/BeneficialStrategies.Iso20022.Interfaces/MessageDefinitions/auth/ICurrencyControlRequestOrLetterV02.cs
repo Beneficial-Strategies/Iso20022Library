@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The CurrencyControlRequestOrLetter message is sent by the reporting party (respectively the registration agent) to the registration agent (respectively the reporting party) to send a currency control related letter or to request for supporting documents.
 /// </summary>
 [IsoId("_bf9R-22PEei3KuUgpx7Xcw")]
+[IsoMessage(
+    "auth.026.001.02",
+    "CcyCtrlReqOrLttr",
+    "urn:iso:std:iso:20022:tech:xsd:auth.026.001.02"
+)]
 public interface ICurrencyControlRequestOrLetterV02 : IOuterRecord
 {
     /// <summary>

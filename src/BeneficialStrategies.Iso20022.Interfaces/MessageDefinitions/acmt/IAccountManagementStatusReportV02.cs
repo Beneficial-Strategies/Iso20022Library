@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The account owner may report that the status of the instruction is either rejected, accepted, that the instruction is being processed or that the instruction has been forwarded to the next intermediary party for further processing.
 /// </summary>
 [IsoId("_qp9IqNE9Ed-BzquC8wXy7w_6558662")]
+[IsoMessage(
+    "acmt.006.001.02",
+    "AcctMgmtStsRptV02",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.006.001.02"
+)]
 public interface IAccountManagementStatusReportV02 : IOuterRecord
 {
     /// <summary>

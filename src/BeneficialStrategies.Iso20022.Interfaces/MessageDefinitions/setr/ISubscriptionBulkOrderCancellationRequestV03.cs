@@ -29,6 +29,11 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// The rejection or acceptance of an SubscriptionBulkOrderCancellationRequest is made using an OrderCancellationStatusReport message.
 /// </summary>
 [IsoId("_xqHqq9E7Ed-BzquC8wXy7w_1328685920")]
+[IsoMessage(
+    "setr.008.001.03",
+    "SbcptBlkOrdrCxlReqV03",
+    "urn:iso:std:iso:20022:tech:xsd:setr.008.001.03"
+)]
 public interface ISubscriptionBulkOrderCancellationRequestV03 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The ForwardIntentToPayNotification message is a copy of the IntentToPayNotification message received by the matching application and forwarded to the other primary bank for information. No response is expected.
 /// </summary>
 [IsoId("_hEp5QRVaEeOCqpkCrPgk4g")]
+[IsoMessage(
+    "tsmt.045.001.02",
+    "FwdInttToPayNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.045.001.02"
+)]
 public interface IForwardIntentToPayNotificationV02 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The RequestToPayDebtorActivationAmendmentRequest message is sent by the debtor RTP (Request To Pay) provider to the creditor RTP provider and optionally from the debtor to its RTP provider and from the creditor RTP provider to the creditor to request for the amendment of the debtor activation of the RTP service with that specific creditor.
 /// </summary>
 [IsoId("_rNNBueHzEeqbls7Gk4-ckA")]
+[IsoMessage(
+    "reda.071.001.01",
+    "ReqToPayDbtrActvtnAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:reda.071.001.01"
+)]
 public interface IRequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>

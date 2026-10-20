@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The message is unsolicited, that is, it is not sent in response to another message.
 /// </summary>
 [IsoId("_qS03gtE8Ed-BzquC8wXy7w_-674719643")]
+[IsoMessage("tsmt.044.001.01", "InttToPayNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.044.001.01")]
 public interface IIntentToPayNotificationV01 : IOuterRecord
 {
     /// <summary>

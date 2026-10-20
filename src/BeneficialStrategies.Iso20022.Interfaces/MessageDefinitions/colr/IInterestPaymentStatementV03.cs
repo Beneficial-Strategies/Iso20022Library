@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// The InterestPaymentStatement message is used for reporting the interest per period on collateral held.
 /// </summary>
 [IsoId("_7gWa8VnNEeSPgY23yCMQSQ")]
+[IsoMessage("colr.015.001.03", "IntrstPmtStmt", "urn:iso:std:iso:20022:tech:xsd:colr.015.001.03")]
 public interface IInterestPaymentStatementV03 : IOuterRecord
 {
     /// <summary>

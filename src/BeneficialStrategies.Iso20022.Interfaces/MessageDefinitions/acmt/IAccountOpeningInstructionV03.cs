@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// Execution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.
 /// </summary>
 [IsoId("_ANGzURGyEeKVqeHljBM1MQ")]
+[IsoMessage("acmt.001.001.03", "AcctOpngInstr", "urn:iso:std:iso:20022:tech:xsd:acmt.001.001.03")]
 public interface IAccountOpeningInstructionV03 : IOuterRecord
 {
     /// <summary>

@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.trck;
 /// TrackerInformingParty2Rule: If GroupHeader/TrackerInformingParty is present, then TrackerStatusAndTransaction/TrackerInformingParty is not allowed.
 /// </remarks>
 [IsoId("_9WJnQUN7Ee-QZYT2pcGFZw")]
+[IsoMessage("trck.001.001.04", "PmtStsTrckrUpd", "urn:iso:std:iso:20022:tech:xsd:trck.001.001.04")]
 public interface IPaymentStatusTrackerUpdateV04 : IOuterRecord
 {
     /// <summary>

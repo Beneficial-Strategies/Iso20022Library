@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// - validate the version of the configuration parameters.
 /// </summary>
 [IsoId("_VxGmFaMVEeCJ6YNENx4h-w_-1426270091")]
+[IsoMessage("caaa.013.001.01", "AccptrDgnstcReq", "urn:iso:std:iso:20022:tech:xsd:caaa.013.001.01")]
 public interface IAcceptorDiagnosticRequestV01 : IOuterRecord
 {
     /// <summary>

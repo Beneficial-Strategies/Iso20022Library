@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// The ATMPINManagementRequest message is sent by an ATM to an ATM manager to request an operation on the cardholder PIN.
 /// </summary>
 [IsoId("_YLWGQa4aEeW_TaP-ygI0SQ")]
+[IsoMessage("catp.010.001.02", "ATMPINMgmtReq", "urn:iso:std:iso:20022:tech:xsd:catp.010.001.02")]
 public interface IATMPINManagementRequestV02 : IOuterRecord
 {
     /// <summary>

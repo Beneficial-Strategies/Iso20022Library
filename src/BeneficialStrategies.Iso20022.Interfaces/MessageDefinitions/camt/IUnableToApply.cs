@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - Debit Authorisation Request message, sent to the case creator/case assigner, if the payment instruction has reached an incorrect creditor.
 /// </summary>
 [IsoId("_gEdeuNE_Ed-BzquC8wXy7w_-1070068379")]
+[IsoMessage("camt.026.001.01", "camt.026.001.01", "urn:iso:std:iso:20022:tech:xsd:camt.026.001.01")]
 public interface IUnableToApply : IOuterRecord
 {
     /// <summary>

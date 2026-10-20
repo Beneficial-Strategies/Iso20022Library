@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// This message is used to acknowledge the InvoiceTaxReport message.
 /// </summary>
 [IsoId("_HjF1skshEeWvyKllQkSXyA")]
+[IsoMessage(
+    "auth.038.001.01",
+    "InvcTaxRptStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:auth.038.001.01"
+)]
 public interface IInvoiceTaxReportStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

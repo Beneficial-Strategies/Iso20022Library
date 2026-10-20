@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The TransferOutInstruction message is used by an instructing party to instruct the executing party to withdraw a financial instrument from one account and deliver it to either another account or to a third party.
 /// </summary>
 [IsoId("_K2NxmNE6Ed-BzquC8wXy7w_-47353492")]
+[IsoMessage("sese.001.001.01", "sese.001.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.001.001.01")]
 public interface ITransferOutInstruction : IOuterRecord
 {
     /// <summary>

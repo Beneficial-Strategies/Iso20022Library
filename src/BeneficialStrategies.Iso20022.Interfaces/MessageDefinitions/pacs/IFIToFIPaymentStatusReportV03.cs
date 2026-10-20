@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_elwU0dEuEd-BzquC8wXy7w_-718126476")]
+[IsoMessage("pacs.002.001.03", "FIToFIPmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:pacs.002.001.03")]
 public interface IFIToFIPaymentStatusReportV03 : IOuterRecord
 {
     /// <summary>

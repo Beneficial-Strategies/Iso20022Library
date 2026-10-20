@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// This message should only be sent after the request has been validated from an authentication and authorization point of view.
 /// </summary>
 [IsoId("_wMT98tE9Ed-BzquC8wXy7w_-1760678511")]
+[IsoMessage("acmt.010.001.01", "AcctReqAck", "urn:iso:std:iso:20022:tech:xsd:acmt.010.001.01")]
 public interface IAccountRequestAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

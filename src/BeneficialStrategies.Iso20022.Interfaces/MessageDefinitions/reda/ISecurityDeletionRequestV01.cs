@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Initiator: instructing party.
 /// </summary>
 [IsoId("_jTumsR62Eeu31YsWNiv_cw")]
+[IsoMessage("reda.013.001.01", "SctyDeltnReq", "urn:iso:std:iso:20022:tech:xsd:reda.013.001.01")]
 public interface ISecurityDeletionRequestV01 : IOuterRecord
 {
     /// <summary>

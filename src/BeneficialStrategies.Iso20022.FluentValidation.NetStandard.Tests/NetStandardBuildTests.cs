@@ -78,6 +78,31 @@ public class NetStandardBuildTests
         public Max35Text Identification { get; init; }
     }
 
+    [IsoMessage("tiny.002.001.01", "Tiny", "urn:test:tiny2")]
+    public interface ITinyAttributed : IOuterRecord
+    {
+        [IsoXmlTag("Id")]
+        Max35Text Identification { get; }
+    }
+
+    /// <summary>No constants at all: how to read and write it comes from the interface.</summary>
+    public sealed record TinyAttributed : ITinyAttributed
+    {
+        [IsoXmlTag("Id")]
+        public Max35Text Identification { get; init; }
+    }
+
+    [Fact]
+    public void AMessageWithoutConstants_IsWrittenAndRead_FromTheAttributeOfItsInterface()
+    {
+        var xml = Iso20022XmlSerializer.SerializeToString(new TinyAttributed { Identification = "ATTR-1" });
+
+        Assert.Contains("urn:test:tiny2", xml);
+        var read = Iso20022XmlSerializer.TryRead<TinyAttributed>(xml);
+        Assert.True(read.Succeeded, string.Join("; ", read.Issues.Select(i => i.Reason)));
+        Assert.Equal("ATTR-1", read.Message!.Identification.Value);
+    }
+
     private static InlineValidator<ITinyMessage> TinyRules()
     {
         var rules = new InlineValidator<ITinyMessage>();

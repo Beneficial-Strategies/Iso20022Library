@@ -17,6 +17,11 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// When there is a dispute by the collateral giver to the collateral taker a MarginCallDisputeNotification message is sent with the disputed amount (full or partial) stating the reason why the margin call is being disputed.
 /// </summary>
 [IsoId("_J4YkdSgrEeyB747fKu7_rw")]
+[IsoMessage(
+    "colr.009.001.05",
+    "MrgnCallDsptNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:colr.009.001.05"
+)]
 public interface IMarginCallDisputeNotificationV05 : IOuterRecord
 {
     /// <summary>

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// The StatusReport message may embed the information required by the master terminal manager or delegated terminal manager for preparing the needed TMS actions in the management plan to be replaced and the acceptor parameters to be updated.
 /// </summary>
 [IsoId("_8ki24OQWEeCGktPI9k4Dlw_716782601")]
+[IsoMessage("catm.001.001.01", "StsRpt", "urn:iso:std:iso:20022:tech:xsd:catm.001.001.01")]
 public interface IStatusReportV01 : IOuterRecord
 {
     /// <summary>

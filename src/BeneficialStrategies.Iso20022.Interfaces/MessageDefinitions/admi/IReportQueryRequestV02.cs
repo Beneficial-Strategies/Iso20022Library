@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3SUyzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("admi.005.001.02", "RptQryReq", "urn:iso:std:iso:20022:tech:xsd:admi.005.001.02")]
 public interface IReportQueryRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The NetworkManagementInitiation message covers the range of activities to control the operating condition of the network and may be initiated by any party to an acquirer, an issuer or an agent.
 /// </summary>
 [IsoId("_C8o9QHvDEeSKFIcWw3l4Yw")]
+[IsoMessage("cain.009.001.01", "NtwkMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:cain.009.001.01")]
 public interface INetworkManagementInitiation : IOuterRecord
 {
     /// <summary>

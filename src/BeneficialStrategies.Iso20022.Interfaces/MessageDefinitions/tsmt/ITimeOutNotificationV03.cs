@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - a significant date is reached, for example latest shipment date.
 /// </summary>
 [IsoId("_1eFPCNE8Ed-BzquC8wXy7w_1723275077")]
+[IsoMessage("tsmt.040.001.03", "TmOutNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.040.001.03")]
 public interface ITimeOutNotificationV03 : IOuterRecord
 {
     /// <summary>

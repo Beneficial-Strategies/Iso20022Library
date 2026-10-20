@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// The SecuritiesAccountAuditTrailReport message is sent by the executing party to an instructing party to provide detailed information on the requested securities account audit trail recorded in the system.
 /// </summary>
 [IsoId("_KAlNuZ2fEem_Be8NuxvF7Q")]
+[IsoMessage(
+    "reda.037.001.01",
+    "SctiesAcctAudtTrlRpt",
+    "urn:iso:std:iso:20022:tech:xsd:reda.037.001.01"
+)]
 public interface ISecuritiesAccountAuditTrailReportV01 : IOuterRecord
 {
     /// <summary>

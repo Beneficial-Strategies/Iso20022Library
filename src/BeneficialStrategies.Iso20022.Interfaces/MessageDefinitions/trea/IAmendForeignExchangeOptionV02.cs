@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// This message is only suitable for Simple (i.e. not Barrier) Vanilla (i.e. not Binary, Digital, Notouch) Foreign Exchange Options.
 /// </summary>
 [IsoId("_HQD4WNE8Ed-BzquC8wXy7w_-1614590929")]
+[IsoMessage("trea.010.001.02", "AmdFXOptnV02", "urn:iso:std:iso:20022:tech:xsd:trea.010.001.02")]
 public interface IAmendForeignExchangeOptionV02 : IOuterRecord
 {
     /// <summary>

@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 ///
 /// </summary>
 [IsoId("_GPQT4dtdEee9e6xduATmQg")]
+[IsoMessage("catm.007.001.02", "CertMgmtReq", "urn:iso:std:iso:20022:tech:xsd:catm.007.001.02")]
 public interface ICertificateManagementRequestV02 : IOuterRecord
 {
     /// <summary>

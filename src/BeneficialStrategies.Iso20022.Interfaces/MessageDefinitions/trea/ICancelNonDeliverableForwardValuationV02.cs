@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// The message will contain a Related Reference to link it to the previously sent notification. It may contain a reason for cancellation.
 /// </summary>
 [IsoId("_MYoUotE8Ed-BzquC8wXy7w_-340131062")]
+[IsoMessage("trea.006.001.02", "CclNDFValtnV02", "urn:iso:std:iso:20022:tech:xsd:trea.006.001.02")]
 public interface ICancelNonDeliverableForwardValuationV02 : IOuterRecord
 {
     /// <summary>

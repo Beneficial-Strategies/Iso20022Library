@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 ///
 /// </summary>
 [IsoId("_kT5aARgCEeKqWJINzXcn5g")]
+[IsoMessage("sese.008.001.04", "RvslOfTrfInConf", "urn:iso:std:iso:20022:tech:xsd:sese.008.001.04")]
 public interface IReversalOfTransferInConfirmationV04 : IOuterRecord
 {
     /// <summary>

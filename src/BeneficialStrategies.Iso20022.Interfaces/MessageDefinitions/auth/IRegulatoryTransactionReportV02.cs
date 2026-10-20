@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The message definition can be used to report more than one transaction. The message definition can also be used to specify, on a trade by trade basis, to which authorities the transaction report(s) need to be sent using the TransactionReportMarker.
 /// </summary>
 [IsoId("_gKH798IFEeGllrOKQRUTYA_1289680586")]
+[IsoMessage("auth.008.001.02", "RgltryTxRpt", "urn:iso:std:iso:20022:tech:xsd:auth.008.001.02")]
 public interface IRegulatoryTransactionReportV02 : IOuterRecord
 {
     /// <summary>

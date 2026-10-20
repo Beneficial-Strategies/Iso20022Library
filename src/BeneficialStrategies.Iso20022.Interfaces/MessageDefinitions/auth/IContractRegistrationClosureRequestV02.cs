@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The ContractRegistrationClosureRequest message is sent by the reporting party to the registration agent to close the registered contract subject to currency control.
 /// </summary>
 [IsoId("_bf9RxW2PEei3KuUgpx7Xcw")]
+[IsoMessage(
+    "auth.020.001.02",
+    "CtrctRegnClsrReq",
+    "urn:iso:std:iso:20022:tech:xsd:auth.020.001.02"
+)]
 public interface IContractRegistrationClosureRequestV02 : IOuterRecord
 {
     /// <summary>

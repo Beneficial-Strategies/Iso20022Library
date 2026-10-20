@@ -31,6 +31,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// Take note of an exceptional rule that allows the use of Resolution Of Investigation in lieu of a Case Status Report. Case Status Report is a response-message to a Case Status Report Request. The latter which is sent when the assigner has waited too long (by his standard) for an answer. However it may happen that when the Request arrives, the investigating agent has just obtained a resolution. In such a situation, it would be redundant to send a Case Status Report when then followed immediately by a Resolution Of Investigation. It is therefore quite acceptable for the investigating agent, the assignee, to skip the Case Status Report and send the Resolution Of Investigation message directly.
 /// </summary>
 [IsoId("_VIjx1tE_Ed-BzquC8wXy7w_2008786370")]
+[IsoMessage("camt.029.001.01", "camt.029.001.01", "urn:iso:std:iso:20022:tech:xsd:camt.029.001.01")]
 public interface IResolutionOfInvestigation : IOuterRecord
 {
     /// <summary>

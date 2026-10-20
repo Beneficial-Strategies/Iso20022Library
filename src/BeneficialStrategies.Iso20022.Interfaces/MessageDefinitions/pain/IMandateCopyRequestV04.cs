@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_R3P4bzEZEe6kQ-WGAhcVPQ")]
+[IsoMessage("pain.017.001.04", "MndtCpyReq", "urn:iso:std:iso:20022:tech:xsd:pain.017.001.04")]
 public interface IMandateCopyRequestV04 : IOuterRecord
 {
     /// <summary>

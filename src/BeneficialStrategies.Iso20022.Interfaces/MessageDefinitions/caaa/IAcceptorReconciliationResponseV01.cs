@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorReconciliationResponse message is used to compare the totals between a card acceptor and an acquirer for the reconciliation period.
 /// </summary>
 [IsoId("_OV5_1aMVEeCJ6YNENx4h-w_2086001955")]
+[IsoMessage(
+    "caaa.010.001.01",
+    "AccptrRcncltnRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.010.001.01"
+)]
 public interface IAcceptorReconciliationResponseV01 : IOuterRecord
 {
     /// <summary>

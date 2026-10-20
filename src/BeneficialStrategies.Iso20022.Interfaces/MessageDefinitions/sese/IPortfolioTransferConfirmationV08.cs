@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The reference of each product transfer confirmation is identified in TransferConfirmationIdentification. The reference of the original product transfer is specified in TransferInstructionReference. The message identification of the PortfolioTransferInstruction message in which the product transfers were conveyed may also be quoted in RelatedReferencebut this is not recommended.
 /// </summary>
 [IsoId("_dvvPIYZMEeemXK0UETsSiA")]
+[IsoMessage("sese.013.001.08", "PrtflTrfConf", "urn:iso:std:iso:20022:tech:xsd:sese.013.001.08")]
 public interface IPortfolioTransferConfirmationV08 : IOuterRecord
 {
     /// <summary>

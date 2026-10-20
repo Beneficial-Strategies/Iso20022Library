@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorAuthorisationResponse message is sent by the acquirer (or its agent) to an acceptor (or its agent), to return the result of the validation made by issuer about the payment transaction.
 /// </summary>
 [IsoId("_ECB-IS5IEeunNvJlR_vCbg")]
+[IsoMessage(
+    "caaa.002.001.10",
+    "AccptrAuthstnRspn",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.002.001.10"
+)]
 public interface IAcceptorAuthorisationResponseV10 : IOuterRecord
 {
     /// <summary>

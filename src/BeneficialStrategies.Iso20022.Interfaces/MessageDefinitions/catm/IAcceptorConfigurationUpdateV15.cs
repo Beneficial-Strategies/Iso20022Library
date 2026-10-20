@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_vgzh8bXsEfCUZfsQO4rYeA")]
+[IsoMessage("catm.003.001.15", "AccptrCfgtnUpd", "urn:iso:std:iso:20022:tech:xsd:catm.003.001.15")]
 public interface IAcceptorConfigurationUpdateV15 : IOuterRecord
 {
     /// <summary>

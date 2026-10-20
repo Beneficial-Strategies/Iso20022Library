@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 ///
 /// </summary>
 [IsoId("_M87dQRj3EeKxeog5DTmtgg")]
+[IsoMessage("reda.002.001.04", "PricRptCxl", "urn:iso:std:iso:20022:tech:xsd:reda.002.001.04")]
 public interface IPriceReportCancellationV04 : IOuterRecord
 {
     /// <summary>

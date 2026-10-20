@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The AccountOpeningAmendmentRequest message is sent from an organisation to a financial institution as part of the account opening process. It is sent in response to a request from the financial institution to send additional information.
 /// </summary>
 [IsoId("_cNqkgQ1TEeKGXqvMN6jpiw")]
+[IsoMessage(
+    "acmt.008.001.02",
+    "AcctOpngAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.008.001.02"
+)]
 public interface IAccountOpeningAmendmentRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// The message can carry digital signatures if required by context.
 /// </summary>
 [IsoId("_OTgzNDU2-AOSNFX-8224505")]
+[IsoMessage(
+    "tsin.008.001.01",
+    "InvcAssgnmtNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsin.008.001.01"
+)]
 public interface IInvoiceAssignmentNotificationV01 : IOuterRecord
 {
     /// <summary>

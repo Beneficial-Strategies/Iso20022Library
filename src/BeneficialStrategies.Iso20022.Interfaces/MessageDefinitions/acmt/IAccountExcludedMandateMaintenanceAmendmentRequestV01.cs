@@ -14,6 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// This update is about account details excluding any mandate information. The organisation will specify under the Account and Organisation tags the complete information as it should be in the financial institutions records after processing the update request.
 /// </summary>
 [IsoId("_pW9PsNE9Ed-BzquC8wXy7w_-869978535")]
+[IsoMessage(
+    "acmt.016.001.01",
+    "AcctExcldMndtMntncAmdmntReq",
+    "urn:iso:std:iso:20022:tech:xsd:acmt.016.001.01"
+)]
 public interface IAccountExcludedMandateMaintenanceAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>

@@ -16,6 +16,11 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// In order to pass on information about the rejection of an amendment request the matching application sends an AmendmentRejectionNotification message.
 /// </summary>
 [IsoId("_jX9-MNE8Ed-BzquC8wXy7w_-872944832")]
+[IsoMessage(
+    "tsmt.006.001.03",
+    "AmdmntAccptncNtfctn",
+    "urn:iso:std:iso:20022:tech:xsd:tsmt.006.001.03"
+)]
 public interface IAmendmentAcceptanceNotificationV03 : IOuterRecord
 {
     /// <summary>

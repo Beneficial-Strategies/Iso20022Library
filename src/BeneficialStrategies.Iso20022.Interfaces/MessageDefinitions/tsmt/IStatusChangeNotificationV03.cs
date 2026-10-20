@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - to either party involved in a transaction to inform about the change of the status of the transaction as announced in a TimeOutNotification message sent by the matching application prior to the StatusChangeNotification message.
 /// </summary>
 [IsoId("_vbs12NE8Ed-BzquC8wXy7w_-1030664392")]
+[IsoMessage("tsmt.025.001.03", "StsChngNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.025.001.03")]
 public interface IStatusChangeNotificationV03 : IOuterRecord
 {
     /// <summary>

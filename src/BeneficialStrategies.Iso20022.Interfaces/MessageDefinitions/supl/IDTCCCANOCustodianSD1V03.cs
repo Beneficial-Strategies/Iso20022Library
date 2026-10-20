@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// The DTCCCANOCustodianSD1 message extends ISO corporate action notification (CANO) message with DTCC validation custodian service specific data elements that are not covered by the standard message.
 /// </summary>
 [IsoId("_1LBwZjL3EeKU9IrkkToqcw_-1345555435")]
+[IsoMessage("supl.004.001.03", "DTCCCANOCtdnSD1", "urn:iso:std:iso:20022:tech:xsd:supl.004.001.03")]
 public interface IDTCCCANOCustodianSD1V03 : IOuterRecord
 {
     /// <summary>

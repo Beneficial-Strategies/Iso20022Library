@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The AcquirerAuthorisationInitiation message is sent by an acquirer or an agent to an issuer or an agent, to request, advice or notify the approval of a card transaction.
 /// </summary>
 [IsoId("_Kdha0Hq9EeSqmf43GdBXXQ")]
+[IsoMessage(
+    "cain.001.001.01",
+    "AcqrrAuthstnInitn",
+    "urn:iso:std:iso:20022:tech:xsd:cain.001.001.01"
+)]
 public interface IAcquirerAuthorisationInitiation : IOuterRecord
 {
     /// <summary>

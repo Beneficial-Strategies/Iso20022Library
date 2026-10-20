@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// The SaleToPOIMessageStatusResponse message is sent by a POI System to respond to the sale system at a previous message status request.
 /// </summary>
 [IsoId("_dRq1QQ1UEeqjM-rxn3HuXQ")]
+[IsoMessage(
+    "casp.015.001.02",
+    "SaleToPOIMsgStsRspn",
+    "urn:iso:std:iso:20022:tech:xsd:casp.015.001.02"
+)]
 public interface ISaleToPOIMessageStatusResponseV02 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The TransactionReportRequest message can be sent by either party involved in a transaction to request a report on a variety of details of all transactions that the requester is involved in. For example, the message can be used to request a report on all transactions that the requester is involved in with a certain customer.
 /// </summary>
 [IsoId("_15W1yNE8Ed-BzquC8wXy7w_-2039439363")]
+[IsoMessage("tsmt.042.001.03", "TxRptReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.042.001.03")]
 public interface ITransactionReportRequestV03 : IOuterRecord
 {
     /// <summary>

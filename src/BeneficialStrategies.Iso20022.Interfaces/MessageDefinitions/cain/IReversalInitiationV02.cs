@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// The ReversalInitiation message is sent by an acquirer, an originator or an agent to an issuer to request or advise of the reversal of an authorisation by the issuer. A reversal is a partial or complete nullification of the effects of a previous authorisation, financial presentment or financial accumulation presentment that cannot be processed as instructed (for example, is undeliverable and cancelled or the acquirer timed out waiting for a response).
 /// </summary>
 [IsoId("_ctEcNVT_EeetiruPyDPo0Q")]
+[IsoMessage("cain.005.001.02", "RvslInitn", "urn:iso:std:iso:20022:tech:xsd:cain.005.001.02")]
 public interface IReversalInitiationV02 : IOuterRecord
 {
     /// <summary>

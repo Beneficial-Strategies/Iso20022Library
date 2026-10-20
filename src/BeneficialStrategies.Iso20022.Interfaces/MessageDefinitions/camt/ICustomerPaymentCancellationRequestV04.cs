@@ -30,6 +30,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The cancellation of a payment instruction can be initiated by either the debtor/creditor or any subsequent agent in the payment instruction processing chain.
 /// </summary>
 [IsoId("_wQzafRPeEeSVo-TFVwFHvA")]
+[IsoMessage("camt.055.001.04", "CstmrPmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:camt.055.001.04")]
 public interface ICustomerPaymentCancellationRequestV04 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The InstrumentStatusReport message is sent by the Trading Venue to the Consolidated Tape Provider, which disseminates the data to their users on a consolidated basis. The InstrumentStatusReport message contains the latest trading status of financial instruments on a per-venue basis, including information such as whether an instrument is active, suspended, halted, or removed, along with its current trading phase.
 /// </summary>
 [IsoId("_ahM2QGFPEfC91ZUW7iS7ww")]
+[IsoMessage("auth.120.001.01", "FinInstrmStsRpt", "urn:iso:std:iso:20022:tech:xsd:auth.120.001.01")]
 public interface IFinancialInstrumentStatusReportV01 : IOuterRecord
 {
     /// <summary>

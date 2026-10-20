@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The DataSetSubmission message consists of data reflecting trade information related to the purchasing agreement covered by the transaction(s), for example shipment date, invoice amount.
 /// </summary>
 [IsoId("_nQ9pAtE8Ed-BzquC8wXy7w_2054511397")]
+[IsoMessage("tsmt.014.001.03", "DataSetSubmissn", "urn:iso:std:iso:20022:tech:xsd:tsmt.014.001.03")]
 public interface IDataSetSubmissionV03 : IOuterRecord
 {
     /// <summary>

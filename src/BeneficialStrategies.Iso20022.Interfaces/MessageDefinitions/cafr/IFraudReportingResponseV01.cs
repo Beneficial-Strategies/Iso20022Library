@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// A FraudReportingResponse message is sent by an agent (processor, agent) to an issuer or acquirer in response to a FraudReportingInitiation message.|
 /// </summary>
 [IsoId("_2sO-AXdbEeeKH6vrEwvLHA")]
+[IsoMessage("cafr.002.001.01", "FrdRptgRspn", "urn:iso:std:iso:20022:tech:xsd:cafr.002.001.01")]
 public interface IFraudReportingResponseV01 : IOuterRecord
 {
     /// <summary>

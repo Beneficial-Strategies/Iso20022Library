@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_XI_mUYCdEe-3UrLQHGsjgQ")]
+[IsoMessage(
+    "seev.011.001.03",
+    "AgtCANtfctnStsAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03"
+)]
 public interface IAgentCANotificationStatusAdviceV03 : IOuterRecord
 {
     /// <summary>

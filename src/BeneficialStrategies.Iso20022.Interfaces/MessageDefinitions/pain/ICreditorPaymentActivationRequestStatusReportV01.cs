@@ -13,6 +13,11 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).
 /// </summary>
 [IsoId("_GV_IptEvEd-BzquC8wXy7w_1012339931")]
+[IsoMessage(
+    "pain.014.001.01",
+    "CdtrPmtActvtnReqStsRpt",
+    "urn:iso:std:iso:20022:tech:xsd:pain.014.001.01"
+)]
 public interface ICreditorPaymentActivationRequestStatusReportV01 : IOuterRecord
 {
     /// <summary>

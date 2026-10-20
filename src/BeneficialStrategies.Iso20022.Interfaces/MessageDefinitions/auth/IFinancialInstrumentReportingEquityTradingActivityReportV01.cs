@@ -11,6 +11,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// The FinancialInstrumentReportingEquityTradingActivityReport message is sent by the trading venue to the national competent authority to report on equity specific trading activity data, used for the transparency calculations.
 /// </summary>
 [IsoId("_4LK8PURNEee7JdgA9zPESA")]
+[IsoMessage(
+    "auth.040.001.01",
+    "FinInstrmRptgEqtyTradgActvtyRpt",
+    "urn:iso:std:iso:20022:tech:xsd:auth.040.001.01"
+)]
 public interface IFinancialInstrumentReportingEquityTradingActivityReportV01 : IOuterRecord
 {
     /// <summary>

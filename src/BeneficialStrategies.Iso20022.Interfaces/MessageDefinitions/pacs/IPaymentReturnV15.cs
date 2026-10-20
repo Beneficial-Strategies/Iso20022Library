@@ -19,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
 /// </remarks>
 [IsoId("e139f53a-df51-43c2-a761-b5231fafa5eb")]
+[IsoMessage("pacs.004.001.15", "PmtRtr", "urn:iso:std:iso:20022:tech:xsd:pacs.004.001.15")]
 public interface IPaymentReturnV15 : IOuterRecord
 {
     /// <summary>

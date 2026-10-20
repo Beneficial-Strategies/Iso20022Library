@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// Execution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.
 /// </summary>
 [IsoId("_rM_TIQgpEeSUG-8hqXsVMQ")]
+[IsoMessage("acmt.003.001.05", "AcctModInstr", "urn:iso:std:iso:20022:tech:xsd:acmt.003.001.05")]
 public interface IAccountModificationInstructionV05 : IOuterRecord
 {
     /// <summary>

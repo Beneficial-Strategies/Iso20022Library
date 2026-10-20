@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// This message is used to inquire, add, change, delete or replace a file or a record.
 /// </summary>
 [IsoId("_OtjNBFZiEeen1vB4iz5SyA")]
+[IsoMessage("cafm.001.001.01", "FileActnInitn", "urn:iso:std:iso:20022:tech:xsd:cafm.001.001.01")]
 public interface IFileActionInitiationV01 : IOuterRecord
 {
     /// <summary>

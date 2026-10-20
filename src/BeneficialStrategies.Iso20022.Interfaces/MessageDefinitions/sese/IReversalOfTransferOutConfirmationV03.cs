@@ -18,6 +18,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// The message identification of the TransferOutConfirmation message in which the transfer out confirmation was conveyed may also be quoted in PreviousReference. The message identification of the TransferOutInstruction message in which the transfer out instruction was conveyed may also be quoted in RelatedReference.
 /// </summary>
 [IsoId("_0JtHAfpbEeCPwaG9zjUPNQ")]
+[IsoMessage(
+    "sese.004.001.03",
+    "RvslOfTrfOutConf",
+    "urn:iso:std:iso:20022:tech:xsd:sese.004.001.03"
+)]
 public interface IReversalOfTransferOutConfirmationV03 : IOuterRecord
 {
     /// <summary>

@@ -25,6 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// - identification of contact persons for the member, their role and details.
 /// </summary>
 [IsoId("_jwlcIRbvEeiyVv5j1vf1VQ")]
+[IsoMessage("camt.014.001.04", "RtrMmb", "urn:iso:std:iso:20022:tech:xsd:camt.014.001.04")]
 public interface IReturnMemberV04 : IOuterRecord
 {
     /// <summary>

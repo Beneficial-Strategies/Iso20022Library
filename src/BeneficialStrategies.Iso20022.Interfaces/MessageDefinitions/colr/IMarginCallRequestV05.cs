@@ -22,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// - request the return of collateral.
 /// </summary>
 [IsoId("_J4YkESgrEeyB747fKu7_rw")]
+[IsoMessage("colr.003.001.05", "MrgnCallReq", "urn:iso:std:iso:20022:tech:xsd:colr.003.001.05")]
 public interface IMarginCallRequestV05 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// The information advice identification must be present to link this message to the information advice for which the status is provided.
 /// </summary>
 [IsoId("_TOM7y9EwEd-BzquC8wXy7w_11240695")]
+[IsoMessage("seev.024.001.01", "AgtCAInfStsAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.024.001.01")]
 public interface IAgentCAInformationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

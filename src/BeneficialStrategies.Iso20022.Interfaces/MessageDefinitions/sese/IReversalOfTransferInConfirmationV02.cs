@@ -20,6 +20,11 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// It is also possible to request a reversal of a TransferInConfirmation by quoting its message reference (MessageIdentification) in PreviousReference.
 /// </summary>
 [IsoId("_pHChMNE5Ed-BzquC8wXy7w_-604499550")]
+[IsoMessage(
+    "sese.008.001.02",
+    "RvslOfTrfInConfV02",
+    "urn:iso:std:iso:20022:tech:xsd:sese.008.001.02"
+)]
 public interface IReversalOfTransferInConfirmationV02 : IOuterRecord
 {
     /// <summary>

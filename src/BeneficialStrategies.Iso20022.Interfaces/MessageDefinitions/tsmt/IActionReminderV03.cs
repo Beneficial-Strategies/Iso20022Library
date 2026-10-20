@@ -26,6 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// - the acceptance or rejection of a request to accept role and baseline (RoleAndBaselineAcceptance or RoleAndBaselineRejection message).
 /// </summary>
 [IsoId("_hnA9-NE8Ed-BzquC8wXy7w_-2083336927")]
+[IsoMessage("tsmt.024.001.03", "ActnRmndr", "urn:iso:std:iso:20022:tech:xsd:tsmt.024.001.03")]
 public interface IActionReminderV03 : IOuterRecord
 {
     /// <summary>

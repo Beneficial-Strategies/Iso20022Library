@@ -12,6 +12,11 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// A AcceptorCompletionAdvice message is also sent to reverse an approved authorisation and any associated financial transfer (capture), if the card payment transaction could not be completed successfully.
 /// </summary>
 [IsoId("__uaZQaqAEeanIZ10Ka8PnA")]
+[IsoMessage(
+    "caaa.003.001.06",
+    "AccptrCmpltnAdvc",
+    "urn:iso:std:iso:20022:tech:xsd:caaa.003.001.06"
+)]
 public interface IAcceptorCompletionAdviceV06 : IOuterRecord
 {
     /// <summary>

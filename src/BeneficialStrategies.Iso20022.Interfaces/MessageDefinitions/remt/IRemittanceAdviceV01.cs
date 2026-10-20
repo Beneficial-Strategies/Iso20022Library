@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.remt;
 /// The RemittanceAdvice message allows the originator to provide remittance details that can be associated with a payment.
 /// </summary>
 [IsoId("_6pWyMKMBEeKl_NvHIICqIw")]
+[IsoMessage("remt.001.001.01", "RmtAdvc", "urn:iso:std:iso:20022:tech:xsd:remt.001.001.01")]
 public interface IRemittanceAdviceV01 : IOuterRecord
 {
     /// <summary>

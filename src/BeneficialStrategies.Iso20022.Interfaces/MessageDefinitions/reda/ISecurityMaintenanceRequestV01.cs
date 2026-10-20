@@ -24,6 +24,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// Initiator: instructing party.
 /// </summary>
 [IsoId("_jTvNwR62Eeu31YsWNiv_cw")]
+[IsoMessage("reda.007.001.01", "SctyMntncReq", "urn:iso:std:iso:20022:tech:xsd:reda.007.001.01")]
 public interface ISecurityMaintenanceRequestV01 : IOuterRecord
 {
     /// <summary>

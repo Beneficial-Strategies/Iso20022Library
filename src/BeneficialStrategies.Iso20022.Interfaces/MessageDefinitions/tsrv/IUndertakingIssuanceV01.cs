@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// Under the United Nations Convention on Independent Guarantees and Stand-by Letters of Credit (http://www.uncitral.org), 1996, Article 2, &quot;an undertaking is an independent commitment, known in international practice as an independent guarantee or as a standby letter of credit, given by a bank or other institution or person (&apos;guarantor/issuer&apos;) to pay to the beneficiary a certain or determinable amount upon simple demand or upon demand accompanied by other documents, in conformity with the terms and any documentary conditions of the undertaking, indicating, or from which it is to be inferred, that payment is due because of a default in the performance of an obligation, or because of another contingency, or for money borrowed or advanced, or on account of any mature indebtedness undertaken by the principal/applicant or another person&quot;.
 /// </summary>
 [IsoId("_9faWgnltEeG7BsjMvd1mEw_256886753")]
+[IsoMessage("tsrv.001.001.01", "UdrtkgIssnc", "urn:iso:std:iso:20022:tech:xsd:tsrv.001.001.01")]
 public interface IUndertakingIssuanceV01 : IOuterRecord
 {
     /// <summary>

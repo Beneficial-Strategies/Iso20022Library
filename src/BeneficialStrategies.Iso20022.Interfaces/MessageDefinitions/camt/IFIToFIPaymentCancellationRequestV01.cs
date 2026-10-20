@@ -23,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// The FIToFI Payment Cancellation Request message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original FIToFI Payment Cancellation Request message and the element ReopenCaseIndication is set to &apos;Yes&apos; or &apos;true&apos;.
 /// </summary>
 [IsoId("_YcuGuNE-Ed-BzquC8wXy7w_390093478")]
+[IsoMessage("camt.056.001.01", "FIToFIPmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:camt.056.001.01")]
 public interface IFIToFIPaymentCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

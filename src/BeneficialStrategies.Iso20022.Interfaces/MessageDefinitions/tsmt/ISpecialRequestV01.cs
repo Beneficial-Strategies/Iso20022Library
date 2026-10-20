@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The SpecialRequest message can be sent at any time during the life time of a transaction as long as the transaction is established and not yet closed.
 /// </summary>
 [IsoId("_u_roONE8Ed-BzquC8wXy7w_-951439872")]
+[IsoMessage("tsmt.047.001.01", "SpclReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.047.001.01")]
 public interface ISpecialRequestV01 : IOuterRecord
 {
     /// <summary>

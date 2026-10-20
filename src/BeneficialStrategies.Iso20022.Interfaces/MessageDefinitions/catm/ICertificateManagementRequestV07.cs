@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_Q7CHkZUyEe62CMB9luireQ")]
+[IsoMessage("catm.007.001.07", "CertMgmtReq", "urn:iso:std:iso:20022:tech:xsd:catm.007.001.07")]
 public interface ICertificateManagementRequestV07 : IOuterRecord
 {
     /// <summary>

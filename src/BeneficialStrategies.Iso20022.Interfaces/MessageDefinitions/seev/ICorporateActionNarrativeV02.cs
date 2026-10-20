@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// using the relevant elements in the business application header (BAH).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.
 /// </summary>
 [IsoId("_4Ozz0eZ9Ed-q8fx_Zl_34A")]
+[IsoMessage("seev.038.001.02", "CorpActnNrrtv", "urn:iso:std:iso:20022:tech:xsd:seev.038.001.02")]
 public interface ICorporateActionNarrativeV02 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_YzMe4ROIEfC1ZfCQz0xB3g")]
+[IsoMessage("canm.004.001.05", "KeyXchgRspn", "urn:iso:std:iso:20022:tech:xsd:canm.004.001.05")]
 public interface IKeyExchangeResponseV05 : IOuterRecord
 {
     /// <summary>

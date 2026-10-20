@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("ef8afc04-dfce-4710-a580-fb8111204b91")]
+[IsoMessage("reda.002.001.05", "PricRptCxl", "urn:iso:std:iso:20022:tech:xsd:reda.002.001.05")]
 public interface IPriceReportCancellationV05 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,11 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_bxPE4YYQEe-Pv9KR9bv9IA")]
+[IsoMessage(
+    "semt.019.001.11",
+    "SctiesSttlmTxAllgmtRpt",
+    "urn:iso:std:iso:20022:tech:xsd:semt.019.001.11"
+)]
 public interface ISecuritiesSettlementTransactionAllegementReportV11 : IOuterRecord
 {
     /// <summary>

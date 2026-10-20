@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// This message must contain the reference of the message to be cancelled. This message may also contain all the details of the message to be cancelled, but this is not recommended.
 /// </summary>
 [IsoId("_MXhfatFSEd-BzquC8wXy7w_-1020688414")]
+[IsoMessage("semt.005.001.01", "semt.005.001.01", "urn:iso:std:iso:20022:tech:xsd:semt.005.001.01")]
 public interface IAccountingStatementOfHoldingsCancellation : IOuterRecord
 {
     /// <summary>

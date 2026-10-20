@@ -16,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The CustomerPaymentReversal message can be used in domestic and cross-border scenarios.
 /// </summary>
 [IsoId("_eYI_x22PEei3KuUgpx7Xcw")]
+[IsoMessage("pain.007.001.09", "CstmrPmtRvsl", "urn:iso:std:iso:20022:tech:xsd:pain.007.001.09")]
 public interface ICustomerPaymentReversalV09 : IOuterRecord
 {
     /// <summary>

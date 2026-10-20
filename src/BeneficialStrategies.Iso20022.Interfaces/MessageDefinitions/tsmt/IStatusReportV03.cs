@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// The StatusReport message can be sent by the matching application to report on the status and sub-status of all transactions that the requester of the report is involved in. The message can be sent in response to a StatusReportRequest message.
 /// </summary>
 [IsoId("_1C-AWNE8Ed-BzquC8wXy7w_-145028832")]
+[IsoMessage("tsmt.037.001.03", "StsRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.037.001.03")]
 public interface IStatusReportV03 : IOuterRecord
 {
     /// <summary>

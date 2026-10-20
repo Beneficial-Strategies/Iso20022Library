@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
 [IsoId("_sVqYsGtdEeCY4-KZ9JEyUQ_114633584")]
+[IsoMessage("admi.009.001.01", "StatcDataReq", "urn:iso:std:iso:20022:tech:xsd:admi.009.001.01")]
 public interface IStaticDataRequestV01 : IOuterRecord
 {
     /// <summary>

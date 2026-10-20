@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// The UndertakingAmendmentRequest message is sent by the party that requested issuance of the undertaking (applicant or obligor) to the party that issued the undertaking to request issuance of a proposed amendment to the undertaking. The undertaking could be a demand guarantee, standby letter of credit, counter-undertaking (counter-guarantee or counter-standby), or suretyship undertaking. The message provides details on proposed changes to the undertaking, for example, to the expiry date, amount, and/or terms and conditions. It may also be used to request termination or cancellation of the undertaking.
 /// </summary>
 [IsoId("_9f3CdnltEeG7BsjMvd1mEw_-206674723")]
+[IsoMessage("tsrv.004.001.01", "UdrtkgAmdmntReq", "urn:iso:std:iso:20022:tech:xsd:tsrv.004.001.01")]
 public interface IUndertakingAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>
