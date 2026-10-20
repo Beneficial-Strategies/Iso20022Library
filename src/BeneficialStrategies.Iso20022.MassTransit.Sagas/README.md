@@ -53,6 +53,34 @@ saga instance always tracks exactly one enrolment/activation, never a whole batc
   Creditor's/Debtor's own originating systems) — those are reactive pass-throughs in the source
   document, not saga-worthy, and are not covered by this first release.
 
+## JSON serialization
+
+The events and the saga state carry message records, and MassTransit moves them as JSON with `System.Text.Json`. Three things to know
+(each is covered by `MassTransitJsonRoundTripTests`, and the first by the saga tests as well):
+
+* **Register the library's converters, or events are silently dropped.** MassTransit's default options cannot read a `ValueList<T>`.
+  Without the converters of `Iso20022JsonSerializerOptions.Default` an event does not fail loudly: it is never consumed and ends in the
+  error queue. Register them on the bus:
+
+  ```csharp
+  busCfg.ConfigureJsonSerializerOptions(options =>
+  {
+      foreach (var converter in Iso20022JsonSerializerOptions.Default.Converters)
+          options.Converters.Add(converter);
+      return options;
+  });
+  ```
+
+  With them, an event with lists and a choice arrives equal to the one that was sent.
+* **The registration is process-wide.** `ConfigureJsonSerializerOptions` changes MassTransit's shared options, not those of one bus: once
+  any bus in the process has registered the converters, every bus has them. (It also means a test that checks the failure without them
+  depends on the order the tests run in.)
+* **The events use MassTransit's property names, not the ISO ones.** The wire form of an event is camelCase (`messageIdentification`,
+  `initiatingParty`), which is fine between services of one team. A payload meant for another system should be written with the library's
+  own serializer (`Iso20022JsonSerializer`), not by MassTransit.
+
+Reading the interfaces instead of the records, so that this package no longer needs `BeneficialStrategies.Iso20022.Common`, is #70.
+
 ## Project layout
 
 Both state machines live under `reda/` (folder and namespace:
