@@ -6,50 +6,19 @@ public class IsoDataFactoryTests
 {
     private static readonly IsoDataFactory Factory = new();
 
-    internal static MultilateralSettlementRequestV02 Record(string movementId = "MOV-002") =>
-        new()
-        {
-            GroupHeader = new GroupHeader104
-            {
-                MessageIdentification = "MSG-001",
-                CreationDateTime = new DateTime(2026, 1, 1),
-                NumberOfSettlementRequests = "1",
-            },
-            SettlementRequest =
-            [
-                new MultilateralSettlementRequest3
-                {
-                    InstructionIdentification = "INSTR-001",
-                    MovementRecord =
-                    [
-                        new MovementRecord2
-                        {
-                            Amount = new AmountAndDirection5
-                            {
-                                Amount = new ActiveCurrencyAndAmount
-                                {
-                                    Currency = "EUR",
-                                    Amount = 100m
-                                }
-                            },
-                            Identification = "MOV-001",
-                        },
-                        new MovementRecord2
-                        {
-                            Amount = new AmountAndDirection5
-                            {
-                                Amount = new ActiveCurrencyAndAmount
-                                {
-                                    Currency = "EUR",
-                                    Amount = 200m
-                                }
-                            },
-                            Identification = movementId,
-                        },
-                    ],
-                },
-            ],
-        };
+    /// <summary>The message of <see cref="Golden"/>, built from the samples; the second movement has the given identification.</summary>
+    internal static IMultilateralSettlementRequestV02 Message(string movementId = "MOV-002") =>
+        IsoDataFactory.With(Samples.MultilateralSettlementRequestV02.Valid.Standard.Minimal, b => b
+            .Set(x => x.SettlementRequest).To([
+                IsoDataFactory.With(Samples.MultilateralSettlementRequest3.Valid.Standard.Minimal, r => r
+                    .Set(x => x.MovementRecord).To([Movement("MOV-001", 100m), Movement(movementId, 200m)])),
+            ]));
+
+    private static IMovementRecord2 Movement(string identification, decimal amount) =>
+        IsoDataFactory.With(Samples.MovementRecord2.Valid.Standard.Minimal, m => m
+            .Set(x => x.Identification).To(identification)
+            .Set(x => x.Amount).To(IsoDataFactory.With(Samples.AmountAndDirection5.Valid.Standard.Minimal, a => a
+                .Set(x => x.Amount).To(new ActiveCurrencyAndAmount { Currency = "EUR", Amount = amount }))));
 
     private static IMultilateralSettlementRequestV02 Read(string xml)
     {
@@ -61,9 +30,8 @@ public class IsoDataFactoryTests
     [Fact]
     public void AMessage_IsReadIntoGeneratedClasses_NotRecords()
     {
-        var message = Read(Iso20022XmlSerializer.SerializeToString(Record()));
+        var message = Read(Golden.Xml);
 
-        Assert.IsNotType<MultilateralSettlementRequestV02>(message);
         Assert.True(message.GetType().Assembly.IsDynamic);
         Assert.Equal("MSG-001", message.GroupHeader.MessageIdentification.Value);
         var movements = message.SettlementRequest.Single().MovementRecord.ToList();
@@ -74,11 +42,11 @@ public class IsoDataFactoryTests
     [Fact]
     public void TheGeneratedClasses_HaveValueEquality()
     {
-        var xml = Iso20022XmlSerializer.SerializeToString(Record());
+        var xml = Golden.Xml;
 
         var a = Read(xml);
         var b = Read(xml);
-        var c = Read(Iso20022XmlSerializer.SerializeToString(Record("MOV-999")));
+        var c = Read(Iso20022XmlSerializer.SerializeToString(Message("MOV-999")));
 
         Assert.Equal(a, b);
         Assert.Equal(a.GetHashCode(), b.GetHashCode());
@@ -91,21 +59,16 @@ public class IsoDataFactoryTests
     public void TheExistingValidators_RunOnTheGeneratedObjects()
     {
         var valid = new MultilateralSettlementRequestV02Validator().Validate(
-            Read(Iso20022XmlSerializer.SerializeToString(Record()))
+            Read(Golden.Xml)
         );
         Assert.True(valid.IsValid, string.Join("; ", valid.Errors.Select(e => e.ErrorMessage)));
 
-        var invalidRecord = new MultilateralSettlementRequestV02
-        {
-            GroupHeader = new GroupHeader104
-            {
-                MessageIdentification = "MSG-001",
-                CreationDateTime = new DateTime(2026, 1, 1),
-                NumberOfSettlementRequests = "0",
-            },
-        };
+        var invalidMessage = IsoDataFactory.With(Samples.MultilateralSettlementRequestV02.Valid.Standard.Minimal, m => m
+            .Set(x => x.GroupHeader).To(IsoDataFactory.With(Samples.GroupHeader104.Valid.Standard.Minimal, g => g
+                .Set(x => x.NumberOfSettlementRequests).To("0")))
+            .Set(x => x.SettlementRequest).To([]));
         var invalid = new MultilateralSettlementRequestV02Validator().Validate(
-            Read(Iso20022XmlSerializer.SerializeToString(invalidRecord))
+            Read(Iso20022XmlSerializer.SerializeToString(invalidMessage))
         );
         Assert.False(invalid.IsValid);
     }
@@ -113,7 +76,7 @@ public class IsoDataFactoryTests
     [Fact]
     public void WhatWasRead_IsWrittenBackAsTheSameXml()
     {
-        var xml = Iso20022XmlSerializer.SerializeToString(Record());
+        var xml = Golden.Xml;
 
         var written = Iso20022XmlSerializer.SerializeToString(Read(xml));
 
@@ -210,7 +173,7 @@ public class IsoDataFactoryTests
     [Fact]
     public void AnythingButAnInterface_IsRefused()
     {
-        Assert.Throws<ArgumentException>(() => Factory.Create(typeof(GroupHeader104)));
+        Assert.Throws<ArgumentException>(() => Factory.Create(typeof(string)));
     }
 
     [Fact]

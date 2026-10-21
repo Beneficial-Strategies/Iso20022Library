@@ -19,29 +19,23 @@ public class InterfaceJsonTests
         return options;
     }
 
-    private static IMultilateralSettlementRequestV02 ReadXml(MultilateralSettlementRequestV02 record) =>
-        Iso20022XmlSerializer.TryRead<IMultilateralSettlementRequestV02>(Iso20022XmlSerializer.SerializeToString(record), Factory).Message!;
+    private static IMultilateralSettlementRequestV02 ReadXml() =>
+        Iso20022XmlSerializer.TryRead<IMultilateralSettlementRequestV02>(Golden.Xml, Factory).Message!;
 
     [Fact]
-    public void AMessageOfTheFactory_IsWrittenAsTheRecordIsWritten()
+    public void AMessageOfTheFactory_IsWrittenAsTheRecordsWriteIt()
     {
-        var record = IsoDataFactoryTests.Record();
+        var fromInterface = JsonSerializer.Serialize(ReadXml(), Options);
 
-        var fromInterface = JsonSerializer.Serialize(ReadXml(record), Options);
-        var fromRecord = Iso20022JsonSerializer.SerializeToString(record);
-
-        Assert.True(JsonNode.DeepEquals(JsonNode.Parse(fromRecord), JsonNode.Parse(fromInterface)), fromInterface);
+        Assert.True(JsonNode.DeepEquals(JsonNode.Parse(Golden.Json), JsonNode.Parse(fromInterface)), fromInterface);
     }
 
     [Fact]
-    public void AnInterfaceReadFromTheJsonOfARecord_IsTheObjectReadFromItsXml()
+    public void AnInterfaceReadFromTheJsonOfARecord_IsTheObjectReadFromTheXmlOfARecord()
     {
-        var record = IsoDataFactoryTests.Record();
-        var json = Iso20022JsonSerializer.SerializeToString(record);
+        var viaJson = JsonSerializer.Deserialize<IMultilateralSettlementRequestV02>(Golden.Json, Options)!;
 
-        var viaJson = JsonSerializer.Deserialize<IMultilateralSettlementRequestV02>(json, Options)!;
-
-        Assert.Equal(ReadXml(record), viaJson);
+        Assert.Equal(ReadXml(), viaJson);
         Assert.Equal(2, viaJson.SettlementRequest.Single().MovementRecord.Count());
     }
 
@@ -72,7 +66,7 @@ public class InterfaceJsonTests
     [Fact]
     public void ABadValue_IsAJsonExceptionThatNamesTheMember()
     {
-        var json = JsonNode.Parse(Iso20022JsonSerializer.SerializeToString(IsoDataFactoryTests.Record()))!;
+        var json = JsonNode.Parse(Golden.Json)!;
         json["group_header"]!["creation_date_time"] = "2026-13-45";
 
         var ex = Assert.Throws<JsonException>(() => JsonSerializer.Deserialize<IMultilateralSettlementRequestV02>(json.ToJsonString(), Options));
@@ -83,7 +77,7 @@ public class InterfaceJsonTests
     [Fact]
     public void ARequiredMemberThatIsMissing_IsAJsonException()
     {
-        var json = JsonNode.Parse(Iso20022JsonSerializer.SerializeToString(IsoDataFactoryTests.Record()))!;
+        var json = JsonNode.Parse(Golden.Json)!;
         ((JsonObject)json).Remove("group_header");
 
         var ex = Assert.Throws<JsonException>(() => JsonSerializer.Deserialize<IMultilateralSettlementRequestV02>(json.ToJsonString(), Options));
@@ -94,7 +88,7 @@ public class InterfaceJsonTests
     [Fact]
     public void AnAbsentList_IsEmpty()
     {
-        var json = JsonNode.Parse(Iso20022JsonSerializer.SerializeToString(IsoDataFactoryTests.Record()))!;
+        var json = JsonNode.Parse(Golden.Json)!;
         ((JsonObject)json["settlement_request"]![0]!).Remove("movement_record");
 
         var message = JsonSerializer.Deserialize<IMultilateralSettlementRequestV02>(json.ToJsonString(), Options)!;
@@ -106,7 +100,7 @@ public class InterfaceJsonTests
     public void TheNamesFollowTheOptionsOfTheCaller()
     {
         var camel = Build(new JsonSerializerOptions(Iso20022JsonSerializerOptions.Default) { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
-        var message = ReadXml(IsoDataFactoryTests.Record());
+        var message = ReadXml();
 
         var json = JsonSerializer.Serialize(message, camel);
 
