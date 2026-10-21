@@ -85,7 +85,7 @@ flowchart LR
 
 ## The same, for the tests of this repository
 
-Not part of the packages; shows which test projects still need `Common`: only `Common.Tests` should, and `Xml.Tests` and `Payloads.Tests` until their tests move onto the samples (#88).
+Not part of the packages; shows which test projects need `Common`: `Common.Tests`, and `Xml.Tests` and `Payloads.Tests`, which test the APIs that are written around a message record.
 
 ```mermaid
 flowchart LR
@@ -118,7 +118,7 @@ flowchart LR
     MT --> F
 ```
 
-`Xml.Tests` and `Payloads.Tests` still build the same pacs.029 message with the records; the samples for it exist now, so the next change moves them over. `Factory.Tests` no longer references `Common`: what the records write (XML and JSON) is kept in it as fixed text.
+`Xml.Tests` and `Payloads.Tests` keep `Common` on purpose: `Validate(xml, out TRecord)`, `XmlEnvelopeValidator<TRecord>`, `JsonEnvelope<TRecord>` and the payload dispatcher are generic over a concrete message class, so a record is the type under test there, not only test data. The path without records is covered in the same projects by the `*WithFactory*` tests, and `Factory.Tests`, `FluentValidation.Tests` and `MassTransit.Sagas.Tests` do not reference `Common`.
 
 ## Rules the diagram encodes
 
