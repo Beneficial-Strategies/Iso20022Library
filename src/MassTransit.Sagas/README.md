@@ -1,13 +1,18 @@
 # Beneficial Strategies ISO 20022 MassTransit Sagas
 
-> **Status: investigative work-in-progress.** This package is **not published to NuGet** and its
-> API/design may change significantly before (or instead of) a first release. It stays in this
-> monorepo per `CLAUDE.md`'s "Multi-Package Repository Strategy" so it evolves in lockstep with
-> `BeneficialStrategies.Iso20022`, not because it's ready for production use.
+> **Status: proof of concept only. Not published, and not planned to be.**
+>
+> This package exists to show what ISO 20022 message flows look like as [MassTransit](https://masstransit.io) sagas. It is **not published
+> to NuGet and is not scheduled for publication**; it is not on the roadmap, and nothing should be built on it. Its API and design may change,
+> or it may be removed, without notice.
+>
+> It lives in this monorepo only so that it evolves in lockstep with the rest of the family while it is being explored. **If it is ever
+> pursued, it will probably move to a repository of its own, and may be licensed differently** from the packages here. Treat it as a reference
+> and a worked example, not as a dependency.
 
-A [MassTransit](https://masstransit.io) saga toolkit correlated to ISO 20022 message flows, built
-on top of the strongly-typed message model published in
-[`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022).
+A saga toolkit correlated to ISO 20022 message flows, written against the **interfaces** of the message model
+([`BeneficialStrategies.Iso20022.Interfaces`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)), so it does not need the
+message records.
 
 ## Why this package exists
 
@@ -17,7 +22,7 @@ order things happen in, who initiates versus who responds. That knowledge lives 
 Message Definition Report (MDR) documents published per message set on
 [iso20022.org](https://www.iso20022.org). This package is the result of reading one such document
 (the Request-to-Pay Service MDR Part 1) closely enough to derive real state machines from it, and
-is intentionally scoped to that one flow as a proof of concept — not a generalized
+is intentionally scoped to that one flow, as a proof of concept: not a generalized
 "generate a saga for any ISO 20022 message set" pipeline.
 
 ## What's included
@@ -51,7 +56,7 @@ saga instance always tracks exactly one enrolment/activation, never a whole batc
   integration logic, since that depends entirely on your deployment.
 - **The other two swim-lane actors per sub-process** (the RTP Directory Provider, and the
   Creditor's/Debtor's own originating systems) — those are reactive pass-throughs in the source
-  document, not saga-worthy, and are not covered by this first release.
+  document, not saga-worthy, and are not covered.
 
 ## Interfaces, not records
 

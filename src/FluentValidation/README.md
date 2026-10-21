@@ -1,90 +1,83 @@
-# Beneficial Strategies ISO20022 FluentValidation Library
+# BeneficialStrategies.Iso20022.FluentValidation
 
-This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,296 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
+[FluentValidation](https://docs.fluentvalidation.net/) validators for ISO 20022: the rules the C# type system alone cannot express, such as cross-field rules ("a case identification may appear in at most one of three possible locations") and the check of a code against a registry. 1,296 validators cover top-level messages, message components, choice types and external code sets, generated from and cross-checked against the ISO 20022 specification.
 
-## Welcome!
+The validators are written for the **interfaces** of the model (`IValidator<IGroupHeader131>`), not for any particular class, so they validate whatever implements the interface: a class of your own, the ready-made records of the message library, or an object built at run time. Three examples, each adding one thing to what you reference:
 
-`BeneficialStrategies.Iso20022` gives you a strongly-typed, compiler-enforced rendering of ISO 20022 messages in memory — but the C# type system can only express so much. Some ISO 20022 rules are cross-field ("a case identification may appear in at most one of three possible locations") or depend on runtime data the compiler can't see. This package is the follow-on project that covers that ground: validators that check field-level constraints and cross-field business rules the record types themselves cannot enforce.
+1. [Your own class](#1-your-own-class): nothing but this package.
+2. [The full library of messages](#2-the-full-library-of-messages): the ready-made classes for every ISO 20022 message.
+3. [Without the classes: the Factory](#3-without-the-classes-the-factory): objects for the interfaces, made for you.
 
-Coverage today:
-- **391 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 43 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph — **the entire `pain` (Payments Initiation) business area is 100% complete** (12/12 addressable message families; two additional legacy IDs, `PaymentCancellationRequestV01` and `PaymentStatusReportV02`, are permanently out of scope — see the note below the table), and **the entire `pacs` (Payments Clearing and Settlement) business area is 100% complete** (9/9 addressable message families: `MultilateralSettlementRequestV02`, `FinancialInstitutionDirectDebitV06`, `FIToFIPaymentStatusRequestV07`, `FIToFIPaymentReversalV14`, `FIToFIPaymentStatusReportV16`, `FIToFICustomerCreditTransferV14`, `FinancialInstitutionCreditTransferV13`, `FIToFICustomerDirectDebitV12`, `PaymentReturnV15`). This list only grows, so it's kept here as a table, sorted by ISO ID:
+The packages are in alpha, so the commands name the version.
 
-  | ISO ID | Message | C# type | Description |
-  |---|---|---|---|
-  | camt.012.001.08 | Delete Limit | `DeleteLimitV08` | Sent by a member to the transaction administrator to request the deletion of one, several, or all limits set by the member and managed by the transaction administrator. |
-  | camt.016.001.04 | Get Currency Exchange Rate | `GetCurrencyExchangeRateV04` | Sent by a member to the transaction administrator to request static data related to currency exchange details, by source and/or target currency. |
-  | camt.020.001.04 | Get General Business Information | `GetGeneralBusinessInformationV04` | Sent by a member to the transaction administrator to request the full content of a broadcast-type business information message previously sent. |
-  | camt.024.001.08 | Modify Standing Order | `ModifyStandingOrderV08` | Sent by a member to the transaction administrator to request a change in the features of a permanent funds-transfer order between two of its accounts. |
-  | camt.030.001.06 | Notification Of Case Assignment | `NotificationOfCaseAssignmentV06` | Sent by a case assignee to a case creator/case assigner to inform them of further action undertaken on the case (reassignment, or working it directly). |
-  | camt.031.001.07 | Reject Investigation | `RejectInvestigationV07` | Sent by a case assignee to a case creator or case assigner to reject a case given to it. |
-  | camt.032.001.05 | Cancel Case Assignment | `CancelCaseAssignmentV05` | Sent by a case creator or case assigner to a case assignee to request the cancellation of a case. |
-  | camt.033.001.07 | Request For Duplicate | `RequestForDuplicateV07` | Sent by the case assignee to the case creator or case assigner to request a copy of the original payment instruction considered in the case. |
-  | camt.034.001.07 | Duplicate | `DuplicateV07` | Sent in response to a RequestForDuplicate message, to exchange a duplicate payment instruction. |
-  | camt.035.001.06 | Proprietary Format Investigation | `ProprietaryFormatInvestigationV06` | Used, by bilateral agreement, as an envelope for a non-standard message managing an exception or investigation outside the scope of any other formatted message. |
-  | camt.036.001.06 | Debit Authorisation Response | `DebitAuthorisationResponseV06` | Sent by an account owner to its account servicing institution to approve or reject a debit authorisation request. |
-  | camt.038.001.05 | Case Status Report Request | `CaseStatusReportRequestV05` | Sent by a case creator or case assigner to a case assignee to request the status of a case. |
-  | camt.039.001.06 | Case Status Report | `CaseStatusReportV06` | Sent by a case assignee to a case creator or case assigner to report on the status of a case, in reply to a CaseStatusReportRequest message. |
-  | camt.048.001.07 | Modify Reservation | `ModifyReservationV07` | Used to request modifications in the details of one particular reservation set by the member and managed by the transaction administrator. |
-  | camt.049.001.07 | Delete Reservation | `DeleteReservationV07` | Used to request the deletion of one particular reservation by the member and managed by the transaction administrator. |
-  | camt.050.001.07 | Liquidity Credit Transfer | `LiquidityCreditTransferV07` | Sent by a member to the transaction administrator to request a transfer of funds between two accounts belonging to the same member or group of accounts. |
-  | camt.051.001.07 | Liquidity Debit Transfer | `LiquidityDebitTransferV07` | Sent by a member to the transaction administrator to request a transfer of funds between two accounts belonging to the same member or group of accounts. |
-  | camt.063.001.02 | Pay In Event Acknowledgement | `PayInEventAcknowledgementV02` | Sent by a participant of a central system to the central system to confirm a PayInSchedule or a PayInCall has been received. |
-  | camt.071.001.05 | Delete Standing Order | `DeleteStandingOrderV05` | Sent by the system member to delete one or more standing orders within the static data held by the system transaction administrator. |
-  | camt.101.001.02 | Create Limit | `CreateLimitV02` | Sent by a member to the transaction administrator to create one or several limits set by the member and managed by the transaction administrator. |
-  | camt.102.001.03 | Create Standing Order | `CreateStandingOrderV03` | Sent by a member to the transaction administrator to create a permanent order for the transfer of funds between two of its accounts. |
-  | camt.103.001.03 | Create Reservation | `CreateReservationV03` | Used to request the creation of one particular reservation by the member and managed by the transaction administrator. |
-  | pacs.002.001.16 | FI To FI Payment Status Report | `FIToFIPaymentStatusReportV16` | Sent by an instructed agent to the previous party in the payment chain, to inform them about the positive or negative status of an instruction, or to report on a pending instruction. |
-  | pacs.003.001.12 | FI To FI Customer Direct Debit | `FIToFICustomerDirectDebitV12` | Sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system, to collect funds from a debtor account for a creditor. |
-  | pacs.004.001.15 | Payment Return | `PaymentReturnV15` | Sent by an agent to the previous agent in the payment chain to undo a payment previously settled. |
-  | pacs.007.001.14 | FI To FI Payment Reversal | `FIToFIPaymentReversalV14` | Sent by an agent to the next party in the payment chain, to reverse a payment previously executed and settled. |
-  | pacs.008.001.14 | FI To FI Customer Credit Transfer | `FIToFICustomerCreditTransferV14` | Sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system, to move funds from a debtor account to a creditor. |
-  | pacs.009.001.13 | Financial Institution Credit Transfer | `FinancialInstitutionCreditTransferV13` | Sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system, to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions. |
-  | pacs.010.001.06 | Financial Institution Direct Debit | `FinancialInstitutionDirectDebitV06` | Sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent, to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions. |
-  | pacs.028.001.07 | FI To FI Payment Status Request | `FIToFIPaymentStatusRequestV07` | Sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system, to request a FIToFIPaymentStatusReport message containing information on the status of a previously sent instruction. |
-  | pacs.029.001.02 | Multilateral Settlement Request | `MultilateralSettlementRequestV02` | Sent from an instructing agent to a market infrastructure, to settle obligations between their participants using accounts held in a settlement service. |
-  | pain.001.001.13 | Customer Credit Transfer Initiation | `CustomerCreditTransferInitiationV13` | Sent by the initiating party to the forwarding agent or debtor agent, to request movement of funds from the debtor account to a creditor. |
-  | pain.002.001.15 | Customer Payment Status Report | `CustomerPaymentStatusReportV15` | Sent by an instructed agent to the previous party in the payment chain, to inform them about the positive or negative status of an instruction, or to report on a pending instruction. |
-  | pain.007.001.13 | Customer Payment Reversal | `CustomerPaymentReversalV13` | Sent by the initiating party to the next party in the payment chain, to reverse a payment previously executed. |
-  | pain.008.001.12 | Customer Direct Debit Initiation | `CustomerDirectDebitInitiationV12` | Sent by the initiating party to the forwarding agent or creditor agent, to request single or bulk collection(s) of funds from one or various debtor's account(s) for a creditor. |
-  | pain.009.001.08 | Mandate Initiation Request | `MandateInitiationRequestV08` | Sent by the initiator of a mandate request (debtor or creditor) to their agent, to set up the instruction that allows the debtor agent to accept debit instructions from the creditor agent. |
-  | pain.010.001.08 | Mandate Amendment Request | `MandateAmendmentRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent and/or counterparty to request the amendment of specific information in an existing mandate. |
-  | pain.011.001.08 | Mandate Cancellation Request | `MandateCancellationRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent to request the cancellation of an existing mandate. |
-  | pain.012.001.08 | Mandate Acceptance Report | `MandateAcceptanceReportV08` | Sent from the agent of the receiver of a mandate request to the agent of the initiator, to confirm the acceptance or rejection of that request. |
-  | pain.013.001.12 | Creditor Payment Activation Request | `CreditorPaymentActivationRequestV12` | Sent by the Creditor sending party to the Debtor receiving party, directly or through agents, to request movement of funds from the debtor account to a creditor. |
-  | pain.014.001.12 | Creditor Payment Activation Request Status Report | `CreditorPaymentActivationRequestStatusReportV12` | Sent by a party to the next party in the creditor payment activation request chain, to inform them about the positive or negative status of a creditor payment activation request. |
-  | pain.017.001.04 | Mandate Copy Request | `MandateCopyRequestV04` | Sent by the initiator of the request (debtor or creditor) to their agent to request a copy of an existing mandate. |
-  | pain.018.001.04 | Mandate Suspension Request | `MandateSuspensionRequestV04` | Sent by the initiator of the request (debtor, debtor agent, creditor, or creditor agent) to its agent to request the suspension of an existing mandate. |
+## 1. Your own class
 
-  (`FIToFIPaymentCancellationRequestV10`, camt.056.001.10, has a validator too, but mechanical verification found gaps in its dependency graph — not yet complete enough to list above. See the FluentValidation project's own `CLAUDE.md` for tracking.)
+You do not need the message library. Take an interface of the model, `IDateAndPlaceOfBirth1`, and implement it in a class of your own:
 
-  (Two `pain` message IDs are intentionally absent above, not merely unbuilt: `PaymentCancellationRequestV01` (pain.006.001.01) and `PaymentStatusReportV02` (pain.002.001.02) are both superseded — per ISO 20022's own `nextVersions` pointer, each was renamed decades ago into the `CustomerXxx` naming convention. `PaymentCancellationRequestV01`'s lineage continued as `CustomerPaymentCancellationRequestV01` → ... → `CustomerPaymentCancellationRequestV11`, which now lives in the `camt` business area (camt.055.001.11) — permanently out of `pain` scope. `PaymentStatusReportV02`'s lineage continued as `CustomerPaymentStatusReportV03` → ... → `CustomerPaymentStatusReportV15`, which stays in `pain` and is tracked under its current name instead. Neither of the two old IDs will ever be built under those names.)
-- **905 validators** — abbreviated coverage. These currently only enforce a known minimum-collection-size gap (some `required`-looking collections were generated with no lower bound, so an empty collection compiles but violates the spec); they have not yet been reviewed for the remaining field-level constraints and cross-field rules a full validator would cover.
+```
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
+dotnet add package Microsoft.Extensions.DependencyInjection
+```
 
-Every validator — full or abbreviated — carries an XML doc `<remarks>` block naming exactly which spec constraints it currently checks, so you always know what you're getting from a specific type, not just its category.
+The first brings the interfaces (`BeneficialStrategies.Iso20022.Interfaces`), the primitive types and code sets (`BeneficialStrategies.Iso20022.Primitives`) and FluentValidation, and nothing else; the second is the container of this example (ASP.NET Core and other hosts already have one).
 
-Known limitations:
-- No composite message-level validator yet for most business areas — validators exist per component (and per full message for the messages in the table above); you compose them yourself for now via `SetValidator()` where needed.
-- Abbreviated validators (see above) are not yet a complete spec-compliance check.
+```csharp
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.SimpleTypes;
+using BeneficialStrategies.Iso20022.Validation;
+using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 
-For more information about the project, see [the repository](https://github.com/Beneficial-Strategies/Iso20022Library).
+// A class of yours that has the shape of the ISO 20022 component
+public sealed class MyBirth(string country) : IDateAndPlaceOfBirth1
+{
+    public ISODate BirthDate => new DateOnly(1990, 1, 1);
+    public Max35Text? ProvinceOfBirth => null;
+    public Max35Text CityOfBirth => "Springfield";
+    public CountryCode CountryOfBirth => country;    // a code: two upper-case letters, and a country that exists
+}
 
-This is provided free of charge under a very non-restrictive license as a good-faith contribution to the community. This library is a working proof of concept built using Claude Code and the [Beneficial Strategies ISO20022 MCP server](https://beneficialstrategies.com/product/mcp-server/).
+// The acceptable country codes are yours to say (see "External code set validation" below); without a list nothing is rejected on that basis.
+var countries = new InMemoryExternalCodeRegistry<CountryCode>();
+countries.Add("US");
 
-If you have questions or concerns about the implementation, please send developer comments or questions to [support@beneficialstrategies.com](mailto:support@beneficialstrategies.com).
+var services = new ServiceCollection();
+services.AddIso20022Validators();
+services.AddSingleton<IExternalCodeRegistry<CountryCode>>(countries);
+using var provider = services.BuildServiceProvider();
 
-## Trying out the library
+var validator = provider.GetRequiredService<IValidator<IDateAndPlaceOfBirth1>>();
 
-```bash
-mkdir test
-cd test
-dotnet new console
+foreach (var country in new[] { "US", "ZZ" })
+{
+    var result = validator.Validate(new MyBirth(country));
+    Console.WriteLine($"{country}: IsValid={result.IsValid}");
+    foreach (var error in result.Errors)
+        Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
+}
+```
+
+```
+US: IsValid=True
+ZZ: IsValid=False
+  CountryOfBirth.ExternalCodeRegistryRule: 'ZZ' is not an acceptable value for CountryCode (ExternalCodeRegistryRule).
+```
+
+The format of each member (35 characters at most, two upper-case letters, a valid date) is already enforced by its type when you build the value; the validator adds what a type cannot say. Anything that implements the interface gets the same rules and the same failures.
+
+## 2. The full library of messages
+
+You would rather not write the classes: ISO 20022 has thousands of them. The message library has every message, component and choice as a ready-made C# class, and they implement the interfaces, so the same validators work on them.
+
+```
 dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
 dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
 ```
 
-Open your `Program.cs` and paste the following. This validates `camt.056.001.10` (FIToFIPaymentCancellationRequest) — one of the full-spec-compliance validators — first against a well-formed message, then against one that violates a cross-field rule no C# type could express on its own:
+This validates `camt.056.001.10` (`FIToFIPaymentCancellationRequestV10`), one of the messages with full spec-compliance validators, first against a well-formed message and then against one that breaks a cross-field rule no C# type could express on its own:
 
-```C#
+```csharp
 using BeneficialStrategies.Iso20022.camt;
 using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices.Party40Choice;
@@ -108,17 +101,20 @@ var request = new FIToFIPaymentCancellationRequestV10
         },
         CreationDateTime = new DateTime(2026, 8, 17, 9, 0, 0),
     },
-    Underlying = new UnderlyingTransaction28
-    {
-        TransactionInformation = [new PaymentTransaction137()],
-    },
+    Underlying =
+    [
+        new UnderlyingTransaction28
+        {
+            TransactionInformation = [new PaymentTransaction137()],
+        },
+    ],
 };
 
 var result = validator.Validate(request);
 Console.WriteLine($"IsValid={result.IsValid}"); // True
 
 // The same message, but with a case identification present at both the message
-// level and the transaction level — a spec rule (MessageOrGroupCaseRule) that no
+// level and the transaction level: a spec rule (MessageOrGroupCaseRule) that no
 // property type alone can enforce, since both locations are individually optional.
 var invalidRequest = request with
 {
@@ -130,52 +126,67 @@ var invalidRequest = request with
             FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" },
         },
     },
-    Underlying = new UnderlyingTransaction28
-    {
-        TransactionInformation =
-        [
-            new PaymentTransaction137
-            {
-                Case = new Case5
+    Underlying =
+    [
+        new UnderlyingTransaction28
+        {
+            TransactionInformation =
+            [
+                new PaymentTransaction137
                 {
-                    Identification = "CASE-2026-0001",
-                    Creator = new Agent
+                    Case = new Case5
                     {
-                        FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" },
+                        Identification = "CASE-2026-0001",
+                        Creator = new Agent
+                        {
+                            FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" },
+                        },
                     },
                 },
-            },
-        ],
-    },
+            ],
+        },
+    ],
 };
 
 var invalidResult = validator.Validate(invalidRequest);
 Console.WriteLine($"IsValid={invalidResult.IsValid}"); // False
 foreach (var error in invalidResult.Errors)
-{
     Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
-}
-// MessageOrGroupCaseRule: Case identification must appear in at most one location:
-// message-level Case, Underlying.OriginalGroupInformationAndCancellation.Case, or
-// Underlying.TransactionInformation.Case (MessageOrGroupCaseRule /
-// MessageOrTransactionCaseRule).
 ```
 
-Targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0; it references the Primitives and Interfaces packages, not the message records.
+```
+IsValid=True
+IsValid=False
+  MessageOrGroupCaseRule: Case identification must appear in at most one location: message-level Case, Underlying.OriginalGroupInformationAndCancellation.Case, or Underlying.TransactionInformation.Case (MessageOrGroupCaseRule / MessageOrTransactionCaseRule).
+```
 
-## Validating your own classes
+`FIToFIPaymentCancellationRequestV10` is a class of the message library; `FIToFIPaymentCancellationRequestV10Validator` validates its interface, `IFIToFIPaymentCancellationRequestV10`, which the class implements. For a quick check a validator can be built with `new`, as here; to get all of them from a container, see [Registering validators with dependency injection](#registering-validators-with-dependency-injection).
 
-The validators are written for the interfaces of `BeneficialStrategies.Iso20022.Interfaces`, not for our records. A record of
-this library implements its interface, so it is validated as before; so is a class of yours that implements, for example,
-`IGroupHeader131`, with the same rules and the same failures:
+## 3. Without the classes: the Factory
+
+The message library is large, and perhaps you do not want 3,339 messages' worth of classes in your application. The **Factory** builds the class that implements an interface on the fly, the first time it is asked for, so you name the interface and no implementation library is needed:
+
+```
+dotnet add package BeneficialStrategies.Iso20022.Factory --version 0.7.0-alpha
+```
 
 ```csharp
-IValidator<IGroupHeader131> validator = provider.GetRequiredService<IValidator<IGroupHeader131>>();
-var result = validator.Validate(myOwnGroupHeader);
+using BeneficialStrategies.Iso20022.Factory;
+
+// Instead of writing MyBirth from example 1: an object for the interface, with its members set
+var birth = IsoDataFactory.Make<IDateAndPlaceOfBirth1>(b => b
+    .Set(x => x.BirthDate).To(new DateOnly(1990, 1, 1))
+    .Set(x => x.CityOfBirth).To("Springfield")
+    .Set(x => x.CountryOfBirth).To("ZZ"));
+
+var result = validator.Validate(birth);      // the validator of example 1
+```
+```
+IsValid=False
+  CountryOfBirth.ExternalCodeRegistryRule: 'ZZ' is not an acceptable value for CountryCode (ExternalCodeRegistryRule).
 ```
 
-For a message root, `IValidator<TheRecord>` (for example `IValidator<FIToFICustomerCreditTransferV14>`) also resolves; it forwards to
-the validator of the message interface. Validators of components and choices are registered for their interfaces only.
+The object is a normal value: equal when its members are equal, with a `ToString` that shows them. The Factory is also what reads XML into the interfaces, so that a document can be validated with no class of the message library at all: see [BeneficialStrategies.Iso20022.FluentValidation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml) (a call per document) and [BeneficialStrategies.Iso20022.FluentValidation.Payloads](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Payloads) (raw XML or JSON off a queue, with envelope validators and a dispatcher). For valid and invalid objects to use in your own tests, see `BeneficialStrategies.Iso20022.Samples`.
 
 ## Registering validators with dependency injection
 
@@ -234,9 +245,11 @@ registering the other 1,000+ validators in the assembly you'll never resolve.
 
 ## Validating raw XML/JSON payloads (e.g. off a message queue)
 
-That is the package [BeneficialStrategies.Iso20022.FluentValidation.Payloads](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Payloads):
-it deserializes a raw XML or JSON payload and validates it with the validators of this package. It needs only the Primitives package, not
-the message records, and targets netstandard2.0 as well.
+That is the package [BeneficialStrategies.Iso20022.FluentValidation.Payloads](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Payloads): it reads a raw XML or JSON payload and validates it with the validators of this package. It does not need the message records, and targets netstandard2.0 as well.
+
+## Targets
+
+Targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0; it references the Primitives and Interfaces packages, not the message records.
 
 ## External code set validation
 
@@ -310,3 +323,71 @@ Console.WriteLine(kpIsValid); // False — rejected by the override
 Register your override *after* `AddIso20022Validators()` — the last registration for a given
 service type wins, so this replaces the in-memory default for `CountryCode` only; every other
 external code type keeps using it.
+
+## Coverage
+
+Coverage today:
+- **391 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 43 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph — **the entire `pain` (Payments Initiation) business area is 100% complete** (12/12 addressable message families; two additional legacy IDs, `PaymentCancellationRequestV01` and `PaymentStatusReportV02`, are permanently out of scope — see the note below the table), and **the entire `pacs` (Payments Clearing and Settlement) business area is 100% complete** (9/9 addressable message families: `MultilateralSettlementRequestV02`, `FinancialInstitutionDirectDebitV06`, `FIToFIPaymentStatusRequestV07`, `FIToFIPaymentReversalV14`, `FIToFIPaymentStatusReportV16`, `FIToFICustomerCreditTransferV14`, `FinancialInstitutionCreditTransferV13`, `FIToFICustomerDirectDebitV12`, `PaymentReturnV15`). This list only grows, so it's kept here as a table, sorted by ISO ID:
+
+  | ISO ID | Message | C# type | Description |
+  |---|---|---|---|
+  | camt.012.001.08 | Delete Limit | `DeleteLimitV08` | Sent by a member to the transaction administrator to request the deletion of one, several, or all limits set by the member and managed by the transaction administrator. |
+  | camt.016.001.04 | Get Currency Exchange Rate | `GetCurrencyExchangeRateV04` | Sent by a member to the transaction administrator to request static data related to currency exchange details, by source and/or target currency. |
+  | camt.020.001.04 | Get General Business Information | `GetGeneralBusinessInformationV04` | Sent by a member to the transaction administrator to request the full content of a broadcast-type business information message previously sent. |
+  | camt.024.001.08 | Modify Standing Order | `ModifyStandingOrderV08` | Sent by a member to the transaction administrator to request a change in the features of a permanent funds-transfer order between two of its accounts. |
+  | camt.030.001.06 | Notification Of Case Assignment | `NotificationOfCaseAssignmentV06` | Sent by a case assignee to a case creator/case assigner to inform them of further action undertaken on the case (reassignment, or working it directly). |
+  | camt.031.001.07 | Reject Investigation | `RejectInvestigationV07` | Sent by a case assignee to a case creator or case assigner to reject a case given to it. |
+  | camt.032.001.05 | Cancel Case Assignment | `CancelCaseAssignmentV05` | Sent by a case creator or case assigner to a case assignee to request the cancellation of a case. |
+  | camt.033.001.07 | Request For Duplicate | `RequestForDuplicateV07` | Sent by the case assignee to the case creator or case assigner to request a copy of the original payment instruction considered in the case. |
+  | camt.034.001.07 | Duplicate | `DuplicateV07` | Sent in response to a RequestForDuplicate message, to exchange a duplicate payment instruction. |
+  | camt.035.001.06 | Proprietary Format Investigation | `ProprietaryFormatInvestigationV06` | Used, by bilateral agreement, as an envelope for a non-standard message managing an exception or investigation outside the scope of any other formatted message. |
+  | camt.036.001.06 | Debit Authorisation Response | `DebitAuthorisationResponseV06` | Sent by an account owner to its account servicing institution to approve or reject a debit authorisation request. |
+  | camt.038.001.05 | Case Status Report Request | `CaseStatusReportRequestV05` | Sent by a case creator or case assigner to a case assignee to request the status of a case. |
+  | camt.039.001.06 | Case Status Report | `CaseStatusReportV06` | Sent by a case assignee to a case creator or case assigner to report on the status of a case, in reply to a CaseStatusReportRequest message. |
+  | camt.048.001.07 | Modify Reservation | `ModifyReservationV07` | Used to request modifications in the details of one particular reservation set by the member and managed by the transaction administrator. |
+  | camt.049.001.07 | Delete Reservation | `DeleteReservationV07` | Used to request the deletion of one particular reservation by the member and managed by the transaction administrator. |
+  | camt.050.001.07 | Liquidity Credit Transfer | `LiquidityCreditTransferV07` | Sent by a member to the transaction administrator to request a transfer of funds between two accounts belonging to the same member or group of accounts. |
+  | camt.051.001.07 | Liquidity Debit Transfer | `LiquidityDebitTransferV07` | Sent by a member to the transaction administrator to request a transfer of funds between two accounts belonging to the same member or group of accounts. |
+  | camt.063.001.02 | Pay In Event Acknowledgement | `PayInEventAcknowledgementV02` | Sent by a participant of a central system to the central system to confirm a PayInSchedule or a PayInCall has been received. |
+  | camt.071.001.05 | Delete Standing Order | `DeleteStandingOrderV05` | Sent by the system member to delete one or more standing orders within the static data held by the system transaction administrator. |
+  | camt.101.001.02 | Create Limit | `CreateLimitV02` | Sent by a member to the transaction administrator to create one or several limits set by the member and managed by the transaction administrator. |
+  | camt.102.001.03 | Create Standing Order | `CreateStandingOrderV03` | Sent by a member to the transaction administrator to create a permanent order for the transfer of funds between two of its accounts. |
+  | camt.103.001.03 | Create Reservation | `CreateReservationV03` | Used to request the creation of one particular reservation by the member and managed by the transaction administrator. |
+  | pacs.002.001.16 | FI To FI Payment Status Report | `FIToFIPaymentStatusReportV16` | Sent by an instructed agent to the previous party in the payment chain, to inform them about the positive or negative status of an instruction, or to report on a pending instruction. |
+  | pacs.003.001.12 | FI To FI Customer Direct Debit | `FIToFICustomerDirectDebitV12` | Sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system, to collect funds from a debtor account for a creditor. |
+  | pacs.004.001.15 | Payment Return | `PaymentReturnV15` | Sent by an agent to the previous agent in the payment chain to undo a payment previously settled. |
+  | pacs.007.001.14 | FI To FI Payment Reversal | `FIToFIPaymentReversalV14` | Sent by an agent to the next party in the payment chain, to reverse a payment previously executed and settled. |
+  | pacs.008.001.14 | FI To FI Customer Credit Transfer | `FIToFICustomerCreditTransferV14` | Sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system, to move funds from a debtor account to a creditor. |
+  | pacs.009.001.13 | Financial Institution Credit Transfer | `FinancialInstitutionCreditTransferV13` | Sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system, to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions. |
+  | pacs.010.001.06 | Financial Institution Direct Debit | `FinancialInstitutionDirectDebitV06` | Sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent, to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions. |
+  | pacs.028.001.07 | FI To FI Payment Status Request | `FIToFIPaymentStatusRequestV07` | Sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system, to request a FIToFIPaymentStatusReport message containing information on the status of a previously sent instruction. |
+  | pacs.029.001.02 | Multilateral Settlement Request | `MultilateralSettlementRequestV02` | Sent from an instructing agent to a market infrastructure, to settle obligations between their participants using accounts held in a settlement service. |
+  | pain.001.001.13 | Customer Credit Transfer Initiation | `CustomerCreditTransferInitiationV13` | Sent by the initiating party to the forwarding agent or debtor agent, to request movement of funds from the debtor account to a creditor. |
+  | pain.002.001.15 | Customer Payment Status Report | `CustomerPaymentStatusReportV15` | Sent by an instructed agent to the previous party in the payment chain, to inform them about the positive or negative status of an instruction, or to report on a pending instruction. |
+  | pain.007.001.13 | Customer Payment Reversal | `CustomerPaymentReversalV13` | Sent by the initiating party to the next party in the payment chain, to reverse a payment previously executed. |
+  | pain.008.001.12 | Customer Direct Debit Initiation | `CustomerDirectDebitInitiationV12` | Sent by the initiating party to the forwarding agent or creditor agent, to request single or bulk collection(s) of funds from one or various debtor's account(s) for a creditor. |
+  | pain.009.001.08 | Mandate Initiation Request | `MandateInitiationRequestV08` | Sent by the initiator of a mandate request (debtor or creditor) to their agent, to set up the instruction that allows the debtor agent to accept debit instructions from the creditor agent. |
+  | pain.010.001.08 | Mandate Amendment Request | `MandateAmendmentRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent and/or counterparty to request the amendment of specific information in an existing mandate. |
+  | pain.011.001.08 | Mandate Cancellation Request | `MandateCancellationRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent to request the cancellation of an existing mandate. |
+  | pain.012.001.08 | Mandate Acceptance Report | `MandateAcceptanceReportV08` | Sent from the agent of the receiver of a mandate request to the agent of the initiator, to confirm the acceptance or rejection of that request. |
+  | pain.013.001.12 | Creditor Payment Activation Request | `CreditorPaymentActivationRequestV12` | Sent by the Creditor sending party to the Debtor receiving party, directly or through agents, to request movement of funds from the debtor account to a creditor. |
+  | pain.014.001.12 | Creditor Payment Activation Request Status Report | `CreditorPaymentActivationRequestStatusReportV12` | Sent by a party to the next party in the creditor payment activation request chain, to inform them about the positive or negative status of a creditor payment activation request. |
+  | pain.017.001.04 | Mandate Copy Request | `MandateCopyRequestV04` | Sent by the initiator of the request (debtor or creditor) to their agent to request a copy of an existing mandate. |
+  | pain.018.001.04 | Mandate Suspension Request | `MandateSuspensionRequestV04` | Sent by the initiator of the request (debtor, debtor agent, creditor, or creditor agent) to its agent to request the suspension of an existing mandate. |
+
+  (`FIToFIPaymentCancellationRequestV10`, camt.056.001.10, has a validator too, but mechanical verification found gaps in its dependency graph — not yet complete enough to list above. See the FluentValidation project's own `CLAUDE.md` for tracking.)
+
+  (Two `pain` message IDs are intentionally absent above, not merely unbuilt: `PaymentCancellationRequestV01` (pain.006.001.01) and `PaymentStatusReportV02` (pain.002.001.02) are both superseded — per ISO 20022's own `nextVersions` pointer, each was renamed decades ago into the `CustomerXxx` naming convention. `PaymentCancellationRequestV01`'s lineage continued as `CustomerPaymentCancellationRequestV01` → ... → `CustomerPaymentCancellationRequestV11`, which now lives in the `camt` business area (camt.055.001.11) — permanently out of `pain` scope. `PaymentStatusReportV02`'s lineage continued as `CustomerPaymentStatusReportV03` → ... → `CustomerPaymentStatusReportV15`, which stays in `pain` and is tracked under its current name instead. Neither of the two old IDs will ever be built under those names.)
+- **905 validators** — abbreviated coverage. These currently only enforce a known minimum-collection-size gap (some `required`-looking collections were generated with no lower bound, so an empty collection compiles but violates the spec); they have not yet been reviewed for the remaining field-level constraints and cross-field rules a full validator would cover.
+
+Every validator — full or abbreviated — carries an XML doc `<remarks>` block naming exactly which spec constraints it currently checks, so you always know what you're getting from a specific type, not just its category.
+
+Known limitations:
+- No composite message-level validator yet for most business areas — validators exist per component (and per full message for the messages in the table above); you compose them yourself for now via `SetValidator()` where needed.
+- Abbreviated validators (see above) are not yet a complete spec-compliance check.
+
+For more information about the project, see [the repository](https://github.com/Beneficial-Strategies/Iso20022Library).
+
+This is provided free of charge under a very non-restrictive license as a good-faith contribution to the community. This library is a working proof of concept built using Claude Code and the [Beneficial Strategies ISO20022 MCP server](https://beneficialstrategies.com/product/mcp-server/).
+
+If you have questions or concerns about the implementation, please send developer comments or questions to [support@beneficialstrategies.com](mailto:support@beneficialstrategies.com).
