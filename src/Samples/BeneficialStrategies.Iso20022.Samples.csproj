@@ -29,6 +29,10 @@
     <ProjectReference Include="..\Factory\BeneficialStrategies.Iso20022.Factory.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="BeneficialStrategies.Iso20022.FluentValidation.Tests" />
+  </ItemGroup>
+
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="Polyfill" Version="11.*" PrivateAssets="all" />
   </ItemGroup>

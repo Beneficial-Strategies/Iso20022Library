@@ -6,8 +6,13 @@ namespace BeneficialStrategies.Iso20022.Samples.MultilateralSettlementRequest3.V
 public static class Standard
 {
     /// <summary>A valid <c>MultilateralSettlementRequest3</c> with the required members set. A new object on every access.</summary>
-    public static Components.IMultilateralSettlementRequest3 Minimal =>
+    /// <remarks>It has two movement records, which the rule of the message asks for (2..∞).</remarks>
+    public static IMultilateralSettlementRequest3 Minimal =>
         IsoDataFactory.Make<IMultilateralSettlementRequest3>(b => b
             .Set(x => x.InstructionIdentification).To("INSTR-001")
-            .Set(x => x.MovementRecord).To([Samples.MovementRecord2.Valid.Standard.Minimal]));
+            .Set(x => x.MovementRecord).To([
+                Samples.MovementRecord2.Valid.Standard.Minimal,
+                IsoDataFactory.With(Samples.MovementRecord2.Valid.Standard.Minimal, m => m
+                    .Set(x => x.Identification).To("MOV-002")),
+            ]));
 }
