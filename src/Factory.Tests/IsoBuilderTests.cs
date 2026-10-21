@@ -81,13 +81,20 @@ public class IsoBuilderTests
     }
 
     [Fact]
-    public void With_AlsoCopiesARecord()
+    public void With_AlsoCopiesAnObjectOfAnotherClass()
     {
-        IGenericIdentification3 source = new GenericIdentification3 { Identification = "ID-1" };
+        IGenericIdentification3 source = new MyIdentification();
 
         var changed = IsoDataFactory.With(source, b => b.Set(x => x.Issuer).To("BANK"));
 
         Assert.Equal("BANK", changed.Issuer!.Value.Value);
         Assert.Null(source.Issuer);
+    }
+
+    /// <summary>An implementation of the interface that is neither a message record nor made by the factory; like a record, its members can be set.</summary>
+    private sealed class MyIdentification : IGenericIdentification3
+    {
+        public Max35Text Identification { get; init; } = "ID-1";
+        public Max35Text? Issuer { get; init; }
     }
 }

@@ -1,19 +1,12 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.Factory;
-using BeneficialStrategies.Iso20022.SimpleTypes;
-
 namespace BeneficialStrategies.Iso20022.Samples.AcknowledgementDetails1Choice.Valid;
 
 /// <summary>Valid samples of <c>PayInScheduleReference</c> of <c>AcknowledgementDetails1Choice</c>.</summary>
 public static class PayInScheduleReference
 {
     /// <summary>A valid <c>PayInScheduleReference</c> of <c>AcknowledgementDetails1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
-    public static BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice.IPayInScheduleReference Minimal =>
-        IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice.IPayInScheduleReference>(b => b
+    public static Choices.AcknowledgementDetails1Choice.IPayInScheduleReference Minimal =>
+        IsoDataFactory.Make<Choices.AcknowledgementDetails1Choice.IPayInScheduleReference>(b => b
                 .Set(x => x.Value).To("PIS-001"));
 }

@@ -1,19 +1,12 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.Factory;
-using BeneficialStrategies.Iso20022.SimpleTypes;
-
 namespace BeneficialStrategies.Iso20022.Samples.Party50Choice.Valid;
 
 /// <summary>Valid samples of <c>Party</c> of <c>Party50Choice</c>.</summary>
 public static class Party
 {
     /// <summary>A valid <c>Party</c> of <c>Party50Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
-    public static BeneficialStrategies.Iso20022.Choices.Party50Choice.IParty Minimal =>
+    public static Choices.Party50Choice.IParty Minimal =>
         IsoDataFactory.Make<Choices.Party50Choice.IParty>(b => b
-                .Set(x => x.Value).To(BeneficialStrategies.Iso20022.Samples.PartyIdentification272.Valid.Standard.Minimal));
+                .Set(x => x.Value).To(Samples.PartyIdentification272.Valid.Standard.Minimal));
 }

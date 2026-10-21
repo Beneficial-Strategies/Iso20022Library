@@ -9,9 +9,14 @@ A family of .NET libraries for working with the [ISO 20022](https://iso20022.org
 | [`BeneficialStrategies.Iso20022`](src/Common/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) | The full ISO 20022 message domain model — 3,339 message types as immutable, strongly-typed C# records, with XML and JSON serialization. |
 | [`BeneficialStrategies.Iso20022.Primitives`](src/Primitives/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) | The ISO 20022 primitive data types, code sets and external codes with their format validation and JSON converters, without the message records. `BeneficialStrategies.Iso20022` depends on it. |
 | [`BeneficialStrategies.Iso20022.Interfaces`](src/Interfaces/README.md) | In preparation | An interface for every ISO 20022 message, component and choice, so a class of your own can stand in for a record. Implemented by the records of `BeneficialStrategies.Iso20022`. |
+| [`BeneficialStrategies.Iso20022.Factory`](src/Factory/README.md) | In preparation | Objects for the interfaces, made for you at run time: ask for an interface and the Factory builds a class that implements it and fills it from XML or JSON, so no implementation library is needed. |
 | [`BeneficialStrategies.Iso20022.FluentValidation`](src/FluentValidation/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation) | FluentValidation validators enforcing ISO 20022 spec-level constraints the C# type system alone can't express. |
+| [`BeneficialStrategies.Iso20022.FluentValidation.Xml`](src/FluentValidation.Xml/README.md) | In preparation | Read ISO 20022 XML into an object and validate it in one call: the populated object, or every problem found with the path of its element, as ordinary FluentValidation failures. |
+| [`BeneficialStrategies.Iso20022.FluentValidation.Payloads`](src/FluentValidation.Payloads/README.md) | In preparation | Validate raw ISO 20022 XML or JSON text as it arrives (a queue, an HTTP body, a file); a payload that cannot be read comes back as validation failures, not an exception. |
 | [`BeneficialStrategies.Iso20022.Samples`](src/Samples/README.md) | In preparation | Named, valid ISO 20022 objects for tests (and invalid ones for known issues), built through the `Factory` against the interfaces, so a test needs no message records. |
 | [`BeneficialStrategies.Iso20022.MassTransit.Sagas`](src/MassTransit.Sagas/README.md) | Work in progress — not published | A MassTransit saga toolkit for ISO 20022 message flows (currently: Request-to-Pay). Investigative, not yet released. |
+
+How the packages depend on one another, and which to install for what, is in [doc/Package-Dependencies.md](doc/Package-Dependencies.md).
 
 ### The standard for samples
 

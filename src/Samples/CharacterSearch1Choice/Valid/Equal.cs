@@ -1,19 +1,12 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.Factory;
-using BeneficialStrategies.Iso20022.SimpleTypes;
-
 namespace BeneficialStrategies.Iso20022.Samples.CharacterSearch1Choice.Valid;
 
 /// <summary>Valid samples of <c>Equal</c> of <c>CharacterSearch1Choice</c>.</summary>
 public static class Equal
 {
     /// <summary>A valid <c>Equal</c> of <c>CharacterSearch1Choice</c> with few members set (what the validator tests needed). A new object on every access.</summary>
-    public static BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice.IEqual Minimal =>
-        IsoDataFactory.Make<BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice.IEqual>(b => b
+    public static Choices.CharacterSearch1Choice.IEqual Minimal =>
+        IsoDataFactory.Make<Choices.CharacterSearch1Choice.IEqual>(b => b
                 .Set(x => x.Value).To("SUBJECT"));
 }
