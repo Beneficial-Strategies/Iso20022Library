@@ -26,6 +26,7 @@ A sample is a named object of the model that a test (yours or ours) takes instea
 * **Names:** `Minimal` has few members set, `Maximal` more (it exists only where it differs from `Minimal`). A scenario named like a type of `System` gets a trailing underscore (`Valid.DateTime_`).
 * **Properties, not fields, and a new object on every access.** The objects have setters, so a shared one could be changed by one test and read by another.
 * **Built from other samples.** A sample that contains an object uses that object's own sample (the `Minimal` of a message uses the `Minimal` of its header), and is written with `IsoDataFactory.Make<T>` and `IsoDataFactory.With`; a test never constructs a model object itself.
+* **Any other type:** `IsoSample.Minimal<T>()` makes a valid object from the interface (its required members); a named sample, where there is one, wins over it. A type whose rules ask for more than its shape says needs a named sample, and the validator tests list those that still do.
 * **Against the interfaces.** Samples need `Primitives`, `Interfaces` and `Factory`, not the message records.
 
 Samples for the primitive values (simple types, code sets, amounts) are added later. The package, its first samples and the tools that move tests onto it are tracked in #88.

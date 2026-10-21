@@ -8,7 +8,7 @@ The samples are built against the **interfaces** of the model ([BeneficialStrate
 dotnet add package BeneficialStrategies.Iso20022.Samples --version 0.7.0-alpha
 ```
 
-It depends on `Primitives`, `Interfaces` and `Factory`, not on the message records, and targets netstandard2.0, net8.0 and net10.0. The package is in alpha and **not on NuGet yet**; the samples that exist today cover 24 choices and the components they need (see [What is here](#what-is-here-and-what-is-coming)). Three examples, each a step further.
+It depends on `Primitives`, `Interfaces` and `Factory`, not on the message records, and targets netstandard2.0, net8.0 and net10.0. The package is in alpha and **not on NuGet yet**; the samples that exist today cover 24 choices and the components they need (see [What is here](#what-is-here-and-what-is-coming)). Four examples, each a step further.
 
 ## 1. Take a sample
 
@@ -77,6 +77,22 @@ Console.WriteLine(changed.Identification);                                      
 Console.WriteLine(Samples.AccountIdentification4Choice.Valid.Other.Minimal.Identification);   // ACCT-001
 ```
 
+## 4. A sample for any type
+
+The named samples cover what tests have needed so far. For any other interface of the model, `IsoSample` makes a valid object from the interface itself: its required members, no others.
+
+```csharp
+IGenericIdentification3 id = Samples.IsoSample.Minimal<IGenericIdentification3>();
+Console.WriteLine(id);                                          // IGenericIdentification3_1 { Identification = A, Issuer = null }
+
+var account = Samples.IsoSample.Minimal<IAccountIdentification4Choice>();
+Console.WriteLine(account);                                     // IIBAN_3 { Value = DE89370400440532013000 }: a named sample wins, wherever the type appears
+```
+
+A list gets one item, a choice its first variant (by name), a code set its first value, and a primitive the first value of its format that the type accepts. It is the same on every call, and a new object each time. The values are placeholders that fit the format, so write no test that depends on what they are.
+
+Where the rules ask for more than the shape says (one of two optional members must be present, a list of at least two), the object is built to the shape and the validator says no. Those types need a named sample, and the validator tests list the ones that still do. Writing the sample (`Samples/<Type>/Valid/Standard.cs`) fixes it for every object that contains the type.
+
 ## The standard for samples
 
 Every sample follows one pattern, so a sample is found by its name:
@@ -96,4 +112,4 @@ Samples/<Type>/Invalid/<Issue>.cs      one static class per known issue
 
 Today: the variants of 24 choices (`AccountIdentification4Choice`, `AmountType4Choice`, `Party50Choice`, ...) and the components they need (`CashAccount40`, `PostalAddress27`, ...). The values in them are those of the tests they were moved out of, so `Minimal` is "few members" and `Maximal` is "more members", not yet "only the required members" and "every member" in the sense of the model.
 
-Coming, as the tests that use them are moved onto the samples: the rest of the messages, components and choices; samples for the **primitive values** (simple types, code sets, amounts); the `Invalid` samples, one class for each known issue, which the validators' own tests use; and, for the whole model, `Minimal` and `Maximal` generated from the interfaces.
+Any other interface is available through `IsoSample.Minimal<T>()` (example 4). Coming, as the tests that use them are moved onto the samples: the rest of the messages, components and choices; samples for the **primitive values** (simple types, code sets, amounts); the `Invalid` samples, one class for each known issue, which the validators' own tests use; and `Maximal` for the whole model (every optional member the rules allow together).
