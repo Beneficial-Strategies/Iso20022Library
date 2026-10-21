@@ -85,7 +85,7 @@ flowchart LR
 
 ## The same, for the tests of this repository
 
-Not part of the packages; shows what each test project still needs `Common` for.
+Not part of the packages; shows which test projects still need `Common`: only `Common.Tests` should, and `Xml.Tests` and `Payloads.Tests` until their tests move onto the samples (#88).
 
 ```mermaid
 flowchart LR
@@ -113,12 +113,12 @@ flowchart LR
     PLT --> C
     FT[Factory.Tests]:::t --> F
     FT --> V
-    FT --> C
+    FT --> S
     MT[MassTransit.Sagas.Tests]:::t --> M[MassTransit.Sagas]:::net
     MT --> F
 ```
 
-`Xml.Tests`, `Payloads.Tests` and `Factory.Tests` keep `Common` because they test the record-based paths themselves (a record validated through `Validate<TInterface, TRecord>`, a record and a factory object compared, the factory's JSON compared with the record's).
+`Xml.Tests` and `Payloads.Tests` still build the same pacs.029 message with the records; the samples for it exist now, so the next change moves them over. `Factory.Tests` no longer references `Common`: what the records write (XML and JSON) is kept in it as fixed text.
 
 ## Rules the diagram encodes
 
