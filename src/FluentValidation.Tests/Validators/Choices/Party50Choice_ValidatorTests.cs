@@ -10,7 +10,7 @@ public class Party50Choice_ValidatorTests
     public void AgentVariant_Valid_NoValidationErrors()
     {
         BeneficialStrategies.Iso20022.Choices.IParty50Choice choice =
-            BeneficialStrategies.Iso20022.Samples.Party50Choice.Valid.Agent.Minimal;
+            BeneficialStrategies.Iso20022.Messages.Samples.Party50Choice.Valid.Agent.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -18,7 +18,7 @@ public class Party50Choice_ValidatorTests
     public void PartyVariant_Valid_NoValidationErrors()
     {
         BeneficialStrategies.Iso20022.Choices.IParty50Choice choice =
-            BeneficialStrategies.Iso20022.Samples.Party50Choice.Valid.Party.Minimal;
+            BeneficialStrategies.Iso20022.Messages.Samples.Party50Choice.Valid.Party.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -31,7 +31,7 @@ public class Party50Choice_ValidatorTests
         // confirm propagation via the BranchIdentification -> PostalAddress27 -> AddressType path,
         // which is fully wired end-to-end through this dispatcher.
         BeneficialStrategies.Iso20022.Choices.IParty50Choice choice =
-            BeneficialStrategies.Iso20022.Samples.Party50Choice.Valid.Agent.Maximal;
+            BeneficialStrategies.Iso20022.Messages.Samples.Party50Choice.Valid.Agent.Maximal;
 
         // This nested combination is itself fully valid (no rule currently rejects it) — this
         // test exists to prove the DI chain (Party50Choice_Validator -> agentValueValidator ->

@@ -9,14 +9,14 @@ public class AmountType4Choice_ValidatorTests
     [Fact]
     public void InstructedAmountVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid.InstructedAmount.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.AmountType4Choice.Valid.InstructedAmount.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void EquivalentAmountVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid.EquivalentAmount.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.AmountType4Choice.Valid.EquivalentAmount.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
@@ -27,7 +27,7 @@ public class AmountType4Choice_ValidatorTests
         registry.Add("EUR");
         var sut = new AmountType4Choice_Validator(new ActiveOrHistoricCurrencyCodeValidator(registry));
 
-        var value = BeneficialStrategies.Iso20022.Samples.AmountType4Choice.Valid.EquivalentAmount.Maximal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.AmountType4Choice.Valid.EquivalentAmount.Maximal;
         var result = sut.Validate(value);
         Assert.False(result.IsValid);
     }

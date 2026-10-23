@@ -9,21 +9,21 @@ public class AccountIdentification4Choice_ValidatorTests
     [Fact]
     public void IBANVariant_NoValidationErrors()
     {
-        var choice = BeneficialStrategies.Iso20022.Samples.AccountIdentification4Choice.Valid.IBAN.Minimal;
+        var choice = BeneficialStrategies.Iso20022.Messages.Samples.AccountIdentification4Choice.Valid.IBAN.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void OtherVariant_NoSchemeName_NoValidationErrors()
     {
-        var choice = BeneficialStrategies.Iso20022.Samples.AccountIdentification4Choice.Valid.Other.Minimal;
+        var choice = BeneficialStrategies.Iso20022.Messages.Samples.AccountIdentification4Choice.Valid.Other.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void OtherVariant_SchemeNamePresent_NoValidationErrors()
     {
-        var choice = BeneficialStrategies.Iso20022.Samples.AccountIdentification4Choice.Valid.Other.Maximal;
+        var choice = BeneficialStrategies.Iso20022.Messages.Samples.AccountIdentification4Choice.Valid.Other.Maximal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

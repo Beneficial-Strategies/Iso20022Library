@@ -1,9 +1,9 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using System.Reflection;
-using BeneficialStrategies.Iso20022.Samples;
+using BeneficialStrategies.Iso20022.Messages.Samples;
 
-namespace BeneficialStrategies.Iso20022.SamplesTests;
+namespace BeneficialStrategies.Iso20022.Messages.SamplesTests;
 
 /// <summary>
 /// The validators are the judge of the generated samples: the object <see cref="IsoSample.Minimal{T}"/> makes from an interface must pass the

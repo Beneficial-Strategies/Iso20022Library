@@ -9,14 +9,14 @@ public class AddressType3Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var choice = BeneficialStrategies.Iso20022.Samples.AddressType3Choice.Valid.Code.Minimal;
+        var choice = BeneficialStrategies.Iso20022.Messages.Samples.AddressType3Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var choice = BeneficialStrategies.Iso20022.Samples.AddressType3Choice.Valid.Proprietary.Minimal;
+        var choice = BeneficialStrategies.Iso20022.Messages.Samples.AddressType3Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

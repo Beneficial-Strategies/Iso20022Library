@@ -9,14 +9,14 @@ public class ClearingSystemIdentification2Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var choice = BeneficialStrategies.Iso20022.Samples.ClearingSystemIdentification2Choice.Valid.Code.Minimal;
+        var choice = BeneficialStrategies.Iso20022.Messages.Samples.ClearingSystemIdentification2Choice.Valid.Code.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var choice = BeneficialStrategies.Iso20022.Samples.ClearingSystemIdentification2Choice.Valid.Proprietary.Minimal;
+        var choice = BeneficialStrategies.Iso20022.Messages.Samples.ClearingSystemIdentification2Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 }

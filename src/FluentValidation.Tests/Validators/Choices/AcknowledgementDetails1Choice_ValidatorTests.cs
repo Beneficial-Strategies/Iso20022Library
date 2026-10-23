@@ -9,14 +9,14 @@ public class AcknowledgementDetails1Choice_ValidatorTests
     [Fact]
     public void PayInScheduleReferenceVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.AcknowledgementDetails1Choice.Valid.PayInScheduleReference.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.AcknowledgementDetails1Choice.Valid.PayInScheduleReference.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void PayInCallReferenceVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.AcknowledgementDetails1Choice.Valid.PayInCallReference.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.AcknowledgementDetails1Choice.Valid.PayInCallReference.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

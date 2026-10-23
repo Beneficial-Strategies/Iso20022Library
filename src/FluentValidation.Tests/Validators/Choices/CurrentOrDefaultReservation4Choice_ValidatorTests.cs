@@ -9,14 +9,14 @@ public class CurrentOrDefaultReservation4Choice_ValidatorTests
     [Fact]
     public void CurrentVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CurrentOrDefaultReservation4Choice.Valid.Current.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.CurrentOrDefaultReservation4Choice.Valid.Current.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void DefaultVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CurrentOrDefaultReservation4Choice.Valid.Default.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.CurrentOrDefaultReservation4Choice.Valid.Default.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

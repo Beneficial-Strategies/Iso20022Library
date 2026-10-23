@@ -9,14 +9,14 @@ public class CryptographicKey1Choice_ValidatorTests
     [Fact]
     public void Signature_NoValidationErrors()
     {
-        var msg = BeneficialStrategies.Iso20022.Samples.CryptographicKey1Choice.Valid.Signature.Minimal;
+        var msg = BeneficialStrategies.Iso20022.Messages.Samples.CryptographicKey1Choice.Valid.Signature.Minimal;
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ILPV4_NoValidationErrors()
     {
-        var msg = BeneficialStrategies.Iso20022.Samples.CryptographicKey1Choice.Valid.ILPV4.Minimal;
+        var msg = BeneficialStrategies.Iso20022.Messages.Samples.CryptographicKey1Choice.Valid.ILPV4.Minimal;
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
 }

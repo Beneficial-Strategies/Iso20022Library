@@ -1,5 +1,7 @@
 # Tools for the Samples package (#88)
 
+> **The Samples package moved** to its own repository, [iso-20022-messages-samples](https://github.com/Beneficial-Strategies/iso-20022-messages-samples) (package `BeneficialStrategies.Iso20022.Messages.Samples`). The scripts below were used to make its first samples from the validator tests that are still here; they write into `src/Samples`, so point `SRC` at a clone of that repository to use them again.
+
 `Rewriter/` is the tool that moved the tests of `FluentValidation.Tests` off the message records (#88): a Roslyn rewriter that opens a
 test project with MSBuild, and with the compiler's own knowledge of every type rewrites
 `new Foo { A = x }`, target-typed `new() { ... }` and `source with { A = x }` into `IsoDataFactory.Make<IFoo>(...)` and

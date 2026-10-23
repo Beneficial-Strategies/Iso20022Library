@@ -9,14 +9,14 @@ public class StandingOrderOrAll4Choice_ValidatorTests
     [Fact]
     public void AllStandingOrdersVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.StandingOrderOrAll4Choice.Valid.AllStandingOrders.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.StandingOrderOrAll4Choice.Valid.AllStandingOrders.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void StandingOrderVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.StandingOrderOrAll4Choice.Valid.StandingOrder.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.StandingOrderOrAll4Choice.Valid.StandingOrder.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

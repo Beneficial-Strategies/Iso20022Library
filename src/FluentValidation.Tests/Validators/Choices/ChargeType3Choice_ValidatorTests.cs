@@ -9,14 +9,14 @@ public class ChargeType3Choice_ValidatorTests
     [Fact]
     public void CodeVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.ChargeType3Choice.Valid.Code.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.ChargeType3Choice.Valid.Code.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ProprietaryVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.ChargeType3Choice.Valid.Proprietary.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.ChargeType3Choice.Valid.Proprietary.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }
