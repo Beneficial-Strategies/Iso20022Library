@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
+    <PackageReference Include="BeneficialStrategies.Iso20022.Primitives" Version="[1.0.0-alpha, 1.1.0)" />
     <ProjectReference Include="..\FluentValidation.Xml\BeneficialStrategies.Iso20022.FluentValidation.Xml.csproj" />
   </ItemGroup>
 

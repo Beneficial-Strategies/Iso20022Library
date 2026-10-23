@@ -8,6 +8,8 @@ This is the **Iso20022Library** - a .NET library containing 3,311 ISO20022 finan
 
 **NuGet Package**: `BeneficialStrategies.Iso20022`
 
+**Primitives and the Factory live in their own repositories** ([iso-20022-primitives](https://github.com/Beneficial-Strategies/iso-20022-primitives), [iso-20022-factory](https://github.com/Beneficial-Strategies/iso-20022-factory)) and are published from there; the projects here use the published packages (`BeneficialStrategies.Iso20022.Primitives` and `.Factory`, from 1.0.0-alpha up to the next breaking change). The sections below that describe `src/Primitives` or `src/Factory` describe what those packages do, not folders of this repository.
+
 ### How the code is maintained
 
 Every file in this repository is maintained directly, with assistance from Claude and the ISO20022 MCP server. The code was generated from the ISO20022 specification when the library began, but that ended over a year ago and nothing regenerates it, so edit any file as needed, including the types under `Amounts`, `Choices`, `Codesets` and `Components`. A comment or heading that says "generated" describes the history, not a rule.
@@ -232,7 +234,7 @@ SDK.
 `BeneficialStrategies.Iso20022.FluentValidation` via `src/Directory.Build.props` (`<Version>` and
 the rest of the shared package metadata) — see "Multi-Package Repository Strategy" below for why.
 
-**The exception: `BeneficialStrategies.Iso20022.Primitives`, `.Interfaces`, `.FluentValidation`, `.FluentValidation.Xml`, `.FluentValidation.Payloads`, `.Factory` and `.Samples` also target `netstandard2.0`** (#26, #28), so that .NET Framework
+**The exception: `BeneficialStrategies.Iso20022.Primitives` and `.Factory` (their own repositories), `.Interfaces`, `.FluentValidation`, `.FluentValidation.Xml`, `.FluentValidation.Payloads` and `.Samples` also target `netstandard2.0`** (#26, #28), so that .NET Framework
 4.6.1+, Mono 5.4+ and Unity can take the primitive types, the interfaces, the validators and the payload validation without the records (`Common` and the
 saga toolkit stay net8.0 + net10.0; the validators reference `Primitives` and `Interfaces` only). The XML and JSON serializers, the value lists and the message-type registry are in `Primitives` for that reason (they work by
 reflection over the attributes and `IOuterRecord`, and the registry is told the records' assembly), so `.Payloads` needs `Primitives` only. `netstandard2.0` is one build for all of those. What it costs:
@@ -243,8 +245,8 @@ reflection over the attributes and `IOuterRecord`, and the registry is told the 
   methods the code uses; `Framework/NetStandardPolyfills.cs` maps `ArgumentNullException.ThrowIfNull` (a global using alias in that
   build only, so type tests for the exception write `System.ArgumentNullException`);
 * no `ReadOnlySpan` overloads of `Parse` (use `Substring`), and `LangVersion` is `latest`.
-Its tests run on .NET Framework 4.8 (`Primitives.Tests` adds `net48` on Windows; tests that need the records, such as the serializer tests on real messages, are in `Common.Tests`, and those of `.Payloads` in `FluentValidation.Payloads.Tests`; `FluentValidation.Xml.Tests` holds the tests of the Xml package, `Factory.Tests` those of the Factory package; `FluentValidation.NetStandard.Tests` runs the validators, the Xml extensions and the payload validators on .NET Framework 4.8 with classes of its own; the `primitives-net48` CI job). Code in `Primitives`
-must keep compiling for `netstandard2.0`: build it (`dotnet build src/Primitives`) after a change.
+Its tests run on .NET Framework 4.8 (`Primitives.Tests` and `Factory.Tests`, in their own repositories, add `net48` on Windows; tests that need the records, such as the serializer tests on real messages, are in `Common.Tests`, and those of `.Payloads` in `FluentValidation.Payloads.Tests`; `FluentValidation.Xml.Tests` holds the tests of the Xml package, `Factory.Tests` those of the Factory package; `FluentValidation.NetStandard.Tests` runs the validators, the Xml extensions and the payload validators on .NET Framework 4.8 with classes of its own; the `primitives-net48` CI job). Code in `Primitives`
+must keep compiling for `netstandard2.0`: build it (`dotnet build src/Interfaces`, the oldest of them here) after a change.
 `Iso20022PrimitiveJsonOptions` holds the JSON converters of the primitives alone.
 
 ### Build Performance (Known, Not a Misconfiguration)
@@ -285,25 +287,18 @@ The files are maintained directly (see "How the code is maintained" above). Clau
 ### Directory Structure
 
 ```
-src/Primitives/   # no reference to Common; same root namespace
-├── SimpleTypes/         # Primitive data types (structs)
-├── Codesets/            # Enums (code sets) and external code structs
-├── Amounts/             # Amount types
-├── ExternalSchema/      # External schema references (empty markers)
-├── UserDefined/         # User-defined content placeholders (empty markers)
-├── Metadata/            # Attribute definitions
-└── Framework/           # IIso* interfaces, IsoSimpleType attributes, Iso20022FormatException, and the JSON converters the types name
+# Primitives: the published package BeneficialStrategies.Iso20022.Primitives (repository iso-20022-primitives); no reference to Common; same root namespace
 
-src/Interfaces/   # references Primitives only; netstandard2.0 as well
+src/Interfaces/   # references the published Primitives only; netstandard2.0 as well
 ├── Components/ Choices/ MessageDefinitions/    # one interface per record, generated from the records (#27)
 └── GlobalUsings.cs
 
-src/Factory/                   # references Primitives only; netstandard2.0 as well: classes for the interfaces, built at run time (#61)
-src/Samples/                   # references Primitives, Interfaces and Factory; netstandard2.0 as well: named valid and invalid objects for tests (#88)
-src/FluentValidation.Xml/        # references Primitives only; netstandard2.0 as well: validate XML from text, a document or an element (#21)
-src/FluentValidation.Payloads/   # references Primitives only; netstandard2.0 as well: validates raw XML or JSON payloads (#28)
+# Factory: the published package BeneficialStrategies.Iso20022.Factory (repository iso-20022-factory); references Primitives only
+src/Samples/                   # references the published Primitives and Factory, and Interfaces; netstandard2.0 as well: named valid and invalid objects for tests (#88)
+src/FluentValidation.Xml/        # references the published Primitives only; netstandard2.0 as well: validate XML from text, a document or an element (#21)
+src/FluentValidation.Payloads/   # references the published Primitives only; netstandard2.0 as well: validates raw XML or JSON payloads (#28)
 
-src/Common/       # references Primitives and Interfaces
+src/Common/       # references the published Primitives, and Interfaces
 ├── Components/          # Message components (12,653 types)
 ├── Choices/             # Polymorphic choice types
 └── MessageDefinitions/  # Top-level message type files
@@ -319,9 +314,8 @@ records, which stay the source of the documentation and of the attributes; **aft
 generator for the areas that use it** (it is safe to run again) and `InterfacesTests` tells when an interface and its record disagree.
 The interfaces of an area are generated once the records of that area are final.
 
-The primitives live in their own assembly so that an implementer can take them without the records. Nothing in `Primitives` may
-reference `Common`: build `Primitives` alone to check. Their tests are in `BeneficialStrategies.Iso20022.Primitives.Tests` (which
-references `Common` only for `Iso20022JsonSerializerOptions`). 
+The primitives live in their own package, and their own repository, so that an implementer can take them without the records. Nothing in `Primitives` may
+reference `Common`, and nothing here may be needed by it: it is the root of the family.
 
 **Primitive types are named as the specification names them.** A member is declared `public required Max35Text MessageIdentification`,
 never through an alias (there are none since #33: the `Iso*` global usings were removed). A name that
@@ -359,192 +353,12 @@ clashes with another type is written with its namespace: a choice variant named 
 - Enums with `[EnumMember]` and `[IsoId]` attributes
 - Versioned codes (e.g., `PaymentMethod3Code`)
 
-### ISO Simple Value Primitives — Non-Negotiable Design Pattern
+### ISO Simple Value Primitives — moved
 
-**An empty `enum` is never an acceptable type for a field in this library.** If a user cannot
-assign a value to a `required` property, the library is broken — full stop.
-
-All ISO 20022 primitive types that carry constraints (pattern, length, range, character set) are
-represented as `readonly struct` wrappers implementing `IIsoSimpleValue<T>`. This covers:
-
-- External code sets (open-value registries like `ExternalBankTransactionDomainCode`)
-- Spec-fixed string types (`BICIdentifier`, `IBANIdentifier`, `Max35Text`, etc.)
-- Decimal types with range/precision constraints (`IsoDecimal`, etc.)
-- Binary types for cryptographic material (`SignatureValue`, `DigestValue`, etc.)
-
-#### Interface Hierarchy (`Framework/`)
-
-```
-IIsoSimpleValue<T>          — base: any ISO primitive wrapping a CLR value of type T
-  IIsoExternalCode          — semantic marker: value list is an external ISO registry
-```
-
-`IIsoSimpleValue<T>` is the serialization hook. Both `Iso20022XmlSerializer` and
-`Iso20022ExternalCodeJsonConverter<T>` detect this interface to treat the type as a scalar.
-Implementing the interface is what registers correct serialization behavior — no per-type
-XML attribute is needed.
-
-#### Struct Template
-
-Every primitive struct follows this exact shape. Replace `MyCode`, `string`, `Pattern`,
-and the `[IsoId]`/`[Description]` values:
-
-```csharp
-[DataContract]
-[Serializable]
-[IsoId("...")]
-[Description(@"...")]
-[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<MyCode>))]   // string types
-public readonly struct MyCode : IIsoExternalCode, IEquatable<MyCode>
-{
-    /// <summary>ISO 20022 format constraint for this type.</summary>
-    public const string Pattern = @"^[A-Z0-9]{1,4}$";
-
-    /// <inheritdoc/>
-    public string Value { get; }
-
-    /// <exception cref="Iso20022FormatException">Value does not satisfy <see cref="Pattern"/>.</exception>
-    public MyCode(string value)
-    {
-        if (!Regex.IsMatch(value, Pattern))
-            throw new Iso20022FormatException(typeof(MyCode), value, Pattern);
-        Value = value;
-    }
-
-    public static bool TryCreate(string value, [NotNullWhen(true)] out MyCode result)
-    {
-        if (Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default;
-        return false;
-    }
-
-    public static implicit operator MyCode(string value) => new(value);
-    public static implicit operator string(MyCode code) => code.Value;
-
-    public override string ToString() => Value ?? string.Empty;
-
-    public bool Equals(MyCode other) => Value == other.Value;
-    public override bool Equals(object? obj) => obj is MyCode other && Equals(other);
-    public override int GetHashCode() => Value?.GetHashCode() ?? 0;
-
-    public static bool operator ==(MyCode a, MyCode b)    => a.Equals(b);
-    public static bool operator !=(MyCode a, MyCode b)    => !a.Equals(b);
-    public static bool operator ==(MyCode a, string? b)   => a.Value == b;
-    public static bool operator !=(MyCode a, string? b)   => a.Value != b;
-    public static bool operator ==(string? a, MyCode b)   => a == b.Value;
-    public static bool operator !=(string? a, MyCode b)   => a != b.Value;
-}
-```
-
-**For `IIsoSimpleValue<decimal>` types:** the constructor receives a `decimal` (not a string).
-The XML serializer parses text → `decimal.Parse()` → passes to the constructor. The constructor
-then applies ISO-specific constraints (min/max, scale).
-
-**For `IIsoSimpleValue<byte[]>` types** (digital signatures, digests, certificates): the
-constructor receives a `byte[]`. The XML serializer base64-decodes → passes to constructor.
-These types may have additional behavioral contracts (e.g. minimum length, OID validation)
-tested separately.
-
-#### Hybrid Pattern: External Code Set With Known Members
-
-Some `IIsoExternalCode` types are classified by the ISO 20022 data dictionary as an **external
-code set** ("codes maintained outside ISO 20022" — the registry can add new codes without a new
-ISO 20022 schema version) **and yet the MCP server's `get_code_set_details` tool still returns a
-concrete, named member table for them** (fetched from a secondary published external-registry
-file, not just the base repository). `ExternalAuthenticationMethod1Code` is the first confirmed
-example: 68 named codes with full definitions, despite being formally external.
-
-**Always verify this per type — don't assume.** Call `get_code_set_details` and check whether the
-response actually contains member rows. Many external code sets genuinely have no data available
-via MCP; those stay a plain open struct per the template above, nothing more. Only apply this
-hybrid when MCP demonstrably returns members.
-
-**When it does, do not convert the type to a closed `enum`.** The struct must stay exactly as
-open as the base template — same `(string)` constructor validating only length/pattern, same
-`TryCreate`, same implicit operators — because the "external code set" classification means a
-registry addition next month is a valid ISO 20022 value with zero schema-version signal. A closed
-`enum` would reject that value outright: a real interoperability bug, not a theoretical one.
-
-**Instead, add the known members as `public static readonly` named instances alongside the open
-struct** — giving IntelliSense/compile-time-friendly discoverability for the values known today,
-without narrowing what the constructor accepts:
-
-```csharp
-public readonly struct MyExternalCode : IIsoExternalCode, IEquatable<MyExternalCode>
-{
-    // ... Pattern, Value, constructor, TryCreate, operators — unchanged from the base template ...
-
-    // ── Known values (per ISO 20022 external registry snapshot, via MCP get_code_set_details) ──
-    // Convenience only — the constructor above still accepts any value satisfying Pattern,
-    // including future registry additions not listed here.
-
-    /// <summary>Serial Number of the acceptor's certificate.</summary>
-    [IsoId("_w_NQIbJSEe-rYMhHpAEI4A")]
-    [Description(@"Serial Number of the acceptor's certificate.")]
-    public static readonly MyExternalCode AcceptorCertificateSerialNumber = new("ACSN");
-
-    // ... one such field per member MCP returned ...
-}
-```
-
-Preserve, per member, everything the equivalent `enum` member would have carried: the field name
-(matches the original enum member identifier — least astonishment, no reason to rename), the
-verbatim `<summary>`/`[Description]` text (same non-negotiable rule as any other public member —
-see "XML Documentation" above), and `[IsoId]` set to that specific **code's own** id from the MCP
-table (not the codeset's id, which belongs on the type-level `[IsoId]` instead).
-
-**Retrofit sweep of pre-existing conversions — done 2026-08-13, re-confirmed 2026-08-16, both came
-back empty.** All 35 `IIsoExternalCode` structs converted before this pattern was identified (the
-original Batch 1 primitives pass, plus a handful of other Bucket B types) were individually
-re-checked against `get_code_set_details` on two separate occasions, 3 days apart. Both times every
-one returned zero member rows — none had unused data to retrofit, so all 35 are confirmed already
-in their correct final form (plain open struct, no known-value constants; nothing missing, nothing
-still an enum). Full list: `BusinessMessagePriorityCode`, `CountryCode`, `CountrySubDivisionCode`,
-`EuroCurrencyCode`, `UnicodeChartsCode`, `ExternalClearingSystemMemberCode_Obsolete`, and 29
-`External*Code`/`External*1Code` pairs (bank-transaction domain/family/sub-family, card-transaction
-category, cheque-agent instruction, communication format, credit-line type, entity size/type,
-financial-institution identification, financial-instrument product type, industry-sector
-classification, mandate-setup reason, payment-scenario). If the MCP snapshot is ever refreshed with
-new external-registry data, this sweep is worth re-running — `get_code_set_details` per type, same
-as before.
-
-#### Serialization Contract
-
-| Layer | String types | Decimal types | Binary types |
-|---|---|---|---|
-| XML | `IIsoSimpleValue<string>` detected → text content | `IIsoSimpleValue<decimal>` → `decimal.Parse()` → ctor | `IIsoSimpleValue<byte[]>` → Base64 decode → ctor |
-| JSON | `[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<T>))]` on class | Same converter, generic over T | Same converter |
-| Error | `Iso20022FormatException` from ctor → wrapped as `JsonException` / `InvalidOperationException` | ← same | ← same |
-
-#### Equality never exceeds the wire text
-
-A primitive's equality (`Equals`, `==`, `GetHashCode`) must not be finer than what its serialized form preserves: two values
-are equal if and only if they are written as the same text, or the type is coarser than its text on purpose (a `decimal`
-reads `1.0` and `1.00` as one number). A type must not keep state that the text drops, such as a timezone for a format that has no
-timezone, because two values would be unequal yet write identically. `ISOTime` and `ISODateTime` carry a timezone because
-their formats include one; `ISODate`'s format is `YYYY-MM-DD`, so it has none and a text with a timezone is refused.
-`SimpleValueNativeScalarContractTests` states the rule as a test.
-
-#### Contract Test Registration
-
-Every `IIsoSimpleValue<T>` type must have an entry in the contract test data source in
-`Codesets/SimpleValueContractTests.cs`. The test verifies: valid construction, invalid
-construction throws `Iso20022FormatException`, `TryCreate` both paths, struct/struct equality,
-struct/value equality, `ToString`, JSON round-trip, XML round-trip via the serializer.
-
-Adding a new primitive = one new entry in the data dictionary. A meta-test fails if any
-`IIsoSimpleValue<T>` type in the assembly is missing from the dictionary.
-
-Special types with additional behavioral requirements (binary, signatures) still participate
-in the base contract test and add their own test methods alongside it.
-
-#### Before writing or modifying any primitive type, verify
-
-1. Is it an `enum` with zero members? → Must be converted to `readonly struct`.
-2. Does the struct implement `IIsoSimpleValue<T>` (or `IIsoExternalCode`)? → Required.
-3. Does the constructor validate and throw `Iso20022FormatException` on failure? → Required.
-4. Are all six equality operators present (struct/struct and struct/T)? → Required.
-5. Is there an entry in the contract test data source? → Required.
+The design pattern of the primitive types (the `readonly struct` template, the hybrid pattern for external code sets, the serialization
+contract, equality that never exceeds the wire text, contract-test registration) is in the repository of the package that holds them,
+[iso-20022-primitives](https://github.com/Beneficial-Strategies/iso-20022-primitives), in `docs/DesignPattern.md`. Primitives and the
+Factory are published from their own repositories; the packages here use the published ones.
 
 ### Key Interfaces (Framework/)
 
@@ -562,7 +376,7 @@ in the base contract test and add their own test methods alongside it.
 All NuGet packages produced by Beneficial Strategies that depend on each other live in this
 single repository. The planned packages include (at minimum):
 
-- `BeneficialStrategies.Iso20022.Primitives` — the primitive data types, code sets and external codes (no records; `BeneficialStrategies.Iso20022` depends on it)
+- `BeneficialStrategies.Iso20022.Primitives` — the primitive data types, code sets and external codes (no records; `BeneficialStrategies.Iso20022` depends on it); now in its own repository, iso-20022-primitives
 - `BeneficialStrategies.Iso20022` — this library (ISO 20022 message types)
 - `BeneficialStrategies.Iso20022.MassTransit.Sagas` — MassTransit Sagas strongly correlated to ISO 20022 messages (named with the engine in the package id, not just `.Sagas`, since an NServiceBus-based sagas package is a plausible future sibling and this disambiguates on NuGet and in code from day one)
 - `BeneficialStrategies.Iso20022.MassTransit` (planned, not yet started) — a thin adapter package

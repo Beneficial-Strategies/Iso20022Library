@@ -26,14 +26,7 @@ jobs:
       # frameworks via downloaded reference packs, no need to install multiple SDK versions
       # side by side just to pack. See src/global.json and CLAUDE.md "Target Framework Policy".
 
-      # Primitives first: Common's ProjectReference to it becomes a PackageReference pinned to the same Version.
-      - name: Build and pack (BeneficialStrategies.Iso20022.Primitives)
-        run: |
-          cd src
-          dotnet pack Primitives \
-            -c Release \
-            --output ./nupkg
-
+      # Primitives and Factory are published from their own repositories; the packages below depend on the published ones.
       - name: Build and pack (BeneficialStrategies.Iso20022.Interfaces)
         run: |
           cd src
@@ -56,14 +49,6 @@ jobs:
         run: |
           cd src
           dotnet pack FluentValidation \
-            -c Release \
-            --output ./nupkg
-
-      # Needs only Primitives (not the message records).
-      - name: Build and pack (BeneficialStrategies.Iso20022.Factory)
-        run: |
-          cd src
-          dotnet pack Factory \
             -c Release \
             --output ./nupkg
 
