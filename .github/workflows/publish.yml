@@ -26,18 +26,9 @@ jobs:
       # frameworks via downloaded reference packs, no need to install multiple SDK versions
       # side by side just to pack. See src/global.json and CLAUDE.md "Target Framework Policy".
 
-      # Primitives, Factory and Messages are published from their own repositories; the packages below depend on the published ones.
-      - name: Build and pack (BeneficialStrategies.Iso20022)
-        run: |
-          cd src
-          dotnet pack Common \
-            -c Release \
-            --output ./nupkg
-
-      # Packed in dependency order per CLAUDE.md "Multi-Package Repository Strategy": the
-      # companion package's ProjectReference to Common is auto-translated into a PackageReference
-      # in its own .nuspec at pack time, pinned to Common's exact Version (both packages share
-      # <Version> via Directory.Build.props, so this is always in lockstep, never a range).
+      # Primitives, Factory, Messages and the records (Messages.Records) are published from their own repositories; the packages below depend on the published ones.
+      # The packages below are packed in dependency order. Their references to each other become package references in each
+      # .nuspec at pack time, pinned to the shared <Version> of Directory.Build.props (lockstep, never a range).
       - name: Build and pack (BeneficialStrategies.Iso20022.FluentValidation)
         run: |
           cd src
@@ -99,7 +90,7 @@ jobs:
         run: |
           version="${GITHUB_REF_NAME#v}"
           awk -v v="$version" '$0 == v {found=1; next} found && /^[^ ]/ {exit} found {print}' \
-            src/Common/release-notes.txt | sed 's/^    //' > release-body.md
+            src/FluentValidation/release-notes.txt | sed 's/^    //' > release-body.md
           [ -s release-body.md ] || echo "See the NuGet package release notes." > release-body.md
           flags=()
           case "$version" in *-*) flags+=(--prerelease);; esac

@@ -29,7 +29,7 @@
     <ProjectReference Include="..\FluentValidation.Xml\BeneficialStrategies.Iso20022.FluentValidation.Xml.csproj" />
     <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0-alpha, 1.1.0)" />
     <ProjectReference Include="..\FluentValidation\BeneficialStrategies.Iso20022.FluentValidation.csproj" />
-    <ProjectReference Include="..\Common\BeneficialStrategies.Iso20022.Common.csproj" />
+    <PackageReference Include="BeneficialStrategies.Iso20022.Messages.Records" Version="[1.0.0-alpha, 1.1.0)" />
   </ItemGroup>
 
 </Project>

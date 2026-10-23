@@ -1,4 +1,0 @@
-# The records of BeneficialStrategies.Iso20022.Common are maintained by hand and are not run through CSharpier; the files generated for
-# the interfaces (#27) are, with --include-generated (see tools/interfaces/README.md).
-src/Common/**/*.cs
-!src/Common/**/*.Interfaces.cs

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <!-- Tests of the netstandard2.0 builds of Primitives, Interfaces, FluentValidation, FluentValidation.Xml, FluentValidation.Payloads and Factory, with no message record
-         (Common is net8.0 and net10.0 only): classes of the tests' own implement the interfaces. .NET Framework 4.8 needs Windows (CI has a job for it). -->
+         (the records are net8.0 and net10.0 only): classes of the tests' own implement the interfaces. .NET Framework 4.8 needs Windows (CI has a job for it). -->
     <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('Windows')) Or '$(BuildNet48)' == 'true'">$(TargetFrameworks);net48</TargetFrameworks>
     <LangVersion>latest</LangVersion>

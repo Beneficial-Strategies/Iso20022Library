@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- Mirrors the library's TFM policy so both targets actually get exercised, not just compiled — see BeneficialStrategies.Iso20022.Common.csproj. -->
+    <!-- The same targets as the packages, so each build is run and not only compiled. -->
     <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>

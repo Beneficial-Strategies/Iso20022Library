@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- TFM policy: same rationale and same two targets as BeneficialStrategies.Iso20022.Common — see that project's csproj. -->
+    <!-- The two newest .NET LTS releases, plus netstandard2.0 as the entry point for older systems (.NET Framework 4.6.1+, Mono, Unity). -->
     <TargetFrameworks>netstandard2.0;net8.0;net10.0</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
