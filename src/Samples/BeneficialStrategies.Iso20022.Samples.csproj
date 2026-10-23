@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="BeneficialStrategies.Iso20022.Primitives" Version="[1.0.0-alpha, 1.1.0)" />
-    <ProjectReference Include="..\Interfaces\BeneficialStrategies.Iso20022.Interfaces.csproj" />
+    <PackageReference Include="BeneficialStrategies.Iso20022.Messages" Version="[1.0.0-alpha, 1.1.0)" />
     <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0-alpha, 1.1.0)" />
   </ItemGroup>
 

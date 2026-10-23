@@ -8,7 +8,7 @@ This is the **Iso20022Library** - a .NET library containing 3,311 ISO20022 finan
 
 **NuGet Package**: `BeneficialStrategies.Iso20022`
 
-**Primitives and the Factory live in their own repositories** ([iso-20022-primitives](https://github.com/Beneficial-Strategies/iso-20022-primitives), [iso-20022-factory](https://github.com/Beneficial-Strategies/iso-20022-factory)) and are published from there; the projects here use the published packages (`BeneficialStrategies.Iso20022.Primitives` and `.Factory`, from 1.0.0-alpha up to the next breaking change). The sections below that describe `src/Primitives` or `src/Factory` describe what those packages do, not folders of this repository.
+**Primitives, the Factory and the interfaces (`BeneficialStrategies.Iso20022.Messages`) live in their own repositories** ([iso-20022-primitives](https://github.com/Beneficial-Strategies/iso-20022-primitives), [iso-20022-factory](https://github.com/Beneficial-Strategies/iso-20022-factory), [iso-20022-messages](https://github.com/Beneficial-Strategies/iso-20022-messages)) and are published from there; the projects here use the published packages (`BeneficialStrategies.Iso20022.Primitives`, `.Factory` and `.Messages`, from 1.0.0-alpha up to the next breaking change). The sections below that describe `src/Primitives` or `src/Factory` describe what those packages do, not folders of this repository.
 
 ### How the code is maintained
 
@@ -246,7 +246,7 @@ reflection over the attributes and `IOuterRecord`, and the registry is told the 
   build only, so type tests for the exception write `System.ArgumentNullException`);
 * no `ReadOnlySpan` overloads of `Parse` (use `Substring`), and `LangVersion` is `latest`.
 Its tests run on .NET Framework 4.8 (`Primitives.Tests` and `Factory.Tests`, in their own repositories, add `net48` on Windows; tests that need the records, such as the serializer tests on real messages, are in `Common.Tests`, and those of `.Payloads` in `FluentValidation.Payloads.Tests`; `FluentValidation.Xml.Tests` holds the tests of the Xml package, `Factory.Tests` those of the Factory package; `FluentValidation.NetStandard.Tests` runs the validators, the Xml extensions and the payload validators on .NET Framework 4.8 with classes of its own; the `primitives-net48` CI job). Code in `Primitives`
-must keep compiling for `netstandard2.0`: build it (`dotnet build src/Interfaces`, the oldest of them here) after a change.
+must keep compiling for `netstandard2.0`: build it (`dotnet build src/FluentValidation`, the oldest of them here) after a change.
 `Iso20022PrimitiveJsonOptions` holds the JSON converters of the primitives alone.
 
 ### Build Performance (Known, Not a Misconfiguration)
@@ -289,9 +289,7 @@ The files are maintained directly (see "How the code is maintained" above). Clau
 ```
 # Primitives: the published package BeneficialStrategies.Iso20022.Primitives (repository iso-20022-primitives); no reference to Common; same root namespace
 
-src/Interfaces/   # references the published Primitives only; netstandard2.0 as well
-├── Components/ Choices/ MessageDefinitions/    # one interface per record, generated from the records (#27)
-└── GlobalUsings.cs
+# Messages: the published package BeneficialStrategies.Iso20022.Messages (repository iso-20022-messages), the interfaces, generated from the records here by tools/interfaces (#27); references Primitives only
 
 # Factory: the published package BeneficialStrategies.Iso20022.Factory (repository iso-20022-factory); references Primitives only
 src/Samples/                   # references the published Primitives and Factory, and Interfaces; netstandard2.0 as well: named valid and invalid objects for tests (#88)

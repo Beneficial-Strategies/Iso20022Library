@@ -10,12 +10,13 @@ documentation of the record and of its members with <inheritdoc cref="..."/> (th
 Run from the repository root:  python3 tools/interfaces/generate_interfaces.py --areas pacs
 """
 import argparse
+import os
 import re
 import sys
 from pathlib import Path
 
 COMMON = Path("src/Common")
-OUT = Path("src/Interfaces")
+OUT = Path(os.environ.get("ISO20022_MESSAGES_DIR", "../iso-20022-messages/src/Messages"))   # the package is in its own repository, next to this one
 KEEP_ATTRS = ("IsoId", "DisplayName", "IsoXmlTag", "IsoAmount")
 
 DECL = re.compile(r"^\s*public\s+(abstract\s+)?(partial\s+)?record\s+(\w+)(?:\s*:\s*([\w.]+))?")

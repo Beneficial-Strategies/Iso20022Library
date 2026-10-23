@@ -2,7 +2,7 @@
 
 **Named ISO 20022 objects for your tests.** When a test needs "a valid account identification", "a valid cash account" or, in time, "a valid payment message", it takes one from here instead of building it by hand: no ten lines of setup, no message records to install, and the same object every time.
 
-The samples are built against the **interfaces** of the model ([BeneficialStrategies.Iso20022.Interfaces](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)), the contract the rest of the family is written to, with the objects made by the [Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory). So a sample works with anything that takes the interface: the validators, a consumer of a message bus, a method of your own.
+The samples are built against the **interfaces** of the model ([BeneficialStrategies.Iso20022.Messages](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Messages)), the contract the rest of the family is written to, with the objects made by the [Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory). So a sample works with anything that takes the interface: the validators, a consumer of a message bus, a method of your own.
 
 ```
 dotnet add package BeneficialStrategies.Iso20022.Samples --version 0.7.0-alpha

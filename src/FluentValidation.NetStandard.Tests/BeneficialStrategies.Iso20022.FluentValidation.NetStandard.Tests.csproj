@@ -33,7 +33,7 @@
     <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0-alpha, 1.1.0)" />
     <ProjectReference Include="..\FluentValidation.Payloads\BeneficialStrategies.Iso20022.FluentValidation.Payloads.csproj" />
     <ProjectReference Include="..\FluentValidation\BeneficialStrategies.Iso20022.FluentValidation.csproj" />
-    <ProjectReference Include="..\Interfaces\BeneficialStrategies.Iso20022.Interfaces.csproj" />
+    <PackageReference Include="BeneficialStrategies.Iso20022.Messages" Version="[1.0.0-alpha, 1.1.0)" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net48'">

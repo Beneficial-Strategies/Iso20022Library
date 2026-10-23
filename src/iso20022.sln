@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso200
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso20022.MassTransit.Sagas.Tests", "MassTransit.Sagas.Tests\BeneficialStrategies.Iso20022.MassTransit.Sagas.Tests.csproj", "{0446F77D-40EE-40BF-AD0D-FFE24CBEF78C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso20022.Interfaces", "Interfaces\BeneficialStrategies.Iso20022.Interfaces.csproj", "{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso20022.FluentValidation.Payloads", "FluentValidation.Payloads\BeneficialStrategies.Iso20022.FluentValidation.Payloads.csproj", "{FEEC541A-AD0A-4236-9C80-B944D655A229}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso20022.FluentValidation.Payloads.Tests", "FluentValidation.Payloads.Tests\BeneficialStrategies.Iso20022.FluentValidation.Payloads.Tests.csproj", "{193F14BC-F1A2-433A-B6AD-C6825C6E281E}"
@@ -119,18 +117,6 @@ Global
 		{0446F77D-40EE-40BF-AD0D-FFE24CBEF78C}.Release|x64.Build.0 = Release|Any CPU
 		{0446F77D-40EE-40BF-AD0D-FFE24CBEF78C}.Release|x86.ActiveCfg = Release|Any CPU
 		{0446F77D-40EE-40BF-AD0D-FFE24CBEF78C}.Release|x86.Build.0 = Release|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Debug|x64.Build.0 = Debug|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Debug|x86.Build.0 = Debug|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Release|x64.ActiveCfg = Release|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Release|x64.Build.0 = Release|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Release|x86.ActiveCfg = Release|Any CPU
-		{AB93DCF2-2FAF-4C46-A5F0-00075EDAEE10}.Release|x86.Build.0 = Release|Any CPU
 		{FEEC541A-AD0A-4236-9C80-B944D655A229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEEC541A-AD0A-4236-9C80-B944D655A229}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEEC541A-AD0A-4236-9C80-B944D655A229}.Debug|x64.ActiveCfg = Debug|Any CPU

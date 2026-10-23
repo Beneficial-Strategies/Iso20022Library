@@ -6,7 +6,7 @@ using BeneficialStrategies.Iso20022.Framework;
 namespace BeneficialStrategies.Iso20022;
 
 /// <summary>
-/// The interfaces of BeneficialStrategies.Iso20022.Interfaces and the records of BeneficialStrategies.Iso20022.Common correspond
+/// The interfaces of BeneficialStrategies.Iso20022.Messages and the records of BeneficialStrategies.Iso20022.Common correspond
 /// one to one (#76): each message, component, choice and choice variant has exactly one of each, in the same namespace, of the same
 /// kind, and the record implements its interface itself rather than inheriting it.
 /// </summary>

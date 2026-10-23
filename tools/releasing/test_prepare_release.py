@@ -49,7 +49,7 @@ class Entries(unittest.TestCase):
     def test_areas_route_to_packages_and_sagas_are_unpublished(self):
         e = r.build_entries([issue(1, "a", "bug", "area:validation"), issue(2, "b", "bug"), issue(3, "c", "bug", "area:sagas")], {})
         self.assertEqual({"validation"}, e[0]["packages"])
-        self.assertEqual({"core", "interfaces", "validation", "payloads", "xml", "samples"}, e[1]["packages"])
+        self.assertEqual({"core", "validation", "payloads", "xml", "samples"}, e[1]["packages"])
         self.assertEqual([1, 2], [x["number"] for x in e])
 
 
@@ -58,10 +58,6 @@ class Render(unittest.TestCase):
         e = r.build_entries([issue(2, "Fix thing", "bug"), issue(1, "New message", "message-support"), issue(3, "Rename", "breaking-change")], {})
         block = r.render_block("0.8.0-alpha", e, "core")
         self.assertEqual("0.8.0-alpha\n    Breaking change: Rename (#3).\n    Added: New message (#1).\n    Fixed: Fix thing (#2).\n", block)
-
-    def test_the_interfaces_area_routes_to_the_interfaces_notes_only(self):
-        e = r.build_entries([issue(1, "an interface", "enhancement", "area:interfaces")], {})
-        self.assertEqual({"interfaces"}, e[0]["packages"])
 
     def test_a_package_without_entries_says_so(self):
         e = r.build_entries([issue(1, "Only core", "bug", "area:core")], {})
