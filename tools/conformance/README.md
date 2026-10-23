@@ -1,3 +1,5 @@
+> **These tools act on `src/Common`, which has left this repository**: the records are now written by a source generator from the interfaces of `iso-20022-messages`, so the model that these tools compare with ISO's data and correct is the interfaces. They are kept here until they are moved to that repository and pointed at it; do not run them against this one.
+
 # Conformance tools
 
 Compare the record model with ISO's own data (#41, #39). Derived files go to `../_work/Iso20022Library/` (`ISO20022_WORK` to change it).

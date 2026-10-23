@@ -49,19 +49,15 @@ class Entries(unittest.TestCase):
     def test_areas_route_to_packages_and_sagas_are_unpublished(self):
         e = r.build_entries([issue(1, "a", "bug", "area:validation"), issue(2, "b", "bug"), issue(3, "c", "bug", "area:sagas")], {})
         self.assertEqual({"validation"}, e[0]["packages"])
-        self.assertEqual({"core", "validation", "payloads", "xml", "samples"}, e[1]["packages"])
+        self.assertEqual({"validation", "payloads", "xml", "samples"}, e[1]["packages"])
         self.assertEqual([1, 2], [x["number"] for x in e])
 
 
 class Render(unittest.TestCase):
     def test_block_is_in_the_existing_style_and_ordered_by_heading(self):
         e = r.build_entries([issue(2, "Fix thing", "bug"), issue(1, "New message", "message-support"), issue(3, "Rename", "breaking-change")], {})
-        block = r.render_block("0.8.0-alpha", e, "core")
+        block = r.render_block("0.8.0-alpha", e, "validation")
         self.assertEqual("0.8.0-alpha\n    Breaking change: Rename (#3).\n    Added: New message (#1).\n    Fixed: Fix thing (#2).\n", block)
-
-    def test_a_package_without_entries_says_so(self):
-        e = r.build_entries([issue(1, "Only core", "bug", "area:core")], {})
-        self.assertIn("No changes", r.render_block("0.7.1-alpha", e, "validation"))
 
     def test_append_keeps_the_blank_line_between_versions(self):
         self.assertEqual("0.1.0\n    a\n\n0.2.0\n    b\n", r.append_block("0.1.0\n    a\n", "0.2.0\n    b\n"))
