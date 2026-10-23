@@ -9,14 +9,14 @@ public class CharacterSearch1Choice_ValidatorTests
     [Fact]
     public void EqualVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CharacterSearch1Choice.Valid.Equal.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.CharacterSearch1Choice.Valid.Equal.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void ContainVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CharacterSearch1Choice.Valid.Contain.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.CharacterSearch1Choice.Valid.Contain.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

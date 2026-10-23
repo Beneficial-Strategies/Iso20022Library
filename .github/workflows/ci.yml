@@ -37,7 +37,7 @@ jobs:
         run: python3 -m unittest -q test_prepare_release
         working-directory: tools/releasing
 
-  # The netstandard2.0 builds of FluentValidation, FluentValidation.Payloads, Samples and (from their own repositories) Factory and Messages
+  # The netstandard2.0 builds of FluentValidation, FluentValidation.Payloads and (from their own repositories) Factory, Messages and Messages.Samples
   # are for .NET Framework (4.6.1 and later), Mono and Unity. Their tests run on .NET Framework 4.8, which needs Windows.
   # (Common and the saga toolkit are net8.0 and net10.0 only. Primitives and Factory test themselves in their own repositories.)
   netstandard-net48:

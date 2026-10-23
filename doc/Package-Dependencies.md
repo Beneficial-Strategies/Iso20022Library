@@ -11,7 +11,7 @@ flowchart TD
     P --> V
     V --> X["FluentValidation.Xml"]
     V --> L["FluentValidation.Payloads"]
-    F --> S["Samples (this repository)"]
+    F --> S["Messages.Samples (the samples)<br/>iso-20022-messages-samples"]
     M --> S
     M --> G["MassTransit.Sagas (not published)"]
 ```
@@ -23,6 +23,6 @@ flowchart TD
 | the ready-made records | `BeneficialStrategies.Iso20022.Messages.Records` (brings the interfaces and the primitives) |
 | to read a message without the records | `BeneficialStrategies.Iso20022.Factory` and `Messages` |
 | the rules the types cannot express | `BeneficialStrategies.Iso20022.FluentValidation` |
-| valid objects for tests | `BeneficialStrategies.Iso20022.Samples` |
+| valid objects for tests | `BeneficialStrategies.Iso20022.Messages.Samples` |
 
 Rules that held in the monorepo and hold between the repositories: Primitives references nothing of ours; the records are the only package that implements the interfaces; the Factory knows nothing of the Samples, and the Samples use the Factory.

@@ -9,14 +9,14 @@ public class AmountOrRate1Choice_ValidatorTests
     [Fact]
     public void AmountVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.AmountOrRate1Choice.Valid.Amount.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.AmountOrRate1Choice.Valid.Amount.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void RateVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.AmountOrRate1Choice.Valid.Rate.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.AmountOrRate1Choice.Valid.Rate.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

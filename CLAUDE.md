@@ -10,8 +10,9 @@ The remains of the monorepo of the ISO 20022 .NET family. Each package is leavin
 | `BeneficialStrategies.Iso20022.Factory` | [iso-20022-factory](https://github.com/Beneficial-Strategies/iso-20022-factory) |
 | `BeneficialStrategies.Iso20022.Messages` (the interfaces; prepared here as `Interfaces`) | [iso-20022-messages](https://github.com/Beneficial-Strategies/iso-20022-messages) |
 | `BeneficialStrategies.Iso20022.Messages.Records` (the records, written by a source generator from the interfaces; replaces `BeneficialStrategies.Iso20022`, formerly `src/Common`, whose last version is 0.7.0-alpha) | [iso-20022-messages-records](https://github.com/Beneficial-Strategies/iso-20022-messages-records) |
+| `BeneficialStrategies.Iso20022.Messages.Samples` (named valid objects for tests, and `IsoSample.Minimal<T>()`) | [iso-20022-messages-samples](https://github.com/Beneficial-Strategies/iso-20022-messages-samples) |
 
-**What is still here** (`src/`): `FluentValidation` (the validators of the model), `FluentValidation.Xml`, `FluentValidation.Payloads`, `Samples` (named valid and invalid objects for tests) and `MassTransit.Sagas` (not published), each with its tests. They use the published packages above, from 1.0.0-alpha up to the next breaking change; a change that needs a new version of one of them is made in its repository, released, and then the minimum is raised here.
+**What is still here** (`src/`): `FluentValidation` (the validators of the model), `FluentValidation.Xml`, `FluentValidation.Payloads` and `MassTransit.Sagas` (a proof of concept, not published, no support intended; see #107), each with its tests. They use the published packages above, from 1.0.0-alpha up to the next breaking change; a change that needs a new version of one of them is made in its repository, released, and then the minimum is raised here.
 
 The guidance that used to be in this file moved with the code it was about: the design pattern of the primitive types and the XML documentation rules to iso-20022-primitives (`docs/`), the rules for the documentation of the interfaces to iso-20022-messages (`docs/`), the build performance of the model and the test patterns to iso-20022-messages-records (`docs/`).
 
@@ -26,7 +27,7 @@ CI (about 20 minutes) runs the same, plus the license check and the tests of the
 
 ## Targets
 
-The packages here target net8.0 and net10.0, the two newest .NET LTS releases (not the two newest version numbers), and `FluentValidation`, `FluentValidation.Payloads`, `FluentValidation.Xml` and `Samples` also `netstandard2.0`, so that .NET Framework 4.6.1+, Mono and Unity can take them (the saga toolkit is net8.0 and net10.0 only). The `netstandard2.0` build uses `Polyfill` (build time only), has no `ReadOnlySpan` overloads, and needs `System.Text.Json` and a few polyfill packages that flow to the consumer of that build. One .NET 10 SDK builds every target (`src/global.json`).
+The packages here target net8.0 and net10.0, the two newest .NET LTS releases (not the two newest version numbers), and `FluentValidation`, `FluentValidation.Payloads`, and `FluentValidation.Xml` also `netstandard2.0`, so that .NET Framework 4.6.1+, Mono and Unity can take them (the saga toolkit is net8.0 and net10.0 only). The `netstandard2.0` build uses `Polyfill` (build time only), has no `ReadOnlySpan` overloads, and needs `System.Text.Json` and a few polyfill packages that flow to the consumer of that build. One .NET 10 SDK builds every target (`src/global.json`).
 
 ## Rules for working here
 

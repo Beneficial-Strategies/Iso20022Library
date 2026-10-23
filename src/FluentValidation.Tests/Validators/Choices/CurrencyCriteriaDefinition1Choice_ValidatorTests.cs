@@ -9,21 +9,21 @@ public class CurrencyCriteriaDefinition1Choice_ValidatorTests
     [Fact]
     public void QueryNameVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.QueryName.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.CurrencyCriteriaDefinition1Choice.Valid.QueryName.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void NewCriteriaVariant_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Maximal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Maximal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 
     [Fact]
     public void NewCriteriaVariant_Empty_NoValidationErrors()
     {
-        var value = BeneficialStrategies.Iso20022.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Minimal;
+        var value = BeneficialStrategies.Iso20022.Messages.Samples.CurrencyCriteriaDefinition1Choice.Valid.NewCriteria.Minimal;
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }
