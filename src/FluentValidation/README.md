@@ -19,7 +19,7 @@ dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.
 dotnet add package Microsoft.Extensions.DependencyInjection
 ```
 
-The first brings the interfaces (`BeneficialStrategies.Iso20022.Interfaces`), the primitive types and code sets (`BeneficialStrategies.Iso20022.Primitives`) and FluentValidation, and nothing else; the second is the container of this example (ASP.NET Core and other hosts already have one).
+The first brings the interfaces (`BeneficialStrategies.Iso20022.Messages`), the primitive types and code sets (`BeneficialStrategies.Iso20022.Primitives`) and FluentValidation, and nothing else; the second is the container of this example (ASP.NET Core and other hosts already have one).
 
 ```csharp
 using BeneficialStrategies.Iso20022.Codesets;

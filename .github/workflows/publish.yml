@@ -26,14 +26,7 @@ jobs:
       # frameworks via downloaded reference packs, no need to install multiple SDK versions
       # side by side just to pack. See src/global.json and CLAUDE.md "Target Framework Policy".
 
-      # Primitives and Factory are published from their own repositories; the packages below depend on the published ones.
-      - name: Build and pack (BeneficialStrategies.Iso20022.Interfaces)
-        run: |
-          cd src
-          dotnet pack Interfaces \
-            -c Release \
-            --output ./nupkg
-
+      # Primitives, Factory and Messages are published from their own repositories; the packages below depend on the published ones.
       - name: Build and pack (BeneficialStrategies.Iso20022)
         run: |
           cd src

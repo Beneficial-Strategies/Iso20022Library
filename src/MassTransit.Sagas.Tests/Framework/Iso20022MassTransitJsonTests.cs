@@ -54,6 +54,6 @@ public class Iso20022MassTransitJsonTests
         var references = typeof(Iso20022MassTransitJson).Assembly.GetReferencedAssemblies().Select(a => a.Name).ToList();
 
         Assert.DoesNotContain("BeneficialStrategies.Iso20022.Common", references);
-        Assert.Contains("BeneficialStrategies.Iso20022.Interfaces", references);
+        Assert.Contains("BeneficialStrategies.Iso20022.Messages", references);
     }
 }

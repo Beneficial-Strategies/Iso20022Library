@@ -11,7 +11,7 @@
 > and a worked example, not as a dependency.
 
 A saga toolkit correlated to ISO 20022 message flows, written against the **interfaces** of the message model
-([`BeneficialStrategies.Iso20022.Interfaces`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Interfaces)), so it does not need the
+([`BeneficialStrategies.Iso20022.Messages`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Messages)), so it does not need the
 message records.
 
 ## Why this package exists

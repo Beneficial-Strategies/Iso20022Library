@@ -8,7 +8,7 @@ using BeneficialStrategies.Iso20022.SimpleTypes;
 
 namespace BeneficialStrategies.Iso20022;
 
-/// <summary>The interfaces of BeneficialStrategies.Iso20022.Interfaces (#27) and the records that implement them.</summary>
+/// <summary>The interfaces of BeneficialStrategies.Iso20022.Messages (#27) and the records that implement them.</summary>
 public class InterfacesTests
 {
     private static readonly Assembly InterfacesAssembly = typeof(IGenericIdentification3).Assembly;

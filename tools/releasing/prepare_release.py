@@ -26,10 +26,9 @@ from pathlib import Path
 MAJOR_LABELS = {"breaking-change"}
 MINOR_LABELS = {"enhancement", "message-support", "snapshot-sync"}
 SKIP_LABELS = {"no-release-notes"}
-AREA_PACKAGES = {"area:core": {"core"}, "area:interfaces": {"interfaces"}, "area:validation": {"validation"}, "area:payloads": {"payloads"}, "area:xml": {"xml"}, "area:samples": {"samples"}}   # no area label: every published package
+AREA_PACKAGES = {"area:core": {"core"}, "area:validation": {"validation"}, "area:payloads": {"payloads"}, "area:xml": {"xml"}, "area:samples": {"samples"}}   # no area label: every published package
 IGNORED_AREAS = {"area:sagas"}                                               # not published
 NOTE_FILES = {
-    "interfaces": "src/Interfaces/release-notes.txt",
     "core": "src/Common/release-notes.txt",
     "validation": "src/FluentValidation/release-notes.txt",
     "payloads": "src/FluentValidation.Payloads/release-notes.txt",

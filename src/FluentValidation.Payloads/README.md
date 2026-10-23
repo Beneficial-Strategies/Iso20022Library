@@ -199,7 +199,7 @@ Xml.FacetViolation Document/FIToFIPmtCxlReq/Assgnmt/Id: 'Max35Text' allows at mo
 The message library is large, and perhaps you do not want 3,339 messages' worth of classes in your application. Register a factory, and the XML is read into the message's **interface**: the factory builds, on the fly, a small class that implements it, and no implementation library is needed at all.
 
 ```
-dotnet add package BeneficialStrategies.Iso20022.Interfaces --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.Messages --prerelease
 dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
 dotnet add package BeneficialStrategies.Iso20022.Factory --version 0.7.0-alpha
 ```
