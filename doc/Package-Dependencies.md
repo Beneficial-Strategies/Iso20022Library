@@ -2,6 +2,8 @@
 
 > Draft, read from the project files of this repository (`src/*/*.csproj`) as of `main` after #89. An arrow means "references".
 
+> **Primitives and Factory are published from their own repositories** ([iso-20022-primitives](https://github.com/Beneficial-Strategies/iso-20022-primitives), [iso-20022-factory](https://github.com/Beneficial-Strategies/iso-20022-factory)); the projects of this repository use the published packages, from 1.0.0-alpha up to the next breaking change (`[1.0.0-alpha, 1.1.0)`). Their `Tests` projects and folders are no longer here.
+
 The packages form a small tree with one root (`Primitives`) and one deliberate split: the **interfaces** of the model (`Interfaces`) are separate from the **records** that implement them (`Common`). Everything that works on messages (validators, payload validation, the factory, the samples, the sagas) is written against the interfaces, so none of it references `Common`.
 
 ## The packages

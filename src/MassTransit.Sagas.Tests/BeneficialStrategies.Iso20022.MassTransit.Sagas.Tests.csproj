@@ -47,7 +47,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MassTransit.Sagas\BeneficialStrategies.Iso20022.MassTransit.Sagas.csproj" />
-    <ProjectReference Include="..\Factory\BeneficialStrategies.Iso20022.Factory.csproj" />
+    <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0-alpha, 1.1.0)" />
   </ItemGroup>
 
 </Project>
