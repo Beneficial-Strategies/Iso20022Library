@@ -1,6 +1,6 @@
 # Beneficial Strategies ISO 20022 (the remains of the monorepo)
 
-A family of .NET libraries for working with the [ISO 20022](https://iso20022.org) financial messaging standard. **Each package is moving to a repository of its own; this one still holds the validators, the samples and the saga toolkit** (see the table). This library was built as part of developing and testing the [Beneficial Strategies ISO 20022 MCP Server](https://beneficialstrategies.com/product/mcp-server/) — a subscription SaaS product; its source is not released. This monorepo itself, however, is provided free of charge under a permissive license, and is expected to keep being updated as the ISO 20022 organization publishes new snapshots of the standard.
+A family of .NET libraries for working with the [ISO 20022](https://iso20022.org) financial messaging standard. **Each package now has a repository of its own; what is left here is the saga toolkit, a proof of concept** (see the table). This library was built as part of developing and testing the [Beneficial Strategies ISO 20022 MCP Server](https://beneficialstrategies.com/product/mcp-server/) — a subscription SaaS product; its source is not released. This monorepo itself, however, is provided free of charge under a permissive license, and is expected to keep being updated as the ISO 20022 organization publishes new snapshots of the standard.
 
 ## Packages
 
@@ -11,15 +11,15 @@ A family of .NET libraries for working with the [ISO 20022](https://iso20022.org
 | [`BeneficialStrategies.Iso20022.Primitives`](https://github.com/Beneficial-Strategies/iso-20022-primitives) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) | The ISO 20022 primitive data types, code sets and external codes with their format validation and JSON converters, without the message records. `BeneficialStrategies.Iso20022` depends on it. |
 | [`BeneficialStrategies.Iso20022.Messages`](https://github.com/Beneficial-Strategies/iso-20022-messages) | Published, from its own repository | An interface for every ISO 20022 message, component and choice, so a class of your own can stand in for a record. Implemented by the records of `BeneficialStrategies.Iso20022.Messages.Records`. |
 | [`BeneficialStrategies.Iso20022.Factory`](https://github.com/Beneficial-Strategies/iso-20022-factory) | Published, from its own repository | Objects for the interfaces, made for you at run time: ask for an interface and the Factory builds a class that implements it and fills it from XML or JSON, so no implementation library is needed. |
-| [`BeneficialStrategies.Iso20022.FluentValidation`](src/FluentValidation/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation) | FluentValidation validators enforcing ISO 20022 spec-level constraints the C# type system alone can't express. |
-| [`BeneficialStrategies.Iso20022.FluentValidation.Xml`](src/FluentValidation.Xml/README.md) | In preparation | Read ISO 20022 XML into an object and validate it in one call: the populated object, or every problem found with the path of its element, as ordinary FluentValidation failures. |
-| [`BeneficialStrategies.Iso20022.FluentValidation.Payloads`](src/FluentValidation.Payloads/README.md) | In preparation | Validate raw ISO 20022 XML or JSON text as it arrives (a queue, an HTTP body, a file); a payload that cannot be read comes back as validation failures, not an exception. |
+| [`BeneficialStrategies.Iso20022.Messages.Validation`](https://github.com/Beneficial-Strategies/iso-20022-messages-validation) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Messages.Validation), from its own repository | FluentValidation validators for the interfaces of the messages, components and choices: the rules the C# type system alone cannot express. Replaces `BeneficialStrategies.Iso20022.FluentValidation`. |
+| [`BeneficialStrategies.Iso20022.Validation.Xml`](https://github.com/Beneficial-Strategies/iso-20022-validation-xml) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Validation.Xml), from its own repository | Read ISO 20022 XML into an object and validate it in one call: the populated object, or every problem found with the path of its element, as ordinary FluentValidation failures. |
+| [`BeneficialStrategies.Iso20022.Validation.Xml.Payloads`](https://github.com/Beneficial-Strategies/iso-20022-validation-xml-payloads) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Validation.Xml.Payloads), from its own repository | Validate raw ISO 20022 XML or JSON text as it arrives (a queue, an HTTP body, a file); a payload that cannot be read comes back as validation failures, not an exception. |
 | [`BeneficialStrategies.Iso20022.Messages.Samples`](https://github.com/Beneficial-Strategies/iso-20022-messages-samples) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Messages.Samples), from its own repository | Named, valid ISO 20022 objects for tests, and a generated minimal valid object for any interface, built through the `Factory` against the interfaces, so a test needs no message records. |
 | [`BeneficialStrategies.Iso20022.MassTransit.Sagas`](src/MassTransit.Sagas/README.md) | Work in progress — not published | A MassTransit saga toolkit for ISO 20022 message flows (currently: Request-to-Pay). Investigative, not yet released. |
 
 How the packages depend on one another, and which to install for what, is in [doc/Package-Dependencies.md](doc/Package-Dependencies.md).
 
-The samples are in their own repository, [iso-20022-messages-samples](https://github.com/Beneficial-Strategies/iso-20022-messages-samples); the standard they follow (where a sample lives, `Minimal` and `Maximal`, a new object on each access) is in its README. Whether every generated `Minimal` sample is valid is checked here, by the validators (`src/FluentValidation.Tests/Samples`).
+The samples are in their own repository, [iso-20022-messages-samples](https://github.com/Beneficial-Strategies/iso-20022-messages-samples); the standard they follow (where a sample lives, `Minimal` and `Maximal`, a new object on each access) is in its README. Whether every generated `Minimal` sample is valid is checked in [iso-20022-messages-validation](https://github.com/Beneficial-Strategies/iso-20022-messages-validation), by the validators.
 
 See each package's own README (linked above) for installation instructions and usage examples. For a full breakdown of ISO 20022 message coverage by business area, see [`doc/Scope-Statement.md`](doc/Scope-Statement.md).
 
@@ -35,7 +35,7 @@ If your company builds on it, or you want to see an area kept up to date, there 
 - **Bring real messages.** Valid, anonymised samples from your scheme turn into round-trip tests and decide which messages come next.
 - **Report precisely.** A bug with a [failing unit test](CONTRIBUTING.md#reporting-a-bug) is usually fixed fastest.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how issues and pull requests work, and [doc/Releasing.md](doc/Releasing.md) for how releases are made from them.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how issues and pull requests work. Releases are made in the repository of each package.
 
 ## License
 
