@@ -143,3 +143,6 @@ _NCrunch*
 
 # Python bytecode from the release tooling
 __pycache__/
+
+# Local Claude Code state is never committed (STD-ENG-GIT-PR)
+.claude/
